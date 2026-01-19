@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POLICE REPORT DRAFTER</title>
+  <!-- theme-color for PWA support on supported browsers -->
+  <meta name="theme-color" content="#1e3a8a" />
+
+
+  <!-- Favicon and Apple Touch Icon -->
+  <link rel="apple-touch-icon"
+    href="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/local_police/default/48px.svg" />
+  <link rel="icon" type="image/svg+xml"
+    href="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/local_police/default/48px.svg" />
+
+  <link rel="manifest" href="manifest.json" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+</head>
+
+<body
+  class="bg-slate-50 dark:bg-slate-950 font-display text-slate-900 dark:text-slate-100 h-full overflow-hidden flex flex-col">
+  <div id="root" class="h-full flex flex-col flex-1"></div>
+  <!--
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW registration failed:', err));
+      });
+    }
+  </script>
+  -->
+  <div id="error-overlay" class="debug-overlay" style="display:none;">
+    <h3>Mobile Error Log:</h3>
+    <pre id="error-pre"></pre>
+    <button onclick="document.getElementById('error-overlay').style.display='none'" class="debug-btn">Close</button>
+  </div>
+  <script>
+    window.onerror = function (msg, url, lineNo, columnNo, error) {
+      var overlay = document.getElementById('error-overlay');
+      var pre = document.getElementById('error-pre');
+      overlay.style.display = 'block';
+      pre.textContent += (msg + '\n' + url + ':' + lineNo + '\n\n');
+      return false;
+    };
+    window.onunhandledrejection = function (event) {
+      var overlay = document.getElementById('error-overlay');
+      var pre = document.getElementById('error-pre');
+      overlay.style.display = 'block';
+      pre.textContent += ('Unhandled Rejection: ' + event.reason + '\n\n');
+    };
+  </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>

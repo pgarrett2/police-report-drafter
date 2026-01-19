@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #1e3a8a;
+    --color-primary-dark: #1d4ed8;
+
+    --font-display: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-serif: "Libre Baskerville", serif;
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+
+    html,
+    body {
+        height: 100%;
+        height: 100dvh;
+        @apply antialiased bg-slate-50 text-slate-900;
+        overflow: auto;
+        /* Fallback for mobile */
+    }
+
+    @media (min-width: 768px) {
+        body {
+            @apply overflow-hidden;
+        }
+    }
+
+    .dark body {
+        @apply bg-slate-950 text-slate-100;
+    }
+
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        user-select: none;
+        display: inline-block;
+        line-height: 1;
+    }
+}
+
+@layer components {
+
+    /* The "Paper" effect for the final draft */
+    .document-paper {
+        @apply bg-white dark:bg-slate-900 shadow-lg rounded-sm;
+        min-height: min-content;
+        height: auto !important;
+        display: block;
+        overflow: visible;
+    }
+
+    /* Accessible hide */
+    .sr-only {
+        @apply absolute w-1 h-1 p-0 -m-1 overflow-hidden whitespace-nowrap border-0;
+    }
+}
+
+/* Custom Scrollbar for a cleaner look */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors;
+}
+
+/* Animations for smooth transitions */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-in {
+    animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* Mobile Safari safe height fix */
+@supports (-webkit-touch-callout: none) {
+    .h-screen {
+        height: -webkit-fill-available;
+    }
+}
+
+.debug-overlay {
+    @apply fixed top-0 left-0 w-full h-full bg-black/80 text-red-500 p-5 z-[10000] font-mono overflow-auto;
+}
+
+.debug-btn {
+    @apply mt-4 bg-white text-black px-4 py-2 rounded font-bold;
+}
