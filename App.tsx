@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { TEMPLATES, INITIAL_STATE, CALL_TYPES, INITIATED_CALL_TYPES, REASON_FOR_STOP_TYPES, CONSENSUAL_STOP_TYPES, INTRO_BODY, INITIAL_SETTINGS, BWC_BOILERPLATE, OFFENSE_SUMMARY_BOILERPLATE, getFreshInitialState } from './constants';
 import { CJIS_CODES } from './cjis_codes';
-import { ReportState, Template, PartyCategory, OptionalSection, PersistentSettings, Offense } from './types';
+import { ReportState, Template, PartyCategory, OptionalSection, PersistentSettings, Offense, NameEntry } from './types';
 import { AccordionItem } from './components/AccordionItem';
 import { PreviewSection } from './components/PreviewSection';
 
@@ -57,7 +57,12 @@ export default function App() {
           ...parsed,
           incidentDetails: { ...initial.incidentDetails, ...(parsed.incidentDetails || {}) },
           narratives: { ...initial.narratives, ...(parsed.narratives || {}) },
-          names: { ...initial.names, ...(parsed.names || {}) }
+          names: parsed.names ? Object.keys(parsed.names).reduce((acc, cat) => {
+            acc[cat as PartyCategory] = (parsed.names[cat] as any[]).map(val =>
+              typeof val === 'string' ? { name: val, sex: '' as const } : val
+            );
+            return acc;
+          }, {} as Record<PartyCategory, NameEntry[]>) : initial.names
         };
       } catch (e) {
         console.error("Failed to parse saved report", e);
@@ -239,7 +244,7 @@ export default function App() {
       const lines = ["OFFENSE SUMMARY", "***********************"];
       offenseList.forEach(offense => {
         const fullStatuteTitle = STATUTE_TITLES[offense.statute.toUpperCase()] || offense.statute;
-        lines.push(`${offense.literal} - ${fullStatuteTitle} ${offense.citation} ${offense.level}`);
+        lines.push(`${offense.literal} ${fullStatuteTitle} ${offense.citation} ${offense.level}`);
       });
       dynamicOffenseSummary = lines.join('\n');
     }
@@ -383,10 +388,29 @@ export default function App() {
     setDragOverId(null);
   };
 
-  const handleNameChange = (category: PartyCategory, index: number, value: string) => {
+  const handleNameChange = (category: PartyCategory, index: number, field: keyof NameEntry, value: any) => {
     setReportData(prev => {
       const newNames = [...prev.names[category]];
-      newNames[index] = value;
+      newNames[index] = { ...newNames[index], [field]: value };
+
+      // Special logic for suspects arrest status
+      if (category === 'Suspect' && field === 'isArrested') {
+        const anyArrested = newNames.some(n => n.isArrested);
+        const arrestSection = prev.narratives.optionalSections.find(s => s.id === 'arrest');
+        if (arrestSection && arrestSection.enabled !== anyArrested) {
+          return {
+            ...prev,
+            names: { ...prev.names, [category]: newNames },
+            narratives: {
+              ...prev.narratives,
+              optionalSections: prev.narratives.optionalSections.map(s =>
+                s.id === 'arrest' ? { ...s, enabled: anyArrested } : s
+              )
+            }
+          };
+        }
+      }
+
       return { ...prev, names: { ...prev.names, [category]: newNames } };
     });
   };
@@ -394,14 +418,32 @@ export default function App() {
   const addNameEntry = (category: PartyCategory) => {
     setReportData(prev => ({
       ...prev,
-      names: { ...prev.names, [category]: [...prev.names[category], ''] }
+      names: { ...prev.names, [category]: [...prev.names[category], { name: '', sex: '' }] }
     }));
   };
 
   const removeNameEntry = (category: PartyCategory, index: number) => {
     setReportData(prev => {
-      if (prev.names[category].length <= 1) return prev;
       const newNames = prev.names[category].filter((_, i) => i !== index);
+
+      // Check if arrest section needs to be updated if a suspect is removed
+      if (category === 'Suspect') {
+        const anyArrested = newNames.some(n => n.isArrested);
+        const arrestSection = prev.narratives.optionalSections.find(s => s.id === 'arrest');
+        if (arrestSection && arrestSection.enabled !== anyArrested) {
+          return {
+            ...prev,
+            names: { ...prev.names, [category]: newNames },
+            narratives: {
+              ...prev.narratives,
+              optionalSections: prev.narratives.optionalSections.map(s =>
+                s.id === 'arrest' ? { ...s, enabled: anyArrested } : s
+              )
+            }
+          };
+        }
+      }
+
       return { ...prev, names: { ...prev.names, [category]: newNames } };
     });
   };
@@ -410,9 +452,9 @@ export default function App() {
     if (!text) return '';
     let processed = text;
     const { block, street } = getBlockAddress(reportData.incidentDetails.address);
-    const firstSuspect = reportData.names.Suspect.filter(n => n.trim() !== '')[0] || '[SUSPECT]';
-    const firstVictim = reportData.names.Victim.filter(n => n.trim() !== '')[0] || '[VICTIM]';
-    const firstWitness = reportData.names.Witness.filter(n => n.trim() !== '')[0] || '[WITNESS]';
+    const firstSuspect = reportData.names.Suspect.filter(n => n.name.trim() !== '')[0]?.name || '[SUSPECT]';
+    const firstVictim = reportData.names.Victim.filter(n => n.name.trim() !== '')[0]?.name || '[VICTIM]';
+    const firstWitness = reportData.names.Witness.filter(n => n.name.trim() !== '')[0]?.name || '[WITNESS]';
 
     // Handle stacked offenses logic
     if (processed.includes('[OFFENSE]') && reportData.incidentDetails.offenses.length > 0) {
@@ -519,22 +561,66 @@ export default function App() {
   const renderNameInputs = (category: PartyCategory) => {
     const names = reportData.names[category];
     return (
-      <div className="mb-6 last:mb-2">
-        <div className="flex items-center justify-between mb-2">
-          <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest">{category}s</label>
-          <button onClick={() => addNameEntry(category)} className="flex items-center gap-1 text-[10px] font-bold text-primary hover:text-blue-800 transition-colors">
+      <div className="mb-4 last:mb-2">
+        <button
+          onClick={() => addNameEntry(category)}
+          className="w-full flex items-center justify-between px-4 py-2 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-all group"
+        >
+          <span className="text-xs font-bold text-slate-500 group-hover:text-primary transition-colors uppercase tracking-widest">{category}s</span>
+          <div className="flex items-center gap-1 text-[10px] font-bold text-primary">
             <span className="material-symbols-outlined text-sm">add_circle</span> ADD
-          </button>
-        </div>
-        <div className="space-y-2">
-          {names.map((name, index) => (
-            <div key={`${category}-${index}`} className="flex gap-2 animate-in fade-in duration-200">
-              <input type="text" placeholder={`Name of ${category}...`} value={name} onChange={(e) => handleNameChange(category, index, e.target.value)} className="flex-1 px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md text-base md:text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none" />
-              {names.length > 1 && (
-                <button onClick={() => removeNameEntry(category, index)} className="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 rounded-md transition-all">
-                  <span className="material-symbols-outlined text-lg">close</span>
+          </div>
+        </button>
+
+        <div className="mt-2 space-y-2">
+          {names.map((entry, index) => (
+            <div key={`${category}-${index}`} className="flex items-center gap-2 animate-in fade-in slide-in-from-top-1 duration-200">
+              <div className="relative flex-1">
+                <input
+                  type="text"
+                  placeholder={`Name of ${category}...`}
+                  value={entry.name}
+                  onChange={(e) => handleNameChange(category, index, 'name', e.target.value)}
+                  className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md text-base md:text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none"
+                />
+              </div>
+
+              {/* Sex Toggle */}
+              <div className="flex bg-slate-100 dark:bg-slate-800 p-0.5 rounded-md border border-slate-200 dark:border-slate-700">
+                <button
+                  onClick={() => handleNameChange(category, index, 'sex', entry.sex === 'M' ? '' : 'M')}
+                  className={`px-2 py-1 text-[10px] font-bold rounded transition-all ${entry.sex === 'M' ? 'bg-primary text-white shadow-sm' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-200'}`}
+                >
+                  M
+                </button>
+                <button
+                  onClick={() => handleNameChange(category, index, 'sex', entry.sex === 'F' ? '' : 'F')}
+                  className={`px-2 py-1 text-[10px] font-bold rounded transition-all ${entry.sex === 'F' ? 'bg-primary text-white shadow-sm' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-200'}`}
+                >
+                  F
+                </button>
+              </div>
+
+              {/* ARREST Button for Suspects */}
+              {category === 'Suspect' && (
+                <button
+                  onClick={() => handleNameChange(category, index, 'isArrested', !entry.isArrested)}
+                  className={`px-3 py-1.5 rounded-md text-[10px] font-black tracking-tighter transition-all border ${entry.isArrested
+                      ? 'bg-red-500/10 border-red-500 text-red-600 opacity-100'
+                      : 'bg-slate-100 dark:bg-slate-800 border-transparent text-slate-400 opacity-50'
+                    }`}
+                >
+                  ARREST
                 </button>
               )}
+
+              <button
+                onClick={() => removeNameEntry(category, index)}
+                className="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 rounded-md transition-all"
+                title="Remove Entry"
+              >
+                <span className="material-symbols-outlined text-lg">close</span>
+              </button>
             </div>
           ))}
         </div>
@@ -548,8 +634,12 @@ export default function App() {
     <>
       <header className="h-16 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-between px-4 md:px-6 sticky top-0 z-10 shrink-0">
         <div className="flex items-center gap-3">
-          <div className="bg-primary/10 p-1.5 rounded-lg text-primary"><span className="material-symbols-outlined text-xl md:text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>local_police</span></div>
-          <h1 className="text-sm md:text-lg font-bold tracking-widest text-slate-900 dark:text-white truncate">REPORT DRAFTER</h1>
+          <img
+            src="apple-touch-icon-full-size.png"
+            alt="Logo"
+            className="w-8 h-8 md:w-12 md:h-12 object-contain"
+          />
+          <h1 className="text-xl md:text-3xl font-black tracking-tight text-slate-900 dark:text-white truncate leading-none">REPORT DRAFT</h1>
         </div>
         <div className="flex items-center gap-2 md:gap-4">
           <button
@@ -1059,7 +1149,7 @@ export default function App() {
         <section className={`${mobileView === 'preview' ? 'flex' : 'hidden'} md:flex md:w-[60%] overflow-y-auto p-4 md:p-12 bg-slate-100 dark:bg-slate-950 flex flex-col items-center relative w-full h-full`}>
           <div className="w-full max-w-4xl mb-6 flex items-center justify-between sticky top-0 md:relative z-20 bg-slate-100/80 dark:bg-slate-950/80 backdrop-blur-sm p-2 rounded-lg">
             <div className="flex items-center gap-4"><button onClick={() => setMobileView('editor')} className="md:hidden flex items-center gap-1 text-primary dark:text-blue-400 font-bold"><span className="material-symbols-outlined">arrow_back</span>Back</button><h2 className="text-lg font-bold text-slate-800 dark:text-slate-200 hidden sm:block">FINAL DRAFT</h2></div>
-            <div className="flex items-center gap-2"><div className="flex items-center gap-2 bg-white dark:bg-slate-800 border border-slate-200 rounded-lg p-1 shadow-sm"><button onClick={() => setZoomLevel(Math.max(50, zoomLevel - 10))} className="p-1.5 hover:bg-slate-100 rounded transition-colors"><span className="material-symbols-outlined text-lg text-slate-600 dark:text-slate-400">zoom_out</span></button><span className="text-xs font-bold px-2 text-slate-500 w-12 text-center">{zoomLevel}%</span><button onClick={() => setZoomLevel(Math.min(150, zoomLevel + 10))} className="p-1.5 hover:bg-slate-100 rounded transition-colors"><span className="material-symbols-outlined text-lg text-slate-600 dark:text-slate-400">zoom_in</span></button></div></div>
+            <div className="flex items-center gap-2"><div className="hidden md:flex items-center gap-2 bg-white dark:bg-slate-800 border border-slate-200 rounded-lg p-1 shadow-sm"><button onClick={() => setZoomLevel(Math.max(50, zoomLevel - 10))} className="p-1.5 hover:bg-slate-100 rounded transition-colors"><span className="material-symbols-outlined text-lg text-slate-600 dark:text-slate-400">zoom_out</span></button><span className="text-xs font-bold px-2 text-slate-500 w-12 text-center">{zoomLevel}%</span><button onClick={() => setZoomLevel(Math.min(150, zoomLevel + 10))} className="p-1.5 hover:bg-slate-100 rounded transition-colors"><span className="material-symbols-outlined text-lg text-slate-600 dark:text-slate-400">zoom_in</span></button></div></div>
           </div>
           <div className="w-full max-w-4xl transition-all duration-300 origin-top pb-24" style={{ transform: isDesktop ? `scale(${zoomLevel / 100})` : 'none' }}>
             <div className="document-paper w-full bg-white dark:bg-slate-900 rounded-sm">

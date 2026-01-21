@@ -131,11 +131,11 @@ export const getFreshInitialState = (): ReportState => ({
     offenses: [],
   },
   names: {
-    'Complainant': [''],
-    'Victim': [''],
-    'Suspect': [''],
-    'Witness': [''],
-    'Other': ['']
+    'Complainant': [],
+    'Victim': [],
+    'Suspect': [],
+    'Witness': [],
+    'Other': []
   },
   narratives: {
     public: '',

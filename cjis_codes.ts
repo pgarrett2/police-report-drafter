@@ -1,4 +1,4 @@
-import { Offense } from './types';
+import { Offense } from "./types";
 
 export const CJIS_CODES: Offense[] = [
   {
@@ -1114,6 +1114,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "147.064(a)",
     "statute": "AGC",
     "level": "F*"
+  },
+  {
+    "literal": "APS INTAKE",
+    "citation": "",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "AQUATIC LIFE REGULATION VIOLATION",
@@ -2431,6 +2437,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "CITY WARRANT",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CITY WARRANT (PR BOND)",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CIVIL COMMITMENT REQUIREMENT",
     "citation": "841.082",
     "statute": "HSC",
@@ -3211,6 +3229,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "COUNTY WARRANT",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "COURT INTERPERTERS LIC SUSPENDED",
     "citation": "57.027",
     "statute": "GC",
@@ -3233,6 +3257,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "154.113(b)",
     "statute": "GC",
     "level": "MA"
+  },
+  {
+    "literal": "CPS INTAKE",
+    "citation": "",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CRAFTED PRECIOUS METAL REGULATIONS",
@@ -4597,8 +4627,7 @@ export const CJIS_CODES: Offense[] = [
     "literal": "DRIVER'S LICENSE - NO",
     "citation": "521.021",
     "statute": "TC",
-    "level": "MC",
-    "statuteText": "Sec. 521.021. LICENSE REQUIRED. A person, other than a person expressly exempted under this chapter, **may not operate a motor vehicle on a highway in this state unless the person holds a driver's license** issued under this chapter."
+    "level": "MC"
   },
   {
     "literal": "DRIVER'S LICENSE - PROVISIONAL/DRIVING WHEN PROHIBITED (12AM-5AM)",
@@ -5037,6 +5066,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "781.403(a)(3)",
     "statute": "HSC",
     "level": "F3"
+  },
+  {
+    "literal": "EMERGENCY DETENTION",
+    "citation": "",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "EMERGENCY MEDICAL TECHNICIAN IMPERSONATE",
@@ -8228,8 +8263,7 @@ export const CJIS_CODES: Offense[] = [
     "literal": "FTYROW - DIVIDED STREET COLLISION W/SERIOUS BI",
     "citation": "545.151",
     "statute": "TC",
-    "level": "MC",
-    "statuteText": "Sec. 545.151. VEHICLE APPROACHING OR ENTERING INTERSECTION. (a) An operator approaching an intersection: (1) **shall stop, yield, and grant immediate use of the intersection** in obedience to an official traffic-control device..."
+    "level": "MC"
   },
   {
     "literal": "FTYROW - EMERGENCY VEHICLE",
@@ -9857,6 +9891,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "601.454",
     "statute": "TRC",
     "level": "MB"
+  },
+  {
+    "literal": "INFORMATION ONLY",
+    "citation": "",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "INHALANT PARAPHERNALIA DEL/SELL INHALENT",
@@ -11703,6 +11743,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "MENTAL HEALTH CRISIS",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MERCHANDISE ON SIDEWALKS",
     "citation": "N/A",
     "statute": "N/A",
@@ -12263,24 +12309,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
-    "literal": "MUFFLER REQUIRED",
+    "literal": "NO PROOF OF FINANCIAL RESPONSIBILITY",
     "citation": "547.604",
     "statute": "TC",
     "level": "MC"
   },
   {
-    "literal": "NO PROOF OF FINANCIAL RESPONSIBILITY",
+    "literal": "NO SIGNAL OF INTENT",
     "citation": "601.191",
     "statute": "TC",
-    "level": "MC",
-    "statuteText": "Sec. 601.191. OPERATION OF MOTOR VEHICLE IN VIOLATION OF MOTOR VEHICLE LIABILITY INSURANCE REQUIREMENT. (a) A person commits an offense if the person **operates a motor vehicle in violation of Section 601.051 [Vehicle Liability Insurance Requirement]**."
+    "level": "MC"
   },
   {
     "literal": "NO SIGNAL OF INTENT 100' OF TURN",
     "citation": "545.104(a)",
     "statute": "TC",
-    "level": "MC",
-    "statuteText": "Sec. 545.104. SIGNALING TURNS; USE OF TURN SIGNALS. (a) An operator **shall use the signal authorized by Section 545.106 to indicate an intention to turn, change lanes, or start from a parked position.**"
+    "level": "MC"
   },
   {
     "literal": "NOISE - LOUD NOISE FROM MOTOR VEHICLE",
@@ -15549,8 +15593,7 @@ export const CJIS_CODES: Offense[] = [
     "literal": "REGISTRATION EXPIRED ON TRAILER",
     "citation": "502.407",
     "statute": "TC",
-    "level": "MC",
-    "statuteText": "Sec. 502.407. OPERATION OF VEHICLE WITH EXPIRED REGISTRATION. (a) A person commits an offense if, after the fifth working day after the date the registration for the vehicle expires: (1) the person **operates on a public highway during a registration period a motor vehicle... that is not registered**... (b) A person who **operates a vehicle with an expired license plate insignia**... commits an offense."
+    "level": "MC"
   },
   {
     "literal": "REGISTRATION FOR TELEPHONE SOLICITATION REQ",
@@ -15562,8 +15605,7 @@ export const CJIS_CODES: Offense[] = [
     "literal": "REGISTRATION NO STICKER/WRONG PLACEMENT",
     "citation": "502.407",
     "statute": "TC",
-    "level": "MC",
-    "statuteText": "Sec. 502.407. OPERATION OF VEHICLE WITH EXPIRED REGISTRATION. (a) A person commits an offense if, after the fifth working day after the date the registration for the vehicle expires: (1) the person **operates on a public highway during a registration period a motor vehicle... that is not registered**... (b) A person who **operates a vehicle with an expired license plate insignia**... commits an offense."
+    "level": "MC"
   },
   {
     "literal": "REGISTRATION NO TEXAS",
@@ -16967,22 +17009,19 @@ export const CJIS_CODES: Offense[] = [
     "literal": "SPEEDING 15-24 MPH OVER POSTED SPEED",
     "citation": "545.351",
     "statute": "TC",
-    "level": "MC",
-    "statuteText": "Sec. 545.351. MAXIMUM SPEED REQUIREMENT. (a) An operator **may not drive at a speed greater than is reasonable and prudent** under the circumstances then existing.\n(b) An operator:\n(1) **may not drive a vehicle at a speed greater than is reasonable and prudent** under the conditions and having regard for actual and potential hazards then existing; and\n(2) **shall control the speed of the vehicle as necessary to avoid colliding** with another person or vehicle."
+    "level": "MC"
   },
   {
     "literal": "SPEEDING 15-24 MPH OVER POSTED SPEED (CONST. W/W)",
     "citation": "545.351",
     "statute": "TC",
-    "level": "MC",
-    "statuteText": "Sec. 545.351. MAXIMUM SPEED REQUIREMENT. (a) An operator **may not drive at a speed greater than is reasonable and prudent** under the circumstances then existing.\n(b) An operator:\n(1) **may not drive a vehicle at a speed greater than is reasonable and prudent** under the conditions and having regard for actual and potential hazards then existing; and\n(2) **shall control the speed of the vehicle as necessary to avoid colliding** with another person or vehicle."
+    "level": "MC"
   },
   {
     "literal": "SPEEDING 25+ MPH OVER POSTED SPEED",
     "citation": "545.351",
     "statute": "TC",
-    "level": "MC",
-    "statuteText": "Sec. 545.351. MAXIMUM SPEED REQUIREMENT. (a) An operator **may not drive at a speed greater than is reasonable and prudent** under the circumstances then existing.\n(b) An operator:\n(1) **may not drive a vehicle at a speed greater than is reasonable and prudent** under the conditions and having regard for actual and potential hazards then existing; and\n(2) **shall control the speed of the vehicle as necessary to avoid colliding** with another person or vehicle."
+    "level": "MC"
   },
   {
     "literal": "SPEEDING ADJACENT 20MPH SCHOOL ZONE",
@@ -17063,8 +17102,7 @@ export const CJIS_CODES: Offense[] = [
     "literal": "STOP SIGN",
     "citation": "544.010",
     "statute": "TC",
-    "level": "MC",
-    "statuteText": "Sec. 544.010. STOP SIGNS AND YIELD SIGNS. (a) Unless directed to proceed by a police officer or traffic-control signal, the **operator of a vehicle or streetcar approaching an intersection with a stop sign shall stop** as provided by Subsection (c).\n...\n(c) An operator required to stop by this section **shall stop at a clearly marked stop line**. In the absence of a clearly marked stop line, the operator shall stop before entering the crosswalk on the near side of the intersection."
+    "level": "MC"
   },
   {
     "literal": "STOPPED, STANDING OR PARKING IN BUSINESS/RESIDENTIAL",
@@ -18188,6 +18226,13 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "THEFT PROP <$100",
+    "citation": "31.03(e)(1)(A)",
+    "statute": "PC",
+    "level": "MC",
+    "statuteText": "Sec. 31.03. THEFT. (a) A person commits an offense if he\nunlawfully appropriates property with intent to deprive the owner of\nproperty.\n(b) Appropriation of property is unlawful if:\n(1) it is without the owner's effective consent;\n(2) the property is stolen and the actor appropriates the\nproperty knowing it was stolen by another; or\n(3) property in the custody of any law enforcement agency\nwas explicitly represented by any law enforcement agent to the actor\n\nPENAL CODE\nas being stolen and the actor appropriates the property believing it\nwas stolen by another.\n(c) For purposes of Subsection (b):\n(1) evidence that the actor has previously participated in\nrecent transactions other than, but similar to, the transaction for\nwhich the prosecution is based is admissible for the purpose of\nshowing knowledge or intent and the issues of knowledge or intent are\nraised by the actor's plea of not guilty;\n(2) the testimony of an accomplice shall be corroborated by\nproof that tends to connect the actor to the crime, but the actor's\nknowledge or intent may be established by the uncorroborated\ntestimony of the accomplice;\n(3) an actor engaged in the business of buying and selling\nused or secondhand personal property, or lending money on the\nsecurity of personal property deposited with the actor, is presumed\nto know upon receipt by the actor of stolen property (other than a\nmotor vehicle subject to Chapter 501, Transportation Code) that the\nproperty has been previously stolen from another if the actor pays\nfor or loans against the property $25 or more (or consideration of\nequivalent value) and the actor knowingly or recklessly:\n(A) fails to record the name, address, and physical\ndescription or identification number of the seller or pledgor;\n(B) fails to record a complete description of the\nproperty, including the serial number, if reasonably available, or\nother identifying characteristics; or\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty. It is the express intent of this provision that the\npresumption arises unless the actor complies with each of the\nnumbered requirements;\n(4) for the purposes of Subdivision (3)(A), \"identification\nnumber\" means driver's license number, military identification\nnumber, identification certificate, or other official number capable\nof identifying an individual;\n(5) stolen property does not lose its character as stolen\nwhen recovered by any law enforcement agency;\n(6) an actor engaged in the business of obtaining abandoned\nor wrecked motor vehicles or parts of an abandoned or wrecked motor\nvehicle for resale, disposal, scrap, repair, rebuilding, demolition,\nor other form of salvage is presumed to know on receipt by the actor\n\nPENAL CODE\nof stolen property that the property has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to maintain an accurate and legible inventory\nof each motor vehicle component part purchased by or delivered to the\nactor, including the date of purchase or delivery, the name, age,\naddress, sex, and driver's license number of the seller or person\nmaking the delivery, the license plate number of the motor vehicle in\nwhich the part was delivered, a complete description of the part, and\nthe vehicle identification number of the motor vehicle from which the\npart was removed, or in lieu of maintaining an inventory, fails to\nrecord the name and certificate of inventory number of the person who\ndismantled the motor vehicle from which the part was obtained;\n(B) fails on receipt of a motor vehicle to obtain a\ncertificate of authority, sales receipt, or transfer document as\nrequired by Chapter 683, Transportation Code, or a certificate of\ntitle showing that the motor vehicle is not subject to a lien or that\nall recorded liens on the motor vehicle have been released; or\n(C) fails on receipt of a motor vehicle to immediately\nremove an unexpired license plate from the motor vehicle, to keep the\nplate in a secure and locked place, or to maintain an inventory, on\nforms provided by the Texas Department of Motor Vehicles, of license\nplates kept under this paragraph, including for each plate or set of\nplates the license plate number and the make, motor number, and\nvehicle identification number of the motor vehicle from which the\nplate was removed;\n(7) an actor who purchases or receives a used or secondhand\nmotor vehicle is presumed to know on receipt by the actor of the\nmotor vehicle that the motor vehicle has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to report to the Texas Department of Motor\nVehicles the failure of the person who sold or delivered the motor\nvehicle to the actor to deliver to the actor a properly executed\ncertificate of title to the motor vehicle at the time the motor\nvehicle was delivered; or\n(B) fails to file with the county tax assessor-\ncollector of the county in which the actor received the motor\nvehicle, not later than the 20th day after the date the actor\nreceived the motor vehicle, the registration license receipt and\ncertificate of title or evidence of title delivered to the actor in\naccordance with Subchapter D, Chapter 520, Transportation Code, at\n\nPENAL CODE\nthe time the motor vehicle was delivered;\n(8) an actor who purchases or receives from any source\nother than a licensed retailer or distributor of pesticides a\nrestricted-use pesticide or a state-limited-use pesticide or a\ncompound, mixture, or preparation containing a restricted-use or\nstate-limited-use pesticide is presumed to know on receipt by the\nactor of the pesticide or compound, mixture, or preparation that the\npesticide or compound, mixture, or preparation has been previously\nstolen from another if the actor:\n(A) fails to record the name, address, and physical\ndescription of the seller or pledgor;\n(B) fails to record a complete description of the\namount and type of pesticide or compound, mixture, or preparation\npurchased or received; and\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty;\n(9) an actor who is subject to Section 409, Packers and\nStockyards Act (7 U.S.C. Section 228b), that obtains livestock from a\ncommission merchant by representing that the actor will make prompt\npayment is presumed to have induced the commission merchant's consent\nby deception if the actor fails to make full payment in accordance\nwith Section 409, Packers and Stockyards Act (7 U.S.C. Section 228b);\nand\n(10) an actor in possession of property consisting of one\nor more catalytic converters that have been removed from a motor\nvehicle is presumed to have unlawfully appropriated the property\nunless the actor:\n(A) is the owner, as defined by Section 601.002,\nTransportation Code, of each vehicle from which the catalytic\nconverters were removed; or\n(B) possesses the catalytic converters in the ordinary\ncourse of the actor's business, including in the ordinary course of\nbusiness of an entity described by Section 1956.123(1), Occupations\nCode.\n(d) It is not a defense to prosecution under this section that:\n(1) the offense occurred as a result of a deception or\nstrategy on the part of a law enforcement agency, including the use\nof an undercover operative or peace officer;\n(2) the actor was provided by a law enforcement agency with\n\nPENAL CODE\na facility in which to commit the offense or an opportunity to engage\nin conduct constituting the offense; or\n(3) the actor was solicited to commit the offense by a\npeace officer, and the solicitation was of a type that would\nencourage a person predisposed to commit the offense to actually\ncommit the offense, but would not encourage a person not predisposed\nto commit the offense to actually commit the offense.\nText of subsection effective until December 4, 2025\n(e) Except as provided by Subsections (f) and (f-1), an offense\nunder this section is:\n(1) a Class C misdemeanor if the value of the property\nstolen is less than $100;\n(2) a Class B misdemeanor if:\n(A) the value of the property stolen is $100 or more\nbut less than $750;\n(B) the value of the property stolen is less than $100\nand the defendant has previously been convicted of any grade of\ntheft; or\n(C) the property stolen is a driver's license,\ncommercial driver's license, or personal identification certificate\nissued by this state or another state;"
+  },
+  {
     "literal": "THEFT PROP <$100 ENH IAT",
     "citation": "31.03(f)",
     "statute": "PC",
@@ -18235,13 +18280,6 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F1",
     "statuteText": "Sec. 31.03. THEFT. (a) A person commits an offense if he\nunlawfully appropriates property with intent to deprive the owner of\nproperty.\n(b) Appropriation of property is unlawful if:\n(1) it is without the owner's effective consent;\n(2) the property is stolen and the actor appropriates the\nproperty knowing it was stolen by another; or\n(3) property in the custody of any law enforcement agency\nwas explicitly represented by any law enforcement agent to the actor\n\nPENAL CODE\nas being stolen and the actor appropriates the property believing it\nwas stolen by another.\n(c) For purposes of Subsection (b):\n(1) evidence that the actor has previously participated in\nrecent transactions other than, but similar to, the transaction for\nwhich the prosecution is based is admissible for the purpose of\nshowing knowledge or intent and the issues of knowledge or intent are\nraised by the actor's plea of not guilty;\n(2) the testimony of an accomplice shall be corroborated by\nproof that tends to connect the actor to the crime, but the actor's\nknowledge or intent may be established by the uncorroborated\ntestimony of the accomplice;\n(3) an actor engaged in the business of buying and selling\nused or secondhand personal property, or lending money on the\nsecurity of personal property deposited with the actor, is presumed\nto know upon receipt by the actor of stolen property (other than a\nmotor vehicle subject to Chapter 501, Transportation Code) that the\nproperty has been previously stolen from another if the actor pays\nfor or loans against the property $25 or more (or consideration of\nequivalent value) and the actor knowingly or recklessly:\n(A) fails to record the name, address, and physical\ndescription or identification number of the seller or pledgor;\n(B) fails to record a complete description of the\nproperty, including the serial number, if reasonably available, or\nother identifying characteristics; or\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty. It is the express intent of this provision that the\npresumption arises unless the actor complies with each of the\nnumbered requirements;\n(4) for the purposes of Subdivision (3)(A), \"identification\nnumber\" means driver's license number, military identification\nnumber, identification certificate, or other official number capable\nof identifying an individual;\n(5) stolen property does not lose its character as stolen\nwhen recovered by any law enforcement agency;\n(6) an actor engaged in the business of obtaining abandoned\nor wrecked motor vehicles or parts of an abandoned or wrecked motor\nvehicle for resale, disposal, scrap, repair, rebuilding, demolition,\nor other form of salvage is presumed to know on receipt by the actor\n\nPENAL CODE\nof stolen property that the property has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to maintain an accurate and legible inventory\nof each motor vehicle component part purchased by or delivered to the\nactor, including the date of purchase or delivery, the name, age,\naddress, sex, and driver's license number of the seller or person\nmaking the delivery, the license plate number of the motor vehicle in\nwhich the part was delivered, a complete description of the part, and\nthe vehicle identification number of the motor vehicle from which the\npart was removed, or in lieu of maintaining an inventory, fails to\nrecord the name and certificate of inventory number of the person who\ndismantled the motor vehicle from which the part was obtained;\n(B) fails on receipt of a motor vehicle to obtain a\ncertificate of authority, sales receipt, or transfer document as\nrequired by Chapter 683, Transportation Code, or a certificate of\ntitle showing that the motor vehicle is not subject to a lien or that\nall recorded liens on the motor vehicle have been released; or\n(C) fails on receipt of a motor vehicle to immediately\nremove an unexpired license plate from the motor vehicle, to keep the\nplate in a secure and locked place, or to maintain an inventory, on\nforms provided by the Texas Department of Motor Vehicles, of license\nplates kept under this paragraph, including for each plate or set of\nplates the license plate number and the make, motor number, and\nvehicle identification number of the motor vehicle from which the\nplate was removed;\n(7) an actor who purchases or receives a used or secondhand\nmotor vehicle is presumed to know on receipt by the actor of the\nmotor vehicle that the motor vehicle has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to report to the Texas Department of Motor\nVehicles the failure of the person who sold or delivered the motor\nvehicle to the actor to deliver to the actor a properly executed\ncertificate of title to the motor vehicle at the time the motor\nvehicle was delivered; or\n(B) fails to file with the county tax assessor-\ncollector of the county in which the actor received the motor\nvehicle, not later than the 20th day after the date the actor\nreceived the motor vehicle, the registration license receipt and\ncertificate of title or evidence of title delivered to the actor in\naccordance with Subchapter D, Chapter 520, Transportation Code, at\n\nPENAL CODE\nthe time the motor vehicle was delivered;\n(8) an actor who purchases or receives from any source\nother than a licensed retailer or distributor of pesticides a\nrestricted-use pesticide or a state-limited-use pesticide or a\ncompound, mixture, or preparation containing a restricted-use or\nstate-limited-use pesticide is presumed to know on receipt by the\nactor of the pesticide or compound, mixture, or preparation that the\npesticide or compound, mixture, or preparation has been previously\nstolen from another if the actor:\n(A) fails to record the name, address, and physical\ndescription of the seller or pledgor;\n(B) fails to record a complete description of the\namount and type of pesticide or compound, mixture, or preparation\npurchased or received; and\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty;\n(9) an actor who is subject to Section 409, Packers and\nStockyards Act (7 U.S.C. Section 228b), that obtains livestock from a\ncommission merchant by representing that the actor will make prompt\npayment is presumed to have induced the commission merchant's consent\nby deception if the actor fails to make full payment in accordance\nwith Section 409, Packers and Stockyards Act (7 U.S.C. Section 228b);\nand\n(10) an actor in possession of property consisting of one\nor more catalytic converters that have been removed from a motor\nvehicle is presumed to have unlawfully appropriated the property\nunless the actor:\n(A) is the owner, as defined by Section 601.002,\nTransportation Code, of each vehicle from which the catalytic\nconverters were removed; or\n(B) possesses the catalytic converters in the ordinary\ncourse of the actor's business, including in the ordinary course of\nbusiness of an entity described by Section 1956.123(1), Occupations\nCode.\n(d) It is not a defense to prosecution under this section that:\n(1) the offense occurred as a result of a deception or\nstrategy on the part of a law enforcement agency, including the use\nof an undercover operative or peace officer;\n(2) the actor was provided by a law enforcement agency with\n\nPENAL CODE\na facility in which to commit the offense or an opportunity to engage\nin conduct constituting the offense; or\n(3) the actor was solicited to commit the offense by a\npeace officer, and the solicitation was of a type that would\nencourage a person predisposed to commit the offense to actually\ncommit the offense, but would not encourage a person not predisposed\nto commit the offense to actually commit the offense.\nText of subsection effective until December 4, 2025\n(e) Except as provided by Subsections\n(f) and (f-1), an offense\nunder this section is:"
-  },
-  {
-    "literal": "THEFT PROP <$100",
-    "citation": "31.03(e)(1)(A)",
-    "statute": "PC",
-    "level": "MC",
-    "statuteText": "Sec. 31.03. THEFT. (a) A person commits an offense if he\nunlawfully appropriates property with intent to deprive the owner of\nproperty.\n(b) Appropriation of property is unlawful if:\n(1) it is without the owner's effective consent;\n(2) the property is stolen and the actor appropriates the\nproperty knowing it was stolen by another; or\n(3) property in the custody of any law enforcement agency\nwas explicitly represented by any law enforcement agent to the actor\n\nPENAL CODE\nas being stolen and the actor appropriates the property believing it\nwas stolen by another.\n(c) For purposes of Subsection (b):\n(1) evidence that the actor has previously participated in\nrecent transactions other than, but similar to, the transaction for\nwhich the prosecution is based is admissible for the purpose of\nshowing knowledge or intent and the issues of knowledge or intent are\nraised by the actor's plea of not guilty;\n(2) the testimony of an accomplice shall be corroborated by\nproof that tends to connect the actor to the crime, but the actor's\nknowledge or intent may be established by the uncorroborated\ntestimony of the accomplice;\n(3) an actor engaged in the business of buying and selling\nused or secondhand personal property, or lending money on the\nsecurity of personal property deposited with the actor, is presumed\nto know upon receipt by the actor of stolen property (other than a\nmotor vehicle subject to Chapter 501, Transportation Code) that the\nproperty has been previously stolen from another if the actor pays\nfor or loans against the property $25 or more (or consideration of\nequivalent value) and the actor knowingly or recklessly:\n(A) fails to record the name, address, and physical\ndescription or identification number of the seller or pledgor;\n(B) fails to record a complete description of the\nproperty, including the serial number, if reasonably available, or\nother identifying characteristics; or\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty. It is the express intent of this provision that the\npresumption arises unless the actor complies with each of the\nnumbered requirements;\n(4) for the purposes of Subdivision (3)(A), \"identification\nnumber\" means driver's license number, military identification\nnumber, identification certificate, or other official number capable\nof identifying an individual;\n(5) stolen property does not lose its character as stolen\nwhen recovered by any law enforcement agency;\n(6) an actor engaged in the business of obtaining abandoned\nor wrecked motor vehicles or parts of an abandoned or wrecked motor\nvehicle for resale, disposal, scrap, repair, rebuilding, demolition,\nor other form of salvage is presumed to know on receipt by the actor\n\nPENAL CODE\nof stolen property that the property has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to maintain an accurate and legible inventory\nof each motor vehicle component part purchased by or delivered to the\nactor, including the date of purchase or delivery, the name, age,\naddress, sex, and driver's license number of the seller or person\nmaking the delivery, the license plate number of the motor vehicle in\nwhich the part was delivered, a complete description of the part, and\nthe vehicle identification number of the motor vehicle from which the\npart was removed, or in lieu of maintaining an inventory, fails to\nrecord the name and certificate of inventory number of the person who\ndismantled the motor vehicle from which the part was obtained;\n(B) fails on receipt of a motor vehicle to obtain a\ncertificate of authority, sales receipt, or transfer document as\nrequired by Chapter 683, Transportation Code, or a certificate of\ntitle showing that the motor vehicle is not subject to a lien or that\nall recorded liens on the motor vehicle have been released; or\n(C) fails on receipt of a motor vehicle to immediately\nremove an unexpired license plate from the motor vehicle, to keep the\nplate in a secure and locked place, or to maintain an inventory, on\nforms provided by the Texas Department of Motor Vehicles, of license\nplates kept under this paragraph, including for each plate or set of\nplates the license plate number and the make, motor number, and\nvehicle identification number of the motor vehicle from which the\nplate was removed;\n(7) an actor who purchases or receives a used or secondhand\nmotor vehicle is presumed to know on receipt by the actor of the\nmotor vehicle that the motor vehicle has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to report to the Texas Department of Motor\nVehicles the failure of the person who sold or delivered the motor\nvehicle to the actor to deliver to the actor a properly executed\ncertificate of title to the motor vehicle at the time the motor\nvehicle was delivered; or\n(B) fails to file with the county tax assessor-\ncollector of the county in which the actor received the motor\nvehicle, not later than the 20th day after the date the actor\nreceived the motor vehicle, the registration license receipt and\ncertificate of title or evidence of title delivered to the actor in\naccordance with Subchapter D, Chapter 520, Transportation Code, at\n\nPENAL CODE\nthe time the motor vehicle was delivered;\n(8) an actor who purchases or receives from any source\nother than a licensed retailer or distributor of pesticides a\nrestricted-use pesticide or a state-limited-use pesticide or a\ncompound, mixture, or preparation containing a restricted-use or\nstate-limited-use pesticide is presumed to know on receipt by the\nactor of the pesticide or compound, mixture, or preparation that the\npesticide or compound, mixture, or preparation has been previously\nstolen from another if the actor:\n(A) fails to record the name, address, and physical\ndescription of the seller or pledgor;\n(B) fails to record a complete description of the\namount and type of pesticide or compound, mixture, or preparation\npurchased or received; and\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty;\n(9) an actor who is subject to Section 409, Packers and\nStockyards Act (7 U.S.C. Section 228b), that obtains livestock from a\ncommission merchant by representing that the actor will make prompt\npayment is presumed to have induced the commission merchant's consent\nby deception if the actor fails to make full payment in accordance\nwith Section 409, Packers and Stockyards Act (7 U.S.C. Section 228b);\nand\n(10) an actor in possession of property consisting of one\nor more catalytic converters that have been removed from a motor\nvehicle is presumed to have unlawfully appropriated the property\nunless the actor:\n(A) is the owner, as defined by Section 601.002,\nTransportation Code, of each vehicle from which the catalytic\nconverters were removed; or\n(B) possesses the catalytic converters in the ordinary\ncourse of the actor's business, including in the ordinary course of\nbusiness of an entity described by Section 1956.123(1), Occupations\nCode.\n(d) It is not a defense to prosecution under this section that:\n(1) the offense occurred as a result of a deception or\nstrategy on the part of a law enforcement agency, including the use\nof an undercover operative or peace officer;\n(2) the actor was provided by a law enforcement agency with\n\nPENAL CODE\na facility in which to commit the offense or an opportunity to engage\nin conduct constituting the offense; or\n(3) the actor was solicited to commit the offense by a\npeace officer, and the solicitation was of a type that would\nencourage a person predisposed to commit the offense to actually\ncommit the offense, but would not encourage a person not predisposed\nto commit the offense to actually commit the offense.\nText of subsection effective until December 4, 2025\n(e) Except as provided by Subsections (f) and (f-1), an offense\nunder this section is:\n(1) a Class C misdemeanor if the value of the property\nstolen is less than $100;\n(2) a Class B misdemeanor if:\n(A) the value of the property stolen is $100 or more\nbut less than $750;\n(B) the value of the property stolen is less than $100\nand the defendant has previously been convicted of any grade of\ntheft; or\n(C) the property stolen is a driver's license,\ncommercial driver's license, or personal identification certificate\nissued by this state or another state;"
   },
   {
     "literal": "THEFT PROP >=$100<$750",
@@ -20783,6 +20821,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "VIOLATION OF PAROLE WARRANT",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "VIOLATION OF PROBATION WARRANT",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "VIOLATION OF PUB INSURANCE ADJUSTER PROVISIONS",
     "citation": "4102.206(b)",
     "statute": "IC",
@@ -21085,6 +21135,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "N/A",
     "statute": "N/A",
     "level": "MC"
+  },
+  {
+    "literal": "WELFARE CONCERN",
+    "citation": "",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "WILFUL/FRAUD REPORT ON FRANCHISE TAX",

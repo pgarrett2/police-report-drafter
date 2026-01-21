@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-01-20
+
+### Added
+
+- **Cloud Deployment**: Successfully deployed to Google Cloud Run.
+- **Local Docker Support**: Added `docker-compose.yml` for easy local execution on port 3002.
+- **CJIS Compliance Section**: New documentation in README regarding local data security.
+- **Architecture Note**: Clarified no-backend architecture and local browser storage usage.
+
+### Changed
+
+- **Documentation**: Updated README with public testing link and removed mention of unimplemented AI features.
+- **Repository**: Prepared for version synchronization.
+
 ## [1.0.0] - 2026-01-19
 
 ### Added

@@ -18,6 +18,12 @@ export interface Offense {
   statuteText?: string;
 }
 
+export interface NameEntry {
+  name: string;
+  sex: 'M' | 'F' | '';
+  isArrested?: boolean;
+}
+
 export type PartyCategory = 'Complainant' | 'Victim' | 'Suspect' | 'Witness' | 'Other';
 
 export interface OptionalSection {
@@ -46,7 +52,7 @@ export interface ReportState {
     isConsensual: boolean;
     offenses: Offense[];
   };
-  names: Record<PartyCategory, string[]>;
+  names: Record<PartyCategory, NameEntry[]>;
   narratives: {
     public: string;
     isPublicEdited: boolean;

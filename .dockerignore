@@ -1,0 +1,12 @@
+node_modules
+dist
+.git
+.gitignore
+.vscode
+.agent
+*.pdf
+*.xlsx
+README.md
+CHANGELOG.md
+LICENSE
+package-lock.json
