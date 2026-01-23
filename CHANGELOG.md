@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-01-22
+
+### Added
+
+- **Vehicle Section**: New comprehensive vehicle tracking with VIN decoder integration (NHTSA API), color, year, make, model, license plate, and vehicle style fields.
+- **License Plate State Dropdown**: Added state selector next to license plate field with Texas as default.
+- **Vehicle Status Tracking**: Options for Towed, Released, or Left on Scene with conditional destination/location fields.
+- **Vehicle-Name Linking**: Ability to associate vehicles with specific names from the Names section.
+- **Date/Time Inputs**: Added date and time input boxes in Incident Details section with timeframe support.
+- **Cross Streets Support**: Address input now supports "/" character for cross street notation with automatic narrative reformatting.
+- **Enhanced Offense Search**: Improved dropdown search prioritizing exact prefix matches for better usability.
+- **Expanded Offense Database**: Added OCR offenses and new offense titles including warrants, mental health, and intake categories.
+
+### Changed
+
+- **Call Types**: Updated to comprehensive Title Case list extracted from department call types document.
+- **Names Section Redesign**: Transformed category headers into add buttons with sex toggle and arrest button for suspects.
+
+### Fixed
+
+- **Mobile Improvements**: Removed zoom buttons on mobile (pinch-to-zoom available), improved touch icon support.
+- **Offense Search UX**: Better prefix matching ensures more relevant results appear first.
+
 ## [1.1.0] - 2026-01-20
 
 ### Added

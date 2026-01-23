@@ -8,10 +8,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "10990025 AGG KIDNAPPING BOD INJURY",
+    "citation": "PC 20.04(A)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "2 HOUR PARKING",
     "citation": "10.04.001",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "28990017 THEFT CONTROLLED SUBSTANCE <$150K",
+    "citation": "31.03(E)(5)(C)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "3 HOUR PARKING",
@@ -24,6 +36,54 @@ export const CJIS_CODES: Offense[] = [
     "citation": "10.04.001",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "35990249 POSS CS PG 1/1-B>=4G<200G",
+    "citation": "HSC 481.115(D)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "72 HOUR ABATEMENT NOTICE",
+    "citation": "ABATEMENT",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "72010001 CRUELTY TO NONLIVESTOCK ANIMALS / KILL/POISON/SBI",
+    "citation": "PC 42.092(B)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ABANDON ENDANG CHILD W/O INTENT TO RET",
+    "citation": "PC 22.041(D)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ABANDON ENDANGER CHILD CRIMINAL NEG",
+    "citation": "PC 22.041(F)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ABANDON ENDANGER CHILD W/INTENT TO RET",
+    "citation": "PC 22.041(d)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ABANDON/ NDANGER INDV INT/KNOW/RECK/CRIM NEG",
+    "citation": "PC 22.041(F)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ABANDON/ENDANG CHILD IMMINENT DANGER BI",
+    "citation": "PC 22.041(E)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ABANDON/ENDANGER CHILD INDV IMMNT DANGER BI",
@@ -45,6 +105,18 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 22.041. ABANDONING OR ENDANGERING A CHILD, ELDERLY\nINDIVIDUAL, OR DISABLED INDIVIDUAL. (a) In this section:\n(1) \"Abandon\" means to leave in any place without providing\nreasonable and necessary care a child, elderly individual, or\n\nPENAL CODE\ndisabled individual under circumstances under which no reasonable,\nsimilarly situated person would leave a child or individual of that\nage and ability.\n(2) \"Child,\" \"elderly individual,\" and \"disabled\nindividual\" have the meanings assigned by Section 22.04.\n(b) A person commits an offense if the person, having custody,\ncare, or control of a child, elderly individual, or disabled\nindividual, intentionally abandons the child or individual in any\nplace under circumstances that expose the child or individual to an\nunreasonable risk of harm.\n(c) A person commits an offense if the person intentionally,\nknowingly, recklessly, or with criminal negligence, by act or\nomission, engages in conduct that places a child, elderly individual,\nor disabled individual in imminent danger of death, bodily injury, or\nphysical or mental impairment.\n(c-1) For purposes of Subsection (c), it is presumed that a\nperson engaged in conduct that places a child, elderly individual, or\ndisabled individual in imminent danger of death, bodily injury, or\nphysical or mental impairment if:\n(1) the person manufactured, possessed, or in any way\nintroduced into the body of any person the controlled substance\nmethamphetamine or a controlled substance listed in Penalty Group 1-\nB, Section 481.1022, Health and Safety Code, in the presence of the\nchild, elderly individual, or disabled individual;\n(2) the person's conduct related to the proximity or\naccessibility of the controlled substance methamphetamine or a\ncontrolled substance listed in Penalty Group 1-B, Section 481.1022,\nHealth and Safety Code, to the child, elderly individual, or disabled\nindividual and an analysis of a specimen of the child's or\nindividual's blood, urine, or other bodily substance indicates the\npresence of methamphetamine or a controlled substance listed in\nPenalty Group 1-B in the body of the child or individual; or\n(3) the person injected, ingested, inhaled, or otherwise\nintroduced a controlled substance listed in Penalty Group 1, Section\n481.102, Health and Safety Code, or Penalty Group 1-B, Section\n481.1022, Health and Safety Code, into the human body when the person\nwas not in lawful possession of the substance as defined by Section\n481.002(24) of that code.\n(d) Except as provided by Subsection (e), an offense under\nSubsection (b) is:\n\nPENAL CODE\n(1) a state jail felony if the actor abandoned the child,\nelderly individual, or disabled individual with intent to return for\nthe child or individual; or\n(2) a felony of the third degree if the actor abandoned the\nchild, elderly individual, or disabled individual without intent to\nreturn for the child or individual."
+  },
+  {
+    "literal": "ABANDONED ICEBOX, REFRIGERATOR",
+    "citation": "ORD 8.04.001",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ABANDONED MOTOR VEHICLE",
+    "citation": "683",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ABANDONMENT OF ASSUMED BUS/PROF NAME",
@@ -134,6 +206,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "ACCEPT HONORARIUM",
+    "citation": "PC 36.07",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ACCEPT UNLAWFUL BENEFIT FROM ABC VIOL",
     "citation": "104.03",
     "statute": "ABC",
@@ -183,10 +261,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "F*"
   },
   {
+    "literal": "ACCIDENT INVOLVING PERSONAL INJURY OR DEATH",
+    "citation": "TRC 550.021 3319",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ACCIDENT REPORT FALSE INFORMATION",
     "citation": "601.004(i)",
     "statute": "TRC",
     "level": "M*"
+  },
+  {
+    "literal": "ACQ  OF BEV RESALE FROM OTHER LICENSEE",
+    "citation": "ABC 69.09",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ACQ INT PROPRTY/CNTRL RACKETEER/UNLAW DBT COLL",
@@ -226,6 +316,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "ACT PROHIBIT DURING CANCEL/SUSPEND LIC",
+    "citation": "ABC 61.84",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ACT PROHIBIT DURING PERMIT SUSPENSION",
+    "citation": "ABC 11.68",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ACTING AS AGENT AFTER LICENSE SUSPEND/REVOKED",
     "citation": "4005.151(b)",
     "statute": "IC",
@@ -242,6 +344,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "205.401",
     "statute": "OC",
     "level": "F3"
+  },
+  {
+    "literal": "ADMIN MEDICATION TO CHILD W/O PERMISS",
+    "citation": "HRC 42.065(h)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ADMINISTER MEDICATION TO CHILD W/O PERMISSION",
@@ -262,6 +370,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 25.09. ADVERTISING FOR PLACEMENT OF CHILD. (a) A person\ncommits an offense if the person advertises in the public media that\nthe person will place, provide, or obtain a child for adoption or any\nother form of permanent physical custody of the child.\n(b) This section does not apply to a licensed child-placing\nagency that is identified in the advertisement as a licensed child-\nplacing agency.\n\nPENAL CODE\n(c) An offense under this section is a Class A misdemeanor\nunless the person has been convicted previously under this section,\nin which event the offense is a felony of the third degree."
+  },
+  {
+    "literal": "ADVERTISING PLACEMENT OF CHILD W/PRV CON",
+    "citation": "PC 25.09(c)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "AGENT ASSISTING PERSON WITH SUSP/REV LICENSE",
@@ -302,6 +416,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 22.02. AGGRAVATED ASSAULT. (a) A person commits an\noffense if the person commits assault as defined in Sec. 22.01 and\nthe person:\n(1) causes serious bodily injury to another, including the\nperson's spouse; or\n(2) uses or exhibits a deadly weapon during the commission\nof the assault.\n(b) An offense under this section is a felony of the second\ndegree, except that the offense is a felony of the first degree if:\n(1) the actor uses a deadly weapon during the commission of\nthe assault and causes:\n(A) serious bodily injury to a person whose\nrelationship to or association with the defendant is described by\nSection 71.0021(b), 71.003, or 71.005, Family Code; or\n(B) a traumatic brain or spine injury to another that\nresults in a persistent vegetative state or irreversible paralysis;\n(2) regardless of whether the offense is committed under\nSubsection (a)(1) or (a)(2), the offense is committed:\n(A) by a public servant acting under color of the\nservant's office or employment;\n(B) against a person the actor knows is a public\nservant while the public servant is lawfully discharging an official\nduty, or in retaliation or on account of an exercise of official\npower or performance of an official duty as a public servant;\n(C) in retaliation against or on account of the service\nof another as a witness, prospective witness, informant, or person\nwho has reported the occurrence of a crime;\n(D) against a person the actor knows is a process\nserver while the person is performing a duty as a process server;\n(E) against a person the actor knows is a security\nofficer while the officer is performing a duty as a security officer;\nor\n(F) by an actor who is committed to a civil commitment\nfacility, against:"
   },
   {
+    "literal": "AGG ASSAULT AGAINST PUBLIC SERVANT",
+    "citation": "PC 22.02(B)(2)(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "AGG ASSAULT AGAINST SECURITY OFFICER",
     "citation": "22.02(b)(2)(E)",
     "statute": "PC",
@@ -314,6 +434,24 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F1",
     "statuteText": "Sec. 22.02. AGGRAVATED ASSAULT. (a) A person commits an\noffense if the person commits assault as defined in Sec. 22.01 and\nthe person:\n(1) causes serious bodily injury to another, including the\nperson's spouse; or\n(2) uses or exhibits a deadly weapon during the commission\nof the assault.\n(b) An offense under this section is a felony of the second\ndegree, except that the offense is a felony of the first degree if:\n(1) the actor uses a deadly weapon during the commission of\nthe assault and causes:\n(A) serious bodily injury to a person whose\nrelationship to or association with the defendant is described by\nSection 71.0021(b), 71.003, or 71.005, Family Code; or\n(B) a traumatic brain or spine injury to another that\nresults in a persistent vegetative state or irreversible paralysis;\n(2) regardless of whether the offense is committed under\nSubsection (a)(1) or (a)(2), the offense is committed:\n(A) by a public servant acting under color of the\nservant's office or employment;\n(B) against a person the actor knows is a public\nservant while the public servant is lawfully discharging an official\nduty, or in retaliation or on account of an exercise of official\npower or performance of an official duty as a public servant;\n(C) in retaliation against or on account of the service\nof another as a witness, prospective witness, informant, or person\nwho has reported the occurrence of a crime;\n(D) against a person the actor knows is a process\nserver while the person is performing a duty as a process server;\n(E) against a person the actor knows is a security\nofficer while the officer is performing a duty as a security officer;\nor\n(F) by an actor who is committed to a civil commitment\nfacility, against:"
+  },
+  {
+    "literal": "AGG ASSAULT BY PUBLIC SERVANT",
+    "citation": "PC 22.02(B)(2)(A)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG ASSAULT CAUSES SERIOUS BODILY INJ",
+    "citation": "PC 22.02(A)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG ASSAULT DATE/FAMILY/HOUSE W/WEAP",
+    "citation": "PC 22.02(B)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "AGG ASSAULT DATE/FAMILY/HOUSE W/WEAPON SBI",
@@ -330,6 +468,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 22.02. AGGRAVATED ASSAULT. (a) A person commits an\noffense if the person commits assault as defined in Sec. 22.01 and\nthe person:\n(1) causes serious bodily injury to another, including the\nperson's spouse; or\n(2) uses or exhibits a deadly weapon during the commission\nof the assault.\n(b) An offense under this section is a felony of the second\ndegree, except that the offense is a felony of the first degree if:\n(1) the actor uses a deadly weapon during the commission of\nthe assault and causes:\n(A) serious bodily injury to a person whose\nrelationship to or association with the defendant is described by\nSection 71.0021(b), 71.003, or 71.005, Family Code; or\n(B) a traumatic brain or spine injury to another that\nresults in a persistent vegetative state or irreversible paralysis;\n(2) regardless of whether the offense is committed under\nSubsection (a)(1) or (a)(2), the offense is committed:\n(A) by a public servant acting under color of the\nservant's office or employment;\n(B) against a person the actor knows is a public\nservant while the public servant is lawfully discharging an official\nduty, or in retaliation or on account of an exercise of official\npower or performance of an official duty as a public servant;\n(C) in retaliation against or on account of the service\nof another as a witness, prospective witness, informant, or person\nwho has reported the occurrence of a crime;\n(D) against a person the actor knows is a process\nserver while the person is performing a duty as a process server;\n(E) against a person the actor knows is a security\nofficer while the officer is performing a duty as a security officer;\nor\n(F) by an actor who is committed to a civil commitment\nfacility, against:"
   },
   {
+    "literal": "AGG ASSAULT W/DEADLY WEAPON",
+    "citation": "PC 22.02(A)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "AGG ASSAULT W/WEAPON BRAIN INJURY/PARALYSIS",
     "citation": "22.02(b)(1)(B)",
     "statute": "PC",
@@ -344,6 +488,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 22.02. AGGRAVATED ASSAULT.\n(a) A person commits an\noffense if the person commits assault as defined in Sec. 22.01 and\nthe person:\n(1) causes serious bodily injury to another, including the\nperson's spouse; or"
   },
   {
+    "literal": "AGG ASSLT MV DISCH FIRE RKLS HAB/BLD/VEH",
+    "citation": "PC 22.02(B)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "AGG ASSLT MV DISCH FRARM RKLS HAB/BLDG/VEH SBI",
     "citation": "22.02(b)(3)",
     "statute": "PC",
@@ -356,6 +506,42 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F2",
     "statuteText": "Sec. 22.02. AGGRAVATED ASSAULT.\n(a) A person commits an\noffense if the person commits assault as defined in Sec. 22.01 and\nthe person:\n(1) causes serious bodily injury to another, including the\nperson's spouse; or\n(2) uses or exhibits a deadly weapon during the commission\nof the assault."
+  },
+  {
+    "literal": "AGG KIDNAP INTERFERE PERFORM SAFE REL",
+    "citation": "PC 20.04(D)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG KIDNAP RANSOM/REWARD SAFE RELEASE",
+    "citation": "PC 20.04(D)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG KIDNAPPING",
+    "citation": "PC 20.04",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG KIDNAPPING  SHIELD/HOSTAGE SAFE REL",
+    "citation": "PC 20.04(D)(7)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG KIDNAPPING BI/SEX ABUSE SAFE RELEASE",
+    "citation": "PC 20.04(D)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG KIDNAPPING BI/SEXUAL ABUSE",
+    "citation": "PC 20.04(A)(4)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "AGG KIDNAPPING BOD INJURY",
@@ -412,6 +598,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F2",
     "statuteText": "Sec. 20.04. AGGRAVATED KIDNAPPING. (a) A person commits an\noffense if he intentionally or knowingly abducts another person with\nthe intent to:\n(1) hold him for ransom or reward;\n(2) use him as a shield or hostage;\n(3) facilitate the commission of a felony or the flight\nafter the attempt or commission of a felony;\n(4) inflict bodily injury on him or violate or abuse him\nsexually;\n(5) terrorize him or a third person; or\n(6) interfere with the performance of any governmental or\npolitical function.\n(b) A person commits an offense if the person intentionally or\nknowingly abducts another person and uses or exhibits a deadly weapon\nduring the commission of the offense.\n(c) Except as provided by Subsection\n(d), an offense under this\nsection is a felony of the first degree."
+  },
+  {
+    "literal": "AGG KIDNAPPING RELEASE VICTIM SAFEPLACE",
+    "citation": "PC 20.04(D)(5)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "AGG KIDNAPPING SEXUAL ABUSE",
@@ -484,6 +676,18 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 43.041. AGGRAVATED ONLINE PROMOTION OF PROSTITUTION. (a)\nA person commits an offense if the person owns, manages, or operates\nan interactive computer service or information content provider, or\noperates as an information content provider, with the intent to\npromote the prostitution of five or more persons or facilitate five\nor more persons to engage in prostitution or solicitation of\nprostitution.\n(b) An offense under this section is a felony of the second\ndegree, except that the offense is a felony of the first degree if\nthe actor:\n(1) has been previously convicted of an offense under this\nsection; or"
   },
   {
+    "literal": "AGG PERJURY",
+    "citation": "PC 37.03",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG PROMO OF PROSTIT PERSON/S < 18YOA",
+    "citation": "PC 43.04(b)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "AGG PROMOTION OF PROSTITUTION",
     "citation": "43.04(b)",
     "statute": "PC",
@@ -496,6 +700,78 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F1",
     "statuteText": "Sec. 29.03. AGGRAVATED ROBBERY. (a) A person commits an\n\nPENAL CODE\noffense if he commits robbery as defined in Section 29.02, and he:\n(1) causes serious bodily injury to another;\n(2) uses or exhibits a deadly weapon; or\n(3) causes bodily injury to another person or threatens or\nplaces another person in fear of imminent bodily injury or death, if\nthe other person is:\n(A) 65 years of age or older; or\n(B) a disabled person.\n(b) An offense under this section is a felony of the first\ndegree."
+  },
+  {
+    "literal": "AGG SEX ASS OF ELDRLY/DIS-FONDELING ONLY",
+    "citation": "PC 22.021(A)(2(C)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG SEX ASSOF ELDRLY/DIS-SODOMY",
+    "citation": "PC 22.021(A)(2(C)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG SEX ASSOF ELDRLY/DIS-WITH OBJECT",
+    "citation": "PC 22.021(A)(2(C)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG SEXL ASS OF ELDRLY/DISA-TRUE RAPE",
+    "citation": "PC 22.021(A)(2(C)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG SEXUAL ASSAULT CHILD-FONDELING ONLY",
+    "citation": "PC 22.021(A)(2)(B)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG SEXUAL ASSAULT CHILD-SODOMY",
+    "citation": "PC 22.021(A)(2)(B)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG SEXUAL ASSAULT CHILD-TRU RAPE BY DEF",
+    "citation": "PC 22.021(A)(2)(B)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG SEXUAL ASSAULT CHILD-WITH OBJECT",
+    "citation": "PC 22.021(A)(2)(B)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG SEXUAL ASSAULT-FONDELING ONLY",
+    "citation": "PC 22.021(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG SEXUAL ASSAULT-SODOMY",
+    "citation": "PC 22.021(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG SEXUAL ASSAULT-TRUE RAPE BY DEF",
+    "citation": "PC 22.021(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AGG SEXUAL ASSAULT-WITH OBJECT",
+    "citation": "PC 22.021(4)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "AGG SEXUAL ASSLT",
@@ -554,6 +830,18 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 25.031. AGREEMENT TO ABDUCT FROM CUSTODY. (a) A person\ncommits an offense if the person agrees, for remuneration or the\npromise of remuneration, to abduct a child younger than 18 years of\nage by force, threat of force, misrepresentation, stealth, or\nunlawful entry, knowing that the child is under the care and control\nof a person having custody or physical possession of the child under\na court order, including a temporary order, or under the care and\ncontrol of another person who is exercising care and control with the\nconsent of a person having custody or physical possession under a\ncourt order, including a temporary order.\n\nPENAL CODE\n(b) An offense under this section is a state jail felony.\nAdded by"
   },
   {
+    "literal": "AID AND ABET OVER GRSS WEGHT 15% OR OVER",
+    "citation": "TRC 621.503 3716",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AID AND ABET-OVER GROSS WEIGHT < 15%",
+    "citation": "TRC 621.503 3717",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "AIDING IN COMMISSION OF TERRORISM",
     "citation": "76.03(b)",
     "statute": "PC",
@@ -594,6 +882,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "MB",
     "statuteText": "Sec. 76.03. AIDING IN COMMISSION OF TERRORISM. (a) A person\ncommits an offense if the person intentionally raises, solicits,\ncollects, or provides material support or resources with intent or\nknowledge that the material support or resources will be used, wholly\nor partly, to solicit, direct, supervise, plan, prepare, promote,\ncarry out, assist, or aid in committing an offense under Section\n76.02.\n(b) An offense under this section is of the same degree as the\noffense under Section 76.02 that the person aided.\nAdded by"
+  },
+  {
+    "literal": "AIDING SUICIDE",
+    "citation": "22.08",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "AIDING SUICIDE/SBI",
@@ -649,6 +943,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "9.04.007(a)(7)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "ALARM - USERS W/O PERMIT",
+    "citation": "ORD 5.09.003",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ALARM - USERS W/O PERMIT (SUBSEQUENT)",
+    "citation": "ORD 5.09.003S",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ALCOHOL - ATTEMPTED TO PURCHASE",
@@ -773,6 +1079,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "ALCOHOL BEVERAGE CODE OFFENSE",
+    "citation": "TRC 521.342 (A)(2) 3241",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ALCOHOLIC BEVERAGE CODE VIOLATION",
     "citation": "1.05",
     "statute": "ABC",
@@ -789,6 +1101,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "101.31",
     "statute": "ABC",
     "level": "MB"
+  },
+  {
+    "literal": "ALCOHOLIC BEVERAGE IN DRY AREA 2+ TIMES",
+    "citation": "ABC 101.31 FS",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ALL-TERRAIN VEHICLE CARRYING PASSENGER",
@@ -845,6 +1163,24 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "ALTER OR FORGE CERTIFICATE OF TITLE",
+    "citation": "TRC 501.154 3652",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ALTER VEHICLE IDENTIFICATION NUMBER",
+    "citation": "TRC 501.151 3651",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ALTER/CHANGE/MUTILATE TRANSFER PAPERS",
+    "citation": "TRC 520.035(B)(2) 3650",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ALTER/DEST/REMOVE REQ IDENT NUM ON VESSELS",
     "citation": "31.127(b)",
     "statute": "PWC",
@@ -888,6 +1224,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "ANIMAL(S) - APIARY NUISANCE",
+    "citation": "ORD 3.01.009(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ANIMAL(S) - BARKING DOG",
     "citation": "3.02.001",
     "statute": "CO",
@@ -898,6 +1240,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "3.08.001",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "ANIMAL(S) - CRUELTY TO ANIMALS",
+    "citation": "ORD 3.07.001",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ANIMAL(S) - DISEASED",
@@ -922,6 +1270,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "3.03.002(a)(1)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "ANIMAL(S) - DOG/FERRIT/PIG AT LRG",
+    "citation": "ORD 3.05.001(E)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ANIMAL(S) - FAIL TO COMPLY W/DANGER DOG",
+    "citation": "ORD 3.08.002(A)1",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ANIMAL(S) - FAIL TO COMPLY W/DANGEROUS DOG",
@@ -972,6 +1332,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "ANIMAL(S) - MICROCHIP REQUIRED",
+    "citation": "ORD 3.01.014",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ANIMAL(S) - MORE THAN 1 CHICKEN/ROOSTER",
+    "citation": "ORD 3.06.004(c)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ANIMAL(S) - MORE THAN ONE CHICKEN/ROOSTER",
     "citation": "3.06.003",
     "statute": "CO",
@@ -982,6 +1354,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "30.06.004(c)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "ANIMAL(S) - NO BREEDING PERMIT",
+    "citation": "ORD 3.04.001",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ANIMAL(S) - PROHIBIT ANIMAL IN CITY LIM",
+    "citation": "ORD 3.01.011",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ANIMAL(S) - PROHIBITED ANIMAL IN CITY LIMITS",
@@ -1012,6 +1396,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "3.03.001(2)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "ANIMAL(S) - SELLING/GIVING AWAY ANIMALS",
+    "citation": "ORD 3.02.011",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ANIMAL(S) - SMALL W/N 100' OF RESIDENCE",
@@ -1078,6 +1468,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "22A.055(g)",
     "statute": "EDC",
     "level": "MB"
+  },
+  {
+    "literal": "APPLY FOR REGISTRATION W/O MOTOR #",
+    "citation": "TRC 520.012 3653",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "APPR DIST BOARD/CHIEF APPR ELEGIBILITY/CONDUCT",
@@ -1147,6 +1543,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 28.02. ARSON. (a) A person commits an offense if the\nperson starts a fire, regardless of whether the fire continues after\nignition, or causes an explosion with intent to destroy or damage:\n(1) any vegetation, fence, or structure on open-space land;\nor\n\nPENAL CODE\n(2) any building, habitation, or vehicle:\n(A) knowing that it is within the limits of an\nincorporated city or town;\n(B) knowing that it is insured against damage or\ndestruction;\n(C) knowing that it is subject to a mortgage or other\nsecurity interest;\n(D) knowing that it is located on property belonging to\nanother;\n(E) knowing that it has located within it property\nbelonging to another; or\n(F) when the person is reckless about whether the\nburning or explosion will endanger the life of some individual or the\nsafety of the property of another.\n(a-1) A person commits an offense if the person recklessly\nstarts a fire or causes an explosion while manufacturing or\nattempting to manufacture a controlled substance and the fire or\nexplosion damages any building, habitation, or vehicle.\n(a-2) A person commits an offense if the person intentionally\nstarts a fire or causes an explosion and in so doing:\n(1) recklessly damages or destroys a building belonging to\nanother; or\n(2) recklessly causes another person to suffer bodily\ninjury or death.\n(b) It is an exception to the application of Subsection (a)(1)\nthat the fire or explosion was a part of the controlled burning of\nopen-space land.\n(c) It is a defense to prosecution under Subsection (a)(2)(A)\nthat prior to starting the fire or causing the explosion, the actor\nobtained a permit or other written authorization granted in\naccordance with a city ordinance, if any, regulating fires and\nexplosions.\n(d) An offense under Subsection"
   },
   {
+    "literal": "ARSON CAUSING BODILY INJURY/DEATH",
+    "citation": "PC 28.02(d)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ARSON CAUSING BODILY INJURY/DEATH IAT",
     "citation": "28.02(d)(1)",
     "statute": "PC",
@@ -1154,10 +1556,10 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 28.02. ARSON. (a) A person commits an offense if the\nperson starts a fire, regardless of whether the fire continues after\nignition, or causes an explosion with intent to destroy or damage:\n(1) any vegetation, fence, or structure on open-space land;\nor\n\nPENAL CODE\n(2) any building, habitation, or vehicle:\n(A) knowing that it is within the limits of an\nincorporated city or town;\n(B) knowing that it is insured against damage or\ndestruction;\n(C) knowing that it is subject to a mortgage or other\nsecurity interest;\n(D) knowing that it is located on property belonging to\nanother;\n(E) knowing that it has located within it property\nbelonging to another; or\n(F) when the person is reckless about whether the\nburning or explosion will endanger the life of some individual or the\nsafety of the property of another.\n(a-1) A person commits an offense if the person recklessly\nstarts a fire or causes an explosion while manufacturing or\nattempting to manufacture a controlled substance and the fire or\nexplosion damages any building, habitation, or vehicle.\n(a-2) A person commits an offense if the person intentionally\nstarts a fire or causes an explosion and in so doing:\n(1) recklessly damages or destroys a building belonging to\nanother; or\n(2) recklessly causes another person to suffer bodily\ninjury or death.\n(b) It is an exception to the application of Subsection (a)(1)\nthat the fire or explosion was a part of the controlled burning of\nopen-space land.\n(c) It is a defense to prosecution under Subsection (a)(2)(A)\nthat prior to starting the fire or causing the explosion, the actor\nobtained a permit or other written authorization granted in\naccordance with a city ordinance, if any, regulating fires and\nexplosions.\n(d) An offense under Subsection (a) is a felony of the second\ndegree, except that the offense is a felony of the first degree if it\nis shown on the trial of the offense that:\n(1) bodily injury or death was suffered by any person by\nreason of the commission of the offense; or"
   },
   {
-    "literal": "ARSON CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "ARSON INT DAMAGE HABIT/PLCE OF WORSHIP",
+    "citation": "PC 28.02(D)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ARSON INTEND DAMAGE HAB/PLACE OF WORSHIP IAT",
@@ -1167,11 +1569,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 28.02. ARSON. (a) A person commits an offense if the\nperson starts a fire, regardless of whether the fire continues after\nignition, or causes an explosion with intent to destroy or damage:\n(1) any vegetation, fence, or structure on open-space land;\nor\n\nPENAL CODE\n(2) any building, habitation, or vehicle:\n(A) knowing that it is within the limits of an\nincorporated city or town;\n(B) knowing that it is insured against damage or\ndestruction;\n(C) knowing that it is subject to a mortgage or other\nsecurity interest;\n(D) knowing that it is located on property belonging to\nanother;\n(E) knowing that it has located within it property\nbelonging to another; or\n(F) when the person is reckless about whether the\nburning or explosion will endanger the life of some individual or the\nsafety of the property of another.\n(a-1) A person commits an offense if the person recklessly\nstarts a fire or causes an explosion while manufacturing or\nattempting to manufacture a controlled substance and the fire or\nexplosion damages any building, habitation, or vehicle.\n(a-2) A person commits an offense if the person intentionally\nstarts a fire or causes an explosion and in so doing:\n(1) recklessly damages or destroys a building belonging to\nanother; or\n(2) recklessly causes another person to suffer bodily\ninjury or death.\n(b) It is an exception to the application of Subsection (a)(1)\nthat the fire or explosion was a part of the controlled burning of\nopen-space land.\n(c) It is a defense to prosecution under Subsection (a)(2)(A)\nthat prior to starting the fire or causing the explosion, the actor\nobtained a permit or other written authorization granted in\naccordance with a city ordinance, if any, regulating fires and\nexplosions.\n(d) An offense under Subsection (a) is a felony of the second\ndegree, except that the offense is a felony of the first degree if it\nis shown on the trial of the offense that:\n(1) bodily injury or death was suffered by any person by\nreason of the commission of the offense; or\n(2) the property intended to be damaged or destroyed by the\nactor was a habitation or a place of assembly or worship."
   },
   {
+    "literal": "ARSON OF BLDG/HABIT/VEH RCKLS CAUSE DMG",
+    "citation": "PC 28.02(f)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ARSON RECK DAMAGE BLDG/RECK CAUSE BI OR DEATH",
     "citation": "28.02(f)",
     "statute": "PC",
     "level": "FS",
     "statuteText": "Sec. 28.02. ARSON. (a) A person commits an offense if the\nperson starts a fire, regardless of whether the fire continues after\nignition, or causes an explosion with intent to destroy or damage:\n(1) any vegetation, fence, or structure on open-space land;\nor\n\nPENAL CODE\n(2) any building, habitation, or vehicle:\n(A) knowing that it is within the limits of an\nincorporated city or town;\n(B) knowing that it is insured against damage or\ndestruction;\n(C) knowing that it is subject to a mortgage or other\nsecurity interest;\n(D) knowing that it is located on property belonging to\nanother;\n(E) knowing that it has located within it property\nbelonging to another; or\n(F) when the person is reckless about whether the\nburning or explosion will endanger the life of some individual or the\nsafety of the property of another.\n(a-1) A person commits an offense if the person recklessly\nstarts a fire or causes an explosion while manufacturing or\nattempting to manufacture a controlled substance and the fire or\nexplosion damages any building, habitation, or vehicle.\n(a-2) A person commits an offense if the person intentionally\nstarts a fire or causes an explosion and in so doing:\n(1) recklessly damages or destroys a building belonging to\nanother; or\n(2) recklessly causes another person to suffer bodily\ninjury or death.\n(b) It is an exception to the application of Subsection (a)(1)\nthat the fire or explosion was a part of the controlled burning of\nopen-space land.\n(c) It is a defense to prosecution under Subsection (a)(2)(A)\nthat prior to starting the fire or causing the explosion, the actor\nobtained a permit or other written authorization granted in\naccordance with a city ordinance, if any, regulating fires and\nexplosions.\n(d) An offense under Subsection (a) is a felony of the second\ndegree, except that the offense is a felony of the first degree if it\nis shown on the trial of the offense that:\n(1) bodily injury or death was suffered by any person by\nreason of the commission of the offense; or\n(2) the property intended to be damaged or destroyed by the\nactor was a habitation or a place of assembly or worship.\n(e) An offense under Subsection (a-1) is a state jail felony,\n\nPENAL CODE\nexcept that the offense is a felony of the third degree if it is\nshown on the trial of the offense that bodily injury or death was\nsuffered by any person by reason of the commission of the offense.\n(f) An offense under Subsection (a-2) is a state jail felony."
+  },
+  {
+    "literal": "ARSON W/MAN OR ATT MAN CONT SUB",
+    "citation": "PC 28.02(a-1)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ARSON W/MAN OR ATT MAN CONT SUB BI/DEATH IAT",
@@ -1181,6 +1595,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 28.02. ARSON. (a) A person commits an offense if the\nperson starts a fire, regardless of whether the fire continues after\nignition, or causes an explosion with intent to destroy or damage:\n(1) any vegetation, fence, or structure on open-space land;\nor\n\nPENAL CODE\n(2) any building, habitation, or vehicle:\n(A) knowing that it is within the limits of an\nincorporated city or town;\n(B) knowing that it is insured against damage or\ndestruction;\n(C) knowing that it is subject to a mortgage or other\nsecurity interest;\n(D) knowing that it is located on property belonging to\nanother;\n(E) knowing that it has located within it property\nbelonging to another; or\n(F) when the person is reckless about whether the\nburning or explosion will endanger the life of some individual or the\nsafety of the property of another.\n(a-1) A person commits an offense if the person recklessly\nstarts a fire or causes an explosion while manufacturing or\nattempting to manufacture a controlled substance and the fire or\nexplosion damages any building, habitation, or vehicle.\n(a-2) A person commits an offense if the person intentionally\nstarts a fire or causes an explosion and in so doing:\n(1) recklessly damages or destroys a building belonging to\nanother; or\n(2) recklessly causes another person to suffer bodily\ninjury or death.\n(b) It is an exception to the application of Subsection (a)(1)\nthat the fire or explosion was a part of the controlled burning of\nopen-space land.\n(c) It is a defense to prosecution under Subsection (a)(2)(A)\nthat prior to starting the fire or causing the explosion, the actor\nobtained a permit or other written authorization granted in\naccordance with a city ordinance, if any, regulating fires and\nexplosions.\n(d) An offense under Subsection (a) is a felony of the second\ndegree, except that the offense is a felony of the first degree if it\nis shown on the trial of the offense that:\n(1) bodily injury or death was suffered by any person by\nreason of the commission of the offense; or\n(2) the property intended to be damaged or destroyed by the\nactor was a habitation or a place of assembly or worship.\n(e) An offense under Subsection (a-1) is a state jail felony,\n\nPENAL CODE\nexcept that the offense is a felony of the third degree if it is\nshown on the trial of the offense that bodily injury or death was\nsuffered by any person by reason of the commission of the offense."
   },
   {
+    "literal": "ARSON W/MAN/ATT MAN CONT SUB  BI/DEATH",
+    "citation": "PC 28.02(a-1)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ARSON W/MAN/ATT MAN CONT SUB DMGE BLDG/HAB/VEH",
     "citation": "28.02(e)",
     "statute": "PC",
@@ -1188,11 +1608,35 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 28.02. ARSON. (a) A person commits an offense if the\nperson starts a fire, regardless of whether the fire continues after\nignition, or causes an explosion with intent to destroy or damage:\n(1) any vegetation, fence, or structure on open-space land;\nor\n\nPENAL CODE\n(2) any building, habitation, or vehicle:\n(A) knowing that it is within the limits of an\nincorporated city or town;\n(B) knowing that it is insured against damage or\ndestruction;\n(C) knowing that it is subject to a mortgage or other\nsecurity interest;\n(D) knowing that it is located on property belonging to\nanother;\n(E) knowing that it has located within it property\nbelonging to another; or\n(F) when the person is reckless about whether the\nburning or explosion will endanger the life of some individual or the\nsafety of the property of another.\n(a-1) A person commits an offense if the person recklessly\nstarts a fire or causes an explosion while manufacturing or\nattempting to manufacture a controlled substance and the fire or\nexplosion damages any building, habitation, or vehicle.\n(a-2) A person commits an offense if the person intentionally\nstarts a fire or causes an explosion and in so doing:\n(1) recklessly damages or destroys a building belonging to\nanother; or\n(2) recklessly causes another person to suffer bodily\ninjury or death.\n(b) It is an exception to the application of Subsection (a)(1)\nthat the fire or explosion was a part of the controlled burning of\nopen-space land.\n(c) It is a defense to prosecution under Subsection (a)(2)(A)\nthat prior to starting the fire or causing the explosion, the actor\nobtained a permit or other written authorization granted in\naccordance with a city ordinance, if any, regulating fires and\nexplosions.\n(d) An offense under Subsection (a) is a felony of the second\ndegree, except that the offense is a felony of the first degree if it\nis shown on the trial of the offense that:\n(1) bodily injury or death was suffered by any person by\nreason of the commission of the offense; or\n(2) the property intended to be damaged or destroyed by the\nactor was a habitation or a place of assembly or worship.\n(e) An offense under Subsection (a-1) is a state jail felony,\n\nPENAL CODE\nexcept that the offense is a felony of the third degree if it is\nshown on the trial of the offense that bodily injury or death was\nsuffered by any person by reason of the commission of the offense."
   },
   {
+    "literal": "ARTICLES INTERFERED WITH HANDLING BIKE",
+    "citation": "TRC 551.102 3501",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ASS/OPER AMUS RIDE W/PREV INTOX MAN CNV",
+    "citation": "PC 49.09(B)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ASSAULT AGAINST ELDERLY OR DISABLED INDIVIDUAL",
     "citation": "22.01(c)(1)",
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 22.01. ASSAULT. (a) A person commits an offense if the\nperson:\n(1) intentionally, knowingly, or recklessly causes bodily\ninjury to another, including the person's spouse;\n(2) intentionally or knowingly threatens another with\nimminent bodily injury, including the person's spouse; or\n(3) intentionally or knowingly causes physical contact with\nanother when the person knows or should reasonably believe that the\nother will regard the contact as offensive or provocative.\n(b) An offense under Subsection (a)(1) is a Class A\n\nPENAL CODE\nmisdemeanor, except that the offense is a felony of the third degree\nif the offense is committed against:\n(1) a person the actor knows is a public servant while the\npublic servant is lawfully discharging an official duty, or in\nretaliation or on account of an exercise of official power or\nperformance of an official duty as a public servant;\n(2) a person whose relationship to or association with the\ndefendant is described by Section 71.0021(b), 71.003, or 71.005,\nFamily Code, if:\n(A) it is shown on the trial of the offense that the\ndefendant has been previously convicted of an offense that was\ncommitted:\n(i) against a person whose relationship to or\nassociation with the defendant is described by Section 71.0021(b),\n71.003, or 71.005, Family Code; and\n(ii) under:\n(a) this chapter, Chapter 19, or Section 20.03,\n20.04, 21.11, or 25.11;\n(b) Section 25.07, if the applicable violation\nwas based on the commission of family violence as described by\nSubsection (a)(1) of that section; or\n(c) Section 25.072, if any of the applicable\nviolations were based on the commission of family violence as\ndescribed by Section 25.07(a)\n(1); or\n(B) the offense is committed by intentionally,\nknowingly, or recklessly impeding the normal breathing or circulation\nof the blood of the person by applying pressure to the person's\nthroat or neck or by blocking the person's nose or mouth;"
+  },
+  {
+    "literal": "ASSAULT AGAINST ELDERLY/ DIS THREAT ONLY",
+    "citation": "PC 22.01(A)(3)(T)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ASSAULT AGAINST ELDERLY/ DISABLED BI",
+    "citation": "PC 22.01(A)(3)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ASSAULT AGAINST GOVERNMENT CONTRACTOR/EMPLOYEE",
@@ -1223,6 +1667,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 22.01. ASSAULT. (a) A person commits an offense if the\nperson:\n(1) intentionally, knowingly, or recklessly causes bodily\ninjury to another, including the person's spouse;\n(2) intentionally or knowingly threatens another with\nimminent bodily injury, including the person's spouse; or\n(3) intentionally or knowingly causes physical contact with\nanother when the person knows or should reasonably believe that the\nother will regard the contact as offensive or provocative.\n(b) An offense under Subsection (a)\n(1) is a Class A\n\nPENAL CODE\nmisdemeanor, except that the offense is a felony of the third degree\nif the offense is committed against:"
   },
   {
+    "literal": "ASSAULT BI FAM/HOUSE MEM 2+ W/IN 12 MOS",
+    "citation": "PC 25.11",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ASSAULT BY CONTACT",
     "citation": "22.01(a)(3)",
     "statute": "PC",
@@ -1230,11 +1680,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 22.01. ASSAULT.\n(a) A person commits an offense if the\nperson:\n(1) intentionally, knowingly, or recklessly causes bodily\ninjury to another, including the person's spouse;\n(2) intentionally or knowingly threatens another with\nimminent bodily injury, including the person's spouse; or\n(3) intentionally or knowingly causes physical contact with\nanother when the person knows or should reasonably believe that the\nother will regard the contact as offensive or provocative."
   },
   {
+    "literal": "ASSAULT BY CONTACT - ELDERLY",
+    "citation": "PC 22.01 A(3)C(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ASSAULT BY CONTACT - FAMILY VIOLENCE",
     "citation": "22.01(a)(3)",
     "statute": "PC",
     "level": "MC",
     "statuteText": "Sec. 22.01. ASSAULT.\n(a) A person commits an offense if the\nperson:\n(1) intentionally, knowingly, or recklessly causes bodily\ninjury to another, including the person's spouse;\n(2) intentionally or knowingly threatens another with\nimminent bodily injury, including the person's spouse; or\n(3) intentionally or knowingly causes physical contact with\nanother when the person knows or should reasonably believe that the\nother will regard the contact as offensive or provocative."
+  },
+  {
+    "literal": "ASSAULT BY CONTACT FAMILY VIOL",
+    "citation": "PC 22.01(A)3F",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ASSAULT BY THREAT",
@@ -1265,6 +1727,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 22.01. ASSAULT.\n(a) A person commits an offense if the\nperson:\n(1) intentionally, knowingly, or recklessly causes bodily\ninjury to another, including the person's spouse;"
   },
   {
+    "literal": "ASSAULT CAUSES BODILY INJURY FAMILY MEM",
+    "citation": "PC 22.01(A)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ASSAULT CAUSES BODILY INJURY FAMILY MEMBER",
     "citation": "22.01(a)(1)",
     "statute": "PC",
@@ -1272,17 +1740,17 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 22.01. ASSAULT.\n(a) A person commits an offense if the\nperson:\n(1) intentionally, knowingly, or recklessly causes bodily\ninjury to another, including the person's spouse;"
   },
   {
-    "literal": "ASSAULT CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
-  },
-  {
     "literal": "ASSAULT EMS PERSONNEL PROV SERV",
     "citation": "22.01(b)(5)",
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 22.01. ASSAULT. (a) A person commits an offense if the\nperson:\n(1) intentionally, knowingly, or recklessly causes bodily\ninjury to another, including the person's spouse;\n(2) intentionally or knowingly threatens another with\nimminent bodily injury, including the person's spouse; or\n(3) intentionally or knowingly causes physical contact with\nanother when the person knows or should reasonably believe that the\nother will regard the contact as offensive or provocative.\n(b) An offense under Subsection (a)(1) is a Class A\n\nPENAL CODE\nmisdemeanor, except that the offense is a felony of the third degree\nif the offense is committed against:\n(1) a person the actor knows is a public servant while the\npublic servant is lawfully discharging an official duty, or in\nretaliation or on account of an exercise of official power or\nperformance of an official duty as a public servant;\n(2) a person whose relationship to or association with the\ndefendant is described by Section 71.0021(b), 71.003, or 71.005,\nFamily Code, if:\n(A) it is shown on the trial of the offense that the\ndefendant has been previously convicted of an offense that was\ncommitted:\n(i) against a person whose relationship to or\nassociation with the defendant is described by Section 71.0021(b),\n71.003, or 71.005, Family Code; and\n(ii) under:\n(a) this chapter, Chapter 19, or Section 20.03,\n20.04, 21.11, or 25.11;\n(b) Section 25.07, if the applicable violation\nwas based on the commission of family violence as described by\nSubsection (a)(1) of that section; or\n(c) Section 25.072, if any of the applicable\nviolations were based on the commission of family violence as\ndescribed by Section 25.07(a)(1); or\n(B) the offense is committed by intentionally,\nknowingly, or recklessly impeding the normal breathing or circulation\nof the blood of the person by applying pressure to the person's\nthroat or neck or by blocking the person's nose or mouth;\n(3) a person who contracts with government to perform a\nservice in a facility described by Section 1.07(a)(14), Penal Code,\nor Section 51.02(13) or (14), Family Code, or an employee of that\nperson:\n(A) while the person or employee is engaged in\nperforming a service within the scope of the contract, if the actor\nknows the person or employee is authorized by government to provide\nthe service; or\n(B) in retaliation for or on account of the person's or\nemployee's performance of a service within the scope of the contract;\n(4) a person the actor knows is a security officer while\nthe officer is performing a duty as a security officer;\n\nPENAL CODE\n(5) a person the actor knows is emergency services\npersonnel while the person is providing emergency services;"
+  },
+  {
+    "literal": "ASSAULT FAM/HOUSE  IMPEDE BREATH/CIRCUL",
+    "citation": "PC 22.01(B)(2)(B)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ASSAULT FAM/HOUSE MEM IMPEDE BREATH/CIRCULAT",
@@ -1299,6 +1767,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 22.01. ASSAULT. (a) A person commits an offense if the\nperson:\n(1) intentionally, knowingly, or recklessly causes bodily\ninjury to another, including the person's spouse;\n(2) intentionally or knowingly threatens another with\nimminent bodily injury, including the person's spouse; or\n(3) intentionally or knowingly causes physical contact with\nanother when the person knows or should reasonably believe that the\nother will regard the contact as offensive or provocative.\n(b) An offense under Subsection (a)(1) is a Class A\n\nPENAL CODE\nmisdemeanor, except that the offense is a felony of the third degree\nif the offense is committed against:\n(1) a person the actor knows is a public servant while the\npublic servant is lawfully discharging an official duty, or in\nretaliation or on account of an exercise of official power or\nperformance of an official duty as a public servant;\n(2) a person whose relationship to or association with the\ndefendant is described by Section 71.0021(b), 71.003, or 71.005,\nFamily Code, if:\n(A) it is shown on the trial of the offense that the\ndefendant has been previously convicted of an offense that was\ncommitted:"
   },
   {
+    "literal": "ASSAULT FAMILY/HOUSEHOLD W/PREV CONV",
+    "citation": "PC 22.01(B)(2)(A)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ASSAULT FORCE INDIV HAVE ABORTION THRT/CONTACT",
     "citation": "22.01(c)(3)",
     "statute": "PC",
@@ -1313,11 +1787,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 22.01. ASSAULT. (a) A person commits an offense if the\nperson:\n(1) intentionally, knowingly, or recklessly causes bodily\ninjury to another, including the person's spouse;\n(2) intentionally or knowingly threatens another with\nimminent bodily injury, including the person's spouse; or\n(3) intentionally or knowingly causes physical contact with\nanother when the person knows or should reasonably believe that the\nother will regard the contact as offensive or provocative.\n(b) An offense under Subsection (a)(1) is a Class A\n\nPENAL CODE\nmisdemeanor, except that the offense is a felony of the third degree\nif the offense is committed against:\n(1) a person the actor knows is a public servant while the\npublic servant is lawfully discharging an official duty, or in\nretaliation or on account of an exercise of official power or\nperformance of an official duty as a public servant;\n(2) a person whose relationship to or association with the\ndefendant is described by Section 71.0021(b), 71.003, or 71.005,\nFamily Code, if:\n(A) it is shown on the trial of the offense that the\ndefendant has been previously convicted of an offense that was\ncommitted:\n(i) against a person whose relationship to or\nassociation with the defendant is described by Section 71.0021(b),\n71.003, or 71.005, Family Code; and\n(ii) under:\n(a) this chapter, Chapter 19, or Section 20.03,\n20.04, 21.11, or 25.11;\n(b) Section 25.07, if the applicable violation\nwas based on the commission of family violence as described by\nSubsection (a)(1) of that section; or\n(c) Section 25.072, if any of the applicable\nviolations were based on the commission of family violence as\ndescribed by Section 25.07(a)(1); or\n(B) the offense is committed by intentionally,\nknowingly, or recklessly impeding the normal breathing or circulation\nof the blood of the person by applying pressure to the person's\nthroat or neck or by blocking the person's nose or mouth;\n(3) a person who contracts with government to perform a\nservice in a facility described by Section 1.07(a)(14), Penal Code,\nor Section 51.02(13) or (14), Family Code, or an employee of that\nperson:\n(A) while the person or employee is engaged in\nperforming a service within the scope of the contract, if the actor\nknows the person or employee is authorized by government to provide\nthe service; or\n(B) in retaliation for or on account of the person's or\nemployee's performance of a service within the scope of the contract;\n(4) a person the actor knows is a security officer while\nthe officer is performing a duty as a security officer;\n\nPENAL CODE\n(5) a person the actor knows is emergency services\npersonnel while the person is providing emergency services;\n(6) a person the actor knows is a process server while the\nperson is performing a duty as a process server;\n(7) a pregnant individual to force the individual to have\nan abortion;"
   },
   {
+    "literal": "ASSAULT GOVERNMENT CONTRACT/EMPLOYEE",
+    "citation": "PC 22.01(b)(3)(A)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ASSAULT INT/RECK BREATH/CIRC FAM MEM PREV IAT",
     "citation": "22.01(b-3)",
     "statute": "PC",
     "level": "F2",
     "statuteText": "Sec. 22.01. ASSAULT. (a) A person commits an offense if the\nperson:\n(1) intentionally, knowingly, or recklessly causes bodily\ninjury to another, including the person's spouse;\n(2) intentionally or knowingly threatens another with\nimminent bodily injury, including the person's spouse; or\n(3) intentionally or knowingly causes physical contact with\nanother when the person knows or should reasonably believe that the\nother will regard the contact as offensive or provocative.\n(b) An offense under Subsection (a)(1) is a Class A\n\nPENAL CODE\nmisdemeanor, except that the offense is a felony of the third degree\nif the offense is committed against:\n(1) a person the actor knows is a public servant while the\npublic servant is lawfully discharging an official duty, or in\nretaliation or on account of an exercise of official power or\nperformance of an official duty as a public servant;\n(2) a person whose relationship to or association with the\ndefendant is described by Section 71.0021(b), 71.003, or 71.005,\nFamily Code, if:\n(A) it is shown on the trial of the offense that the\ndefendant has been previously convicted of an offense that was\ncommitted:\n(i) against a person whose relationship to or\nassociation with the defendant is described by Section 71.0021(b),\n71.003, or 71.005, Family Code; and\n(ii) under:\n(a) this chapter, Chapter 19, or Section 20.03,\n20.04, 21.11, or 25.11;\n(b) Section 25.07, if the applicable violation\nwas based on the commission of family violence as described by\nSubsection (a)(1) of that section; or\n(c) Section 25.072, if any of the applicable\nviolations were based on the commission of family violence as\ndescribed by Section 25.07(a)(1); or\n(B) the offense is committed by intentionally,\nknowingly, or recklessly impeding the normal breathing or circulation\nof the blood of the person by applying pressure to the person's\nthroat or neck or by blocking the person's nose or mouth;\n(3) a person who contracts with government to perform a\nservice in a facility described by Section 1.07(a)(14), Penal Code,\nor Section 51.02(13) or (14), Family Code, or an employee of that\nperson:\n(A) while the person or employee is engaged in\nperforming a service within the scope of the contract, if the actor\nknows the person or employee is authorized by government to provide\nthe service; or\n(B) in retaliation for or on account of the person's or\nemployee's performance of a service within the scope of the contract;"
+  },
+  {
+    "literal": "ASSAULT OF A PREGNANT PERSON",
+    "citation": "PC 22.01(B)(7)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ASSAULT OF HOSPITAL PERSONNEL ON HOSP PROPERTY",
@@ -1332,6 +1818,18 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 22.01. ASSAULT. (a) A person commits an offense if the\nperson:\n(1) intentionally, knowingly, or recklessly causes bodily\ninjury to another, including the person's spouse;\n(2) intentionally or knowingly threatens another with\nimminent bodily injury, including the person's spouse; or\n(3) intentionally or knowingly causes physical contact with\nanother when the person knows or should reasonably believe that the\nother will regard the contact as offensive or provocative.\n(b) An offense under Subsection (a)(1) is a Class A\n\nPENAL CODE\nmisdemeanor, except that the offense is a felony of the third degree\nif the offense is committed against:\n(1) a person the actor knows is a public servant while the\npublic servant is lawfully discharging an official duty, or in\nretaliation or on account of an exercise of official power or\nperformance of an official duty as a public servant;\n(2) a person whose relationship to or association with the\ndefendant is described by Section 71.0021(b), 71.003, or 71.005,\nFamily Code, if:\n(A) it is shown on the trial of the offense that the\ndefendant has been previously convicted of an offense that was\ncommitted:\n(i) against a person whose relationship to or\nassociation with the defendant is described by Section 71.0021(b),\n71.003, or 71.005, Family Code; and\n(ii) under:\n(a) this chapter, Chapter 19, or Section 20.03,\n20.04, 21.11, or 25.11;\n(b) Section 25.07, if the applicable violation\nwas based on the commission of family violence as described by\nSubsection (a)(1) of that section; or\n(c) Section 25.072, if any of the applicable\nviolations were based on the commission of family violence as\ndescribed by Section 25.07(a)(1); or\n(B) the offense is committed by intentionally,\nknowingly, or recklessly impeding the normal breathing or circulation\nof the blood of the person by applying pressure to the person's\nthroat or neck or by blocking the person's nose or mouth;\n(3) a person who contracts with government to perform a\nservice in a facility described by Section 1.07(a)(14), Penal Code,\nor Section 51.02(13) or (14), Family Code, or an employee of that\nperson:\n(A) while the person or employee is engaged in\nperforming a service within the scope of the contract, if the actor\nknows the person or employee is authorized by government to provide\nthe service; or\n(B) in retaliation for or on account of the person's or\nemployee's performance of a service within the scope of the contract;\n(4) a person the actor knows is a security officer while\nthe officer is performing a duty as a security officer;\n\nPENAL CODE\n(5) a person the actor knows is emergency services\npersonnel while the person is providing emergency services;\n(6) a person the actor knows is a process server while the\nperson is performing a duty as a process server;\n(7) a pregnant individual to force the individual to have\nan abortion;\n(8) a person the actor knows is pregnant at the time of the\noffense;"
+  },
+  {
+    "literal": "ASSAULT ON HOSPITAL PERSONNEL ON HOSPITAL PROPERTY",
+    "citation": "PC 22.01 (B)(9)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ASSAULT ON PEACE OFFICER/JUDGE",
+    "citation": "PC 22.01(B)(B-2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ASSAULT ON PROCESS SERVER",
@@ -1369,11 +1867,29 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 49.09. ENHANCED OFFENSES AND PENALTIES. (a) Except as\nprovided by Subsection\n(b), an offense under Section 49.04, 49.05,\n49.06, or 49.065 is a Class A misdemeanor, with a minimum term of\nconfinement of 30 days, if it is shown on the trial of the offense\nthat the person has previously been convicted one time of an offense\nrelating to the operating of a motor vehicle while intoxicated, an\noffense of operating an aircraft while intoxicated, an offense of\noperating a watercraft while intoxicated, or an offense of operating\nor assembling an amusement ride while intoxicated."
   },
   {
+    "literal": "ASSEMBLE OPER AMUSE RIDE W/INTOX 2ND",
+    "citation": "PC 49.09(A)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ASSEMBLE OPER AMUSE RIDE W/INTOX 3RD/+",
+    "citation": "PC 49.09(A)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ASSEMBLE OPERATE AMUSE RIDE W/INTOX 3RD/MORE",
     "citation": "49.09(a)",
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 49.09. ENHANCED OFFENSES AND PENALTIES.\n(a) Except as\nprovided by Subsection"
+  },
+  {
+    "literal": "ASSEMBLE OPERATE AMUSE RIDE WHILE INTOX",
+    "citation": "PC 49.065",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ASSEMBLE OPERATE AMUSEMENT RIDE W/INTOX 2ND",
@@ -1415,6 +1931,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 22.01. ASSAULT. (a) A person commits an offense if the\nperson:\n(1) intentionally, knowingly, or recklessly causes bodily\ninjury to another, including the person's spouse;\n(2) intentionally or knowingly threatens another with\nimminent bodily injury, including the person's spouse; or\n(3) intentionally or knowingly causes physical contact with\nanother when the person knows or should reasonably believe that the\nother will regard the contact as offensive or provocative.\n(b) An offense under Subsection (a)(1) is a Class A\n\nPENAL CODE\nmisdemeanor, except that the offense is a felony of the third degree\nif the offense is committed against:\n(1) a person the actor knows is a public servant while the\npublic servant is lawfully discharging an official duty, or in\nretaliation or on account of an exercise of official power or\nperformance of an official duty as a public servant;\n(2) a person whose relationship to or association with the\ndefendant is described by Section 71.0021(b), 71.003, or 71.005,\nFamily Code, if:\n(A) it is shown on the trial of the offense that the\ndefendant has been previously convicted of an offense that was\ncommitted:\n(i) against a person whose relationship to or\nassociation with the defendant is described by Section 71.0021(b),\n71.003, or 71.005, Family Code; and\n(ii) under:\n(a) this chapter, Chapter 19, or Section 20.03,\n20.04, 21.11, or 25.11;\n(b) Section 25.07, if the applicable violation\nwas based on the commission of family violence as described by\nSubsection (a)(1) of that section; or\n(c) Section 25.072, if any of the applicable\nviolations were based on the commission of family violence as\ndescribed by Section 25.07(a)(1); or\n(B) the offense is committed by intentionally,\nknowingly, or recklessly impeding the normal breathing or circulation\nof the blood of the person by applying pressure to the person's\nthroat or neck or by blocking the person's nose or mouth;\n(3) a person who contracts with government to perform a\nservice in a facility described by Section 1.07(a)(14), Penal Code,\nor Section 51.02(13) or (14), Family Code, or an employee of that\nperson:\n(A) while the person or employee is engaged in\nperforming a service within the scope of the contract, if the actor\nknows the person or employee is authorized by government to provide\nthe service; or\n(B) in retaliation for or on account of the person's or\nemployee's performance of a service within the scope of the contract;\n(4) a person the actor knows is a security officer while\nthe officer is performing a duty as a security officer;\n\nPENAL CODE"
   },
   {
+    "literal": "ASSLT INT/RCK BRTH/CIRC FAM MEM PV CONV",
+    "citation": "PC 22.01(b-1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ASSUMED NAME BUSINESS CERTIFICATE VIOLATION",
     "citation": "71.202(b)",
     "statute": "BCC",
@@ -1431,6 +1953,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "2051.501",
     "statute": "OC",
     "level": "MA"
+  },
+  {
+    "literal": "ATT PURCHASE OF ALC. BY A MINOR 3RD-ENH",
+    "citation": "ABC 106.025",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ATTACK BY DOG RESULTING IN DEATH",
@@ -1450,6 +1978,18 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 42.091. ATTACK ON ASSISTANCE ANIMAL. (a) A person\ncommits an offense if the person intentionally, knowingly, or\nrecklessly attacks, injures, or kills an assistance animal.\n(b) A person commits an offense if the person intentionally,\nknowingly, or recklessly incites or permits an animal owned by or\notherwise in the custody of the actor to attack, injure, or kill an\nassistance animal and, as a result of the person's conduct, the\nassistance animal is attacked, injured, or killed.\n(c) An offense under this section is a:\n(1) Class A misdemeanor if the actor or an animal owned by\nor otherwise in the custody of the actor attacks an assistance\nanimal;"
+  },
+  {
+    "literal": "ATTACK ON ASSISTANCE ANIMAL - CAU DEATH",
+    "citation": "PC 42.091(c)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ATTACK ON ASSISTANCE ANIMAL - CAU INJURY",
+    "citation": "PC 42.091(c)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ATTACK ON ASSISTANCE ANIMAL - CAUSES DEATH",
@@ -1492,6 +2032,42 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 37.08. FALSE REPORT TO PEACE OFFICER, FEDERAL SPECIAL\nINVESTIGATOR, LAW ENFORCEMENT EMPLOYEE, CORRECTIONS OFFICER, OR\nJAILER. (a) A person commits an offense if, with intent to deceive,\nhe knowingly makes a false statement that is material to a criminal\ninvestigation and makes the statement to:\n(1) a peace officer or federal special investigator\nconducting the investigation;\n(2) any employee of a law enforcement agency that is\nauthorized by the agency to conduct the investigation and that the\nactor knows is conducting the investigation; or\n(3) a corrections officer or jailer.\n(b) In this section, \"law enforcement agency\" has the meaning\nassigned by Article 59.01, Code of Criminal Procedure.\n(c) An offense under this section is a Class B misdemeanor."
   },
   {
+    "literal": "ATV - CARRYING PASSENGER",
+    "citation": "TRC 663.036",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ATV - MODIFIED EXHAUST/SPARK ARRESTOR",
+    "citation": "TRC 663.033(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ATV - ON PUBLIC ROADWAY",
+    "citation": "TRC 663.037(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ATV - W/O HELMET",
+    "citation": "TRC 663.034",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ATV - W/O SAFETY CERTIFICATE",
+    "citation": "TRC 663.031(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ATV- W/O PARENT/GUARD",
+    "citation": "TRC 663.032",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "AUCTIONEER OR ASSOCIATE AUCTIONEER W/O LICENSE",
     "citation": "1802.301(b)",
     "statute": "OC",
@@ -1502,6 +2078,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "1802.302(b)",
     "statute": "OC",
     "level": "MB"
+  },
+  {
+    "literal": "AUTH ACTIVITIES RETAIL DLERS OFF PREM LI",
+    "citation": "ABC 71.01",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "AUTH ACTIVITIES W/STORE PERMIT",
+    "citation": "ABC 22.01",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "AUTOMATED MOTOR VEHICLE OPERATION VIOLATION",
@@ -1585,6 +2173,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "BARRATRY ILL OBTAIN EMPLOY W/PRV CNV",
+    "citation": "PC 38.12(h)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "BARRATRY ILL OBTAIN EMPLOYMENT",
     "citation": "38.12(f)",
     "statute": "PC",
@@ -1624,6 +2218,30 @@ export const CJIS_CODES: Offense[] = [
     "citation": "9.01.018(a)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "BICYCLE - NO/DEFECTIVE BRAKES",
+    "citation": "TRC 551.104(A)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "BICYCLE - NO/DEFECTIVE HEADLIGHTS",
+    "citation": "TRC 551.104(B)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "BICYCLE - NO/DEFECTIVE REFLECTOR",
+    "citation": "TRC 551.104(B)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "BICYCLE - POCKET BIKE",
+    "citation": "TRC 551.353",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "BICYCLE FAIL TO CONTROL SPEED COLLISION W/PERSON OR VEHICLE",
@@ -1719,6 +2337,30 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 25.01. BIGAMY. (a) An individual commits an offense if:\n(1) he is legally married and he:\n(A) purports to marry or does marry a person other than\nhis spouse in this state, or any other state or foreign country,\n\nPENAL CODE\nunder circumstances that would, but for the actor's prior marriage,\nconstitute a marriage; or\n(B) lives with a person other than his spouse in this\nstate under the appearance of being married; or\n(2) he knows that a married person other than his spouse is\nmarried and he:\n(A) purports to marry or does marry that person in this\nstate, or any other state or foreign country, under circumstances\nthat would, but for the person's prior marriage, constitute a\nmarriage; or\n(B) lives with that person in this state under the\nappearance of being married.\n(b) For purposes of this section, \"under the appearance of\nbeing married\" means holding out that the parties are married with\ncohabitation and an intent to be married by either party.\n(c) It is a defense to prosecution under Subsection (a)(1) that\nthe actor reasonably believed at the time of the commission of the\noffense that the actor and the person whom the actor married or\npurported to marry or with whom the actor lived under the appearance\nof being married were legally eligible to be married because the\nactor's prior marriage was void or had been dissolved by death,\ndivorce, or annulment. For purposes of this subsection, an actor's\nbelief is reasonable if the belief is substantiated by a certified\ncopy of a death certificate or other signed document issued by a\ncourt.\n(d) For the purposes of this section, the lawful wife or\nhusband of the actor may testify both for or against the actor\nconcerning proof of the original marriage.\n(e) An offense under this section is a felony of the third\ndegree, except that if at the time of the commission of the offense,\nthe person whom the actor marries or purports to marry or with whom\nthe actor lives under the appearance of being married is:\n(1) 17 years of age, the offense is a felony of the second\ndegree; or\n(2) 16 years of age or younger, the offense is a felony of\nthe first degree."
   },
   {
+    "literal": "BIGAMY PROH/PURPORT SPOUSE IS 17 YOA",
+    "citation": "PC 25.01(e)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "BIGAMY PROH/PURPOST SPOUSE IS <= 16 YOA",
+    "citation": "PC 25.01(e)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "BIKE RIDER-FAIL TO USE DUE CARE-PASSING",
+    "citation": "TRC 551.103 3507",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "BIKE RIDER-HAZARDOUS TRAFFIC VIOLATION",
+    "citation": "TRC 551.101 3506",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "BINGO REG MAINTAIN RCRDS VIOL LICNC W/PREV IAT",
     "citation": "2001.554(b)",
     "statute": "OC",
@@ -1755,10 +2397,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "BLOCKING ACCESS TO HANDICAP",
+    "citation": "TRC 681.011(c)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "BLOOD SAMPLE TEST COMPLIANCE W/PREV IAT",
     "citation": "163.072(c)",
     "statute": "AGC",
     "level": "MB"
+  },
+  {
+    "literal": "BOATER EDUCATION COURSE REQ",
+    "citation": "TPW 31.109",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "BOATER EDUCATION COURSE REQUIRED",
@@ -1774,6 +2428,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 49.09. ENHANCED OFFENSES AND PENALTIES. (a) Except as\nprovided by Subsection\n(b), an offense under Section 49.04, 49.05,\n49.06, or 49.065 is a Class A misdemeanor, with a minimum term of\nconfinement of 30 days, if it is shown on the trial of the offense\nthat the person has previously been convicted one time of an offense\nrelating to the operating of a motor vehicle while intoxicated, an\noffense of operating an aircraft while intoxicated, an offense of\noperating a watercraft while intoxicated, or an offense of operating\nor assembling an amusement ride while intoxicated."
   },
   {
+    "literal": "BOATING INTX W/PREV INTOX MANSLAUGHTER",
+    "citation": "PC 49.09(B)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "BOATING WHILE INTOXICATED",
     "citation": "49.06(b)",
     "statute": "PC",
@@ -1786,6 +2446,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 49.09. ENHANCED OFFENSES AND PENALTIES.\n(a) Except as\nprovided by Subsection"
+  },
+  {
+    "literal": "BOATING WHILE INTOXICATED 3RD OR MORE",
+    "citation": "PC 49.09(B)(3)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "BOATING WHILE INTOXICATED 3RD OR MORE IAT",
@@ -1844,6 +2510,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "BRAKES - DEFECTIVE",
+    "citation": "TRC 547.403",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "BRAKES DEFECTIVE",
     "citation": "547.403",
     "statute": "TC",
@@ -1854,6 +2526,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "547.401",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "BRAKES NOT ON ALL WHEELS WHEN REQUIRED",
+    "citation": "TRC 547.402 3215",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "BRAKING - JAKE BRAKING/ENGINE NOISE",
@@ -1881,12 +2559,6 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 36.02. BRIBERY. (a) A person commits an offense if he\nintentionally or knowingly offers, confers, or agrees to confer on\nanother, or solicits, accepts, or agrees to accept from another:\n(1) any benefit as consideration for the recipient's\ndecision, opinion, recommendation, vote, or other exercise of\ndiscretion as a public servant, party official, or voter;\n(2) any benefit as consideration for the recipient's\ndecision, vote, recommendation, or other exercise of official\ndiscretion in a judicial or administrative proceeding;\n(3) any benefit as consideration for a violation of a duty\nimposed by law on a public servant or party official; or\n(4) any benefit that is a political contribution as defined\nby Title 15, Election Code, or that is an expenditure made and\nreported in accordance with Chapter 305, Government Code, if the\nbenefit was offered, conferred, solicited, accepted, or agreed to\npursuant to an express agreement to take or withhold a specific\nexercise of official discretion if such exercise of official\ndiscretion would not have been taken or withheld but for the benefit;\nnotwithstanding any rule of evidence or jury instruction allowing\nfactual inferences in the absence of certain evidence, direct\nevidence of the express agreement shall be required in any\nprosecution under this subdivision.\n(b) It is no defense to prosecution under this section that a\nperson whom the actor sought to influence was not qualified to act in\nthe desired way whether because he had not yet assumed office or he\nlacked jurisdiction or for any other reason.\n(c) It is no defense to prosecution under this section that the\nbenefit is not offered or conferred or that the benefit is not\n\nPENAL CODE\nsolicited or accepted until after:\n(1) the decision, opinion, recommendation, vote, or other\nexercise of discretion has occurred; or\n(2) the public servant ceases to be a public servant.\n(d) It is an exception to the application of Subdivisions (1),\n(2), and (3) of Subsection (a) that the benefit is a political\ncontribution as defined by Title 15, Election Code, or an expenditure\nmade and reported in accordance with Chapter 305, Government Code.\n(e) An offense under this section is a felony of the second\ndegree."
   },
   {
-    "literal": "BRIBERY CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
-  },
-  {
     "literal": "BRIBERY/CORRUPT INFLUENCE OFFICIAL-RACING ACT",
     "citation": "2033.014(b)",
     "statute": "OC",
@@ -1909,6 +2581,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "402(A)(1)(d)(ii)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "BUILDING - BOARDED BUILDING(S) W/NO CERT",
+    "citation": "ORD 4.06.003",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "BUILDING - BOARDED BUILDING(S) W/NO CERTIFICATE",
@@ -1944,12 +2622,6 @@ export const CJIS_CODES: Offense[] = [
     "literal": "BUILDING - SELF-CLOSING DOORS REQUIRED",
     "citation": "4.04.61",
     "statute": "CO",
-    "level": "MC"
-  },
-  {
-    "literal": "BURGLARY CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
     "level": "MC"
   },
   {
@@ -2001,11 +2673,41 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "BURGLARY OF COIN OPR/COLLECTION MACHINE",
+    "citation": "PC 30.03",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "BURGLARY OF HABITATION",
     "citation": "30.02(c)(2)",
     "statute": "PC",
     "level": "F2",
     "statuteText": "Sec. 30.02. BURGLARY. (a) A person commits an offense if,\nwithout the effective consent of the owner, the person:\n(1) enters a habitation, or a building (or any portion of a\nbuilding) not then open to the public, with intent to commit a\nfelony, theft, or an assault; or\n(2) remains concealed, with intent to commit a felony,\ntheft, or an assault, in a building or habitation; or\n(3) enters a building or habitation and commits or attempts\nto commit a felony, theft, or an assault.\n(b) For purposes of this section, \"enter\" means to intrude:\n(1) any part of the body; or\n\nPENAL CODE\n(2) any physical object connected with the body.\n(c) Except as provided in Subsection (c-1), (c-2), or (d), an\noffense under this section is a:\n(1) state jail felony if committed in a building other than\na habitation; or\n(2) felony of the second degree if committed in a\nhabitation.\n(c-1) An offense under this section is a felony of the third\ndegree if:"
+  },
+  {
+    "literal": "BURGLARY OF RAIL CAR",
+    "citation": "PC 30.04",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "BURGLARY OF VEH W/PREV 2 OR MORE CONV",
+    "citation": "PC 30.04(D)(2)(A)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "BURGLARY OF VEHICLE",
+    "citation": "PC 30.04(A)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "BURGLARY OF VEHICLE VEHICLE PARTS ONLYS",
+    "citation": "PC 30.04(A)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "BURGLARY OF VEHICLE W/2+ CONV IAT",
@@ -2041,6 +2743,30 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 30.04. BURGLARY OF VEHICLES. (a) A person commits an\noffense if, without the effective consent of the owner, he breaks\ninto or enters a vehicle or any part of a vehicle with intent to\ncommit any felony or theft.\n(b) For purposes of this section, \"enter\" means to intrude:\n(1) any part of the body; or\n(2) any physical object connected with the body.\n(c) For purposes of this section, a container or trailer\ncarried on a rail car is a part of the rail car.\n(d) An offense under this section is a Class A misdemeanor,\nexcept that:\n(1) the offense is a Class A misdemeanor with a minimum\nterm of confinement of six months if it is shown on the trial of the\noffense that the defendant has been previously convicted of an\noffense under this section;\n(2) the offense is a state jail felony if:\n(A) it is shown on the trial of the offense that the\ndefendant has been previously convicted two or more times of an\noffense under this section; or\n(B) the vehicle or part of the vehicle broken into or\nentered is a rail car; and\n(3) the offense is a felony of the third degree if:\n(A) the vehicle broken into or entered is owned or\noperated by a wholesale distributor of prescription drugs and the\n\nPENAL CODE\nactor breaks into or enters that vehicle with the intent to commit\ntheft of a controlled substance; or\n(B) it is shown on the trial of the offense that the\nactor committed the offense in the course of committing an offense\nunder Section 20.05(a)(2).\n(d-1) For the purposes of Subsection"
+  },
+  {
+    "literal": "BURNING TRASH IN CITY LIMITS",
+    "citation": "ORD 6.03.031",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "BUS FAILED TO STOP AT RR CROSSING",
+    "citation": "TRC 545.253 3132",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "BUS SHIFTING GEARS WHILE CROSS RR TRACK",
+    "citation": "TRC 545.253 3133",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "BUYER ACCEPTS PAPERS WHOLLY/PART BLANK",
+    "citation": "TRC 520.035 3654",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "BWI W/PASSENGER <15 YOA INTOX MANSLTR CONV IAT",
@@ -2087,6 +2813,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "CANCEL SUSPENSION OF PERMIT",
+    "citation": "ABC 11.61",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CANCELLATION OR SUSPENSION OF PERMIT",
     "citation": "11.61",
     "statute": "ABC",
@@ -2103,6 +2835,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "253.042",
     "statute": "EC",
     "level": "MA"
+  },
+  {
+    "literal": "CAPITAL MURDER ANOTHER PERSON/PRISON",
+    "citation": "PC 19.03(A)(5-6)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CAPITAL MURDER BY TERROR THREAT/OTHER FELONY",
@@ -2154,6 +2892,18 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 19.03. CAPITAL MURDER.\n(a) A person commits an offense\nif the person commits murder as defined under Section 19.02(b)(1)\nand:\n(1) the person murders a peace officer or fireman who is\nacting in the lawful discharge of an official duty and who the person\nknows is a peace officer or fireman;\n(2) the person intentionally commits the murder in the\ncourse of committing or attempting to commit kidnapping, burglary,\nrobbery, aggravated sexual assault, arson, obstruction or\nretaliation, or terroristic threat under Section 22.07(a)(1), (3),\n(4), (5), or (6);\n(3) the person commits the murder for remuneration or the\npromise of remuneration or employs another to commit the murder for\nremuneration or the promise of remuneration;\n(4) the person commits the murder while escaping or\nattempting to escape from a penal institution;\n(5) the person, while incarcerated in a penal institution,\nmurders another:\n(A) who is employed in the operation of the penal\ninstitution; or\n(B) with the intent to establish, maintain, or\nparticipate in a combination or in the profits of a combination;\n(6) the person:\n(A) while incarcerated for an offense under this\nsection or Section 19.02, murders another; or\n(B) while serving a sentence of life imprisonment or a\nterm of 99 years for an offense under Section 20.04, 22.021, or\n29.03, murders another;\n(7) the person murders more than one person:\n(A) during the same criminal transaction; or\n(B) during different criminal transactions but the\nmurders are committed pursuant to the same scheme or course of\n\nPENAL CODE\nconduct;\n(8) the person murders an individual under 10 years of age;"
   },
   {
+    "literal": "CAPITAL MURDER PEACE OFFICER/FIREMAN",
+    "citation": "PC 19.03(A)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CAPITAL MURDER PERSON W/ ESCAPE/ATEMPT",
+    "citation": "PC 19.03(A)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CAPITAL MURDER PERSON WHILE ESCAPING/ATTEMPT",
     "citation": "19.03(a)(4)",
     "statute": "PC",
@@ -2161,11 +2911,29 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 19.03. CAPITAL MURDER.\n(a) A person commits an offense\nif the person commits murder as defined under Section 19.02(b)(1)\nand:\n(1) the person murders a peace officer or fireman who is\nacting in the lawful discharge of an official duty and who the person\nknows is a peace officer or fireman;\n(2) the person intentionally commits the murder in the\ncourse of committing or attempting to commit kidnapping, burglary,\nrobbery, aggravated sexual assault, arson, obstruction or\nretaliation, or terroristic threat under Section 22.07(a)(1), (3),\n(4), (5), or (6);"
   },
   {
+    "literal": "CAPITAL MURDER RETALIATION JUDGE/JUSTICE",
+    "citation": "PC 19.03(A)(9)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CAPITAL MURDER TERROR THREAT/OTHER FEL",
+    "citation": "PC 19.03(A)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CAPITAL MURDER WHILE REMUNERATION",
     "citation": "19.03(a)(3)",
     "statute": "PC",
     "level": "FX",
     "statuteText": "Sec. 19.03. CAPITAL MURDER.\n(a) A person commits an offense\nif the person commits murder as defined under Section 19.02(b)(1)\nand:\n(1) the person murders a peace officer or fireman who is\nacting in the lawful discharge of an official duty and who the person\nknows is a peace officer or fireman;\n(2) the person intentionally commits the murder in the\ncourse of committing or attempting to commit kidnapping, burglary,\nrobbery, aggravated sexual assault, arson, obstruction or\nretaliation, or terroristic threat under Section 22.07(a)(1),\n(3),"
+  },
+  {
+    "literal": "CARELESSS DRIVING",
+    "citation": "TRC 552.008 3313",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CARRIER ENVELOPE PROH COMP W/2+ PREV CONV",
@@ -2192,6 +2960,30 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 30.07. TRESPASS BY LICENSE HOLDER WITH AN OPENLY CARRIED\nHANDGUN. (a) A license holder commits an offense if the license\nholder:\n(1) openly carries a handgun under the authority of\nSubchapter H, Chapter 411, Government Code, on property of another\nwithout effective consent; and\n(2) received notice that entry on the property by a license\nholder openly carrying a handgun was forbidden.\n(b) For purposes of this section, a person receives notice if\nthe owner of the property or someone with apparent authority to act\nfor the owner provides notice to the person by oral or written\ncommunication.\n(c) In this section:\n(1) \"Entry\" has the meaning assigned by Section 30.05(b).\n(2) \"License holder\" has the meaning assigned by Section\n46.03.\n(3) \"Written communication\" means:\n(A) a card or other document on which is written\nlanguage identical to the following: \"Pursuant to Section 30.07,\nPenal Code (trespass by license holder with an openly carried\nhandgun), a person licensed under Subchapter H, Chapter 411,\nGovernment Code (handgun licensing law), may not enter this property\nwith a handgun that is carried openly\"; or\n(B) a sign posted on the property that:\n(i) includes the language described by Paragraph\n(A) in both English and Spanish;\n(ii) appears in contrasting colors with block\nletters at least one inch in height; and\n(iii) is displayed in a conspicuous manner clearly\n\nPENAL CODE\nvisible to the public at each entrance to the property.\n(d) An offense under this section is a Class C misdemeanor\npunishable by a fine not to exceed $200, except that the offense is a\nClass A misdemeanor if it is shown on the trial of the offense that,\nafter entering the property, the license holder was personally given\nthe notice by oral communication described by Subsection"
+  },
+  {
+    "literal": "CARRYING CONCEALED WEAPON",
+    "citation": "ORD 8.02.002",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CARRYING FIREARM",
+    "citation": "ORD 8.02.003",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CARRYING FOOD, DRINKS/ICE INTO COLISUEM",
+    "citation": "ORD 8.01.017",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CASE NUMBER CANCELLED",
+    "citation": "CANCEL",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CATALYTIC CONVERTER B/S/R ENT/INSP STLN VEH",
@@ -2236,10 +3028,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "F2"
   },
   {
+    "literal": "CERTAIN ACT RELATE RADIO ACT WST W/PREV",
+    "citation": "HSC 401.383(b)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CERTAIN ACT RELATE RADIO ACTIVE WST W/PREV IAT",
     "citation": "401.383(b)",
     "statute": "HSC",
     "level": "M*"
+  },
+  {
+    "literal": "CERTAIN ACTS REL TO RADIO ACTIVE WASTE",
+    "citation": "HSC 401.383(b)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CERTAIN ACTS RELATED TO RADIO ACTIVE WASTE",
@@ -2260,10 +3064,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "CERTIFICATE OF NUMBER",
+    "citation": "TPW 31.028",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CHANGE RECEIPT OR SCALE WEIGHT TICKET",
     "citation": "14.076",
     "statute": "AGC",
     "level": "F2"
+  },
+  {
+    "literal": "CHANGED LANE LEFT WHEN UNSAFE",
+    "citation": "TRC 545.060 3009",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CHANGING LANE NOT IN SAFETY",
@@ -2276,6 +3092,24 @@ export const CJIS_CODES: Offense[] = [
     "citation": "6.035(c)",
     "statute": "TC",
     "level": "MB"
+  },
+  {
+    "literal": "CHILD (4-17) NOT SECURED BY SAFETY BELT",
+    "citation": "TRC 545.413 3034",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CHILD ABUSE/NEGL ATTEMPT TO INTER W/INV",
+    "citation": "FC 261.302(f)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CHILD ABUSE/NEGL FAL REP W/INT+PREV CONV",
+    "citation": "FC 261.107 F3",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CHILD ABUSE/NEGLECT ATTEMPT TO INTER W/INV",
@@ -2296,6 +3130,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "FS"
   },
   {
+    "literal": "CHILD CARE FAC EMPL PRSN W/O BCKGRND CK",
+    "citation": "HRC 42.056(k)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CHILD CARE FAC EMPL PRSN W/O BCRND CK/FAILD CK",
     "citation": "42.056(k)",
     "statute": "HRC",
@@ -2306,6 +3146,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "107.1111(d)",
     "statute": "FC",
     "level": "MA"
+  },
+  {
+    "literal": "CHILD CUSTODY",
+    "citation": "",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CHILD GROOMING",
@@ -2322,16 +3168,34 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 15.032. CHILD GROOMING. (a) A person commits an offense\nif, with the intent that an offense under Chapter 43 or an offense\ninvolving sexual activity, the occurrence of which would subject the\nactor to criminal liability under Chapter 20A, 21, or 22, be\ncommitted, the person knowingly persuades, induces, entices, or\ncoerces, or attempts to persuade, induce, entice, or coerce, a child\nyounger than 18 years of age to engage in specific conduct that,\nunder the circumstances surrounding the actor's conduct as the actor\nbelieves them to be, would:\n(1) constitute an offense under Chapter 43 or an offense\ninvolving sexual activity the occurrence of which would subject the\nactor to criminal liability under Chapter 20A, 21, or 22; or\n(2) make the child a party to the commission of an offense\ndescribed by Subdivision (1).\n(b) An offense under this section is a felony of the third\n\nPENAL CODE\ndegree, except that the offense is a felony of the second degree if\nthe actor has previously been convicted of an offense under:"
   },
   {
+    "literal": "CHILD IN NEED OF SUPERVISION",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CHILD LABOR LAW UNDER 14YOA",
     "citation": "51.014",
     "statute": "LC",
     "level": "MA"
   },
   {
+    "literal": "CHILD PASSENGER SAFETY SEAT SYSTEM",
+    "citation": "545.412",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CHILD(REN) IN PICKUP BED",
     "citation": "545.414",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "CHILD(REN) IN PICKUP BED <18 YOA",
+    "citation": "TRC 545.414 3038",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CHILD(REN) LEFT IN VEHICLE (UNDER 7 YOA)",
@@ -2369,6 +3233,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "201.605(c)",
     "statute": "OC",
     "level": "F3"
+  },
+  {
+    "literal": "CHNG NAME/MAIL ADDR LATER 30 DAYS (CDL)",
+    "citation": "TRC 522.032 3302",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CIGARETTE TAX VIOLATION",
@@ -2419,10 +3289,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "CITY PROP - INJURY/DESTRCT STRUCT/EQUIP",
+    "citation": "ORD 9.02.002(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CITY PROPERTY - INJURY (GROUNDS) - REMOVAL/TRANS/DAMAGE",
     "citation": "9.02.005(e)(d)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "CITY PROPERTY - INJURY/DESTRCT (GROUNDS)",
+    "citation": "ORD 9.02.002(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CITY PROPERTY - INJURY/DESTRUCTION (GROUNDS)",
@@ -2449,16 +3331,28 @@ export const CJIS_CODES: Offense[] = [
     "level": ""
   },
   {
+    "literal": "CITY WARRANT - CAPIAS PRO FINE",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CITY WARRANT - PR BOND",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CIVIL COMMITMENT REQUIREMENT",
     "citation": "841.082",
     "statute": "HSC",
     "level": "F3"
   },
   {
-    "literal": "CIVIL RIGHTS CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "CIVIL RIGHTS PERSON IN CUST VIOLATE/SEX",
+    "citation": "PC 39.04(b)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CIVIL RIGHTS PERSON IN CUSTODY VIOLATE/SEXUAL",
@@ -2480,10 +3374,28 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "CLAIM LOTTERY PRIZE FRAUD AID ANOTHER",
+    "citation": "GC 466.308(a)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CLAIM LOTTERY PRIZE FRAUD/DECEIT",
+    "citation": "GC 466.308(a)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CLAIM LOTTERY PRIZE W/PREV CONV",
     "citation": "466.308(c)(3)",
     "statute": "GC",
     "level": "F3"
+  },
+  {
+    "literal": "CLAIM LOTTERY PRIZE W/PREV CONVIC",
+    "citation": "GC 466.308(c)(3)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CLAIM OR AID CLAIM LOTTERY PRIZE FRAUD/DECEIT",
@@ -2508,6 +3420,30 @@ export const CJIS_CODES: Offense[] = [
     "citation": "7.178(b)",
     "statute": "WC",
     "level": "M*"
+  },
+  {
+    "literal": "CLEARANCE LAMPS IMPROPERLY MOUNTED",
+    "citation": "TRC 547.354 3179",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CLEARANCE LIGHTS NOT VIS SUFFICIENT DIST",
+    "citation": "TRC 547.355 3189",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CLUNG TO VEHICLE",
+    "citation": "TRC 551.102 3502",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "COASTING",
+    "citation": "TRC 545.406 3194",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "COCKFIGHTING: CAUSES OR EARNS",
@@ -2559,6 +3495,24 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 71.022. COERCING, INDUCING, OR SOLICITING MEMBERSHIP IN A\nCRIMINAL STREET GANG OR FOREIGN TERRORIST ORGANIZATION. (a) A\nperson commits an offense if the person knowingly causes, enables,\nencourages, recruits, or solicits another person to become a member\nof a criminal street gang or foreign terrorist organization which, as\na condition of initiation, admission, membership, or continued\nmembership, requires the commission of any conduct which constitutes\nan offense punishable as a Class A misdemeanor or a felony.\n(a-1) A person commits an offense if, with intent to coerce,\ninduce, or solicit a child to actively participate in the activities\nof a criminal street gang or foreign terrorist organization, the\nperson:\n(1) threatens the child or a member of the child's family\nwith imminent bodily injury; or\n(2) causes bodily injury to the child or a member of the\nchild's family.\n(b) Except as provided by Subsection"
   },
   {
+    "literal": "COERCE/SOLICIT GANG MEMBER THREAT",
+    "citation": "PC 71.022(A-1)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "COERCE/SOLICIT GANG MEMBERSHIP 2ND",
+    "citation": "PC 71.022(C)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "COERCE/SOLICIT GANG MEMBERSHIP CAUSE BI",
+    "citation": "PC 71.022(A-1)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "COERCION",
     "citation": "253.102",
     "statute": "EC",
@@ -2584,6 +3538,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 36.03. COERCION OF PUBLIC SERVANT OR VOTER. (a) A person\ncommits an offense if by means of coercion he:\n(1) influences or attempts to influence a public servant in\na specific exercise of his official power or a specific performance\nof his official duty or influences or attempts to influence a public\nservant to violate the public servant's known legal duty; or\n(2) influences or attempts to influence a voter not to vote\nor to vote in a particular manner.\n(b) An offense under this section is a Class A misdemeanor\nunless the coercion is a threat to commit a felony, in which event it\nis a felony of the third degree."
   },
   {
+    "literal": "COERCION OF PB SERV/VOTER THRT OF FELONY",
+    "citation": "PC 36.03(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "COERCION OF PB SERVANT/VOTER",
     "citation": "36.03(a)",
     "statute": "PC",
@@ -2597,6 +3557,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "COERCION OF PUBLIC SERVANT/VOTER",
+    "citation": "PC 36.03(A)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "COIN OPERATED MACHINE BY FRAUD LICENSE",
     "citation": "2153.357",
     "statute": "OC",
@@ -2607,6 +3573,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "2153.358",
     "statute": "OC",
     "level": "MB"
+  },
+  {
+    "literal": "COIN OPERATED MACHINE PRO SALE OF ALC",
+    "citation": "ABC 51.09",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "COIN OPERATED MACHINE PROH TRANSACTIONS",
@@ -2670,10 +3642,28 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 32.43. COMMERCIAL BRIBERY. (a) For purposes of this\nsection:\n(1) \"Beneficiary\" means a person for whom a fiduciary is\nacting.\n(2) \"Fiduciary\" means:\n(A) an agent or employee;\n(B) a trustee, guardian, custodian, administrator,\nexecutor, conservator, receiver, or similar fiduciary;\n(C) a lawyer, physician, accountant, appraiser, or\nother professional advisor; or\n(D) an officer, director, partner, manager, or other\nparticipant in the direction of the affairs of a corporation or\nassociation.\n(b) A person who is a fiduciary commits an offense if, without\nthe consent of his beneficiary, he intentionally or knowingly\nsolicits, accepts, or agrees to accept any benefit from another\nperson on agreement or understanding that the benefit will influence\nthe conduct of the fiduciary in relation to the affairs of his\nbeneficiary."
   },
   {
+    "literal": "COMMERCIAL BRIBERY",
+    "citation": "PC 32.43(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "COMMERCIAL DL - ENDORSEMENT VIOLATION (W",
+    "citation": "TRC 522.042(a)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "COMMERCIAL DL - NONE",
     "citation": "522.011",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "COMMERCIAL DL - RESTRICTION VIOLATION (A",
+    "citation": "TRC 522.043(a)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "COMMERCIAL DL ENDORSEMENT VIOLATION (WEIGHT)",
@@ -2706,10 +3696,10 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
-    "literal": "COMMERCIALIZED SEX OFFENSE CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "COMMERCIAL MATTERS REGISTRANT/DISP",
+    "citation": "HSC 481.128(a)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "COMMUNICATING GAMBLING INFORMATION",
@@ -2726,11 +3716,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 33.02. BREACH OF COMPUTER SECURITY. (a) A person commits\nan offense if the person knowingly accesses a computer, computer\nnetwork, or computer system without the effective consent of the\nowner.\n(b) An offense under Subsection (a) is a Class B misdemeanor,\nexcept that the offense is a state jail felony if:\n(1) the defendant has been previously convicted two or more\ntimes of an offense under this chapter; or\n(2) the computer, computer network, or computer system is\nowned by the government or a critical infrastructure facility.\n(b-1) A person commits an offense if, with the intent to\ndefraud or harm another or alter, damage, or delete property, the\nperson knowingly accesses:"
   },
   {
+    "literal": "COMP SEC BRECH GOVT/INFST COMP OR 2+ PRV",
+    "citation": "PC 33.02(b)(1)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "COMPEL PROST BY FORCE/THREAT/COERCION/FRAUD",
     "citation": "43.05(b)",
     "statute": "PC",
     "level": "F1",
     "statuteText": "Sec. 43.05. COMPELLING PROSTITUTION. (a) A person commits an\noffense if the person knowingly:\n(1) causes another by force, threat, coercion, or fraud to\ncommit prostitution;\n(2) causes by any means a child younger than 18 years to\ncommit prostitution, regardless of whether the actor knows the age of\n\nPENAL CODE\nthe child at the time of the offense; or\n(3) causes by any means a disabled individual, as defined\nby Section 22.021\n(b), to commit prostitution, regardless of whether\nthe actor knows the individual is disabled at the time of the\noffense."
+  },
+  {
+    "literal": "COMPELLING PROST BY FORCE/THREAT/FRAUD",
+    "citation": "PC 43.05(b)F2",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "COMPELLING PROSTITUTION DISABLED INDIVIDUAL",
@@ -2751,6 +3753,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "60.404",
     "statute": "WC",
     "level": "MB"
+  },
+  {
+    "literal": "COMPONENTS EXPLOSIVES WEAPONS FREE ZNE",
+    "citation": "PC 46.11(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "COMPONENTS OF EXPLOSIVES",
@@ -2778,11 +3786,23 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "COMPUTER SEC BREACH <$300K GOVT/INFST",
+    "citation": "PC 33.02(b-2)(6)(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "COMPUTER SEC BREACH <$300K GOVT/INFST COMP",
     "citation": "33.02(b-2)(6)(B)",
     "statute": "PC",
     "level": "F2",
     "statuteText": "Sec. 33.02. BREACH OF COMPUTER SECURITY. (a) A person commits\nan offense if the person knowingly accesses a computer, computer\nnetwork, or computer system without the effective consent of the\nowner.\n(b) An offense under Subsection (a) is a Class B misdemeanor,\nexcept that the offense is a state jail felony if:\n(1) the defendant has been previously convicted two or more\ntimes of an offense under this chapter; or\n(2) the computer, computer network, or computer system is\nowned by the government or a critical infrastructure facility.\n(b-1) A person commits an offense if, with the intent to\ndefraud or harm another or alter, damage, or delete property, the\nperson knowingly accesses:\n(1) a computer, computer network, or computer system\nwithout the effective consent of the owner; or\n\nPENAL CODE\n(2) a computer, computer network, or computer system:\n(A) that is owned by:\n(i) the government; or\n(ii) a business or other commercial entity engaged\nin a business activity;\n(B) in violation of:\n(i) a clear and conspicuous prohibition by the\nowner of the computer, computer network, or computer system; or\n(ii) a contractual agreement to which the person\nhas expressly agreed; and\n(C) with the intent to obtain or use a file, data, or\nproprietary information stored in the computer, network, or system to\ndefraud or harm another or alter, damage, or delete property.\n(b-2) An offense under Subsection (b-1) is:\n(1) a Class C misdemeanor if the aggregate amount involved\nis less than $100;\n(2) a Class B misdemeanor if the aggregate amount involved\nis $100 or more but less than $750;\n(3) a Class A misdemeanor if the aggregate amount involved\nis $750 or more but less than $2,500;\n(4) a state jail felony if the aggregate amount involved is\n$2,500 or more but less than $30,000;\n(5) a felony of the third degree if the aggregate amount\ninvolved is $30,000 or more but less than $150,000;\n(6) a felony of the second degree if:\n(A) the aggregate amount involved is $150,000 or more\nbut less than $300,000;\n(B) the aggregate amount involved is any amount less\nthan $300,000 and the computer, computer network, or computer system\nis owned by the government or a critical infrastructure facility; or\n(C) the actor obtains the identifying information of\nanother by accessing only one computer, computer network, or computer\nsystem; or"
+  },
+  {
+    "literal": "COMPUTER SEC BREACH IDENT INFO 1 COMP",
+    "citation": "PC 33.02(b-2)(6)(C)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "COMPUTER SEC BREACH IDENT INFO FROM 1 COMP",
@@ -2797,6 +3817,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F1",
     "statuteText": "Sec. 33.02. BREACH OF COMPUTER SECURITY. (a) A person commits\nan offense if the person knowingly accesses a computer, computer\nnetwork, or computer system without the effective consent of the\nowner.\n(b) An offense under Subsection (a) is a Class B misdemeanor,\nexcept that the offense is a state jail felony if:\n(1) the defendant has been previously convicted two or more\ntimes of an offense under this chapter; or\n(2) the computer, computer network, or computer system is\nowned by the government or a critical infrastructure facility.\n(b-1) A person commits an offense if, with the intent to\ndefraud or harm another or alter, damage, or delete property, the\nperson knowingly accesses:\n(1) a computer, computer network, or computer system\nwithout the effective consent of the owner; or\n\nPENAL CODE\n(2) a computer, computer network, or computer system:\n(A) that is owned by:\n(i) the government; or\n(ii) a business or other commercial entity engaged\nin a business activity;\n(B) in violation of:\n(i) a clear and conspicuous prohibition by the\nowner of the computer, computer network, or computer system; or\n(ii) a contractual agreement to which the person\nhas expressly agreed; and\n(C) with the intent to obtain or use a file, data, or\nproprietary information stored in the computer, network, or system to\ndefraud or harm another or alter, damage, or delete property.\n(b-2) An offense under Subsection (b-1) is:\n(1) a Class C misdemeanor if the aggregate amount involved\nis less than $100;\n(2) a Class B misdemeanor if the aggregate amount involved\nis $100 or more but less than $750;\n(3) a Class A misdemeanor if the aggregate amount involved\nis $750 or more but less than $2,500;\n(4) a state jail felony if the aggregate amount involved is\n$2,500 or more but less than $30,000;\n(5) a felony of the third degree if the aggregate amount\ninvolved is $30,000 or more but less than $150,000;\n(6) a felony of the second degree if:\n(A) the aggregate amount involved is $150,000 or more\nbut less than $300,000;\n(B) the aggregate amount involved is any amount less\nthan $300,000 and the computer, computer network, or computer system\nis owned by the government or a critical infrastructure facility; or\n(C) the actor obtains the identifying information of\nanother by accessing only one computer, computer network, or computer\nsystem; or\n(7) a felony of the first degree if:\n(A) the aggregate amount involved is $300,000 or more;\nor\n(B) the actor obtains the identifying information of\nanother by accessing more than one computer, computer network, or\ncomputer system."
+  },
+  {
+    "literal": "COMPUTER SEC BRECH IDENT INFO MULT COMP",
+    "citation": "PC 33.02(b-2)(7)(B)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "COMPUTER SECURITY BREACH",
@@ -2872,6 +3898,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "CONDUCT MARRIAGE CEREMONY W/O AUTH",
+    "citation": "FC 2.202(c)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CONDUCT MARRIAGE CEREMONY W/O AUTHORIZATION",
     "citation": "2.202(c)",
     "statute": "FC",
@@ -2938,10 +3970,10 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
-    "literal": "CONSERVATION VIOL CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "CONSENT TO SEARCH (INFORMATION ONLY)",
+    "citation": "",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CONSPIRE TO CIRCUMVENT FOR SECRET DELIBERATION",
@@ -2950,10 +3982,34 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "CONSUME ON PREMISES PROHIBITED",
+    "citation": "ABC 22.11",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CONSUME/PERMIT A/B ON LIC PREM PROH HRS",
+    "citation": "ABC 105.10(a)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CONSUME/PERMIT A/B ON LIC PREMISES PROH HOURS",
     "citation": "105.10(a)(2)",
     "statute": "ABC",
     "level": "MA"
+  },
+  {
+    "literal": "CONSUMPTION OF ALC BY A MINOR 3RD-ENH",
+    "citation": "ABC 106.04",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CONSUMPTION OF ALC BY MINOR",
+    "citation": "ABC 106.04C",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CONSUMPTION OF ALCOHOL BY A MINOR 3RD-ENH IAT",
@@ -2981,6 +4037,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 20.06. CONTINUOUS SMUGGLING OF PERSONS. (a) A person\ncommits an offense if, during a period that is 10 or more days in\nduration, the person engages two or more times in conduct that\nconstitutes an offense under Section 20.05.\n(b) If a jury is the trier of fact, members of the jury are not\nrequired to agree unanimously on which specific conduct engaged in by\nthe defendant constituted an offense under Section 20.05 or on which\nexact date the defendant engaged in that conduct. The jury must\nagree unanimously that the defendant, during a period that is 10 or\nmore days in duration, engaged two or more times in conduct that\nconstitutes an offense under Section 20.05.\n(c) If the victim of an offense under Subsection (a) is the\nsame victim as a victim of an offense under Section 20.05, a\ndefendant may not be convicted of the offense under Section 20.05 in\nthe same criminal action as the offense under Subsection (a), unless\nthe offense under Section 20.05:\n(1) is charged in the alternative;\n(2) occurred outside the period in which the offense\nalleged under Subsection (a) was committed; or\n(3) is considered by the trier of fact to be a lesser\nincluded offense of the offense alleged under Subsection (a).\n(d) A defendant may not be charged with more than one count\nunder Subsection (a) if all of the conduct that constitutes an\noffense under Section 20.05 is alleged to have been committed against\nthe same victim.\n(e) Except as provided by Subsections (f) and\n(g), an offense\nunder this section is a felony of the second degree with a minimum\nterm of imprisonment of 10 years.\n(f) An offense under this section is a felony of the first\ndegree with a minimum term of imprisonment of 10 years if:\n(1) the conduct constituting an offense under Section 20.05\nis conducted in a manner that creates a substantial likelihood that\nthe smuggled individual will suffer serious bodily injury or death;\nor"
   },
   {
+    "literal": "CONT SMUGGLE PERSONS:SEX ASSLT VICT IAT",
+    "citation": "PC 20.06(g)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CONT SMUGGLING OF PERSONS: SBI OR DEATH",
     "citation": "20.06(g)(2)",
     "statute": "PC",
@@ -3002,6 +4064,24 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 20.06. CONTINUOUS SMUGGLING OF PERSONS. (a) A person\ncommits an offense if, during a period that is 10 or more days in\nduration, the person engages two or more times in conduct that\nconstitutes an offense under Section 20.05.\n(b) If a jury is the trier of fact, members of the jury are not\nrequired to agree unanimously on which specific conduct engaged in by\nthe defendant constituted an offense under Section 20.05 or on which\nexact date the defendant engaged in that conduct. The jury must\nagree unanimously that the defendant, during a period that is 10 or\nmore days in duration, engaged two or more times in conduct that\nconstitutes an offense under Section 20.05.\n(c) If the victim of an offense under Subsection (a) is the\nsame victim as a victim of an offense under Section 20.05, a\ndefendant may not be convicted of the offense under Section 20.05 in\nthe same criminal action as the offense under Subsection (a), unless\nthe offense under Section 20.05:\n(1) is charged in the alternative;\n(2) occurred outside the period in which the offense\nalleged under Subsection (a) was committed; or\n(3) is considered by the trier of fact to be a lesser\nincluded offense of the offense alleged under Subsection (a).\n(d) A defendant may not be charged with more than one count\nunder Subsection (a) if all of the conduct that constitutes an\noffense under Section 20.05 is alleged to have been committed against\nthe same victim.\n(e) Except as provided by Subsections\n(f) and (g), an offense\nunder this section is a felony of the second degree with a minimum\nterm of imprisonment of 10 years.\n(f) An offense under this section is a felony of the first\ndegree with a minimum term of imprisonment of 10 years if:\n(1) the conduct constituting an offense under Section 20.05\nis conducted in a manner that creates a substantial likelihood that\nthe smuggled individual will suffer serious bodily injury or death;\nor"
   },
   {
+    "literal": "CONT SMUGGLING PERSON:LIKELIHD SBI/DEATH",
+    "citation": "PC 20.06(f)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CONT. OF BEER IN ILL SIZE POSS/SELL/TRAN",
+    "citation": "ABC 101.44",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CONT. OF LIQUOR <6OZ POSS/SELL/TRANS",
+    "citation": "ABC 101.46",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CONTACT LENS ACT",
     "citation": "353.207",
     "statute": "OC",
@@ -3018,6 +4098,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "101.46",
     "statute": "ABC",
     "level": "M*"
+  },
+  {
+    "literal": "CONTEMPT OF COURT",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CONTEMPT OF COURT REFUSES TO TESTIFY",
+    "citation": "CCP 52.06",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CONTEMPT OF COURT:DISOBEDIENCE OF COURT ORDER",
@@ -3102,6 +4194,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 25.11. CONTINUOUS VIOLENCE AGAINST THE FAMILY. (a) A\n\nPENAL CODE\nperson commits an offense if, during a period that is 12 months or\nless in duration, the person two or more times engages in conduct\nthat constitutes an offense under Section 22.01(a)(1) against another\nperson or persons whose relationship to or association with the\ndefendant is described by Section 71.0021(b), 71.003, or 71.005,\nFamily Code.\n(b) If the jury is the trier of fact, members of the jury are\nnot required to agree unanimously on the specific conduct in which\nthe defendant engaged that constituted an offense under Section\n22.01(a)(1) against the person or persons described by Subsection\n(a), the exact date when that conduct occurred, or the county in\nwhich each instance of the conduct occurred. The jury must agree\nunanimously that the defendant, during a period that is 12 months or\nless in duration, two or more times engaged in conduct that\nconstituted an offense under Section 22.01(a)(1) against the person\nor persons described by Subsection (a).\n(c) A defendant may not be convicted in the same criminal\naction of another offense the victim of which is an alleged victim of\nthe offense under Subsection (a) and an element of which is any\nconduct that is alleged as an element of the offense under Subsection\n(a) unless the other offense:\n(1) is charged in the alternative;\n(2) occurred outside the period in which the offense\nalleged under Subsection (a) was committed; or\n(3) is considered by the trier of fact to be a lesser\nincluded offense of the offense alleged under Subsection (a).\n(d) A defendant may not be charged with more than one count\nunder Subsection (a) if all of the specific conduct that is alleged\nto have been engaged in is alleged to have been committed against a\nsingle victim or members of the same household, as defined by Section\n71.005, Family Code.\n(e) An offense under this section is a felony of the third\ndegree.\nAdded by"
   },
   {
+    "literal": "CONTRABAND CORRECT FACIL EMPLOY/VOLUN",
+    "citation": "PC 38.114",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CONTRABAND CORRECTIONS FACIL EMPLOY/VOLUNTEER",
     "citation": "38.114",
     "statute": "PC",
@@ -3151,6 +4249,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "CONTRIBUTE TO DELINQ OF HABITUAL DRUNK",
+    "citation": "HSC 463.001",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CONTRIBUTE TO DELINQ OF NARC ADDICT",
+    "citation": "HSC 463.011",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CONTRIBUTE TO DELINQUENCY OF HABITUAL DRUNKARD",
     "citation": "463.001",
     "statute": "HSC",
@@ -3169,10 +4279,28 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "CONTROLLED SUBSTANCE ACT OFFENSE",
+    "citation": "TRC 521.342(A)(5) 3245",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CONVERSION  TEACHER FUNDS SAL/SUB VIOL",
+    "citation": "GC 821.101(c-d)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CONVERSION OF ERS FUNDS CONFISCATE/FALSE STMNT",
     "citation": "811.101(a-b)",
     "statute": "GC",
     "level": "F*"
+  },
+  {
+    "literal": "CONVERSION OF ERS FUNDS SAL/SUBTITLE VIO",
+    "citation": "GC 811.101(c-d)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CONVERSION OF ERS FUNDS SALARY/SUBTITLE VIOL",
@@ -3191,6 +4319,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "821.101(c-d)",
     "statute": "GC",
     "level": "M*"
+  },
+  {
+    "literal": "CONVRSN OF ERS FUNDS CONFIS/FALSE STMNT",
+    "citation": "GC 811.101(a-b)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CORONER FAIL TO REPORT TO DPS",
+    "citation": "TRC 550.081 3353",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CORPORATE ENTERS CONTRACT OF ACCEPTANCE UNL",
@@ -3235,6 +4375,12 @@ export const CJIS_CODES: Offense[] = [
     "level": ""
   },
   {
+    "literal": "COUNTY WARRANT ARREST",
+    "citation": "CCP 15.16CO",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "COURT INTERPERTERS LIC SUSPENDED",
     "citation": "57.027",
     "statute": "GC",
@@ -3251,6 +4397,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "57.027(a)",
     "statute": "GC",
     "level": "MA"
+  },
+  {
+    "literal": "COURT ORDERED COMMITMENT",
+    "citation": "",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "COURT/SHORTHAND CERT/REGISTRATION VIOLATION",
@@ -3283,6 +4435,36 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 32.31. CREDIT CARD OR DEBIT CARD ABUSE. (a) For purposes\nof this section:\n(1) \"Cardholder\" means the person named on the face of a\ncredit card or debit card to whom or for whose benefit the card is\nissued.\n(2) \"Credit card\" means an identification card, plate,\ncoupon, book, number, or any other device authorizing a designated\nperson or bearer to obtain property or services on credit. The term\nincludes the number or description of the device if the device itself\nis not produced at the time of ordering or obtaining the property or\nservice.\n(3) \"Expired credit card\" means a credit card bearing an\nexpiration date after that date has passed.\n(4) \"Debit card\" means an identification card, plate,\ncoupon, book, number, or any other device authorizing a designated\nperson or bearer to communicate a request to an unmanned teller\nmachine or a customer convenience terminal or obtain property or\n\nPENAL CODE\nservices by debit to an account at a financial institution. The term\nincludes the number or description of the device if the device itself\nis not produced at the time of ordering or obtaining the benefit.\n(5) \"Expired debit card\" means a debit card bearing as its\nexpiration date a date that has passed.\n(6) \"Unmanned teller machine\" means a machine, other than a\ntelephone, capable of being operated by a customer, by which a\ncustomer may communicate to a financial institution a request to\nwithdraw a benefit for himself or for another directly from the\ncustomer's account or from the customer's account under a line of\ncredit previously authorized by the institution for the customer.\n(7) \"Customer convenience terminal\" means an unmanned\nteller machine the use of which does not involve personnel of a\nfinancial institution.\n(b) A person commits an offense if:\n(1) with intent to obtain a benefit fraudulently, he\npresents or uses a credit card or debit card with knowledge that:\n(A) the card, whether or not expired, has not been\nissued to him and is not used with the effective consent of the\ncardholder; or\n(B) the card has expired or has been revoked or\ncancelled;\n(2) with intent to obtain a benefit, he uses a fictitious\ncredit card or debit card or the pretended number or description of a\nfictitious card;\n(3) he receives a benefit that he knows has been obtained\nin violation of this section;\n(4) he steals a credit card or debit card or, with\nknowledge that it has been stolen, receives a credit card or debit\ncard with intent to use it, to sell it, or to transfer it to a person\nother than the issuer or the cardholder;\n(5) he buys a credit card or debit card from a person who\nhe knows is not the issuer;\n(6) not being the issuer, he sells a credit card or debit\ncard;\n(7) he uses or induces the cardholder to use the\ncardholder's credit card or debit card to obtain property or service\nfor the actor's benefit for which the cardholder is financially\nunable to pay;\n(8) not being the cardholder, and without the effective\n\nPENAL CODE\nconsent of the cardholder, he possesses a credit card or debit card\nwith intent to use it;\n(9) he possesses two or more incomplete credit cards or\ndebit cards that have not been issued to him with intent to complete\nthem without the effective consent of the issuer. For purposes of\nthis subdivision, a card is incomplete if part of the matter that an\nissuer requires to appear on the card before it can be used, other\nthan the signature of the cardholder, has not yet been stamped,\nembossed, imprinted, or written on it;\n(10) being authorized by an issuer to furnish goods or\nservices on presentation of a credit card or debit card, he, with\nintent to defraud the issuer or the cardholder, furnishes goods or\nservices on presentation of a credit card or debit card obtained or\nretained in violation of this section or a credit card or debit card\nthat is forged, expired, or revoked; or\n(11) being authorized by an issuer to furnish goods or\nservices on presentation of a credit card or debit card, he, with\nintent to defraud the issuer or a cardholder, fails to furnish goods\nor services that he represents in writing to the issuer that he has\nfurnished.\n(c) It is presumed that a person who used a revoked, cancelled,\nor expired credit card or debit card had knowledge that the card had\nbeen revoked, cancelled, or expired if he had received notice of\nrevocation, cancellation, or expiration from the issuer. For\npurposes of this section, notice may be either notice given orally in\nperson or by telephone, or in writing by mail or by telegram. If\nwritten notice was sent by registered or certified mail with return\nreceipt requested, or by telegram with report of delivery requested,\naddressed to the cardholder at the last address shown by the records\nof the issuer, it is presumed that the notice was received by the\ncardholder no later than five days after sent.\n(d) An offense under this section is a state jail felony,\nexcept that the offense is a felony of the third degree if it is\nshown on the trial of the offense that the offense was committed\nagainst an elderly individual as defined by Section 22.04."
+  },
+  {
+    "literal": "CREDIT CARD TRANS LAUNDER >=$150K<$300K",
+    "citation": "PC 32.35(e)(6)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CREDIT CARD TRANS LAUNDER >=$2,500<$30K",
+    "citation": "PC 32.35(e)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CREDIT CARD TRANS LAUNDER >=$300K",
+    "citation": "PC 32.35(e)(7)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CREDIT CARD TRANS LAUNDER >=$30K<$150K",
+    "citation": "PC 32.35(e)(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CREDIT CARD TRANS LAUNDER >=$750<$2,500",
+    "citation": "PC 32.35(e)(3)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CREDIT CARD TRANS LAUNDERING >=$100<$750",
@@ -3353,6 +4535,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 28.03. CRIMINAL MISCHIEF. (a) A person commits an\noffense if, without the effective consent of the owner:\n(1) he intentionally or knowingly damages or destroys the\ntangible property of the owner;\n(2) he intentionally or knowingly tampers with the tangible\nproperty of the owner and causes pecuniary loss or substantial\ninconvenience to the owner or a third person; or\n(3) he intentionally or knowingly makes markings, including\ninscriptions, slogans, drawings, or paintings, on the tangible\nproperty of the owner.\n(b) Except as provided by Subsections (f) and (h), an offense\nunder this section is:\n(1) a Class C misdemeanor if:\n(A) the amount of pecuniary loss is less than $100; or\n(B) except as provided in Subdivision (3)(A) or (3)(B),\n\nPENAL CODE\nit causes substantial inconvenience to others;\n(2) a Class B misdemeanor if the amount of pecuniary loss\nis $100 or more but less than $750;\n(3) a Class A misdemeanor if:\n(A) the amount of pecuniary loss is $750 or more but\nless than $2,500; or\n(B) the actor causes in whole or in part impairment or\ninterruption of any public water supply, or causes to be diverted in\nwhole, in part, or in any manner, including installation or removal\nof any device for any such purpose, any public water supply,\nregardless of the amount of the pecuniary loss;\n(4) a state jail felony if the amount of pecuniary loss is:\n(A) $2,500 or more but less than $30,000;\n(B) except as provided in Subdivision (6)(B), less than\n$2,500, if the property damaged or destroyed is a habitation and if\nthe damage or destruction is caused by a firearm or explosive weapon;\n(C) less than $2,500, if the property was a fence used\nfor the production or containment of:\n(i) cattle, bison, horses, sheep, swine, goats,\nexotic livestock, or exotic poultry; or\n(ii) game animals as that term is defined by\nSection 63.001, Parks and Wildlife Code;\n(D) less than $30,000 and the actor:\n(i) causes wholly or partly impairment or\ninterruption of property used for flood control purposes or a dam or\nof public communications, public transportation, public gas supply,\nor other public service; or\n(ii) causes to be diverted wholly, partly, or in\nany manner, including installation or removal of any device for any\nsuch purpose, any public communications or public gas supply; or\n(E) less than $30,000, if the property is a motor\nvehicle that is damaged, destroyed, or tampered with during the\nremoval or attempted removal of a catalytic converter from the motor\nvehicle;\n(5) a felony of the third degree if:\n(A) the amount of the pecuniary loss is $30,000 or more\nbut less than $150,000;\n(B) the actor, by discharging a firearm or other weapon\nor by any other means, causes the death of one or more head of cattle\nor bison or one or more horses;\n\nPENAL CODE\n(C) the actor causes wholly or partly impairment or\ninterruption of access to an automated teller machine, regardless of\nthe amount of the pecuniary loss; or\n(D) the amount of pecuniary loss is less than $150,000\nand the actor:\n(i) causes wholly or partly impairment or\ninterruption of property used for public power supply; or\n(ii) causes to be diverted wholly, partly, or in\nany manner, including installation or removal of any device for any\nsuch purpose, any public power supply;\n(6) a felony of the second degree if the amount of\npecuniary loss is:\n(A) $150,000 or more but less than $300,000; or\n(B) $1,000 or more but less than $300,000, if:\n(i) the property damaged or destroyed is a\nhabitation; and\n(ii) it is shown on the trial of the offense that\nthe actor committed the offense in the course of committing an\noffense under Section 30.05; or\n(7) a felony of the first degree if the amount of pecuniary\nloss is $300,000 or more.\n(c) For the purposes of this section, it shall be presumed that\na person who is receiving the economic benefit of public\ncommunications, public water, gas, or power supply, has knowingly\ntampered with the tangible property of the owner if the communication\nor supply has been:\n(1) diverted from passing through a metering device; or\n(2) prevented from being correctly registered by a metering\ndevice; or\n(3) activated by any device installed to obtain public\ncommunications, public water, gas, or power supply without a metering\ndevice.\n(d) The terms \"public communication, public transportation,\npublic gas or power supply, or other public service\" and \"public\nwater supply\" shall mean, refer to, and include any such services\nsubject to regulation by the Public Utility Commission of Texas, the\nRailroad Commission of Texas, or the Texas Commission on\nEnvironmental Quality or any such services enfranchised by the State\nof Texas or any political subdivision thereof.\n(e) When more than one item of tangible property, belonging to\n\nPENAL CODE\none or more owners, is damaged, destroyed, or tampered with in\nviolation of this section pursuant to one scheme or continuing course\nof conduct, the conduct may be considered as one offense, and the\namounts of pecuniary loss to property resulting from the damage to,\ndestruction of, or tampering with the property may be aggregated in\ndetermining the grade of the offense.\n(f) An offense under this section is a state jail felony if the\ndamage or destruction is inflicted on a place of worship or human\nburial, a public monument, or a community center that provides\nmedical, social, or educational programs and the amount of the\npecuniary loss to real property or to tangible personal property is\n$750 or more but less than $30,000.\n(g) In this section:\n(1) \"Explosive weapon\" means any explosive or incendiary\ndevice that is designed, made, or adapted for the purpose of\ninflicting serious bodily injury, death, or substantial property\ndamage, or for the principal purpose of causing such a loud report as\nto cause undue public alarm or terror, and includes:\n(A) an explosive or incendiary bomb, grenade, rocket,\nand mine;\n(B) a device designed, made, or adapted for delivering\nor shooting an explosive weapon; and\n(C) a device designed, made, or adapted to start a fire\nin a time-delayed manner.\n(2) \"Firearm\" has the meaning assigned by Section 46.01.\n(3) \"Institution of higher education\" has the meaning\nassigned by Section 61.003, Education Code.\n(4) \"Aluminum wiring\" means insulated or noninsulated wire\nor cable that consists of at least 50 percent aluminum, including any\ntubing or conduit attached to the wire or cable.\n(5) \"Bronze wiring\" means insulated or noninsulated wire or\ncable that consists of at least 50 percent bronze, including any\ntubing or conduit attached to the wire or cable.\n(6) \"Copper wiring\" means insulated or noninsulated wire or\ncable that consists of at least 50 percent copper, including any\ntubing or conduit attached to the wire or cable.\n(7) \"Transportation communications equipment\" means:\n(A) an official traffic-control device, railroad sign\nor signal, or traffic-control signal, as those terms are defined by\nSection 541.304, Transportation Code; or\n\nPENAL CODE\n(B) a sign, signal, or device erected by a railroad,\npublic body, or public officer to direct the movement of a railroad\ntrain, as defined by Section 541.202, Transportation Code.\n(8) \"Transportation communications device\" means any item\nattached to transportation communications equipment, including\naluminum wiring, bronze wiring, and copper wiring.\n(9) \"Automated teller machine\" has the meaning assigned by\nSection 31.03.\n(10) \"Critical infrastructure facility\" has the meaning\nassigned by Section 31.01.\n(h) An offense under this section is a state jail felony if the\namount of the pecuniary loss to real property or to tangible personal\nproperty is $750 or more but less than $30,000 and the damage or\ndestruction is inflicted on a public or private elementary school,\nsecondary school, or institution of higher education.\n(i) Notwithstanding Subsection (b), an offense under this\nsection is a felony of the first degree if the property is livestock\nand the damage is caused by introducing bovine spongiform\nencephalopathy, commonly known as mad cow disease, or a disease\nlisted in rules adopted by the Texas Animal Health Commission under\nSection 161.041(a), Agriculture Code. In this subsection,\n\"livestock\" has the meaning assigned by Section 161.001, Agriculture\nCode.\n(j) Notwithstanding Subsection (b), an offense under this\nsection is a felony of the third degree if:\n(1) the tangible property damaged, destroyed, or tampered\nwith is transportation communications equipment or a transportation\ncommunications device; and\n(2) the amount of the pecuniary loss to the tangible\nproperty is less than $150,000.\n(k) Subsection (a)(1) or (2) does not apply if the tangible\npersonal property of the owner was a head of cattle or bison killed,\nor a horse killed, in the course of the actor's:\n(1) actual discharge of official duties as a member of the\nUnited States armed forces or the state military forces as defined by\nSection 437.001, Government Code; or\n(2) regular agricultural labor duties and practices.\n(l) Notwithstanding Subsection"
   },
   {
+    "literal": "CRIM MISCH TRANS/COMM EQUIP/DEV <$150K",
+    "citation": "PC 28.03(j)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CRIM MISCHF IMP/INT PUBLIC POWER SUPPLY <$150K",
     "citation": "28.03(b)(5)(D)",
     "statute": "PC",
@@ -3402,6 +4590,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 30.05. CRIMINAL TRESPASS. (a) A person commits an\noffense if the person enters or remains on or in property of another,\nincluding residential land, agricultural land, a recreational vehicle\npark, a building, a general residential operation operating as a\nresidential treatment center, or an aircraft or other vehicle,\nwithout effective consent and the person:\n(1) had notice that the entry was forbidden; or\n(2) received notice to depart but failed to do so.\n(b) For purposes of this section:\n(1) \"Entry\" means the intrusion of the entire body.\n(2) \"Notice\" means:\n\nPENAL CODE\n(A) oral or written communication by the owner or\nsomeone with apparent authority to act for the owner;\n(B) fencing or other enclosure obviously designed to\nexclude intruders or to contain livestock;\n(C) a sign or signs posted on the property or at the\nentrance to the building, reasonably likely to come to the attention\nof intruders, indicating that entry is forbidden;\n(D) the placement of identifying purple paint marks on\ntrees or posts on the property, provided that the marks are:\n(i) vertical lines of not less than eight inches in\nlength and not less than one inch in width;\n(ii) placed so that the bottom of the mark is not\nless than three feet from the ground or more than five feet from the\nground; and\n(iii) placed at locations that are readily visible\nto any person approaching the property and no more than:\n(a) 100 feet apart on forest land; or\n(b) 1,000 feet apart on land other than forest\nland; or\n(E) the visible presence on the property of a crop\ngrown for human consumption that is under cultivation, in the process\nof being harvested, or marketable if harvested at the time of entry.\n(3) \"Shelter center\" has the meaning assigned by Section\n51.002, Human Resources Code.\n(4) \"Forest land\" means land on which the trees are\npotentially valuable for timber products.\n(5) \"Agricultural land\" has the meaning assigned by Section\n75.001, Civil Practice and Remedies Code.\n(6) \"Superfund site\" means a facility that:\n(A) is on the National Priorities List established\nunder Section 105 of the federal Comprehensive Environmental\nResponse, Compensation, and Liability Act of 1980 (42 U.S.C. Section\n9605); or\n(B) is listed on the state registry established under\nSection 361.181, Health and Safety Code.\n(7) \"Critical infrastructure facility\" means one of the\nfollowing, if completely enclosed by a fence or other physical\nbarrier that is obviously designed to exclude intruders:\n(A) a chemical manufacturing facility;\n(B) a refinery;\n\nPENAL CODE\n(C) an electrical power generating facility,\nsubstation, switching station, electrical control center, or\nelectrical transmission or distribution facility;\n(D) a water intake structure, water treatment facility,\nwastewater treatment plant, or pump station;\n(E) a natural gas transmission compressor station;\n(F) a liquid natural gas terminal or storage facility;\n(G) a telecommunications central switching office;\n(H) a port, railroad switching yard, trucking terminal,\nor other freight transportation facility;\n(I) a gas processing plant, including a plant used in\nthe processing, treatment, or fractionation of natural gas; or\n(J) a transmission facility used by a federally\nlicensed radio or television station.\n(8) \"Protected freshwater area\" has the meaning assigned by\nSection 90.001, Parks and Wildlife Code.\n(9) \"Recognized state\" means another state with which the\nattorney general of this state, with the approval of the governor of\nthis state, negotiated an agreement after determining that the other\nstate:\n(A) has firearm proficiency requirements for peace\nofficers; and\n(B) fully recognizes the right of peace officers\ncommissioned in this state to carry weapons in the other state.\n(10) \"Recreational vehicle park\" has the meaning assigned\nby Section 13.087, Water Code.\n(11) \"Residential land\" means real property improved by a\ndwelling and zoned for or otherwise authorized for single-family or\nmultifamily use.\n(12) \"Institution of higher education\" has the meaning\nassigned by Section 61.003, Education Code.\n(13) \"General residential operation\" has the meaning\nassigned by Section 42.002, Human Resources Code.\n(c) A person may provide notice that firearms are prohibited on\nthe property by posting a sign at each entrance to the property that:\n(1) includes language that is identical to or substantially\nsimilar to the following: \"Pursuant to Section 30.05, Penal Code\n(criminal trespass), a person may not enter this property with a\nfirearm\";\n(2) includes the language described by Subdivision (1) in\n\nPENAL CODE\nboth English and Spanish;\n(3) appears in contrasting colors with block letters at\nleast one inch in height; and\n(4) is displayed in a conspicuous manner clearly visible to\nthe public.\n(d) Subject to Subsection (d-3), an offense under this section\nis:\n(1) a Class B misdemeanor, except as provided by\nSubdivisions (2),\n(3), and (4);"
   },
   {
+    "literal": "CRIM TRESPASS HABIT/SHLTR/SUPRF/INFSTRT",
+    "citation": "PC 30.05(D)(3)(A)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CRIM TRESPASS HABIT/SHLTR/SUPRFUND/INFSTRT",
     "citation": "30.05(d)(3)(A)",
     "statute": "PC",
@@ -3409,10 +4603,22 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 30.05. CRIMINAL TRESPASS. (a) A person commits an\noffense if the person enters or remains on or in property of another,\nincluding residential land, agricultural land, a recreational vehicle\npark, a building, a general residential operation operating as a\nresidential treatment center, or an aircraft or other vehicle,\nwithout effective consent and the person:\n(1) had notice that the entry was forbidden; or\n(2) received notice to depart but failed to do so.\n(b) For purposes of this section:\n(1) \"Entry\" means the intrusion of the entire body.\n(2) \"Notice\" means:\n\nPENAL CODE\n(A) oral or written communication by the owner or\nsomeone with apparent authority to act for the owner;\n(B) fencing or other enclosure obviously designed to\nexclude intruders or to contain livestock;\n(C) a sign or signs posted on the property or at the\nentrance to the building, reasonably likely to come to the attention\nof intruders, indicating that entry is forbidden;\n(D) the placement of identifying purple paint marks on\ntrees or posts on the property, provided that the marks are:\n(i) vertical lines of not less than eight inches in\nlength and not less than one inch in width;\n(ii) placed so that the bottom of the mark is not\nless than three feet from the ground or more than five feet from the\nground; and\n(iii) placed at locations that are readily visible\nto any person approaching the property and no more than:\n(a) 100 feet apart on forest land; or\n(b) 1,000 feet apart on land other than forest\nland; or\n(E) the visible presence on the property of a crop\ngrown for human consumption that is under cultivation, in the process\nof being harvested, or marketable if harvested at the time of entry.\n(3) \"Shelter center\" has the meaning assigned by Section\n51.002, Human Resources Code.\n(4) \"Forest land\" means land on which the trees are\npotentially valuable for timber products.\n(5) \"Agricultural land\" has the meaning assigned by Section\n75.001, Civil Practice and Remedies Code.\n(6) \"Superfund site\" means a facility that:\n(A) is on the National Priorities List established\nunder Section 105 of the federal Comprehensive Environmental\nResponse, Compensation, and Liability Act of 1980 (42 U.S.C. Section\n9605); or\n(B) is listed on the state registry established under\nSection 361.181, Health and Safety Code.\n(7) \"Critical infrastructure facility\" means one of the\nfollowing, if completely enclosed by a fence or other physical\nbarrier that is obviously designed to exclude intruders:\n(A) a chemical manufacturing facility;\n(B) a refinery;\n\nPENAL CODE\n(C) an electrical power generating facility,\nsubstation, switching station, electrical control center, or\nelectrical transmission or distribution facility;\n(D) a water intake structure, water treatment facility,\nwastewater treatment plant, or pump station;\n(E) a natural gas transmission compressor station;\n(F) a liquid natural gas terminal or storage facility;\n(G) a telecommunications central switching office;\n(H) a port, railroad switching yard, trucking terminal,\nor other freight transportation facility;\n(I) a gas processing plant, including a plant used in\nthe processing, treatment, or fractionation of natural gas; or\n(J) a transmission facility used by a federally\nlicensed radio or television station.\n(8) \"Protected freshwater area\" has the meaning assigned by\nSection 90.001, Parks and Wildlife Code.\n(9) \"Recognized state\" means another state with which the\nattorney general of this state, with the approval of the governor of\nthis state, negotiated an agreement after determining that the other\nstate:\n(A) has firearm proficiency requirements for peace\nofficers; and\n(B) fully recognizes the right of peace officers\ncommissioned in this state to carry weapons in the other state.\n(10) \"Recreational vehicle park\" has the meaning assigned\nby Section 13.087, Water Code.\n(11) \"Residential land\" means real property improved by a\ndwelling and zoned for or otherwise authorized for single-family or\nmultifamily use.\n(12) \"Institution of higher education\" has the meaning\nassigned by Section 61.003, Education Code.\n(13) \"General residential operation\" has the meaning\nassigned by Section 42.002, Human Resources Code.\n(c) A person may provide notice that firearms are prohibited on\nthe property by posting a sign at each entrance to the property that:\n(1) includes language that is identical to or substantially\nsimilar to the following: \"Pursuant to Section 30.05, Penal Code\n(criminal trespass), a person may not enter this property with a\nfirearm\";\n(2) includes the language described by Subdivision (1) in\n\nPENAL CODE\nboth English and Spanish;\n(3) appears in contrasting colors with block letters at\nleast one inch in height; and\n(4) is displayed in a conspicuous manner clearly visible to\nthe public.\n(d) Subject to Subsection (d-3), an offense under this section\nis:\n(1) a Class B misdemeanor, except as provided by\nSubdivisions (2),\n(3), and (4);\n(2) a Class C misdemeanor, except as provided by\nSubdivisions (3) and (4), if the offense is committed:\n(A) on agricultural land and within 100 feet of the\nboundary of the land; or\n(B) on residential land and within 100 feet of a\nprotected freshwater area;"
   },
   {
-    "literal": "CRIMES AGAINST PERSON CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "CRIMINAL MISCHF <$2,500 HABIT W/FA/EXPL",
+    "citation": "PC 28.03(b)(4)(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CRIMINAL MISCHF DAM/DESTR WORSHIP/SCHO",
+    "citation": "PC 28.03(f)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CRIMINAL MISCHF IMP/INT PUB SERVICE<$30K",
+    "citation": "PC 28.03(B)(4)(D)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CRIMINAL MISCHIEF - ATTEMPTED",
@@ -3434,6 +4640,18 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "FS",
     "statuteText": "Sec. 28.03. CRIMINAL MISCHIEF. (a) A person commits an\noffense if, without the effective consent of the owner:\n(1) he intentionally or knowingly damages or destroys the\ntangible property of the owner;\n(2) he intentionally or knowingly tampers with the tangible\nproperty of the owner and causes pecuniary loss or substantial\ninconvenience to the owner or a third person; or\n(3) he intentionally or knowingly makes markings, including\ninscriptions, slogans, drawings, or paintings, on the tangible\nproperty of the owner.\n(b) Except as provided by Subsections (f) and (h), an offense\nunder this section is:\n(1) a Class C misdemeanor if:\n(A) the amount of pecuniary loss is less than $100; or\n(B) except as provided in Subdivision (3)(A) or (3)(B),\n\nPENAL CODE\nit causes substantial inconvenience to others;\n(2) a Class B misdemeanor if the amount of pecuniary loss\nis $100 or more but less than $750;\n(3) a Class A misdemeanor if:\n(A) the amount of pecuniary loss is $750 or more but\nless than $2,500; or\n(B) the actor causes in whole or in part impairment or\ninterruption of any public water supply, or causes to be diverted in\nwhole, in part, or in any manner, including installation or removal\nof any device for any such purpose, any public water supply,\nregardless of the amount of the pecuniary loss;\n(4) a state jail felony if the amount of pecuniary loss is:\n(A) $2,500 or more but less than $30,000;\n(B) except as provided in Subdivision (6)(B), less than\n$2,500, if the property damaged or destroyed is a habitation and if\nthe damage or destruction is caused by a firearm or explosive weapon;\n(C) less than $2,500, if the property was a fence used\nfor the production or containment of:"
+  },
+  {
+    "literal": "CRIMINAL MISCHIEF <$2,500 LS/GAME FENCE",
+    "citation": "PC 28.03(b)(4)(C)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CRIMINAL MISCHIEF <100",
+    "citation": "PC 28.03(B)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CRIMINAL MISCHIEF >=$100<$750",
@@ -3476,6 +4694,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 28.03. CRIMINAL MISCHIEF. (a) A person commits an\noffense if, without the effective consent of the owner:\n(1) he intentionally or knowingly damages or destroys the\ntangible property of the owner;\n(2) he intentionally or knowingly tampers with the tangible\nproperty of the owner and causes pecuniary loss or substantial\ninconvenience to the owner or a third person; or\n(3) he intentionally or knowingly makes markings, including\ninscriptions, slogans, drawings, or paintings, on the tangible\nproperty of the owner.\n(b) Except as provided by Subsections (f) and (h), an offense\nunder this section is:\n(1) a Class C misdemeanor if:\n(A) the amount of pecuniary loss is less than $100; or\n(B) except as provided in Subdivision\n(3)\n(A) or (3)(B),\n\nPENAL CODE\nit causes substantial inconvenience to others;"
+  },
+  {
+    "literal": "CRIMINAL MISCHIEF >=$750<$30K DEST SCHOL",
+    "citation": "PC 28.03(H)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CRIMINAL MISCHIEF >=$750<$30K DESTROY SCHOOL",
@@ -3527,6 +4751,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 28.03. CRIMINAL MISCHIEF. (a) A person commits an\noffense if, without the effective consent of the owner:\n(1) he intentionally or knowingly damages or destroys the\ntangible property of the owner;\n(2) he intentionally or knowingly tampers with the tangible\nproperty of the owner and causes pecuniary loss or substantial\ninconvenience to the owner or a third person; or\n(3) he intentionally or knowingly makes markings, including\ninscriptions, slogans, drawings, or paintings, on the tangible\nproperty of the owner.\n(b) Except as provided by Subsections (f) and (h), an offense\nunder this section is:\n(1) a Class C misdemeanor if:\n(A) the amount of pecuniary loss is less than $100; or\n(B) except as provided in Subdivision (3)(A) or (3)(B),\n\nPENAL CODE\nit causes substantial inconvenience to others;\n(2) a Class B misdemeanor if the amount of pecuniary loss\nis $100 or more but less than $750;\n(3) a Class A misdemeanor if:\n(A) the amount of pecuniary loss is $750 or more but\nless than $2,500; or\n(B) the actor causes in whole or in part impairment or\ninterruption of any public water supply, or causes to be diverted in\nwhole, in part, or in any manner, including installation or removal\nof any device for any such purpose, any public water supply,\nregardless of the amount of the pecuniary loss;\n(4) a state jail felony if the amount of pecuniary loss is:\n(A) $2,500 or more but less than $30,000;\n(B) except as provided in Subdivision (6)(B), less than\n$2,500, if the property damaged or destroyed is a habitation and if\nthe damage or destruction is caused by a firearm or explosive weapon;\n(C) less than $2,500, if the property was a fence used\nfor the production or containment of:\n(i) cattle, bison, horses, sheep, swine, goats,\nexotic livestock, or exotic poultry; or\n(ii) game animals as that term is defined by\nSection 63.001, Parks and Wildlife Code;\n(D) less than $30,000 and the actor:\n(i) causes wholly or partly impairment or\ninterruption of property used for flood control purposes or a dam or\nof public communications, public transportation, public gas supply,\nor other public service; or\n(ii) causes to be diverted wholly, partly, or in\nany manner, including installation or removal of any device for any\nsuch purpose, any public communications or public gas supply; or\n(E) less than $30,000, if the property is a motor\nvehicle that is damaged, destroyed, or tampered with during the\nremoval or attempted removal of a catalytic converter from the motor\nvehicle;\n(5) a felony of the third degree if:\n(A) the amount of the pecuniary loss is $30,000 or more\nbut less than $150,000;\n(B) the actor, by discharging a firearm or other weapon\nor by any other means, causes the death of one or more head of cattle\nor bison or one or more horses;\n\nPENAL CODE\n(C) the actor causes wholly or partly impairment or\ninterruption of access to an automated teller machine, regardless of\nthe amount of the pecuniary loss; or\n(D) the amount of pecuniary loss is less than $150,000\nand the actor:\n(i) causes wholly or partly impairment or\ninterruption of property used for public power supply; or\n(ii) causes to be diverted wholly, partly, or in\nany manner, including installation or removal of any device for any\nsuch purpose, any public power supply;\n(6) a felony of the second degree if the amount of\npecuniary loss is:\n(A) $150,000 or more but less than $300,000; or\n(B) $1,000 or more but less than $300,000, if:\n(i) the property damaged or destroyed is a\nhabitation; and\n(ii) it is shown on the trial of the offense that\nthe actor committed the offense in the course of committing an\noffense under Section 30.05; or\n(7) a felony of the first degree if the amount of pecuniary\nloss is $300,000 or more.\n(c) For the purposes of this section, it shall be presumed that\na person who is receiving the economic benefit of public\ncommunications, public water, gas, or power supply, has knowingly\ntampered with the tangible property of the owner if the communication\nor supply has been:\n(1) diverted from passing through a metering device; or\n(2) prevented from being correctly registered by a metering\ndevice; or\n(3) activated by any device installed to obtain public\ncommunications, public water, gas, or power supply without a metering\ndevice.\n(d) The terms \"public communication, public transportation,\npublic gas or power supply, or other public service\" and \"public\nwater supply\" shall mean, refer to, and include any such services\nsubject to regulation by the Public Utility Commission of Texas, the\nRailroad Commission of Texas, or the Texas Commission on\nEnvironmental Quality or any such services enfranchised by the State\nof Texas or any political subdivision thereof.\n(e) When more than one item of tangible property, belonging to\n\nPENAL CODE\none or more owners, is damaged, destroyed, or tampered with in\nviolation of this section pursuant to one scheme or continuing course\nof conduct, the conduct may be considered as one offense, and the\namounts of pecuniary loss to property resulting from the damage to,\ndestruction of, or tampering with the property may be aggregated in\ndetermining the grade of the offense.\n(f) An offense under this section is a state jail felony if the\ndamage or destruction is inflicted on a place of worship or human\nburial, a public monument, or a community center that provides\nmedical, social, or educational programs and the amount of the\npecuniary loss to real property or to tangible personal property is\n$750 or more but less than $30,000.\n(g) In this section:\n(1) \"Explosive weapon\" means any explosive or incendiary\ndevice that is designed, made, or adapted for the purpose of\ninflicting serious bodily injury, death, or substantial property\ndamage, or for the principal purpose of causing such a loud report as\nto cause undue public alarm or terror, and includes:\n(A) an explosive or incendiary bomb, grenade, rocket,\nand mine;\n(B) a device designed, made, or adapted for delivering\nor shooting an explosive weapon; and\n(C) a device designed, made, or adapted to start a fire\nin a time-delayed manner.\n(2) \"Firearm\" has the meaning assigned by Section 46.01.\n(3) \"Institution of higher education\" has the meaning\nassigned by Section 61.003, Education Code.\n(4) \"Aluminum wiring\" means insulated or noninsulated wire\nor cable that consists of at least 50 percent aluminum, including any\ntubing or conduit attached to the wire or cable.\n(5) \"Bronze wiring\" means insulated or noninsulated wire or\ncable that consists of at least 50 percent bronze, including any\ntubing or conduit attached to the wire or cable.\n(6) \"Copper wiring\" means insulated or noninsulated wire or\ncable that consists of at least 50 percent copper, including any\ntubing or conduit attached to the wire or cable.\n(7) \"Transportation communications equipment\" means:\n(A) an official traffic-control device, railroad sign\nor signal, or traffic-control signal, as those terms are defined by\nSection 541.304, Transportation Code; or\n\nPENAL CODE\n(B) a sign, signal, or device erected by a railroad,\npublic body, or public officer to direct the movement of a railroad\ntrain, as defined by Section 541.202, Transportation Code.\n(8) \"Transportation communications device\" means any item\nattached to transportation communications equipment, including\naluminum wiring, bronze wiring, and copper wiring.\n(9) \"Automated teller machine\" has the meaning assigned by\nSection 31.03.\n(10) \"Critical infrastructure facility\" has the meaning\nassigned by Section 31.01.\n(h) An offense under this section is a state jail felony if the\namount of the pecuniary loss to real property or to tangible personal\nproperty is $750 or more but less than $30,000 and the damage or\ndestruction is inflicted on a public or private elementary school,\nsecondary school, or institution of higher education.\n(i) Notwithstanding Subsection (b), an offense under this\nsection is a felony of the first degree if the property is livestock\nand the damage is caused by introducing bovine spongiform\nencephalopathy, commonly known as mad cow disease, or a disease\nlisted in rules adopted by the Texas Animal Health Commission under\nSection 161.041(a), Agriculture Code. In this subsection,\n\"livestock\" has the meaning assigned by Section 161.001, Agriculture\nCode.\n(j) Notwithstanding Subsection (b), an offense under this\nsection is a felony of the third degree if:\n(1) the tangible property damaged, destroyed, or tampered\nwith is transportation communications equipment or a transportation\ncommunications device; and\n(2) the amount of the pecuniary loss to the tangible\nproperty is less than $150,000.\n(k) Subsection (a)(1) or (2) does not apply if the tangible\npersonal property of the owner was a head of cattle or bison killed,\nor a horse killed, in the course of the actor's:\n(1) actual discharge of official duties as a member of the\nUnited States armed forces or the state military forces as defined by\nSection 437.001, Government Code; or\n(2) regular agricultural labor duties and practices.\n(l) Notwithstanding Subsection (b), an offense under this\nsection is a felony of the third degree if:\n(1) the actor committed the offense by damaging or\n\nPENAL CODE\ndestroying:\n(A) a copper or brass component of a critical\ninfrastructure facility; or\n(B) equipment or communication wires appurtenant to or\nconnected to a copper or brass component of the facility or on which\nthe facility depends to properly function, regardless of whether the\nequipment or communication wires are enclosed by a fence or other\nbarrier; and\n(2) the damage or destruction causes, wholly or partly, the\nimpairment or interruption of the facility or the equipment or\ncommunication wires."
   },
   {
+    "literal": "CRIMINAL NEGLIGENT HOMICIDE",
+    "citation": "PC 19.05",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CRIMINAL NONSUPPORT",
     "citation": "25.05(f)",
     "statute": "PC",
@@ -3541,6 +4771,18 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 32.22. CRIMINAL SIMULATION. (a) A person commits an\noffense if, with intent to defraud or harm another:\n(1) he makes or alters an object, in whole or in part, so\nthat it appears to have value because of age, antiquity, rarity,\nsource, or authorship that it does not have;\n(2) he possesses an object so made or altered, with intent\nto sell, pass, or otherwise utter it; or\n(3) he authenticates or certifies an object so made or\naltered as genuine or as different from what it is.\n(b) An offense under this section is a Class A misdemeanor."
   },
   {
+    "literal": "CRIMINAL SOLICITATION",
+    "citation": "PC 15.03",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CRIMINAL SOLICITATION OF MINOR",
+    "citation": "PC 15.031",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CRIMINAL TRESPASS",
     "citation": "30.05(d)(1)",
     "statute": "PC",
@@ -3553,6 +4795,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "MC",
     "statuteText": "Sec. 30.05. CRIMINAL TRESPASS. (a) A person commits an\noffense if the person enters or remains on or in property of another,\nincluding residential land, agricultural land, a recreational vehicle\npark, a building, a general residential operation operating as a\nresidential treatment center, or an aircraft or other vehicle,\nwithout effective consent and the person:\n(1) had notice that the entry was forbidden; or\n(2) received notice to depart but failed to do so.\n(b) For purposes of this section:\n(1) \"Entry\" means the intrusion of the entire body.\n(2) \"Notice\" means:\n\nPENAL CODE\n(A) oral or written communication by the owner or\nsomeone with apparent authority to act for the owner;\n(B) fencing or other enclosure obviously designed to\nexclude intruders or to contain livestock;\n(C) a sign or signs posted on the property or at the\nentrance to the building, reasonably likely to come to the attention\nof intruders, indicating that entry is forbidden;\n(D) the placement of identifying purple paint marks on\ntrees or posts on the property, provided that the marks are:\n(i) vertical lines of not less than eight inches in\nlength and not less than one inch in width;\n(ii) placed so that the bottom of the mark is not\nless than three feet from the ground or more than five feet from the\nground; and\n(iii) placed at locations that are readily visible\nto any person approaching the property and no more than:\n(a) 100 feet apart on forest land; or\n(b) 1,000 feet apart on land other than forest\nland; or\n(E) the visible presence on the property of a crop\ngrown for human consumption that is under cultivation, in the process\nof being harvested, or marketable if harvested at the time of entry.\n(3) \"Shelter center\" has the meaning assigned by Section\n51.002, Human Resources Code.\n(4) \"Forest land\" means land on which the trees are\npotentially valuable for timber products.\n(5) \"Agricultural land\" has the meaning assigned by Section\n75.001, Civil Practice and Remedies Code.\n(6) \"Superfund site\" means a facility that:\n(A) is on the National Priorities List established\nunder Section 105 of the federal Comprehensive Environmental\nResponse, Compensation, and Liability Act of 1980 (42 U.S.C. Section\n9605); or\n(B) is listed on the state registry established under\nSection 361.181, Health and Safety Code.\n(7) \"Critical infrastructure facility\" means one of the\nfollowing, if completely enclosed by a fence or other physical\nbarrier that is obviously designed to exclude intruders:\n(A) a chemical manufacturing facility;\n(B) a refinery;\n\nPENAL CODE\n(C) an electrical power generating facility,\nsubstation, switching station, electrical control center, or\nelectrical transmission or distribution facility;\n(D) a water intake structure, water treatment facility,\nwastewater treatment plant, or pump station;\n(E) a natural gas transmission compressor station;\n(F) a liquid natural gas terminal or storage facility;\n(G) a telecommunications central switching office;\n(H) a port, railroad switching yard, trucking terminal,\nor other freight transportation facility;\n(I) a gas processing plant, including a plant used in\nthe processing, treatment, or fractionation of natural gas; or\n(J) a transmission facility used by a federally\nlicensed radio or television station.\n(8) \"Protected freshwater area\" has the meaning assigned by\nSection 90.001, Parks and Wildlife Code.\n(9) \"Recognized state\" means another state with which the\nattorney general of this state, with the approval of the governor of\nthis state, negotiated an agreement after determining that the other\nstate:\n(A) has firearm proficiency requirements for peace\nofficers; and\n(B) fully recognizes the right of peace officers\ncommissioned in this state to carry weapons in the other state.\n(10) \"Recreational vehicle park\" has the meaning assigned\nby Section 13.087, Water Code.\n(11) \"Residential land\" means real property improved by a\ndwelling and zoned for or otherwise authorized for single-family or\nmultifamily use.\n(12) \"Institution of higher education\" has the meaning\nassigned by Section 61.003, Education Code.\n(13) \"General residential operation\" has the meaning\nassigned by Section 42.002, Human Resources Code.\n(c) A person may provide notice that firearms are prohibited on\nthe property by posting a sign at each entrance to the property that:\n(1) includes language that is identical to or substantially\nsimilar to the following: \"Pursuant to Section 30.05, Penal Code\n(criminal trespass), a person may not enter this property with a\nfirearm\";\n(2) includes the language described by Subdivision (1) in\n\nPENAL CODE\nboth English and Spanish;\n(3) appears in contrasting colors with block letters at\nleast one inch in height; and\n(4) is displayed in a conspicuous manner clearly visible to\nthe public.\n(d) Subject to Subsection (d-3), an offense under this section\nis:\n(1) a Class B misdemeanor, except as provided by\nSubdivisions (2), (3), and (4);\n(2) a Class C misdemeanor, except as provided by\nSubdivisions (3) and (4), if the offense is committed:\n(A) on agricultural land and within 100 feet of the\nboundary of the land; or\n(B) on residential land and within 100 feet of a\nprotected freshwater area;\n(3) a Class A misdemeanor, except as provided by\nSubdivision (4), if:\n(A) the offense is committed:\n(i) in a habitation or a shelter center;\n(ii) on a Superfund site; or\n(iii) on or in a critical infrastructure facility;\n(B) the offense is committed on or in property of an\ninstitution of higher education and it is shown on the trial of the\noffense that the person has previously been convicted of:\n(i) an offense under this section relating to\nentering or remaining on or in property of an institution of higher\neducation; or\n(ii) an offense under Section 51.204(b)(1),\nEducation Code, relating to trespassing on the grounds of an\ninstitution of higher education;\n(C) the person carries a deadly weapon during the\ncommission of the offense; or\n(D) the offense is committed on the property of or\nwithin a general residential operation operating as a residential\ntreatment center; and\n(4) a felony of the third degree if it is shown on the\ntrial of the offense that the defendant committed the offense in the\ncourse of committing an offense under Section 20.05(a)(2).\n(d-1) For the purposes of Subsection (d)(3)(B), a person has\npreviously been convicted of an offense described by that paragraph\n\nPENAL CODE\nif the person was adjudged guilty of the offense or entered a plea of\nguilty or nolo contendere in return for a grant of deferred\nadjudication community supervision, regardless of whether the\nsentence for the offense was ever imposed or whether the sentence was\nprobated and the person was subsequently discharged from deferred\nadjudication community supervision.\n(d-2) At the punishment stage of a trial in which the attorney\nrepresenting the state seeks the increase in punishment provided by\nSubsection (d)(3)(B), the defendant may raise the issue as to\nwhether, at the time of the instant offense or the previous offense,\nthe defendant was engaging in speech or expressive conduct protected\nby the First Amendment to the United States Constitution or Section\n8, Article I, Texas Constitution. If the defendant proves the issue\nin the affirmative by a preponderance of the evidence, the increase\nin punishment provided by Subsection (d)(3)(B) does not apply.\n(d-3) An offense under this section is a Class C misdemeanor\npunishable by a fine not to exceed $200 if the person enters the\nproperty, land, or building with a firearm or other weapon and the\nsole basis on which entry on the property or land or in the building\nwas forbidden is that entry with a firearm or other weapon was\nforbidden, except that the offense is a Class A misdemeanor if it is\nshown on the trial of the offense that, after entering the property,\nland, or building with the firearm or other weapon, the actor:\n(1) personally received from the owner of the property or\nanother person with apparent authority to act for the owner notice\nthat entry with a firearm or other weapon was forbidden, as given\nthrough:\n(A) notice under Subsection (b)(2)(A), including oral\nor written communication; or\n(B) if the actor is unable to reasonably understand the\nnotice described by Paragraph (A), other personal notice that is\nreasonable under the circumstances; and\n(2) subsequently failed to depart.\n(e) It is a defense to prosecution under this section that the\nactor at the time of the offense was:\n(1) a firefighter or emergency medical services personnel,\nas defined by Section 773.003, Health and Safety Code, acting in the\nlawful discharge of an official duty under exigent circumstances;\n(2) a person who was:\n(A) an employee or agent of:\n\nPENAL CODE\n(i) an electric utility, as defined by Section\n31.002, Utilities Code;\n(ii) a telecommunications provider, as defined by\nSection 51.002, Utilities Code;\n(iii) a video service provider or cable service\nprovider, as defined by Section 66.002, Utilities Code;\n(iv) a gas utility, as defined by Section 101.003,\nUtilities Code, which for the purposes of this subsection includes a\nmunicipally owned utility as defined by that section;\n(v) a gas utility, as defined by Section 121.001,\nUtilities Code;\n(vi) a pipeline used for the transportation or sale\nof oil, gas, or related products; or\n(vii) an electric cooperative or municipally owned\nutility, as defined by Section 11.003, Utilities Code; and\n(B) performing a duty within the scope of that\nemployment or agency; or\n(3) a person who was:\n(A) employed by or acting as agent for an entity that\nhad, or that the person reasonably believed had, effective consent or\nauthorization provided by law to enter the property; and\n(B) performing a duty within the scope of that\nemployment or agency.\n(f) It is a defense to prosecution under this section that:\n(1) the basis on which entry on the property or land or in\nthe building was forbidden is that entry with a handgun was\nforbidden; and\n(2) the person was carrying:\n(A) a license issued under Subchapter H, Chapter 411,\nGovernment Code, to carry a handgun; and\n(B) a handgun:\n(i) in a concealed manner; or\n(ii) in a holster.\n(f-1) It is a defense to prosecution under this section that:\n(1) the basis on which entry on the property was forbidden\nis that entry with a firearm or firearm ammunition was forbidden;\n(2) the actor is:\n(A) an owner of an apartment in a condominium regime\ngoverned by Chapter 81, Property Code;\n(B) an owner of a condominium unit governed by Chapter\n\nPENAL CODE\n82, Property Code;\n(C) a tenant or guest of an owner described by\nParagraph (A) or (B); or\n(D) a guest of a tenant of an owner described by\nParagraph (A) or (B);\n(3) the actor:\n(A) carries or stores a firearm or firearm ammunition\nin the condominium apartment or unit owner's apartment or unit;\n(B) carries a firearm or firearm ammunition directly en\nroute to or from the condominium apartment or unit owner's apartment\nor unit;\n(C) carries a firearm or firearm ammunition directly en\nroute to or from the actor's vehicle located in a parking area\nprovided for residents or guests of the condominium property; or\n(D) carries or stores a firearm or firearm ammunition\nin the actor's vehicle located in a parking area provided for\nresidents or guests of the condominium property; and\n(4) the actor is not otherwise prohibited by law from\npossessing a firearm or firearm ammunition.\n(f-2) It is a defense to prosecution under this section that:\n(1) the basis on which entry on a leased premises governed\nby Chapter 92, Property Code, was forbidden is that entry with a\nfirearm or firearm ammunition was forbidden;\n(2) the actor is a tenant of the leased premises or the\ntenant's guest;\n(3) the actor:\n(A) carries or stores a firearm or firearm ammunition\nin the tenant's rental unit;\n(B) carries a firearm or firearm ammunition directly en\nroute to or from the tenant's rental unit;\n(C) carries a firearm or firearm ammunition directly en\nroute to or from the actor's vehicle located in a parking area\nprovided for tenants or guests by the landlord of the leased\npremises; or\n(D) carries or stores a firearm or firearm ammunition\nin the actor's vehicle located in a parking area provided for tenants\nor guests by the landlord of the leased premises; and\n(4) the actor is not otherwise prohibited by law from\npossessing a firearm or firearm ammunition.\n(f-3) It is a defense to prosecution under this section that:\n\nPENAL CODE\n(1) the basis on which entry on a leased premises governed\nby Chapter 94, Property Code, was forbidden is that entry with a\nfirearm or firearm ammunition was forbidden;\n(2) the actor is a tenant of a manufactured home lot or the\ntenant's guest;\n(3) the actor:\n(A) carries or stores a firearm or firearm ammunition\nin the tenant's manufactured home;\n(B) carries a firearm or firearm ammunition directly en\nroute to or from the tenant's manufactured home;\n(C) carries a firearm or firearm ammunition directly en\nroute to or from the actor's vehicle located in a parking area\nprovided for tenants or tenants' guests by the landlord of the leased\npremises; or\n(D) carries or stores a firearm or firearm ammunition\nin the actor's vehicle located in a parking area provided for tenants\nor tenants' guests by the landlord of the leased premises; and\n(4) the actor is not otherwise prohibited by law from\npossessing a firearm or firearm ammunition.\n(f-4) It is a defense to prosecution under this section that:\n(1) the conduct occurred on hotel property, and the basis\non which entry on that property was forbidden is that entry with a\nfirearm or firearm ammunition was forbidden;\n(2) the actor is a guest of a hotel, as defined by Section\n2155.101, Occupations Code; and\n(3) the actor:\n(A) carries or stores a firearm or firearm ammunition\nin the actor's hotel room;\n(B) carries a firearm or firearm ammunition directly en\nroute to or from the hotel or the actor's hotel room;\n(C) carries a firearm or firearm ammunition directly en\nroute to or from the actor's vehicle located on the hotel property,\nincluding a vehicle in a parking area provided for hotel guests; or\n(D) carries or stores a firearm or firearm ammunition\nin the actor's vehicle located on the hotel property, including a\nvehicle in a parking area provided for hotel guests.\n(g) It is a defense to prosecution under this section that the\nactor entered a railroad switching yard or any part of a railroad\nswitching yard and was at that time an employee or a representative\nof employees exercising a right under the Railway Labor Act (45\n\nPENAL CODE\nU.S.C. Section 151 et seq.).\n(h) At the punishment stage of a trial in which the attorney\nrepresenting the state seeks the increase in punishment provided by\nSubsection (d)(3)(A)(iii), the defendant may raise the issue as to\nwhether the defendant entered or remained on or in a critical\ninfrastructure facility as part of a peaceful or lawful assembly,\nincluding an attempt to exercise rights guaranteed by state or\nfederal labor laws. If the defendant proves the issue in the\naffirmative by a preponderance of the evidence, the increase in\npunishment provided by Subsection (d)(3)(A)(iii) does not apply.\n(i) This section does not apply if:\n(1) the basis on which entry on the property or land or in\nthe building was forbidden is that entry with a handgun or other\nweapon was forbidden; and\n(2) the actor at the time of the offense was a peace\nofficer, including a commissioned peace officer of a recognized\nstate, or a special investigator under Article 2A.002, Code of\nCriminal Procedure, regardless of whether the peace officer or\nspecial investigator was engaged in the actual discharge of an\nofficial duty while carrying the weapon.\n(j) Repealed by"
+  },
+  {
+    "literal": "CRIMINAL TRESPASS AUTHORITY",
+    "citation": "CTA",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CRIMINAL TRESPASS INST HIGH EDU PREV CONV IAT",
@@ -3576,6 +4824,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 30.05. CRIMINAL TRESPASS. (a) A person commits an\noffense if the person enters or remains on or in property of another,\nincluding residential land, agricultural land, a recreational vehicle\npark, a building, a general residential operation operating as a\nresidential treatment center, or an aircraft or other vehicle,\nwithout effective consent and the person:\n(1) had notice that the entry was forbidden; or\n(2) received notice to depart but failed to do so.\n(b) For purposes of this section:\n(1) \"Entry\" means the intrusion of the entire body.\n(2) \"Notice\" means:\n\nPENAL CODE\n(A) oral or written communication by the owner or\nsomeone with apparent authority to act for the owner;\n(B) fencing or other enclosure obviously designed to\nexclude intruders or to contain livestock;\n(C) a sign or signs posted on the property or at the\nentrance to the building, reasonably likely to come to the attention\nof intruders, indicating that entry is forbidden;\n(D) the placement of identifying purple paint marks on\ntrees or posts on the property, provided that the marks are:\n(i) vertical lines of not less than eight inches in\nlength and not less than one inch in width;\n(ii) placed so that the bottom of the mark is not\nless than three feet from the ground or more than five feet from the\nground; and\n(iii) placed at locations that are readily visible\nto any person approaching the property and no more than:\n(a) 100 feet apart on forest land; or\n(b) 1,000 feet apart on land other than forest\nland; or\n(E) the visible presence on the property of a crop\ngrown for human consumption that is under cultivation, in the process\nof being harvested, or marketable if harvested at the time of entry.\n(3) \"Shelter center\" has the meaning assigned by Section\n51.002, Human Resources Code.\n(4) \"Forest land\" means land on which the trees are\npotentially valuable for timber products.\n(5) \"Agricultural land\" has the meaning assigned by Section\n75.001, Civil Practice and Remedies Code.\n(6) \"Superfund site\" means a facility that:\n(A) is on the National Priorities List established\nunder Section 105 of the federal Comprehensive Environmental\nResponse, Compensation, and Liability Act of 1980 (42 U.S.C. Section\n9605); or\n(B) is listed on the state registry established under\nSection 361.181, Health and Safety Code.\n(7) \"Critical infrastructure facility\" means one of the\nfollowing, if completely enclosed by a fence or other physical\nbarrier that is obviously designed to exclude intruders:\n(A) a chemical manufacturing facility;\n(B) a refinery;\n\nPENAL CODE\n(C) an electrical power generating facility,\nsubstation, switching station, electrical control center, or\nelectrical transmission or distribution facility;\n(D) a water intake structure, water treatment facility,\nwastewater treatment plant, or pump station;\n(E) a natural gas transmission compressor station;\n(F) a liquid natural gas terminal or storage facility;\n(G) a telecommunications central switching office;\n(H) a port, railroad switching yard, trucking terminal,\nor other freight transportation facility;\n(I) a gas processing plant, including a plant used in\nthe processing, treatment, or fractionation of natural gas; or\n(J) a transmission facility used by a federally\nlicensed radio or television station.\n(8) \"Protected freshwater area\" has the meaning assigned by\nSection 90.001, Parks and Wildlife Code.\n(9) \"Recognized state\" means another state with which the\nattorney general of this state, with the approval of the governor of\nthis state, negotiated an agreement after determining that the other\nstate:\n(A) has firearm proficiency requirements for peace\nofficers; and\n(B) fully recognizes the right of peace officers\ncommissioned in this state to carry weapons in the other state.\n(10) \"Recreational vehicle park\" has the meaning assigned\nby Section 13.087, Water Code.\n(11) \"Residential land\" means real property improved by a\ndwelling and zoned for or otherwise authorized for single-family or\nmultifamily use.\n(12) \"Institution of higher education\" has the meaning\nassigned by Section 61.003, Education Code.\n(13) \"General residential operation\" has the meaning\nassigned by Section 42.002, Human Resources Code.\n(c) A person may provide notice that firearms are prohibited on\nthe property by posting a sign at each entrance to the property that:\n(1) includes language that is identical to or substantially\nsimilar to the following: \"Pursuant to Section 30.05, Penal Code\n(criminal trespass), a person may not enter this property with a\nfirearm\";\n(2) includes the language described by Subdivision (1) in\n\nPENAL CODE\nboth English and Spanish;\n(3) appears in contrasting colors with block letters at\nleast one inch in height; and\n(4) is displayed in a conspicuous manner clearly visible to\nthe public.\n(d) Subject to Subsection (d-3), an offense under this section\nis:\n(1) a Class B misdemeanor, except as provided by\nSubdivisions (2),\n(3), and (4);\n(2) a Class C misdemeanor, except as provided by\nSubdivisions (3) and (4), if the offense is committed:\n(A) on agricultural land and within 100 feet of the\nboundary of the land; or\n(B) on residential land and within 100 feet of a\nprotected freshwater area;\n(3) a Class A misdemeanor, except as provided by\nSubdivision (4), if:\n(A) the offense is committed:\n(i) in a habitation or a shelter center;\n(ii) on a Superfund site; or\n(iii) on or in a critical infrastructure facility;\n(B) the offense is committed on or in property of an\ninstitution of higher education and it is shown on the trial of the\noffense that the person has previously been convicted of:\n(i) an offense under this section relating to\nentering or remaining on or in property of an institution of higher\neducation; or\n(ii) an offense under Section 51.204(b)(1),\nEducation Code, relating to trespassing on the grounds of an\ninstitution of higher education;\n(C) the person carries a deadly weapon during the\ncommission of the offense; or\n(D) the offense is committed on the property of or\nwithin a general residential operation operating as a residential\ntreatment center; and"
   },
   {
+    "literal": "CRIMINAL TRESPASS WARNING",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CRIMINAL TRESPASS: SMUGGLING OF PERSONS IAT",
     "citation": "30.05(d)(4)",
     "statute": "PC",
@@ -3583,11 +4837,35 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 30.05. CRIMINAL TRESPASS. (a) A person commits an\noffense if the person enters or remains on or in property of another,\nincluding residential land, agricultural land, a recreational vehicle\npark, a building, a general residential operation operating as a\nresidential treatment center, or an aircraft or other vehicle,\nwithout effective consent and the person:\n(1) had notice that the entry was forbidden; or\n(2) received notice to depart but failed to do so.\n(b) For purposes of this section:\n(1) \"Entry\" means the intrusion of the entire body.\n(2) \"Notice\" means:\n\nPENAL CODE\n(A) oral or written communication by the owner or\nsomeone with apparent authority to act for the owner;\n(B) fencing or other enclosure obviously designed to\nexclude intruders or to contain livestock;\n(C) a sign or signs posted on the property or at the\nentrance to the building, reasonably likely to come to the attention\nof intruders, indicating that entry is forbidden;\n(D) the placement of identifying purple paint marks on\ntrees or posts on the property, provided that the marks are:\n(i) vertical lines of not less than eight inches in\nlength and not less than one inch in width;\n(ii) placed so that the bottom of the mark is not\nless than three feet from the ground or more than five feet from the\nground; and\n(iii) placed at locations that are readily visible\nto any person approaching the property and no more than:\n(a) 100 feet apart on forest land; or\n(b) 1,000 feet apart on land other than forest\nland; or\n(E) the visible presence on the property of a crop\ngrown for human consumption that is under cultivation, in the process\nof being harvested, or marketable if harvested at the time of entry.\n(3) \"Shelter center\" has the meaning assigned by Section\n51.002, Human Resources Code.\n(4) \"Forest land\" means land on which the trees are\npotentially valuable for timber products.\n(5) \"Agricultural land\" has the meaning assigned by Section\n75.001, Civil Practice and Remedies Code.\n(6) \"Superfund site\" means a facility that:\n(A) is on the National Priorities List established\nunder Section 105 of the federal Comprehensive Environmental\nResponse, Compensation, and Liability Act of 1980 (42 U.S.C. Section\n9605); or\n(B) is listed on the state registry established under\nSection 361.181, Health and Safety Code.\n(7) \"Critical infrastructure facility\" means one of the\nfollowing, if completely enclosed by a fence or other physical\nbarrier that is obviously designed to exclude intruders:\n(A) a chemical manufacturing facility;\n(B) a refinery;\n\nPENAL CODE\n(C) an electrical power generating facility,\nsubstation, switching station, electrical control center, or\nelectrical transmission or distribution facility;\n(D) a water intake structure, water treatment facility,\nwastewater treatment plant, or pump station;\n(E) a natural gas transmission compressor station;\n(F) a liquid natural gas terminal or storage facility;\n(G) a telecommunications central switching office;\n(H) a port, railroad switching yard, trucking terminal,\nor other freight transportation facility;\n(I) a gas processing plant, including a plant used in\nthe processing, treatment, or fractionation of natural gas; or\n(J) a transmission facility used by a federally\nlicensed radio or television station.\n(8) \"Protected freshwater area\" has the meaning assigned by\nSection 90.001, Parks and Wildlife Code.\n(9) \"Recognized state\" means another state with which the\nattorney general of this state, with the approval of the governor of\nthis state, negotiated an agreement after determining that the other\nstate:\n(A) has firearm proficiency requirements for peace\nofficers; and\n(B) fully recognizes the right of peace officers\ncommissioned in this state to carry weapons in the other state.\n(10) \"Recreational vehicle park\" has the meaning assigned\nby Section 13.087, Water Code.\n(11) \"Residential land\" means real property improved by a\ndwelling and zoned for or otherwise authorized for single-family or\nmultifamily use.\n(12) \"Institution of higher education\" has the meaning\nassigned by Section 61.003, Education Code.\n(13) \"General residential operation\" has the meaning\nassigned by Section 42.002, Human Resources Code.\n(c) A person may provide notice that firearms are prohibited on\nthe property by posting a sign at each entrance to the property that:\n(1) includes language that is identical to or substantially\nsimilar to the following: \"Pursuant to Section 30.05, Penal Code\n(criminal trespass), a person may not enter this property with a\nfirearm\";\n(2) includes the language described by Subdivision (1) in\n\nPENAL CODE\nboth English and Spanish;\n(3) appears in contrasting colors with block letters at\nleast one inch in height; and\n(4) is displayed in a conspicuous manner clearly visible to\nthe public.\n(d) Subject to Subsection (d-3), an offense under this section\nis:\n(1) a Class B misdemeanor, except as provided by\nSubdivisions (2), (3), and\n(4);"
   },
   {
+    "literal": "CRIMINL MISCHF IMPAIR/INTERRUPT PUB SERV",
+    "citation": "PC 28.03(B)(3)(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CRLTY NON-LVSTK:FL PRV/ABDN/TRNSPT/BI/OWK 2 CV",
     "citation": "42.092(c)",
     "statute": "PC",
     "level": "FS",
     "statuteText": "Sec. 42.092. CRUELTY TO NONLIVESTOCK ANIMALS. (a) In this\nsection:\n(1) \"Abandon\" includes abandoning an animal in the person's\ncustody without making reasonable arrangements for assumption of\ncustody by another person.\n(2) \"Animal\" means a domesticated living creature,\nincluding any stray or feral cat or dog, and a wild living creature\npreviously captured. The term does not include an uncaptured wild\nliving creature or a livestock animal.\n(3) \"Cruel manner\" includes a manner that causes or permits\nunjustified or unwarranted pain or suffering.\n(4) \"Custody\" includes responsibility for the health,\nsafety, and welfare of an animal subject to the person's care and\ncontrol, regardless of ownership of the animal.\n(5) \"Depredation\" has the meaning assigned by Section\n71.001, Parks and Wildlife Code.\n(6) \"Livestock animal\" has the meaning assigned by Section\n42.09.\n(7) \"Necessary food, water, care, or shelter\" includes\n\nPENAL CODE\nfood, water, care, or shelter provided to the extent required to\nmaintain the animal in a state of good health.\n(8) \"Torture\" includes any act that causes unjustifiable\npain or suffering.\n(9) \"Trap-Neuter-Return Program\" means a nonlethal\npopulation control practice in which an animal is:\n(A) trapped;\n(B) evaluated by a veterinarian;\n(C) if unvaccinated, vaccinated by a veterinarian;\n(D) if unsterilized, sterilized by a veterinarian;\n(E) marked by a veterinarian, whether by notching or\ntipping one ear or otherwise; and\n(F) returned to the trap location.\n(10) \"Veterinarian\" shall have the same meaning as set\nforth in Section 801.002, Occupations Code.\n(b) A person commits an offense if the person intentionally,\nknowingly, recklessly, or with criminal negligence:\n(1) tortures an animal or in a cruel manner kills or causes\nserious bodily injury to an animal;\n(2) without the owner's effective consent, kills,\nadministers poison to, or causes serious bodily injury to an animal;\n(3) fails unreasonably to provide necessary food, water,\ncare, or shelter for an animal in the person's custody;\n(4) abandons unreasonably an animal in the person's\ncustody;\n(5) transports or confines an animal in a cruel manner;\n(6) without the owner's effective consent, causes bodily\ninjury to an animal;\n(7) causes one animal to fight with another animal, if\neither animal is not a dog;\n(8) uses a live animal as a lure in dog race training or in\ndog coursing on a racetrack; or\n(9) seriously overworks an animal.\n(c) An offense under Subsection"
+  },
+  {
+    "literal": "CROSS RR WITH HEAVY EQUIP WITHOUT NOTICE",
+    "citation": "TRC 545.255 3136",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CROSS RR WITH HVY EQUIP W/O STOP/SAFETY",
+    "citation": "TRC 545.255 3137",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CROSSED FIRE HOSE WITHOUT PERMISSION",
+    "citation": "TRC 545.205 3589",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CROSSING BARRICADE",
@@ -3602,10 +4880,28 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "CROSSING PHYSICAL BARRIER",
+    "citation": "TRC 545.063 3028",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CROSSING WATER BARRICADE - ATTEMPTED (HIGHWATER)",
     "citation": "472.022(d)(2)",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "CRUELTY ANIMAL;FAIL PROV W/2 CONV",
+    "citation": "PC 42.092(c)FS2",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CRUELTY ANIMALS:TORTURE W/2 PRV CNV",
+    "citation": "PC 42.092(c)F3",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CRUELTY NON-LIVESTK ANIM:FIGHT/LURE",
@@ -3643,6 +4939,18 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 42.092. CRUELTY TO NONLIVESTOCK ANIMALS. (a) In this\nsection:\n(1) \"Abandon\" includes abandoning an animal in the person's\ncustody without making reasonable arrangements for assumption of\ncustody by another person.\n(2) \"Animal\" means a domesticated living creature,\nincluding any stray or feral cat or dog, and a wild living creature\npreviously captured. The term does not include an uncaptured wild\nliving creature or a livestock animal.\n(3) \"Cruel manner\" includes a manner that causes or permits\nunjustified or unwarranted pain or suffering.\n(4) \"Custody\" includes responsibility for the health,\nsafety, and welfare of an animal subject to the person's care and\ncontrol, regardless of ownership of the animal.\n(5) \"Depredation\" has the meaning assigned by Section\n71.001, Parks and Wildlife Code.\n(6) \"Livestock animal\" has the meaning assigned by Section\n42.09.\n(7) \"Necessary food, water, care, or shelter\" includes\n\nPENAL CODE\nfood, water, care, or shelter provided to the extent required to\nmaintain the animal in a state of good health.\n(8) \"Torture\" includes any act that causes unjustifiable\npain or suffering.\n(9) \"Trap-Neuter-Return Program\" means a nonlethal\npopulation control practice in which an animal is:\n(A) trapped;\n(B) evaluated by a veterinarian;\n(C) if unvaccinated, vaccinated by a veterinarian;\n(D) if unsterilized, sterilized by a veterinarian;\n(E) marked by a veterinarian, whether by notching or\ntipping one ear or otherwise; and\n(F) returned to the trap location.\n(10) \"Veterinarian\" shall have the same meaning as set\nforth in Section 801.002, Occupations Code.\n(b) A person commits an offense if the person intentionally,\nknowingly, recklessly, or with criminal negligence:\n(1) tortures an animal or in a cruel manner kills or causes\nserious bodily injury to an animal;\n(2) without the owner's effective consent, kills,\nadministers poison to, or causes serious bodily injury to an animal;\n(3) fails unreasonably to provide necessary food, water,\ncare, or shelter for an animal in the person's custody;\n(4) abandons unreasonably an animal in the person's\ncustody;\n(5) transports or confines an animal in a cruel manner;\n(6) without the owner's effective consent, causes bodily\ninjury to an animal;\n(7) causes one animal to fight with another animal, if\neither animal is not a dog;\n(8) uses a live animal as a lure in dog race training or in\ndog coursing on a racetrack; or\n(9) seriously overworks an animal.\n(c) An offense under Subsection"
   },
   {
+    "literal": "CRUELTY TO ANIMALS: FAIL TO PROV",
+    "citation": "PC 42.092(c)MA",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CRUELTY TO ANIMALS: TORTURE",
+    "citation": "PC 42.092(c)FS",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CRUELTY TO LIVESTOCK ANIM N/O W/2 PREV CONV",
     "citation": "42.09(c)",
     "statute": "PC",
@@ -3664,11 +4972,29 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 42.09. CRUELTY TO LIVESTOCK ANIMALS. (a) A person\ncommits an offense if the person intentionally or knowingly:\n(1) tortures a livestock animal;\n(2) fails unreasonably to provide necessary food, water, or\ncare for a livestock animal in the person's custody;\n(3) abandons unreasonably a livestock animal in the\nperson's custody;\n(4) transports or confines a livestock animal in a cruel\nand unusual manner;\n(5) administers poison to a livestock animal, other than\ncattle, horses, sheep, swine, or goats, belonging to another without\nlegal authority or the owner's effective consent;\n(6) causes one livestock animal to fight with another\nlivestock animal or with an animal as defined by Section 42.092;\n(7) uses a live livestock animal as a lure in dog race\ntraining or in dog coursing on a racetrack;\n(8) trips a horse; or\n(9) seriously overworks a livestock animal.\n(b) In this section:\n(1) \"Abandon\" includes abandoning a livestock animal in the\nperson's custody without making reasonable arrangements for\nassumption of custody by another person.\n(2) \"Cruel manner\" includes a manner that causes or\npermits unjustified or unwarranted pain or suffering.\n(3) \"Custody\" includes responsibility for the health,\nsafety, and welfare of a livestock animal subject to the person's\ncare and control, regardless of ownership of the livestock animal.\n(4) \"Depredation\" has the meaning assigned by Section\n\nPENAL CODE\n71.001, Parks and Wildlife Code.\n(5) \"Livestock animal\" means:\n(A) cattle, sheep, swine, goats, ratites, or poultry\ncommonly raised for human consumption;\n(B) a horse, pony, mule, donkey, or hinny;\n(C) native or nonnative hoofstock raised under\nagriculture practices; or\n(D) native or nonnative fowl commonly raised under\nagricultural practices.\n(6) \"Necessary food, water, or care\" includes food, water,\nor care provided to the extent required to maintain the livestock\nanimal in a state of good health.\n(7) \"Torture\" includes any act that causes unjustifiable\npain or suffering.\n(8) \"Trip\" means to use an object to cause a horse to fall\nor lose its balance.\n(c) An offense under Subsection"
   },
   {
+    "literal": "CRUELTY TO LIVESTOCK ANIM W/2 PREV CONV",
+    "citation": "PC 42.09(a)(1,5,6,7)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CRUELTY TO LIVESTOCK ANIMALS",
+    "citation": "PC 42.09(a)(1,5,6,7)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CRUELTY TO LIVESTOCK ANIMALS PHYSICAL ABUSE",
     "citation": "42.09(c)",
     "statute": "PC",
     "level": "FS",
     "statuteText": "Sec. 42.09. CRUELTY TO LIVESTOCK ANIMALS. (a) A person\ncommits an offense if the person intentionally or knowingly:\n(1) tortures a livestock animal;\n(2) fails unreasonably to provide necessary food, water, or\ncare for a livestock animal in the person's custody;\n(3) abandons unreasonably a livestock animal in the\nperson's custody;\n(4) transports or confines a livestock animal in a cruel\nand unusual manner;\n(5) administers poison to a livestock animal, other than\ncattle, horses, sheep, swine, or goats, belonging to another without\nlegal authority or the owner's effective consent;\n(6) causes one livestock animal to fight with another\nlivestock animal or with an animal as defined by Section 42.092;\n(7) uses a live livestock animal as a lure in dog race\ntraining or in dog coursing on a racetrack;\n(8) trips a horse; or\n(9) seriously overworks a livestock animal.\n(b) In this section:\n(1) \"Abandon\" includes abandoning a livestock animal in the\nperson's custody without making reasonable arrangements for\nassumption of custody by another person.\n(2) \"Cruel manner\" includes a manner that causes or\npermits unjustified or unwarranted pain or suffering.\n(3) \"Custody\" includes responsibility for the health,\nsafety, and welfare of a livestock animal subject to the person's\ncare and control, regardless of ownership of the livestock animal.\n(4) \"Depredation\" has the meaning assigned by Section\n\nPENAL CODE\n71.001, Parks and Wildlife Code.\n(5) \"Livestock animal\" means:\n(A) cattle, sheep, swine, goats, ratites, or poultry\ncommonly raised for human consumption;\n(B) a horse, pony, mule, donkey, or hinny;\n(C) native or nonnative hoofstock raised under\nagriculture practices; or\n(D) native or nonnative fowl commonly raised under\nagricultural practices.\n(6) \"Necessary food, water, or care\" includes food, water,\nor care provided to the extent required to maintain the livestock\nanimal in a state of good health.\n(7) \"Torture\" includes any act that causes unjustifiable\npain or suffering.\n(8) \"Trip\" means to use an object to cause a horse to fall\nor lose its balance.\n(c) An offense under Subsection"
+  },
+  {
+    "literal": "CRUELTY TO NONLIVESTOCK ANIMALS",
+    "citation": "42.092 (B)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CULTIV OYSTER MARICLTR VIOL PREV W/IN 5YRS IAT",
@@ -3689,10 +5015,64 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "CURFEW - BUSINESS",
+    "citation": "ORD 8.07.032",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CURFEW - BUSINESS (SUBSEQUENT)",
+    "citation": "ORD 8.07.032S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CURFEW - CHILD",
+    "citation": "ORD 8.07.032(A)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CURFEW - CHILD (SUBSEQUENT)",
+    "citation": "ORD 8.07.032(a)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CURFEW - PARENT",
+    "citation": "ORD 8.07.032(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CURFEW - PARENT (SUBSEQUENT)",
+    "citation": "ORD 8.07.032(b)S",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "CURRENCY EXCHANGE VIOLATION",
     "citation": "153.401",
     "statute": "FNC",
     "level": "F3"
+  },
+  {
+    "literal": "CUT ACROSS DRIVEWAY TO MAKE TURN",
+    "citation": "TRC 545.423 3081",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CUT CORNER LEFT TURN",
+    "citation": "TRC 545.101 3013",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "CUT IN AFTER PASSING",
+    "citation": "TRC 545.053 3092",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "CUTTING ACROSS MEDIAN",
@@ -3718,12 +5098,6 @@ export const CJIS_CODES: Offense[] = [
     "citation": "12.017(b)",
     "statute": "PWC",
     "level": "MB"
-  },
-  {
-    "literal": "DAMAGE PROPERTY CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
   },
   {
     "literal": "DAMAGE/DESTROY CRITICAL INFRASTRUCTURE",
@@ -3758,10 +5132,10 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
-    "literal": "DANGEROUS DRUGS CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "DANGEROUS DRUG ACT OFFENSE",
+    "citation": "TRC 521.342(A)(3) 3243",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DC - FIGHTING",
@@ -3826,10 +5200,34 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 46.10. DEADLY WEAPON IN PENAL INSTITUTION. (a) A person\ncommits an offense if, while confined in a penal institution, he\nintentionally, knowingly, or recklessly:\n(1) carries on or about his person a deadly weapon; or\n(2) possesses or conceals a deadly weapon in the penal\ninstitution.\n(b) It is an affirmative defense to prosecution under this\nsection that at the time of the offense the actor was engaged in\nconduct authorized by an employee of the penal institution.\n(c) A person who is subject to prosecution under both this\nsection and another section under this chapter may be prosecuted\nunder either section.\n(d) An offense under this section is a felony of the third\ndegree.\n\nPENAL CODE\nAdded by"
   },
   {
+    "literal": "DEALERS LICENSE VIOLATION",
+    "citation": "TRC 503.068 3655",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DEATH BY NATURAL CAUSES  INFORM ONLY",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DEATH INVESTIGATION",
+    "citation": "DEATH.I",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DECAL PARKING",
     "citation": "10.04.036(a)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "DECEPT BUSIN PRACT W/PREV CONV/INTEN/K/R",
+    "citation": "PC 32.42(c)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DECEPT BUSIN PRACT W/PREV CONV/INTEN/KNOW/RECK",
@@ -3870,6 +5268,72 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "DEFECTIVE BRAKES ON TRAILER",
+    "citation": "TRC 547.401 213E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DEFECTIVE EQUIPMENT",
+    "citation": "TRC 547.406 3213",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DEFECTIVE EXHAUST EMISSION SYSTEM",
+    "citation": "TRC 547.605 3229",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DEFECTIVE HEAD LAMP (MOTORCYCLE)",
+    "citation": "TRC 547.801 3162",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DEFECTIVE HEAD LAMPS",
+    "citation": "TRC 547.321 3162A",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DEFECTIVE PARKING LAMP(S)",
+    "citation": "TRC 547.383 3174",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DEFECTIVE SAFETY GLAZING MATERIAL",
+    "citation": "TRC 547.608 3234",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DEFECTIVE STOP LAMP(S)",
+    "citation": "TRC 547.323 3170",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DEFECTIVE TAIL LAMP(S)",
+    "citation": "TRC 547.322 3167",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DEFECTIVE TURN SIGNAL LAMP(S)",
+    "citation": "TRC 547.324 3172",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DEFECTIVE WINDSHIELD WIPER",
+    "citation": "TRC 547.603 3233",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DEFRAUDING VETERAN AND STATE",
     "citation": "161.403",
     "statute": "NRC",
@@ -3882,6 +5346,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "DEL ALCOHOL AWAY FROM LIC PERMISE",
+    "citation": "ABC 22.03",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DEL CS/MARIJ TO MINOR",
     "citation": "481.122(c)",
     "statute": "HSC",
@@ -3892,6 +5362,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "481.140(a)",
     "statute": "HSC",
     "level": "F1"
+  },
+  {
+    "literal": "DEL CS/MARIJ TO MINOR W/USE OF CHILD",
+    "citation": "HSC 481.14(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DEL DRUG PARAPHERNALIA",
@@ -3942,10 +5418,46 @@ export const CJIS_CODES: Offense[] = [
     "level": "F1"
   },
   {
+    "literal": "DEL MARIJ >1/4 OZ<=5LBS",
+    "citation": "HSC 481.120(b)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DEL MARIJ >2,000LBS",
+    "citation": "HSC 481.120(b)(6)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DEL MARIJ >50LBS<=2,000LBS",
+    "citation": "HSC 481.120(b)(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DEL MARIJ >5LBS<=50LBS",
+    "citation": "HSC 481.120(b)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DEL MARIJ >5LBS<=50LBS USE CHILD 481.120",
     "citation": "481.140(a)",
     "statute": "HSC",
     "level": "F1"
+  },
+  {
+    "literal": "DEL MARIJ W/USE OF CHILD",
+    "citation": "HSC 481.14(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DEL MARJ 1/4OZ<5LB DFZ IAT",
+    "citation": "HSC 481.134(d)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DEL MARJ 1/4OZ<5LB DFZ IAT 481.120",
@@ -3960,16 +5472,34 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "DEL MARJ <1/4OZ DFZ IAT",
+    "citation": "HSC 481.134(f)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DEL MARJ <1/4OZ DFZ IAT 481.120",
     "citation": "481.134(f)",
     "statute": "HSC",
     "level": "MA"
   },
   {
+    "literal": "DEL MARJ <1/4OZ REMUNERATION DFZ IAT",
+    "citation": "HSC 481.134(e)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DEL MARJ <1/4OZ REMUNERATION DFZ IAT 481.120",
     "citation": "481.134(e)",
     "statute": "HSC",
     "level": "FS"
+  },
+  {
+    "literal": "DEL OFFER  DEL OF DANGEROUS DRUG",
+    "citation": "HSC 483.042",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DEL PRESERVATION KEY TO BALLOT BOX NO 3",
@@ -4128,10 +5658,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "F2"
   },
   {
+    "literal": "DEPOSITED GLASS/OTHER DEBRIS ON HIGHWAY",
+    "citation": "TRC 600.001 3376",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DESECRATION OF CEMETERY",
     "citation": "711.0311",
     "statute": "HSC",
     "level": "F3"
+  },
+  {
+    "literal": "DESERTER",
+    "citation": "",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DESTROY/INTERFERE/SABOTAGE UTILITY FACIL/EQUIP",
@@ -4171,10 +5713,34 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "DETENTION HEARING STATUS OFF/NON OFF",
+    "citation": "FC 54.011",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DETENTION WITHOUT ARREST",
+    "citation": "1.05",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DID NOT USE DESIGNATED LANE OR DIRECTION",
+    "citation": "TRC 545.064 3126",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DIETITIANS REGULATIONS",
     "citation": "701.451",
     "statute": "OC",
     "level": "MB"
+  },
+  {
+    "literal": "DIRECT ACTIVITIES OF STREET GANG",
+    "citation": "PC 71.023",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DIRECT ACTIVITIES STRT GANG/FOREIGN TERROR ORG",
@@ -4196,6 +5762,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "DIRECTIVE TO APPREHEND (JUVENILE)",
+    "citation": "25.07J",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DIRECTOR FAIL TO FILE FINANCIAL STATEMENT",
     "citation": "7201.056(c)",
     "statute": "SLC",
@@ -4208,10 +5780,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "DISCARD RUFUSE IN CNTY PARKS W/PREV CONV",
+    "citation": "HSC 365.033(e)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DISCARD RUFUSE IN COUNTY PARKS W/PREV CONVIC",
     "citation": "365.033(e)",
     "statute": "HSC",
     "level": "MA"
+  },
+  {
+    "literal": "DISCHARGE FIREARM IN CERTAIN MUNICIP",
+    "citation": "PC 42.12(B)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DISCHARGE FIREARM IN CERTAIN MUNICIPALITIES",
@@ -4225,6 +5809,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "143.023(a)",
     "statute": "PWC",
     "level": "MB"
+  },
+  {
+    "literal": "DISCHARGE OF CHEM WASTE-PUBLIC WATERS",
+    "citation": "ORD 11.02.123(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISCHARGE OF CHEMI WASTE-SEWAGE SYS-SUB",
+    "citation": "ORD 11.02.123(a)S",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DISCHARGE OF CHEMICAL WASTE - PUBLIC WATERS",
@@ -4243,6 +5839,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "11.02.123(a)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "DISCHARGE OF CHEMICAL WASTE-SEWAGE SYS",
+    "citation": "ORD 11.02.123(A)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DISCL/DISPL/DISTR/USE UNMANNED AIRCRAFT IMAGE",
@@ -4304,6 +5906,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "171.361",
     "statute": "TC",
     "level": "M*"
+  },
+  {
+    "literal": "DISCLOSE OF INTEREST IN PROPERTY",
+    "citation": "GC 553.002",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DISCLOSE UNANNOUNCED INSPECTION",
@@ -4384,6 +5992,78 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "DISORDERLY COND DISCHARGE FIREARM",
+    "citation": "PC 42.01(A)(9)(10)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISORDERLY CONDUCT +3 PRIORS",
+    "citation": "PC 12.43(c)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISORDERLY CONDUCT - ABUSIVE LANGUAGE",
+    "citation": "PC 42.01(A)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISORDERLY CONDUCT - AFFRAY",
+    "citation": "PC 42.01(A)(6)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISORDERLY CONDUCT - ASSAULT",
+    "citation": "PC 42.01(A)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISORDERLY CONDUCT - GESTURE",
+    "citation": "PC 42.01(a)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISORDERLY CONDUCT - INDECENT EXPOSURE",
+    "citation": "PC 42.01(A)(12)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISORDERLY CONDUCT - LOUD MUSIC/NOISE",
+    "citation": "PC 42.01(a)(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISORDERLY CONDUCT - PEEPING TOM",
+    "citation": "PC 42.01(A)(8)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISORDERLY CONDUCT - RUDELY DISPLAY GUN",
+    "citation": "PC 42.01(A)(10)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISORDERLY CONDUCT - WINDOW PEEPING",
+    "citation": "PC 42.01(a)(7)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISORDERLY CONDUCT -NOXIOUS ODOR",
+    "citation": "PC 42.01(a)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DISORDERLY CONDUCT DISCHARGE/DISPLAY FIREARM",
     "citation": "42.01(d)",
     "statute": "PC",
@@ -4422,6 +6102,30 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "DISPENSE DANGEROUS DRUG/CONTROLLED SUB",
+    "citation": "HSC 142.03",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISPLAY ALTERED DRIVER'S LICENSE",
+    "citation": "TRC 521.451 3140",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISPLAY DL/ID ISSUED TO ANOTHER",
+    "citation": "TRC 521.451 3142",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISPLAY FICTITIOUS DRIVER LICENSE",
+    "citation": "TRC 521.451 3265",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DISPLAY FICTITIOUS LICENSE PLATE",
     "citation": "504.945(e)",
     "statute": "TRC",
@@ -4432,6 +6136,36 @@ export const CJIS_CODES: Offense[] = [
     "citation": "502.475(d)",
     "statute": "TRC",
     "level": "MB"
+  },
+  {
+    "literal": "DISPLAY SUSPENDED CHAUFFEUR LICENSE",
+    "citation": "TRC 521.241 3269",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISPLAY SUSPENDED COMMERCIAL LICENSE",
+    "citation": "TRC 521.241 3268",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISPLAY SUSPENDED OPERATOR LICENSE",
+    "citation": "TRC 521.241 3267",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISPLAY UNCLEAN OR OBSCURED LIC PLTS",
+    "citation": "TRC 502.409 3658",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISPLAY traf SIGN/SIGNAL W/ADVERTISING",
+    "citation": "TRC 544.006 3354",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DISPO/PROV FALSE INFO/STMT TO METAL RECYCLER",
@@ -4456,6 +6190,36 @@ export const CJIS_CODES: Offense[] = [
     "citation": "43.155",
     "statute": "PWC",
     "level": "MB"
+  },
+  {
+    "literal": "DISPOSE SEC PROP W/INTEN AP>=$100<$750",
+    "citation": "PC 32.33(e)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISPOSE SEC PROP W/INTEN AP>=$150K<$300K",
+    "citation": "PC 32.33(e)(6)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISPOSE SEC PROP W/INTEN AP>=$2,500<$30K",
+    "citation": "PC 32.33(e)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISPOSE SEC PROP W/INTEN AP>=$30K<$150K",
+    "citation": "PC 32.33(e)(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISPOSE SEC PROP W/INTEN AP>=$750<$2,500",
+    "citation": "PC 32.33(e)(3)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DISPOSE SEC PROP W/INTENT APPROP >=$100<$750",
@@ -4512,11 +6276,125 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "DISREG FLASH RED SIG (AT STOP SIGN, ETR)",
+    "citation": "TRC 544.008 3067",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISREG OFFICIAL TRAFFIC CONTROL DEV",
+    "citation": "TRC 544.004 3059",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISREGARD BARRICADE",
+    "citation": "31",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISREGARD FLASHING YELLOW SIGNAL",
+    "citation": "TRC 544.008 3008",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISREGARD LANE CONTROL SIGNAL",
+    "citation": "TRC 544.009 3069",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISREGARD NO LANE CHANGE SIGN",
+    "citation": "TRC 545.060 3071",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISREGARD PEDESTRIAN CONTROL SIGNAL",
+    "citation": "TRC 552.002 3582",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISREGARD POLICE OFFICER",
+    "citation": "TRC 542.501 3121",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISREGARD SCHOOL CROSSING GUARD",
+    "citation": "ORD 10.06.002",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISREGARD SOLE GREEN TURN SIGNAL ARROW",
+    "citation": "TRC 544.007 3581",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISREGARD YELLOW TRAFFIC SIGNAL",
+    "citation": "ORD 10.02.005",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISREGARDED RR CROSSING GATE OR FLAGMAN",
+    "citation": "TRC 545.251 3073",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISREGARDED SIGNAL AT RR CROSSING",
+    "citation": "TRC 545.251 3072",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISREGARDED TURN MARKS AT INTERSECTION",
+    "citation": "TRC 545.101 3078",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISREGARDED WARNING SIGN AT CONSTRUCT",
+    "citation": "TRC 541.304 3065",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISRUPT MEETING OR PROCESSION",
+    "citation": "PC 42.05",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DISRUPTING MEETING OR PROCESSION",
     "citation": "42.05(b)",
     "statute": "PC",
     "level": "MB",
     "statuteText": "Sec. 42.05. DISRUPTING MEETING OR PROCESSION. (a) A person\ncommits an offense if, with intent to prevent or disrupt a lawful\nmeeting, procession, or gathering, whether in person or virtual, the\nperson obstructs or interferes with the meeting, procession, or\ngathering by:\n(1) physical action;\n(2) verbal utterance; or\n(3) electronic disturbance, including hacking, of any\nvirtual component of the meeting, procession, or gathering.\n(b) An offense under this section is a Class B misdemeanor."
+  },
+  {
+    "literal": "DISRUPTION OF CLASS",
+    "citation": "EDC 37.124",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISRUPTION OF TRANSPORTATION",
+    "citation": "EDC 37.126",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DISRUPTIVE ACTIVITIES",
+    "citation": "EDC 37.123",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DISRUPTIVE ACTIVITIES PRIVATE/PUBLIC SCHOOL",
@@ -4549,6 +6427,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "DISTRIBUTION OF E CIGS, TOBACCO TO MINOR",
+    "citation": "HSC 161.087",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DIVERSION CS PROPERTY OR PLANT",
+    "citation": "HSC 481.131(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DIVERSION OF CS PROPERTY OR PLANT",
     "citation": "481.131(a)",
     "statute": "HSC",
@@ -4579,6 +6469,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "FS"
   },
   {
+    "literal": "DOG FIGHT OWNS/TRAIN DOG IN FIGHT/SPECT",
+    "citation": "PC 42.10(a)(4)(5)(6)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DOG FIGHT: OWNS/POSS DOG FIGHT EQUIP",
+    "citation": "PC 42.10(a)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DOG FIGHT: OWNS/POSS DOG FIGHTING EQUIPMENT",
     "citation": "42.10(e)",
     "statute": "PC",
@@ -4591,6 +6493,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 42.10. DOG FIGHTING. (a) A person commits an offense if\nthe person intentionally or knowingly:\n(1) causes a dog to fight with another dog;\n(2) participates in the earnings of or operates a facility\nused for dog fighting;\n(3) uses or permits another to use any real estate,\nbuilding, room, tent, arena, or other property for dog fighting;\n(4) owns or possesses dog-fighting equipment with the\nintent that the equipment be used to train a dog for dog fighting or\nin furtherance of dog fighting;\n(5) owns or trains a dog with the intent that the dog be\nused in an exhibition of dog fighting; or\n(6) attends as a spectator an exhibition of dog fighting.\n(b) In this section:\n(1) \"Dog fighting\" means any situation in which one dog\nattacks or fights with another dog.\n\nPENAL CODE\n(2) \"Dog-fighting equipment\" has the meaning assigned by\nArticle 18.18(g), Code of Criminal Procedure.\n(c) A conviction under Subsection (a)(2) or (3) may be had upon\nthe uncorroborated testimony of a party to the offense.\n(d) It is a defense to prosecution under Subsection (a)(1) that\nthe actor caused a dog to fight with another dog to protect\nlivestock, other property, or a person from the other dog, and for no\nother purpose.\n(e) An offense under Subsection"
+  },
+  {
+    "literal": "DOG FIGHT: PART IN EARNINGS/PROVIDE BLDG",
+    "citation": "PC 42.10(a)(1)(2)(3)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DOG FIGHT: PARTICIP IN EARNINGS/ PROVIDE BLDG",
@@ -4606,10 +6514,46 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "DPS WARRANT ARREST",
+    "citation": "CCP 15.16DPS",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DRAFT BEER DISPENSER SIGN REQUIRED",
     "citation": "104.04",
     "statute": "ABC",
     "level": "M*"
+  },
+  {
+    "literal": "DRAWBAR OVER 15 FEET",
+    "citation": "TRC 545.409 3196",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DRIVE LEFT OF CENTER",
+    "citation": "46",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DRIVE OF BOAT <13",
+    "citation": "TPW 31.106(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DRIVE WHILE LICENSE INVALID",
+    "citation": "TRC 521.457 3101",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DRIVE WHILE LICENSE INVALID ENH",
+    "citation": "TRC 521.457 3101A",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DRIVER LICENSE/ID FALSE",
@@ -4618,10 +6562,52 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "DRIVER OPENED DOOR IN MOVING TRAFFIC",
+    "citation": "TRC 545.418 3321",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DRIVER'S LICENSE - EXPIRED",
     "citation": "521.025",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "DRIVER'S LICENSE - FAIL TO CHANGE ADDRES",
+    "citation": "TRC 521.054(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DRIVER'S LICENSE - FAIL TO CHANGE NAME",
+    "citation": "TRC 521.054(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DRIVER'S LICENSE - FAIL TO DISPLAY",
+    "citation": "TRC 521.025(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DRIVER'S LICENSE - FAIL TO DISPLAY (2ND)",
+    "citation": "TRC 521.025(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DRIVER'S LICENSE - FAIL TO DISPLAY (3RD+",
+    "citation": "TRC 521.025(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DRIVER'S LICENSE - IN TEXAS MORE THAN 90",
+    "citation": "TRC 521.029",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DRIVER'S LICENSE - NO",
@@ -4690,6 +6676,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "DRIVING ON A SIDEWALK",
+    "citation": "ORD 10.01.018",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DRIVING ON IMPROVED SHOULDER",
+    "citation": "TRC 545.058 3124",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DRIVING ON LEFT",
     "citation": "545.051",
     "statute": "TC",
@@ -4714,10 +6712,34 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "DRIVING THRU PARADE, EVENT, OR FUNERAL",
+    "citation": "ORD 10.05.003",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DRIVING UNDER INFLUENCE ALCOHOL MINOR 3RD-ENH",
     "citation": "106.041",
     "statute": "ABC",
     "level": "M*"
+  },
+  {
+    "literal": "DRIVING UNDER INFLUENCE MINOR 3RD-ENH",
+    "citation": "ABC 106.041",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DRIVING UNDER THE INFLUENCE",
+    "citation": "ABC 106.041C",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DRIVING UNDER THE INFLUENCE OF DRUGS",
+    "citation": "TRC 521.342 3043",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DRIVING W/LIC INV W/PREV CONV/SUSP/W/O FIN RES",
@@ -4730,6 +6752,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "521.457(f-2)",
     "statute": "TRC",
     "level": "MA"
+  },
+  {
+    "literal": "DRIVING WHILE INTOX/OPEN ALCH CONTAINER",
+    "citation": "PC 49.04(C)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DRIVING WHILE INTOXICATED",
@@ -4746,6 +6774,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 49.09. ENHANCED OFFENSES AND PENALTIES.\n(a) Except as\nprovided by Subsection"
   },
   {
+    "literal": "DRIVING WHILE INTOXICATED 3RD OR MORE",
+    "citation": "PC 49.09(B)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DRIVING WHILE INTOXICATED 3RD OR MORE IAT",
     "citation": "49.09(b)",
     "statute": "PC",
@@ -4760,11 +6794,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 49.04. DRIVING WHILE INTOXICATED. (a) A person commits\nan offense if the person is intoxicated while operating a motor\nvehicle in a public place.\n(b) Except as provided by Subsections (c),\n(d), and"
   },
   {
+    "literal": "DRIVING WHILE INTOXICATED W/CHILD < 15",
+    "citation": "PC 49.045(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DRIVING WHILE INTOXICATED W/CHILD UNDER 15 YOA",
     "citation": "49.045(b)",
     "statute": "PC",
     "level": "FS",
     "statuteText": "Sec. 49.045. DRIVING WHILE INTOXICATED WITH CHILD PASSENGER.\n(a) A person commits an offense if:\n(1) the person is intoxicated while operating a motor\nvehicle in a public place; and\n\nPENAL CODE\n(2) the vehicle being operated by the person is occupied by\na passenger who is younger than 15 years of age.\n(b) An offense under this section is a state jail felony.\nAdded by"
+  },
+  {
+    "literal": "DRIVING WHILE INTOXICATED-UNDER 21",
+    "citation": "TRC 521.342(A)(1) 3242",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DRIVING WHILE INTOXICATED/OPEN ALCH CONTAINER",
@@ -4774,10 +6820,100 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 49.04. DRIVING WHILE INTOXICATED. (a) A person commits\nan offense if the person is intoxicated while operating a motor\nvehicle in a public place.\n(b) Except as provided by Subsections\n(c),"
   },
   {
+    "literal": "DRIVING WHILE LICENSE DISQUALIFIED-CMV",
+    "citation": "TRC 522.071 3347",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DRIVING WHILE LICENSE INVALID",
     "citation": "521.457(a)(2)",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "DROVE CENTER LANE (NOT PASS/NOT TRN LFT)",
+    "citation": "TRC 545.060 3089",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DROVE INTO BLOCK FIRE ENGINE STOPPED",
+    "citation": "TRC 545.407 3590",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DROVE ON SIDEWALK",
+    "citation": "TRC 545.422 3315",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DROVE ON STREETRCAR TRACKS WHERE PROHIB",
+    "citation": "TRC 545.203 3129",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DROVE ON WRONG SIDE OF DIVIDED HIGHWAY",
+    "citation": "TRC 545.063 3088",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DROVE ON WRONG SIDE OF ROAD/BRIDGE",
+    "citation": "TRC 545.056 015A",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DROVE ON WRONG SIDE-RR CROSSING",
+    "citation": "TRC 545.056 3585",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DROVE ONTO CONTR ACC HIGHWAY W/ PROH",
+    "citation": "TRC 545.060 3127",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DROVE THROUGH SAFETY ZONE",
+    "citation": "TRC 545.403 3066",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DROVE TO LEFT OF ROTARY TRAFFIC ISLAND",
+    "citation": "TRC 545.059 3087",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DROVE WITHOUT LIGHTS (WHEN REQUIRED)",
+    "citation": "TRC 547.302 3198",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DROVE WRONG WAY IN DESIGNATED LANE",
+    "citation": "TRC 545.060 3090",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DROVE WRONG WAY ON ONE-WAY ROADWAY",
+    "citation": "TRC 545.059 3016",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DRUG OFFENSE",
+    "citation": "TRC 521.372 3240",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DRV DISQ/COMM VIOL FIN RESP ACCDNT SBI/DTH IAT",
@@ -4792,6 +6928,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "DUMPING",
+    "citation": "ORD 7.02.062",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "DUMPING - ILLEGAL BURN",
     "citation": "10.05.003",
     "statute": "CO",
@@ -4802,6 +6944,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "7.02.062",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "DUMPING - SUBSEQUENT",
+    "citation": "ORD 7.02.062S",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "DUMPING LITTER IN WATER",
@@ -4850,6 +6998,24 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 49.09. ENHANCED OFFENSES AND PENALTIES. (a) Except as\nprovided by Subsection\n(b), an offense under Section 49.04, 49.05,\n49.06, or 49.065 is a Class A misdemeanor, with a minimum term of\nconfinement of 30 days, if it is shown on the trial of the offense\nthat the person has previously been convicted one time of an offense\nrelating to the operating of a motor vehicle while intoxicated, an\noffense of operating an aircraft while intoxicated, an offense of\noperating a watercraft while intoxicated, or an offense of operating\nor assembling an amusement ride while intoxicated."
   },
   {
+    "literal": "DWI W/PREVIOUS INTOX MANSLAUGHTER CNV",
+    "citation": "PC 49.09(B)(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DWLS BOND FORFEITURE",
+    "citation": "TRC 521.347 3148",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "DWLS/SR",
+    "citation": "TRC 601.371 3102",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ELECTION FRAUD",
     "citation": "276.013(b)",
     "statute": "EC",
@@ -4872,12 +7038,6 @@ export const CJIS_CODES: Offense[] = [
     "citation": "276.013(b)(1)",
     "statute": "EC",
     "level": "FS"
-  },
-  {
-    "literal": "ELECTION LAW VIOL CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
   },
   {
     "literal": "ELECTR DATA TAMPER FRAUD/HARM >=$100<$750 IAT",
@@ -4971,10 +7131,34 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 33.023. ELECTRONIC DATA TAMPERING. (a) In this section,\n\"ransomware\" means a computer contaminant or lock that restricts\n\nPENAL CODE\naccess by an unauthorized person to a computer, computer system, or\ncomputer network or any data in a computer, computer system, or\ncomputer network under circumstances in which a person demands money,\nproperty, or a service to remove the computer contaminant or lock,\nrestore access to the computer, computer system, computer network, or\ndata, or otherwise remediate the impact of the computer contaminant\nor lock.\n(b) A person commits an offense if the person intentionally\nalters data as it transmits between two computers in a computer\nnetwork or computer system through deception and without a legitimate\nbusiness purpose.\n(c) A person commits an offense if the person intentionally\nintroduces ransomware onto a computer, computer network, or computer\nsystem through deception and without a legitimate business purpose.\n(d) Subject to Subsections (d-1) and (d-2), an offense under\nthis section is a Class C misdemeanor.\n(d-1) Subject to Subsection (d-2), if it is shown on the trial\nof the offense that the defendant acted with the intent to defraud or\nharm another, an offense under this section is:\n(1) a Class C misdemeanor if the aggregate amount involved\nis less than $100 or cannot be determined;\n(2) a Class B misdemeanor if the aggregate amount involved\nis $100 or more but less than $750;\n(3) a Class A misdemeanor if the aggregate amount involved\nis $750 or more but less than $2,500;\n(4) a state jail felony if the aggregate amount involved is\n$2,500 or more but less than $30,000;\n(5) a felony of the third degree if the aggregate amount\ninvolved is $30,000 or more but less than $150,000;\n(6) a felony of the second degree if the aggregate amount\ninvolved is $150,000 or more but less than $300,000; and\n(7) a felony of the first degree if the aggregate amount\ninvolved is $300,000 or more.\n(d-2) If it is shown on the trial of the offense that the\ndefendant knowingly restricted a victim's access to privileged\ninformation, an offense under this section is:\n(1) a state jail felony if the value of the aggregate\namount involved is less than $2,500;\n(2) a felony of the third degree if:\n(A) the value of the aggregate amount involved is\n\nPENAL CODE\n$2,500 or more but less than $30,000; or\n(B) a client or patient of a victim suffered harm\nattributable to the offense;"
   },
   {
+    "literal": "ELECTRICAL - CONCEAL WORK PRIOR/INSPECT",
+    "citation": "ORD 4.04.187(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ELECTRICAL - CONCEALED WORK PRIOR/INSPECTION (SUB)",
     "citation": "4.04.187(b)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "ELECTRICAL - CONCL WK PRIOR/INSP SUB",
+    "citation": "ORD 4.04.187(b)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ELECTRICAL - FAIL TO PROVIDE MASTER INFO",
+    "citation": "ORD 4.04.183(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ELECTRICAL - FAIL TO PROVIDE PROOF INSUR",
+    "citation": "ORD 4.04.183(D)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ELECTRICAL - FAIL TO PROVIDE PROOF OF INSURANCE",
@@ -4993,6 +7177,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "4.04.188(b)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "ELECTRICAL - NO FINAL INSPECTION SUB",
+    "citation": "ORD 4.04.188(b)(1)S",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ELECTRICAL - NO PERMIT",
@@ -5019,6 +7209,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "ELECTRICAL - NO ROUGH-IN INSPECTION SUB",
+    "citation": "ORD 4.04.188(b)(2)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ELECTRICAL - REGISTRATION REQUIRED",
+    "citation": "ORD 4.04.183(A)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ELECTRICAL CONCEALED WORK PRIOR/INSPECTION",
     "citation": "9.03.006(b)",
     "statute": "CO",
@@ -5038,16 +7240,22 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 33.022. ELECTRONIC ACCESS INTERFERENCE. (a) A person,\nother than a network provider or online service provider acting for a\nlegitimate business purpose, commits an offense if the person\nintentionally interrupts or suspends access to a computer system or\ncomputer network without the effective consent of the owner.\n(b) An offense under this section is a third degree felony."
   },
   {
+    "literal": "ELECTRONIC DATA TAMPERING",
+    "citation": "33.023",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ELECTRONIC MONITORING OF RESIDENTS ROOM",
     "citation": "242.841",
     "statute": "HSC",
     "level": "MB"
   },
   {
-    "literal": "EMBEZZLEMENT CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "ELECTRONIC TRANSMISSION OF CERTAIN VISUAL MAT. DEPICT MINOR",
+    "citation": "43.261",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "EMERG RESPONSE PROVIDER LIC EMPLOYER/PROV VIOL",
@@ -5116,6 +7324,24 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "EMERGENCY VEHICLE - FTSLOW 20 MPH",
+    "citation": "TRC 545.157(a)(2)(A)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "EMERGENCY VEHICLE - FTSLOW 5 MPH",
+    "citation": "TRC 545.157(a)(2)(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "EMERGENCY VEHICLE - VACATE CLOSEST LANE",
+    "citation": "TRC 545.157(b)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "EMERGENCY VEHICLE FAIL TO SLOW 20MPH (HWY)",
     "citation": "545.157(a)(2)(A)",
     "statute": "TC",
@@ -5160,6 +7386,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "EMPLOY UNLICENSED COMMERCIAL DRIVER",
+    "citation": "TRC 521.459 3355",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "EMPLOYED AT PAWN SHOP W/O EMPLOYEE LICENSE",
     "citation": "371.304(b)",
     "statute": "FNC",
@@ -5188,6 +7420,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "68.021(b)",
     "statute": "PWC",
     "level": "MB"
+  },
+  {
+    "literal": "ENDORSEMENT VIOLATION ON CDL",
+    "citation": "TRC 522.041 3305",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ENFORCE COMMITMENT TO TREATMENT FACILITY",
@@ -5316,11 +7554,29 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "ENTER/REMAIN ON CAMPUS AFTER WITHDRWL",
+    "citation": "EDC 51.239",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ENTICING A CHILD",
+    "citation": "PC 25.04(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ENTICING A CHILD AWAY FROM CUSTODIAN",
     "citation": "25.04(b)",
     "statute": "PC",
     "level": "MB",
     "statuteText": "Sec. 25.04. ENTICING A CHILD. (a) A person commits an offense\nif, with the intent to interfere with the lawful custody of a child\nyounger than 18 years, he knowingly entices, persuades, or takes the\nchild from the custody of the parent or guardian or person standing\nin the stead of the parent or guardian of such child.\n(b) An offense under this section is a Class B misdemeanor,\nunless it is shown on the trial of the offense that the actor\nintended to commit a felony against the child, in which event an\noffense under this section is a felony of the third degree."
+  },
+  {
+    "literal": "ENTICING A CHILD W/INT FELONY",
+    "citation": "PC 25.04(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ENTICING CHILD AWAY FRM CUSTODIAN W/INT FELONY",
@@ -5330,11 +7586,29 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 25.04. ENTICING A CHILD. (a) A person commits an offense\nif, with the intent to interfere with the lawful custody of a child\nyounger than 18 years, he knowingly entices, persuades, or takes the\nchild from the custody of the parent or guardian or person standing\nin the stead of the parent or guardian of such child.\n(b) An offense under this section is a Class B misdemeanor,\nunless it is shown on the trial of the offense that the actor\nintended to commit a felony against the child, in which event an\noffense under this section is a felony of the third degree."
   },
   {
+    "literal": "ESCAPE CAUSE BODILY INJ",
+    "citation": "PC 38.06(d)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ESCAPE CAUSE SBI/THREAT OF DEADLY WEAPON",
+    "citation": "PC 38.06(e)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ESCAPE FROM CUSTODY",
     "citation": "38.06(a)",
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 38.06. ESCAPE.\n(a) A person commits an offense if the\nperson escapes from custody when the person is:"
+  },
+  {
+    "literal": "ESCAPE WHILE ARRESTED/CONFINED FELONY",
+    "citation": "PC 38.06(C)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ESCAPE WHILE ARRESTED/CONFINED- FELONY",
@@ -5370,6 +7644,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "EVAD ARR DET W/VEH/WTRCFT W/PRV CNV/SBI",
+    "citation": "PC 38.04(B)(2)(A,B)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "EVADE ARR DET W/VEH/WTRCFT W/PREV CONV OR SBI",
     "citation": "38.04(b)(2)(A,B)",
     "statute": "PC",
@@ -5398,6 +7678,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 38.04. EVADING ARREST OR DETENTION. (a) A person commits\nan offense if he intentionally flees from a person he knows is a\npeace officer or federal special investigator attempting lawfully to\n\nPENAL CODE\narrest or detain him.\nText of subsection as amended by"
   },
   {
+    "literal": "EVADING ARREST DET USE TIRE DEFL DEV/SBI",
+    "citation": "PC 38.04(b)(3)(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "EVADING ARREST DET W/PREV CONVICTION",
     "citation": "38.04(b)(1)",
     "statute": "PC",
@@ -5410,6 +7696,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 38.04. EVADING ARREST OR DETENTION. (a) A person commits\nan offense if he intentionally flees from a person he knows is a\npeace officer or federal special investigator attempting lawfully to\n\nPENAL CODE\narrest or detain him.\nText of subsection as amended by"
+  },
+  {
+    "literal": "EVADING ARREST DET W/VEH OR WATERCRAFT",
+    "citation": "PC 38.04(B)(1)(B)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "EVADING ARREST DET: SMUGGLING OF PERSONS IAT",
@@ -5447,6 +7739,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 38.04. EVADING ARREST OR DETENTION. (a) A person commits\nan offense if he intentionally flees from a person he knows is a\npeace officer or federal special investigator attempting lawfully to\n\nPENAL CODE\narrest or detain him.\nText of subsection as amended by"
   },
   {
+    "literal": "EVADING ARST DET TIRE DEFLA DEV AGST OFF",
+    "citation": "PC 38.04(b)(2)(C)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "EVD/RESIST APP/TRANSP PRTECT CUST/TEMP DET ORD",
     "citation": "81.212(c)",
     "statute": "HSC",
@@ -5457,6 +7755,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "6.411(d)",
     "statute": "TC",
     "level": "MA"
+  },
+  {
+    "literal": "EXCESSIVE ACCELERATION",
+    "citation": "TRC 545.420 (A)5 3311",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "EXCESSIVE SPEED",
+    "citation": "TPW 31.095",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "EXHAUST DEFECTIVE",
@@ -5495,6 +7805,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "EXHIBITION OF ACCELERATION",
+    "citation": "ORD 10.03.002",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "EXHIBITION, USE OR THREAT OF USE OF FIREARMS",
+    "citation": "EDC 37.125",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "EXOTIC SPECIES RULES VIOLATION",
     "citation": "134.023(b)",
     "statute": "AGC",
@@ -5525,23 +7847,35 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "EXPIRED CHAUFFEURS LICENSE",
+    "citation": "TRC 522.051 3261",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "EXPIRED HANDICAP PLACARD",
+    "citation": "TRC 681.011 (M)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "EXPIRED MOTOR VEHICLE INSPECTION",
+    "citation": "TRC 548.051 3205",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "EXPIRED REGISTRATION",
+    "citation": "TRC 502.407 3656",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "EXPLOITATION OF CHILD/ELDERLY/DISABLED",
     "citation": "32.53(c)",
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 32.53. EXPLOITATION OF CHILD, ELDERLY INDIVIDUAL, OR\nDISABLED INDIVIDUAL. (a) In this section:\n(1) \"Child,\" \"elderly individual,\" and \"disabled\nindividual\" have the meanings assigned by Section 22.04.\n(2) \"Exploitation\" means the illegal or improper use of a\nchild, elderly individual, or disabled individual or of the resources\nof a child, elderly individual, or disabled individual for monetary\nor personal benefit, profit, or gain.\n(b) A person commits an offense if the person intentionally,\nknowingly, or recklessly causes the exploitation of a child, elderly\nindividual, or disabled individual.\n(c) An offense under this section is a felony of the third\ndegree."
-  },
-  {
-    "literal": "EXPLOTATION/ENTICEMENT CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
-  },
-  {
-    "literal": "EXTORTION CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
   },
   {
     "literal": "FAIL ASSIST W/ASSEMBLY OF CATTLE TB W/PREV IAT",
@@ -5556,10 +7890,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "F2"
   },
   {
+    "literal": "FAIL DEL CERT OF TITLE AT TIME OF SALE",
+    "citation": "TRC 520.022 3659",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FAIL DISCL BENFT SLCTD PATNT GOVT EMP/PREV IAT",
     "citation": "102.006(c)",
     "statute": "OC",
     "level": "F3"
+  },
+  {
+    "literal": "FAIL GET TXCDL 30 DAYS OF RES IN STATE",
+    "citation": "TRC 522.015 3303",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FAIL GIVE NOTICE OBTAIN SANIT/ENVIRO PERMIT",
@@ -5623,6 +7969,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "FAIL PROVIDE NOT OF DEATH RESIDNT/INSTIT",
+    "citation": "PC 38.19",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FAIL PROVIDE NOTICE OF DEATH RESIDENT/INSTITUT",
     "citation": "38.19",
     "statute": "PC",
@@ -5683,6 +8035,24 @@ export const CJIS_CODES: Offense[] = [
     "citation": "203.020(c)",
     "statute": "HRC",
     "level": "FS"
+  },
+  {
+    "literal": "FAIL SIG INT TURN TRC545.104A",
+    "citation": "TRC 545.104 3097",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL SIG LANE CHAN TRC545.106",
+    "citation": "TRC 545.104 3096",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL STOP PROPER PLACE (FLASH RED SIGNL)",
+    "citation": "TRC 544.008 3068",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FAIL STOP/REPORT SEX ASSLT/AGG SEX ASSLT CHILD",
@@ -5771,6 +8141,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "FAIL TO CONTROL SPEED",
+    "citation": "TRC 545.351(A)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FAIL TO CONTROL SPEED (OBJECT)",
     "citation": "545.351(a)",
     "statute": "TC",
@@ -5841,6 +8217,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "643.059",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "FAIL TO DISPLAY DRIVER'S LICENSE",
+    "citation": "TRC 521.025 3263",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO DISPLAY LICENSE RECEIPTS-CMV",
+    "citation": "TRC 502.121 3660",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FAIL TO DISTRIBUTE/DELIVER ELECTION SUPPLIES",
@@ -5915,11 +8303,23 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "FAIL TO ID FUGITIVE FRM JUST REFUSE GIVE",
+    "citation": "PC 38.02(d)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FAIL TO ID FUGITIVE FRM JUSTICE REFUSE TO GIVE",
     "citation": "38.02(d)(1)",
     "statute": "PC",
     "level": "MB",
     "statuteText": "Sec. 38.02. FAILURE TO IDENTIFY. (a) A person commits an\noffense if he intentionally refuses to give his name, residence\n\nPENAL CODE\naddress, or date of birth to a peace officer who has lawfully\narrested the person and requested the information.\n(b) A person commits an offense if he intentionally gives a\nfalse or fictitious name, residence address, or date of birth to a\npeace officer who has:\n(1) lawfully arrested the person;\n(2) lawfully detained the person; or\n(3) requested the information from a person that the peace\nofficer has good cause to believe is a witness to a criminal offense.\n(b-1) A person commits an offense if the person:\n(1) is an operator of a motor vehicle, as defined by\nSection 32.34, who is lawfully detained by a peace officer for an\nalleged violation of a law;\n(2) fails to provide or display the person's driver's\nlicense on the officer's request for the license; and\n(3) intentionally refuses to give the person's name,\ndriver's license number, residence address, or date of birth to the\npeace officer on the officer's request for that information.\n(b-2) For purposes of Subsection (b-1)(3), giving a peace\nofficer a residence address that is different from the address\nassociated with the person's driver's license does not constitute a\nrefusal to give the person's residence address in violation of that\nprovision if the address given to the officer is the person's actual\nresidence address.\n(c) Except as provided by Subsections\n(d) and (d-1), an offense\nunder this section is:\n(1) a Class C misdemeanor if the offense is committed under\nSubsection"
+  },
+  {
+    "literal": "FAIL TO ID FUGITIVE INT GIVE FALSE INFO",
+    "citation": "PC 38.02(D)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FAIL TO ID FUGITIVE INTENT GIVE FALSE INFO",
@@ -5929,11 +8329,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 38.02. FAILURE TO IDENTIFY. (a) A person commits an\noffense if he intentionally refuses to give his name, residence\n\nPENAL CODE\naddress, or date of birth to a peace officer who has lawfully\narrested the person and requested the information.\n(b) A person commits an offense if he intentionally gives a\nfalse or fictitious name, residence address, or date of birth to a\npeace officer who has:\n(1) lawfully arrested the person;\n(2) lawfully detained the person; or\n(3) requested the information from a person that the peace\nofficer has good cause to believe is a witness to a criminal offense.\n(b-1) A person commits an offense if the person:\n(1) is an operator of a motor vehicle, as defined by\nSection 32.34, who is lawfully detained by a peace officer for an\nalleged violation of a law;\n(2) fails to provide or display the person's driver's\nlicense on the officer's request for the license; and\n(3) intentionally refuses to give the person's name,\ndriver's license number, residence address, or date of birth to the\npeace officer on the officer's request for that information.\n(b-2) For purposes of Subsection (b-1)(3), giving a peace\nofficer a residence address that is different from the address\nassociated with the person's driver's license does not constitute a\nrefusal to give the person's residence address in violation of that\nprovision if the address given to the officer is the person's actual\nresidence address.\n(c) Except as provided by Subsections\n(d) and (d-1), an offense\nunder this section is:\n(1) a Class C misdemeanor if the offense is committed under\nSubsection (a) or (b-1); or\n(2) a Class B misdemeanor if the offense is committed under\nSubsection"
   },
   {
+    "literal": "FAIL TO IDENTIFY",
+    "citation": "38.02",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FAIL TO IDENTIFY (REFUSED TO GIVE INFO)",
     "citation": "38.02(a)",
     "statute": "PC",
     "level": "MC",
     "statuteText": "Sec. 38.02. FAILURE TO IDENTIFY.\n(a) A person commits an\noffense if he intentionally refuses to give his name, residence\n\nPENAL CODE\naddress, or date of birth to a peace officer who has lawfully\narrested the person and requested the information."
+  },
+  {
+    "literal": "FAIL TO IDENTIFY GIVING FALSE/FICT INFO",
+    "citation": "PC 38.02(C)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FAIL TO IDENTIFY GIVING FALSE/FICTITIOUS INFO",
@@ -5943,10 +8355,28 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 38.02. FAILURE TO IDENTIFY. (a) A person commits an\noffense if he intentionally refuses to give his name, residence\n\nPENAL CODE\naddress, or date of birth to a peace officer who has lawfully\narrested the person and requested the information.\n(b) A person commits an offense if he intentionally gives a\nfalse or fictitious name, residence address, or date of birth to a\npeace officer who has:\n(1) lawfully arrested the person;\n(2) lawfully detained the person; or\n(3) requested the information from a person that the peace\nofficer has good cause to believe is a witness to a criminal offense.\n(b-1) A person commits an offense if the person:\n(1) is an operator of a motor vehicle, as defined by\nSection 32.34, who is lawfully detained by a peace officer for an\nalleged violation of a law;\n(2) fails to provide or display the person's driver's\nlicense on the officer's request for the license; and\n(3) intentionally refuses to give the person's name,\ndriver's license number, residence address, or date of birth to the\npeace officer on the officer's request for that information.\n(b-2) For purposes of Subsection (b-1)(3), giving a peace\nofficer a residence address that is different from the address\nassociated with the person's driver's license does not constitute a\nrefusal to give the person's residence address in violation of that\nprovision if the address given to the officer is the person's actual\nresidence address.\n(c) Except as provided by Subsections (d) and (d-1), an offense\nunder this section is:\n(1) a Class C misdemeanor if the offense is committed under\nSubsection (a) or (b-1); or\n(2) a Class B misdemeanor if the offense is committed under\nSubsection"
   },
   {
+    "literal": "FAIL TO KEEP BIKE ON RIGHT SIDE OF ROAD",
+    "citation": "TRC 551.103 3503",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO KEEP RECORDS BY DIST LICENSEE",
+    "citation": "ABC 64.04",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FAIL TO KEEP RECORDS BY DISTRIBUTOR LICENSEE",
     "citation": "64.04",
     "statute": "ABC",
     "level": "M*"
+  },
+  {
+    "literal": "FAIL TO KEEP RECORDS BY MANUF LICENSEE",
+    "citation": "ABC 62.05",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FAIL TO KEEP RECORDS BY MANUFACTURE LICENSEE",
@@ -5985,6 +8415,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "FAIL TO MAINTAIN DANGE DRUG RECORDS ENH",
+    "citation": "HSC 483.049(a)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FAIL TO MAINTAIN DANGEROUS DRUG RECORDS",
     "citation": "483.049(a)",
     "statute": "HSC",
@@ -5997,10 +8433,34 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "FAIL TO MAINTAIN FIN RESP. 2ND OFFENSE",
+    "citation": "TRC 601.191 3025",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO MAINTAIN FIN RESP. 3RD OFFENSE",
+    "citation": "TRC 601.191 3025A",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO MAINTAIN FIN RESP. 4TH OFFENSE",
+    "citation": "TRC 601.191 3025B",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FAIL TO MAINTAIN FINAN REC OR PREP ANNUAL RPT",
     "citation": "22.354",
     "statute": "BOC",
     "level": "MB"
+  },
+  {
+    "literal": "FAIL TO MAINTAIN FINANCIAL RESPONSIBILIT",
+    "citation": "TRC 601.191 3049",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FAIL TO MAINTAIN OIL/GAS CARGO MANIFEST RCRD",
@@ -6013,6 +8473,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "792.002",
     "statute": "HSC",
     "level": "MB"
+  },
+  {
+    "literal": "FAIL TO MAKE WRITTEN REP ACCIDENT TO DPS",
+    "citation": "TRC 550.061 3331",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FAIL TO MONITOR/REPORT PERP RETURN",
@@ -6075,6 +8541,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "FAIL TO PRESENT NEW MTR NUMBER RECEPT",
+    "citation": "TRC 520.013 3661",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FAIL TO PRODUCE REC TO COMPT >= $20 < $200",
     "citation": "151.7075(d)(2)",
     "statute": "TC",
@@ -6123,6 +8595,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "FAIL TO REDUCE/SHIFT LOAD",
+    "citation": "TRC 621.007 3720",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FAIL TO RELEASE LIEN TO VEHICLE",
     "citation": "501.115",
     "statute": "TC",
@@ -6159,6 +8637,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "FAIL TO REMOVE INJURIOUS MATERIAL-HWY",
+    "citation": "TRC 600.001 3356",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FAIL TO REMOVE MATERIAL FROM HIGHWAY",
     "citation": "600.001",
     "statute": "TC",
@@ -6177,16 +8661,40 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "FAIL TO REPORT ABUSE/NEGL ELDERLY/DISBL",
+    "citation": "HRC 48.052",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FAIL TO REPORT ABUSE/NEGLECT ELDERLY/DISABLED",
     "citation": "48.052(a)",
     "statute": "HRC",
     "level": "MA"
   },
   {
+    "literal": "FAIL TO REPORT ACCIDENT S/R LAW",
+    "citation": "TRC 601.004 3286",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FAIL TO REPORT ACCIDENTS",
     "citation": "601.004",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "FAIL TO REPORT AGG SEXUAL ASSLT OF CHILD",
+    "citation": "PC 38.17",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO REPORT CHANGE OF ADDRESS",
+    "citation": "TRC 521.054 3264",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FAIL TO REPORT COMMUNICABLE DISEASES",
@@ -6214,11 +8722,23 @@ export const CJIS_CODES: Offense[] = [
     "level": "FS"
   },
   {
+    "literal": "FAIL TO REPORT FELONY W/SBI OR DEATH",
+    "citation": "PC 38.171",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FAIL TO REPORT FELONY W/SBI OR DEATH RESULTS",
     "citation": "38.171(b)",
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 38.171. FAILURE TO REPORT FELONY. (a) A person commits\nan offense if the person:\n(1) observes the commission of a felony under circumstances\nin which a reasonable person would believe that an offense had been\ncommitted in which serious bodily injury or death may have resulted;\nand\n(2) fails to immediately report the commission of the\noffense to a peace officer or law enforcement agency under\ncircumstances in which:\n(A) a reasonable person would believe that the\ncommission of the offense had not been reported; and\n(B) the person could immediately report the commission\nof the offense without placing himself or herself in danger of\nsuffering serious bodily injury or death.\n(b) An offense under this section is a Class A misdemeanor.\nAdded by"
+  },
+  {
+    "literal": "FAIL TO REPORT INJURY ACCIDENT",
+    "citation": "TRC 550.026 3330",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FAIL TO REPORT TDC INMATE DEATH",
@@ -6227,10 +8747,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "FAIL TO REPORT:ABUSE/NEG ELD/DIS ST FAC",
+    "citation": "HRC 48.052(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FAIL TO REPORT:ABUSE/NEGLECT ELD/DIS STATE FAC",
     "citation": "48.052(a)",
     "statute": "HRC",
     "level": "FS"
+  },
+  {
+    "literal": "FAIL TO RETAIN PRESCRIPT-PHARMACIST ENH",
+    "citation": "HSC 483.046(a)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FAIL TO RETAIN PRESCRIPTION-PHARMACIST",
@@ -6243,6 +8775,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "483.046(a)",
     "statute": "HSC",
     "level": "MA"
+  },
+  {
+    "literal": "FAIL TO RPRT:ABUSE/NEGL CHILD ST FACIL",
+    "citation": "FC 261.109(b) FS",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FAIL TO RPRT:ABUSE/NEGLECT CHILD ST FACIL IAT",
@@ -6269,6 +8807,102 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "FAIL TO SIGNAL FROM PARKED POSITION",
+    "citation": "TRC 545.104",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO SIGNAL TURN",
+    "citation": "77",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO SPAY OR NEUTER DOG/CAT",
+    "citation": "ORD 3.01.012",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO STOP AND GIVE INFO - ATTENDED < $200",
+    "citation": "550.022",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO STOP AND GIVE INFO - ATTENDED >=$200",
+    "citation": "TRC 550.022  3319A",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO STOP AND GIVE INFO - UNATTENDED VEH <$200",
+    "citation": "TRC 550.024 3272",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO STOP AND GIVE INFO - UNATTENDED VEH >=$200",
+    "citation": "TRC 550.024 3272A",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO STOP AND GIVE INFO -FIXED OBJECT <$200",
+    "citation": "TRC 550.025 3273",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO STOP AND GIVE INFO -FIXED OBJECT >=$200",
+    "citation": "TRC 550.025 3273",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO STOP AT PROPER PLACE (TRAF LGHT)",
+    "citation": "TRC 544.007 3063",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO STOP FOR SCHL BUS (REMAIN STOP)",
+    "citation": "TRC 545.066 3021",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO STOP FOR SCHL BUS SUB WI 5 YRS",
+    "citation": "TRC 545.066",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO STOP PROPER PLACE (NOT INTER)",
+    "citation": "TRC 544.007 3064",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO STOP-DESIGNATED PNT (YIELD SIGN)",
+    "citation": "TRC 544.010 3061",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO SURR CERT OF TITLE-VEH JUNKED",
+    "citation": "TRC 501.091 3662",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO SURRENDER LIC PLTS AND/OR DL",
+    "citation": "TRC 601.373 3332",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FAIL TO SURRENDER PRIVATE INV/SECURITY REGIST",
     "citation": "1702.387",
     "statute": "OC",
@@ -6281,10 +8915,172 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "FAIL TO YIELD TO PED AT SIGNAL INTER",
+    "citation": "TRC 544.007 3114",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAIL TO YIELD TO PED CRSWLK (NO SIGNALS)",
+    "citation": "TRC 522.003 116A",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FAIL/REFUSE AG TO INVESTIGATE",
     "citation": "12.156(b)",
     "statute": "BOC",
     "level": "MB"
+  },
+  {
+    "literal": "FAILED PASS RIGHT SAFE/IMPROPER PASSING",
+    "citation": "TRC 545.057 3022",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO DIM HEADLIGHTS - FOLLOWING",
+    "citation": "TRC 547.333 3156",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO DIM HEADLIGHTS - MEETING",
+    "citation": "TRC 547.333 3155",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO DRIVE IN A SINGLE LANE",
+    "citation": "TRC 545.060 3070",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO GIVE ONE-HALF OF ROADWAY",
+    "citation": "TRC 545.052 3085",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO KEEP TO RIGHT OF MOUNTAIN ROAD",
+    "citation": "TRC 545.405 3139",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO PASS MET VEHICLE TO RIGHT",
+    "citation": "TRC 545.052 3086",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO SIGNAL LANE CHANGE",
+    "citation": "TRC 545.104 3084",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO SIGNAL-FOR STOP",
+    "citation": "TRC 545.105 3098",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO SOUND HORN-MOUNTAIN ROAD",
+    "citation": "TRC 545.405 3113",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO STOP (ALLEY, DRIVEWAY, BLD)",
+    "citation": "TRC 545.256 3138",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO STOP AT DESIG PNT (STOP SIGN)",
+    "citation": "TRC 544.010 3060",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO STOP AT MARKED RR CROSSING",
+    "citation": "TRC 545.252 3074",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO STOP FOR APPROACHING TRAIN",
+    "citation": "TRC 545.254 3131",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO STOP FOR STREETRCAR",
+    "citation": "TRC 545.202 3095",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO USE DUE CARE FOR PEDESTRIAN",
+    "citation": "TRC 552.008 3117",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO USE PROPER HEADLIGHT BEAM",
+    "citation": "TRC 547.333 3154",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO YIELD AT STOP INTERSECTION",
+    "citation": "TRC 545.151 3052A",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO YIELD AT YIELD INTERSECTION",
+    "citation": "TRC 545.151 3053",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO YIELD RIGHT OF WAY",
+    "citation": "TRC 545.151 3005C",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO YIELD ROW AT OPEN INTERSECTION",
+    "citation": "TRC 545.151 3054",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO YIELD ROW TO EMERGENCY VEHICLE",
+    "citation": "TRC 545.156 3057",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO YIELD ROW TURNING LEFT",
+    "citation": "TRC 545.152 3055",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO YIELD TO PED ON SIDEWALK",
+    "citation": "TRC 552.006 3115",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FAILED TO YIELD TO PEDS IN CROSSWALK",
+    "citation": "TRC 552.003 3116",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FAILING TO PAY EMPLOYEE WAGES",
@@ -6341,6 +9137,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "FAILURE TO REPORT SEIZURE BY PEACE OFF.",
+    "citation": "ABC 103.05(e)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FAILURE TO REPORT SEIZURE BY PEACE OFFICER",
     "citation": "103.05(e)",
     "statute": "ABC",
@@ -6394,6 +9196,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "53.085(d)",
     "statute": "PRC",
     "level": "M*"
+  },
+  {
+    "literal": "FALSE AFFIDAVIT-FELONY",
+    "citation": "TRC 521.454 3271",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FALSE ALARM OR REPORT",
@@ -6452,6 +9260,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "FALSE DRUG TEST FALSIFICATION DEVICE",
+    "citation": "HSC 481.133(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FALSE DRUG TEST MAN/DEL SUBST/DEVICE",
+    "citation": "HSC 481.133(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FALSE ENTRY IN CREDIT UNION RECORDS",
     "citation": "122.254(1)",
     "statute": "FNC",
@@ -6462,6 +9282,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "151.7102",
     "statute": "TC",
     "level": "F3"
+  },
+  {
+    "literal": "FALSE HOLD ONESELF OUT AS A LAWYER",
+    "citation": "PC 38.122",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FALSE ID AS POLICE OFFICER",
@@ -6537,6 +9363,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "F*"
   },
   {
+    "literal": "FALSE REPORT POLICE OFF/SP INV/LEO EMPL",
+    "citation": "PC 37.08",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FALSE REPORT SEX HARR/ASSAULT/DATE VIOL/STALK",
     "citation": "51.255(b)",
     "statute": "EDC",
@@ -6576,16 +9408,34 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "FALSE RPT CHILD CARE/FAM HOME COMPL ENH",
+    "citation": "HRC 42.0447(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FALSE RPT CHILD CARE/FAM HOME COMPL W/PREV IAT",
     "citation": "42.0447(b)",
     "statute": "HRC",
     "level": "FS"
   },
   {
+    "literal": "FALSE RPT CHILD CARE/FAM HOME COMPLNC",
+    "citation": "HRC 42.0447(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FALSE SPECIMEN PARENTAL DNA TEST",
     "citation": "160.512(b)",
     "statute": "FC",
     "level": "F3"
+  },
+  {
+    "literal": "FALSE STATE TO TX CO AND DIST RETIRE SYS",
+    "citation": "GC 841.101",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FALSE STATEMENT ANNUAL FINANCIAL",
@@ -6625,10 +9475,70 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "FALSE STATEMENT ON ALCOHOL BEV.  LICENSE",
+    "citation": "ABC 101.69",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FALSE STATEMENT ON ALCOHOL BEVERAGE LICENSE",
     "citation": "101.69",
     "statute": "ABC",
     "level": "F*"
+  },
+  {
+    "literal": "FALSE STATEMENT ON CDL APP OR CERT",
+    "citation": "TRC 522.021 3304",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FALSE STATEMENT ON DL APPLICATION",
+    "citation": "TRC 521.451 3109",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FALSE STATEMENT ON DL/ID APPLICATION",
+    "citation": "TRC 521.451 3145",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FALSE STATEMENT ON LOTTERY",
+    "citation": "GC 466.312(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FALSE STATEMENT PROP/CREDIT >=$100<$750",
+    "citation": "PC 32.32(c)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FALSE STATEMENT PROP/CREDIT >=$30K<$150K",
+    "citation": "PC 32.32(C)(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FALSE STATEMENT PROP/CREDIT>=$150K<$300K",
+    "citation": "PC 32.32(c)(6)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FALSE STATEMENT PROP/CREDIT>=$2,500<$30K",
+    "citation": "PC 32.32(C)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FALSE STATEMENT PROP/CREDIT>=$750<$2,500",
+    "citation": "PC 32.32(c)(3)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FALSE STATEMENT PROPERTY/CREDIT >=$100<$750",
@@ -6679,6 +9589,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "F*"
   },
   {
+    "literal": "FALSE STATEMENT RETAIL DEALERS LICENSE",
+    "citation": "ABC 61.71(a)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FALSE STATEMENT RETAIL DIST LICS",
+    "citation": "ABC 61.74(a)(11)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FALSE STATEMENT RETAIL DISTRIBUTOR LICENSE",
     "citation": "61.74(a)(11)",
     "statute": "ABC",
@@ -6713,6 +9635,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "841.101(a)",
     "statute": "GC",
     "level": "M*"
+  },
+  {
+    "literal": "FALSE STATEMENT W/OPER  REGISTRY ADOPT",
+    "citation": "FC 162.421(g)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FALSE STATEMENT W/OPERATING REGISTRY ADOPTION",
@@ -6782,6 +9710,24 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "FALSE STMT CHILD CUSTODY FOREIGN COUNTRY",
+    "citation": "PC 37.14(c)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FALSE SWEARING DL APPLICATION",
+    "citation": "TRC 521.454 3036",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FALSE/CONVERT RECS TEACHER RET SYSTEM",
+    "citation": "GC 821.101(a-b)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FALSE/DECEP STATEMENT CONCERN EMS STAFF/EQUIP",
     "citation": "773.064(b)",
     "statute": "HSC",
@@ -6813,10 +9759,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
-    "literal": "FAMILY OFFENSES CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "FAMILY VIOLENCE INFORMATION",
+    "citation": "71.004",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FARM LICENSE VIOLATION",
+    "citation": "TRC 502.163 3663",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FATALITY ACCIDENT INVESTIGATION",
+    "citation": "",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FEE ON DELIVERY OF CERTAIN PETROLEUM PRODUCTS",
@@ -6843,6 +9801,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "F2"
   },
   {
+    "literal": "FELONY-USE OF CMV",
+    "citation": "TRC 522.081 3344",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FELONY-USE OF CMV-CONTROLLED SUBSTANCE",
+    "citation": "TRC 522.081 3346",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FEMALE GENITAL MUTILATION PROH UNDER 18YR",
     "citation": "167.001(b)",
     "statute": "HSC",
@@ -6853,6 +9823,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "1.05.011",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "FENCE - SOLID OPAQUE REQUIRED",
+    "citation": "ORD CH 12 A 504(B)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FENCE SOLID OPAQUE REQUIRED",
@@ -6871,6 +9847,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "CH 12 A 509(B)(3)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "FICTITIOUS DRIVER LICENSE IN POSSESSION",
+    "citation": "TRC 521.451 3266",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FICTITIOUS LP/REGISTRATION/SI",
+    "citation": "TRC 502.409 3149",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FILE FALSE CORP DOCUMENT W/SECRETARY OF STATE",
@@ -6987,6 +9975,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 32.55. FINANCIAL ABUSE OF ELDERLY INDIVIDUAL. (a) In\nthis section:\n(1) \"Elderly individual\" has the meaning assigned by\nSection 22.04.\n(2) \"Financial abuse\" means the wrongful taking,\nappropriation, obtaining, retention, or use of, or assisting in the\nwrongful taking, appropriation, obtaining, retention, or use of,\nmoney or other property of another person by any means, including by\nexerting undue influence. The term includes financial exploitation.\n(3) \"Financial exploitation\" means the wrongful taking,\nappropriation, obtaining, retention, or use of money or other\nproperty of another person by a person who has a relationship of\nconfidence or trust with the other person. Financial exploitation\nmay involve coercion, manipulation, threats, intimidation,\nmisrepresentation, or the exerting of undue influence. The term\nincludes:\n(A) the breach of a fiduciary relationship, including\nthe misuse of a durable power of attorney or the abuse of\nguardianship powers, that results in the unauthorized appropriation,\nsale, or transfer of another person's property;\n(B) the unauthorized taking of personal assets;\n(C) the misappropriation, misuse, or unauthorized\ntransfer of another person's money from a personal or a joint\naccount; and\n(D) the knowing or intentional failure to effectively\nuse another person's income and assets for the necessities required\n\nPENAL CODE\nfor the person's support and maintenance.\n(b) For purposes of Subsection (a)(3), a person has a\nrelationship of confidence or trust with another person if the\nperson:\n(1) is a parent, spouse, adult child, or other relative by\nblood or marriage of the other person;\n(2) is a joint tenant or tenant in common with the other\nperson;\n(3) has a legal or fiduciary relationship with the other\nperson;\n(4) is a financial planner or investment professional who\nprovides services to the other person; or\n(5) is a paid or unpaid caregiver of the other person.\n(c) A person commits an offense if the person knowingly engages\nin the financial abuse of an elderly individual.\n(d) An offense under this section is:\n(1) a Class B misdemeanor if the value of the property\ntaken, appropriated, obtained, retained, or used is less than $100;\n(2) a Class A misdemeanor if the value of the property\ntaken, appropriated, obtained, retained, or used is $100 or more but\nless than $750;\n(3) a state jail felony if the value of the property taken,\nappropriated, obtained, retained, or used is $750 or more but less\nthan $2,500;"
   },
   {
+    "literal": "FINANCIAL ABUSE OF ELDERLY INDIVIDUAL",
+    "citation": "PC 32.55",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FINANCIAL SERVICES REGULATIONS",
     "citation": "901.602(b)",
     "statute": "OC",
@@ -7005,10 +9999,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "FIRE CODE - ABATEMENT OF ELECTRICAL HAZ",
+    "citation": "IFC 605.1",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FIRE CODE - CHANGE OF USE OR OCCUPANCY",
     "citation": "603.2",
     "statute": "IFC",
     "level": "MC"
+  },
+  {
+    "literal": "FIRE CODE - COMBUST MATERL IN EQUI RM",
+    "citation": "IFC 315.2.3",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FIRE CODE - COMBUSTIBLE MATERIAL IN EQUIPMENT ROOM",
@@ -7023,10 +10029,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "FIRE CODE - COOKING DEVICE-OPEN FLAME",
+    "citation": "IFC 308.1.4",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FIRE CODE - DELIBERATE/NEGLIGENT BURNING",
     "citation": "308.1.4",
     "statute": "IFC",
     "level": "MC"
+  },
+  {
+    "literal": "FIRE CODE - DOORS FREE OF OBSTRUCT SUB",
+    "citation": "IFC 1030.3S",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FIRE CODE - DOORS FREE OF OBSTRUCTIONS",
@@ -7039,6 +10057,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "1032.3",
     "statute": "IFC",
     "level": "MC"
+  },
+  {
+    "literal": "FIRE CODE - EXIT DOOR LOCKED/BLOCKED SUB",
+    "citation": "IFC 1030.2S",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FIRE CODE - EXIT DOORS LOCKED/BLOCKED",
@@ -7065,10 +10089,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "FIRE CODE - FAIL TO INSTALL FIRE HYDRANT",
+    "citation": "IFC 507.5.1",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FIRE CODE - FAIL TO INSTALL FIRE HYDRANT SYSTEM",
     "citation": "901.6",
     "statute": "IFC",
     "level": "MC"
+  },
+  {
+    "literal": "FIRE CODE - FAIL TO MAINTAIN FIRE RESIST",
+    "citation": "IFC 703.2",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FIRE CODE - FAIL TO MAINTAIN FIRE RESISTANCE",
@@ -7101,10 +10137,52 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "FIRE CODE - FIXTURES & DISPLAYS",
+    "citation": "IFC 314.2",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FIRE CODE - FIXTURES & DISPLAYS SUB",
+    "citation": "IFC 314.2S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FIRE CODE - FT INSPECT, TEST, MAINTAIN",
+    "citation": "IFC 901.6(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FIRE CODE - FT INSPECT, TST, MAINT SUB",
+    "citation": "IFC 901.6(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FIRE CODE - FT PROVIDE PROT HOOD SUB",
+    "citation": "IFC 609.2S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FIRE CODE - FT PROVIDE PROTECTED HOOD",
+    "citation": "IFC 609.2",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FIRE CODE - GASOLINE IN UNAPPROVED CONTAINERS",
     "citation": "314.2",
     "statute": "IFC",
     "level": "MC"
+  },
+  {
+    "literal": "FIRE CODE - IMPROPER ADDRESS IDENTI",
+    "citation": "IFC 505.1",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FIRE CODE - IMPROPER ADDRESS IDENTIFICATION",
@@ -7131,6 +10209,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "FIRE CODE - OCCUP PROH BEFORE APP SUBS",
+    "citation": "IFC 105.3.3S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FIRE CODE - OCCUPANCY PROH BEFORE APP",
+    "citation": "IFC 105.3.3",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FIRE CODE - OCCUPANCY PROHIBITED BEFORE APPROVAL",
     "citation": "307.1.1",
     "statute": "IFC",
@@ -7155,10 +10245,28 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "FIRE CODE - OVERCROWDING SUBSEQUENT",
+    "citation": "IFC 107.6S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FIRE CODE - PANIC & FIRE EXIT HARDWARE",
+    "citation": "IFC 1008.1.10",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FIRE CODE - PANIC & FIRE EXIT HARDWARE (SUB)",
     "citation": "10.10.2.9",
     "statute": "IFC",
     "level": "MC"
+  },
+  {
+    "literal": "FIRE CODE - PANIC & FIRE EXIT HDWARE SUB",
+    "citation": "IFC 1008.1.10S",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FIRE CODE - PRODUCING COMBUSTIBLE DUST",
@@ -7173,6 +10281,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "FIRE CODE - REMOVAL/TAMP W/FIRE EQUIP",
+    "citation": "IFC 901.8",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FIRE CODE - REMOVAL/TAMPERING W/FIRE EQUIPMENT",
     "citation": "311.3",
     "statute": "IFC",
@@ -7183,6 +10297,24 @@ export const CJIS_CODES: Offense[] = [
     "citation": "901.8",
     "statute": "IFC",
     "level": "MC"
+  },
+  {
+    "literal": "FIRE CODE - REMVL/TAMP W/FIRE EQUIP SUBS",
+    "citation": "IFC 901.8S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FIRE CODE - RENDERING EQUIP INOPERABLE",
+    "citation": "IFC 107.4",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FIRE CODE - RENDERING EQUIPMENT INOP SUB",
+    "citation": "IFC 107.4S",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FIRE CODE - RENDERING EQUIPMENT INOPERABLE",
@@ -7197,6 +10329,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "FIRE CODE - REPAIR GARAGE/MTR FUEL-DIS",
+    "citation": "IFC 105.6.39",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FIRE CODE - REPAIR GARAGES/MOTOR FUEL-DISPENSING FACILITY",
     "citation": "105.5.33",
     "statute": "IFC",
@@ -7209,10 +10347,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "FIRE CODE - SMOKE ALARMS",
+    "citation": "IFC 4603.7",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FIRE CODE - SMOKE ALARMS (SUB)",
     "citation": "N/A",
     "statute": "N/A",
     "level": "MC"
+  },
+  {
+    "literal": "FIRE CODE - SMOKE ALARMS SUBSEQUENT",
+    "citation": "IFC 4603.7S",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FIRE CODE - SPRAYING/DIPPING W/O PERMIT",
@@ -7233,6 +10383,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "FIRE CODE - THROW/PLACE SOURCES OF IGNIT",
+    "citation": "IFC 308.1.2",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FIRE CODE - THROWING OR PLACING SOURCES OF IGNITION",
     "citation": "308.1.2",
     "statute": "IFC",
@@ -7243,6 +10399,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "3405.4",
     "statute": "IFC",
     "level": "MC"
+  },
+  {
+    "literal": "FIRE CODE - UNAPPROVED COND  ELECTL EQU",
+    "citation": "IFC 605.6",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FIRE CODE - UNAPPROVED CONDITIONS OF ELECTRICAL EQUIP",
@@ -7269,6 +10431,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "FIRE CODE - VIOL SPRAY-FINISHING OP",
+    "citation": "IFC 1504.1",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FIRE CODE - VIOLATING SPRAY - FINISHING OPERATION",
     "citation": "2404.1",
     "statute": "IFC",
@@ -7281,6 +10449,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "FIRE CODE - WET CHEMICAL FIRE SUPPRESS",
+    "citation": "IFC 904.5",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FIRE CODE - WET CHEMICAL FIRE SUPPRESSION",
     "citation": "904.5",
     "statute": "IFC",
@@ -7291,6 +10465,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "503.1.2",
     "statute": "IFC",
     "level": "MC"
+  },
+  {
+    "literal": "FIRE CODE HAZMAT - NO PLACARDS",
+    "citation": "IFC 3404.2.3.2",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FIRE CODE PANIC & FIRE EXIT HARDWARE",
@@ -7362,6 +10542,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "FIREWORKS - POSSESSION/DISCHARG IN CITY",
+    "citation": "ORD 6.04.002(C)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FIREWORKS - POSSESSION/DISCHARGING IN CITY LIMITS",
     "citation": "6.04.002(c)",
     "statute": "CO",
@@ -7372,6 +10558,30 @@ export const CJIS_CODES: Offense[] = [
     "citation": "2154.303",
     "statute": "OC",
     "level": "MB"
+  },
+  {
+    "literal": "FISHING FROM PUBLIC BRIDGE",
+    "citation": "ORD 8.01.014",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FISHING WITHOUT A LICENSE",
+    "citation": "TPW 46.001",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FLASH LIGHT/SIGN WITHIN 1000 FT INTER",
+    "citation": "TRC 544.006 3377",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FLEEING FROM POLICE OFFICER",
+    "citation": "TRC 545.421 3122",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FLEEING POLICE OFFICER",
@@ -7386,10 +10596,10 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
-    "literal": "FLIGHT-ESCAPE CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "FLYING INTOX W/PREV INTOX MANSL CNV",
+    "citation": "PC 49.09(B)(6)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FLYING INTOX W/PREV INTOX MANSLAGHT CONV IAT",
@@ -7413,6 +10623,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 49.09. ENHANCED OFFENSES AND PENALTIES.\n(a) Except as\nprovided by Subsection"
   },
   {
+    "literal": "FLYING WHILE INTOXICATED 3RD OR MORE",
+    "citation": "PC 49.09(B)(7)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FLYING WHILE INTOXICATED 3RD OR MORE IAT",
     "citation": "49.09(b)",
     "statute": "PC",
@@ -7420,10 +10636,28 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 49.09. ENHANCED OFFENSES AND PENALTIES. (a) Except as\nprovided by Subsection\n(b), an offense under Section 49.04, 49.05,\n49.06, or 49.065 is a Class A misdemeanor, with a minimum term of\nconfinement of 30 days, if it is shown on the trial of the offense\nthat the person has previously been convicted one time of an offense\nrelating to the operating of a motor vehicle while intoxicated, an\noffense of operating an aircraft while intoxicated, an offense of\noperating a watercraft while intoxicated, or an offense of operating\nor assembling an amusement ride while intoxicated."
   },
   {
+    "literal": "FOLLOWING AMBULANCE",
+    "citation": "TRC 545.407 3591",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FOLLOWING FIRE APPARATUS",
+    "citation": "TRC 545.407 591A",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FOLLOWING TOO CLOSE",
     "citation": "545.062",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "FOLLOWING TOO CLOSELY",
+    "citation": "TRC 545.062 3017",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FOLLOWING/OBSTRUCTING AN AMBULANCE",
@@ -7450,10 +10684,46 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "FOOD STAMPS UNAUTH POSS <$200",
+    "citation": "HRC 33.011(b)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FOOD STAMPS UNAUTH POSS >=$200",
+    "citation": "HRC 33.011(b)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FOOD STAMPS USE/ALTER/TRANSFER <$200",
+    "citation": "HRC 33.011(a)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FOOD STAMPS USE/ALTER/TRANSFER >=$200",
+    "citation": "HRC 33.011(a)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FORG NAME PERMITS/TENDERS FOR OIL/GAS",
     "citation": "85.386(1)",
     "statute": "NRC",
     "level": "F*"
+  },
+  {
+    "literal": "FORGE ALTER LOTTERY TICKET <=$10K",
+    "citation": "GC 466.306(a)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FORGE ALTER LOTTERY TICKET >$10K",
+    "citation": "GC 466.306(a)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FORGE/ALTER LOTTERY TICKET <=$10K",
@@ -7468,16 +10738,34 @@ export const CJIS_CODES: Offense[] = [
     "level": "F2"
   },
   {
+    "literal": "FORGE/INCR PRESC QUAN/DANGEROUS DRUG ENH",
+    "citation": "HSC 483.045(b)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FORGE/INCR PRESCR QUAN/DANGEROUS DRUG ENH",
     "citation": "483.045(b)",
     "statute": "HSC",
     "level": "MA"
   },
   {
+    "literal": "FORGE/INCREASE PRESCR QTY/DANGER DRUG",
+    "citation": "HSC 483.045(B)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FORGE/INCREASE PRESCR QUANTITY/DANGER DRUG",
     "citation": "483.045(b)",
     "statute": "HSC",
     "level": "MB"
+  },
+  {
+    "literal": "FORGERY - TO DEFRAUD OR HARM OF ANOTHER",
+    "citation": "PC 32.21(C)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FORGERY AGAINST ELDERLY INDIVIDUAL",
@@ -7494,10 +10782,10 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 32.21. FORGERY. (a) For purposes of this section:\n(1) \"Forge\" means:\n(A) to alter, make, complete, execute, or authenticate\nany writing so that it purports:\n\nPENAL CODE\n(i) to be the act of another who did not authorize\nthat act;\n(ii) to have been executed at a time or place or in\na numbered sequence other than was in fact the case; or\n(iii) to be a copy of an original when no such\noriginal existed;\n(B) to issue, transfer, register the transfer of, pass,\npublish, or otherwise utter a writing that is forged within the\nmeaning of Paragraph (A); or\n(C) to possess a writing that is forged within the\nmeaning of Paragraph (A) with intent to utter it in a manner\nspecified in Paragraph (B).\n(2) \"Writing\" includes:\n(A) printing or any other method of recording\ninformation;\n(B) money, coins, tokens, stamps, seals, credit cards,\nbadges, and trademarks; and\n(C) symbols of value, right, privilege, or\nidentification.\n(b) A person commits an offense if he forges a writing with\nintent to defraud or harm another.\n(c) Except as provided by Subsections (d),\n(e), and (e-1), an\noffense under this section is a state jail felony.\n(d) Subject to Subsection (e-1), an offense under this section\nis a felony of the third degree if the writing is or purports to be a\nwill, codicil, deed, deed of trust, mortgage, security instrument,\nsecurity agreement, credit card, check, authorization to debit an\naccount at a financial institution, or similar sight order for\npayment of money, contract, release, or other commercial instrument.\n(e) Subject to Subsection (e-1), an offense under this section\nis a felony of the second degree if the writing is or purports to be:\n(1) part of an issue of money, securities, postage or\nrevenue stamps;\n(2) a government record listed in Section 37.01(2)(C); or"
   },
   {
-    "literal": "FORGERY CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "FORGERY COUNTERFEITING ALC BEV STAMP",
+    "citation": "ABC 206.06",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FORGERY COUNTERFEITING ALCOHOL BEVERAGE STAMP",
@@ -7511,6 +10799,36 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 32.21. FORGERY. (a) For purposes of this section:\n(1) \"Forge\" means:\n(A) to alter, make, complete, execute, or authenticate\nany writing so that it purports:\n\nPENAL CODE\n(i) to be the act of another who did not authorize\nthat act;\n(ii) to have been executed at a time or place or in\na numbered sequence other than was in fact the case; or\n(iii) to be a copy of an original when no such\noriginal existed;\n(B) to issue, transfer, register the transfer of, pass,\npublish, or otherwise utter a writing that is forged within the\nmeaning of Paragraph (A); or\n(C) to possess a writing that is forged within the\nmeaning of Paragraph (A) with intent to utter it in a manner\nspecified in Paragraph (B).\n(2) \"Writing\" includes:\n(A) printing or any other method of recording\ninformation;\n(B) money, coins, tokens, stamps, seals, credit cards,\nbadges, and trademarks; and\n(C) symbols of value, right, privilege, or\nidentification.\n(b) A person commits an offense if he forges a writing with\nintent to defraud or harm another.\n(c) Except as provided by Subsections\n(d),"
+  },
+  {
+    "literal": "FORGERY FINANCIAL INSTRUMENT >=$2500<$30K IAT",
+    "citation": "PC 32.21(E-1)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FORGERY FINANCIAL INSTRUMENT >=$750<$2500 IA",
+    "citation": "PC 32.21(E-1)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FORGERY FINANCIAL INSTRUMENT ELDERLY",
+    "citation": "PC 32.21(E-1)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FORGERY GOVT/NATION INST/MONEY ELDERLY",
+    "citation": "PC 32.21(e-1)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FORGERY GOVT/NATION INST/MONEY/SECRITY",
+    "citation": "PC 32.21(E)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FORGERY GOVT/NATIONAL INST/MONEY/SECURITY",
@@ -7569,10 +10887,22 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 32.21. FORGERY. (a) For purposes of this section:\n(1) \"Forge\" means:\n(A) to alter, make, complete, execute, or authenticate\nany writing so that it purports:\n\nPENAL CODE\n(i) to be the act of another who did not authorize\nthat act;\n(ii) to have been executed at a time or place or in\na numbered sequence other than was in fact the case; or\n(iii) to be a copy of an original when no such\noriginal existed;\n(B) to issue, transfer, register the transfer of, pass,\npublish, or otherwise utter a writing that is forged within the\nmeaning of Paragraph (A); or\n(C) to possess a writing that is forged within the\nmeaning of Paragraph (A) with intent to utter it in a manner\nspecified in Paragraph (B).\n(2) \"Writing\" includes:\n(A) printing or any other method of recording\ninformation;\n(B) money, coins, tokens, stamps, seals, credit cards,\nbadges, and trademarks; and\n(C) symbols of value, right, privilege, or\nidentification.\n(b) A person commits an offense if he forges a writing with\nintent to defraud or harm another.\n(c) Except as provided by Subsections"
   },
   {
+    "literal": "FORGERY-TO DEFRAUD OR HARM ELDERLY",
+    "citation": "PC 32.21(e-1)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FORGING PARI-MUTUEL TICKET",
     "citation": "2033.011(c)",
     "statute": "OC",
     "level": "F3"
+  },
+  {
+    "literal": "FOUND OR SEIZED NARCOTICS",
+    "citation": "",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FRARM ACCESS TO CHILD DEATH/SBI IAT WFZ 46.13",
@@ -7587,10 +10917,10 @@ export const CJIS_CODES: Offense[] = [
     "level": "F1"
   },
   {
-    "literal": "FRAUD CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "FRAUD DEL CS/PRESCRIP SCH II/SCRIPT FORM",
+    "citation": "HSC 481.129(f)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FRAUD DEL CS/PRESCRIPTION SCH II/SCRIPT FORM",
@@ -7605,6 +10935,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "FRAUD DESTROY REM CONCEAL WRITING ENH",
+    "citation": "PC 32.47(d)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FRAUD DESTROY REMOVAL CONCEAL WRITING",
+    "citation": "PC 32.47(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FRAUD DESTROY REMOVAL CONCEALMENT WRITING",
     "citation": "32.47(c)",
     "statute": "PC",
@@ -7617,6 +10959,30 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "FS",
     "statuteText": "Sec. 32.47. FRAUDULENT DESTRUCTION, REMOVAL, OR CONCEALMENT OF\nWRITING. (a) A person commits an offense if, with intent to defraud\nor harm another, he destroys, removes, conceals, alters, substitutes,\nor otherwise impairs the verity, legibility, or availability of a\nwriting, other than a governmental record.\n(b) For purposes of this section, \"writing\" includes:\n(1) printing or any other method of recording information;\n(2) money, coins, tokens, stamps, seals, credit cards,\nbadges, trademarks;\n(3) symbols of value, right, privilege, or identification;\nand\n(4) universal product codes, labels, price tags, or\nmarkings on goods.\n(c) Except as provided by Subsection\n(d), an offense under this\nsection is a Class A misdemeanor, provided that:"
+  },
+  {
+    "literal": "FRAUD FINANCE STATEMENT FORGED",
+    "citation": "PC 37.101(a)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FRAUD FINANCE STMT FALSE/GROUNDLESS",
+    "citation": "PC 37.101(a)(2)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FRAUD FINANCE STMT FORGED 2+ PREV CONVIC",
+    "citation": "PC 37.101(b)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FRAUD FINANCE STMT/FALSE/GRNDLESS/INTEN",
+    "citation": "PC 37.101(b)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FRAUD FISHING TOURNAMENT",
@@ -7716,6 +11082,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "FRAUD POSS CS SCRIPT SCH II/III/SCRIPT",
+    "citation": "HSC 481.129(g)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FRAUD POSS CS SCRIPT SCH II/III/SCRIPT FORM",
     "citation": "481.129(g)(1)",
     "statute": "HSC",
@@ -7772,6 +11144,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 32.315. FRAUDULENT USE OR POSSESSION OF CREDIT CARD OR\nDEBIT CARD INFORMATION. (a) In this section:\n(1) \"Counterfeit credit card or debit card\" means a:\n(A) credit card or debit card that:\n(i) purports on its face to have been issued by an\nissuer that did not issue the card;\n(ii) has been altered to contain a digital imprint\nother than that which was placed on the card by the issuer;\n(iii) contains a digital imprint with account\ninformation or account holder information differing from that which\nis printed or embossed on the card; or\n(iv) has been altered to change the account\ninformation or account holder information on the face of the card\nfrom that which was printed or embossed on the card by the issuer; or\n(B) card, other than one issued as a credit card or\ndebit card, that has been altered to contain the digital imprint of a\ncredit card or debit card.\n(2) \"Credit card\" and \"debit card\" have the meanings\nassigned by Section 32.31.\n(3) \"Digital imprint\" means the digital data placed on a\ncredit card or debit card or on a counterfeit credit card or debit\ncard.\n(b) A person commits an offense if the person, with the intent\nto harm or defraud another, obtains, possesses, transfers, or uses:\n(1) a counterfeit credit card or debit card;\n(2) the number and expiration date of a credit card or\ndebit card without the consent of the account holder; or\n(3) the data stored on the digital imprint of a credit card\nor debit card without the consent of the account holder.\n(c) If an actor possessed five or more of an item described by\nSubsection (b)(2) or (3), a rebuttable presumption exists that the\nactor possessed each item without the consent of the account holder.\n(d) The presumption established under Subsection (c) does not\napply to a business or other commercial entity or a government agency\n\nPENAL CODE\nthat is engaged in a business activity or governmental function that\ndoes not violate a penal law of this state.\n(e) An offense under this section is:\n(1) a state jail felony if the number of items obtained,\npossessed, transferred, or used is less than five;\n(2) a felony of the third degree if the number of items\nobtained, possessed, transferred, or used is five or more but less\nthan 10;"
+  },
+  {
+    "literal": "FRAUD POSS/USE CREDIT/DEBIT CARD <5",
+    "citation": "PC 32.315(E)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FRAUD SALE/RENT/LEASE OF RESIDENTIAL REAL PROP",
@@ -7930,6 +11308,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 32.34. FRAUDULENT TRANSFER OF A MOTOR VEHICLE. (a) In\nthis section:\n(1) \"Lease\" means the grant of use and possession of a\nmotor vehicle for consideration, whether or not the grant includes an\noption to buy the vehicle.\n(2) \"Motor vehicle\" means a device in, on, or by which a\nperson or property is or may be transported or drawn on a highway,\nexcept a device used exclusively on stationary rails or tracks.\n(3) \"Security interest\" means an interest in personal\nproperty or fixtures that secures payment or performance of an\nobligation.\n(4) \"Third party\" means a person other than the actor or\nthe owner of the vehicle.\n(5) \"Transfer\" means to transfer possession, whether or not\nanother right is also transferred, by means of a sale, lease,\nsublease, lease assignment, or other property transfer.\n\nPENAL CODE\n(b) A person commits an offense if the person acquires, accepts\npossession of, or exercises control over the motor vehicle of another\nunder a written or oral agreement to arrange for the transfer of the\nvehicle to a third party and:\n(1) knowing the vehicle is subject to a security interest,\nlease, or lien, the person transfers the vehicle to a third party\nwithout first obtaining written authorization from the vehicle's\nsecured creditor, lessor, or lienholder;\n(2) intending to defraud or harm the vehicle's owner, the\nperson transfers the vehicle to a third party;\n(3) intending to defraud or harm the vehicle's owner, the\nperson disposes of the vehicle in a manner other than by transfer to\na third party; or\n(4) the person does not disclose the location of the\nvehicle on the request of the vehicle's owner, secured creditor,\nlessor, or lienholder.\n(c) For the purposes of Subsection (b)(2), the actor is\npresumed to have intended to defraud or harm the motor vehicle's\nowner if the actor does not take reasonable steps to determine\nwhether or not the third party is financially able to pay for the\nvehicle.\n(d) It is a defense to prosecution under Subsection (b)(1) that\nthe entire indebtedness secured by or owed under the security\ninterest, lease, or lien is paid or satisfied in full not later than\nthe 30th day after the date that the transfer was made.\n(e) It is not a defense to prosecution under Subsection (b)(1)\nthat the motor vehicle's owner has violated a contract creating a\nsecurity interest, lease, or lien in the motor vehicle.\n(f) An offense under Subsection (b)(1), (b)(2), or (b)(3) is:\n(1) a state jail felony if the value of the motor vehicle\nis less than $30,000;\n(2) a felony of the third degree if the value of the motor\nvehicle is $30,000 or more but less than $150,000;\n(3) a felony of the second degree if the value of the motor\nvehicle is $150,000 or more but less than $300,000; or\n(4) a felony of the first degree if the value of the motor\nvehicle is $300,000 or more.\n(g) An offense under Subsection"
   },
   {
+    "literal": "FRAUD TRANSFER MV-FAIL TO DISC LOCATION",
+    "citation": "PC 32.34(g)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FRAUD TRANSFER OF MOTOR VEHICLE <$30K",
     "citation": "32.34(f)(1)",
     "statute": "PC",
@@ -7958,6 +11342,24 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 32.34. FRAUDULENT TRANSFER OF A MOTOR VEHICLE. (a) In\nthis section:\n(1) \"Lease\" means the grant of use and possession of a\nmotor vehicle for consideration, whether or not the grant includes an\noption to buy the vehicle.\n(2) \"Motor vehicle\" means a device in, on, or by which a\nperson or property is or may be transported or drawn on a highway,\nexcept a device used exclusively on stationary rails or tracks.\n(3) \"Security interest\" means an interest in personal\nproperty or fixtures that secures payment or performance of an\nobligation.\n(4) \"Third party\" means a person other than the actor or\nthe owner of the vehicle.\n(5) \"Transfer\" means to transfer possession, whether or not\nanother right is also transferred, by means of a sale, lease,\nsublease, lease assignment, or other property transfer.\n\nPENAL CODE\n(b) A person commits an offense if the person acquires, accepts\npossession of, or exercises control over the motor vehicle of another\nunder a written or oral agreement to arrange for the transfer of the\nvehicle to a third party and:\n(1) knowing the vehicle is subject to a security interest,\nlease, or lien, the person transfers the vehicle to a third party\nwithout first obtaining written authorization from the vehicle's\nsecured creditor, lessor, or lienholder;\n(2) intending to defraud or harm the vehicle's owner, the\nperson transfers the vehicle to a third party;\n(3) intending to defraud or harm the vehicle's owner, the\nperson disposes of the vehicle in a manner other than by transfer to\na third party; or\n(4) the person does not disclose the location of the\nvehicle on the request of the vehicle's owner, secured creditor,\nlessor, or lienholder.\n(c) For the purposes of Subsection (b)(2), the actor is\npresumed to have intended to defraud or harm the motor vehicle's\nowner if the actor does not take reasonable steps to determine\nwhether or not the third party is financially able to pay for the\nvehicle.\n(d) It is a defense to prosecution under Subsection (b)(1) that\nthe entire indebtedness secured by or owed under the security\ninterest, lease, or lien is paid or satisfied in full not later than\nthe 30th day after the date that the transfer was made.\n(e) It is not a defense to prosecution under Subsection (b)(1)\nthat the motor vehicle's owner has violated a contract creating a\nsecurity interest, lease, or lien in the motor vehicle.\n(f) An offense under Subsection (b)(1), (b)\n(2), or"
   },
   {
+    "literal": "FRAUD TRANSFER OF MV >=$150K<$300K",
+    "citation": "PC 32.34(f)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FRAUD TRANSFER OF MV >=$300K",
+    "citation": "PC 32.34(f)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FRAUD TRANSFER OF MV >=$30K<$150K",
+    "citation": "PC 32.34(f)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FRAUD USE/POS/TMPR GFT CRD/PCKG/DTA/RDM >=5<10",
     "citation": "32.56(e)(2)",
     "statute": "PC",
@@ -7979,6 +11381,24 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 32.56. FINANCIAL ABUSE USING ARTIFICIALLY GENERATED MEDIA\nOR PHISHING. (a) In this section:\n(1) \"Artificially generated media\" has the meaning assigned\nby Section 100B.001, Civil Practice and Remedies Code.\n(2) \"Financial abuse\" has the meaning assigned by Section\n32.55.\n(b) A person commits an offense if the person knowingly engages\nin financial abuse:\n(1) through the use of artificially generated media\ndisseminated to another person; or\n(2) by deceiving or manipulating another person into\nproviding personal, financial, or identifying information through e-\nmail, electronic communication, or other digital means.\n(c) An offense under this section is:\n(1) a Class B misdemeanor if the value of the property\ntaken, appropriated, obtained, retained, or used is less than $100;\n(2) a Class A misdemeanor if the value of the property\ntaken, appropriated, obtained, retained, or used is $100 or more but\nless than $750;\n(3) a state jail felony if the value of the property taken,\nappropriated, obtained, retained, or used is $750 or more but less\nthan $2,500;\n(4) a felony of the third degree if the value of the\nproperty taken, appropriated, obtained, retained, or used is $2,500\nor more but less than $30,000;\n(5) a felony of the second degree if the value of the\nproperty taken, appropriated, obtained, retained, or used is $30,000\nor more but less than $150,000; and\n(6) a felony of the first degree if the value of the\nproperty taken, appropriated, obtained, retained, or used is $150,000\nor more.\n(d) This section does not apply, for content provided by\nanother person, to:\n(1) the provider of an interactive computer service, as\n\nPENAL CODE\ndefined by 47 U.S.C. Section 230(f);\n(2) a telecommunications service, as defined by 47 U.S.C.\nSection 153; or\n(3) a radio or television station licensed by the Federal\nCommunications Commission.\nAdded by"
   },
   {
+    "literal": "FRAUD USE/POSS IDENT INFO  50 OR MORE",
+    "citation": "PC 32.51(c)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FRAUD USE/POSS IDENT INFO  5<10 ELDERLY",
+    "citation": "PC 32.51(c-1)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FRAUD USE/POSS IDENT INFO # ITEMS 10<50",
+    "citation": "PC 32.51(c)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FRAUD USE/POSS IDENT INFO # ITEMS 10<50 ELDER",
     "citation": "32.51(c-1)",
     "statute": "PC",
@@ -7993,6 +11413,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 32.51. FRAUDULENT USE OR POSSESSION OF IDENTIFYING\nINFORMATION. (a) In this section:\n(1) \"Identifying information\" means information that alone\nor in conjunction with other information identifies a person,\nincluding a person's:\n(A) name and date of birth;\n(B) unique biometric data, including the person's\nfingerprint, voice print, or retina or iris image;\n(C) unique electronic identification number, address,\nrouting code, or financial institution account number;\n(D) telecommunication identifying information or access\ndevice; and\n(E) social security number or other government-issued\nidentification number.\n(2) \"Telecommunication access device\" means a card, plate,\ncode, account number, personal identification number, electronic\nserial number, mobile identification number, or other\ntelecommunications service, equipment, or instrument identifier or\nmeans of account access that alone or in conjunction with another\ntelecommunication access device may be used to:\n(A) obtain money, goods, services, or other thing of\nvalue; or\n(B) initiate a transfer of funds other than a transfer\noriginated solely by paper instrument.\n(b) A person commits an offense if the person, with the intent\nto harm or defraud another, obtains, possesses, transfers, or uses an\nitem of:\n(1) identifying information of another person without the\nother person's consent or effective consent;\n(2) information concerning a deceased natural person,\nincluding a stillborn infant or fetus, that would be identifying\ninformation of that person were that person alive, if the item of\ninformation is obtained, possessed, transferred, or used without\nlegal authorization; or\n(3) identifying information of a child younger than 18\nyears of age.\n(b-1) For the purposes of Subsection (b), the actor is presumed\nto have the intent to harm or defraud another if the actor possesses:\n(1) the identifying information of three or more other\npersons;\n\nPENAL CODE\n(2) information described by Subsection (b)(2) concerning\nthree or more deceased persons; or\n(3) information described by Subdivision (1) or (2)\nconcerning three or more persons or deceased persons.\n(b-2) The presumption established under Subsection (b-1) does\nnot apply to a business or other commercial entity or a government\nagency that is engaged in a business activity or governmental\nfunction that does not violate a penal law of this state.\n(c) An offense under this section is:\n(1) a state jail felony if the number of items obtained,\npossessed, transferred, or used is less than five;\n(2) a felony of the third degree if the number of items\nobtained, possessed, transferred, or used is five or more but less\nthan 10;\n(3) a felony of the second degree if the number of items\nobtained, possessed, transferred, or used is 10 or more but less than\n50; or\n(4) a felony of the first degree if the number of items\nobtained, possessed, transferred, or used is 50 or more.\n(c-1) An offense described for purposes of punishment by\nSubsections"
   },
   {
+    "literal": "FRAUD USE/POSS IDENT INFO # ITEMS 5<10",
+    "citation": "PC 32.51(c)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FRAUD USE/POSS IDENT INFO # ITEMS 5<10 ELDERLY",
     "citation": "32.51(c-1)",
     "statute": "PC",
@@ -8005,6 +11431,24 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 32.51. FRAUDULENT USE OR POSSESSION OF IDENTIFYING\nINFORMATION. (a) In this section:\n(1) \"Identifying information\" means information that alone\nor in conjunction with other information identifies a person,\nincluding a person's:\n(A) name and date of birth;\n(B) unique biometric data, including the person's\nfingerprint, voice print, or retina or iris image;\n(C) unique electronic identification number, address,\nrouting code, or financial institution account number;\n(D) telecommunication identifying information or access\ndevice; and\n(E) social security number or other government-issued\nidentification number.\n(2) \"Telecommunication access device\" means a card, plate,\ncode, account number, personal identification number, electronic\nserial number, mobile identification number, or other\ntelecommunications service, equipment, or instrument identifier or\nmeans of account access that alone or in conjunction with another\ntelecommunication access device may be used to:\n(A) obtain money, goods, services, or other thing of\nvalue; or\n(B) initiate a transfer of funds other than a transfer\noriginated solely by paper instrument.\n(b) A person commits an offense if the person, with the intent\nto harm or defraud another, obtains, possesses, transfers, or uses an\nitem of:\n(1) identifying information of another person without the\nother person's consent or effective consent;\n(2) information concerning a deceased natural person,\nincluding a stillborn infant or fetus, that would be identifying\ninformation of that person were that person alive, if the item of\ninformation is obtained, possessed, transferred, or used without\nlegal authorization; or\n(3) identifying information of a child younger than 18\nyears of age.\n(b-1) For the purposes of Subsection (b), the actor is presumed\nto have the intent to harm or defraud another if the actor possesses:\n(1) the identifying information of three or more other\npersons;\n\nPENAL CODE\n(2) information described by Subsection (b)(2) concerning\nthree or more deceased persons; or\n(3) information described by Subdivision (1) or (2)\nconcerning three or more persons or deceased persons.\n(b-2) The presumption established under Subsection (b-1) does\nnot apply to a business or other commercial entity or a government\nagency that is engaged in a business activity or governmental\nfunction that does not violate a penal law of this state.\n(c) An offense under this section is:\n(1) a state jail felony if the number of items obtained,\npossessed, transferred, or used is less than five;"
+  },
+  {
+    "literal": "FRAUD USE/POSS IDENT INFO 10<50 ELDER",
+    "citation": "PC 32.51(c-1)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FRAUD USE/POSS IDENT INFO <5 ELDERLY",
+    "citation": "PC 32.51(C-1)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FRAUD USE/POSS IDENTIFY INFO # ITEMS < 5",
+    "citation": "PC 32.51(C)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FRAUD USE/POSS IDENTIFYING INFO # ITEMS 10<50",
@@ -8084,6 +11528,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 32.52. FRAUDULENT, SUBSTANDARD, OR FICTITIOUS DEGREE. (a)\nIn this section, \"fraudulent or substandard degree\" has the meaning\nassigned by Section 61.302, Education Code.\n(b) A person commits an offense if the person:\n(1) uses or claims to hold a postsecondary degree that the\nperson knows:\n(A) is a fraudulent or substandard degree;\n(B) is fictitious or has otherwise not been granted to\nthe person; or\n(C) has been revoked; and\n(2) uses or claims to hold that degree:\n(A) in a written or oral advertisement or other\npromotion of a business; or\n(B) with the intent to:\n(i) obtain employment;\n(ii) obtain a license or certificate to practice a\ntrade, profession, or occupation;\n(iii) obtain a promotion, a compensation or other\nbenefit, or an increase in compensation or other benefit, in\nemployment or in the practice of a trade, profession, or occupation;\n\nPENAL CODE\n(iv) obtain admission to an educational program in\nthis state; or\n(v) gain a position in government with authority\nover another person, regardless of whether the actor receives\ncompensation for the position.\n(c) An offense under this section is a Class B misdemeanor."
   },
   {
+    "literal": "FRAUD/SUBSTANDARD OR FICTITIOUS DEGREE",
+    "citation": "PC 32.52(c)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FRAUDULENT CAREGIVER AGREEMENT 31<91 DAYS",
     "citation": "264.7551(b)(3)",
     "statute": "FC",
@@ -8114,6 +11564,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 37.13. RECORD OF A FRAUDULENT COURT. (a) A person\ncommits an offense if the person makes, presents, or uses any\ndocument or other record with:\n(1) knowledge that the document or other record is not a\nrecord of a court created under or established by the constitution or\n\nPENAL CODE\nlaws of this state or of the United States; and\n(2) the intent that the document or other record be given\nthe same legal effect as a record of a court created under or\nestablished by the constitution or laws of this state or of the\nUnited States.\n(b) An offense under this section is a Class A misdemeanor,\nexcept that the offense is a felony of the third degree if it is\nshown on the trial of the offense that the defendant has previously\nbeen convicted under this section on two or more occasions.\n(c) If conduct that constitutes an offense under this section\nalso constitutes an offense under Section 32.48 or 37.10, the actor\nmay be prosecuted under any of those sections.\nAdded by"
+  },
+  {
+    "literal": "FRAUDULENT DESTRUCTION//REMOVAL/CONCEAL WRITING <$100",
+    "citation": "PC 32.47(E)(A)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FRAUDULENT EMISSIONS INSP:DEFRAUD/HARM IAT",
@@ -8162,11 +11618,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 37.101. FRAUDULENT FILING OF FINANCING STATEMENT. (a) A\nperson commits an offense if the person knowingly presents for filing\nor causes to be presented for filing a financing statement that the\nperson knows:\n(1) is forged;\n(2) contains a material false statement; or\n(3) is groundless.\n(b) An offense under Subsection"
   },
   {
+    "literal": "FRAUDULENT GOVT REC",
+    "citation": "TRC 502.410 3105",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FRAUDULENT LIEN/CLAIM REFUSAL TO RELEASE",
     "citation": "32.49(c)",
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 32.49. REFUSAL TO EXECUTE RELEASE OF FRAUDULENT LIEN OR\n\nPENAL CODE\nCLAIM. (a) A person commits an offense if, with intent to defraud\nor harm another, the person:\n(1) owns, holds, or is the beneficiary of a purported lien\nor claim asserted against real or personal property or an interest in\nreal or personal property that is fraudulent, as described by Section\n51.901\n(c), Government Code; and"
+  },
+  {
+    "literal": "FRAUDULENT USE OR POSSESSION OF IDENTIFYING INFORMATION",
+    "citation": "32.51",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FRAUDULENT/FICTITIOUS MILITARY RECORD",
@@ -8192,6 +11660,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "66.012(d)",
     "statute": "PWC",
     "level": "F*"
+  },
+  {
+    "literal": "FTC SPEED-COLLISION W/PERSON OR VEHICLE",
+    "citation": "TRC 545.351(b)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FTS DESIGNATED POINT RED LIGHT",
@@ -8252,6 +11726,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "550.024",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "FTY ROW ON LEFT AT OBSTRUCTION",
+    "citation": "TRC 545.051 3082",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "FTYROW - ALLEY",
@@ -8476,6 +11956,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "FTYROW PEDON SIDEWALK COLL W/BI",
+    "citation": "TRC 545.151(c)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FTYROW STOP SIGN",
     "citation": "545.153(b)",
     "statute": "TC",
@@ -8524,11 +12010,71 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "FUNERAL DISRUPTION W/IN 1000 FT CEMETARY",
+    "citation": "PC 42.055(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "FUNERAL DISRUPTION W/IN 1000 FT CEMETERY/FACIL",
     "citation": "42.055(b)",
     "statute": "PC",
     "level": "MB",
     "statuteText": "Sec. 42.055. FUNERAL SERVICE DISRUPTIONS. (a) In this\nsection:\n(1) \"Facility\" means a building at which any portion of a\n\nPENAL CODE\nfuneral service takes place, including a funeral parlor, mortuary,\nprivate home, or established place of worship.\n(2) \"Funeral service\" means a ceremony, procession, or\nmemorial service, including a wake or viewing, held in connection\nwith the burial or cremation of the dead.\n(3) \"Picketing\" means:\n(A) standing, sitting, or repeated walking, riding,\ndriving, or other similar action by a person displaying or carrying a\nbanner, placard, or sign;\n(B) engaging in loud singing, chanting, whistling, or\nyelling, with or without noise amplification through a device such as\na bullhorn or microphone; or\n(C) blocking access to a facility or cemetery being\nused for a funeral service.\n(b) A person commits an offense if, during the period beginning\nthree hours before the service begins and ending three hours after\nthe service is completed, the person engages in picketing within\n1,000 feet of a facility or cemetery being used for a funeral\nservice."
+  },
+  {
+    "literal": "FYROW (PRIVATE DRIVE/ALLEY ,BUILDING)",
+    "citation": "TRC 545.155 3056",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FYROW CHANGING LANES",
+    "citation": "TRC 545.061 3288",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FYROW FEEDER ROAD",
+    "citation": "TRC 545.154 3005",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FYROW FOR BLIND OR INCAPACITATED PERSON",
+    "citation": "TRC 552.008 3118",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FYROW ON GREEN ARROW SIGNAL",
+    "citation": "TRC 544.007 3058",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FYROW TO VEH ENTERING FROM HIGHWAY",
+    "citation": "TRC 545.154 3005A",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FYROW TO VEH IN STOP/YIELD INTERSECTION",
+    "citation": "TRC 545.153 3052",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FYROW TO VEH LEAVING HIGHWAY",
+    "citation": "TRC 545.154 3005B",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "FYROW TURNING ON RED SIGNAL",
+    "citation": "TRC 544.007 3287",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "GAIN ACCESS TO LEGISLATIVE COUNCIL COMPUTER",
@@ -8542,12 +12088,6 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "MC",
     "statuteText": "Sec. 47.02. GAMBLING.\n(a) A person commits an offense if he:\n(1) makes a bet on the partial or final result of a game or\ncontest or on the performance of a participant in a game or contest;"
-  },
-  {
-    "literal": "GAMBLING CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
   },
   {
     "literal": "GAMBLING PROMOTION",
@@ -8623,6 +12163,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "GAS - INSPECT TEST & PURGING OF GAS LINE",
+    "citation": "IFGC 406.1",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "GAS - INSPECTION TESTING & PURGING OF GAS LINE",
     "citation": "409.5",
     "statute": "IFGC",
@@ -8633,6 +12179,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "121.310(b)",
     "statute": "TUC",
     "level": "M*"
+  },
+  {
+    "literal": "GIFT TO PUB SERV BY PERSON IN HIS JURISD",
+    "citation": "PC 36.08",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "GIFT TO PUB SERV BY PERSON IN HIS JURISDICTION",
@@ -8685,6 +12237,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 28.08. GRAFFITI. (a) A person commits an offense if,\nwithout the effective consent of the owner, the person intentionally\nor knowingly makes markings, including inscriptions, slogans,\ndrawings, or paintings, on the tangible property of the owner with:\n(1) paint;\n(2) an indelible marker; or\n(3) an etching or engraving device.\n(b) Except as provided by Subsection (d), an offense under this\nsection is:\n(1) a Class C misdemeanor if the amount of pecuniary loss\nis less than $100;\n(2) a Class B misdemeanor if the amount of pecuniary loss\nis $100 or more but less than $750;\n(3) a Class A misdemeanor if the amount of pecuniary loss\nis $750 or more but less than $2,500;\n(4) a state jail felony if the amount of pecuniary loss is\n$2,500 or more but less than $30,000;\n(5) a felony of the third degree if the amount of pecuniary\nloss is $30,000 or more but less than $150,000;\n(6) a felony of the second degree if the amount of\npecuniary loss is $150,000 or more but less than $300,000; or\n(7) a felony of the first degree if the amount of pecuniary\nloss is $300,000 or more.\n(c) When more than one item of tangible property, belonging to\none or more owners, is marked in violation of this section pursuant\n\nPENAL CODE\nto one scheme or continuing course of conduct, the conduct may be\nconsidered as one offense, and the amounts of pecuniary loss to\nproperty resulting from the marking of the property may be aggregated\nin determining the grade of the offense.\n(d) An offense under this section is a state jail felony if:\n(1) the marking is made on a school, an institution of\nhigher education, a place of worship or human burial, a public\nmonument, or a community center that provides medical, social, or\neducational programs; and\n(2) the amount of the pecuniary loss to real property or to\ntangible personal property is $750 or more but less than $30,000.\n(e) In this section:\n(1) \"Aerosol paint\" means an aerosolized paint product.\n(2) \"Etching or engraving device\" means a device that makes\na delineation or impression on tangible property, regardless of the\nmanufacturer's intended use for that device.\n(3) \"Indelible marker\" means a device that makes a mark\nwith a paint or ink product that is specifically formulated to be\nmore difficult to erase, wash out, or remove than ordinary paint or\nink products.\n(4) \"Institution of higher education\" has the meaning\nassigned by Section 481.134, Health and Safety Code.\n(5) \"School\" means a private or public elementary or\nsecondary school.\nAdded by"
   },
   {
+    "literal": "GRAFFITI <100",
+    "citation": "PC 28.08 (B) (1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "GRAFFITI PECUNIARY LOSS >=$100<$750",
     "citation": "28.08(b)(2)",
     "statute": "PC",
@@ -8734,6 +12292,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 28.08. GRAFFITI. (a) A person commits an offense if,\nwithout the effective consent of the owner, the person intentionally\nor knowingly makes markings, including inscriptions, slogans,\ndrawings, or paintings, on the tangible property of the owner with:\n(1) paint;\n(2) an indelible marker; or\n(3) an etching or engraving device.\n(b) Except as provided by Subsection\n(d), an offense under this\nsection is:"
   },
   {
+    "literal": "GRAFFTI WRSHP BURL/MNMT/SCH >=$750<$30K",
+    "citation": "PC 28.08(D)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "GRAIN WAREHOUSE",
     "citation": "14.071",
     "statute": "AGC",
@@ -8756,6 +12320,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "61.71(A)(18)",
     "statute": "ABC",
     "level": "M*"
+  },
+  {
+    "literal": "GROUNDS FOR CANCEL/SUSPRETAIL DEALER LIC",
+    "citation": "ABC 61.71",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "GROUP HOME CONSULTANT REFERRAL VIOLATION",
@@ -8782,6 +12352,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 22.11. HARASSMENT BY PERSONS IN CERTAIN FACILITIES;\nHARASSMENT OF PUBLIC SERVANT. (a) A person commits an offense if,\nwith the intent to assault, harass, annoy, alarm, abuse, torment, or\nembarrass the person:\n(1) while imprisoned or confined in a correctional or\ndetention facility, causes another person to contact the blood,\nseminal fluid, vaginal fluid, saliva, urine, or feces of the actor,\nany other person, or an animal, or any other fluid or liquid;\n(2) while committed to a civil commitment facility, causes:\n(A) an officer or employee of the Texas Civil\nCommitment Office to contact the blood, seminal fluid, vaginal fluid,\nsaliva, urine, or feces of the actor, any other person, or an animal,\nor any other fluid or liquid:\n(i) while the officer or employee is lawfully\ndischarging an official duty at a civil commitment facility; or\n(ii) in retaliation for or on account of an\nexercise of official power or performance of an official duty by the\nofficer or employee; or\n(B) a person who contracts with the state to perform a\nservice in the facility or an employee of that person to contact the\nblood, seminal fluid, vaginal fluid, saliva, urine, or feces of the\nactor, any other person, or an animal, or any other fluid or liquid:\n(i) while the person or employee is engaged in\nperforming a service within the scope of the contract, if the actor\n\nPENAL CODE\nknows the person or employee is authorized by the state to provide\nthe service; or\n(ii) in retaliation for or on account of the\nperson's or employee's performance of a service within the scope of\nthe contract; or\n(3) causes another person the actor knows to be a public\nservant to contact the blood, seminal fluid, vaginal fluid, saliva,\nurine, or feces of the actor, any other person, or an animal, or any\nother fluid or liquid, while the public servant is lawfully\ndischarging an official duty or in retaliation or on account of an\nexercise of the public servant's official power or performance of an\nofficial duty.\n(b) An offense under this section is a felony of the third\ndegree."
+  },
+  {
+    "literal": "HARASSMENT BY PERSON IN CORRECTION/DET",
+    "citation": "PC 22.11(B)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "HARASSMENT OF COURT EMPLOYEE",
@@ -8846,6 +12422,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 42.07. HARASSMENT. (a) A person commits an offense if,\nwith intent to harass, annoy, alarm, abuse, torment, or embarrass\nanother, the person:\n(1) initiates communication and in the course of the\ncommunication makes a comment, request, suggestion, or proposal that\nis obscene;\n(2) threatens, in a manner reasonably likely to alarm the\n\nPENAL CODE\nperson receiving the threat, to inflict bodily injury on the person\nor to commit a felony against the person, a member of the person's\nfamily or household, or the person's property;\n(3) conveys, in a manner reasonably likely to alarm the\nperson receiving the report, a false report, which is known by the\nconveyor to be false, that another person has suffered death or\nserious bodily injury;\n(4) causes the telephone of another to ring repeatedly or\nmakes repeated telephone communications anonymously or in a manner\nreasonably likely to harass, annoy, alarm, abuse, torment, embarrass,\nor offend another;\n(5) makes a telephone call and intentionally fails to hang\nup or disengage the connection;\n(6) knowingly permits a telephone under the person's\ncontrol to be used by another to commit an offense under this\nsection;\n(7) sends repeated electronic communications in a manner\nreasonably likely to harass, annoy, alarm, abuse, torment, embarrass,\nor offend another;\n(8) publishes on an Internet website, including a social\nmedia platform, repeated electronic communications in a manner\nreasonably likely to cause emotional distress, abuse, or torment to\nanother person, unless the communications are made in connection with\na matter of public concern;\n(9) tracks or monitors the personal property or motor\nvehicle of another person, without the other person's effective\nconsent, including by:\n(A) using a tracking application on the person's\npersonal electronic device or using a tracking device; or\n(B) physically following the other person or causing\nany person to physically follow the other person; or\n(10) makes obscene, intimidating, or threatening telephone\ncalls or other electronic communications from a temporary or\ndisposable telephone number provided by an Internet application or\nother technological means.\n(b) In this section:\nText of subdivision effective until December 4, 2025\n(1) \"Electronic communication\" means a transfer of signs,\nsignals, writing, images, sounds, data, or intelligence of any nature\ntransmitted in whole or in part by a wire, radio, electromagnetic,\n\nPENAL CODE\nphotoelectronic, or photo-optical system. The term includes:\n(A) a communication initiated through the use of\nelectronic mail, instant message, network call, a cellular or other\ntype of telephone, a computer, a camera, text message, a social media\nplatform or application, an Internet website, any other Internet-\nbased communication tool, or facsimile machine; and\n(B) a communication made to a pager.\nText of subdivision effective on December 4, 2025\n(1) \"Court employee\" means an employee whose duties relate\nto court administration, including a court clerk, court coordinator,\ncourt administrator, juvenile case manager, law clerk, or staff\nattorney. The term does not include a judge.\nText of subdivision effective on December 4, 2025\n(1-a) \"Electronic communication\" means a transfer of signs,\nsignals, writing, images, sounds, data, or intelligence of any nature\ntransmitted in whole or in part by a wire, radio, electromagnetic,\nphotoelectronic, or photo-optical system. The term includes:\n(A) a communication initiated through the use of\nelectronic mail, instant message, network call, a cellular or other\ntype of telephone, a computer, a camera, text message, a social media\nplatform or application, an Internet website, any other Internet-\nbased communication tool, or facsimile machine; and\n(B) a communication made to a pager.\n(2) \"Family\" and \"household\" have the meaning assigned by\nChapter 71, Family Code.\n(3) \"Obscene\" means containing a patently offensive\ndescription of or a solicitation to commit an ultimate sex act,\nincluding sexual intercourse, masturbation, cunnilingus, fellatio, or\nanilingus, or a description of an excretory function.\n(4) \"Utility\" has the meaning assigned by Section 22.01(e).\nText of subsection effective until December 4, 2025\n(c) An offense under this section is a Class B misdemeanor,\nexcept that the offense is a Class A misdemeanor if:\n(1) the actor has previously been convicted under this\nsection;\n(2) the offense was committed under Subsection (a)(7) or\n(8) and:\n(A) the offense was committed against a child under 18\nyears of age with the intent that the child:\n\nPENAL CODE\n(i) commit suicide; or\n(ii) engage in conduct causing serious bodily\ninjury to the child; or\n(B) the actor has previously violated a temporary\nrestraining order or injunction issued under Chapter 129A, Civil\nPractice and Remedies Code; or\n(3) the offense was committed against a person the actor\nknows or reasonably should know is an employee or agent of a utility\nwhile the person is performing a duty within the scope of that\nemployment or agency.\nText of subsection effective on December 4, 2025\n(c) An offense under this section is a Class B misdemeanor,\nexcept that the offense is:\n(1) a Class A misdemeanor if:\n(A) the actor has previously been convicted under this\nsection;\n(B) the offense was committed under Subsection (a)(7)\nor (8) and:\n\n(i) the offense was committed against a child under\n18 years of age with the intent that the child:"
   },
   {
+    "literal": "HARASSMENT THREATEN BODILY HARM",
+    "citation": "PC 42.07(C)(6)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "HARASSMENT W/PREV CONV",
     "citation": "42.07(c)(1)(A)",
     "statute": "PC",
@@ -8884,6 +12466,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "FS"
   },
   {
+    "literal": "HAZARD MATERIAL PLACARD VIOLATION",
+    "citation": "TRC 549.101 3237",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "HAZARDOUS MATERIAL - FAIL TO USE ROUTE",
     "citation": "10.10.004",
     "statute": "CO",
@@ -8896,10 +12484,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "HAZARDOUS MATERIAL - PARKED IN CITY",
+    "citation": "ORD 10.07.003(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "HAZARDOUS MATERIAL - PARKED IN CITY LIMITS",
     "citation": "5703.5",
     "statute": "IFC",
     "level": "MC"
+  },
+  {
+    "literal": "HAZARDOUS WAKE OR WASH",
+    "citation": "TPW 31.098",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "HAZING",
@@ -8926,10 +12526,10 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
-    "literal": "HEALTH AND SAFETY VIOL CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "HEAD LAMPS GLARING, NOT ADJUSTED",
+    "citation": "TRC 547.333 3163",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "HEALTH CARE FRAUD 25<50 CLAIMS IAT",
@@ -9010,6 +12610,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "HEAVY EQUIP DISREGARDED SIGNAL OF TRAIN",
+    "citation": "TRC 545.255 3075",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "HEMP LABORATORY REPORT FRAUD",
     "citation": "122.157(b)",
     "statute": "AGC",
@@ -9034,11 +12640,29 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "HINDER APPREHENSION OR PROSECUT FELON",
+    "citation": "PC 38.05(d)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "HINDER APPREHENSION OR PROSECUTION KNOWN FELON",
     "citation": "38.05(d)",
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 38.05. HINDERING APPREHENSION OR PROSECUTION. (a) A\nperson commits an offense if, with intent to hinder the arrest,\nprosecution, conviction, or punishment of another for an offense or,\nwith intent to hinder the arrest, detention, adjudication, or\ndisposition of a child for engaging in delinquent conduct that\nviolates a penal law of the state, or with intent to hinder the\narrest of another under the authority of a warrant or capias, he:\n(1) harbors or conceals the other;\n(2) provides or aids in providing the other with any means\nof avoiding arrest or effecting escape; or\n(3) warns the other of impending discovery or apprehension.\n(b) It is a defense to prosecution under Subsection (a)(3) that\nthe warning was given in connection with an effort to bring another\ninto compliance with the law.\n(c) Except as provided by Subsection\n(d), an offense under this\nsection is a Class A misdemeanor."
+  },
+  {
+    "literal": "HINDER APPREHENSION/PROSECUTION",
+    "citation": "PC 38.05(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "HINDER PROCEEDINGS BY DISORDERLY COND",
+    "citation": "PC 38.13",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "HINDER SECURED CREDITORS >=$100<$750",
@@ -9081,6 +12705,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 32.33. HINDERING SECURED CREDITORS. (a) For purposes of\nthis section:\n(1) \"Remove\" means transport, without the effective consent\nof the secured party, from the state in which the property was\nlocated when the security interest or lien attached.\n(2) \"Security interest\" means an interest in personal\nproperty or fixtures that secures payment or performance of an\nobligation.\n(b) A person who has signed a security agreement creating a\nsecurity interest in property or a mortgage or deed of trust creating\na lien on property commits an offense if, with intent to hinder\nenforcement of that interest or lien, he destroys, removes, conceals,\nencumbers, or otherwise harms or reduces the value of the property.\n(c) For purposes of this section, a person is presumed to have\nintended to hinder enforcement of the security interest or lien if,\nwhen any part of the debt secured by the security interest or lien\nwas due, he failed:\n(1) to pay the part then due; and\n(2) if the secured party had made demand, to deliver\npossession of the secured property to the secured party.\n(d) An offense under Subsection (b) is a:\n(1) Class C misdemeanor if the value of the property\ndestroyed, removed, concealed, encumbered, or otherwise harmed or\n\nPENAL CODE\nreduced in value is less than $100;\n(2) Class B misdemeanor if the value of the property\ndestroyed, removed, concealed, encumbered, or otherwise harmed or\nreduced in value is $100 or more but less than $750;\n(3) Class A misdemeanor if the value of the property\ndestroyed, removed, concealed, encumbered, or otherwise harmed or\nreduced in value is $750 or more but less than $2,500;"
+  },
+  {
+    "literal": "HINDERING APPREH/PROS  FELON SEX OFFEND",
+    "citation": "PC 38.05(d)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "HINDERING APPREH/PROS KNOWN FELON SEX OFFENDER",
@@ -9146,6 +12776,18 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 76.04. HINDERING PROSECUTION OF TERRORISM. (a) A person\ncommits an offense if, with intent to hinder the arrest, prosecution,\nconviction, or punishment of another for an offense under Section\n76.02 or 76.03, the person:\n(1) harbors or conceals the other;\n(2) provides or aids in providing the other with any means\nof avoiding arrest or effecting escape;\n(3) warns the other of impending discovery or apprehension;\nor\n(4) tampers with any physical evidence that might aid in\nthe discovery or apprehension of the other.\n(b) An offense under this section is of the same degree as the\noffense under Section 76.02 or 76.03 for which the person committed\nthe act described by Subsection"
   },
   {
+    "literal": "HITTING GOLF BALLS ON CITY PARKS",
+    "citation": "ORD 8.01.015",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "HOAX BOMB WEAPONS FREE ZONE",
+    "citation": "PC 46.11(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "HOAX BOMBS",
     "citation": "46.08(b)",
     "statute": "PC",
@@ -9183,10 +12825,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "HOURS OF CONSUMPTION",
+    "citation": "ABC 105.06",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "HOURS OF SALE OF BEER PROHIBITED",
     "citation": "105.05",
     "statute": "ABC",
     "level": "M*"
+  },
+  {
+    "literal": "HOURS OF SALE OF WINE PROHIBITED",
+    "citation": "ABC 24.07",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "HOUSING AUTHORITY INTERESTED COMMISSIONERS",
@@ -9249,6 +12903,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "FS"
   },
   {
+    "literal": "ICE BOX - ABANDONED W/DOOR STILL ATT",
+    "citation": "ORD 8.04.002",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ICE BOX ABANDONED W/DOOR STILL ATTACHED",
     "citation": "1.09.094",
     "statute": "CO",
@@ -9259,6 +12919,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "32.101",
     "statute": "PWC",
     "level": "MB"
+  },
+  {
+    "literal": "ID LAMPS NOT VIS SUFFICIENT DISTANCE",
+    "citation": "TRC 547.355 3190",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "IDENT SIGNS/CERTIFICATE CITRUS TRUCK/TRACTOR",
@@ -9283,6 +12949,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "522.002(b)",
     "statute": "BCC",
     "level": "FS"
+  },
+  {
+    "literal": "ILGL DUMP=>500LBS<1000LBS/=>100CFT<200CF",
+    "citation": "HSC 365.012(f)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ILGL DUMPING >5LBS<500LBS/>5GAL<100CFT",
+    "citation": "HSC 365.012(e)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ILL CLAIM OF LOTTERY PRIZE FROM ANOTHER",
@@ -9316,10 +12994,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "ILL DUMP COMM >5LBS<200LBS/>5GAL<200CFT",
+    "citation": "HSC 365.012(F)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ILL DUMP LIGHT LIT/WASTE <500LBS OR <100CFT",
     "citation": "365.012(d-1)",
     "statute": "HSC",
     "level": "M*"
+  },
+  {
+    "literal": "ILL DUMP LIGHT LIT/WASTE<500LBS/<100CFT",
+    "citation": "HSC 365.012(d-1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ILL INTEREST IN CONTRACT OF NAVIGATION DIST",
@@ -9340,6 +13030,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "ILLEGAL BARTER/EXPEND OF PROP/FINANCE",
+    "citation": "HSC 481.126(a)(1)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ILLEGAL BARTER/EXPENDITURE OF PROPERTY/FINANCE",
     "citation": "481.126(b)",
     "statute": "HSC",
@@ -9352,11 +13048,35 @@ export const CJIS_CODES: Offense[] = [
     "level": "F2"
   },
   {
+    "literal": "ILLEGAL CLAIM LOT PRZ FROM ANOTHER>$10K",
+    "citation": "GC 466.310(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ILLEGAL CLAIM LOTTERY PRIZE FROM ANOTHER",
+    "citation": "GC 466.310(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ILLEGAL CLEATS",
+    "citation": "TRC 547.612 3612",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ILLEGAL DIVULGENCE PUB COMM COMMERCIAL GAIN",
     "citation": "16.05(e)",
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 16.05. ILLEGAL DIVULGENCE OF PUBLIC COMMUNICATIONS. (a)\nIn this section, \"electronic communications service\" has the meaning\nassigned by Article 18A.001, Code of Criminal Procedure.\n(b) A person who provides electronic communications service to\nthe public commits an offense if the person knowingly divulges the\ncontents of a communication to another who is not the intended\nrecipient of the communication.\n(c) It is an affirmative defense to prosecution under\nSubsection (b) that the actor divulged the contents of the\ncommunication:\n(1) as authorized by federal or state law;\n(2) to a person employed, authorized, or whose facilities\nare used to forward the communication to the communication's\ndestination; or\n(3) to a law enforcement agency if the contents reasonably\nappear to pertain to the commission of a crime.\n(d) Except as provided by Subsection\n(e), an offense under\nSubsection"
+  },
+  {
+    "literal": "ILLEGAL DIVULGEPUB COMM COMMERCL GAIN",
+    "citation": "PC 16.05(e)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ILLEGAL DUMPING >1000LBS OR >200CFT",
@@ -9395,6 +13115,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "F*"
   },
   {
+    "literal": "ILLEGAL DUMPING; DISCARD LIGHTED MATERIALS",
+    "citation": "HSC 365.012(A)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ILLEGAL ENFORCE EXTREME RISK PROTECTIVE ORDER",
     "citation": "7C.005(b)",
     "statute": "CCP",
@@ -9425,6 +13151,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "11.089",
     "statute": "WC",
     "level": "M*"
+  },
+  {
+    "literal": "ILLEGAL LOAD EXTENSION",
+    "citation": "TRC 621.206 3283",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ILLEGAL PASS ON RIGHT",
+    "citation": "TRC 545.057 3020",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ILLEGAL PREFERENCE IN TRANSPORTATION",
@@ -9523,6 +13261,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "ILLEGAL USE OF METAL TIRES",
+    "citation": "TRC 547.612 3613",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ILLEGAL VOTING",
     "citation": "64.012(b)",
     "statute": "EC",
@@ -9535,10 +13279,28 @@ export const CJIS_CODES: Offense[] = [
     "level": "FS"
   },
   {
+    "literal": "ILLEGALLY PASSSED STREETRCAR",
+    "citation": "TRC 545.202 3094",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ILLGL BARTER/EXP INVEST/MARIJ>50LBS<2K",
+    "citation": "HSC 481.126(a)(2)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ILLICIT BEVERAGE PROHIBITED",
     "citation": "103.01",
     "statute": "ABC",
     "level": "M*"
+  },
+  {
+    "literal": "ILLUM AIRCRAFT W/LASER POINT IMPAIR OPER",
+    "citation": "PC 42.14(c)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ILLUM AIRCRAFT W/LASER POINTER IMPAIR OPERATOR",
@@ -9591,11 +13353,23 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "IMPLEMENTS FOR ESCAPE CORR FACIL/CSTDY",
+    "citation": "PC 38.09(b)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "IMPLEMENTS FOR ESCAPE CORR FACILITY/CUSTODY",
     "citation": "38.09(b)",
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 38.09. IMPLEMENTS FOR ESCAPE. (a) A person commits an\noffense if, with intent to facilitate escape, he introduces into a\ncorrectional facility, or provides a person in custody or an inmate\nwith, a deadly weapon or anything that may be useful for escape.\n(b) An offense under this section is a felony of the third\ndegree unless the actor introduced or provided a deadly weapon, in\nwhich event the offense is a felony of the second degree."
+  },
+  {
+    "literal": "IMPLMNTS ESC CORR FAC/CSTDY DEAD WEAP",
+    "citation": "PC 38.09(b)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "IMPLMNTS FOR ESC CORR FAC/CSTDY DEADLY WEAPON",
@@ -9615,6 +13389,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "107.06",
     "statute": "ABC",
     "level": "M*"
+  },
+  {
+    "literal": "IMPORTATION OF LIQ WITHOUT TAX STAMP",
+    "citation": "ABC 206.03",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "IMPORTATION OF LIQUOR WITHOUT TAX STAMP",
@@ -9668,10 +13448,28 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 38.111. IMPROPER CONTACT WITH VICTIM. (a) A person\ncommits an offense if the person, while confined in a correctional\nfacility after being charged with or convicted of an offense under\nSection 42.072 or listed in Article 62.001(5), Code of Criminal\nProcedure, contacts by letter, telephone, or any other means, either\ndirectly or through a third party, a victim of the offense or a\nmember of the victim's family, if the director of the correctional\nfacility has not, before the person makes contact with the victim:\n(1) received written and dated consent to the contact from:\n(A) the victim, if the victim was 17 years of age or\nolder at the time of the commission of the offense for which the\nperson is confined; or\n(B) if the victim was younger than 17 years of age at\nthe time of the commission of the offense for which the person is\nconfined:\n(i) a parent of the victim;\n(ii) a legal guardian of the victim;\n(iii) the victim, if the victim is 17 years of age\nor older at the time of giving the consent; or\n(iv) a member of the victim's family who is 17\nyears of age or older; and\n(2) provided the person with a copy of the consent.\n(b) The person confined in a correctional facility may not give\nthe written consent required under Subsection (a)(2)(A).\n\nPENAL CODE\n(c) It is an affirmative defense to prosecution under this\nsection that the contact was:\n(1) indirect contact made through an attorney representing\nthe person in custody; and\n(2) solely for the purpose of representing the person in a\ncriminal proceeding.\n(d) An offense under this section is a Class A misdemeanor\nunless the actor is confined in a correctional facility after being\nconvicted of a felony described by Subsection"
   },
   {
+    "literal": "IMPROPER CONTRCT W/VICTIM WHILE CONFINED",
+    "citation": "PC 38.111(d)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "IMPROPER DISPOSAL OF DISEASED CARCASS",
     "citation": "161.135(b)",
     "statute": "AGC",
     "level": "MB"
+  },
+  {
+    "literal": "IMPROPER FLASHING LIGHTS",
+    "citation": "TRC 547.305 3277",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "IMPROPER INFLUENCE",
+    "citation": "PC 36.04",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "IMPROPER LANE USAGE (LEFT TURN NOT FROM LEFT LANE)",
@@ -9680,10 +13478,28 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "IMPROPER LOADING",
+    "citation": "TRC 725.021 3621",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "IMPROPER LOOKOUT",
+    "citation": "TRC 545.417 3317",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "IMPROPER OBTAIN POSS AIRCRAFT SUBJ LIEN",
     "citation": "70.307",
     "statute": "PRC",
     "level": "MB"
+  },
+  {
+    "literal": "IMPROPER REL BETWEEN EDUCATOR/STUDENT",
+    "citation": "PC 21.12",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "IMPROPER RELATIONSHIP BETWEEN EDUCATOR/STUDENT",
@@ -9718,10 +13534,52 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "IMPROPER TURN OR HAND SIGNAL",
+    "citation": "TRC 545.106 3099",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "IMPROPER U TURN",
+    "citation": "ORD 10.03.061(C)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "IMPROPER U-TURN",
     "citation": "10.03.01(c)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "IMPROPER USE OF AUXILIARY DRIVING LAMPS",
+    "citation": "TRC 547.330 3152",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "IMPROPER USE OF AUXILIARY PASSING LAMPS",
+    "citation": "TRC 547.329 3150",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "IMPROPER USE OF BACK-UP LAMPS",
+    "citation": "TRC 547.332 3175",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "IMPROPER USE OF FOG LAMPS",
+    "citation": "TRC 547.328 3211",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "IMPROPER USE OF SPOT LAMPS",
+    "citation": "TRC 547.327 3209",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "IMPROPER USE OF VICTIM/ACCIDENT INFO 3+ CONV",
@@ -9736,10 +13594,46 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "IMPROPERLY DIRECTED LAMPS",
+    "citation": "TRC 547.305 3165",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "IMPROPERLY PARKED - 22 DEGREE PARKING",
     "citation": "10.04.009(3)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "IMPROPERLY SECURED TAILGATE",
+    "citation": "TRC 725.021 3622",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "INADEQUATE BED-SIDEBOARD FRONT/REAR",
+    "citation": "TRC 725.021 3624",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "INADEQUATE BRAKE RESERVOIR",
+    "citation": "TRC 547.406 3220",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "INADEQUATE OR DEFECTIVE BED",
+    "citation": "TRC 725.021 3623",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "INADEQUATE RESERVOIR SAFEGUARD",
+    "citation": "TRC 547.407 3221",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "INCOMPLETE RECORD GAS PRODUCT TAX",
@@ -9752,6 +13646,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "202.307",
     "statute": "TC",
     "level": "M*"
+  },
+  {
+    "literal": "INCREASED SPEED WHILE BEING OVERTAKEN",
+    "citation": "TRC 545.053 3125",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "INDCNT ASSLT HEALTH/MENTAL PRVDR PREV CONV IAT",
@@ -9887,6 +13787,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "F2"
   },
   {
+    "literal": "INFLUENCING SELECT/LOTTERY WINNER <=$10K",
+    "citation": "GC 466.307(a)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "INFLUENCING SELECT/LOTTERY WINNER >$10K",
+    "citation": "GC 466.307(a)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "INFO PROVIDED BY INSURANCE CO VIOL PRIVACY",
     "citation": "601.454",
     "statute": "TRC",
@@ -9895,6 +13807,24 @@ export const CJIS_CODES: Offense[] = [
   {
     "literal": "INFORMATION ONLY",
     "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "INFORMATION VEHICLE ACCIDENT OR FATALITY",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "INHALANT PARAPH  USE/POSS TO INHALE",
+    "citation": "HSC 485.033(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "INHALANT PARAPH DEL/SELL INHALENT",
+    "citation": "HSC 485.033(2)",
     "statute": "",
     "level": ""
   },
@@ -9909,6 +13839,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "485.033",
     "statute": "HSC",
     "level": "MB"
+  },
+  {
+    "literal": "INJ CHILD/ELDERLY/DISABLED CRIM NEG",
+    "citation": "PC 22.04(G)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "INJ CHILD/ELDERLY/DISABLED CRIM NEGLIGENCE",
@@ -9946,10 +13882,28 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 22.04. INJURY TO A CHILD, ELDERLY INDIVIDUAL, OR DISABLED\nINDIVIDUAL. (a) A person commits an offense if he intentionally,\nknowingly, recklessly, or with criminal negligence, by act or\nintentionally, knowingly, or recklessly by omission, causes to a\nchild, elderly individual, or disabled individual:\n(1) serious bodily injury;\n(2) serious mental deficiency, impairment, or injury; or\n(3) bodily injury.\n(a-1) A person commits an offense if the person is an owner,\noperator, or employee of a group home, nursing facility, assisted\nliving facility, boarding home facility, intermediate care facility\nfor persons with an intellectual or developmental disability, or\nother institutional care facility and the person intentionally,\nknowingly, recklessly, or with criminal negligence by omission causes\nto a child, elderly individual, or disabled individual who is a\nresident of that group home or facility:\n(1) serious bodily injury;\n(2) serious mental deficiency, impairment, or injury; or\n(3) bodily injury.\n(b) An omission that causes a condition described by Subsection\n(a)(1), (2), or (3) or (a-1)(1), (2), or (3) is conduct constituting\nan offense under this section if:\n(1) the actor has a legal or statutory duty to act; or\n(2) the actor has assumed care, custody, or control of a\n\nPENAL CODE\nchild, elderly individual, or disabled individual.\n(c) In this section:\n(1) \"Child\" means a person 14 years of age or younger.\n(2) \"Elderly individual\" means a person 65 years of age or\nolder.\n(3) \"Disabled individual\" means a person:\n(A) with one or more of the following:\n(i) autism spectrum disorder, as defined by Section\n1355.001, Insurance Code;\n(ii) developmental disability, as defined by\nSection 112.042, Human Resources Code;\n(iii) intellectual disability, as defined by\nSection 591.003, Health and Safety Code;\n(iv) severe emotional disturbance, as defined by\nSection 261.001, Family Code;\n(v) traumatic brain injury, as defined by Section\n92.001, Health and Safety Code; or\n(vi) mental illness, as defined by Section 571.003,\nHealth and Safety Code; or\n(B) who otherwise by reason of age or physical or\nmental disease, defect, or injury is substantially unable to protect\nthe person's self from harm or to provide food, shelter, or medical\ncare for the person's self.\n(4) Repealed by"
   },
   {
+    "literal": "INJ CHILD/ELDERLY/DISB RCKLSS BI/MENTAL",
+    "citation": "PC 22.04(E)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "INJURING/DESTROYING PIPELINE FACILITIES",
     "citation": "117.054(b)",
     "statute": "NRC",
     "level": "F*"
+  },
+  {
+    "literal": "INJURY CHILD/ELD/DISABLE W/INT BOD INJ",
+    "citation": "PC 22.04(F)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "INJURY CHILD/ELD/DISABLE W/INT SBI/MENTL",
+    "citation": "PC 22.04(E)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "INJURY DRAINAGE CANAL/DITCH",
@@ -9962,6 +13916,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "57.103",
     "statute": "WC",
     "level": "M*"
+  },
+  {
+    "literal": "INJURY TO BRIDGES AND APPURTENANCES",
+    "citation": "ORD 8.05.006",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "INJURY TO PUBLIC PROPERTY",
@@ -10043,6 +14003,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 35.02. INSURANCE FRAUD. (a) A person commits an offense\nif, with intent to defraud or deceive an insurer, the person, in\nsupport of a claim for payment under an insurance policy:\n(1) prepares or causes to be prepared a statement that:\n(A) the person knows contains false or misleading\n\nPENAL CODE\nmaterial information; and\n(B) is presented to an insurer; or\n(2) presents or causes to be presented to an insurer a\nstatement that the person knows contains false or misleading material\ninformation.\n(a-1) A person commits an offense if the person, with intent to\ndefraud or deceive an insurer and in support of an application for an\ninsurance policy:\n(1) prepares or causes to be prepared a statement that:\n(A) the person knows contains false or misleading\nmaterial information; and\n(B) is presented to an insurer; or\n(2) presents or causes to be presented to an insurer a\nstatement that the person knows contains false or misleading material\ninformation.\n(b) A person commits an offense if, with intent to defraud or\ndeceive an insurer, the person solicits, offers, pays, or receives a\nbenefit in connection with the furnishing of goods or services for\nwhich a claim for payment is submitted under an insurance policy.\n(c) An offense under Subsection (a) or (b) is:\n(1) a Class C misdemeanor if the value of the claim is less\nthan $100;\n(2) a Class B misdemeanor if the value of the claim is $100\nor more but less than $750;\n(3) a Class A misdemeanor if the value of the claim is $750\nor more but less than $2,500;\n(4) a state jail felony if the value of the claim is $2,500\nor more but less than $30,000;\n(5) a felony of the third degree if the value of the claim\nis $30,000 or more but less than $150,000;\n(6) a felony of the second degree if the value of the claim\nis $150,000 or more but less than $300,000; or\n(7) a felony of the first degree if:\n(A) the value of the claim is $300,000 or more; or\n(B) an act committed in connection with the commission\nof the offense places a person at risk of death or serious bodily\ninjury."
   },
   {
+    "literal": "INSURANCE FRAUD W/INT TO DEFRAUD",
+    "citation": "PC 35.02(d)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "INSURANCE FRAUD W/INT TO DEFRAUD/DECEIVE",
     "citation": "35.02(d)",
     "statute": "PC",
@@ -10054,6 +14020,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "823.501(b)",
     "statute": "IC",
     "level": "F*"
+  },
+  {
+    "literal": "INT BOD INJ CHILD/ELDER/DISAB ST FAC EMP",
+    "citation": "PC 22.04(f)(3)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "INT BOD INJ CHILD/ELDER/DISABLED STATE FAC EMP",
@@ -10287,6 +14259,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 38.152. INTERFERENCE WITH RADIO FREQUENCY LICENSED TO\n\nPENAL CODE\nGOVERNMENT ENTITY. (a) A person commits an offense if, without the\neffective consent of the law enforcement agency, fire department, or\nemergency medical services provider, the person intentionally\ninterrupts, disrupts, impedes, jams, or otherwise interferes with a\nradio frequency that is licensed by the Federal Communications\nCommission to a government entity and is used by the law enforcement\nagency, fire department, or emergency medical services provider.\n(b) An offense under this section is a Class A misdemeanor,\nexcept that the offense is a state jail felony if the actor committed\nthe offense with the intent to:\n(1) facilitate the commission of another offense; or\n(2) interfere with the ability of a law enforcement agency,\na fire department, or an emergency medical services provider to\nrespond to an emergency."
   },
   {
+    "literal": "INTERF W/RADIO FREQ INTND OFF/INTERF RES",
+    "citation": "PC 38.152(b)(1)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "INTERF W/SEALED WAREHOUSE INSPECTION OR INV",
     "citation": "14.079",
     "statute": "AGC",
@@ -10325,11 +14303,23 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "INTERFER W/CHILD CUSTODY",
+    "citation": "PC 25.03",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "INTERFER W/EMER REQ FOR ASSIST W/PREV CONVIC",
     "citation": "42.062",
     "statute": "PC",
     "level": "FS",
     "statuteText": "Sec. 42.062. INTERFERENCE WITH EMERGENCY REQUEST FOR\nASSISTANCE. (a) An individual commits an offense if the individual\n\nPENAL CODE\nknowingly prevents or interferes with another individual's ability to\nplace an emergency call or to request assistance, including a request\nfor assistance using an electronic communications device, in an\nemergency from a law enforcement agency, medical facility, or other\nagency or entity the primary purpose of which is to provide for the\nsafety of individuals.\n(b) An individual commits an offense if the individual\nrecklessly renders unusable an electronic communications device,\nincluding a telephone, that would otherwise be used by another\nindividual to place an emergency call or to request assistance in an\nemergency from a law enforcement agency, medical facility, or other\nagency or entity the primary purpose of which is to provide for the\nsafety of individuals.\n(c) An offense under this section is a Class A misdemeanor,\nexcept that the offense is a state jail felony if the actor has\npreviously been convicted under this section.\n(d) In this section, \"emergency\" means a condition or\ncircumstance in which any individual is or is reasonably believed by\nthe individual making a call or requesting assistance to be in fear\nof imminent assault or in which property is or is reasonably believed\nby the individual making the call or requesting assistance to be in\nimminent danger of damage or destruction.\nAdded by"
+  },
+  {
+    "literal": "INTERFER W/EMER REQ FOR ASSIST W/PRV CNV",
+    "citation": "PC 42.062(C)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "INTERFER W/EMERGENCY REQ FOR ASSISTANCE",
@@ -10345,6 +14335,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "INTERFER W/GOVT LICENSED RADIO FREQ",
+    "citation": "PC 38.152(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "INTERFER W/GOVT LICENSED RADIO FREQUENCY",
     "citation": "38.152(b)",
     "statute": "PC",
@@ -10352,11 +14348,47 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 38.152. INTERFERENCE WITH RADIO FREQUENCY LICENSED TO\n\nPENAL CODE\nGOVERNMENT ENTITY. (a) A person commits an offense if, without the\neffective consent of the law enforcement agency, fire department, or\nemergency medical services provider, the person intentionally\ninterrupts, disrupts, impedes, jams, or otherwise interferes with a\nradio frequency that is licensed by the Federal Communications\nCommission to a government entity and is used by the law enforcement\nagency, fire department, or emergency medical services provider.\n(b) An offense under this section is a Class A misdemeanor,\nexcept that the offense is a state jail felony if the actor committed\nthe offense with the intent to:"
   },
   {
+    "literal": "INTERFER W/OMBUDSMAN - RETALIATE INFO",
+    "citation": "HRC 101.064(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "INTERFER W/POLICE SERV ANIMAL INJURY",
+    "citation": "PC 38.151(b)(6,7)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "INTERFER W/POLICE SERV ANIMAL KILLING",
+    "citation": "PC 38.151(b)(6,7)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "INTERFER W/POLICE SERV ANML DPRVE HNLDNG",
+    "citation": "PC 38.151(b)(3,4,5)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "INTERFER W/POLICE SERV ANML THROWS OBJ",
+    "citation": "PC 38.151(b)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "INTERFER W/PUBLIC DUTIES",
     "citation": "38.15(b)",
     "statute": "PC",
     "level": "MB",
     "statuteText": "Sec. 38.15. INTERFERENCE WITH PUBLIC DUTIES. (a) A person\ncommits an offense if the person with criminal negligence interrupts,\ndisrupts, impedes, or otherwise interferes with:\n(1) a peace officer while the peace officer is performing a\nduty or exercising authority imposed or granted by law;\n(2) a person who is employed to provide emergency medical\nservices including the transportation of ill or injured persons while\n\nPENAL CODE\nthe person is performing that duty;\n(3) a fire fighter, while the fire fighter is fighting a\nfire or investigating the cause of a fire;\n(4) an animal under the supervision of a peace officer,\ncorrections officer, or jailer, if the person knows the animal is\nbeing used for law enforcement, corrections, prison or jail security,\nor investigative purposes;\n(5) the transmission of a communication over a citizen's\nband radio channel, the purpose of which communication is to inform\nor inquire about an emergency;\n(6) an officer with responsibility for animal control in a\ncounty or municipality, while the officer is performing a duty or\nexercising authority imposed or granted under Chapter 821 or 822,\nHealth and Safety Code;\n(7) a person who:\n(A) has responsibility for assessing, enacting, or\nenforcing public health, environmental, radiation, or safety measures\nfor the state or a county or municipality;\n(B) is investigating a particular site as part of the\nperson's responsibilities under Paragraph (A);\n(C) is acting in accordance with policies and\nprocedures related to the safety and security of the site described\nby Paragraph (B); and\n(D) is performing a duty or exercising authority\nimposed or granted under the Agriculture Code, Health and Safety\nCode, Occupations Code, or Water Code; or\n(8) a person who is an employee or agent of a utility while\nthe person is performing a duty within the scope of that employment\nor agency.\n(b) An offense under this section is a Class B misdemeanor."
+  },
+  {
+    "literal": "INTERFER W/RIGHTS OF GUARD OF WARD",
+    "citation": "PC 25.1",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "INTERFER W/RIGHTS OF GUARDIAN OR WARD",
@@ -10414,6 +14446,30 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 28.07. INTERFERENCE WITH RAILROAD PROPERTY. (a) In this\nsection:\n\nPENAL CODE\n(1) \"Railroad property\" means:\n(A) a train, locomotive, railroad car, caboose, work\nequipment, rolling stock, safety device, switch, or connection that\nis owned, leased, operated, or possessed by a railroad; or\n(B) a railroad track, rail, bridge, trestle, or right-\nof-way owned or used by a railroad.\n(2) \"Tamper\" means to move, alter, or interfere with\nrailroad property.\n(b) A person commits an offense if the person:\n(1) throws an object or discharges a firearm or weapon at a\ntrain or rail-mounted work equipment; or\n(2) without the effective consent of the owner:\n(A) enters or remains on railroad property, knowing\nthat it is railroad property;\n(B) tampers with railroad property;\n(C) places an obstruction on a railroad track or right-\nof-way; or\n(D) causes in any manner the derailment of a train,\nrailroad car, or other railroad property that moves on tracks.\n(c) An offense under Subsection (b)(1) is a Class B misdemeanor\nunless the person causes bodily injury to another, in which event the\noffense is a felony of the third degree.\n(d) An offense under Subsection (b)(2)(A) is a Class C\nmisdemeanor.\n(e) An offense under Subsection (b)\n(2)(B),"
   },
   {
+    "literal": "INTERFERE RAILROAD PROPERTY>=$150K<$300K",
+    "citation": "PC 28.07(e)(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "INTERFERE RAILROAD PROPERTY>=$2,500<$30K",
+    "citation": "PC 28.07(e)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "INTERFERE RAILROAD PROPERTY>=$750<$2,500",
+    "citation": "PC 28.07(e)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "INTERFERE W/AUTH ELECTR DEV /RESIDNTS RM",
+    "citation": "HSC 555.162(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "INTERFERE W/AUTH ELECTR DEVICE IN RESIDENTS RM",
     "citation": "555.162(a)",
     "statute": "HSC",
@@ -10450,6 +14506,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "INTERFERE WITH FUNERAL PROCESSION",
+    "citation": "TRC 545.065 3314",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "INTERFERE WITH STREETRCAR",
+    "citation": "TRC 545.203 3130",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "INTERFERE WITH TEXAS MILITARY FORCES",
     "citation": "437.210(b)",
     "statute": "GC",
@@ -10460,6 +14528,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "11.091(a)",
     "statute": "WC",
     "level": "M*"
+  },
+  {
+    "literal": "INTERFERENCE W/INVEST OF ABUSE/NEGLECT",
+    "citation": "FC 261.3032(b)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "INTERFERENCE W/INVESTIGATION OF ABUSE/NEGLECT",
@@ -10500,11 +14574,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 49.09. ENHANCED OFFENSES AND PENALTIES. (a) Except as\nprovided by Subsection\n(b), an offense under Section 49.04, 49.05,\n49.06, or 49.065 is a Class A misdemeanor, with a minimum term of\nconfinement of 30 days, if it is shown on the trial of the offense\nthat the person has previously been convicted one time of an offense\nrelating to the operating of a motor vehicle while intoxicated, an\noffense of operating an aircraft while intoxicated, an offense of\noperating a watercraft while intoxicated, or an offense of operating\nor assembling an amusement ride while intoxicated.\n(b) An offense under Section 49.04, 49.045, 49.05, 49.06,\n49.061, or 49.065 is a felony of the third degree if it is shown on\nthe trial of the offense that the person has previously been\nconvicted:\n\n(1) one time of an offense under Section 49.08 or an\noffense under the laws of another state if the offense contains\nelements that are substantially similar to the elements of an offense\nunder Section 49.08; or"
   },
   {
+    "literal": "INTOX ASSLT CAUSE SBI PEACE OFC/FIREFIGH",
+    "citation": "PC 49.09(B-1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "INTOX ASSLT CAUSE SBI PEACE OFFICER/JUDGE IAT",
     "citation": "49.09(b-1)(2)",
     "statute": "PC",
     "level": "F1",
     "statuteText": "Sec. 49.09. ENHANCED OFFENSES AND PENALTIES. (a) Except as\nprovided by Subsection\n(b), an offense under Section 49.04, 49.05,\n49.06, or 49.065 is a Class A misdemeanor, with a minimum term of\nconfinement of 30 days, if it is shown on the trial of the offense\nthat the person has previously been convicted one time of an offense\nrelating to the operating of a motor vehicle while intoxicated, an\noffense of operating an aircraft while intoxicated, an offense of\noperating a watercraft while intoxicated, or an offense of operating\nor assembling an amusement ride while intoxicated.\n(b) An offense under Section 49.04, 49.045, 49.05, 49.06,\n49.061, or 49.065 is a felony of the third degree if it is shown on\nthe trial of the offense that the person has previously been\nconvicted:\n(1) one time of an offense under Section 49.08 or an\noffense under the laws of another state if the offense contains\nelements that are substantially similar to the elements of an offense\nunder Section 49.08; or\n(2) two times of any other offense relating to the\noperating of a motor vehicle while intoxicated, operating an aircraft\nwhile intoxicated, operating a watercraft while intoxicated, or\noperating or assembling an amusement ride while intoxicated.\n(b-1) An offense under Section 49.07 is:"
+  },
+  {
+    "literal": "INTOX ASSLT CAUSES BRAIN INJ VEG STATE",
+    "citation": "PC 49.09(B-4)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "INTOX ASSLT CAUSES BRAIN INJ VEGETATIVE STATE",
@@ -10514,6 +14600,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 49.09. ENHANCED OFFENSES AND PENALTIES. (a) Except as\nprovided by Subsection\n(b), an offense under Section 49.04, 49.05,\n49.06, or 49.065 is a Class A misdemeanor, with a minimum term of\nconfinement of 30 days, if it is shown on the trial of the offense\nthat the person has previously been convicted one time of an offense\nrelating to the operating of a motor vehicle while intoxicated, an\noffense of operating an aircraft while intoxicated, an offense of\noperating a watercraft while intoxicated, or an offense of operating\nor assembling an amusement ride while intoxicated."
   },
   {
+    "literal": "INTOX MANSLTR CAUSE DEATH PEACE OFC/FIRE",
+    "citation": "PC 49.09(b-2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "INTOX MANSLTR DEATH PEACE OFC/FIRE/EMS/MULTIPL",
     "citation": "49.09(b-2)",
     "statute": "PC",
@@ -10521,11 +14613,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 49.09. ENHANCED OFFENSES AND PENALTIES. (a) Except as\nprovided by Subsection\n(b), an offense under Section 49.04, 49.05,\n49.06, or 49.065 is a Class A misdemeanor, with a minimum term of\nconfinement of 30 days, if it is shown on the trial of the offense\nthat the person has previously been convicted one time of an offense\nrelating to the operating of a motor vehicle while intoxicated, an\noffense of operating an aircraft while intoxicated, an offense of\noperating a watercraft while intoxicated, or an offense of operating\nor assembling an amusement ride while intoxicated.\n(b) An offense under Section 49.04, 49.045, 49.05, 49.06,\n49.061, or 49.065 is a felony of the third degree if it is shown on\nthe trial of the offense that the person has previously been\nconvicted:\n(1) one time of an offense under Section 49.08 or an\noffense under the laws of another state if the offense contains\nelements that are substantially similar to the elements of an offense\nunder Section 49.08; or\n(2) two times of any other offense relating to the\noperating of a motor vehicle while intoxicated, operating an aircraft\nwhile intoxicated, operating a watercraft while intoxicated, or\noperating or assembling an amusement ride while intoxicated.\n(b-1) An offense under Section 49.07 is:"
   },
   {
+    "literal": "INTOXICATION ASSAULT",
+    "citation": "TRC 521.341 3391",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "INTOXICATION ASSAULT W/VEHICLE SBI",
     "citation": "49.07(c)",
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 49.07. INTOXICATION ASSAULT. (a) A person commits an\noffense if the person, by accident or mistake:\n(1) while operating an aircraft, watercraft, or amusement\nride while intoxicated, or while operating a motor vehicle in a\npublic place while intoxicated, by reason of that intoxication causes\nserious bodily injury to another; or\n(2) as a result of assembling a mobile amusement ride while\nintoxicated causes serious bodily injury to another.\n(b) In this section, \"serious bodily injury\" means injury that\ncreates a substantial risk of death or that causes serious permanent\ndisfigurement or protracted loss or impairment of the function of any\nbodily member or organ.\n(c) Except as provided by Section 49.09, an offense under this\nsection is a felony of the third degree.\nAdded by"
+  },
+  {
+    "literal": "INTOXICATION MANSLAUGHTER",
+    "citation": "TRC 521.341 3390",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "INTOXICATION MANSLAUGHTER W/VEHICLE",
@@ -10547,10 +14651,10 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
-    "literal": "INVASION OF PRIVACY CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "INVALIDATION OF STAMP LOCAL DISTRIBUTOR",
+    "citation": "ABC 28.09",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "INVASIVE VISUAL RECORDING",
@@ -10585,10 +14689,34 @@ export const CJIS_CODES: Offense[] = [
     "level": "F*"
   },
   {
+    "literal": "ISSUANCE OF BAD CHECK",
+    "citation": "32.41",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ISSUE BAD CHECK FOR CHILD SUPPORT",
+    "citation": "PC 32.41(F)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ISSUE FALSE CERT OF WEIGHT/MEASUREMENT",
     "citation": "13.259",
     "statute": "AGC",
     "level": "MB"
+  },
+  {
+    "literal": "JAYWALKING-CROSS INTERSECT DIAGONALLY",
+    "citation": "TRC 552.005 3519",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "JUDGE/CLERK FAIL TO REPORT CONVICTIONS",
+    "citation": "TRC 543.203 3357",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "JUGGING",
@@ -10616,6 +14744,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "7.02.064",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "JUNK & UNSIGHTLY MATTER",
+    "citation": "ORD 7.02.064",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "JUNK & UNSIGHTLY MATTER (TRASH ON PROPERTY)",
@@ -10648,6 +14782,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "JUVENILE PICKUP ORDER",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "JUVENILE PROBLEM (INFO ONLY)",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "KEEPING A GAMBLING PLACE",
     "citation": "47.04",
     "statute": "PC",
@@ -10660,12 +14806,6 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 20.03. KIDNAPPING.\n(a) A person commits an offense if he\nintentionally or knowingly abducts another person."
-  },
-  {
-    "literal": "KIDNAPPING CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
   },
   {
     "literal": "KILLS/ALLOWS KILLED TEMP DET MULE DEER",
@@ -10740,6 +14880,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "F2"
   },
   {
+    "literal": "KNOWING FAIL TO MAKE REQ CHILD ABUSE RPT",
+    "citation": "FC 261.109(b) MA",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "KNOWINGLY ALTERED LICENSE PLATE IAT",
     "citation": "504.945(b)",
     "statute": "TRC",
@@ -10788,16 +14934,154 @@ export const CJIS_CODES: Offense[] = [
     "level": "F*"
   },
   {
+    "literal": "LACK OF CAUTION ON GREEN ARROW SIGNAL",
+    "citation": "TRC 544.007 3062",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - AFTER 10:30 PM",
+    "citation": "ORD 9.03.009(h)(9)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - ANIMALS PROHIBITED CERTAIN AREAS",
+    "citation": "ORD 9.03.007(E)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - BLOCKING BOAT RAMP",
+    "citation": "ORD 9.03.09(f)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - CAUSING WAKE IN NO WAKE AREA",
+    "citation": "ORD 9.03.008(B)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - DIVING WHERE PROHIBITED",
+    "citation": "ORD 9.03.008(f)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - DRIVING IN UNAUTHORIZED AREA",
+    "citation": "ORD 9.03.009(h)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - DUMPING TRASH",
+    "citation": "ORD 9.02.003",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - FISHING WHERE PROHIBITED",
+    "citation": "ORD 9.03.008(e)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - GLASS CONTAINER",
+    "citation": "ORD 9.03.009(I)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - HUNTING IN PROHIBITED AREA",
+    "citation": "ORD 9.03.009(c)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - INTERNAL COMBUST ENG W/N CITY LIM",
+    "citation": "ORD 9.03.008(b)1",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - INTERNAL COMBUSTION ENGINE",
+    "citation": "ORD 8.01.019",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - NO LIFE JACKET (UNDER 13)",
+    "citation": "TPW 31.066(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "LAKE - OPEN FIRES",
     "citation": "9.01.009(a)",
     "statute": "CO",
     "level": "MC"
   },
   {
+    "literal": "LAKE - OPER BOAT IN INLET/OUTLET WORKS",
+    "citation": "ORD 9.03.009(h)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - OPERATE BOAT W/SKIER NO SKI AREA",
+    "citation": "ORD 9.03.008(c)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - OPERATING BOAT NASWORTHY GATE",
+    "citation": "ORD 9.03.009(h)(6)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "LAKE - OPERATING BOAT W/OPEN EXHAUST",
     "citation": "9.01.032(b)(1)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "LAKE - PEDESTRIAN IN RESTRICTED AREA",
+    "citation": "ORD 9.03.009(H)(8)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - RIDING IN UNAUTH AREA/VEH/TRAIL",
+    "citation": "ORD 10.01.010",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - SWIM IN CEMENT BASIS MARY LEE PK",
+    "citation": "ORD 9.03.008(d)5",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - SWIMMING > 150' FROM SHORLINE",
+    "citation": "ORD 9.03.008(d)2",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - SWIMMING AT FISHERMAN'S PARK",
+    "citation": "ORD 9.03.008(d)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - SWIMMING AT MARINA OR BOAT RAMP",
+    "citation": "ORD 9.03.008(d)3",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "LAKE - SWIMMING IN PROHIBITED AREA",
@@ -10810,6 +15094,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "9.01.032(b)(2)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "LAKE - TRAIL ROPE/PULL TUBE IN NO WAKE",
+    "citation": "ORD 9.03.008(b)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LAKE - TRANSPORT OF REFUSE IN PARK AREA",
+    "citation": "ORD 9.02.003(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "LAKE AFTER 10:30 PM - NO PERMIT",
@@ -10926,6 +15222,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "LEAVING CHILD IN VEHICLE",
+    "citation": "PC 22.10",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "LEFT TURN FROM SONIC PROHIBITED",
     "citation": "10.03.092(8)",
     "statute": "CO",
@@ -10952,6 +15254,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "F*"
   },
   {
+    "literal": "LEND OR PERMIT USE OF DL/ID",
+    "citation": "TRC 521.453 3141",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "LEWD/IMMORAL/INDECENT CONDUCT",
     "citation": "104.01",
     "statute": "ABC",
@@ -10970,10 +15278,34 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "LICENSE PLATES - ATTEMPTED FICTITIOUS",
+    "citation": "TRC 502.475",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "LICENSE PLATES - BUYER'S TAG EXPIRED",
     "citation": "503.063(b)(2)",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "LICENSE PLATES - DEALER TAGS MISUSE",
+    "citation": "TRC 503.062",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LICENSE PLATES - FAIL TO REMOVE PLATE",
+    "citation": "TRC 502.492",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LICENSE PLATES - IMPROPERLY DISPLAYED",
+    "citation": "TRC 504.943(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "LICENSE PLATES - MISUSE OF ANTIQUE TAG",
@@ -10982,10 +15314,46 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "LICENSE PLATES - MISUSE OF FARM TAG",
+    "citation": "TRC 502.146(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LICENSE PLATES - NO CONSTRUCTION MACHINE",
+    "citation": "TRC 502.146(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LICENSE PLATES - NONE",
+    "citation": "TRC 504.943(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LICENSE PLATES - NONE/WRONG ON TRAILER",
+    "citation": "TRC 504.943(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LICENSE PLATES - OBSCURED",
+    "citation": "TRC 504.945(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "LICENSE PLATES - UNAUTHORIZED USE OF TEMPORARY TAG",
     "citation": "503.067(b)",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "LICENSE PLATES - WRONG PLATE ON VEHICLE",
+    "citation": "TRC 504.945(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "LICENSE PLATES DEALER TAGS MISUSE",
@@ -11060,16 +15428,64 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "LICENSE REQUIRED TO BREW/SALE BEER",
+    "citation": "ABC 61.01",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LIE, SIT, LOITER, STAND, SOLICIT - CITY BRIDGE",
+    "citation": "ORD 10.01.013 H3",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LIE, SIT, LOITER, STAND, SOLICIT - CITY INTERSECTION",
+    "citation": "ORD 10.01.013 H3",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LIE, SIT, LOITER, STAND, SOLICIT - CITY MEDIAN",
+    "citation": "ORD 10.01.013 H3",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LIE, SIT, LOITER, STAND, SOLICIT - CITY UNDERPASS",
+    "citation": "ORD 10.01.013 H3",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LIFE PRESERVING DEVICES",
+    "citation": "TPW 31.066",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "LIGHT TRESPASSES",
     "citation": "8.11.005",
     "statute": "CO",
     "level": "MC"
   },
   {
+    "literal": "LIGHTS - DEFECTIVE HEAD LIGHTS",
+    "citation": "TRC 545.321 3161",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "LIGHTS - UNAUTHORIZED FLASHING",
     "citation": "547.305(c)",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "LIGHTS - UNAUTHORIZED ON MOTORCYCLE",
+    "citation": "TRC 547.306",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "LIGHTS CLEARANCE, ID, SIDE MARKER LAMPS WRONG COLOR",
@@ -11132,6 +15548,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "LIGHTS ON VESSELS OR MOTORBOAT",
+    "citation": "TPW 31.064",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "LIGHTS UNAUTHORIZED AUXILIARY LIGHTING",
     "citation": "547.330(b)",
     "statute": "TC",
@@ -11186,12 +15608,6 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
-    "literal": "LIQUOR VIOLATION CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
-  },
-  {
     "literal": "LITTERING",
     "citation": "365.012(a)(d)",
     "statute": "HSC",
@@ -11202,6 +15618,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "547.303",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "LITTERING IN PARKING AREA",
+    "citation": "ORD 8.01.018",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "LIVESTOCK AUCTION COMMISSION MERCHANT W/O BOND",
@@ -11252,6 +15674,24 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "LOOSE MATERIAL NOT REMOVED-LOADED VEH",
+    "citation": "TRC 725.022 3625",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LOOSE MATERIAL NOT REMOVED-UNLOAD VEH",
+    "citation": "TRC 725.022 3626",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "LOST OR FOUND PROPERTY",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "LOTT-FALSE/INCORRECT/DECEPT STATEMENT",
     "citation": "466.312(a)",
     "statute": "GC",
@@ -11276,11 +15716,83 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "MADE U-TURN ON CURVE-OR HILL",
+    "citation": "TRC 545.102 3079",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAIL THEFT - 10 TO LESS THAN 30 ADDRESSES SJF",
+    "citation": "PC 31.20 (B)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAIL THEFT - 30 OR MORE ADDRESSES F3",
+    "citation": "PC 31.20 (B)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAIL THEFT - FEWER THAN 10 ADDRESSES -CLASS A",
+    "citation": "PC 31.20 (B)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAIL THEFT W/ID INFO ELDERLY/DISABLED ENH F1",
+    "citation": "PC 31.20 (E)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAIL THEFT W/ID INFO ELDERLY/DISABLED ENH F2",
+    "citation": "PC 31.20 (E)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAIL THEFT W/ID INFO ELDERLY/DISABLED ENH F3",
+    "citation": "PC 31.20 (E)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAIL THEFT-CONTAINING IDENTIFYING INFO - 50 OR MORE F1",
+    "citation": "PC 31.20 (D)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAIL THEFT-CONTAINING IDENTIFYING INFO 10 < 20 ADDRESSES F3",
+    "citation": "PC 31.20 (D)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAIL THEFT-CONTAINING IDENTIFYING INFO 20 < 50 ADDRESSES F2",
+    "citation": "PC 31.20 (D)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAIL THEFT-CONTAINING IDENTIFYING INFO <10 ADDRESSES SJF",
+    "citation": "PC 31.20 (D)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MAKE FIREARM ACCESS TO CHILD DEATH/SBI",
     "citation": "46.13(e)",
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 46.13. MAKING A FIREARM ACCESSIBLE TO A CHILD. (a) In\nthis section:\n(1) \"Child\" means a person younger than 17 years of age.\n(2) \"Readily dischargeable firearm\" means a firearm that is\nloaded with ammunition, whether or not a round is in the chamber.\n(3) \"Secure\" means to take steps that a reasonable person\nwould take to prevent the access to a readily dischargeable firearm\nby a child, including but not limited to placing a firearm in a\nlocked container or temporarily rendering the firearm inoperable by a\ntrigger lock or other means.\n(b) A person commits an offense if a child gains access to a\nreadily dischargeable firearm and the person with criminal\nnegligence:\n(1) failed to secure the firearm; or\n(2) left the firearm in a place to which the person knew or\nshould have known the child would gain access.\n\nPENAL CODE\n(c) It is an affirmative defense to prosecution under this\nsection that the child's access to the firearm:\n(1) was supervised by a person older than 18 years of age\nand was for hunting, sporting, or other lawful purposes;\n(2) consisted of lawful defense by the child of people or\nproperty;\n(3) was gained by entering property in violation of this\ncode; or\n(4) occurred during a time when the actor was engaged in an\nagricultural enterprise.\n(d) Except as provided by Subsection\n(e), an offense under this\nsection is a Class C misdemeanor."
+  },
+  {
+    "literal": "MAKE FIREARM ACCESSIBLE CHILD DEATH/SBI",
+    "citation": "PC 46.13(e)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "MAKE/POSS CFT INSP RPT/INS DOC INTD HRM/DFRAUD",
@@ -11295,10 +15807,34 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "MAKING FIREARM ACCESSIBLE TO CHILD",
+    "citation": "PC 46.13",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MAKING ILLEGAL FUTURES CONTRACTS",
     "citation": "8656",
     "statute": "VCS",
     "level": "F*"
+  },
+  {
+    "literal": "MAN DANGEROUS DRUG",
+    "citation": "HSC 483.043",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAN DEL CS NOT IN PG",
+    "citation": "HSC 481.119(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAN DEL CS NOT IN PG DFZ IAT",
+    "citation": "HSC 481.134(e)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "MAN DEL CS NOT IN PG DFZ IAT 481.119",
@@ -11307,16 +15843,46 @@ export const CJIS_CODES: Offense[] = [
     "level": "FS"
   },
   {
+    "literal": "MAN DEL CS PG 1 <1G",
+    "citation": "HSC 481.112(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MAN DEL CS PG 1 <1G USE CHILD 481.112",
     "citation": "481.140(a)",
     "statute": "HSC",
     "level": "F3"
   },
   {
+    "literal": "MAN DEL CS PG 1 >=1G<4G",
+    "citation": "HSC 481.112(C)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MAN DEL CS PG 1 >=1G<4G USE CHILD 481.112",
     "citation": "481.140(a)",
     "statute": "HSC",
     "level": "F1"
+  },
+  {
+    "literal": "MAN DEL CS PG 1 >=200G <400G",
+    "citation": "HSC 481.112(E)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAN DEL CS PG 1 >=400G",
+    "citation": "HSC 481.112(F)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAN DEL CS PG 1 >=4G<200G",
+    "citation": "HSC 481.112(D)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "MAN DEL CS PG 1-B <1G",
@@ -11361,10 +15927,70 @@ export const CJIS_CODES: Offense[] = [
     "level": "F1"
   },
   {
+    "literal": "MAN DEL CS PG 1A <20 AU",
+    "citation": "HSC 481.1121(b)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAN DEL CS PG 1A >=20<80AU",
+    "citation": "HSC 481.1121(b)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MAN DEL CS PG 1A >=20<80AU USE CHILD 481.1121",
     "citation": "481.140(a)",
     "statute": "HSC",
     "level": "F1"
+  },
+  {
+    "literal": "MAN DEL CS PG 1A >=4000AU",
+    "citation": "HSC 481.1121(b)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAN DEL CS PG 1A >=80<4,000AU",
+    "citation": "HSC 481.1121(b)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAN DEL CS PG 1A USE OF CHILD",
+    "citation": "HSC 481.14(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAN DEL CS PG 2 OR 2-A <1G",
+    "citation": "HSC 481.113(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAN DEL CS PG 2 OR 2-A >=1G<4G",
+    "citation": "HSC 481.113(c)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAN DEL CS PG 2 OR 2-A >=400G",
+    "citation": "HSC 481.113(e)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAN DEL CS PG 2 OR 2-A >=4G<400G",
+    "citation": "HSC 481.113(d)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAN DEL CS PG 2 USE OF CHILD",
+    "citation": "HSC 481.14(4)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "MAN DEL CS PG 2/2-A >=1G<4G USE CHILD 481.113",
@@ -11373,16 +15999,58 @@ export const CJIS_CODES: Offense[] = [
     "level": "F1"
   },
   {
+    "literal": "MAN DEL CS PG 3/4 <28G",
+    "citation": "HSC 481.114(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAN DEL CS PG 3/4 >= 400G",
+    "citation": "HSC 481.114(e)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAN DEL CS PG 3/4 >=200G<400G",
+    "citation": "HSC 481.114(d)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAN DEL CS PG 3/4 >=28G<200G",
+    "citation": "HSC 481.114(c)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MAN DEL CS PG 3/4 >=28G<200G USE CHILD 481.114",
     "citation": "481.140(a)",
     "statute": "HSC",
     "level": "F1"
   },
   {
+    "literal": "MAN DEL CS PG 3/4 USE OF CHILD",
+    "citation": "HSC 481.14(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAN DEL CS PG1 <1G DFZ IAT",
+    "citation": "HSC 481.134(d)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MAN DEL CS PG1 <1G DFZ IAT 481.112",
     "citation": "481.134(d)",
     "statute": "HSC",
     "level": "F3"
+  },
+  {
+    "literal": "MAN DEL CS PG1 USE OF CHILD",
+    "citation": "HSC 481.14(6)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "MAN DEL CS PG1-A AU <20 DFZ IAT 481.1121",
@@ -11397,6 +16065,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "MAN DEL CS PG2/2-A <1G DFZ IAT",
+    "citation": "HSC 481.134(d)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MAN DEL CS PG2/2-A <1G DFZ IAT 481.113",
     "citation": "481.134(d)",
     "statute": "HSC",
@@ -11409,6 +16083,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "MAN DEL CS PG3/4 <28G DFZ IAT",
+    "citation": "HSC 481.134(d)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MAN DEL CS PG3/4 <28G DFZ IAT 481.114",
     "citation": "481.134(d)",
     "statute": "HSC",
@@ -11419,6 +16099,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "481.140(a)",
     "statute": "HSC",
     "level": "F3"
+  },
+  {
+    "literal": "MAN DEL PG1-A AU <20 DFZ IAT",
+    "citation": "HSC 481.134(d)(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MAN SALE DISTRIBUTE TV DECODING/CABLE",
+    "citation": "PC 31.13(d)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "MAN SALE/POSS/USE CNTRFT/ALT DISABLE PLACARD",
@@ -11553,6 +16245,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "FS"
   },
   {
+    "literal": "MAN/DISTRIBUTE/ADVERT MULTICHAN VIDEO",
+    "citation": "PC 31.13",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MAN/DISTRIBUTE/ADVERTIZE MULTICHANNEL VIDEO",
     "citation": "31.13",
     "statute": "PC",
@@ -11623,6 +16321,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 19.04. MANSLAUGHTER. (a) A person commits an offense if\n\nPENAL CODE\nhe recklessly causes the death of an individual.\n(b) An offense under this section is a felony of the second\ndegree, except that the offense is a felony of the first degree if it\nis shown on the trial of the offense that the defendant committed an\noffense under Section 28.09 and that conduct caused the death of an\nindividual."
   },
   {
+    "literal": "MANUF, USE, POSSESS ILLEGAL SMOKING PROD",
+    "citation": "ORD 8.09.003",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MANUFACTURED HOUSING REGULATIONS",
     "citation": "1201.606",
     "statute": "OC",
@@ -11645,6 +16349,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "86.022(a)",
     "statute": "PWC",
     "level": "MB"
+  },
+  {
+    "literal": "MARRIAGE LICENSE FALSE IDENITIFICATION",
+    "citation": "FC 2.005(c)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "MARRIAGE LICENSE FALSE IDENTIFICATION",
@@ -11671,6 +16381,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "MASSAGE THERAPIST LICENSE REQUIRED",
+    "citation": "OC 455.151",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MASSAGE THERAPY LICENSE/OWNER VIOLATION",
     "citation": "455.352(a-1)(b)",
     "statute": "OC",
@@ -11689,16 +16405,64 @@ export const CJIS_CODES: Offense[] = [
     "level": "FS"
   },
   {
-    "literal": "MATERIAL WITNESS CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
-  },
-  {
     "literal": "MATERIALLY FALSE STATEMENT IN DOC/PROC",
     "citation": "4007.204(c)",
     "statute": "GC",
     "level": "F3"
+  },
+  {
+    "literal": "MEDICAID FRAUD > 25 < 50 CLAIMS IAT",
+    "citation": "PC 35A.02(b)(5)(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MEDICAID FRAUD >= $150K < $300K",
+    "citation": "PC 35A.02(b)(6)(A)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MEDICAID FRAUD >= $30K < $150K",
+    "citation": "PC 35A.02(b)(5)(A)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MEDICAID FRAUD >= 50 CLAIMS IAT",
+    "citation": "PC 35A.02(b)(6)(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MEDICAID FRAUD >=$100<$750",
+    "citation": "PC 35A.02(b)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MEDICAID FRAUD >=$2,500<$30K",
+    "citation": "PC 35A.02(b)(4)(A)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MEDICAID FRAUD >=$300K",
+    "citation": "PC 35A.02(b)(7)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MEDICAID FRAUD >=$750<$2,500",
+    "citation": "PC 35A.02(b)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MEDICAID FRAUD AMT UNK/OBST ATY GEN INV",
+    "citation": "PC 35A.02(b)(4)(B)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "MEDICAL PHYSICISTS REGULATIONS",
@@ -11749,6 +16513,12 @@ export const CJIS_CODES: Offense[] = [
     "level": ""
   },
   {
+    "literal": "MERCHANDISE ENCUMBERING ON SIDEWALKS",
+    "citation": "ORD 8.05.001",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MERCHANDISE ON SIDEWALKS",
     "citation": "N/A",
     "statute": "N/A",
@@ -11783,6 +16553,24 @@ export const CJIS_CODES: Offense[] = [
     "citation": "131.268",
     "statute": "NRC",
     "level": "M*"
+  },
+  {
+    "literal": "MIRROR VIOLATION",
+    "citation": "TRC 547.613 3230",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MIRRORS - NO REARVIEW",
+    "citation": "TRC 547.602(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MIRRORS - NO SIDE",
+    "citation": "TRC 547.602(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "MIRRORS NO REARVIEW",
@@ -11911,10 +16699,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "MISLABEL ABUSABLE SYNTH SUB W/PREV CONV",
+    "citation": "HSC 484.002(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MISLABELED ABUSABLE SYNTH SUB W/PREV CONV IAT",
     "citation": "484.002(b)",
     "statute": "HSC",
     "level": "MA"
+  },
+  {
+    "literal": "MISREP BY FORMER OFFICER/EMPL OF REG AG",
+    "citation": "GC 572.054",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "MISREP BY FORMER OFFICER/EMPL OF REGULATORY AG",
@@ -11954,6 +16754,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "MISREPRESENTATION OF AGE BY A MINOR",
+    "citation": "ABC 106.071(C)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MISSING PERSON",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MISUSE INFO BY CRIME STOPPER COUNCIL EMPLOYEE",
     "citation": "414.009",
     "statute": "GC",
@@ -11979,6 +16791,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "MOBILE HOME - FAIL TO SKIRT",
+    "citation": "ORD 12.03.033(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MOBILE HOME - NOT TIED DOWN",
     "citation": "12.03.033(a)",
     "statute": "CO",
@@ -12001,6 +16819,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "156.1045",
     "statute": "FC",
     "level": "MB"
+  },
+  {
+    "literal": "MODIFIED OR WEIGHTED MOTOR VEHICLE",
+    "citation": "TRC 727.001 3592",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "MONEY LAUNDERING >=$150K<$300K",
@@ -12031,16 +16855,22 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 34.02. MONEY LAUNDERING. (a) A person commits an offense\nif the person knowingly:\n(1) acquires or maintains an interest in, conceals,\npossesses, transfers, or transports the proceeds of criminal\nactivity;\n(2) conducts, supervises, or facilitates a transaction\ninvolving the proceeds of criminal activity;\n(3) invests, expends, or receives, or offers to invest,\nexpend, or receive, the proceeds of criminal activity or funds that\nthe person believes are the proceeds of criminal activity; or\n\nPENAL CODE\n(4) finances or invests or intends to finance or invest\nfunds that the person believes are intended to further the commission\nof criminal activity.\n(a-1) Knowledge of the specific nature of the criminal activity\ngiving rise to the proceeds is not required to establish a culpable\nmental state under this section.\n(b) For purposes of this section, a person is presumed to\nbelieve that funds are the proceeds of or are intended to further the\ncommission of criminal activity if a peace officer or a person acting\nat the direction of a peace officer represents to the person that the\nfunds are proceeds of or are intended to further the commission of\ncriminal activity, as applicable, regardless of whether the peace\nofficer or person acting at the peace officer's direction discloses\nthe person's status as a peace officer or that the person is acting\nat the direction of a peace officer.\n(c) It is a defense to prosecution under this section that the\nperson acted with intent to facilitate the lawful seizure,\nforfeiture, or disposition of funds or other legitimate law\nenforcement purpose pursuant to the laws of this state or the United\nStates.\n(d) It is a defense to prosecution under this section that the\ntransaction was necessary to preserve a person's right to\nrepresentation as guaranteed by the Sixth Amendment of the United\nStates Constitution and by Article 1, Section 10, of the Texas\nConstitution or that the funds were received as bona fide legal fees\nby a licensed attorney and at the time of their receipt, the attorney\ndid not have actual knowledge that the funds were derived from\ncriminal activity.\n(e) An offense under this section is:\n(1) a state jail felony if the value of the funds is $2,500\nor more but less than $30,000;\n(2) a felony of the third degree if the value of the funds\nis $30,000 or more but less than $150,000;"
   },
   {
-    "literal": "MONEY LAUNDERING CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "MORE THAN 4 DRIVING LAMPS LIGHTED",
+    "citation": "TRC 547.302 3157",
+    "statute": "",
+    "level": ""
   },
   {
-    "literal": "MORALS AND DECENCY CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "MORE THAN ONE LICENSE (CDL)",
+    "citation": "TRC 522.026 3300",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MORE THAN ONE VALID DL IN POSSESSION",
+    "citation": "TRC 521.451 3270",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "MOTOR FUEL METERING LICENSE VIOL W/PREV CONV",
@@ -12061,6 +16891,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "MOTOR VEHICLE INSPECTION VIOLATION",
+    "citation": "TRC 548.051 3205A",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MOTOR VEHICLE/TRANSPORTATION REGULATION",
     "citation": "2302.353(c)",
     "statute": "OC",
@@ -12079,16 +16915,46 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "MOTORCYCLE - NO 21 ACCOMPANYING",
+    "citation": "TRC 521.222(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MOTORCYCLE - NO FOOTREST / HANDHOLD",
+    "citation": "TRC 547.617",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MOTORCYCLE - NOT SEATED",
     "citation": "547.617",
     "statute": "TC",
     "level": "MC"
   },
   {
+    "literal": "MOTORCYCLE - PASS NOT RIDING ON SEAT",
+    "citation": "TRC 545.416(c)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MOTORCYCLE - PASSENGER NOT RIDING ON SEAT",
     "citation": "661.003(a)",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "MOTORCYCLE - PASSENGER UNDER 5 YOA",
+    "citation": "TRC 545.416(d)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "MOTORCYCLE - PERMIT PASSGER W/O HELMET",
+    "citation": "TRC 661.003(b)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "MOTORCYCLE NO 21 YR. OLD ACCOMPANYING",
@@ -12241,6 +17107,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "MTRCYCLE PASS WITHOUT APPROV HEAD GEAR",
+    "citation": "TRC 661.003 3120",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MUD FLAPS NONE",
     "citation": "661.003(b)",
     "statute": "TC",
@@ -12251,6 +17123,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "547.606",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "MUFFLER VIOLATION",
+    "citation": "TRC 547.604 3227",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "MUNICIPAL JOINT BOARD PERM GROUND TRANSPORT",
@@ -12285,6 +17163,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 19.02. MURDER. (a) In this section:\n(1) \"Adequate cause\" means cause that would commonly\n\nPENAL CODE\nproduce a degree of anger, rage, resentment, or terror in a person of\nordinary temper, sufficient to render the mind incapable of cool\nreflection.\n(2) \"Sudden passion\" means passion directly caused by and\narising out of provocation by the individual killed or another acting\nwith the person killed which passion arises at the time of the\noffense and is not solely the result of former provocation.\n(b) A person commits an offense if the person:\n(1) intentionally or knowingly causes the death of an\nindividual;\n(2) intends to cause serious bodily injury and commits an\nact clearly dangerous to human life that causes the death of an\nindividual;\n(3) commits or attempts to commit a felony, other than\nmanslaughter, and in the course of and in furtherance of the\ncommission or attempt, or in immediate flight from the commission or\nattempt, the person commits or attempts to commit an act clearly\ndangerous to human life that causes the death of an individual; or\n(4) knowingly manufactures or delivers a controlled\nsubstance included in Penalty Group 1-B under Section 481.1022,\nHealth and Safety Code, in violation of Section 481.1123, Health and\nSafety Code, and an individual dies as a result of injecting,\ningesting, inhaling, or introducing into the individual's body any\namount of the controlled substance manufactured or delivered by the\nactor, regardless of whether the controlled substance was used by\nitself or with another substance, including a drug, adulterant, or\ndilutant.\n(c) Except as provided by Subsection\n(d), an offense under this\nsection is a felony of the first degree."
   },
   {
+    "literal": "MURDER UNDER INFLUENCE SUDDEN PASSION",
+    "citation": "PC 19.02(D)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "MUST DISPLAY PERMIT",
     "citation": "11.04",
     "statute": "ABC",
@@ -12309,10 +17193,154 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "NO AUTO BRAKE APP ON BREAKAWAY TRAILERS",
+    "citation": "TRC 547.405 3216",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO BEAM INDICATOR",
+    "citation": "TRC 550.024 3275",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO CHAUFFEURS LICENSE",
+    "citation": "TRC 522.051 3262",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO CLEARANCE LAMPS",
+    "citation": "TRC 547.352 3177",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO COMMERCIAL DRIVER'S LICENSE (CDL)",
+    "citation": "TRC 522.011 3301",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO COMMERCIAL OPERATOR LICENSE",
+    "citation": "TRC 522.011 3258",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO DRIVER'S LICENSE",
+    "citation": "TRC 521.021 3103",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO DRIVER'S LICENSE (2ND OFFENSE)",
+    "citation": "TRC 521.021 3103A",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO DRIVER'S LICENSE (3RD OFFENSE)",
+    "citation": "TRC 521.021 3103B",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO FIRE EXTINGUISHER",
+    "citation": "TRC 547.607 3278",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO FLAGS ON PROJECTING LOAD DAYTIME",
+    "citation": "TRC 547.382 3224",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO FRONT SEAT BELTS (REQUIRED)",
+    "citation": "TRC 547.601 3251",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO IN-TRANSIT LICENSE",
+    "citation": "TRC 503.023 3664",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO LAMPS OR REFLECTORS ON LOAD AT NIGHT",
+    "citation": "TRC 547.382 3223",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO LICENSE PLATE LIGHT",
+    "citation": "TRC 547.322 3274",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO LIGHT ON ANIMAL-DRAWN VEHICLE",
+    "citation": "TRC 547.326 3603",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO MIRROR TOWING SKIER",
+    "citation": "TPW 31.07",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO MOTOR CYCLE ENDORSEMENT",
+    "citation": "TRC 521.221 3112",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO MUDFLAPS OR IMPROPER MUDFLAPS",
+    "citation": "TRC 547.606 3238",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO MULTIPLE-BEAM ROADLIGHTING EQUIP",
+    "citation": "TRC 547.333 3164",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO PARKING LAMPS",
+    "citation": "TRC 547.383 3173",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "NO PROOF OF FINANCIAL RESPONSIBILITY",
     "citation": "547.604",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "NO REFLECTORS WHEN REQUIRED",
+    "citation": "TRC 547.325 3176",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO SEAT BELT - ADULT PASSENGER",
+    "citation": "TRC 545.413 3033",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO SEAT BELT - DRIVER",
+    "citation": "TRC 545.413 3032",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "NO SIGNAL OF INTENT",
@@ -12327,6 +17355,90 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "NO SINGLE CONTROL TO OPERATE ALL BRAKES",
+    "citation": "TRC 547.402 3219",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO STOP LAMPS",
+    "citation": "TRC 547.323 3169",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO TAIL LAMPS",
+    "citation": "TRC 547.322 3166",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO TRAILER SAFETY CHAINS",
+    "citation": "TRC 545.410 3741",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO TRAILER TAGS",
+    "citation": "TRC 502.407 3656F",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO TURN SIGNAL LAMPS-WHEN REQUIRED",
+    "citation": "TRC 545.106 3171",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO TWO MEANS OF EMER BRAKE OPERATION",
+    "citation": "TRC 547.405 3218",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO VEH HAZARD WARNING LIGHT FARM EQUI",
+    "citation": "TRC 547.371 3604",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO WARNING SIGNAL FOR BRAKES",
+    "citation": "TRC 547.407 3222",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO WHITE FLAG ON TOW CHAIN OR CABLE",
+    "citation": "TRC 545.409 3197",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO WINDSHIELD WIPER",
+    "citation": "TRC 547.603 3232",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO/DEFECTIVE BRAKE ON BIKE OR MOTOR-BIKE",
+    "citation": "TRC 554.104 3504",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO/DEFECTIVE LAMP OR REFLEC-FARM EQUIP",
+    "citation": "TRC 547.371 3602",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NO/INOPER FIRE EXTINGUISHERS",
+    "citation": "TPW 31.067",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "NOISE - LOUD NOISE FROM MOTOR VEHICLE",
     "citation": "10.08.002",
     "statute": "CO",
@@ -12339,10 +17451,28 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "NON-GUARDIAN PRMTTED UNLICD DVRTO DRV",
+    "citation": "TRC 521.458 3365",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "NON-MOTORIZED VEH ON PROHIB ROADWAY",
+    "citation": "TRC 545.065 3520",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "NONCOMP OFFER/PROHIBITED OFFER BY CEASE ORDER",
     "citation": "4007.207(b)",
     "statute": "GC",
     "level": "FS"
+  },
+  {
+    "literal": "NONE OR DEFECTIVE PARKING BRAKES",
+    "citation": "TRC 547.404 3214",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "NONINDIGENOUS SNAKE PERMIT VIOL W/PREV CONV",
@@ -12435,6 +17565,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "NUMBERING LOCATON AND VISIBILITY BOW",
+    "citation": "TPW 31.032",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "NURSING REGULATIONS",
     "citation": "301.554",
     "statute": "OC",
@@ -12445,6 +17581,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "301.554",
     "statute": "OC",
     "level": "F3"
+  },
+  {
+    "literal": "OBEYING WARNING SIGNS & BARRICADES",
+    "citation": "TRC 472.022 3380",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "OBSCENE DISPLAY OR DISTRIBUTION",
@@ -12468,16 +17610,22 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 43.23. OBSCENITY. (a) A person commits an offense if,\nknowing its content and character, he wholesale promotes or possesses\nwith intent to wholesale promote any obscene material or obscene\ndevice.\n(b) Except as provided by Subsection"
   },
   {
-    "literal": "OBSCENTITY CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "OBSCURE/INTERFERE TRAFFIC CONTROL DEV",
+    "citation": "TRC 544.006 3378",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "OBSTRCT HINDR IMPDE INTERF W/PROP SEIZURE/SALE",
     "citation": "111.017(c)",
     "statute": "TC",
     "level": "MA"
+  },
+  {
+    "literal": "OBSTRUCT HIGHWAY PASSAGEWAY",
+    "citation": "PC 42.03",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "OBSTRUCT HWY PSGWAY",
@@ -12508,17 +17656,17 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 42.03. OBSTRUCTING HIGHWAY OR OTHER PASSAGEWAY. (a) A\nperson commits an offense if, without legal privilege or authority,\nhe intentionally, knowingly, or recklessly:\n(1) obstructs a highway, street, sidewalk, railway,\nwaterway, elevator, aisle, hallway, entrance, or exit to which the\n\nPENAL CODE\npublic or a substantial group of the public has access, or any other\nplace used for the passage of persons, vehicles, or conveyances,\nregardless of the means of creating the obstruction and whether the\nobstruction arises from his acts alone or from his acts and the acts\nof others; or\n(2) disobeys a reasonable request or order to move issued\nby a person the actor knows to be or is informed is a peace officer,\na fireman, or a person with authority to control the use of the\npremises:\n(A) to prevent obstruction of a highway or any of those\nareas mentioned in Subdivision (1); or\n(B) to maintain public safety by dispersing those\ngathered in dangerous proximity to a fire, riot, or other hazard.\n(b) For purposes of this section, \"obstruct\" means to render\nimpassable or to render passage unreasonably inconvenient or\nhazardous.\n(c) Except as otherwise provided by Subsections (c-1), (d), and\n(e), an offense under this section is a Class B misdemeanor.\n(c-1) An offense under this section is a state jail felony if,\nin committing the offense, the actor knowingly:"
   },
   {
-    "literal": "OBSTRUCT POLICE CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
-  },
-  {
     "literal": "OBSTRUCT/RETALIAT WEB ADD/PHN BOD INJ PUB SERV",
     "citation": "36.06(c)(2)",
     "statute": "PC",
     "level": "F2",
     "statuteText": "Sec. 36.06. OBSTRUCTION OR RETALIATION. (a) A person commits\nan offense if the person intentionally or knowingly harms or\nthreatens to harm another by an unlawful act:\n(1) in retaliation for or on account of the service or\nstatus of another as a:\n(A) public servant, witness, prospective witness, or\ninformant; or\n(B) person who has reported or who the actor knows\nintends to report the occurrence of a crime; or\n(2) to prevent or delay the service of another as a:\n(A) public servant, witness, prospective witness, or\ninformant; or\n(B) person who has reported or who the actor knows\nintends to report the occurrence of a crime.\n(a-1) A person commits an offense if the person posts on a\npublicly accessible website or discloses through an electronic\ncommunication the residence address or telephone number of an\nindividual the actor knows is a public servant or a member of a\npublic servant's family or household with the intent to cause harm or\na threat of harm to the individual or a member of the individual's\nfamily or household in retaliation for or on account of the service\nor status of the individual as a public servant.\n(b) In this section:\n(1) \"Electronic communication\" has the meaning assigned by\nSection 42.07.\n(1-a) \"Honorably retired peace officer\" means a peace\nofficer who:\n(A) did not retire in lieu of any disciplinary action;\n(B) was eligible to retire from a law enforcement\nagency or was ineligible to retire only as a result of an injury\nreceived in the course of the officer's employment with the agency;\nand\n(C) is entitled to receive a pension or annuity for\n\nPENAL CODE\nservice as a law enforcement officer or is not entitled to receive a\npension or annuity only because the law enforcement agency that\nemployed the officer does not offer a pension or annuity to its\nemployees.\n(2) \"Informant\" means a person who has communicated\ninformation to the government in connection with any governmental\nfunction.\n(3) \"Public servant\" has the meaning assigned by Section\n1.07, except that the term also includes:\n(A) an honorably retired peace officer; and\n(B) a person who contracts with the state to perform a\nservice in a civil commitment facility or an employee of that person.\n(c) An offense under this section is a felony of the third\ndegree, except that the offense is a felony of the second degree if:\n(1) the victim of the offense was harmed or threatened\nbecause of the victim's service or status as a juror; or\n(2) the actor's conduct is described by Subsection (a-1)\nand results in the bodily injury of a public servant or a member of a\npublic servant's family or household."
+  },
+  {
+    "literal": "OBSTRUCTED VIEW THROUGH WINDSHIELD",
+    "citation": "TRC 547.613 3231",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "OBSTRUCTING DISTRIBUTION OF ELECTION SUPPLIES",
@@ -12527,10 +17675,10 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
-    "literal": "OBSTRUCTION OF JUSTICE CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "OBSTRUCTING TRAFFIC",
+    "citation": "TRC 545.363 3320",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "OBSTRUCTION OF NAVIGABLE STREAMS",
@@ -12551,6 +17699,18 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F2",
     "statuteText": "Sec. 36.06. OBSTRUCTION OR RETALIATION. (a) A person commits\nan offense if the person intentionally or knowingly harms or\nthreatens to harm another by an unlawful act:\n(1) in retaliation for or on account of the service or\nstatus of another as a:\n(A) public servant, witness, prospective witness, or\ninformant; or\n(B) person who has reported or who the actor knows\nintends to report the occurrence of a crime; or\n(2) to prevent or delay the service of another as a:\n(A) public servant, witness, prospective witness, or\ninformant; or\n(B) person who has reported or who the actor knows\nintends to report the occurrence of a crime.\n(a-1) A person commits an offense if the person posts on a\npublicly accessible website or discloses through an electronic\ncommunication the residence address or telephone number of an\nindividual the actor knows is a public servant or a member of a\npublic servant's family or household with the intent to cause harm or\na threat of harm to the individual or a member of the individual's\nfamily or household in retaliation for or on account of the service\nor status of the individual as a public servant.\n(b) In this section:\n(1) \"Electronic communication\" has the meaning assigned by\nSection 42.07.\n(1-a) \"Honorably retired peace officer\" means a peace\nofficer who:\n(A) did not retire in lieu of any disciplinary action;\n(B) was eligible to retire from a law enforcement\nagency or was ineligible to retire only as a result of an injury\nreceived in the course of the officer's employment with the agency;\nand\n(C) is entitled to receive a pension or annuity for\n\nPENAL CODE\nservice as a law enforcement officer or is not entitled to receive a\npension or annuity only because the law enforcement agency that\nemployed the officer does not offer a pension or annuity to its\nemployees.\n(2) \"Informant\" means a person who has communicated\ninformation to the government in connection with any governmental\nfunction.\n(3) \"Public servant\" has the meaning assigned by Section\n1.07, except that the term also includes:\n(A) an honorably retired peace officer; and\n(B) a person who contracts with the state to perform a\nservice in a civil commitment facility or an employee of that person.\n(c) An offense under this section is a felony of the third\ndegree, except that the offense is a felony of the second degree if:\n(1) the victim of the offense was harmed or threatened\nbecause of the victim's service or status as a juror; or"
+  },
+  {
+    "literal": "OBSTRUCTION/RETAL WEBSITE POST ADD/PHN",
+    "citation": "PC 36.06(c)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OBTAIN UNAUTHORIZED LICENSE PLATE",
+    "citation": "TRC 502.409 3665",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "OCCUPATION RELATE TO LAW ENF/SECURITY W/CONVIC",
@@ -12583,6 +17743,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "OFFER GIFT TO PUBLIC SERVANT",
+    "citation": "PC 36.09",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "OFFER INEDIBLE ANIMAL PRODUCTS FOR SALE",
     "citation": "433.056",
     "statute": "HSC",
@@ -12600,6 +17766,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 36.09. OFFERING GIFT TO PUBLIC SERVANT. (a) A person\ncommits an offense if he offers, confers, or agrees to confer any\nbenefit on a public servant that he knows the public servant is\nprohibited by law from accepting.\n(b) An offense under this section is a Class A misdemeanor."
+  },
+  {
+    "literal": "OFFICIAL OPPR:INT IMPAIR ACCUR PEIMS RPT",
+    "citation": "PC 39.03(d)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "OFFICIAL OPPR:INTENT IMPAIR ACCURACY PEIMS RPT",
@@ -12638,6 +17810,24 @@ export const CJIS_CODES: Offense[] = [
     "citation": "29.046",
     "statute": "WC",
     "level": "M*"
+  },
+  {
+    "literal": "ONLINE IMPERSON-EMAIL/MESS W/IDENT INFO",
+    "citation": "PC 33.07(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ONLINE IMPERSON-NAME/PERSON CREATE PG",
+    "citation": "PC 33.07(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ONLINE IMPERSON-W/IDENT INFO SOLICIT EMS",
+    "citation": "PC 33.07(c)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ONLINE IMPERSONATION-EMAIL/MESS W/IDENT INFOR",
@@ -12696,6 +17886,18 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 33.021. ONLINE SOLICITATION OF A MINOR. (a) In this\nsection:\n(1) \"Minor\" means:\n(A) an individual who is younger than 17 years of age;\nor\n(B) an individual whom the actor believes to be younger\n\nPENAL CODE\nthan 17 years of age.\n(2) \"Sexual contact,\" \"sexual intercourse,\" and \"deviate\nsexual intercourse\" have the meanings assigned by Section 21.01.\n(3) \"Sexually explicit\" means any communication, language,\nor material, including a photographic or video image, that relates to\nor describes sexual conduct, as defined by Section 43.25.\n(b) A person who is 17 years of age or older commits an offense\nif, with the intent to commit an offense listed in Article\n62.001(5)(A), (B), or (K), Code of Criminal Procedure, the person,\nover the Internet, by electronic mail or text message or other\nelectronic message service or system, or through a commercial online\nservice, intentionally:\n(1) communicates in a sexually explicit manner with a\nminor; or\n(2) distributes sexually explicit material to a minor.\n(c) A person commits an offense if the person, over the\nInternet, by electronic mail or text message or other electronic\nmessage service or system, or through a commercial online service,\nknowingly solicits a minor to meet another person, including the\nactor, with the intent that the minor will engage in sexual contact,\nsexual intercourse, or deviate sexual intercourse with the actor or\nanother person."
   },
   {
+    "literal": "ONLINE SOLICITATION OF A  MINOR UNDER 14",
+    "citation": "PC 33.021(f)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "ONLINE SOLICITATION OF A MINOR",
+    "citation": "33.021",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ONLINE SOLICITATION OF A MINOR UNDER 14",
     "citation": "33.021(f)",
     "statute": "PC",
@@ -12713,6 +17915,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "601.371(c)",
     "statute": "TRC",
     "level": "M*"
+  },
+  {
+    "literal": "OPEN ALCOHOL CONTAINER IN VEHICLE",
+    "citation": "B154",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "OPEN BURN - BUILDING MATERIALS",
@@ -12733,10 +17941,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "OPEN CONTAINERS PROHIBITED - PKG STORE",
+    "citation": "ABC 22.1",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "OPEN CONTAINTERS PROH - WINE PACKAGE STORE",
     "citation": "24.09",
     "statute": "ABC",
     "level": "M*"
+  },
+  {
+    "literal": "OPEN CONTAINTERS PROH - WINE PCKG STORE",
+    "citation": "ABC 24.09",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "OPENING DOOR IN TRAFFIC",
@@ -12805,6 +18025,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "OPER MOTORCYCLE W/O APPROV HEADGEAR",
+    "citation": "TRC 661.003 3207",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OPER MTR VEH W/O LIC PLTS/ONE LIC PLATE",
+    "citation": "TRC 502.404 3667",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "OPER OF STASH HSE: VIC SEX ASSLT SBI DEATH IAT",
     "citation": "20.07(b)(2)",
     "statute": "PC",
@@ -12866,6 +18098,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "OPERATE MTR VEH WITH FICTITIOUS LIC PLTS",
+    "citation": "TRC 502.409 3666",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OPERATE PWC <> SUNSET & SUNRISE",
+    "citation": "TPW 31.106(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "OPERATE UNMAND ARCRAFT:SPORT VENUE:PREV CONV",
     "citation": "423.0046(d)",
     "statute": "GC",
@@ -12884,10 +18128,40 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "OPERATE UNREGISTERED MOTOR VEHICLE",
+    "citation": "TRC 502.002 3668",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OPERATE VEH MORE THAN ONE PASS - MINOR",
+    "citation": "TRC 545.424 3201",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OPERATE W/LIC FOR OTHER CLASS VEH",
+    "citation": "TRC 502.403 3669",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OPERATING BOAT IN RESTRICTED AREA",
+    "citation": "TPW 31.102",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "OPERATING VEHICLE RESEMBLING EMERGENCY VEHICLE",
     "citation": "773.017",
     "statute": "HSC",
     "level": "MC"
+  },
+  {
+    "literal": "OPERATING VEHICLE WHERE PROHIBITED",
+    "citation": "TRC 545.064 3322",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "OPERATION OF AIRCRAFT W/OUT AIRMAN CERT",
@@ -12922,6 +18196,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "ORDERS FOR PROHIBITION ON CONSUMP",
+    "citation": "ABC 109.35",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ORGANIZED RETAIL THEFT <$100",
     "citation": "31.16(d)(1)",
     "statute": "PC",
@@ -12943,11 +18223,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 31.16. ORGANIZED RETAIL THEFT. (a) A person commits an\noffense if the person:\n(1) acting in concert with one or more other persons,\nunlawfully appropriates retail merchandise, money, or other property\nfrom a merchant with the intent to deprive the merchant of the\nproperty;\n(2) on two or more occasions within a 180-day period,\nunlawfully appropriates retail merchandise, money, or other property\nfrom a merchant with the intent to deprive the merchant of the\nproperty;\n(3) knowingly obtains a benefit from conduct constituting\nan offense under Subdivision (1) or (2) that was committed by another\nperson; or\n(4) knowingly acts in concert with one or more other\npersons to overwhelm the security response of a merchant or a peace\nofficer for the purpose of committing an offense under Subdivision\n(1) or (2) or avoiding detection or apprehension for the offense.\n(b) In the prosecution of an offense under this section:\n(1) Sections 31.03(b) and (c) apply to the offense for\npurposes of determining whether property was unlawfully appropriated\nfrom a merchant; and\n(2) a person is presumed to have acted with the intent to\ndeprive a merchant of retail merchandise if the person:\n(A) altered or removed a label, universal product code,\nprice tag, or retail theft detector for retail merchandise; or\n(B) transferred retail merchandise from the\nmerchandise's packaging into other packaging.\n(c) It is not a defense to prosecution under this section that:\n(1) a person who acted in concert with the actor has not\nbeen charged, convicted, apprehended, or identified;\n(2) the offense occurred as a result of a deception or\nstrategy on the part of a law enforcement agency, including the use\nof an undercover operative or peace officer;\n(3) the actor was provided by a law enforcement agency with\na facility in which to commit the offense or an opportunity to engage\nin conduct constituting the offense; or\n\nPENAL CODE\n(4) the actor was solicited to commit the offense by a\npeace officer, and the solicitation was of a type that would\nencourage a person predisposed to commit the offense to actually\ncommit the offense but would not encourage a person not predisposed\nto commit the offense to actually commit the offense.\n(d) An offense under this section is:\n(1) a Class B misdemeanor if the total value of the\nproperty involved in the offense is less than $100;\n(2) a Class A misdemeanor if the total value of the\nproperty involved in the offense is $100 or more but less than $750;\n(3) a state jail felony if the total value of the property\ninvolved in the offense is $750 or more but less than $2,500;\n(4) a felony of the third degree if the total value of the\nproperty involved in the offense is $2,500 or more but less than\n$30,000;\n(5) a felony of the second degree if the total value of the\nproperty involved in the offense is $30,000 or more but less than\n$150,000; or\n(6) a felony of the first degree if the total value of the\nproperty involved in the offense is $150,000 or more."
   },
   {
+    "literal": "ORGANIZED RETAIL THEFT >=$150K<$300K",
+    "citation": "PC 31.16(c)(6)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ORGANIZED RETAIL THEFT >=$2,500<$30K",
     "citation": "31.16(d)(4)",
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 31.16. ORGANIZED RETAIL THEFT. (a) A person commits an\noffense if the person:\n(1) acting in concert with one or more other persons,\nunlawfully appropriates retail merchandise, money, or other property\nfrom a merchant with the intent to deprive the merchant of the\nproperty;\n(2) on two or more occasions within a 180-day period,\nunlawfully appropriates retail merchandise, money, or other property\nfrom a merchant with the intent to deprive the merchant of the\nproperty;\n(3) knowingly obtains a benefit from conduct constituting\nan offense under Subdivision (1) or (2) that was committed by another\nperson; or\n(4) knowingly acts in concert with one or more other\npersons to overwhelm the security response of a merchant or a peace\nofficer for the purpose of committing an offense under Subdivision\n(1) or (2) or avoiding detection or apprehension for the offense.\n(b) In the prosecution of an offense under this section:\n(1) Sections 31.03(b) and (c) apply to the offense for\npurposes of determining whether property was unlawfully appropriated\nfrom a merchant; and\n(2) a person is presumed to have acted with the intent to\ndeprive a merchant of retail merchandise if the person:\n(A) altered or removed a label, universal product code,\nprice tag, or retail theft detector for retail merchandise; or\n(B) transferred retail merchandise from the\nmerchandise's packaging into other packaging.\n(c) It is not a defense to prosecution under this section that:\n(1) a person who acted in concert with the actor has not\nbeen charged, convicted, apprehended, or identified;\n(2) the offense occurred as a result of a deception or\nstrategy on the part of a law enforcement agency, including the use\nof an undercover operative or peace officer;\n(3) the actor was provided by a law enforcement agency with\na facility in which to commit the offense or an opportunity to engage\nin conduct constituting the offense; or\n\nPENAL CODE\n(4) the actor was solicited to commit the offense by a\npeace officer, and the solicitation was of a type that would\nencourage a person predisposed to commit the offense to actually\ncommit the offense but would not encourage a person not predisposed\nto commit the offense to actually commit the offense.\n(d) An offense under this section is:\n(1) a Class B misdemeanor if the total value of the\nproperty involved in the offense is less than $100;\n(2) a Class A misdemeanor if the total value of the\nproperty involved in the offense is $100 or more but less than $750;\n(3) a state jail felony if the total value of the property\ninvolved in the offense is $750 or more but less than $2,500;\n(4) a felony of the third degree if the total value of the\nproperty involved in the offense is $2,500 or more but less than\n$30,000;"
+  },
+  {
+    "literal": "ORGANIZED RETAIL THEFT >=$300K",
+    "citation": "PC 31.16(c)(7)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ORGANIZED RETAIL THEFT >=$30K<$150K",
@@ -12968,6 +18260,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "276.014(b)",
     "statute": "EC",
     "level": "F2"
+  },
+  {
+    "literal": "OUT-OF-STATE WINE SHIPPER PERMIT 1ST VIO",
+    "citation": "ABC 54.12",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "OUT-OF-STATE WINE SHIPPER PERMIT 1ST VIOL",
@@ -13000,6 +18298,186 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "OVER 20,000 LBS SINGLE AXLE-PRMT VIOL",
+    "citation": "TRC 623.011 3723",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVER 20,000 SINGLE AXLE",
+    "citation": "TRC 621.101 3703",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVER 34,000 LBS TANDEM AXLE-PRMT VIOL",
+    "citation": "TRC 623.011 3724",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVER 34,000 LBS. TANDEM AXLE",
+    "citation": "TRC 621.101 3706",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVER 44,000 LBS TANDEM-CEMENT",
+    "citation": "TRC 622.012 3711",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVER 44,000 LBS TANDEM-SOLID WASTE",
+    "citation": "TRC 623.162 3713",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVER 5,000 GROSS WEIGHT",
+    "citation": "TRC 621.101 702A",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVER 64,000 LBS GROSS WEGHT - SOLID WAST",
+    "citation": "TRC 623.162 3714",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVER 64,000 LBS GROSS WEIGHT - CEMENT",
+    "citation": "TRC 622.012 3712",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVER ALLOWABLE GROSS WEIGHT-PRMT VIOL",
+    "citation": "TRC 623.011 3722",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVER AXLE LOAD (ZONED)",
+    "citation": "TRC 621.101 3708",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVER GROSS (ZONED)",
+    "citation": "TRC 621.301 3707",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVER GROSS WEIGHT",
+    "citation": "TRC 621.101 3702",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVER PASSENGER CAPACITY WATER CRAFT",
+    "citation": "TPW 31.106(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVER PERMISSIBLE WHEEL WEIGHT",
+    "citation": "TRC 621.101 3705",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVER TANDEM LOAD (ZONED)",
+    "citation": "TRC 621.102 3709",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVER TIRE SIZE LIMITATION",
+    "citation": "TRC 621.101 3704",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVER WEIGHT GROUP OF AXLES",
+    "citation": "TRC 621.101 3715",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVER WHEEL LOAD (ZONED)",
+    "citation": "TRC 621.102 3710",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVERDOSE",
+    "citation": "OD",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVERHEIGHT",
+    "citation": "TRC 621.207 3280",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVERLENGTH VEHICLE",
+    "citation": "TRC 621.203 3281",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVERWEIGHT GROUP OF AXLES (B-BRIDGE LAW)",
+    "citation": "TRC 521.101 3701",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVERWEIGHT GROUP OF AXLES- PRMT VIOL",
+    "citation": "TRC 623.011 3725",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVERWGHT GRP OF AXLES BRIDGE LW PRMT BP",
+    "citation": "TRC 623.011 3721",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OVERWIDTH",
+    "citation": "TRC 621.201 3279",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OWNER PERMIT NON-HAZARD VIOLATION",
+    "citation": "TRC 542.302 3360",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OWNER/GUARDIAN PERMIT HAZARD VIOL",
+    "citation": "TRC 542.302 3359",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OWNER/OP/EMP GROUP/NURSE NEGLT/OMISS",
+    "citation": "PC 22.04(a)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OWNER/OPER/EMP GROUP/NURSE W/INT BI",
+    "citation": "PC 22.04(f)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "OWNER/OPER/EMP GROUP/NURSE W/INT BOD INJ",
     "citation": "22.04(f)",
     "statute": "PC",
@@ -13012,6 +18490,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "FS",
     "statuteText": "Sec. 22.04. INJURY TO A CHILD, ELDERLY INDIVIDUAL, OR DISABLED\nINDIVIDUAL.\n(a) A person commits an offense if he intentionally,\nknowingly, recklessly, or with criminal negligence, by act or\nintentionally, knowingly, or recklessly by omission, causes to a\nchild, elderly individual, or disabled individual:\n(1) serious bodily injury;"
+  },
+  {
+    "literal": "OWNER/OPERATOR/EMP GROUP/NURSE RCKLS",
+    "citation": "PC 22.04(f)(5)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "OWNER/OPERATOR/EMP GROUP/NURSE RECKLESS",
@@ -13033,6 +18517,18 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F1",
     "statuteText": "Sec. 22.04. INJURY TO A CHILD, ELDERLY INDIVIDUAL, OR DISABLED\nINDIVIDUAL. (a) A person commits an offense if he intentionally,\nknowingly, recklessly, or with criminal negligence, by act or\nintentionally, knowingly, or recklessly by omission, causes to a\nchild, elderly individual, or disabled individual:\n(1) serious bodily injury;\n(2) serious mental deficiency, impairment, or injury; or\n(3) bodily injury.\n(a-1) A person commits an offense if the person is an owner,\noperator, or employee of a group home, nursing facility, assisted\nliving facility, boarding home facility, intermediate care facility\nfor persons with an intellectual or developmental disability, or\nother institutional care facility and the person intentionally,\nknowingly, recklessly, or with criminal negligence by omission causes\nto a child, elderly individual, or disabled individual who is a\nresident of that group home or facility:\n(1) serious bodily injury;\n(2) serious mental deficiency, impairment, or injury; or\n(3) bodily injury.\n(b) An omission that causes a condition described by Subsection\n(a)(1), (2), or (3) or (a-1)(1), (2), or (3) is conduct constituting\nan offense under this section if:\n(1) the actor has a legal or statutory duty to act; or\n(2) the actor has assumed care, custody, or control of a\n\nPENAL CODE\nchild, elderly individual, or disabled individual.\n(c) In this section:\n(1) \"Child\" means a person 14 years of age or younger.\n(2) \"Elderly individual\" means a person 65 years of age or\nolder.\n(3) \"Disabled individual\" means a person:\n(A) with one or more of the following:\n(i) autism spectrum disorder, as defined by Section\n1355.001, Insurance Code;\n(ii) developmental disability, as defined by\nSection 112.042, Human Resources Code;\n(iii) intellectual disability, as defined by\nSection 591.003, Health and Safety Code;\n(iv) severe emotional disturbance, as defined by\nSection 261.001, Family Code;\n(v) traumatic brain injury, as defined by Section\n92.001, Health and Safety Code; or\n(vi) mental illness, as defined by Section 571.003,\nHealth and Safety Code; or\n(B) who otherwise by reason of age or physical or\nmental disease, defect, or injury is substantially unable to protect\nthe person's self from harm or to provide food, shelter, or medical\ncare for the person's self.\n(4) Repealed by"
+  },
+  {
+    "literal": "OWNER/OPR/EMP GROUP/NURSE RECKLESS",
+    "citation": "PC 22.04(e)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "OWNER/OPR/EMP GROUP/NURSE W/INT VIOL",
+    "citation": "PC 22.04(e)(4)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "OYSTER CAP/CREW SIZE/CLOSED AREA 2+ CONV IAT",
@@ -13089,10 +18585,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "PARENT/GUARD CONSENT FOR MARRIAGE < 16",
+    "citation": "FC 2.102(h)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PARENT/GUARDIAN CONSENT FOR MARRIAGE UNDER 16",
     "citation": "2.102(h)",
     "statute": "FC",
     "level": "F3"
+  },
+  {
+    "literal": "PARENT/GUARF PRMT UNLICD MINOR TO DRV",
+    "citation": "TRC 521.458 3364",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PARENTAL CONSENT FOR MARRIAGE",
@@ -13111,6 +18619,30 @@ export const CJIS_CODES: Offense[] = [
     "citation": "9.01.006(d)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "PARK - BUILDING FIRE WHERE PROHIBITED",
+    "citation": "ORD 9.02.006",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARK - CAMPING IN NON-DESIGNATED AREA",
+    "citation": "ORD 9.02.004(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARK - DAMAGE TO PARK PROPERTY",
+    "citation": "ORD 9.02.002",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARK - GLASS CONTAINER IN PARK",
+    "citation": "ORD 9.02.003(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PARK - LEAVING TENT/VEHICLE OVERNIGHT W/O PERMIT",
@@ -13137,16 +18669,64 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "PARK - SALE OR ADVERTISING GOODS IN PARK",
+    "citation": "ORD 9.02.007",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARK - SLEEPING IN",
+    "citation": "ORD 9.02.005(8)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARK - SPEEDING 15 MPH ZONE IN PARK",
+    "citation": "ORD 9.02.004(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARK - UNCLEAN CAMP SITE",
+    "citation": "ORD 9.03.006(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PARK - UNLAWFUL GATHERING OF FIREWOOD",
     "citation": "9.01.009(a)",
     "statute": "CO",
     "level": "MC"
   },
   {
+    "literal": "PARK - VIOLATION OF SKATE PARK RULES",
+    "citation": "ORD 9.02.008",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARK 20 FT OF DRIVEWAY TO FIRE STATION",
+    "citation": "TRC 545.302 3571",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARK ALONG/OPPOSITE STREET EXCAVATION",
+    "citation": "TRC 545.302 3550",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PARK ANIMAL WASTE",
     "citation": "6.06.005",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "PARK BICYCLE ON SIDEWALK/IMPEDE TRAFFIC",
+    "citation": "TRC 545.302 3555",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PARK DRIVING OFF ROAD",
@@ -13167,16 +18747,70 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "PARK W/O LOCKING IGNITION/REMOVING KEYS",
+    "citation": "TRC 545.404 3566",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARK WITHIN 20 FT OF CROSSWALK AT INTER",
+    "citation": "TRC 545.302 3570",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARK WITHIN 30 FT OF A TRAF CONTROL DEV",
+    "citation": "TRC 545.302 3572",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PARK-LITTERING OR POLLUTING WATER",
     "citation": "9.01.016(b)(1)",
     "statute": "CO",
     "level": "MC"
   },
   {
+    "literal": "PARK/STAND IN FRONT OF PUBLIC/PVT DRIVE",
+    "citation": "TRC 545.302 3552",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARK/STOP BETWEEN SAFETY ZONE AND CURB",
+    "citation": "TRC 545.302 3551",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARK/STOP/STAND PROHIBIT AREA-HWY SIGN",
+    "citation": "TRC 545.303 3558",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PARKED 18\"\" + FROM CURB",
     "citation": "545.303",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "PARKED ALL NIGHT WHERE PROHIBITED",
+    "citation": "TRC 545.301 3559",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARKED AND FAILED TO SET BRAKES",
+    "citation": "TRC 545.404 3256",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARKED AT ANGLE-NOT PERMITTED",
+    "citation": "TRC 545.303 3560",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PARKED BLOCKING ACCESS TO DISABILITY ZONE",
@@ -13191,16 +18825,40 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "PARKED DOUBLE",
+    "citation": "TRC 545.302 3284",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PARKED DOUBLE PARKED",
     "citation": "545.302",
     "statute": "TC",
     "level": "MC"
   },
   {
+    "literal": "PARKED FACING TRAFFIC",
+    "citation": "TRC 545.303 3561",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARKED FAIL TO STOP ENGINE",
+    "citation": "TRC 545.404 3257",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PARKED IN BICYCLE LANE",
     "citation": "10.01.014",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "PARKED IN BLOCK WHERE FIRE ENGINE STOPED",
+    "citation": "TRC 545.407 3594",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PARKED IN BUS STOP",
@@ -13257,6 +18915,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "PARKED IN FIRE ZONE",
+    "citation": "684.001",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PARKED IN INTERSECTION",
     "citation": "545.302(3)",
     "statute": "TC",
@@ -13281,6 +18945,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "PARKED IN PROHIBITED AREA",
+    "citation": "TRC 545.302 3553",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARKED IN PROHIBITED MILITARY ZONE",
+    "citation": "TRC 545.303 3562",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PARKED IN ROADWAY FOR REPAIRS",
     "citation": "10.04.003(a)(2)",
     "statute": "CO",
@@ -13291,6 +18967,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "10.04.003(b)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "PARKED ON A CROSSWALK",
+    "citation": "TRC 545.302 3253",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PARKED ON BRIDGE",
@@ -13305,6 +18987,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "PARKED ON GRADE-FAILED TO TURN WHEELS",
+    "citation": "TRC 545.404 3255",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PARKED ON LEFT",
     "citation": "545.303",
     "statute": "TC",
@@ -13315,6 +19003,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "545.302(2)",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "PARKED OVERTIME",
+    "citation": "TRC 545.301 3563",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARKED UPON A BRIDGE OR IN TUNNEL",
+    "citation": "TRC 545.302 3254",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PARKED W/N 15' OF FIRE HYDRANT",
@@ -13335,16 +19035,100 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "PARKED WHEELS OVER 18 INCHES FROM CURB",
+    "citation": "TRC 545.303 3564",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PARKED WHERE PROHIBITED - STOP SIGN",
     "citation": "10.04.003(a)(b)(g)",
     "statute": "CO",
     "level": "MC"
   },
   {
+    "literal": "PARKED WITH HEAD LAMPS NOT DIMMED",
+    "citation": "TRC 547.383 3208",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARKED WITHIN 50 FT OF RAILROAD CROSSING",
+    "citation": "TRC 545.302 3565",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARKED WITHIN AN INTERSECTION",
+    "citation": "TRC 545.302 3252",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARKED WITHOUT LIGHTS",
+    "citation": "TRC 547.383 3199",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PARKED/STANDING IN FIRE LANE",
     "citation": "6.03.066",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "PARKING IN HANDICAPPED ZONE",
+    "citation": "TRC 681.011 3900",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARKING METER VIOLATION",
+    "citation": "TRC 545.301 3567",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARKING ON ROADWAY",
+    "citation": "TRC 545.301 3026",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARKING UNLAWFULLY-UNAUTHORIZED",
+    "citation": "TRC 545.304 3568",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARKING VIOLATION OTHER",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARKING WITHIN 15 FEET OF A FIRE HYDRANT",
+    "citation": "TRC 545.302 3569",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARKING/STOPPING/STANDING ON RR TRACKS",
+    "citation": "TRC 545.302 3557",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PARKING/STOPPING/STANDING ON SIDEWALK",
+    "citation": "TRC 545.302 3556",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PAROLE WARRANT",
+    "citation": "",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PARTICIPATE RACKETEER/UNLAW DBT COLL ENTERPRIZ",
@@ -13370,6 +19154,30 @@ export const CJIS_CODES: Offense[] = [
     "citation": "88.052",
     "statute": "NRC",
     "level": "MA"
+  },
+  {
+    "literal": "PASSED - INSUFFICIENT CLEARANCE",
+    "citation": "TRC 545.054 3018",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PASSED VEHICLE STOPPED FOR PEDESTRIAN",
+    "citation": "TRC 552.003 3093",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PASSENGER INTERFER W/DRIVER VIEW/CONT",
+    "citation": "TRC 545.417 3361",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PASSENGER/LOAD OBSTRUCT VIEW OF DRIVER",
+    "citation": "TRC 545.417 3160",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PASSING A SCHOOL BUS CAUSES SBI W/PREV CONV",
@@ -13426,6 +19234,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "PASSING W/N 100' OF INTERSECTION",
+    "citation": "TRC 545.056(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PAYMENT OF ADMISSION - FRAUDULENT AVOID",
+    "citation": "ORD 8.01.003",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PAYMENT OF ADMISSION - FRAUDULENTLY AVOIDING",
     "citation": "9.01.009(c)",
     "statute": "CO",
@@ -13438,10 +19258,52 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "PECAN NUTS, UNLAWFUL GATHERING",
+    "citation": "ORD 8.01.012",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PECANS - PICKING/THRASHING",
     "citation": "8.01.003",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "PED CROSS BETWEEN INTER WHERE PROHIB",
+    "citation": "TRC 552.005 3517",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PED DISREG RED SIGNAL-REGULAR LIGHT",
+    "citation": "TRC 552.001 3583",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PED DISREGED YELLOW SIGNAL-REGULAR LIGHT",
+    "citation": "TRC 552.001 3584",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PED FYROW-TUNNEL/CROSS PROVIDE",
+    "citation": "TRC 552.005 3522",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PED-FAIL TO USE LEFT SIDE OF ROADWAY",
+    "citation": "TRC 552.004 3516",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PEDESTRIAN - CARRYING WHITE CANE",
+    "citation": "TRC 552.010",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PEDESTRIAN - WALKING WITH TRAFFIC",
@@ -13466,6 +19328,30 @@ export const CJIS_CODES: Offense[] = [
     "citation": "552.005(a)",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "PEDESTRIAN DISOBEYED POLICE OFFICER",
+    "citation": "TRC 542.501 3518",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PEDESTRIAN ENTERING PATH OF VEHICLE",
+    "citation": "TRC 552.003 3521",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PEDESTRIAN FYROW WEHN NOT IN CROSSWALK",
+    "citation": "TRC 552.005 3523",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PEDESTRIAN ON A PROHIBITED ROADWAY",
+    "citation": "TRC 545.065 3524",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PEDESTRIAN USE OF SIDEWALK",
@@ -13537,10 +19423,34 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "PERMIT - ITINERANT MERCHANTS W/O PERMIT",
+    "citation": "ORD 5.04.031(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PERMIT DISCLOSEURE OR BANK RECORDS",
     "citation": "31.301",
     "statute": "FNC",
     "level": "MA"
+  },
+  {
+    "literal": "PERMIT FACILITATE ESCAPE",
+    "citation": "PC 38.07(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PERMIT FACILITATE ESCAPE CORRECTION FACL",
+    "citation": "PC 38.07(d)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PERMIT FACILITATE ESCAPE DEADLY WEAPON",
+    "citation": "PC 38.07(e)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PERMIT FOR MASS GATERINGS VIOL",
@@ -13565,6 +19475,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "11.01",
     "statute": "ABC",
     "level": "M*"
+  },
+  {
+    "literal": "PERMIT UNLAWFUL USE OF DL",
+    "citation": "TRC 521.451 3107",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PERMITTING CHILD TO DRIVE UNDER 18",
@@ -13596,6 +19512,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "262.1015(h)",
     "statute": "FC",
     "level": "F3"
+  },
+  {
+    "literal": "PERSON <18 YOA FALSE ID /BODY PIERCING",
+    "citation": "HSC 146.0125",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PERSON RIDE TRAILER/SEMI TRAILER DRAWN TRUCK",
@@ -13688,6 +19610,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "PLACE/MAINTAIN UNAUTHORIZED SIGN/DEV",
+    "citation": "TRC 544.006 3379",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PLACING CHILD ADOPTION BY UNAUTHORIZED PERSON",
     "citation": "162.025",
     "statute": "FC",
@@ -13712,16 +19640,46 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "PLUMBING - CONTRACTING W/O LICENSE SUB",
+    "citation": "OC 1301.351(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PLUMBING - CONTRACTOR FAILS TO PROV INS",
+    "citation": "ORD 4.04.126(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PLUMBING - CONTRACTOR FAILS TO PROVIDE INSURANCE",
     "citation": "4.04.126(a)",
     "statute": "CO",
     "level": "MC"
   },
   {
+    "literal": "PLUMBING - DRAINAGE & VENT TESTS",
+    "citation": "IPC 312.1",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PLUMBING - DRAINAGE & VENTS TESTS",
     "citation": "312.1",
     "statute": "IPC",
     "level": "MC"
+  },
+  {
+    "literal": "PLUMBING - IMP. WATER DIST PIPE INSTALL",
+    "citation": "IPC 501.3",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PLUMBING - IMPROP COLD WATER VLV INSTAL",
+    "citation": "IPC 503.1",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PLUMBING - IMPROPER COLD WATER VALVE INSTALLED",
@@ -13734,6 +19692,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "705.19.4",
     "statute": "IPC",
     "level": "MC"
+  },
+  {
+    "literal": "PLUMBING - IMPROPER MATERIAL INSTAL",
+    "citation": "IPC 504.6",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PLUMBING - IMPROPER MATERIAL INSTALLED",
@@ -13766,6 +19730,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "PLUMBING - NO INSPECTION SUBSEQUENT",
+    "citation": "IPC 107.2.3S",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PLUMBING - NO LICENSE DISPLAYED",
     "citation": "4.04.124",
     "statute": "CO",
@@ -13794,6 +19764,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "106.1",
     "statute": "IPC",
     "level": "MC"
+  },
+  {
+    "literal": "PLUMBING - W/O PERMIT SUBSEQUENT",
+    "citation": "IPC 106.1S",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PLUMBING FIXTURES/FACILITY REGULATION VIOL",
@@ -13846,6 +19822,18 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 43.26. POSSESSION OR PROMOTION OF CHILD PORNOGRAPHY. (a)\nIn this section:\n(1) \"Depiction of a child\" means, with respect to an image\nof a child contained in visual material:\n(A) a depiction of a child who was younger than 18\nyears of age at the time the image of the child was made; or\n(B) a depiction of a child:\n(i) who is recognizable as an actual person by the\nperson's face, likeness, or other distinguishing characteristic, such\nas a unique birthmark or other recognizable feature; and\n(ii) whose image as a child younger than 18 years\nof age was used in creating, adapting, or modifying the visual\nmaterial, including computer-generated visual material that was\n\nPENAL CODE\ncreated, adapted, or modified using an artificial intelligence\napplication or other computer software.\n(2) \"Depiction of a computer-generated child\" means, with\nrespect to an image of a child contained in visual material, a\ndepiction:\n(A) appearing to be a child younger than 18 years of\nage;\n(B) created using an artificial intelligence\napplication or other computer software; and\n(C) that to a reasonable person is virtually\nindistinguishable from an actual child younger than 18 years of age.\n(3) \"Promote\" and \"sexual conduct\" have the meanings\nassigned by Section 43.25.\n(4) \"School library\" means a library of a public or private\nprimary or secondary school.\n(5) \"Visual material\" means:\n(A) any film, photograph, videotape, negative, or slide\nor any photographic reproduction that contains or incorporates in any\nmanner any film, photograph, videotape, negative, or slide; or\n(B) any disk, diskette, or other physical medium, or a\nfile in any digital format, that allows an image to be displayed on a\ncomputer or other video screen and any image transmitted to a\ncomputer or other video screen by telephone line, cable, satellite\ntransmission, or other method.\n(a-1) A person commits an offense if:\n(1) the person intentionally or knowingly possesses, or\nintentionally or knowingly accesses with intent to view, visual\nmaterial that contains a visual depiction of a child engaging in\nsexual conduct, including a depiction of a child engaging in sexual\nconduct as a victim of an offense under Section 20A.02(a)(5), (6),\n(7), or (8); and\n(2) the person knows or should have known that the\ndepiction described by Subdivision (1) is of a child younger than 18\nyears of age at the time the image of the child was made.\n(a-2) A person commits an offense if the person:\n(1) intentionally or knowingly possesses, or intentionally\nor knowingly accesses with intent to view, visual material that\ncontains a visual depiction of a computer-generated child engaging in\nsexual conduct; and\n(2) either:\n\nPENAL CODE\n(A) knows or should have known that the depiction\ndescribed by Subdivision (1) appears to be of a child younger than 18\nyears of age; or\n(B) believes that the depiction is of an actual child\nyounger than 18 years of age at the time the image of the child was\nmade.\n(b) Repealed by"
   },
   {
+    "literal": "POSS ALC BEV NOT COVERED BY INVOICE",
+    "citation": "ABC 28.06",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS ALCOHOL BY A MINOR",
+    "citation": "ABC 106.05",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSS ALCOHOL BY A MINOR 3RD ENH IAT",
     "citation": "106.071(c)",
     "statute": "ABC",
@@ -13865,10 +19853,28 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 42.107. POSSESSION OF ANIMAL BY PERSON CONVICTED OF ANIMAL\nCRUELTY. (a) A person commits an offense if the person:\n(1) possesses or exercises control over an animal; and\n\nPENAL CODE\n(2) within the five-year period preceding the date of the\ninstant offense, has been previously convicted of an offense under:\n(A) Section 42.091, 42.092, or 42.10; or\n(B) federal law or a penal law of another state\ncontaining elements that are substantially similar to the elements of\nan offense described by Paragraph (A).\n(b) An offense under this section is a Class C misdemeanor,\nexcept that the offense is a Class B misdemeanor if the defendant has\nbeen previously convicted of an offense under this section.\nAdded by"
   },
   {
+    "literal": "POSS CERTAIN BEVERAGES PROH >17% ALC",
+    "citation": "ABC 25.09",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS CERTAIN BEVERAGES PROHIBITED",
+    "citation": "ABC 69.12",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSS CERTAIN BEVERAGES PROHIBITED >14% BY VOLU",
     "citation": "71.04",
     "statute": "ABC",
     "level": "M*"
+  },
+  {
+    "literal": "POSS CERTAIN BEVS PROHIB >14% BY VOLUME",
+    "citation": "ABC 71.04",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "POSS CERTAIN VIS MAT 2+ CONV",
@@ -13905,10 +19911,40 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "POSS CS NOT IN PG DFZ IAT",
+    "citation": "HSC 481.134(f)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSS CS NOT IN PG DFZ IAT 481.119",
     "citation": "481.134(f)",
     "statute": "HSC",
     "level": "MA"
+  },
+  {
+    "literal": "POSS CS PG 1 /1-B <1G",
+    "citation": "HSC 481.115(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS CS PG 1 >=1G<4G",
+    "citation": "HSC 481.115(C)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS CS PG 1 >=200G<400G",
+    "citation": "HSC 481.115(e)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS CS PG 1 >=400G",
+    "citation": "HSC 481.115(F)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "POSS CS PG 1-A <20AU",
@@ -13971,6 +20007,36 @@ export const CJIS_CODES: Offense[] = [
     "level": "F2"
   },
   {
+    "literal": "POSS CS PG 1A <20AU",
+    "citation": "HSC 481.1151(b)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS CS PG 1A >=20<80AU",
+    "citation": "HSC 481.1151(b)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS CS PG 1A >=4000<8,000AU",
+    "citation": "HSC 481.1151(b)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS CS PG 1A >=8000AU",
+    "citation": "HSC 481.1151(b)(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS CS PG 1A >=80<4,000AU",
+    "citation": "HSC 481.1151(b)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSS CS PG 2 < 1G",
     "citation": "481.116(b)",
     "statute": "HSC",
@@ -13983,6 +20049,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "POSS CS PG 2 >= 1G<4G",
+    "citation": "HSC 481.116(C)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSS CS PG 2 >= 400G",
     "citation": "481.116(e)",
     "statute": "HSC",
@@ -13993,6 +20065,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "481.116(d)",
     "statute": "HSC",
     "level": "F2"
+  },
+  {
+    "literal": "POSS CS PG 2 >= 4G<400G",
+    "citation": "HSC 481.116(D)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "POSS CS PG 2-A <= 2OZ",
@@ -14031,10 +20109,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "POSS CS PG 3 < 28G",
+    "citation": "HSC 481.117(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSS CS PG 3 >= 28G < 200G",
     "citation": "481.117(c)",
     "statute": "HSC",
     "level": "F3"
+  },
+  {
+    "literal": "POSS CS PG 3 >= 28G<200G",
+    "citation": "HSC 481.117(c)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "POSS CS PG 3 >= 400G",
@@ -14049,6 +20139,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "F2"
   },
   {
+    "literal": "POSS CS PG 3 >=200G<400G",
+    "citation": "HSC 481.117(d)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSS CS PG 3< 28G",
     "citation": "481.117(b)",
     "statute": "HSC",
@@ -14059,6 +20155,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "481.118(b)",
     "statute": "HSC",
     "level": "MB"
+  },
+  {
+    "literal": "POSS CS PG 4 <28G",
+    "citation": "HSC 481.118(b)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "POSS CS PG 4 >= 400G",
@@ -14073,10 +20175,28 @@ export const CJIS_CODES: Offense[] = [
     "level": "F2"
   },
   {
+    "literal": "POSS CS PG 4 >=200G<400G",
+    "citation": "HSC 481.118(d)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSS CS PG 4 >=28G < 200G",
     "citation": "481.118(c)",
     "statute": "HSC",
     "level": "F3"
+  },
+  {
+    "literal": "POSS CS PG 4 >=28G<200G",
+    "citation": "HSC 481.118(c)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS CS PG1 <1G DFZ IAT",
+    "citation": "HSC 481.134(D)(6)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "POSS CS PG1-A AU <20 DFZ IAT 481.1151",
@@ -14091,10 +20211,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "POSS CS PG2 <1G DFZ IAT",
+    "citation": "HSC 481.134(D)(7)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSS CS PG2 <1G DFZ IAT 481.116",
     "citation": "481.134(d)",
     "statute": "HSC",
     "level": "F3"
+  },
+  {
+    "literal": "POSS CS PG2-A 4OZ<5LB DFZ IAT",
+    "citation": "HSC 481.134(d)(8)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "POSS CS PG2-A 4OZ<5LB DFZ IAT 481.1161",
@@ -14103,10 +20235,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "POSS CS PG3 <28G DFZ IAT",
+    "citation": "HSC 481.134(e)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSS CS PG3 <28G DFZ IAT 481.117",
     "citation": "481.134(e)",
     "statute": "HSC",
     "level": "FS"
+  },
+  {
+    "literal": "POSS CS PG4 <28G DFZ IAT",
+    "citation": "HSC 481.134(f)(3)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "POSS CS PG4 <28G DFZ IAT 481.118",
@@ -14133,6 +20277,24 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "POSS DEL DRUG PARA TO PERON U/18YR",
+    "citation": "HSC 481.125",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS DEL DRUG PARAPHERNALIA",
+    "citation": "HSC 481.125(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS DRUG PARAPHERNALIA",
+    "citation": "481.125(A)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSS FORGED OIL/GAS TENDER/PERMIT",
     "citation": "85.388",
     "statute": "NRC",
@@ -14144,6 +20306,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 47.06. POSSESSION OF GAMBLING DEVICE, EQUIPMENT, OR\nPARAPHERNALIA. (a) A person commits an offense if, with the intent\nto further gambling, he knowingly owns, manufactures, transfers, or\npossesses any gambling device that he knows is designed for gambling\npurposes or any equipment that he knows is designed as a subassembly\nor essential part of a gambling device.\n(b) A person commits an offense if, with the intent to further\ngambling, he knowingly owns, manufactures, transfers commercially, or\npossesses any altered gambling equipment that he knows is designed\nfor gambling purposes or any equipment that he knows is designed as a\nsubassembly or essential part of such device.\n(c) A person commits an offense if, with the intent to further\ngambling, the person knowingly owns, manufactures, transfers\ncommercially, or possesses gambling paraphernalia.\n(d) It is a defense to prosecution under Subsections (a) and\n(c) that:\n(1) the device, equipment, or paraphernalia is used for or\nis intended for use in gambling that is to occur entirely in a\nprivate place;\n(2) a person involved in the gambling does not receive any\neconomic benefit other than personal winnings; and\n(3) except for the advantage of skill or luck, the chance\nof winning is the same for all participants.\n(e) An offense under this section is a Class A misdemeanor.\n(f) It is a defense to prosecution under Subsection (a) or (c)\nthat the person owned, manufactured, transferred, or possessed the\ngambling device, equipment, or paraphernalia for the sole purpose of\nshipping it to another jurisdiction where the possession or use of\nthe device, equipment, or paraphernalia was legal.\n(g) A district or county attorney is not required to have a\nsearch warrant or subpoena to inspect a gambling device or gambling\nequipment or paraphernalia on an ocean-going vessel that enters the\nterritorial waters of this state to call at a port in this state.\n\nPENAL CODE"
+  },
+  {
+    "literal": "POSS ILLICIT BEVERAGE/EQUIP. TO MANUF.",
+    "citation": "ABC 103.04",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "POSS ILLICIT BEVERAGE/EQUIPMENT TO MANUFACTURE",
@@ -14194,6 +20362,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 43.26. POSSESSION OR PROMOTION OF CHILD PORNOGRAPHY. (a)\nIn this section:\n(1) \"Depiction of a child\" means, with respect to an image\nof a child contained in visual material:\n(A) a depiction of a child who was younger than 18\nyears of age at the time the image of the child was made; or\n(B) a depiction of a child:\n(i) who is recognizable as an actual person by the\nperson's face, likeness, or other distinguishing characteristic, such\nas a unique birthmark or other recognizable feature; and\n(ii) whose image as a child younger than 18 years\nof age was used in creating, adapting, or modifying the visual\nmaterial, including computer-generated visual material that was\n\nPENAL CODE\ncreated, adapted, or modified using an artificial intelligence\napplication or other computer software.\n(2) \"Depiction of a computer-generated child\" means, with\nrespect to an image of a child contained in visual material, a\ndepiction:\n(A) appearing to be a child younger than 18 years of\nage;\n(B) created using an artificial intelligence\napplication or other computer software; and\n(C) that to a reasonable person is virtually\nindistinguishable from an actual child younger than 18 years of age.\n(3) \"Promote\" and \"sexual conduct\" have the meanings\nassigned by Section 43.25.\n(4) \"School library\" means a library of a public or private\nprimary or secondary school.\n(5) \"Visual material\" means:\n(A) any film, photograph, videotape, negative, or slide\nor any photographic reproduction that contains or incorporates in any\nmanner any film, photograph, videotape, negative, or slide; or\n(B) any disk, diskette, or other physical medium, or a\nfile in any digital format, that allows an image to be displayed on a\ncomputer or other video screen and any image transmitted to a\ncomputer or other video screen by telephone line, cable, satellite\ntransmission, or other method.\n(a-1) A person commits an offense if:\n(1) the person intentionally or knowingly possesses, or\nintentionally or knowingly accesses with intent to view, visual\nmaterial that contains a visual depiction of a child engaging in\nsexual conduct, including a depiction of a child engaging in sexual\nconduct as a victim of an offense under Section 20A.02(a)(5), (6),\n(7), or (8); and\n(2) the person knows or should have known that the\ndepiction described by Subdivision (1) is of a child younger than 18\nyears of age at the time the image of the child was made.\n(a-2) A person commits an offense if the person:\n(1) intentionally or knowingly possesses, or intentionally\nor knowingly accesses with intent to view, visual material that\ncontains a visual depiction of a computer-generated child engaging in\nsexual conduct; and\n(2) either:\n\nPENAL CODE\n(A) knows or should have known that the depiction\ndescribed by Subdivision (1) appears to be of a child younger than 18\nyears of age; or\n(B) believes that the depiction is of an actual child\nyounger than 18 years of age at the time the image of the child was\nmade.\n(b) Repealed by"
   },
   {
+    "literal": "POSS MAN/DISTR INSTR TO COMMIT RET THEFT",
+    "citation": "PC 31.15",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSS MAN/DISTR INSTR TO COMMIT RETAIL THEFT",
     "citation": "31.15",
     "statute": "PC",
@@ -14205,6 +20379,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "481.121(b)(1)",
     "statute": "HSC",
     "level": "MB"
+  },
+  {
+    "literal": "POSS MARIJ <2OZ",
+    "citation": "HSC 481.121(B)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "POSS MARIJ <= 2,000LBS > 50LBS",
@@ -14237,10 +20417,52 @@ export const CJIS_CODES: Offense[] = [
     "level": "F1"
   },
   {
+    "literal": "POSS MARIJ >2,000LBS",
+    "citation": "HSC 481.121(b)(6)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS MARIJ >2OZ<=4OZ",
+    "citation": "HSC 481.121(B)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS MARIJ >4OZ<=5LBS",
+    "citation": "HSC 481.121(b)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS MARIJ >50LBS<=2,000LBS",
+    "citation": "HSC 481.121(b)(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS MARIJ >5LBS<=50LBS",
+    "citation": "HSC 481.121(B)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS MARJ 2OZ<4OZ DFZ IAT",
+    "citation": "HSC 481.134(e)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSS MARJ 2OZ<4OZ DFZ IAT 481.121",
     "citation": "481.134(e)",
     "statute": "HSC",
     "level": "FS"
+  },
+  {
+    "literal": "POSS MARJ 4OZ<5LB DFZ IAT",
+    "citation": "HSC 481.134(d)(9)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "POSS MARJ 4OZ<5LB DFZ IAT 481.121",
@@ -14249,10 +20471,34 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "POSS MARJ <2OZ DFZ IAT",
+    "citation": "HSC 481.134(f)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSS MARJ <2OZ DFZ IAT 481.121",
     "citation": "481.134(f)",
     "statute": "HSC",
     "level": "MA"
+  },
+  {
+    "literal": "POSS OF CHILD PORN W/2+ PRV CNV IAT",
+    "citation": "PC 43.26(d)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS OF CHILD PORN W/PRV CNV IAT",
+    "citation": "PC 43.26(d)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS OF CHILD PORNOGRAPHY",
+    "citation": "PC 43.26(D)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "POSS OF CHILD PORNOGRAPHY <10 VISUAL DEPIC",
@@ -14269,16 +20515,52 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 43.26. POSSESSION OR PROMOTION OF CHILD PORNOGRAPHY. (a)\nIn this section:\n(1) \"Depiction of a child\" means, with respect to an image\nof a child contained in visual material:\n(A) a depiction of a child who was younger than 18\nyears of age at the time the image of the child was made; or\n(B) a depiction of a child:\n(i) who is recognizable as an actual person by the\nperson's face, likeness, or other distinguishing characteristic, such\nas a unique birthmark or other recognizable feature; and\n(ii) whose image as a child younger than 18 years\nof age was used in creating, adapting, or modifying the visual\nmaterial, including computer-generated visual material that was\n\nPENAL CODE\ncreated, adapted, or modified using an artificial intelligence\napplication or other computer software.\n(2) \"Depiction of a computer-generated child\" means, with\nrespect to an image of a child contained in visual material, a\ndepiction:\n(A) appearing to be a child younger than 18 years of\nage;\n(B) created using an artificial intelligence\napplication or other computer software; and\n(C) that to a reasonable person is virtually\nindistinguishable from an actual child younger than 18 years of age.\n(3) \"Promote\" and \"sexual conduct\" have the meanings\nassigned by Section 43.25.\n(4) \"School library\" means a library of a public or private\nprimary or secondary school.\n(5) \"Visual material\" means:\n(A) any film, photograph, videotape, negative, or slide\nor any photographic reproduction that contains or incorporates in any\nmanner any film, photograph, videotape, negative, or slide; or\n(B) any disk, diskette, or other physical medium, or a\nfile in any digital format, that allows an image to be displayed on a\ncomputer or other video screen and any image transmitted to a\ncomputer or other video screen by telephone line, cable, satellite\ntransmission, or other method.\n(a-1) A person commits an offense if:\n(1) the person intentionally or knowingly possesses, or\nintentionally or knowingly accesses with intent to view, visual\nmaterial that contains a visual depiction of a child engaging in\nsexual conduct, including a depiction of a child engaging in sexual\nconduct as a victim of an offense under Section 20A.02(a)(5), (6),\n(7), or (8); and\n(2) the person knows or should have known that the\ndepiction described by Subdivision (1) is of a child younger than 18\nyears of age at the time the image of the child was made.\n(a-2) A person commits an offense if the person:\n(1) intentionally or knowingly possesses, or intentionally\nor knowingly accesses with intent to view, visual material that\ncontains a visual depiction of a computer-generated child engaging in\nsexual conduct; and\n(2) either:\n\nPENAL CODE\n(A) knows or should have known that the depiction\ndescribed by Subdivision (1) appears to be of a child younger than 18\nyears of age; or\n(B) believes that the depiction is of an actual child\nyounger than 18 years of age at the time the image of the child was\nmade.\n(b) Repealed by"
   },
   {
+    "literal": "POSS PG1-A AU <20 DFZ IAT",
+    "citation": "HSC 481.134(d)(10)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSS PROH BEV ON LIC PREMISES",
     "citation": "69.12",
     "statute": "ABC",
     "level": "M*"
   },
   {
+    "literal": "POSS TRAN ANHYDRO AMM USE/TAMP W/EQ",
+    "citation": "HSC 481.1245",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSS TRAN ANHYDROUS AMMONIA USE/TAMPER W/EQUIP",
     "citation": "481.1245",
     "statute": "HSC",
     "level": "F3"
+  },
+  {
+    "literal": "POSS TRANS CHEM W/INT MAN CS NOT IN PG",
+    "citation": "HSC 481.124(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS TRANS CHEM W/INT MAN CS PG 1/1A",
+    "citation": "HSC 481.124(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS TRANS CHEMICAL W/INT MAN CS PG 2",
+    "citation": "HSC 481.124(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSS TRANS CHEMICAL W/INT MAN CS PG 3/4",
+    "citation": "HSC 481.124(4)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "POSS TRANSPORT CHEM W/INT MAN CS NOT IN PG",
@@ -14318,6 +20600,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 43.26. POSSESSION OR PROMOTION OF CHILD PORNOGRAPHY. (a)\nIn this section:\n(1) \"Depiction of a child\" means, with respect to an image\nof a child contained in visual material:\n(A) a depiction of a child who was younger than 18\nyears of age at the time the image of the child was made; or\n(B) a depiction of a child:\n(i) who is recognizable as an actual person by the\nperson's face, likeness, or other distinguishing characteristic, such\nas a unique birthmark or other recognizable feature; and\n(ii) whose image as a child younger than 18 years\nof age was used in creating, adapting, or modifying the visual\nmaterial, including computer-generated visual material that was\n\nPENAL CODE\ncreated, adapted, or modified using an artificial intelligence\napplication or other computer software.\n(2) \"Depiction of a computer-generated child\" means, with\nrespect to an image of a child contained in visual material, a\ndepiction:\n(A) appearing to be a child younger than 18 years of\nage;\n(B) created using an artificial intelligence\napplication or other computer software; and\n(C) that to a reasonable person is virtually\nindistinguishable from an actual child younger than 18 years of age.\n(3) \"Promote\" and \"sexual conduct\" have the meanings\nassigned by Section 43.25.\n(4) \"School library\" means a library of a public or private\nprimary or secondary school.\n(5) \"Visual material\" means:\n(A) any film, photograph, videotape, negative, or slide\nor any photographic reproduction that contains or incorporates in any\nmanner any film, photograph, videotape, negative, or slide; or\n(B) any disk, diskette, or other physical medium, or a\nfile in any digital format, that allows an image to be displayed on a\ncomputer or other video screen and any image transmitted to a\ncomputer or other video screen by telephone line, cable, satellite\ntransmission, or other method.\n(a-1) A person commits an offense if:\n(1) the person intentionally or knowingly possesses, or\nintentionally or knowingly accesses with intent to view, visual\nmaterial that contains a visual depiction of a child engaging in\nsexual conduct, including a depiction of a child engaging in sexual\nconduct as a victim of an offense under Section 20A.02(a)(5), (6),\n(7), or (8); and\n(2) the person knows or should have known that the\ndepiction described by Subdivision (1) is of a child younger than 18\nyears of age at the time the image of the child was made.\n(a-2) A person commits an offense if the person:\n(1) intentionally or knowingly possesses, or intentionally\nor knowingly accesses with intent to view, visual material that\ncontains a visual depiction of a computer-generated child engaging in\nsexual conduct; and\n(2) either:\n\nPENAL CODE\n(A) knows or should have known that the depiction\ndescribed by Subdivision (1) appears to be of a child younger than 18\nyears of age; or\n(B) believes that the depiction is of an actual child\nyounger than 18 years of age at the time the image of the child was\nmade.\n(b) Repealed by"
   },
   {
+    "literal": "POSS W/INT PROMO CHILD PORN W/PRV IAT",
+    "citation": "PC 43.26(g)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSS W/INT PROMOT CHILD PORN >=10>50 DPCT IAT",
     "citation": "43.26(g)(1)(B)",
     "statute": "PC",
@@ -14332,6 +20620,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 43.26. POSSESSION OR PROMOTION OF CHILD PORNOGRAPHY. (a)\nIn this section:\n(1) \"Depiction of a child\" means, with respect to an image\nof a child contained in visual material:\n(A) a depiction of a child who was younger than 18\nyears of age at the time the image of the child was made; or\n(B) a depiction of a child:\n(i) who is recognizable as an actual person by the\nperson's face, likeness, or other distinguishing characteristic, such\nas a unique birthmark or other recognizable feature; and\n(ii) whose image as a child younger than 18 years\nof age was used in creating, adapting, or modifying the visual\nmaterial, including computer-generated visual material that was\n\nPENAL CODE\ncreated, adapted, or modified using an artificial intelligence\napplication or other computer software.\n(2) \"Depiction of a computer-generated child\" means, with\nrespect to an image of a child contained in visual material, a\ndepiction:\n(A) appearing to be a child younger than 18 years of\nage;\n(B) created using an artificial intelligence\napplication or other computer software; and\n(C) that to a reasonable person is virtually\nindistinguishable from an actual child younger than 18 years of age.\n(3) \"Promote\" and \"sexual conduct\" have the meanings\nassigned by Section 43.25.\n(4) \"School library\" means a library of a public or private\nprimary or secondary school.\n(5) \"Visual material\" means:\n(A) any film, photograph, videotape, negative, or slide\nor any photographic reproduction that contains or incorporates in any\nmanner any film, photograph, videotape, negative, or slide; or\n(B) any disk, diskette, or other physical medium, or a\nfile in any digital format, that allows an image to be displayed on a\ncomputer or other video screen and any image transmitted to a\ncomputer or other video screen by telephone line, cable, satellite\ntransmission, or other method.\n(a-1) A person commits an offense if:\n(1) the person intentionally or knowingly possesses, or\nintentionally or knowingly accesses with intent to view, visual\nmaterial that contains a visual depiction of a child engaging in\nsexual conduct, including a depiction of a child engaging in sexual\nconduct as a victim of an offense under Section 20A.02(a)(5), (6),\n(7), or (8); and\n(2) the person knows or should have known that the\ndepiction described by Subdivision (1) is of a child younger than 18\nyears of age at the time the image of the child was made.\n(a-2) A person commits an offense if the person:\n(1) intentionally or knowingly possesses, or intentionally\nor knowingly accesses with intent to view, visual material that\ncontains a visual depiction of a computer-generated child engaging in\nsexual conduct; and\n(2) either:\n\nPENAL CODE\n(A) knows or should have known that the depiction\ndescribed by Subdivision (1) appears to be of a child younger than 18\nyears of age; or\n(B) believes that the depiction is of an actual child\nyounger than 18 years of age at the time the image of the child was\nmade.\n(b) Repealed by"
   },
   {
+    "literal": "POSS W/INT TO PROMOTE CHILD PORN",
+    "citation": "PC 43.26(g)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSS W/INT TO PROMOTE CHILD PORNOGRAPHY",
     "citation": "43.26(g)",
     "statute": "PC",
@@ -14344,6 +20638,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F1",
     "statuteText": "Sec. 43.26. POSSESSION OR PROMOTION OF CHILD PORNOGRAPHY. (a)\nIn this section:\n(1) \"Depiction of a child\" means, with respect to an image\nof a child contained in visual material:\n(A) a depiction of a child who was younger than 18\nyears of age at the time the image of the child was made; or\n(B) a depiction of a child:\n(i) who is recognizable as an actual person by the\nperson's face, likeness, or other distinguishing characteristic, such\nas a unique birthmark or other recognizable feature; and\n(ii) whose image as a child younger than 18 years\nof age was used in creating, adapting, or modifying the visual\nmaterial, including computer-generated visual material that was\n\nPENAL CODE\ncreated, adapted, or modified using an artificial intelligence\napplication or other computer software.\n(2) \"Depiction of a computer-generated child\" means, with\nrespect to an image of a child contained in visual material, a\ndepiction:\n(A) appearing to be a child younger than 18 years of\nage;\n(B) created using an artificial intelligence\napplication or other computer software; and\n(C) that to a reasonable person is virtually\nindistinguishable from an actual child younger than 18 years of age.\n(3) \"Promote\" and \"sexual conduct\" have the meanings\nassigned by Section 43.25.\n(4) \"School library\" means a library of a public or private\nprimary or secondary school.\n(5) \"Visual material\" means:\n(A) any film, photograph, videotape, negative, or slide\nor any photographic reproduction that contains or incorporates in any\nmanner any film, photograph, videotape, negative, or slide; or\n(B) any disk, diskette, or other physical medium, or a\nfile in any digital format, that allows an image to be displayed on a\ncomputer or other video screen and any image transmitted to a\ncomputer or other video screen by telephone line, cable, satellite\ntransmission, or other method.\n(a-1) A person commits an offense if:\n(1) the person intentionally or knowingly possesses, or\nintentionally or knowingly accesses with intent to view, visual\nmaterial that contains a visual depiction of a child engaging in\nsexual conduct, including a depiction of a child engaging in sexual\nconduct as a victim of an offense under Section 20A.02(a)(5), (6),\n(7), or (8); and\n(2) the person knows or should have known that the\ndepiction described by Subdivision (1) is of a child younger than 18\nyears of age at the time the image of the child was made.\n(a-2) A person commits an offense if the person:\n(1) intentionally or knowingly possesses, or intentionally\nor knowingly accesses with intent to view, visual material that\ncontains a visual depiction of a computer-generated child engaging in\nsexual conduct; and\n(2) either:\n\nPENAL CODE\n(A) knows or should have known that the depiction\ndescribed by Subdivision (1) appears to be of a child younger than 18\nyears of age; or\n(B) believes that the depiction is of an actual child\nyounger than 18 years of age at the time the image of the child was\nmade.\n(b) Repealed by"
+  },
+  {
+    "literal": "POSS, PURCH, CONSUM OF TOBACCO BY MINOR",
+    "citation": "HSC 161.252",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "POSS/ACC CHILD PORN SEX CNDCT 2+ PREV CONV IAT",
@@ -14523,16 +20823,52 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "POSSESS DECEPTIVE DL/ID",
+    "citation": "TRC 521.453 3147",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSSESS MORE THAN ONE VALID DL/ID",
+    "citation": "TRC 521.451 3144",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSSESS/SELL VEH W/VIN REMOVED/ALTERED",
+    "citation": "TRC 501.158 3671",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSSESSION CHILD-LIKE SEX DOLL INTEND PROMOTE",
     "citation": "43.231(d)",
     "statute": "PC",
     "level": "F3"
   },
   {
+    "literal": "POSSESSION OF ALCOHOL BEV. IN MV",
+    "citation": "PC 49.031",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "POSSESSION OF CHILD-LIKE SEX DOLL",
     "citation": "43.231(e)",
     "statute": "PC",
     "level": "FS"
+  },
+  {
+    "literal": "POSSESSION OF INTOXICANT ON SCHOOL GRNDS",
+    "citation": "EDC 37.122",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POSSESSION OR PROMOTION OF LEWD VISUAL MATERIAL DEPICTING CHILD",
+    "citation": "PC 43.262",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "POSSESSION/DELIVERY OF DRUG PARAPHERNALIA",
@@ -14545,6 +20881,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "92.008(c)",
     "statute": "GC",
     "level": "MA"
+  },
+  {
+    "literal": "POST OFFICE - RIGHT TRN ONLY (HARRIS AV)",
+    "citation": "ORD 10.03.094(c)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "POST OFFICE - RIGHT TURN ONLY (ABE ST)",
+    "citation": "ORD 10.03.094(c)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "POST OFFICE - RIGHT TURN ONLY (ABE ST.)",
@@ -14569,6 +20917,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "8.01.016",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "PRACTICE ADVERTISE LEGAL SERVI W/O LIC",
+    "citation": "HRC 12.001(b)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PRACTICE ADVERTISE LEGAL SERVICE W/O LICENSE",
@@ -14607,6 +20961,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "PRESENT DL ISSUED TO ANOTHER PERSON",
+    "citation": "TRC 521.451 3111",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PRESENT TO OFFICIAL FICTITIOUS INSP REPORT",
     "citation": "548.603(f)",
     "statute": "TRC",
@@ -14617,6 +20977,24 @@ export const CJIS_CODES: Offense[] = [
     "citation": "5282c(23)(3c)(2)",
     "statute": "VCS",
     "level": "MB"
+  },
+  {
+    "literal": "PREVENT EXECUTION OF CIVIL PROCESS",
+    "citation": "PC 38.16",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PREVENTING THE CONSQUENCES OF THEFT",
+    "citation": "CCP 18.16",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PREVENTION DETECT OF FRAUD  MEDICAL ASST",
+    "citation": "HRC 32.0391",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PREVENTION DETECTION OF FRAUD MEDICAL ASSIST",
@@ -14643,6 +21021,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "PRIVILEGES LIMITED TO LICENSED PREMISED",
+    "citation": "ABC 11.06",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PRIVILEGES LIMITED TO LICENSED PREMISES",
     "citation": "11.06",
     "statute": "ABC",
@@ -14667,6 +21051,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "FS"
   },
   {
+    "literal": "PROF FAIL RPRT CHILD ABUS INT CNC",
+    "citation": "FC 261.109(c) FS",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PROF FAIL TO MAKE REQ CHILD ABUSE REPORT",
     "citation": "261.109(c)",
     "statute": "FC",
@@ -14689,6 +21079,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "11.067(e)",
     "statute": "EDC",
     "level": "FS"
+  },
+  {
+    "literal": "PROH ACTIVITIES BY PERSON < THAN 18YRS",
+    "citation": "ABC 106.15",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PROH ACTIVITIES BY PERSON YOUNGER THAN 18YRS",
@@ -14763,6 +21159,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "PROH ON CIRC COURSE AROUND INDV WAT ACT",
+    "citation": "TPW 31.099",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PROH OWN/OPERATE/MANAGE BUSINESS BY SEX OFFEND",
     "citation": "46.002",
     "statute": "BCC",
@@ -14781,11 +21183,29 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "PROH SEXUAL CONDUCT",
+    "citation": "PC 25.02",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PROH SEXUAL CONDUCT WITH ANCESTOR/DESC",
+    "citation": "PC 25.02(c)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PROH SEXUAL CONDUCT WITH ANCESTOR/DESCENDANT",
     "citation": "25.02(c)",
     "statute": "PC",
     "level": "F2",
     "statuteText": "Sec. 25.02. PROHIBITED SEXUAL CONDUCT. (a) A person commits\nan offense if the person engages in sexual intercourse or deviate\nsexual intercourse with another person the actor knows to be, without\nregard to legitimacy:\n(1) the actor's ancestor or descendant by blood or\nadoption;\n(2) the actor's current or former stepchild or stepparent;\n(3) the actor's parent's brother or sister of the whole or\nhalf blood;\n(4) the actor's brother or sister of the whole or half\nblood or by adoption;\n(5) the children of the actor's brother or sister of the\nwhole or half blood or by adoption; or\n(6) the son or daughter of the actor's aunt or uncle of the\nwhole or half blood or by adoption.\n(b) For purposes of this section:\n(1) \"Deviate sexual intercourse\" means any contact between\nthe genitals of one person and the mouth or anus of another person\nwith intent to arouse or gratify the sexual desire of any person.\n(2) \"Sexual intercourse\" means any penetration of the\nfemale sex organ by the male sex organ.\n(c) An offense under this section is a felony of the third\ndegree, unless the offense is committed under Subsection"
+  },
+  {
+    "literal": "PROH SUB CORR FACIL-ATTEMPT",
+    "citation": "PC 38.11(h)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PROH SUB CORR/CIV COM FACIL-ATTEMPT",
@@ -14816,6 +21236,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 38.11. PROHIBITED SUBSTANCES AND ITEMS IN CORRECTIONAL OR\nCIVIL COMMITMENT FACILITY. (a) A person commits an offense if the\nperson provides, or possesses with the intent to provide:\n(1) an alcoholic beverage, controlled substance, or\ndangerous drug to a person in the custody of a correctional facility\nor residing in a civil commitment facility, except on the\nprescription of a practitioner;\n(2) a deadly weapon to a person in the custody of a\ncorrectional facility or residing in a civil commitment facility;\n(3) a cellular telephone or other wireless communications\ndevice or a component of one of those devices to a person in the\ncustody of a correctional facility;\n(4) money to a person confined in a correctional facility;\nor\n(5) a cigarette or tobacco product to a person confined in\na correctional facility, except that if the facility is a local jail\nregulated by the Commission on Jail Standards, the person commits an\noffense only if providing the cigarette or tobacco product violates a\nrule or regulation adopted by the sheriff or jail administrator that:\n(A) prohibits the possession of a cigarette or tobacco\nproduct by a person confined in the jail; or\n\nPENAL CODE\n(B) places restrictions on:\n(i) the possession of a cigarette or tobacco\nproduct by a person confined in the jail; or\n(ii) the manner in which a cigarette or tobacco\nproduct may be provided to a person confined in the jail.\n(b) A person commits an offense if the person takes an\nalcoholic beverage, controlled substance, or dangerous drug into a\ncorrectional facility or civil commitment facility.\n(c) A person commits an offense if the person takes a\ncontrolled substance or dangerous drug on property owned, used, or\ncontrolled by a correctional facility or civil commitment facility.\n(d) A person commits an offense if the person:\n(1) possesses an alcoholic beverage, controlled substance,\nor dangerous drug while in a correctional facility or civil\ncommitment facility or on property owned, used, or controlled by a\ncorrectional facility or civil commitment facility; or\n(2) possesses a deadly weapon while in a correctional\nfacility or civil commitment facility.\n(e) It is an affirmative defense to prosecution under\nSubsection (b), (c), or (d)(1) that the person possessed the\nalcoholic beverage, controlled substance, or dangerous drug pursuant\nto a prescription issued by a practitioner or while delivering the\nbeverage, substance, or drug to a warehouse, pharmacy, or\npractitioner on property owned, used, or controlled by the\ncorrectional facility or civil commitment facility. It is an\naffirmative defense to prosecution under Subsection (d)(2) that the\nperson possessing the deadly weapon is a peace officer or is an\nofficer or employee of the correctional facility or civil commitment\nfacility who is authorized to possess the deadly weapon while on duty\nor traveling to or from the person's place of assignment.\n(f) In this section:\n(1) \"Practitioner\" has the meaning assigned by Section\n481.002, Health and Safety Code.\n(2) \"Prescription\" has the meaning assigned by Section\n481.002, Health and Safety Code.\n(3) \"Cigarette\" has the meaning assigned by Section\n154.001, Tax Code.\n(4) \"Tobacco product\" has the meaning assigned by Section\n155.001, Tax Code.\n(5) \"Component\" means any item necessary for the current,\n\nPENAL CODE\nongoing, or future operation of a cellular telephone or other\nwireless communications device, including a subscriber identity\nmodule card or functionally equivalent portable memory chip, a\nbattery or battery charger, and any number of minutes that have been\npurchased or for which a contract has been entered into and during\nwhich a cellular telephone or other wireless communications device is\ncapable of transmitting or receiving communications.\n(6) \"Correctional facility\" means:\n(A) any place described by Section 1.07(a)(14)(A), (B),\nor (C); or\n(B) a secure correctional facility or secure detention\nfacility, as defined by Section 51.02, Family Code.\n(g) Except as otherwise provided by Subsections (g-1) and (g-\n2), an offense under this section is a felony of the third degree.\n(g-1) Except as otherwise provided by Subsection (g-2), an\noffense under Subsection"
   },
   {
+    "literal": "PROH SUBSTANCE/ITEM IN CORRECT FACILITY",
+    "citation": "PC 38.11(g)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PROH WEAPON",
     "citation": "46.05(e)",
     "statute": "PC",
@@ -14829,10 +21255,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "F2"
   },
   {
+    "literal": "PROH WEAPON KNUCKLES",
+    "citation": "PC 46.05(e)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PROH WEAPON KNUCKLES IAT WFZ 46.05",
     "citation": "46.11(a)",
     "statute": "PC",
     "level": "FS"
+  },
+  {
+    "literal": "PROH WEAPON KNUCKLES WEAPONS FREE ZNE",
+    "citation": "PC 46.11(3)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PROH WEAPON TIRE DEFLATION DEVCE IAT WFZ 46.05",
@@ -14846,6 +21284,18 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "FS",
     "statuteText": "Sec. 46.05. PROHIBITED WEAPONS. (a) A person commits an\noffense if the person intentionally or knowingly possesses,\nmanufactures, transports, repairs, or sells:\n(1) any of the following items, unless the item is\nregistered in the National Firearms Registration and Transfer Record\nmaintained by the Bureau of Alcohol, Tobacco, Firearms and Explosives\nor otherwise not subject to that registration requirement or unless\nthe item is classified as a curio or relic by the United States\nDepartment of Justice:\n\nPENAL CODE\n(A) an explosive weapon; or\n(B) a machine gun;\n(2) armor-piercing ammunition;\n(3) a chemical dispensing device;\n(4) a zip gun;\n(5) a tire deflation device; or\n(6) an improvised explosive device.\n(b) It is a defense to prosecution under this section that the\nactor's conduct was incidental to the performance of official duty by\nthe armed forces or national guard, a governmental law enforcement\nagency, or a correctional facility.\n(c) Repealed by"
+  },
+  {
+    "literal": "PROH WEAPON/WEAPONS FREE ZONE",
+    "citation": "PC 46.11(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PROHIB MOTOR VEH ON CONTROL ACCESS HWY",
+    "citation": "TRC 545.065 3128",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PROHIBITED ACTIVITY BY SCHOOL VENDOR 2ND",
@@ -14870,6 +21320,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "66.308",
     "statute": "PWC",
     "level": "MB"
+  },
+  {
+    "literal": "PROHIBITED CAMPING",
+    "citation": "PC 48.05",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PROHIBITED DISMEMBERMENT ABORTION",
@@ -14910,6 +21366,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 25.02. PROHIBITED SEXUAL CONDUCT. (a) A person commits\nan offense if the person engages in sexual intercourse or deviate\nsexual intercourse with another person the actor knows to be, without\nregard to legitimacy:\n(1) the actor's ancestor or descendant by blood or\nadoption;\n(2) the actor's current or former stepchild or stepparent;\n(3) the actor's parent's brother or sister of the whole or\nhalf blood;\n(4) the actor's brother or sister of the whole or half\nblood or by adoption;\n(5) the children of the actor's brother or sister of the\nwhole or half blood or by adoption; or\n(6) the son or daughter of the actor's aunt or uncle of the\nwhole or half blood or by adoption.\n(b) For purposes of this section:\n(1) \"Deviate sexual intercourse\" means any contact between\nthe genitals of one person and the mouth or anus of another person\nwith intent to arouse or gratify the sexual desire of any person.\n(2) \"Sexual intercourse\" means any penetration of the\nfemale sex organ by the male sex organ.\n(c) An offense under this section is a felony of the third\ndegree, unless the offense is committed under Subsection (a)(1), in\nwhich event the offense is a felony of the second degree."
   },
   {
+    "literal": "PROHIBITION UNREG/UNSTAMPED CIGARETTES",
+    "citation": "PC 48.015",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PROHIBITION UNREGULATED/UNSTAMPED CIGARETTES",
     "citation": "48.015",
     "statute": "PC",
@@ -14917,11 +21379,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 48.015. PROHIBITIONS RELATING TO CERTAIN CIGARETTES. (a)\nA person may not acquire, hold, own, possess, or transport for sale\nor distribution in this state or import or cause to be imported into\nthis state for sale or distribution in this state:\n(1) cigarettes that do not comply with all applicable\nrequirements imposed by or under federal law and implementing\nregulations; or\n(2) cigarettes to which stamps may not be affixed under\nSection 154.0415, Tax Code, other than cigarettes lawfully imported\nor brought into the state for personal use and cigarettes lawfully\nsold or intended to be sold as duty-free merchandise by a duty-free\nsales enterprise in accordance with 19 U.S.C. Section 1555(b), as\namended.\n(b) A person who commits an act prohibited by Subsection (a),\nknowing or having reason to know that the person is doing so, is\nguilty of a Class A misdemeanor.\nAdded by"
   },
   {
+    "literal": "PROMOTE CERT VIS MAT:1+ HARASS/2+ CNV",
+    "citation": "PC 43.261(c)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PROMOTE CERTAIN VIS MAT: HARASS/PREV CONV",
     "citation": "43.261(c)(1)",
     "statute": "PC",
     "level": "MB",
     "statuteText": "Sec. 43.261. ELECTRONIC TRANSMISSION OF CERTAIN VISUAL MATERIAL\nDEPICTING MINOR. (a) In this section:\n(1) \"Dating relationship\" has the meaning assigned by\nSection 71.0021, Family Code.\n(2) \"Minor\" means a person younger than 18 years of age.\n(3) \"Produce\" with respect to visual material includes any\nconduct that directly contributes to the creation or manufacture of\nthe material.\n(4) \"Promote\" has the meaning assigned by Section 43.25.\n(5) \"Sexual conduct\" has the meaning assigned by Section\n43.25.\n(6) \"Visual material\" has the meaning assigned by Section\n43.26.\n(b) A person who is a minor commits an offense if the person\nintentionally or knowingly:\n(1) by electronic means promotes to another minor visual\nmaterial depicting a minor, including the actor, engaging in sexual\nconduct, if the actor produced the visual material or knows that\nanother minor produced the visual material; or\n(2) possesses in an electronic format visual material\ndepicting another minor engaging in sexual conduct, if the actor\nproduced the visual material or knows that another minor produced the\nvisual material.\n(b-1) For purposes of conduct prohibited under Subsection (b),\nvisual material to which that conduct applies includes:\n(1) a depiction of a minor:\n(A) who is recognizable as an actual person by the\nperson's face, likeness, or other distinguishing characteristic, such\nas a unique birthmark or other recognizable feature; and\n(B) whose image as a minor was used in creating,\nadapting, or modifying the visual material, including computer-\ngenerated visual material that was created, adapted, or modified\nusing an artificial intelligence application or other computer\nsoftware; or\n(2) a depiction of a minor, created using an artificial\nintelligence application or other computer software, that to a\nreasonable person is virtually indistinguishable from an actual\nminor.\n(c) An offense under Subsection (b)\n(1) is a Class C\nmisdemeanor, except that the offense is:\n\nPENAL CODE"
+  },
+  {
+    "literal": "PROMOTE CERTAIN VIS MAT: HARASS/PRV CNV",
+    "citation": "PC 43.261(c)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PROMOTE CERTAIN VIS MAT:1+ HARASS/2+ CONV",
@@ -14944,6 +21418,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 43.03. PROMOTION OF PROSTITUTION. (a) A person commits\nan offense if, acting other than as a prostitute receiving\ncompensation for personally rendered prostitution services, he or she\nknowingly:\n(1) receives money or other property pursuant to an\nagreement to participate in the proceeds of prostitution; or\n(2) solicits another to engage in sexual conduct with\nanother person for compensation.\n(b) An offense under this section is a felony of the third\ndegree, except that the offense is:"
   },
   {
+    "literal": "PROMOTE PROSTITUTION OF < 18 YOA PERSON",
+    "citation": "PC 43.03(b)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PROMOTE PROSTITUTION PERSON <18 YOA",
     "citation": "43.03(b)(2)",
     "statute": "PC",
@@ -14964,22 +21444,40 @@ export const CJIS_CODES: Offense[] = [
     "level": "F2"
   },
   {
+    "literal": "PROMOTION OR POSSESSION OF CHILD-LIKE SEX DOLL",
+    "citation": "PC 43.231",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PROOF OF ID/AGE TO COUNTY CLERK FALSE/FRAUD",
     "citation": "2.403(b)",
     "statute": "FC",
     "level": "MA"
   },
   {
-    "literal": "PROPERTY CRIME CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "PROPERTY DAMAGE",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PROPERTY DAMAGE-LINE OF DUTY",
+    "citation": "",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PROPOSAL PROCEDURES FOR COMPETITIVE BIDDING",
     "citation": "60.405",
     "statute": "WC",
     "level": "MB"
+  },
+  {
+    "literal": "PROSTITUTI/OTHER PAYOR SOLICIT PERSON<18",
+    "citation": "PC 43.02(c-1)(3)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PROSTITUTION",
@@ -15001,6 +21499,24 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 43.02. PROSTITUTION. (a) A person commits an offense if\nthe person knowingly offers or agrees to receive a fee from another\nto engage in sexual conduct.\n(b-1) Repealed by"
+  },
+  {
+    "literal": "PROSTITUTION/OTHER PAYOR",
+    "citation": "PC 43.02(c-1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PROSTITUTION/OTHER PAYOR 1 OR 2 PREV CNV",
+    "citation": "PC 43.02(c-1)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PROSTITUTION/OTHER PAYOR W/3RD OR MORE",
+    "citation": "PC 43.02(c-1)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PROVIDE FAL INFO ON VOTING APPLICATION ENH IAT",
@@ -15059,6 +21575,18 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 12.43. PENALTIES FOR REPEAT AND HABITUAL MISDEMEANOR\nOFFENDERS. (a) If it is shown on the trial of a Class A misdemeanor\nthat the defendant has been before convicted of a Class A misdemeanor\nor any degree of felony, on conviction he shall be punished by:\n(1) a fine not to exceed $4,000;\n(2) confinement in jail for any term of not more than one\nyear or less than 90 days; or\n(3) both such fine and confinement.\n(b) If it is shown on the trial of a Class B misdemeanor that\nthe defendant has been before convicted of a Class A or Class B\nmisdemeanor or any degree of felony, on conviction he shall be\npunished by:\n(1) a fine not to exceed $2,000;\n(2) confinement in jail for any term of not more than 180\ndays or less than 30 days; or\n(3) both such fine and confinement.\n(c) If it is shown on the trial of an offense punishable as a\nClass C misdemeanor under Section 42.01 or 49.02 that the defendant\nhas been before convicted under either of those sections three times\nor three times for any combination of those offenses and each prior\noffense was committed in the 24 months preceding the date of\ncommission of the instant offense, the defendant shall be punished\n\nPENAL CODE\nby:"
   },
   {
+    "literal": "PUBLIC INTOXICATION",
+    "citation": "PC 49.02",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "PUBLIC INTOXICATION W/3 PRIOR CONVIC",
+    "citation": "PC 12.43(C)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "PUBLIC INTOXICATION:MINOR 3RD ENH",
     "citation": "49.02",
     "statute": "PC",
@@ -15086,16 +21614,10 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
-    "literal": "PUBLIC ORDER CRIMES CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
-  },
-  {
-    "literal": "PUBLIC PEACE CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "PUBLISH/THREAT TO PUB INTIMATE VISL MATR",
+    "citation": "PC 21.16(G)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PUBLISH/THREAT TO PUBLISH INTIMATE VISUAL MATR",
@@ -15103,6 +21625,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "FS",
     "statuteText": "Sec. 21.16. UNLAWFUL DISCLOSURE OR PROMOTION OF INTIMATE VISUAL\nMATERIAL. (a) In this section:\n(1) \"Intimate parts\" means the naked genitals, pubic area,\nanus, buttocks, or female nipple of a person.\n(2) \"Promote\" means to procure, manufacture, issue, sell,\ngive, provide, lend, mail, deliver, transfer, transmit, publish,\ndistribute, circulate, disseminate, present, exhibit, or advertise or\nto offer or agree to do any of the above.\n(3) \"Sexual conduct\" means sexual contact, actual or\nsimulated sexual intercourse, deviate sexual intercourse, sexual\nbestiality, masturbation, or sadomasochistic abuse.\n(4) \"Simulated\" means the explicit depiction of sexual\nconduct that creates the appearance of actual sexual conduct and\nduring which a person engaging in the conduct exhibits any uncovered\nportion of the breasts, genitals, or buttocks.\n(5) \"Visual material\" means:\n(A) any film, photograph, videotape, negative, or slide\nor any photographic reproduction that contains or incorporates in any\nmanner any film, photograph, videotape, negative, or slide; or\n(B) any disk, diskette, or other physical medium, or a\nfile in any digital format, that allows an image to be displayed on a\ncomputer or other video screen and any image transmitted to a\ncomputer or other video screen by telephone line, cable, satellite\ntransmission, or other method.\n(b) A person commits an offense if:\n(1) without the effective consent of the depicted person\nand with the intent to harm that person, the person discloses visual\nmaterial depicting another person with the person's intimate parts\nexposed or engaged in sexual conduct;\n(2) at the time of the disclosure, the person knows or has\nreason to believe that the visual material was obtained by the person\nor created under circumstances in which the depicted person had a\nreasonable expectation that the visual material would remain private;\n(3) the disclosure of the visual material causes harm to\nthe depicted person; and\n(4) the disclosure of the visual material reveals the\n\nPENAL CODE\nidentity of the depicted person in any manner, including through:\n(A) any accompanying or subsequent information or\nmaterial related to the visual material; or\n(B) information or material provided by a third party\nin response to the disclosure of the visual material.\n(c) A person commits an offense if the person intentionally\nthreatens to disclose, without the consent of the depicted person,\nvisual material depicting another person with the person's intimate\nparts exposed or engaged in sexual conduct and the actor makes the\nthreat to obtain a benefit:\n(1) in return for not making the disclosure; or\n(2) in connection with the threatened disclosure.\n(d) A person commits an offense if, knowing the character and\ncontent of the visual material, the person promotes visual material\ndescribed by Subsection (b) on an Internet website or other forum for\npublication that is owned or operated by the person.\n(e) It is not a defense to prosecution under this section that\nthe depicted person:\n(1) created or consented to the creation of the visual\nmaterial; or\n(2) voluntarily transmitted the visual material to the\nactor.\n(f) It is an affirmative defense to prosecution under\nSubsection (b) or (d) that:\n(1) the disclosure or promotion is made in the course of:\n(A) lawful and common practices of law enforcement or\nmedical treatment;\n(B) reporting unlawful activity; or\n(C) a legal proceeding, if the disclosure or promotion\nis permitted or required by law;\n(2) the disclosure or promotion consists of visual material\ndepicting in a public or commercial setting only a person's voluntary\nexposure of:\n(A) the person's intimate parts; or\n(B) the person engaging in sexual conduct; or\n(3) the actor is an interactive computer service, as\ndefined by 47 U.S.C. Section 230, and the disclosure or promotion\nconsists of visual material provided by another person.\n(g) An offense under this section is a state jail felony."
+  },
+  {
+    "literal": "PULL MORE THAN ONE TRAILER OR VEHICLE",
+    "citation": "TRC 545.409 3282",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PURCH/ACQ PROPERTY BY FOREIGN INDIVID/ENTITIES",
@@ -15145,6 +21673,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "466.254(b)",
     "statute": "GC",
     "level": "MA"
+  },
+  {
+    "literal": "PURCHASE OF ALCOHOL BY A MINOR 3RD-ENH",
+    "citation": "ABC 106.02",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PURCHASE OF ALCOHOL BY A MINOR 3RD-ENH IAT",
@@ -15200,6 +21734,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 48.04. PROHIBITION ON PURCHASE AND SALE OF ADULT STEM\nCELLS FOR CERTAIN INVESTIGATIONAL TREATMENTS. (a) In this section:\n(1) \"Adult stem cell\" means an undifferentiated cell that\nis:\n(A) found in differentiated tissue; and\n(B) able to renew itself and differentiate to yield all\nor nearly all of the specialized cell types of the tissue from which\nthe cell originated.\n(2) \"Investigational stem cell treatment\" means an adult\nstem cell treatment that:\n(A) is under investigation in a clinical trial and\nbeing administered to human participants in that trial; and\n(B) has not yet been approved for general use by the\nUnited States Food and Drug Administration.\n(b) A person commits an offense if the person knowingly offers\nto buy, offers to sell, acquires, receives, sells, or otherwise\ntransfers any adult stem cells for valuable consideration for use in\nan investigational stem cell treatment.\n(c) It is an exception to the application of this section that\n\nPENAL CODE\nthe valuable consideration is:\n(1) a fee paid to a physician or to other medical personnel\nfor services rendered in the usual course of medical practice or a\nfee paid for hospital or other clinical services;\n(2) reimbursement of legal or medical expenses incurred for\nthe benefit of the ultimate receiver of the investigational stem cell\ntreatment; or\n(3) reimbursement of expenses of travel, housing, and lost\nwages incurred by the donor of adult stem cells in connection with\nthe donation of the adult stem cells.\n(d) It is an exception to the application of this section that\nthe actor engaged in conduct authorized under Chapter 162, Health and\nSafety Code.\n(e) A violation of this section is a Class A misdemeanor.\nAdded by"
+  },
+  {
+    "literal": "PURCHASE/SALE OF HUMAN ORGANS",
+    "citation": "PC 48.02",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "PURCHASE/SELL OF HUMAN ORGANS",
@@ -15281,6 +21821,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "RACING/DRAG RACING/ACEL CONTEST FOR SPD",
+    "citation": "TRC 545.420 3004",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "RAILROAD - INTERFERENCE W/PROPERTY",
     "citation": "28.07(b)(2)(A)",
     "statute": "PC",
@@ -15298,6 +21844,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "6559h-1",
     "statute": "VCS",
     "level": "M*"
+  },
+  {
+    "literal": "RAN RED LIGHT",
+    "citation": "TRC 544.007 3007",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "RAN STOP SIGN",
+    "citation": "TRC 545.151 3006",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "RATE OF INTEREST ON UTILITY DEPOSIT",
@@ -15343,6 +21901,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 28.04. RECKLESS DAMAGE OR DESTRUCTION.\n(a) A person\ncommits an offense if, without the effective consent of the owner, he\nrecklessly damages or destroys property of the owner."
   },
   {
+    "literal": "RECKLESS DAMAGE OR DESTRUCTION",
+    "citation": "PC 28.04",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "RECKLESS DISPOSAL OF SKIMMER",
     "citation": "607.103(b)",
     "statute": "BCC",
@@ -15379,16 +21943,34 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "RECKLESS OPERATION AND EXCESSIVE SPEED",
+    "citation": "TPW 31.096",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "RECKLESS OR EXCESSIVE SPEED OF WATER VESSEL",
     "citation": "31.127(b)",
     "statute": "PWC",
     "level": "MB"
   },
   {
+    "literal": "RECKLESS OR NEGLIGENT OPERATION",
+    "citation": "TPW 31.094",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "RECKLESS RELEASE HAZ WASTE IN ENVIRON BY ANOTH",
     "citation": "361.222(s)",
     "statute": "HSC",
     "level": "F*"
+  },
+  {
+    "literal": "RECKLESS RLS HAZ WASTE IN ENVMT BY ANOTH",
+    "citation": "HSC 361.222(s)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "RECKLESS/NEGLIGENT DISPOSE SKIMMER",
@@ -15415,6 +21997,24 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "RECORD OF FRAUDULENT COURT",
+    "citation": "PC 37.13(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "RECORD OF FRAUDULENT COURT 2+ PREV CNV",
+    "citation": "PC 37.13(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "RECOVERED UUMV",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "RECREATION VEHICLE - LIVING IN",
     "citation": "10.04.065(4)(e)(i)",
     "statute": "CO",
@@ -15425,6 +22025,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "545.252",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "RED LIGHT ON FRONT",
+    "citation": "TRC 547.305 3276",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "REDUCED RATE FOR OFFICERS",
@@ -15445,10 +22051,28 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "REF TO PERM INSPECT OF DANGR DRUG REC EH",
+    "citation": "HSC 483.050(a)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "REFILL ALC BEVERAGE CONTAINER PROHIBITED",
+    "citation": "ABC 28.08",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "REFILL ALCH BEVERAGE CONTAINER PROHIBITED",
     "citation": "28.08",
     "statute": "ABC",
     "level": "MB"
+  },
+  {
+    "literal": "REFILL PRESCRIP W/O AUTHORIZ-PHARMA ENH",
+    "citation": "HSC 483.047(a)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "REFILL PRESCRIP W/O AUTHORIZ-PHARMACIST",
@@ -15461,6 +22085,24 @@ export const CJIS_CODES: Offense[] = [
     "citation": "483.047(a)",
     "statute": "HSC",
     "level": "MA"
+  },
+  {
+    "literal": "REFLECTORS IMPROPERLY MOUNTED",
+    "citation": "TRC 547.325 3178",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "REFLECTORS NOT VIS SUFFICIENT DISTANCE",
+    "citation": "TRC 547.355 3188",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "REFUSAL TO REMOVE OBSTRUCTIONS",
+    "citation": "ORD 8.05.004",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "REFUSE COMPLY W/ORDER RETURN FOREIGN NATION",
@@ -15494,6 +22136,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "REFUSE EXECUTE RELEASE FRAUD LIEN/CLAIM",
+    "citation": "PC 32.49",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "REFUSE INSPECTION OF RECORDS BOARD OF HEALTH",
     "citation": "143.015(3)",
     "statute": "HSC",
@@ -15516,6 +22164,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "51.242",
     "statute": "EDC",
     "level": "M*"
+  },
+  {
+    "literal": "REFUSE PERMIT INSPECT OF DANGER DRUG REC",
+    "citation": "HSC 483.050(a)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "REFUSE PERMIT SEARCH FOR TICK ERADICATION",
@@ -15554,6 +22208,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "REFUSE TO SURRENDER DL/ID",
+    "citation": "TRC 521.451 3143",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "REFUSE TO SURRENTDER DL-SUSPENDED",
+    "citation": "TRC 521.315 3108",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "REFUSE TO TESTIFY/APPEAR MILITARY COURT",
     "citation": "432.072(b)",
     "statute": "GC",
@@ -15566,6 +22232,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "REFUSE/FAIL TO LEAVE BLDG CLSED TO PUBLC",
+    "citation": "EDC 51.242",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "REFUSES TO ALLOW INSPECTION/INVEST.",
+    "citation": "ABC 101.04(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "REFUSES TO ALLOW INSPECTION/INVESTIGATION",
     "citation": "101.04(b)",
     "statute": "ABC",
@@ -15576,6 +22254,48 @@ export const CJIS_CODES: Offense[] = [
     "citation": "481.128(c)",
     "statute": "HSC",
     "level": "FS"
+  },
+  {
+    "literal": "REGISTRATION - 30 DAY PERMIT STICKER EXP",
+    "citation": "TRC 502.095",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "REGISTRATION - NO STICKER/WRONG PLACEMEN",
+    "citation": "TRC 502.473(A)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "REGISTRATION - NO TEXAS",
+    "citation": "TRC 502.040",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "REGISTRATION - NO/EXPIRED ON MOTORCYCLE",
+    "citation": "TRC 502.473(B)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "REGISTRATION - NONE/WRONG ON TRAILER",
+    "citation": "TRC 502.473(B)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "REGISTRATION - WRONG PERIOD (FICTITIOUS",
+    "citation": "TRC 502.475(A)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "REGISTRATION - WRONG VEHICLE (FICTITIOUS",
+    "citation": "TRC 502.475(A)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "REGISTRATION 30 DAY PERMIT STICKER EXPIRED",
@@ -15734,16 +22454,64 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "REMOVAL OF PERSONAL PROPERTY FROM ROADWAY OR RIGHT-OF-WAY",
+    "citation": "TRC 545.3051",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "REMOVE ALTER/DESTROY QUARANTINE DEVICES",
     "citation": "81.088(a)(1)",
     "statute": "HSC",
     "level": "MB"
   },
   {
+    "literal": "REMOVED ORIG EQUIP EXST EMISSION SYSTEM",
+    "citation": "TRC 547.605 3228",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "RENT MOTOR VEHICLE TO UNLICENSED PERSON",
+    "citation": "TRC 521.460 3367",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "RENTAL LOCATOR W/OUT LICENSE",
     "citation": "1101.757(b)",
     "statute": "OC",
     "level": "MA"
+  },
+  {
+    "literal": "REPORT AND RECORD LOTTERY VIOLATION",
+    "citation": "GC 466.311(c)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "REPORT SEIZURE FALSE STATEMENT",
+    "citation": "ABC 103.05(d)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "REPRESENT AS ATTORNEY",
+    "citation": "GC 406.017(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "REPRESENT AS ATTORNEY W/PREV CONVIC",
+    "citation": "GC 406.017(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "REPRESENT BY FORMER BOARD MEMBER /OTH",
+    "citation": "GC 2306.6733(b)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "REPRESENT TXTBOOK PUBLISHR BY FORMER BOARD MEM",
@@ -15812,6 +22580,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "RESIDENT PARKING ZONE VIOLATION",
+    "citation": "ORD 10.04.033",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "RESIDENTIAL - HOME OCC NOT ENCLOSED",
+    "citation": "ORD CH 12 A 413(A)(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "RESIDENTIAL - HOME OCCUPATION NOT ENCLOSED",
     "citation": "CH 12 A 413 (a)(5)",
     "statute": "CO",
@@ -15855,11 +22635,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 38.03. RESISTING ARREST, SEARCH, OR TRANSPORTATION.\n(a)\nA person commits an offense if he intentionally prevents or obstructs\na person he knows is a peace officer or a person acting in a peace\nofficer's presence and at his direction from effecting an arrest,\nsearch, or transportation of the actor or another by using force\nagainst the peace officer or another."
   },
   {
+    "literal": "RESIST ARREST SEARCH OR TRANSP DEAD WEA",
+    "citation": "PC 38.03(d)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "RESIST ARREST SEARCH OR TRANSP DEADLY WEAPON",
     "citation": "38.03(d)",
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 38.03. RESISTING ARREST, SEARCH, OR TRANSPORTATION. (a)\nA person commits an offense if he intentionally prevents or obstructs\na person he knows is a peace officer or a person acting in a peace\nofficer's presence and at his direction from effecting an arrest,\nsearch, or transportation of the actor or another by using force\nagainst the peace officer or another.\n(b) It is no defense to prosecution under this section that the\narrest or search was unlawful.\n(c) Except as provided in Subsection\n(d), an offense under this\nsection is a Class A misdemeanor."
+  },
+  {
+    "literal": "RESIST ARREST SEARCH OR TRANSPORT",
+    "citation": "PC 38.03(A)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "RESPIRATORY CARE PRACTITIONERS REGULATIONS",
@@ -15872,6 +22664,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "253.037",
     "statute": "EC",
     "level": "MA"
+  },
+  {
+    "literal": "RESTRICT MAN/DISTB/SALE OF DIMETHZE SULF",
+    "citation": "HSC 439.017",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "RESTRICT MAN/DISTB/SALE OF DIMETHZE SULFOXIDE",
@@ -15896,6 +22694,24 @@ export const CJIS_CODES: Offense[] = [
     "citation": "257.004",
     "statute": "EC",
     "level": "F3"
+  },
+  {
+    "literal": "RESTRICTION CODE - COMMERCIAL MV",
+    "citation": "TRC 522.043",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "RESTRICTION CODE - NO 21 YR. OLD IN FRON",
+    "citation": "TRC 521.222(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "RESTRICTION CODE - NO GLASSES",
+    "citation": "TRC 521.221(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "RESTRICTION CODE - SPECIAL",
@@ -15934,6 +22750,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "RESTRICTION VIOLATION - CDL",
+    "citation": "TRC 522.041 3306",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "RETALIATE RESIDENT/EMPLOYEE",
     "citation": "101A.264(b)",
     "statute": "HRC",
@@ -15962,6 +22784,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "143.032(h)(1)",
     "statute": "LGC",
     "level": "M*"
+  },
+  {
+    "literal": "RIDING IN BOAT DRAWN BY VEH",
+    "citation": "TRC 545.4145",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "RIDING IN HOUSE TRAILER",
+    "citation": "TRC 545.419 3368",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "RIGGING PUBLIC EXHIBITED CONTEST",
@@ -16026,10 +22860,22 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 29.02. ROBBERY. (a) A person commits an offense if, in\nthe course of committing theft as defined in Chapter 31 and with\nintent to obtain or maintain control of the property, he:\n(1) intentionally, knowingly, or recklessly causes bodily\ninjury to another; or\n(2) intentionally or knowingly threatens or places another\nin fear of imminent bodily injury or death.\n(b) An offense under this section is a felony of the second\ndegree."
   },
   {
-    "literal": "ROBBERY CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "RODE IMPROPERLY ON BICYCLE",
+    "citation": "TRC 551.102 3508",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "RODE IMPROPERLY ON BICYCLE-TOO MANY",
+    "citation": "TRC 551.102 3509",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "RODE MORE THAN TWO BICYCLES ABREAST",
+    "citation": "TRC 551.103 3510",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "RSTRCT/OBSTR ACCESS PROTECT FRSHWTR 2+CONV IAT",
@@ -16054,6 +22900,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "11.004",
     "statute": "PWC",
     "level": "MA"
+  },
+  {
+    "literal": "RUNAWAY RETURN BY PO CUSTODY",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "RUNAWAY RETURN ON OWN",
+    "citation": "",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SAFETY CHAINS - NONE",
@@ -16111,6 +22969,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "SALE OF TOBACCO TO MINOR",
+    "citation": "HSC 161.082",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SALE OR OFFER SALE OF PRISON PRODUCED PRODUCTS",
     "citation": "497.010",
     "statute": "GC",
@@ -16136,6 +23000,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "FS"
   },
   {
+    "literal": "SALE TO CERTAIN PERSON",
+    "citation": "ABC 101.63(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SALE TO CERTAIN PERSONS",
     "citation": "101.63(b)",
     "statute": "ABC",
@@ -16158,6 +23028,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "485.035",
     "statute": "HSC",
     "level": "MB"
+  },
+  {
+    "literal": "SALE W/O PERMT VOLATILE CHEM TO PERS <18",
+    "citation": "HSC 485.035",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SALE/DISTR/DISP HARMFUL MATER TO MINOR",
+    "citation": "PC 43.24(d)MA",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SALE/DISTR/DISPLAY HARMFUL MATERIAL TO MINOR",
@@ -16209,6 +23091,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "SEARCH WARRANT",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SEATBELT CHILD(REN) UNDER 8 & 57\"",
     "citation": "545.412",
     "statute": "TC",
@@ -16243,6 +23131,48 @@ export const CJIS_CODES: Offense[] = [
     "citation": "61.005",
     "statute": "EC",
     "level": "MA"
+  },
+  {
+    "literal": "SECURE EXECUTION DOC BY DECEPT PUB SERV",
+    "citation": "PC 32.46(c)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SECURE EXECUTION DOC DECEPT >=$100<$750",
+    "citation": "PC 32.46(B)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SECURE EXECUTION DOC DECEPT >=$300K",
+    "citation": "PC 32.46(b)(7)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SECURE EXECUTION DOC DECEPT >=$30K<$150K",
+    "citation": "PC 32.46(b)(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SECURE EXECUTION DOC DECEPT>=$150K<$300K",
+    "citation": "PC 32.46(b)(6)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SECURE EXECUTION DOC DECEPT>=$2,500<$30K",
+    "citation": "PC 32.46(b)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SECURE EXECUTION DOC DECEPT>=$750<$2,500",
+    "citation": "PC 32.46(b)(3)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SEDITION",
@@ -16293,10 +23223,34 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "SELL LOTTERY TICKET > THAN FIXED PRICE",
+    "citation": "GC 466.302(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SELL LOTTERY TICKET AT ILLEGAL LOCATION",
+    "citation": "GC 466.304(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SELL LOTTERY TICKET UNAUTH PERSON",
+    "citation": "GC 466.303(c)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SELL MISLABELED ARTICLES",
     "citation": "433.042",
     "statute": "HSC",
     "level": "M*"
+  },
+  {
+    "literal": "SELL OR PURCHASE CHILD FOR SEXUAL PERF",
+    "citation": "PC 25.08(c)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SELL OR PURCHASE CHILD FOR SEXUAL PERFORMANCE",
@@ -16328,6 +23282,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "1956.040(c)",
     "statute": "OC",
     "level": "F3"
+  },
+  {
+    "literal": "SELL UNREGISTERED SECONDHAND VEHICLE",
+    "citation": "TRC 520.021 3674",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SELL UNREGISTERED TIMESHARE PROPERTY",
@@ -16364,6 +23324,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "1956.040(c-5)",
     "statute": "OC",
     "level": "F2"
+  },
+  {
+    "literal": "SELL/DISTRIBUTE DECEPTIVE DL/ID",
+    "citation": "TRC 521.456 3146",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SELL/PURCH WATER VESS W/ALTERED ID/SERIAL NUM",
@@ -16417,6 +23383,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "SEPARATE PREMISES REQ, DURING PROH HRS",
+    "citation": "ABC 22.14",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SEPARATE PREMISES REQUIRED DURING PROH HOURS",
     "citation": "22.14",
     "statute": "ABC",
@@ -16454,10 +23426,46 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 21.02. CONTINUOUS SEXUAL ABUSE OF YOUNG CHILD OR DISABLED\nINDIVIDUAL. (a) In this section:\n(1) \"Child\" has the meaning assigned by Section 22.011(c).\n(2) \"Disabled individual\" has the meaning assigned by\nSection 22.021(b).\n(b) A person commits an offense if:\n(1) during a period that is 30 or more days in duration,\nthe person commits two or more acts of sexual abuse, regardless of\nwhether the acts of sexual abuse are committed against one or more\nvictims; and\n(2) at the time of the commission of each of the acts of\nsexual abuse, the actor is 17 years of age or older and the victim\nis:\n(A) a child younger than 14 years of age, regardless of\nwhether the actor knows the age of the victim at the time of the\noffense; or\n(B) a disabled individual.\n(c) For purposes of this section, \"act of sexual abuse\" means\nany act that is a violation of one or more of the following penal\nlaws:\n(1) aggravated kidnapping under Section 20.04(a)(4), if the\nactor committed the offense with the intent to violate or abuse the\nvictim sexually;\n(2) indecency with a child under Section 21.11(a)(1), if\nthe actor committed the offense in a manner other than by touching,\n\nPENAL CODE\nincluding touching through clothing, the breast of a child;\n(3) sexual assault under Section 22.011;\n(4) aggravated sexual assault under Section 22.021;\n(5) burglary under Section 30.02, if the offense is\npunishable under Subsection (d) of that section and the actor\ncommitted the offense with the intent to commit an offense listed in\nSubdivisions (1)-(4);\n(6) sexual performance by a child under Section 43.25;\n(7) trafficking of persons under Section 20A.02(a)(3), (4),\n(7), or (8); and\n(8) compelling prostitution under Section 43.05.\n(d) If a jury is the trier of fact, members of the jury are not\nrequired to agree unanimously on which specific acts of sexual abuse\nwere committed by the defendant or the exact date when those acts\nwere committed. The jury must agree unanimously that the defendant,\nduring a period that is 30 or more days in duration, committed two or\nmore acts of sexual abuse.\n(e) A defendant may not be convicted in the same criminal\naction of an offense listed under Subsection (c) the victim of which\nis the same victim as a victim of the offense alleged under\nSubsection (b) unless the offense listed in Subsection (c):\n(1) is charged in the alternative;\n(2) occurred outside the period in which the offense\nalleged under Subsection (b) was committed; or\n(3) is considered by the trier of fact to be a lesser\nincluded offense of the offense alleged under Subsection (b).\n(f) A defendant may not be charged with more than one count\nunder Subsection (b) if all of the specific acts of sexual abuse that\nare alleged to have been committed are alleged to have been committed\nagainst a single victim.\n(g) With respect to a prosecution under this section involving\nonly one or more victims described by Subsection (b)(2)(A), it is an\naffirmative defense to prosecution under this section that the actor:\n(1) was not more than five years older than:\n(A) the victim of the offense, if the offense is\nalleged to have been committed against only one victim; or\n(B) the youngest victim of the offense, if the offense\nis alleged to have been committed against more than one victim;\n(2) did not use duress, force, or a threat against a victim\nat the time of the commission of any of the acts of sexual abuse\n\nPENAL CODE\nalleged as an element of the offense; and\n(3) at the time of the commission of any of the acts of\nsexual abuse alleged as an element of the offense:\n(A) was not required under Chapter 62, Code of Criminal\nProcedure, to register for life as a sex offender; or\n(B) was not a person who under Chapter 62 had a\nreportable conviction or adjudication for an offense under this\nsection or an act of sexual abuse as described by Subsection (c).\n(h) An offense under this section is a felony of the first\ndegree, punishable by imprisonment in the Texas Department of\nCriminal Justice for life, or for any term of not more than 99 years\nor less than 25 years.\nAdded by"
   },
   {
-    "literal": "SEX OFFENSES CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "SEX ABUSE OF CHILD CONTINUOUS: VICTIM<14",
+    "citation": "PC 21.02",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SEX OFF DUTY TO REGISTER LIFE/ANNUALLY",
+    "citation": "CCP 62.102(b)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SEX OFF DUTY TO REGISTER W/PREV CONV IAT",
+    "citation": "CCP 62.102(c)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SEX OFFENDERS DUTY TO REGISTER 10YRS",
+    "citation": "CCP 62.102(b)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SEX OFFENDERS DUTY TO REGISTER LIFE/90",
+    "citation": "CCP 62.102(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SEX OFFENDERS FAILURE TO COMPLY/CIVIL",
+    "citation": "CCP 62.203",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SEXUAL ASSAULT",
+    "citation": "PC 22.011(A)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SEXUAL ASSAULT BIGAMY",
@@ -16467,10 +23475,10 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 22.011. SEXUAL ASSAULT. (a) A person commits an offense\nif:\n(1) the person intentionally or knowingly:\n(A) causes the penetration of the anus or sexual organ\nof another person by any means, without that person's consent;\n(B) causes the penetration of the mouth of another\nperson by the sexual organ of the actor, without that person's\nconsent; or\n(C) causes the sexual organ of another person, without\nthat person's consent, to contact or penetrate the mouth, anus, or\nsexual organ of another person, including the actor; or\n(2) regardless of whether the person knows the age of the\n\nPENAL CODE\nchild at the time of the offense, the person intentionally or\nknowingly:\n(A) causes the penetration of the anus or sexual organ\nof a child by any means;\n(B) causes the penetration of the mouth of a child by\nthe sexual organ of the actor;\n(C) causes the sexual organ of a child to contact or\npenetrate the mouth, anus, or sexual organ of another person,\nincluding the actor;\n(D) causes the anus of a child to contact the mouth,\nanus, or sexual organ of another person, including the actor; or\n(E) causes the mouth of a child to contact the anus or\nsexual organ of another person, including the actor.\n(b) A sexual assault under Subsection (a)(1) is without the\nconsent of the other person if:\n(1) the actor compels the other person to submit or\nparticipate by the use of physical force, violence, or coercion;\n(2) the actor compels the other person to submit or\nparticipate by threatening to use force or violence against the other\nperson or to cause harm to the other person, and the other person\nbelieves that the actor has the present ability to execute the\nthreat;\n(3) the other person has not consented and the actor knows\nthe other person is unconscious or physically unable to resist;\n(4) the actor knows that as a result of mental disease or\ndefect the other person is at the time of the sexual assault\nincapable either of appraising the nature of the act or of resisting\nit;\n(5) the other person has not consented and the actor knows\nthe other person is unaware that the sexual assault is occurring;\n(6) the actor knows that the other person is intoxicated or\nimpaired by any substance to the extent that the other person is\nincapable of consenting;\n(7) the actor compels the other person to submit or\nparticipate by threatening to use force or violence against any\nperson, and the other person believes that the actor has the ability\nto execute the threat;\n(8) the actor is a public servant who coerces the other\nperson to submit or participate;\n(9) the actor is a mental health services provider or a\n\nPENAL CODE\nhealth care services provider who causes the other person, who is a\npatient or former patient of the actor, to submit or participate by\nexploiting the other person's emotional dependency on the actor;\n(10) the actor is a clergyman who causes the other person\nto submit or participate by exploiting the other person's emotional\ndependency on the clergyman in the clergyman's professional character\nas spiritual adviser;\n(11) the actor is an employee of a facility where the other\nperson is a resident, unless the employee and resident are formally\nor informally married to each other under Chapter 2, Family Code;\n(12) the actor is a health care services provider who, in\nthe course of performing an assisted reproduction procedure on the\nother person, uses human reproductive material from a donor knowing\nthat the other person has not expressly consented to the use of\nmaterial from that donor;\n(13) the actor is a coach or tutor who causes the other\nperson to submit or participate by using the actor's power or\ninfluence to exploit the other person's dependency on the actor; or\n(14) the actor is a caregiver hired to assist the other\nperson with activities of daily life and causes the other person to\nsubmit or participate by exploiting the other person's dependency on\nthe actor.\n(c) In this section:\n(1) \"Child\" means a person younger than 17 years of age.\n(1-a) \"Consent\" has the meaning assigned by Section 1.07.\n(2) \"Spouse\" means a person who is legally married to\nanother.\n(3) \"Health care services provider\" means:\n(A) a physician licensed under Subtitle B, Title 3,\nOccupations Code;\n(B) a chiropractor licensed under Chapter 201,\nOccupations Code;\n(C) a physical therapist licensed under Chapter 453,\nOccupations Code;\n(D) a physician assistant licensed under Chapter 204,\nOccupations Code;\n(E) a registered nurse, a vocational nurse, or an\nadvanced practice nurse licensed under Chapter 301, Occupations Code;\nor\n(F) a massage therapist licensed under Chapter 455,\n\nPENAL CODE\nOccupations Code.\n(4) \"Mental health services provider\" means an individual,\nlicensed or unlicensed, who performs or purports to perform mental\nhealth services, including a:\n(A) licensed social worker as defined by Section\n505.002, Occupations Code;\n(B) chemical dependency counselor as defined by Section\n504.001, Occupations Code;\n(C) licensed professional counselor as defined by\nSection 503.002, Occupations Code;\n(D) licensed marriage and family therapist as defined\nby Section 502.002, Occupations Code;\n(E) member of the clergy;\n(F) psychologist offering psychological services as\ndefined by Section 501.003, Occupations Code; or\n(G) special officer for mental health assignment\ncertified under Section 1701.404, Occupations Code.\n(5) \"Employee of a facility\" means a person who is an\nemployee of a facility defined by Section 250.001, Health and Safety\nCode, or any other person who provides services for a facility for\ncompensation, including a contract laborer.\n(6) \"Assisted reproduction\" and \"donor\" have the meanings\nassigned by Section 160.102, Family Code.\n(7) \"Human reproductive material\" means:\n(A) a human spermatozoon or ovum; or\n(B) a human organism at any stage of development from\nfertilized ovum to embryo.\n(d) It is a defense to prosecution under Subsection (a)(2) that\nthe conduct consisted of medical care for the child and did not\ninclude any contact between the anus or sexual organ of the child and\nthe mouth, anus, or sexual organ of the actor or a third party.\n(e) It is an affirmative defense to prosecution under\nSubsection (a)(2):\n(1) that the actor was the spouse of the child at the time\nof the offense; or\n(2) that:\n(A) the actor was not more than three years older than\nthe victim and at the time of the offense:\n(i) was not required under Chapter 62, Code of\nCriminal Procedure, to register for life as a sex offender; or\n\nPENAL CODE\n(ii) was not a person who under Chapter 62, Code of\nCriminal Procedure, had a reportable conviction or adjudication for\nan offense under this section; and\n(B) the victim:\n(i) was a child of 14 years of age or older; and\n(ii) was not:\n(a) a person whom the actor was prohibited from\nmarrying or purporting to marry or with whom the actor was prohibited\nfrom living under the appearance of being married under Section\n25.01; or\n(b) a person with whom the actor was prohibited\nfrom engaging in sexual intercourse or deviate sexual intercourse\nunder Section 25.02.\n(f) An offense under this section is a felony of the second\ndegree, except that an offense under this section is:\n(1) a felony of the first degree if the victim was:\n(A) a person whom the actor was prohibited from\nmarrying or purporting to marry or with whom the actor was prohibited\nfrom living under the appearance of being married under Section\n25.01; or\n(B) a person with whom the actor was prohibited from\nengaging in sexual intercourse or deviate sexual intercourse under\nSection 25.02; or"
   },
   {
-    "literal": "SEXUAL ASSAULT CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "SEXUAL ASSAULT CHILD",
+    "citation": "PC 22.011(A)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SEXUAL ASSAULT DONOR W/O CONSENT",
@@ -16480,11 +23488,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 22.011. SEXUAL ASSAULT. (a) A person commits an offense\nif:\n(1) the person intentionally or knowingly:\n(A) causes the penetration of the anus or sexual organ\nof another person by any means, without that person's consent;\n(B) causes the penetration of the mouth of another\nperson by the sexual organ of the actor, without that person's\nconsent; or\n(C) causes the sexual organ of another person, without\nthat person's consent, to contact or penetrate the mouth, anus, or\nsexual organ of another person, including the actor; or\n(2) regardless of whether the person knows the age of the\n\nPENAL CODE\nchild at the time of the offense, the person intentionally or\nknowingly:\n(A) causes the penetration of the anus or sexual organ\nof a child by any means;\n(B) causes the penetration of the mouth of a child by\nthe sexual organ of the actor;\n(C) causes the sexual organ of a child to contact or\npenetrate the mouth, anus, or sexual organ of another person,\nincluding the actor;\n(D) causes the anus of a child to contact the mouth,\nanus, or sexual organ of another person, including the actor; or\n(E) causes the mouth of a child to contact the anus or\nsexual organ of another person, including the actor.\n(b) A sexual assault under Subsection (a)(1) is without the\nconsent of the other person if:\n(1) the actor compels the other person to submit or\nparticipate by the use of physical force, violence, or coercion;\n(2) the actor compels the other person to submit or\nparticipate by threatening to use force or violence against the other\nperson or to cause harm to the other person, and the other person\nbelieves that the actor has the present ability to execute the\nthreat;\n(3) the other person has not consented and the actor knows\nthe other person is unconscious or physically unable to resist;\n(4) the actor knows that as a result of mental disease or\ndefect the other person is at the time of the sexual assault\nincapable either of appraising the nature of the act or of resisting\nit;\n(5) the other person has not consented and the actor knows\nthe other person is unaware that the sexual assault is occurring;\n(6) the actor knows that the other person is intoxicated or\nimpaired by any substance to the extent that the other person is\nincapable of consenting;\n(7) the actor compels the other person to submit or\nparticipate by threatening to use force or violence against any\nperson, and the other person believes that the actor has the ability\nto execute the threat;\n(8) the actor is a public servant who coerces the other\nperson to submit or participate;\n(9) the actor is a mental health services provider or a\n\nPENAL CODE\nhealth care services provider who causes the other person, who is a\npatient or former patient of the actor, to submit or participate by\nexploiting the other person's emotional dependency on the actor;\n(10) the actor is a clergyman who causes the other person\nto submit or participate by exploiting the other person's emotional\ndependency on the clergyman in the clergyman's professional character\nas spiritual adviser;\n(11) the actor is an employee of a facility where the other\nperson is a resident, unless the employee and resident are formally\nor informally married to each other under Chapter 2, Family Code;\n(12) the actor is a health care services provider who, in\nthe course of performing an assisted reproduction procedure on the\nother person, uses human reproductive material from a donor knowing\nthat the other person has not expressly consented to the use of\nmaterial from that donor;\n(13) the actor is a coach or tutor who causes the other\nperson to submit or participate by using the actor's power or\ninfluence to exploit the other person's dependency on the actor; or\n(14) the actor is a caregiver hired to assist the other\nperson with activities of daily life and causes the other person to\nsubmit or participate by exploiting the other person's dependency on\nthe actor.\n(c) In this section:\n(1) \"Child\" means a person younger than 17 years of age.\n(1-a) \"Consent\" has the meaning assigned by Section 1.07.\n(2) \"Spouse\" means a person who is legally married to\nanother.\n(3) \"Health care services provider\" means:\n(A) a physician licensed under Subtitle B, Title 3,\nOccupations Code;\n(B) a chiropractor licensed under Chapter 201,\nOccupations Code;\n(C) a physical therapist licensed under Chapter 453,\nOccupations Code;\n(D) a physician assistant licensed under Chapter 204,\nOccupations Code;\n(E) a registered nurse, a vocational nurse, or an\nadvanced practice nurse licensed under Chapter 301, Occupations Code;\nor\n(F) a massage therapist licensed under Chapter 455,\n\nPENAL CODE\nOccupations Code.\n(4) \"Mental health services provider\" means an individual,\nlicensed or unlicensed, who performs or purports to perform mental\nhealth services, including a:\n(A) licensed social worker as defined by Section\n505.002, Occupations Code;\n(B) chemical dependency counselor as defined by Section\n504.001, Occupations Code;\n(C) licensed professional counselor as defined by\nSection 503.002, Occupations Code;\n(D) licensed marriage and family therapist as defined\nby Section 502.002, Occupations Code;\n(E) member of the clergy;\n(F) psychologist offering psychological services as\ndefined by Section 501.003, Occupations Code; or\n(G) special officer for mental health assignment\ncertified under Section 1701.404, Occupations Code.\n(5) \"Employee of a facility\" means a person who is an\nemployee of a facility defined by Section 250.001, Health and Safety\nCode, or any other person who provides services for a facility for\ncompensation, including a contract laborer.\n(6) \"Assisted reproduction\" and \"donor\" have the meanings\nassigned by Section 160.102, Family Code.\n(7) \"Human reproductive material\" means:\n(A) a human spermatozoon or ovum; or\n(B) a human organism at any stage of development from\nfertilized ovum to embryo.\n(d) It is a defense to prosecution under Subsection (a)(2) that\nthe conduct consisted of medical care for the child and did not\ninclude any contact between the anus or sexual organ of the child and\nthe mouth, anus, or sexual organ of the actor or a third party.\n(e) It is an affirmative defense to prosecution under\nSubsection (a)(2):\n(1) that the actor was the spouse of the child at the time\nof the offense; or\n(2) that:\n(A) the actor was not more than three years older than\nthe victim and at the time of the offense:\n(i) was not required under Chapter 62, Code of\nCriminal Procedure, to register for life as a sex offender; or\n\nPENAL CODE\n(ii) was not a person who under Chapter 62, Code of\nCriminal Procedure, had a reportable conviction or adjudication for\nan offense under this section; and\n(B) the victim:\n(i) was a child of 14 years of age or older; and\n(ii) was not:\n(a) a person whom the actor was prohibited from\nmarrying or purporting to marry or with whom the actor was prohibited\nfrom living under the appearance of being married under Section\n25.01; or\n(b) a person with whom the actor was prohibited\nfrom engaging in sexual intercourse or deviate sexual intercourse\nunder Section 25.02.\n(f) An offense under this section is a felony of the second\ndegree, except that an offense under this section is:\n(1) a felony of the first degree if the victim was:\n(A) a person whom the actor was prohibited from\nmarrying or purporting to marry or with whom the actor was prohibited\nfrom living under the appearance of being married under Section\n25.01; or\n(B) a person with whom the actor was prohibited from\nengaging in sexual intercourse or deviate sexual intercourse under\nSection 25.02; or\n(2) a state jail felony if the offense is committed under\nSubsection"
   },
   {
+    "literal": "SEXUAL ASSAULT MINOR NON FORCEABLE",
+    "citation": "PC 22.011(A)(2)(M)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SEXUAL ASSAULT PROH/PURPORT SPOUSE",
     "citation": "22.011(f)(1)",
     "statute": "PC",
     "level": "F1",
     "statuteText": "Sec. 22.011. SEXUAL ASSAULT. (a) A person commits an offense\nif:\n(1) the person intentionally or knowingly:\n(A) causes the penetration of the anus or sexual organ\nof another person by any means, without that person's consent;\n(B) causes the penetration of the mouth of another\nperson by the sexual organ of the actor, without that person's\nconsent; or\n(C) causes the sexual organ of another person, without\nthat person's consent, to contact or penetrate the mouth, anus, or\nsexual organ of another person, including the actor; or\n(2) regardless of whether the person knows the age of the\n\nPENAL CODE\nchild at the time of the offense, the person intentionally or\nknowingly:\n(A) causes the penetration of the anus or sexual organ\nof a child by any means;\n(B) causes the penetration of the mouth of a child by\nthe sexual organ of the actor;\n(C) causes the sexual organ of a child to contact or\npenetrate the mouth, anus, or sexual organ of another person,\nincluding the actor;\n(D) causes the anus of a child to contact the mouth,\nanus, or sexual organ of another person, including the actor; or\n(E) causes the mouth of a child to contact the anus or\nsexual organ of another person, including the actor.\n(b) A sexual assault under Subsection (a)(1) is without the\nconsent of the other person if:\n(1) the actor compels the other person to submit or\nparticipate by the use of physical force, violence, or coercion;\n(2) the actor compels the other person to submit or\nparticipate by threatening to use force or violence against the other\nperson or to cause harm to the other person, and the other person\nbelieves that the actor has the present ability to execute the\nthreat;\n(3) the other person has not consented and the actor knows\nthe other person is unconscious or physically unable to resist;\n(4) the actor knows that as a result of mental disease or\ndefect the other person is at the time of the sexual assault\nincapable either of appraising the nature of the act or of resisting\nit;\n(5) the other person has not consented and the actor knows\nthe other person is unaware that the sexual assault is occurring;\n(6) the actor knows that the other person is intoxicated or\nimpaired by any substance to the extent that the other person is\nincapable of consenting;\n(7) the actor compels the other person to submit or\nparticipate by threatening to use force or violence against any\nperson, and the other person believes that the actor has the ability\nto execute the threat;\n(8) the actor is a public servant who coerces the other\nperson to submit or participate;\n(9) the actor is a mental health services provider or a\n\nPENAL CODE\nhealth care services provider who causes the other person, who is a\npatient or former patient of the actor, to submit or participate by\nexploiting the other person's emotional dependency on the actor;\n(10) the actor is a clergyman who causes the other person\nto submit or participate by exploiting the other person's emotional\ndependency on the clergyman in the clergyman's professional character\nas spiritual adviser;\n(11) the actor is an employee of a facility where the other\nperson is a resident, unless the employee and resident are formally\nor informally married to each other under Chapter 2, Family Code;\n(12) the actor is a health care services provider who, in\nthe course of performing an assisted reproduction procedure on the\nother person, uses human reproductive material from a donor knowing\nthat the other person has not expressly consented to the use of\nmaterial from that donor;\n(13) the actor is a coach or tutor who causes the other\nperson to submit or participate by using the actor's power or\ninfluence to exploit the other person's dependency on the actor; or\n(14) the actor is a caregiver hired to assist the other\nperson with activities of daily life and causes the other person to\nsubmit or participate by exploiting the other person's dependency on\nthe actor.\n(c) In this section:\n(1) \"Child\" means a person younger than 17 years of age.\n(1-a) \"Consent\" has the meaning assigned by Section 1.07.\n(2) \"Spouse\" means a person who is legally married to\nanother.\n(3) \"Health care services provider\" means:\n(A) a physician licensed under Subtitle B, Title 3,\nOccupations Code;\n(B) a chiropractor licensed under Chapter 201,\nOccupations Code;\n(C) a physical therapist licensed under Chapter 453,\nOccupations Code;\n(D) a physician assistant licensed under Chapter 204,\nOccupations Code;\n(E) a registered nurse, a vocational nurse, or an\nadvanced practice nurse licensed under Chapter 301, Occupations Code;\nor\n(F) a massage therapist licensed under Chapter 455,\n\nPENAL CODE\nOccupations Code.\n(4) \"Mental health services provider\" means an individual,\nlicensed or unlicensed, who performs or purports to perform mental\nhealth services, including a:\n(A) licensed social worker as defined by Section\n505.002, Occupations Code;\n(B) chemical dependency counselor as defined by Section\n504.001, Occupations Code;\n(C) licensed professional counselor as defined by\nSection 503.002, Occupations Code;\n(D) licensed marriage and family therapist as defined\nby Section 502.002, Occupations Code;\n(E) member of the clergy;\n(F) psychologist offering psychological services as\ndefined by Section 501.003, Occupations Code; or\n(G) special officer for mental health assignment\ncertified under Section 1701.404, Occupations Code.\n(5) \"Employee of a facility\" means a person who is an\nemployee of a facility defined by Section 250.001, Health and Safety\nCode, or any other person who provides services for a facility for\ncompensation, including a contract laborer.\n(6) \"Assisted reproduction\" and \"donor\" have the meanings\nassigned by Section 160.102, Family Code.\n(7) \"Human reproductive material\" means:\n(A) a human spermatozoon or ovum; or\n(B) a human organism at any stage of development from\nfertilized ovum to embryo.\n(d) It is a defense to prosecution under Subsection (a)(2) that\nthe conduct consisted of medical care for the child and did not\ninclude any contact between the anus or sexual organ of the child and\nthe mouth, anus, or sexual organ of the actor or a third party.\n(e) It is an affirmative defense to prosecution under\nSubsection (a)(2):\n(1) that the actor was the spouse of the child at the time\nof the offense; or\n(2) that:\n(A) the actor was not more than three years older than\nthe victim and at the time of the offense:\n(i) was not required under Chapter 62, Code of\nCriminal Procedure, to register for life as a sex offender; or\n\nPENAL CODE\n(ii) was not a person who under Chapter 62, Code of\nCriminal Procedure, had a reportable conviction or adjudication for\nan offense under this section; and\n(B) the victim:\n(i) was a child of 14 years of age or older; and\n(ii) was not:\n(a) a person whom the actor was prohibited from\nmarrying or purporting to marry or with whom the actor was prohibited\nfrom living under the appearance of being married under Section\n25.01; or\n(b) a person with whom the actor was prohibited\nfrom engaging in sexual intercourse or deviate sexual intercourse\nunder Section 25.02.\n(f) An offense under this section is a felony of the second\ndegree, except that an offense under this section is:\n(1) a felony of the first degree if the victim was:\n(A) a person whom the actor was prohibited from\nmarrying or purporting to marry or with whom the actor was prohibited\nfrom living under the appearance of being married under Section\n25.01; or\n(B) a person with whom the actor was prohibited from\nengaging in sexual intercourse or deviate sexual intercourse under\nSection 25.02; or"
+  },
+  {
+    "literal": "SEXUAL ASSAULT-SODOMY",
+    "citation": "PC 22.011(A)(1)(S)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SEXUAL ASSLT",
@@ -16494,11 +23514,29 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 22.011. SEXUAL ASSAULT.\n(a) A person commits an offense\nif:\n(1) the person intentionally or knowingly:\n(A) causes the penetration of the anus or sexual organ\nof another person by any means, without that person's consent;\n(B) causes the penetration of the mouth of another\nperson by the sexual organ of the actor, without that person's\nconsent; or\n(C) causes the sexual organ of another person, without\nthat person's consent, to contact or penetrate the mouth, anus, or\nsexual organ of another person, including the actor; or"
   },
   {
+    "literal": "SEXUAL ASSLT BIGAMY",
+    "citation": "PC 22.011(F)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SEXUAL ASSLT CHILD",
     "citation": "22.011(a)(2)",
     "statute": "PC",
     "level": "F2",
     "statuteText": "Sec. 22.011. SEXUAL ASSAULT.\n(a) A person commits an offense\nif:\n(1) the person intentionally or knowingly:\n(A) causes the penetration of the anus or sexual organ\nof another person by any means, without that person's consent;\n(B) causes the penetration of the mouth of another\nperson by the sexual organ of the actor, without that person's\nconsent; or\n(C) causes the sexual organ of another person, without\nthat person's consent, to contact or penetrate the mouth, anus, or\nsexual organ of another person, including the actor; or\n(2) regardless of whether the person knows the age of the\n\nPENAL CODE\nchild at the time of the offense, the person intentionally or\nknowingly:\n(A) causes the penetration of the anus or sexual organ\nof a child by any means;\n(B) causes the penetration of the mouth of a child by\nthe sexual organ of the actor;\n(C) causes the sexual organ of a child to contact or\npenetrate the mouth, anus, or sexual organ of another person,\nincluding the actor;\n(D) causes the anus of a child to contact the mouth,\nanus, or sexual organ of another person, including the actor; or\n(E) causes the mouth of a child to contact the anus or\nsexual organ of another person, including the actor."
+  },
+  {
+    "literal": "SEXUAL ASSLT PROH/PURPORT SPOUSE",
+    "citation": "PC 22.011(E)(2)(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SEXUAL ASSLT PROH/PURPORT SPOUSE < 14YOA",
+    "citation": "PC 22.011(E)(2)(A)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SEXUAL COERCION",
@@ -16515,11 +23553,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 21.18. SEXUAL COERCION. (a) In this section:\n(1) \"Intimate visual material\" means the visual material\ndescribed by Section 21.16(b)(1) or (c).\n(2) \"Sexual conduct\" has the meaning assigned by Section\n43.25.\n(b) A person commits an offense if the person intentionally\nthreatens, including by coercion or extortion, to commit an offense\nunder Chapter 43 or Section 20A.02(a)(3), (4), (7), or (8), 21.02,\n21.03, 21.08, 21.11, 21.12, 21.15, 21.16, 21.17, 22.011, or 22.021 to\nobtain, in return for not committing the threatened offense or in\nconnection with the threatened offense, any of the following\nbenefits:\n(1) intimate visual material;\n(2) an act involving sexual conduct causing arousal or\ngratification; or\n(3) a monetary benefit or other benefit of value.\n(c) A person commits an offense if the person intentionally\nthreatens, including by coercion or extortion, to commit an offense\nunder Chapter 19 or 20 or Section 20A.02(a)(1), (2), (5), or (6) to\nobtain, in return for not committing the threatened offense or in\nconnection with the threatened offense, either of the following\nbenefits:\n(1) intimate visual material; or\n(2) an act involving sexual conduct causing arousal or\ngratification.\n(d) This section applies to a threat regardless of how that\nthreat is communicated, including a threat transmitted through e-mail\nor an Internet website, social media account, or chat room and a\nthreat made by other electronic or technological means.\n(e) An offense under this section is a state jail felony,\nexcept that the offense is a felony of the third degree if it is\nshown on the trial of the offense that the defendant has previously\nbeen convicted of an offense under this section.\nAdded by"
   },
   {
+    "literal": "SEXUAL CONT/INTERCOURSE W/SUPERV PERS",
+    "citation": "PC 39.04(g)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SEXUAL CONT/INTERCOURSE W/SUPERVISED PERSON",
     "citation": "39.04(g)",
     "statute": "PC",
     "level": "FS",
     "statuteText": "Sec. 39.04. VIOLATIONS OF THE CIVIL RIGHTS OF PERSON IN\nCUSTODY; IMPROPER SEXUAL ACTIVITY WITH PERSON IN CUSTODY OR UNDER\nSUPERVISION. (a) An official of a correctional facility or juvenile\nfacility, an employee of a correctional facility or juvenile\nfacility, a person other than an employee who works for compensation\nat a correctional facility or juvenile facility, a volunteer at a\ncorrectional facility or juvenile facility, or a peace officer\ncommits an offense if the person intentionally:\n\nPENAL CODE\n(1) denies or impedes a person in custody in the exercise\nor enjoyment of any right, privilege, or immunity knowing his conduct\nis unlawful; or\n(2) engages in sexual contact, sexual intercourse, or\ndeviate sexual intercourse with an individual in custody or, in the\ncase of an individual in the custody of the Texas Juvenile Justice\nDepartment or placed in a juvenile facility, employs, authorizes, or\ninduces the individual to engage in sexual conduct or a sexual\nperformance.\nText of subsection as amended by"
+  },
+  {
+    "literal": "SEXUAL CONT/INTRCRSE W/JUV FACILITY/TJJD",
+    "citation": "PC 39.04(B)(1)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SEXUAL CONT/INTRCRSE W/JUVENILE FACILITY/TJJD",
@@ -16529,6 +23579,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 39.04. VIOLATIONS OF THE CIVIL RIGHTS OF PERSON IN\nCUSTODY; IMPROPER SEXUAL ACTIVITY WITH PERSON IN CUSTODY OR UNDER\nSUPERVISION. (a) An official of a correctional facility or juvenile\nfacility, an employee of a correctional facility or juvenile\nfacility, a person other than an employee who works for compensation\nat a correctional facility or juvenile facility, a volunteer at a\ncorrectional facility or juvenile facility, or a peace officer\ncommits an offense if the person intentionally:\n\nPENAL CODE\n(1) denies or impedes a person in custody in the exercise\nor enjoyment of any right, privilege, or immunity knowing his conduct\nis unlawful; or\n(2) engages in sexual contact, sexual intercourse, or\ndeviate sexual intercourse with an individual in custody or, in the\ncase of an individual in the custody of the Texas Juvenile Justice\nDepartment or placed in a juvenile facility, employs, authorizes, or\ninduces the individual to engage in sexual conduct or a sexual\nperformance.\nText of subsection as amended by"
   },
   {
+    "literal": "SEXUAL PERF BY CHILD <14 PROD/DIR/PROMO",
+    "citation": "PC 43.25(E)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SEXUAL PERF BY CHILD <14 YRS PRODUCE/DIR/PROMO",
     "citation": "43.25(e)",
     "statute": "PC",
@@ -16536,11 +23592,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 43.25. SEXUAL PERFORMANCE BY A CHILD. (a) In this\nsection:\n(1) \"Sexual performance\" means any performance or part\nthereof that includes sexual conduct by a child younger than 18 years\nof age.\n(2) \"Sexual conduct\" means sexual contact, actual or\nsimulated sexual intercourse, deviate sexual intercourse, sexual\nbestiality, masturbation, sado-masochistic abuse, or lewd exhibition\nof the genitals, the anus, or any portion of the female breast below\nthe top of the areola.\n(3) \"Performance\" means any play, motion picture,\nphotograph, dance, or other visual representation that can be\nexhibited before an audience of one or more persons.\n(4) \"Produce\" with respect to a sexual performance includes\nany conduct that directly contributes to the creation or manufacture\n\nPENAL CODE\nof the sexual performance.\n(5) \"Promote\" means to procure, manufacture, issue, sell,\ngive, provide, lend, mail, deliver, transfer, transmit, publish,\ndistribute, circulate, disseminate, present, exhibit, or advertise or\nto offer or agree to do any of the above.\n(6) \"Simulated\" means the explicit depiction of sexual\nconduct that creates the appearance of actual sexual conduct and\nduring which a person engaging in the conduct exhibits any uncovered\nportion of the breasts, genitals, or buttocks.\n(7) \"Deviate sexual intercourse\" and \"sexual contact\" have\nthe meanings assigned by Section 43.01.\n(b) A person commits an offense if, knowing the character and\ncontent thereof, he employs, authorizes, or induces a child younger\nthan 18 years of age to engage in sexual conduct or a sexual\nperformance. A parent or legal guardian or custodian of a child\nyounger than 18 years of age commits an offense if he consents to the\nparticipation by the child in a sexual performance.\n(c) An offense under Subsection (b) is a felony of the second\ndegree, except that the offense is a felony of the first degree if\nthe victim is younger than 14 years of age at the time the offense is\ncommitted, regardless of whether the actor knows the age of the\nvictim at the time of the offense.\n(d) A person commits an offense if, knowing the character and\ncontent of the material, he produces, directs, or promotes a\nperformance that includes sexual conduct by a child younger than 18\nyears of age.\n(e) An offense under Subsection"
   },
   {
+    "literal": "SEXUAL PERF BY CHILD <14YRS EMPLOY/PROM",
+    "citation": "PC 43.25(C)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SEXUAL PERF CHILD <14 EMPLOY/INDUCE/AUTHORIZE",
     "citation": "43.25(c)",
     "statute": "PC",
     "level": "F1",
     "statuteText": "Sec. 43.25. SEXUAL PERFORMANCE BY A CHILD. (a) In this\nsection:\n(1) \"Sexual performance\" means any performance or part\nthereof that includes sexual conduct by a child younger than 18 years\nof age.\n(2) \"Sexual conduct\" means sexual contact, actual or\nsimulated sexual intercourse, deviate sexual intercourse, sexual\nbestiality, masturbation, sado-masochistic abuse, or lewd exhibition\nof the genitals, the anus, or any portion of the female breast below\nthe top of the areola.\n(3) \"Performance\" means any play, motion picture,\nphotograph, dance, or other visual representation that can be\nexhibited before an audience of one or more persons.\n(4) \"Produce\" with respect to a sexual performance includes\nany conduct that directly contributes to the creation or manufacture\n\nPENAL CODE\nof the sexual performance.\n(5) \"Promote\" means to procure, manufacture, issue, sell,\ngive, provide, lend, mail, deliver, transfer, transmit, publish,\ndistribute, circulate, disseminate, present, exhibit, or advertise or\nto offer or agree to do any of the above.\n(6) \"Simulated\" means the explicit depiction of sexual\nconduct that creates the appearance of actual sexual conduct and\nduring which a person engaging in the conduct exhibits any uncovered\nportion of the breasts, genitals, or buttocks.\n(7) \"Deviate sexual intercourse\" and \"sexual contact\" have\nthe meanings assigned by Section 43.01.\n(b) A person commits an offense if, knowing the character and\ncontent thereof, he employs, authorizes, or induces a child younger\nthan 18 years of age to engage in sexual conduct or a sexual\nperformance. A parent or legal guardian or custodian of a child\nyounger than 18 years of age commits an offense if he consents to the\nparticipation by the child in a sexual performance.\n(c) An offense under Subsection"
+  },
+  {
+    "literal": "SEXUAL PERFORM CHILD EMPLOY IND/AUTH",
+    "citation": "PC 43.25(B)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SEXUAL PERFORM CHILD EMPLOY INDUCE/AUTHORIZE",
@@ -16555,6 +23623,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 43.25. SEXUAL PERFORMANCE BY A CHILD. (a) In this\nsection:\n(1) \"Sexual performance\" means any performance or part\nthereof that includes sexual conduct by a child younger than 18 years\nof age.\n(2) \"Sexual conduct\" means sexual contact, actual or\nsimulated sexual intercourse, deviate sexual intercourse, sexual\nbestiality, masturbation, sado-masochistic abuse, or lewd exhibition\nof the genitals, the anus, or any portion of the female breast below\nthe top of the areola.\n(3) \"Performance\" means any play, motion picture,\nphotograph, dance, or other visual representation that can be\nexhibited before an audience of one or more persons.\n(4) \"Produce\" with respect to a sexual performance includes\nany conduct that directly contributes to the creation or manufacture\n\nPENAL CODE\nof the sexual performance.\n(5) \"Promote\" means to procure, manufacture, issue, sell,\ngive, provide, lend, mail, deliver, transfer, transmit, publish,\ndistribute, circulate, disseminate, present, exhibit, or advertise or\nto offer or agree to do any of the above.\n(6) \"Simulated\" means the explicit depiction of sexual\nconduct that creates the appearance of actual sexual conduct and\nduring which a person engaging in the conduct exhibits any uncovered\nportion of the breasts, genitals, or buttocks.\n(7) \"Deviate sexual intercourse\" and \"sexual contact\" have\nthe meanings assigned by Section 43.01.\n(b) A person commits an offense if, knowing the character and\ncontent thereof, he employs, authorizes, or induces a child younger\nthan 18 years of age to engage in sexual conduct or a sexual\nperformance. A parent or legal guardian or custodian of a child\nyounger than 18 years of age commits an offense if he consents to the\nparticipation by the child in a sexual performance.\n(c) An offense under Subsection (b) is a felony of the second\ndegree, except that the offense is a felony of the first degree if\nthe victim is younger than 14 years of age at the time the offense is\ncommitted, regardless of whether the actor knows the age of the\nvictim at the time of the offense.\n(d) A person commits an offense if, knowing the character and\ncontent of the material, he produces, directs, or promotes a\nperformance that includes sexual conduct by a child younger than 18\nyears of age.\n(e) An offense under Subsection"
+  },
+  {
+    "literal": "SEXUAL PERFORM CHILD PRODUCE/DRCT/PROM",
+    "citation": "PC 43.25(D)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SEXUAL PERFORM POSSIBLE VIEW/PRESENCE <18YOA",
@@ -16600,6 +23674,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "SIDE MARKER LAMPS NOT VIS SUFFIENT DIST",
+    "citation": "TRC 547.355 3191",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SIDEWALK DRIVING OVER",
     "citation": "545.422",
     "statute": "TC",
@@ -16636,6 +23716,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "SIGNS - PORTABLE SIGN W/O PERMIT",
+    "citation": "ORD 12.04.004",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SIGNS - PROHIBITED LOCATION",
     "citation": "12.04.016",
     "statute": "CO",
@@ -16654,10 +23740,28 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "SILENT ABUSIVE CALL/ELECTR COMM TO 911",
+    "citation": "PC 42.061(d)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SILENT ABUSIVE CALL/ELECTR COMM TO 911 SERVICE",
     "citation": "42.061(d)",
     "statute": "PC",
     "level": "MB"
+  },
+  {
+    "literal": "SIMULATING LEGAL PROCESS",
+    "citation": "PC 32.48(e)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SIMULATING LEGAL PROCESS W/PREV CONVIC",
+    "citation": "PC 32.48(f)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SKATING WHERE PROHIBITED",
@@ -16684,10 +23788,46 @@ export const CJIS_CODES: Offense[] = [
     "level": "FS"
   },
   {
+    "literal": "SLOW MOVING VEHICLE - NO EMBLEM",
+    "citation": "TRC 547.703",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SLOW MOVING VEHICLE EMBLEM VIOLATION",
+    "citation": "TRC 547.005 3236",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SLOW MOVING VEHICLE NO EMBLEM",
     "citation": "547.703",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "SLOWER VEHICLE FAILED TO KEEP TO RIGHT",
+    "citation": "TRC 545.051 3083",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SMOKING - FAIL TO COMPLY W PROHIB  3RD +",
+    "citation": "ORD 7.05.013(3RD)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SMOKING - FAIL TO COMPLY W PROHIB 2ND",
+    "citation": "ORD 7.05.013(2ND)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SMOKING - FAIL TO COMPLY W PROHIBITION",
+    "citation": "ORD 7.05.013",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SMOKING - FAIL TO COMPLY W/PROHIBITION",
@@ -16714,10 +23854,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "SMOKING - IN AN ENCLOSED PUBLIC PLACE",
+    "citation": "ORD 7.05.004",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SMOKING - IN AN OUTDOOR SPORTS ARENA",
     "citation": "7.05.006",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "SMOKING - IN ENCLOSED PLACES OF EMPLOY",
+    "citation": "ORD 7.05.005",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SMOKING - IN ENCLOSED PLACES OF EMPLOYMENT",
@@ -16732,6 +23884,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "SMOKING - PROHIB IN CERTAIN PUBLIC AREAS",
+    "citation": "ORD 7.05.009",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SMOKING - W/IN A REASONABLE DISTANCE",
     "citation": "7.05.007",
     "statute": "CO",
@@ -16741,12 +23899,6 @@ export const CJIS_CODES: Offense[] = [
     "literal": "SMOKING PROHIBITED IN CERTAIN PUBLIC AREAS",
     "citation": "7.05.009",
     "statute": "CO",
-    "level": "MC"
-  },
-  {
-    "literal": "SMUGGLING CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
     "level": "MC"
   },
   {
@@ -16799,6 +23951,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 20.05. SMUGGLING OF PERSONS. (a) A person commits an\noffense if the person knowingly:\n(1) uses a motor vehicle, aircraft, watercraft, or other\nmeans of conveyance to transport an individual with the intent to:\n(A) conceal the individual from a peace officer or\n\nPENAL CODE\nspecial investigator; or\n(B) flee from a person the actor knows is a peace\nofficer or special investigator attempting to lawfully arrest or\ndetain the actor;\n(2) encourages or induces a person to enter or remain in\nthis country in violation of federal law by concealing, harboring, or\nshielding that person from detection; or\n(3) assists, guides, or directs two or more individuals to\nenter or remain on agricultural land without the effective consent of\nthe owner.\n(b) Subject to Subsections (b-1) and (b-2), an offense under\nthis section is a felony of the third degree with a term of\nimprisonment of 10 years, except that the offense is:\n(1) a felony of the second degree with a minimum term of\nimprisonment of 10 years if:\n(A) the actor commits the offense in a manner that\ncreates a substantial likelihood that the smuggled individual will\nsuffer serious bodily injury or death;\n(B) the smuggled individual is a child younger than 18\nyears of age at the time of the offense;\n(C) the offense was committed with the intent to obtain\na pecuniary benefit;\n(D) during the commission of the offense the actor,\nanother party to the offense, or an individual assisted, guided, or\ndirected by the actor knowingly possessed a firearm; or\n(E) the actor commits the offense under Subsection\n(a)(1)(B); or\n(2) a felony of the first degree with a minimum term of\nimprisonment of 10 years if:\n(A) it is shown on the trial of the offense that, as a\ndirect result of the commission of the offense, the smuggled\nindividual became a victim of sexual assault, as defined by Section\n22.011, or aggravated sexual assault, as defined by Section 22.021;\nor\n(B) the smuggled individual suffered serious bodily\ninjury or death.\n(b-1) If at the punishment stage of the trial or at the time of\nentering a plea agreement for an offense under this section\npunishable as a felony of the third degree, the attorney representing\nthe state in the prosecution of the offense certifies to the court in\n\nPENAL CODE\nwriting that the actor has provided significant cooperation to the\nstate or law enforcement, and describes the manner of cooperation,\nthe minimum term of imprisonment is five years. The certification is\nconfidential and shall be sealed by the court, except that the\ncertification may be accessed by the office of the attorney\nrepresenting the state, the attorney representing the defendant, and\nthe court. For purposes of this subsection, \"significant\ncooperation\" includes:"
   },
   {
+    "literal": "SMUGGLING OF PERSONS: SX ASSLT VICT IAT",
+    "citation": "PC 20.05(b)(2)(A)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SMUGGLING OF PERSONS: UNDER 18 YOA",
     "citation": "20.05(b)(1)(B)",
     "statute": "PC",
@@ -16811,6 +23969,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F1",
     "statuteText": "Sec. 20.05. SMUGGLING OF PERSONS. (a) A person commits an\noffense if the person knowingly:\n(1) uses a motor vehicle, aircraft, watercraft, or other\nmeans of conveyance to transport an individual with the intent to:\n(A) conceal the individual from a peace officer or\n\nPENAL CODE\nspecial investigator; or\n(B) flee from a person the actor knows is a peace\nofficer or special investigator attempting to lawfully arrest or\ndetain the actor;\n(2) encourages or induces a person to enter or remain in\nthis country in violation of federal law by concealing, harboring, or\nshielding that person from detection; or\n(3) assists, guides, or directs two or more individuals to\nenter or remain on agricultural land without the effective consent of\nthe owner.\n(b) Subject to Subsections (b-1) and (b-2), an offense under\nthis section is a felony of the third degree with a term of\nimprisonment of 10 years, except that the offense is:\n(1) a felony of the second degree with a minimum term of\nimprisonment of 10 years if:\n(A) the actor commits the offense in a manner that\ncreates a substantial likelihood that the smuggled individual will\nsuffer serious bodily injury or death;\n(B) the smuggled individual is a child younger than 18\nyears of age at the time of the offense;\n(C) the offense was committed with the intent to obtain\na pecuniary benefit;\n(D) during the commission of the offense the actor,\nanother party to the offense, or an individual assisted, guided, or\ndirected by the actor knowingly possessed a firearm; or\n(E) the actor commits the offense under Subsection\n(a)(1)(B); or\n(2) a felony of the first degree with a minimum term of\nimprisonment of 10 years if:\n(A) it is shown on the trial of the offense that, as a\ndirect result of the commission of the offense, the smuggled\nindividual became a victim of sexual assault, as defined by Section\n22.011, or aggravated sexual assault, as defined by Section 22.021;\nor\n(B) the smuggled individual suffered serious bodily\ninjury or death.\n(b-1) If at the punishment stage of the trial or at the time of\nentering a plea agreement for an offense under this section\npunishable as a felony of the third degree, the attorney representing\nthe state in the prosecution of the offense certifies to the court in\n\nPENAL CODE\nwriting that the actor has provided significant cooperation to the\nstate or law enforcement, and describes the manner of cooperation,\nthe minimum term of imprisonment is five years. The certification is\nconfidential and shall be sealed by the court, except that the\ncertification may be accessed by the office of the attorney\nrepresenting the state, the attorney representing the defendant, and\nthe court. For purposes of this subsection, \"significant\ncooperation\" includes:"
+  },
+  {
+    "literal": "SMUGGLING PERSONS/LIKELIHOOD SBI/DEATH",
+    "citation": "PC 20.05(b)(1)(A)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SNAP UNAUTH POSS <$200",
@@ -16922,6 +24086,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "SOLICITATION FOR PROSTITUTION",
+    "citation": "43.02",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SOLICITATION OF MEMBERSHIP IN GANG",
+    "citation": "EDC 37.121",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SOLICITATION OF PATIENTS",
     "citation": "102.001(b)",
     "statute": "OC",
@@ -16932,6 +24108,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "102.001(c)",
     "statute": "OC",
     "level": "F3"
+  },
+  {
+    "literal": "SOLICITING AFTER HOURS",
+    "citation": "ORD 5.04.003",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SOLICITING AFTER HOURS - ITINERANT MERCHANT",
@@ -16970,6 +24152,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "SOUND PRODUCING DEVICES",
+    "citation": "TPW 31.065",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SPEAKER CANDIDATE CAMPAIGN FINANCE",
     "citation": "302.021",
     "statute": "GC",
@@ -16982,10 +24170,64 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "SPEED UNDER MINIMUM",
+    "citation": "TRC 545.363 3051",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SPEEDING",
+    "citation": "215",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SPEEDING - 10% +",
+    "citation": "TRC 545.351(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SPEEDING - 10% +  (CONST W/WORKERS)",
+    "citation": "TRC 545.351(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SPEEDING - 15 - 24 MPH OVER POSTED SPEED",
+    "citation": "TRC 545.351(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SPEEDING - 15-24 MPH OVER LIM CONST W/W",
+    "citation": "TRC 545.351(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SPEEDING - 25+ MPH OVER LIM (CONST W/W)",
+    "citation": "TRC 545.351(7)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SPEEDING - 25+ MPH OVER POSTED SPEED",
+    "citation": "TRC 545.351(6)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SPEEDING - 25+ MPH OVER POSTED SPEED (CONST. W/W)",
     "citation": "545.351",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "SPEEDING - LESS THAN 10%",
+    "citation": "TRC 545.351(3)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SPEEDING - WARNING (NO SPEED LIMIT)",
@@ -17024,16 +24266,40 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "SPEEDING > 10% ABOVE POSTED LIMIT",
+    "citation": "TRC 708.52 3586",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SPEEDING ADJACENT 20MPH SCHOOL ZONE",
     "citation": "545.351",
     "statute": "TC",
     "level": "MC"
   },
   {
+    "literal": "SPEEDING CDL HAZARDOUS",
+    "citation": "TRC 522.003 039A",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "SPEEDING IN A SCHOOL ZONE",
+    "citation": "TRC 541.302 3596",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SPEEDING LESS THAN 10%",
     "citation": "545.351",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "SPEEDING OVER 15MPH (CDL ONLY)",
+    "citation": "TRC 522.003 3039",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SPEEDING POSTED 20MPH SCHOOL ZONE",
@@ -17068,6 +24334,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "STANDING IN PROHIBITED AREA",
+    "citation": "TRC 545.302 3554",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "STATE EMERGENCY ORDERS VIOL",
     "citation": "433.006(a)",
     "statute": "GC",
@@ -17080,6 +24352,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "F2"
   },
   {
+    "literal": "STEALING RECEIVING STOLEN CHECK",
+    "citation": "PC 32.24",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "STEALING/RECEIVING STOLEN CHECK",
     "citation": "32.24(b)",
     "statute": "PC",
@@ -17087,16 +24365,16 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 32.24. STEALING OR RECEIVING STOLEN CHECK OR SIMILAR SIGHT\nORDER. (a) A person commits an offense if the person steals an\nunsigned check or similar sight order or, with knowledge that an\nunsigned check or similar sight order has been stolen, receives the\ncheck or sight order with intent to use it, to sell it, or to\ntransfer it to a person other than the person from whom the check or\nsight order was stolen.\n(b) An offense under this section is a state jail felony.\nAdded by"
   },
   {
-    "literal": "STOLEN PROPERTY CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "STOOD ON STREET/HWY-SOLICIT GUARD VEH",
+    "citation": "TRC 552.007 3527",
+    "statute": "",
+    "level": ""
   },
   {
-    "literal": "STOLEN VEHICLE CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "STOOD ROADWAY SOLICITE RIDE",
+    "citation": "TRC 552.007 3526",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "STOP SIGN",
@@ -17121,6 +24399,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "545.302(a)(8)",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "STORE POSS BEER OFF PREMISES PROHIBITED",
+    "citation": "ABC 69.1",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "STORE SELL/HANDLE FLAMMABLE LIQUIDS",
@@ -17153,6 +24437,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "STORMWATER POLLUTION - EROSION OF PROP",
+    "citation": "ORD 12.05.009(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "STORMWATER POLLUTION - ILLEGAL DISCHARGE",
+    "citation": "ORD 11.02.130(b)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "STREETS - OBSTRUCTION OF",
     "citation": "8.05.005",
     "statute": "CO",
@@ -17171,10 +24467,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "STUDENT OR EMPLOYEE BARRED FROM CAMPUS",
+    "citation": "EDC 51.241",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "SUBDIVISION OF PLAT NEAL PROPERTY",
     "citation": "12.002(e)",
     "statute": "PRC",
     "level": "M*"
+  },
+  {
+    "literal": "SUICIDE",
+    "citation": "",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SUNSCREEN NOT APPROVED BY DPS",
@@ -17187,6 +24495,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "22A.051(l)",
     "statute": "EDC",
     "level": "FS"
+  },
+  {
+    "literal": "SUPPORT SERVICES FOR DISABLED PERS VIOL",
+    "citation": "HRC 35.012(b)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "SUPPORT SERVICES FOR DISABLED PERSONS VIOL",
@@ -17205,6 +24519,24 @@ export const CJIS_CODES: Offense[] = [
     "citation": "521.315",
     "statute": "TRC",
     "level": "MB"
+  },
+  {
+    "literal": "TAG TO BE ATTACHED TO DEER",
+    "citation": "TPW 42.018",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TAIL LAMP IMPROPERLY LOCATED",
+    "citation": "TRC 547.322 3168",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TAILGATE - NONE",
+    "citation": "TRC 725.021(b)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "TAILGATE NONE",
@@ -17262,6 +24594,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "TAMP/FAB PHYS EVID W/INT IMPAIR CORPSE",
+    "citation": "PC 37.09(C)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "TAMP/FAB PHYS EVID W/INTENT IMPAIR HUM CORPSE",
     "citation": "37.09(c)",
     "statute": "PC",
@@ -17276,11 +24614,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 31.11. TAMPERING WITH IDENTIFICATION NUMBERS.\n(a) A\nperson commits an offense if the person:"
   },
   {
+    "literal": "TAMPER W/CERT/INSP/MAINTEN REPORT IAT",
+    "citation": "PC 37.10(c)(2)(C)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "TAMPER W/CERT/INSP/MAINTENANCE REPORT IAT",
     "citation": "37.10(c)(2)(C)",
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 37.10. TAMPERING WITH GOVERNMENTAL RECORD. (a) A person\ncommits an offense if he:\n(1) knowingly makes a false entry in, or false alteration\nof, a governmental record;\n(2) makes, presents, or uses any record, document, or thing\nwith knowledge of its falsity and with intent that it be taken as a\ngenuine governmental record;\n(3) intentionally destroys, conceals, removes, or otherwise\nimpairs the verity, legibility, or availability of a governmental\nrecord;\n(4) possesses, sells, or offers to sell a governmental\nrecord or a blank governmental record form with intent that it be\nused unlawfully;\n(5) makes, presents, or uses a governmental record with\nknowledge of its falsity; or\n(6) possesses, sells, or offers to sell a governmental\nrecord or a blank governmental record form with knowledge that it was\nobtained unlawfully.\n(b) It is an exception to the application of Subsection (a)(3)\nthat the governmental record is destroyed pursuant to legal\nauthorization or transferred under Section 441.204, Government Code.\nWith regard to the destruction of a local government record, legal\nauthorization includes compliance with the provisions of Subtitle C,\nTitle 6, Local Government Code.\n(c)(1) Except as provided by Subdivisions\n(2), (3), (4), (5),\nand (6), and by Subsection (d), an offense under this section is a\nClass A misdemeanor unless the actor's intent is to defraud or harm\nanother, in which event the offense is a state jail felony.\n(2) An offense under this section is a felony of the third\ndegree if it is shown on the trial of the offense that the\ngovernmental record was:\n(A) a public school record, report, or assessment\ninstrument required under Chapter 39, Education Code, data reported\nfor a school district or open-enrollment charter school to the Texas\nEducation Agency through the Public Education Information Management\nSystem (PEIMS) described by Sections 48.008 and 48.009, Education\n\nPENAL CODE\nCode, under a law or rule requiring that reporting, or a license,\ncertificate, permit, seal, title, letter of patent, or similar\ndocument issued by government, by another state, or by the United\nStates, unless the actor's intent is to defraud or harm another, in\nwhich event the offense is a felony of the second degree;\n(B) a written report of a medical, chemical,\ntoxicological, ballistic, or other expert examination or test\nperformed on physical evidence for the purpose of determining the\nconnection or relevance of the evidence to a criminal action;\n(C) a written report of the certification, inspection,\nor maintenance record of an instrument, apparatus, implement,\nmachine, or other similar device used in the course of an examination\nor test performed on physical evidence for the purpose of determining\nthe connection or relevance of the evidence to a criminal action; or\n(D) a search warrant issued by a magistrate."
+  },
+  {
+    "literal": "TAMPER W/DIRECT REC ELEC VOTE MACH-ATT",
+    "citation": "PC 33.05",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "TAMPER W/DIRECT RECORD ELEC VOTE MACH-ATTEMPT",
@@ -17311,6 +24661,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 38.112. TAMPERING WITH ELECTRONIC MONITORING DEVICE. (a)\nA person who is required to submit to electronic monitoring of the\nperson's location as part of an electronic monitoring program under\nArticle 42.035, Code of Criminal Procedure, or as a condition of\ncommunity supervision, parole, mandatory supervision, or release on\nbail commits an offense if the person knowingly removes or disables,\nor causes or conspires or cooperates with another person to remove or\ndisable, a tracking device that the person is required to wear to\nenable the electronic monitoring of the person's location.\n(b) An offense under this section is a state jail felony,\nexcept that the offense is a felony of the third degree if the person\nis in the super-intensive supervision program described by Section\n508.317(d), Government Code.\n\nPENAL CODE"
   },
   {
+    "literal": "TAMPER W/GOV REC LIC/SEAL DEFRAUD/HARM",
+    "citation": "PC 37.10(c)(2)(A)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "TAMPER W/GOV REC-INS DOC (A)(1,3,4,6) IAT",
     "citation": "37.10(d)(2)",
     "statute": "PC",
@@ -17325,11 +24681,35 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 37.10. TAMPERING WITH GOVERNMENTAL RECORD. (a) A person\ncommits an offense if he:\n(1) knowingly makes a false entry in, or false alteration\nof, a governmental record;\n(2) makes, presents, or uses any record, document, or thing\nwith knowledge of its falsity and with intent that it be taken as a\ngenuine governmental record;\n(3) intentionally destroys, conceals, removes, or otherwise\nimpairs the verity, legibility, or availability of a governmental\nrecord;\n(4) possesses, sells, or offers to sell a governmental\nrecord or a blank governmental record form with intent that it be\nused unlawfully;\n(5) makes, presents, or uses a governmental record with\nknowledge of its falsity; or\n(6) possesses, sells, or offers to sell a governmental\nrecord or a blank governmental record form with knowledge that it was\nobtained unlawfully.\n(b) It is an exception to the application of Subsection (a)(3)\nthat the governmental record is destroyed pursuant to legal\nauthorization or transferred under Section 441.204, Government Code.\nWith regard to the destruction of a local government record, legal\nauthorization includes compliance with the provisions of Subtitle C,\nTitle 6, Local Government Code.\n(c)(1) Except as provided by Subdivisions (2), (3), (4), (5),\nand (6), and by Subsection\n(d), an offense under this section is a\nClass A misdemeanor unless the actor's intent is to defraud or harm\nanother, in which event the offense is a state jail felony.\n(2) An offense under this section is a felony of the third\ndegree if it is shown on the trial of the offense that the\ngovernmental record was:\n(A) a public school record, report, or assessment\ninstrument required under Chapter 39, Education Code, data reported\nfor a school district or open-enrollment charter school to the Texas\nEducation Agency through the Public Education Information Management\nSystem (PEIMS) described by Sections 48.008 and 48.009, Education\n\nPENAL CODE\nCode, under a law or rule requiring that reporting, or a license,\ncertificate, permit, seal, title, letter of patent, or similar\ndocument issued by government, by another state, or by the United\nStates, unless the actor's intent is to defraud or harm another, in\nwhich event the offense is a felony of the second degree;\n(B) a written report of a medical, chemical,\ntoxicological, ballistic, or other expert examination or test\nperformed on physical evidence for the purpose of determining the\nconnection or relevance of the evidence to a criminal action;\n(C) a written report of the certification, inspection,\nor maintenance record of an instrument, apparatus, implement,\nmachine, or other similar device used in the course of an examination\nor test performed on physical evidence for the purpose of determining\nthe connection or relevance of the evidence to a criminal action; or\n(D) a search warrant issued by a magistrate."
   },
   {
+    "literal": "TAMPER W/GOV REC-INS DOC (a)(1,3,4,6)",
+    "citation": "PC 37.10(d)(2)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TAMPER W/GOV REC-INS DOC (a)(2,5)",
+    "citation": "PC 37.10(d)(2)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TAMPER W/GOV REC-INS DOC-DEFRAUD/HARM",
+    "citation": "PC 37.10(d)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "TAMPER W/GOV REC-INS DOC-DEFRAUD/HARM IAT",
     "citation": "37.10(d)(3)",
     "statute": "PC",
     "level": "F2",
     "statuteText": "Sec. 37.10. TAMPERING WITH GOVERNMENTAL RECORD. (a) A person\ncommits an offense if he:\n(1) knowingly makes a false entry in, or false alteration\nof, a governmental record;\n(2) makes, presents, or uses any record, document, or thing\nwith knowledge of its falsity and with intent that it be taken as a\ngenuine governmental record;\n(3) intentionally destroys, conceals, removes, or otherwise\nimpairs the verity, legibility, or availability of a governmental\nrecord;\n(4) possesses, sells, or offers to sell a governmental\nrecord or a blank governmental record form with intent that it be\nused unlawfully;\n(5) makes, presents, or uses a governmental record with\nknowledge of its falsity; or\n(6) possesses, sells, or offers to sell a governmental\nrecord or a blank governmental record form with knowledge that it was\nobtained unlawfully.\n(b) It is an exception to the application of Subsection (a)(3)\nthat the governmental record is destroyed pursuant to legal\nauthorization or transferred under Section 441.204, Government Code.\nWith regard to the destruction of a local government record, legal\nauthorization includes compliance with the provisions of Subtitle C,\nTitle 6, Local Government Code.\n(c)(1) Except as provided by Subdivisions (2), (3), (4), (5),\nand (6), and by Subsection\n(d), an offense under this section is a\nClass A misdemeanor unless the actor's intent is to defraud or harm\nanother, in which event the offense is a state jail felony.\n(2) An offense under this section is a felony of the third\ndegree if it is shown on the trial of the offense that the\ngovernmental record was:\n(A) a public school record, report, or assessment\ninstrument required under Chapter 39, Education Code, data reported\nfor a school district or open-enrollment charter school to the Texas\nEducation Agency through the Public Education Information Management\nSystem (PEIMS) described by Sections 48.008 and 48.009, Education\n\nPENAL CODE\nCode, under a law or rule requiring that reporting, or a license,\ncertificate, permit, seal, title, letter of patent, or similar\ndocument issued by government, by another state, or by the United\nStates, unless the actor's intent is to defraud or harm another, in\nwhich event the offense is a felony of the second degree;\n(B) a written report of a medical, chemical,\ntoxicological, ballistic, or other expert examination or test\nperformed on physical evidence for the purpose of determining the\nconnection or relevance of the evidence to a criminal action;\n(C) a written report of the certification, inspection,\nor maintenance record of an instrument, apparatus, implement,\nmachine, or other similar device used in the course of an examination\nor test performed on physical evidence for the purpose of determining\nthe connection or relevance of the evidence to a criminal action; or\n(D) a search warrant issued by a magistrate.\n(3) An offense under this section is a Class C misdemeanor\nif it is shown on the trial of the offense that the governmental\nrecord is a governmental record that is required for enrollment of a\nstudent in a school district and was used by the actor to establish\nthe residency of the student."
+  },
+  {
+    "literal": "TAMPER W/GOV SCHOOL REC LIC/SEAL/PERM",
+    "citation": "PC 37.10(c)(2)(A)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "TAMPER W/GOV SCHOOL RECORD LIC/SEAL/PERM IAT",
@@ -17344,6 +24724,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F2",
     "statuteText": "Sec. 37.10. TAMPERING WITH GOVERNMENTAL RECORD. (a) A person\ncommits an offense if he:\n(1) knowingly makes a false entry in, or false alteration\nof, a governmental record;\n(2) makes, presents, or uses any record, document, or thing\nwith knowledge of its falsity and with intent that it be taken as a\ngenuine governmental record;\n(3) intentionally destroys, conceals, removes, or otherwise\nimpairs the verity, legibility, or availability of a governmental\nrecord;\n(4) possesses, sells, or offers to sell a governmental\nrecord or a blank governmental record form with intent that it be\nused unlawfully;\n(5) makes, presents, or uses a governmental record with\nknowledge of its falsity; or\n(6) possesses, sells, or offers to sell a governmental\nrecord or a blank governmental record form with knowledge that it was\nobtained unlawfully.\n(b) It is an exception to the application of Subsection (a)(3)\nthat the governmental record is destroyed pursuant to legal\nauthorization or transferred under Section 441.204, Government Code.\nWith regard to the destruction of a local government record, legal\nauthorization includes compliance with the provisions of Subtitle C,\nTitle 6, Local Government Code.\n(c)(1) Except as provided by Subdivisions\n(2), (3), (4), (5),\nand (6), and by Subsection (d), an offense under this section is a\nClass A misdemeanor unless the actor's intent is to defraud or harm\nanother, in which event the offense is a state jail felony.\n(2) An offense under this section is a felony of the third\ndegree if it is shown on the trial of the offense that the\ngovernmental record was:\n(A) a public school record, report, or assessment\ninstrument required under Chapter 39, Education Code, data reported\nfor a school district or open-enrollment charter school to the Texas\nEducation Agency through the Public Education Information Management\nSystem (PEIMS) described by Sections 48.008 and 48.009, Education\n\nPENAL CODE\nCode, under a law or rule requiring that reporting, or a license,\ncertificate, permit, seal, title, letter of patent, or similar\ndocument issued by government, by another state, or by the United\nStates, unless the actor's intent is to defraud or harm another, in\nwhich event the offense is a felony of the second degree;\n(B) a written report of a medical, chemical,\ntoxicological, ballistic, or other expert examination or test\nperformed on physical evidence for the purpose of determining the\nconnection or relevance of the evidence to a criminal action;\n(C) a written report of the certification, inspection,\nor maintenance record of an instrument, apparatus, implement,\nmachine, or other similar device used in the course of an examination\nor test performed on physical evidence for the purpose of determining\nthe connection or relevance of the evidence to a criminal action; or\n(D) a search warrant issued by a magistrate."
+  },
+  {
+    "literal": "TAMPER W/GOVERN REC W/INT MK GENUINE",
+    "citation": "PC 37.10(c)(1)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "TAMPER W/GOVERN RECORD DEFRAUD/HARM",
@@ -17388,6 +24774,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 37.10. TAMPERING WITH GOVERNMENTAL RECORD. (a) A person\ncommits an offense if he:\n(1) knowingly makes a false entry in, or false alteration\nof, a governmental record;\n(2) makes, presents, or uses any record, document, or thing\nwith knowledge of its falsity and with intent that it be taken as a\ngenuine governmental record;\n(3) intentionally destroys, conceals, removes, or otherwise\nimpairs the verity, legibility, or availability of a governmental\nrecord;\n(4) possesses, sells, or offers to sell a governmental\nrecord or a blank governmental record form with intent that it be\nused unlawfully;\n(5) makes, presents, or uses a governmental record with\nknowledge of its falsity; or\n(6) possesses, sells, or offers to sell a governmental\nrecord or a blank governmental record form with knowledge that it was\nobtained unlawfully.\n(b) It is an exception to the application of Subsection (a)(3)\nthat the governmental record is destroyed pursuant to legal\nauthorization or transferred under Section 441.204, Government Code.\nWith regard to the destruction of a local government record, legal\nauthorization includes compliance with the provisions of Subtitle C,\nTitle 6, Local Government Code.\n(c)(1) Except as provided by Subdivisions (2), (3), (4), (5),\nand\n(6), and by Subsection"
   },
   {
+    "literal": "TAMPER W/GOVT RECORD-INSURANCE DOC",
+    "citation": "PC 37.10(d)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "TAMPER W/LOTTERY EQUIPMENT",
     "citation": "466.309(a)",
     "statute": "GC",
@@ -17418,6 +24810,24 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 37.10. TAMPERING WITH GOVERNMENTAL RECORD. (a) A person\ncommits an offense if he:\n(1) knowingly makes a false entry in, or false alteration\nof, a governmental record;\n(2) makes, presents, or uses any record, document, or thing\nwith knowledge of its falsity and with intent that it be taken as a\ngenuine governmental record;\n(3) intentionally destroys, conceals, removes, or otherwise\nimpairs the verity, legibility, or availability of a governmental\nrecord;\n(4) possesses, sells, or offers to sell a governmental\nrecord or a blank governmental record form with intent that it be\nused unlawfully;\n(5) makes, presents, or uses a governmental record with\nknowledge of its falsity; or\n(6) possesses, sells, or offers to sell a governmental\nrecord or a blank governmental record form with knowledge that it was\nobtained unlawfully.\n(b) It is an exception to the application of Subsection (a)(3)\nthat the governmental record is destroyed pursuant to legal\nauthorization or transferred under Section 441.204, Government Code.\nWith regard to the destruction of a local government record, legal\nauthorization includes compliance with the provisions of Subtitle C,\nTitle 6, Local Government Code.\n(c)(1) Except as provided by Subdivisions\n(2), (3), (4), (5),\nand (6), and by Subsection (d), an offense under this section is a\nClass A misdemeanor unless the actor's intent is to defraud or harm\nanother, in which event the offense is a state jail felony.\n(2) An offense under this section is a felony of the third\ndegree if it is shown on the trial of the offense that the\ngovernmental record was:\n(A) a public school record, report, or assessment\ninstrument required under Chapter 39, Education Code, data reported\nfor a school district or open-enrollment charter school to the Texas\nEducation Agency through the Public Education Information Management\nSystem (PEIMS) described by Sections 48.008 and 48.009, Education\n\nPENAL CODE\nCode, under a law or rule requiring that reporting, or a license,\ncertificate, permit, seal, title, letter of patent, or similar\ndocument issued by government, by another state, or by the United\nStates, unless the actor's intent is to defraud or harm another, in\nwhich event the offense is a felony of the second degree;\n(B) a written report of a medical, chemical,\ntoxicological, ballistic, or other expert examination or test\nperformed on physical evidence for the purpose of determining the\nconnection or relevance of the evidence to a criminal action;\n(C) a written report of the certification, inspection,\nor maintenance record of an instrument, apparatus, implement,\nmachine, or other similar device used in the course of an examination\nor test performed on physical evidence for the purpose of determining\nthe connection or relevance of the evidence to a criminal action; or\n(D) a search warrant issued by a magistrate."
+  },
+  {
+    "literal": "TAMPER WITH WARNING DEV/BARRICADE",
+    "citation": "TRC 472.021 3381",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TAMPER/FAB PHYS EVID/FAIL REP HUMAN RM",
+    "citation": "PC 37.09(d)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TAMPER/FABRIC PHYS EVID W/INT TO IMPAIR",
+    "citation": "PC 37.09~(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "TAMPER/FABRICATE PHYS EVID W/INTENT TO IMPAIR",
@@ -17465,6 +24875,30 @@ export const CJIS_CODES: Offense[] = [
     "citation": "472.021(c)",
     "statute": "TRC",
     "level": "M*"
+  },
+  {
+    "literal": "TAMPERING W/CONSUMER PRODUCT",
+    "citation": "PC 22.09(b)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TAMPERING W/CONSUMER PRODUCT SBI",
+    "citation": "PC 22.09(b)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TAMPERING W/CONSUMER PRODUCT THREAT",
+    "citation": "PC 22.09(c)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TAMPERING W/GOVT REC - WRITTEN APPRAISL",
+    "citation": "PC 37.10(c)(4)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "TAMPERING W/GOVT RECORD - WRITTEN APPRAISAL",
@@ -17551,6 +24985,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 36.05. TAMPERING WITH WITNESS. (a) A person commits an\noffense if, with intent to influence the witness, he offers, confers,\nor agrees to confer any benefit on a witness or prospective witness\nin an official proceeding, or he coerces a witness or a prospective\nwitness in an official proceeding:\n(1) to testify falsely;\n(2) to withhold any testimony, information, document, or\nthing;\n(3) to elude legal process summoning him to testify or\nsupply evidence;\n(4) to absent himself from an official proceeding to which\nhe has been legally summoned; or\n(5) to abstain from, discontinue, or delay the prosecution\nof another.\n(b) A witness or prospective witness in an official proceeding\ncommits an offense if he knowingly solicits, accepts, or agrees to\naccept any benefit on the representation or understanding that he\nwill do any of the things specified in Subsection (a).\n(c) It is a defense to prosecution under Subsection (a)(5) that\nthe benefit received was:\n(1) reasonable restitution for damages suffered by the\n\nPENAL CODE\ncomplaining witness as a result of the offense; and\n(2) a result of an agreement negotiated with the assistance\nor acquiescence of an attorney for the state who represented the\nstate in the case.\n(d) An offense under this section is a felony of the third\ndegree, except that if the official proceeding is part of the\nprosecution of a criminal case, an offense under this section is the\nsame category of offense as the most serious offense charged in that\ncriminal case.\n(e) Notwithstanding Subsection (d), if the most serious offense\ncharged is a capital felony, an offense under this section is a\nfelony of the first degree.\n(e-1) Notwithstanding Subsection (d), if the underlying\nofficial proceeding involves family violence, as defined by Section\n71.004, Family Code, an offense under this section is the greater of:\n(1) a felony of the third degree; or\n(2) the most serious offense charged in the criminal case.\n(e-2) Notwithstanding Subsections"
   },
   {
+    "literal": "TAMPERING WITH WITNESS FV CASEW/PRV CNV",
+    "citation": "PC 36.05(e-2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "TANNING FACILITY REGULATIONS VIOLATION",
     "citation": "145.013(b)",
     "statute": "HSC",
@@ -17563,10 +25003,16 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
-    "literal": "TAX REVENUE VIOL CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "TAX COLLECTOR REGISTER VEH W/O NUMBER",
+    "citation": "TRC 520.014 3675",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TAXICAB - DRIVER 10' FROM CAB",
+    "citation": "ORD 5.10.116(e)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "TAXICAB - FAIL TO DISPLAY LICENSE",
@@ -17585,6 +25031,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "5.10.116",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "TAXICAB STOPPED IN FRONT OF AIRPORT",
+    "citation": "ORD 5.10.116(b)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "TECHNICIAN INTENTIONALLY FAIL TO REPORT IMAGE",
@@ -17609,6 +25061,24 @@ export const CJIS_CODES: Offense[] = [
     "citation": "33A.03",
     "statute": "PC",
     "level": "F3"
+  },
+  {
+    "literal": "TELECOMM SERV THEFT <$1500 W/2 PREV CONV",
+    "citation": "PC 33A.04(b)(3)(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TELECOMM SERV UNAUTH <$1500 W/2 PRE CNV",
+    "citation": "PC 33A.02(b)(3)(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TELECOMM SERV UNAUTH <$500 W/PREV CONV",
+    "citation": "PC 33A.02(b)(2)(B)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "TELECOMM SERVICE THEFT <$1500 W/2 PREV CONV",
@@ -17720,6 +25190,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "TELEVISION IMPROPERLY LOCATED IN VEHICLE",
+    "citation": "TRC 547.611 3250",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "TELEVISION RECEIVER IMPROPERLY LOCATED",
     "citation": "547.611",
     "statute": "TC",
@@ -17737,6 +25213,18 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 22.07. TERRORISTIC THREAT. (a) A person commits an\noffense if he threatens to commit any offense involving violence to\nany person or property with intent to:\n(1) cause a reaction of any type to his threat by an\nofficial or volunteer agency organized to deal with emergencies;\n(2) place any person in fear of imminent serious bodily\ninjury;\n(3) prevent or interrupt the occupation or use of a\nbuilding, room, place of assembly, place to which the public has\naccess, place of employment or occupation, aircraft, automobile, or\nother form of conveyance, or other public place;\n(4) cause impairment or interruption of public\ncommunications, public transportation, public water, gas, or power\nsupply or other public service;\n(5) place the public or a substantial group of the public\nin fear of serious bodily injury; or\n(6) influence the conduct or activities of a branch or\nagency of the federal government, the state, or a political\nsubdivision of the state.\n(b) An offense under Subsection (a)(1) is a Class B\nmisdemeanor.\n\nPENAL CODE\n(c) An offense under Subsection (a)(2) is a Class B\nmisdemeanor, except that the offense is a Class A misdemeanor if the\noffense:\n(1) is committed against a member of the person's family or\nhousehold or otherwise constitutes family violence; or\n(2) is committed against a public servant.\n(c-1) Notwithstanding Subsection (c)(2), an offense under\nSubsection (a)(2) is a state jail felony if the offense is committed\nagainst a person the actor knows is a peace officer or judge.\n(d) An offense under Subsection (a)(3) is a Class A\nmisdemeanor, unless the actor causes pecuniary loss of $1,500 or more\nto the owner of the building, room, place, or conveyance, in which\nevent the offense is a state jail felony.\n(e) An offense under Subsection"
+  },
+  {
+    "literal": "TERR THRT IMP PUB SERV/PUB FEAR SBI/INF",
+    "citation": "PC 22.07(E)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TERROR THREAT CAUSE PECUNIARY LOSS>$1500",
+    "citation": "PC 22.07(d)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "TERROR THREAT CAUSES PECUNIARY LOSS OF >$1500",
@@ -17795,11 +25283,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 22.07. TERRORISTIC THREAT. (a) A person commits an\noffense if he threatens to commit any offense involving violence to\nany person or property with intent to:\n(1) cause a reaction of any type to his threat by an\nofficial or volunteer agency organized to deal with emergencies;\n(2) place any person in fear of imminent serious bodily\ninjury;\n(3) prevent or interrupt the occupation or use of a\nbuilding, room, place of assembly, place to which the public has\naccess, place of employment or occupation, aircraft, automobile, or\nother form of conveyance, or other public place;\n(4) cause impairment or interruption of public\ncommunications, public transportation, public water, gas, or power\nsupply or other public service;\n(5) place the public or a substantial group of the public\nin fear of serious bodily injury; or\n(6) influence the conduct or activities of a branch or\nagency of the federal government, the state, or a political\nsubdivision of the state.\n(b) An offense under Subsection (a)(1) is a Class B\nmisdemeanor.\n\nPENAL CODE\n(c) An offense under Subsection (a)(2) is a Class B\nmisdemeanor, except that the offense is a Class A misdemeanor if the\noffense:\n(1) is committed against a member of the person's family or\nhousehold or otherwise constitutes family violence; or"
   },
   {
+    "literal": "TERRORISTIC THREAT AGAINST PUBLIC SERV",
+    "citation": "PC 22.07(C)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "TERRORISTIC THREAT AGAINST PUBLIC SERVANT",
     "citation": "22.07(c)(2)",
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 22.07. TERRORISTIC THREAT. (a) A person commits an\noffense if he threatens to commit any offense involving violence to\nany person or property with intent to:\n(1) cause a reaction of any type to his threat by an\nofficial or volunteer agency organized to deal with emergencies;\n(2) place any person in fear of imminent serious bodily\ninjury;\n(3) prevent or interrupt the occupation or use of a\nbuilding, room, place of assembly, place to which the public has\naccess, place of employment or occupation, aircraft, automobile, or\nother form of conveyance, or other public place;\n(4) cause impairment or interruption of public\ncommunications, public transportation, public water, gas, or power\nsupply or other public service;\n(5) place the public or a substantial group of the public\nin fear of serious bodily injury; or\n(6) influence the conduct or activities of a branch or\nagency of the federal government, the state, or a political\nsubdivision of the state.\n(b) An offense under Subsection (a)(1) is a Class B\nmisdemeanor.\n\nPENAL CODE\n(c) An offense under Subsection (a)\n(2) is a Class B\nmisdemeanor, except that the offense is a Class A misdemeanor if the\noffense:"
+  },
+  {
+    "literal": "TERRORISTIC THREAT CAUSE FEAR IMMT SBI",
+    "citation": "PC 22.07(C)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "TERRORISTIC THREAT CAUSE FEAR OF IMMINENT SBI",
@@ -17816,11 +25316,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 22.07. TERRORISTIC THREAT. (a) A person commits an\noffense if he threatens to commit any offense involving violence to\nany person or property with intent to:\n(1) cause a reaction of any type to his threat by an\nofficial or volunteer agency organized to deal with emergencies;\n(2) place any person in fear of imminent serious bodily\ninjury;\n(3) prevent or interrupt the occupation or use of a\nbuilding, room, place of assembly, place to which the public has\naccess, place of employment or occupation, aircraft, automobile, or\nother form of conveyance, or other public place;\n(4) cause impairment or interruption of public\ncommunications, public transportation, public water, gas, or power\nsupply or other public service;\n(5) place the public or a substantial group of the public\nin fear of serious bodily injury; or\n(6) influence the conduct or activities of a branch or\nagency of the federal government, the state, or a political\nsubdivision of the state.\n(b) An offense under Subsection (a)(1) is a Class B\nmisdemeanor.\n\nPENAL CODE\n(c) An offense under Subsection (a)(2) is a Class B\nmisdemeanor, except that the offense is a Class A misdemeanor if the\noffense:\n(1) is committed against a member of the person's family or\nhousehold or otherwise constitutes family violence; or\n(2) is committed against a public servant.\n(c-1) Notwithstanding Subsection (c)(2), an offense under\nSubsection (a)(2) is a state jail felony if the offense is committed\nagainst a person the actor knows is a peace officer or judge.\n(d) An offense under Subsection"
   },
   {
+    "literal": "TERRORISTIC THREAT INTERRUPT PUBLIC PLC",
+    "citation": "PC 22.07(d)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "TERRORISTIC THREAT OF FAMILY/HOUSEHOLD",
     "citation": "22.07(c)(1)",
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 22.07. TERRORISTIC THREAT. (a) A person commits an\noffense if he threatens to commit any offense involving violence to\nany person or property with intent to:\n(1) cause a reaction of any type to his threat by an\nofficial or volunteer agency organized to deal with emergencies;\n(2) place any person in fear of imminent serious bodily\ninjury;\n(3) prevent or interrupt the occupation or use of a\nbuilding, room, place of assembly, place to which the public has\naccess, place of employment or occupation, aircraft, automobile, or\nother form of conveyance, or other public place;\n(4) cause impairment or interruption of public\ncommunications, public transportation, public water, gas, or power\nsupply or other public service;\n(5) place the public or a substantial group of the public\nin fear of serious bodily injury; or\n(6) influence the conduct or activities of a branch or\nagency of the federal government, the state, or a political\nsubdivision of the state.\n(b) An offense under Subsection (a)(1) is a Class B\nmisdemeanor.\n\nPENAL CODE\n(c) An offense under Subsection (a)(2) is a Class B\nmisdemeanor, except that the offense is a Class A misdemeanor if the\noffense:\n(1) is committed against a member of the person's family or\nhousehold or otherwise constitutes family violence; or"
+  },
+  {
+    "literal": "TERRORISTIC THREAT REACTION EMER AGENCY",
+    "citation": "PC 22.07(b)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "TERRORISTIC THREAT REACTION EMERGENCY AGENCY",
@@ -17894,6 +25406,18 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 31.03. THEFT. (a) A person commits an offense if he\nunlawfully appropriates property with intent to deprive the owner of\nproperty.\n(b) Appropriation of property is unlawful if:\n(1) it is without the owner's effective consent;\n(2) the property is stolen and the actor appropriates the\nproperty knowing it was stolen by another; or\n(3) property in the custody of any law enforcement agency\nwas explicitly represented by any law enforcement agent to the actor\n\nPENAL CODE\nas being stolen and the actor appropriates the property believing it\nwas stolen by another.\n(c) For purposes of Subsection (b):\n(1) evidence that the actor has previously participated in\nrecent transactions other than, but similar to, the transaction for\nwhich the prosecution is based is admissible for the purpose of\nshowing knowledge or intent and the issues of knowledge or intent are\nraised by the actor's plea of not guilty;\n(2) the testimony of an accomplice shall be corroborated by\nproof that tends to connect the actor to the crime, but the actor's\nknowledge or intent may be established by the uncorroborated\ntestimony of the accomplice;\n(3) an actor engaged in the business of buying and selling\nused or secondhand personal property, or lending money on the\nsecurity of personal property deposited with the actor, is presumed\nto know upon receipt by the actor of stolen property (other than a\nmotor vehicle subject to Chapter 501, Transportation Code) that the\nproperty has been previously stolen from another if the actor pays\nfor or loans against the property $25 or more (or consideration of\nequivalent value) and the actor knowingly or recklessly:\n(A) fails to record the name, address, and physical\ndescription or identification number of the seller or pledgor;\n(B) fails to record a complete description of the\nproperty, including the serial number, if reasonably available, or\nother identifying characteristics; or\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty. It is the express intent of this provision that the\npresumption arises unless the actor complies with each of the\nnumbered requirements;\n(4) for the purposes of Subdivision (3)(A), \"identification\nnumber\" means driver's license number, military identification\nnumber, identification certificate, or other official number capable\nof identifying an individual;\n(5) stolen property does not lose its character as stolen\nwhen recovered by any law enforcement agency;\n(6) an actor engaged in the business of obtaining abandoned\nor wrecked motor vehicles or parts of an abandoned or wrecked motor\nvehicle for resale, disposal, scrap, repair, rebuilding, demolition,\nor other form of salvage is presumed to know on receipt by the actor\n\nPENAL CODE\nof stolen property that the property has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to maintain an accurate and legible inventory\nof each motor vehicle component part purchased by or delivered to the\nactor, including the date of purchase or delivery, the name, age,\naddress, sex, and driver's license number of the seller or person\nmaking the delivery, the license plate number of the motor vehicle in\nwhich the part was delivered, a complete description of the part, and\nthe vehicle identification number of the motor vehicle from which the\npart was removed, or in lieu of maintaining an inventory, fails to\nrecord the name and certificate of inventory number of the person who\ndismantled the motor vehicle from which the part was obtained;\n(B) fails on receipt of a motor vehicle to obtain a\ncertificate of authority, sales receipt, or transfer document as\nrequired by Chapter 683, Transportation Code, or a certificate of\ntitle showing that the motor vehicle is not subject to a lien or that\nall recorded liens on the motor vehicle have been released; or\n(C) fails on receipt of a motor vehicle to immediately\nremove an unexpired license plate from the motor vehicle, to keep the\nplate in a secure and locked place, or to maintain an inventory, on\nforms provided by the Texas Department of Motor Vehicles, of license\nplates kept under this paragraph, including for each plate or set of\nplates the license plate number and the make, motor number, and\nvehicle identification number of the motor vehicle from which the\nplate was removed;\n(7) an actor who purchases or receives a used or secondhand\nmotor vehicle is presumed to know on receipt by the actor of the\nmotor vehicle that the motor vehicle has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to report to the Texas Department of Motor\nVehicles the failure of the person who sold or delivered the motor\nvehicle to the actor to deliver to the actor a properly executed\ncertificate of title to the motor vehicle at the time the motor\nvehicle was delivered; or\n(B) fails to file with the county tax assessor-\ncollector of the county in which the actor received the motor\nvehicle, not later than the 20th day after the date the actor\nreceived the motor vehicle, the registration license receipt and\ncertificate of title or evidence of title delivered to the actor in\naccordance with Subchapter D, Chapter 520, Transportation Code, at\n\nPENAL CODE\nthe time the motor vehicle was delivered;\n(8) an actor who purchases or receives from any source\nother than a licensed retailer or distributor of pesticides a\nrestricted-use pesticide or a state-limited-use pesticide or a\ncompound, mixture, or preparation containing a restricted-use or\nstate-limited-use pesticide is presumed to know on receipt by the\nactor of the pesticide or compound, mixture, or preparation that the\npesticide or compound, mixture, or preparation has been previously\nstolen from another if the actor:\n(A) fails to record the name, address, and physical\ndescription of the seller or pledgor;\n(B) fails to record a complete description of the\namount and type of pesticide or compound, mixture, or preparation\npurchased or received; and\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty;\n(9) an actor who is subject to Section 409, Packers and\nStockyards Act (7 U.S.C. Section 228b), that obtains livestock from a\ncommission merchant by representing that the actor will make prompt\npayment is presumed to have induced the commission merchant's consent\nby deception if the actor fails to make full payment in accordance\nwith Section 409, Packers and Stockyards Act (7 U.S.C. Section 228b);\nand\n(10) an actor in possession of property consisting of one\nor more catalytic converters that have been removed from a motor\nvehicle is presumed to have unlawfully appropriated the property\nunless the actor:\n(A) is the owner, as defined by Section 601.002,\nTransportation Code, of each vehicle from which the catalytic\nconverters were removed; or\n(B) possesses the catalytic converters in the ordinary\ncourse of the actor's business, including in the ordinary course of\nbusiness of an entity described by Section 1956.123(1), Occupations\nCode.\n(d) It is not a defense to prosecution under this section that:\n(1) the offense occurred as a result of a deception or\nstrategy on the part of a law enforcement agency, including the use\nof an undercover operative or peace officer;\n(2) the actor was provided by a law enforcement agency with\n\nPENAL CODE\na facility in which to commit the offense or an opportunity to engage\nin conduct constituting the offense; or\n(3) the actor was solicited to commit the offense by a\npeace officer, and the solicitation was of a type that would\nencourage a person predisposed to commit the offense to actually\ncommit the offense, but would not encourage a person not predisposed\nto commit the offense to actually commit the offense.\nText of subsection effective until December 4, 2025\n(e) Except as provided by Subsections\n(f) and (f-1), an offense\nunder this section is:"
   },
   {
+    "literal": "THEFT >=10 SHEEP/SWINE/GOAT<$150K ENH",
+    "citation": "PC 31.03(f)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT BY CHECK",
+    "citation": "31.06",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "THEFT BY DISASTER VOLUNTEER DIST AREA <30K",
     "citation": "31.03(e)(4)(H)",
     "statute": "PC",
@@ -17922,10 +25446,10 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 31.03. THEFT. (a) A person commits an offense if he\nunlawfully appropriates property with intent to deprive the owner of\nproperty.\n(b) Appropriation of property is unlawful if:\n(1) it is without the owner's effective consent;\n(2) the property is stolen and the actor appropriates the\nproperty knowing it was stolen by another; or\n(3) property in the custody of any law enforcement agency\nwas explicitly represented by any law enforcement agent to the actor\n\nPENAL CODE\nas being stolen and the actor appropriates the property believing it\nwas stolen by another.\n(c) For purposes of Subsection (b):\n(1) evidence that the actor has previously participated in\nrecent transactions other than, but similar to, the transaction for\nwhich the prosecution is based is admissible for the purpose of\nshowing knowledge or intent and the issues of knowledge or intent are\nraised by the actor's plea of not guilty;\n(2) the testimony of an accomplice shall be corroborated by\nproof that tends to connect the actor to the crime, but the actor's\nknowledge or intent may be established by the uncorroborated\ntestimony of the accomplice;\n(3) an actor engaged in the business of buying and selling\nused or secondhand personal property, or lending money on the\nsecurity of personal property deposited with the actor, is presumed\nto know upon receipt by the actor of stolen property (other than a\nmotor vehicle subject to Chapter 501, Transportation Code) that the\nproperty has been previously stolen from another if the actor pays\nfor or loans against the property $25 or more (or consideration of\nequivalent value) and the actor knowingly or recklessly:\n(A) fails to record the name, address, and physical\ndescription or identification number of the seller or pledgor;\n(B) fails to record a complete description of the\nproperty, including the serial number, if reasonably available, or\nother identifying characteristics; or\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty. It is the express intent of this provision that the\npresumption arises unless the actor complies with each of the\nnumbered requirements;\n(4) for the purposes of Subdivision (3)(A), \"identification\nnumber\" means driver's license number, military identification\nnumber, identification certificate, or other official number capable\nof identifying an individual;\n(5) stolen property does not lose its character as stolen\nwhen recovered by any law enforcement agency;\n(6) an actor engaged in the business of obtaining abandoned\nor wrecked motor vehicles or parts of an abandoned or wrecked motor\nvehicle for resale, disposal, scrap, repair, rebuilding, demolition,\nor other form of salvage is presumed to know on receipt by the actor\n\nPENAL CODE\nof stolen property that the property has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to maintain an accurate and legible inventory\nof each motor vehicle component part purchased by or delivered to the\nactor, including the date of purchase or delivery, the name, age,\naddress, sex, and driver's license number of the seller or person\nmaking the delivery, the license plate number of the motor vehicle in\nwhich the part was delivered, a complete description of the part, and\nthe vehicle identification number of the motor vehicle from which the\npart was removed, or in lieu of maintaining an inventory, fails to\nrecord the name and certificate of inventory number of the person who\ndismantled the motor vehicle from which the part was obtained;\n(B) fails on receipt of a motor vehicle to obtain a\ncertificate of authority, sales receipt, or transfer document as\nrequired by Chapter 683, Transportation Code, or a certificate of\ntitle showing that the motor vehicle is not subject to a lien or that\nall recorded liens on the motor vehicle have been released; or\n(C) fails on receipt of a motor vehicle to immediately\nremove an unexpired license plate from the motor vehicle, to keep the\nplate in a secure and locked place, or to maintain an inventory, on\nforms provided by the Texas Department of Motor Vehicles, of license\nplates kept under this paragraph, including for each plate or set of\nplates the license plate number and the make, motor number, and\nvehicle identification number of the motor vehicle from which the\nplate was removed;\n(7) an actor who purchases or receives a used or secondhand\nmotor vehicle is presumed to know on receipt by the actor of the\nmotor vehicle that the motor vehicle has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to report to the Texas Department of Motor\nVehicles the failure of the person who sold or delivered the motor\nvehicle to the actor to deliver to the actor a properly executed\ncertificate of title to the motor vehicle at the time the motor\nvehicle was delivered; or\n(B) fails to file with the county tax assessor-\ncollector of the county in which the actor received the motor\nvehicle, not later than the 20th day after the date the actor\nreceived the motor vehicle, the registration license receipt and\ncertificate of title or evidence of title delivered to the actor in\naccordance with Subchapter D, Chapter 520, Transportation Code, at\n\nPENAL CODE\nthe time the motor vehicle was delivered;\n(8) an actor who purchases or receives from any source\nother than a licensed retailer or distributor of pesticides a\nrestricted-use pesticide or a state-limited-use pesticide or a\ncompound, mixture, or preparation containing a restricted-use or\nstate-limited-use pesticide is presumed to know on receipt by the\nactor of the pesticide or compound, mixture, or preparation that the\npesticide or compound, mixture, or preparation has been previously\nstolen from another if the actor:\n(A) fails to record the name, address, and physical\ndescription of the seller or pledgor;\n(B) fails to record a complete description of the\namount and type of pesticide or compound, mixture, or preparation\npurchased or received; and\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty;\n(9) an actor who is subject to Section 409, Packers and\nStockyards Act (7 U.S.C. Section 228b), that obtains livestock from a\ncommission merchant by representing that the actor will make prompt\npayment is presumed to have induced the commission merchant's consent\nby deception if the actor fails to make full payment in accordance\nwith Section 409, Packers and Stockyards Act (7 U.S.C. Section 228b);\nand\n(10) an actor in possession of property consisting of one\nor more catalytic converters that have been removed from a motor\nvehicle is presumed to have unlawfully appropriated the property\nunless the actor:\n(A) is the owner, as defined by Section 601.002,\nTransportation Code, of each vehicle from which the catalytic\nconverters were removed; or\n(B) possesses the catalytic converters in the ordinary\ncourse of the actor's business, including in the ordinary course of\nbusiness of an entity described by Section 1956.123(1), Occupations\nCode.\n(d) It is not a defense to prosecution under this section that:\n(1) the offense occurred as a result of a deception or\nstrategy on the part of a law enforcement agency, including the use\nof an undercover operative or peace officer;\n(2) the actor was provided by a law enforcement agency with\n\nPENAL CODE\na facility in which to commit the offense or an opportunity to engage\nin conduct constituting the offense; or\n(3) the actor was solicited to commit the offense by a\npeace officer, and the solicitation was of a type that would\nencourage a person predisposed to commit the offense to actually\ncommit the offense, but would not encourage a person not predisposed\nto commit the offense to actually commit the offense.\nText of subsection effective until December 4, 2025\n(e) Except as provided by Subsections (f) and (f-1), an offense\nunder this section is:\n(1) a Class C misdemeanor if the value of the property\nstolen is less than $100;\n(2) a Class B misdemeanor if:\n(A) the value of the property stolen is $100 or more\nbut less than $750;\n(B) the value of the property stolen is less than $100\nand the defendant has previously been convicted of any grade of\ntheft; or\n(C) the property stolen is a driver's license,\ncommercial driver's license, or personal identification certificate\nissued by this state or another state;\n(3) a Class A misdemeanor if the value of the property\nstolen is $750 or more but less than $2,500;\n(4) a state jail felony if:\n(A) the value of the property stolen is $2,500 or more\nbut less than $30,000, or the property is less than 10 head of sheep,\nswine, or goats or any part thereof under the value of $30,000;\n(B) regardless of value, the property is stolen from\nthe person of another or from a human corpse or grave, including\nproperty that is a military grave marker;\n(C) the property stolen is a firearm;\n(D) the value of the property stolen is less than\n$2,500 and the defendant has been previously convicted two or more\ntimes of any grade of theft;\n(E) the property stolen is an official ballot or\nofficial carrier envelope for an election;\n(F) the value of the property stolen is less than\n$20,000 and the property stolen is:\n(i) aluminum;\n(ii) bronze;\n\nPENAL CODE\n(iii) copper; or\n(iv) brass; or\n(G) the cost of replacing the property stolen is less\nthan $30,000 and the property stolen is a catalytic converter;\n(5) a felony of the third degree if the value of the\nproperty stolen is $30,000 or more but less than $150,000, or the\nproperty is:\n(A) cattle, horses, or exotic livestock or exotic fowl\nas defined by Section 142.001, Agriculture Code, stolen during a\nsingle transaction and having an aggregate value of less than\n$150,000;\n(B) 10 or more head of sheep, swine, or goats stolen\nduring a single transaction and having an aggregate value of less\nthan $150,000; or\n(C) a controlled substance, having a value of less than\n$150,000, if stolen from:"
   },
   {
-    "literal": "THEFT CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "THEFT CATTLE/HORSE/EXTIC LIVESTOCK<$150K",
+    "citation": "PC 31.03(e)(5)(A)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "THEFT CONTROLLED SUBSTANCE <$150K",
@@ -17942,11 +25466,137 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 31.03. THEFT. (a) A person commits an offense if he\nunlawfully appropriates property with intent to deprive the owner of\nproperty.\n(b) Appropriation of property is unlawful if:\n(1) it is without the owner's effective consent;\n(2) the property is stolen and the actor appropriates the\nproperty knowing it was stolen by another; or\n(3) property in the custody of any law enforcement agency\nwas explicitly represented by any law enforcement agent to the actor\n\nPENAL CODE\nas being stolen and the actor appropriates the property believing it\nwas stolen by another.\n(c) For purposes of Subsection (b):\n(1) evidence that the actor has previously participated in\nrecent transactions other than, but similar to, the transaction for\nwhich the prosecution is based is admissible for the purpose of\nshowing knowledge or intent and the issues of knowledge or intent are\nraised by the actor's plea of not guilty;\n(2) the testimony of an accomplice shall be corroborated by\nproof that tends to connect the actor to the crime, but the actor's\nknowledge or intent may be established by the uncorroborated\ntestimony of the accomplice;\n(3) an actor engaged in the business of buying and selling\nused or secondhand personal property, or lending money on the\nsecurity of personal property deposited with the actor, is presumed\nto know upon receipt by the actor of stolen property (other than a\nmotor vehicle subject to Chapter 501, Transportation Code) that the\nproperty has been previously stolen from another if the actor pays\nfor or loans against the property $25 or more (or consideration of\nequivalent value) and the actor knowingly or recklessly:\n(A) fails to record the name, address, and physical\ndescription or identification number of the seller or pledgor;\n(B) fails to record a complete description of the\nproperty, including the serial number, if reasonably available, or\nother identifying characteristics; or\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty. It is the express intent of this provision that the\npresumption arises unless the actor complies with each of the\nnumbered requirements;\n(4) for the purposes of Subdivision (3)(A), \"identification\nnumber\" means driver's license number, military identification\nnumber, identification certificate, or other official number capable\nof identifying an individual;\n(5) stolen property does not lose its character as stolen\nwhen recovered by any law enforcement agency;\n(6) an actor engaged in the business of obtaining abandoned\nor wrecked motor vehicles or parts of an abandoned or wrecked motor\nvehicle for resale, disposal, scrap, repair, rebuilding, demolition,\nor other form of salvage is presumed to know on receipt by the actor\n\nPENAL CODE\nof stolen property that the property has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to maintain an accurate and legible inventory\nof each motor vehicle component part purchased by or delivered to the\nactor, including the date of purchase or delivery, the name, age,\naddress, sex, and driver's license number of the seller or person\nmaking the delivery, the license plate number of the motor vehicle in\nwhich the part was delivered, a complete description of the part, and\nthe vehicle identification number of the motor vehicle from which the\npart was removed, or in lieu of maintaining an inventory, fails to\nrecord the name and certificate of inventory number of the person who\ndismantled the motor vehicle from which the part was obtained;\n(B) fails on receipt of a motor vehicle to obtain a\ncertificate of authority, sales receipt, or transfer document as\nrequired by Chapter 683, Transportation Code, or a certificate of\ntitle showing that the motor vehicle is not subject to a lien or that\nall recorded liens on the motor vehicle have been released; or\n(C) fails on receipt of a motor vehicle to immediately\nremove an unexpired license plate from the motor vehicle, to keep the\nplate in a secure and locked place, or to maintain an inventory, on\nforms provided by the Texas Department of Motor Vehicles, of license\nplates kept under this paragraph, including for each plate or set of\nplates the license plate number and the make, motor number, and\nvehicle identification number of the motor vehicle from which the\nplate was removed;\n(7) an actor who purchases or receives a used or secondhand\nmotor vehicle is presumed to know on receipt by the actor of the\nmotor vehicle that the motor vehicle has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to report to the Texas Department of Motor\nVehicles the failure of the person who sold or delivered the motor\nvehicle to the actor to deliver to the actor a properly executed\ncertificate of title to the motor vehicle at the time the motor\nvehicle was delivered; or\n(B) fails to file with the county tax assessor-\ncollector of the county in which the actor received the motor\nvehicle, not later than the 20th day after the date the actor\nreceived the motor vehicle, the registration license receipt and\ncertificate of title or evidence of title delivered to the actor in\naccordance with Subchapter D, Chapter 520, Transportation Code, at\n\nPENAL CODE\nthe time the motor vehicle was delivered;\n(8) an actor who purchases or receives from any source\nother than a licensed retailer or distributor of pesticides a\nrestricted-use pesticide or a state-limited-use pesticide or a\ncompound, mixture, or preparation containing a restricted-use or\nstate-limited-use pesticide is presumed to know on receipt by the\nactor of the pesticide or compound, mixture, or preparation that the\npesticide or compound, mixture, or preparation has been previously\nstolen from another if the actor:\n(A) fails to record the name, address, and physical\ndescription of the seller or pledgor;\n(B) fails to record a complete description of the\namount and type of pesticide or compound, mixture, or preparation\npurchased or received; and\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty;\n(9) an actor who is subject to Section 409, Packers and\nStockyards Act (7 U.S.C. Section 228b), that obtains livestock from a\ncommission merchant by representing that the actor will make prompt\npayment is presumed to have induced the commission merchant's consent\nby deception if the actor fails to make full payment in accordance\nwith Section 409, Packers and Stockyards Act (7 U.S.C. Section 228b);\nand\n(10) an actor in possession of property consisting of one\nor more catalytic converters that have been removed from a motor\nvehicle is presumed to have unlawfully appropriated the property\nunless the actor:\n(A) is the owner, as defined by Section 601.002,\nTransportation Code, of each vehicle from which the catalytic\nconverters were removed; or\n(B) possesses the catalytic converters in the ordinary\ncourse of the actor's business, including in the ordinary course of\nbusiness of an entity described by Section 1956.123(1), Occupations\nCode.\n(d) It is not a defense to prosecution under this section that:\n(1) the offense occurred as a result of a deception or\nstrategy on the part of a law enforcement agency, including the use\nof an undercover operative or peace officer;\n(2) the actor was provided by a law enforcement agency with\n\nPENAL CODE\na facility in which to commit the offense or an opportunity to engage\nin conduct constituting the offense; or\n(3) the actor was solicited to commit the offense by a\npeace officer, and the solicitation was of a type that would\nencourage a person predisposed to commit the offense to actually\ncommit the offense, but would not encourage a person not predisposed\nto commit the offense to actually commit the offense.\nText of subsection effective until December 4, 2025\n(e) Except as provided by Subsections\n(f) and (f-1), an offense\nunder this section is:\n(1) a Class C misdemeanor if the value of the property\nstolen is less than $100;\n(2) a Class B misdemeanor if:\n(A) the value of the property stolen is $100 or more\nbut less than $750;\n(B) the value of the property stolen is less than $100\nand the defendant has previously been convicted of any grade of\ntheft; or\n(C) the property stolen is a driver's license,\ncommercial driver's license, or personal identification certificate\nissued by this state or another state;"
   },
   {
+    "literal": "THEFT CTTLE/HRSE/EXOT LVSTOCK <$150K ENH",
+    "citation": "PC 31.03(f)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "THEFT CTTLE/HRSE/EXOTIC LVSTOCK <$150K ENH IAT",
     "citation": "31.03(f)",
     "statute": "PC",
     "level": "F2",
     "statuteText": "Sec. 31.03. THEFT. (a) A person commits an offense if he\nunlawfully appropriates property with intent to deprive the owner of\nproperty.\n(b) Appropriation of property is unlawful if:\n(1) it is without the owner's effective consent;\n(2) the property is stolen and the actor appropriates the\nproperty knowing it was stolen by another; or\n(3) property in the custody of any law enforcement agency\nwas explicitly represented by any law enforcement agent to the actor\n\nPENAL CODE\nas being stolen and the actor appropriates the property believing it\nwas stolen by another.\n(c) For purposes of Subsection (b):\n(1) evidence that the actor has previously participated in\nrecent transactions other than, but similar to, the transaction for\nwhich the prosecution is based is admissible for the purpose of\nshowing knowledge or intent and the issues of knowledge or intent are\nraised by the actor's plea of not guilty;\n(2) the testimony of an accomplice shall be corroborated by\nproof that tends to connect the actor to the crime, but the actor's\nknowledge or intent may be established by the uncorroborated\ntestimony of the accomplice;\n(3) an actor engaged in the business of buying and selling\nused or secondhand personal property, or lending money on the\nsecurity of personal property deposited with the actor, is presumed\nto know upon receipt by the actor of stolen property (other than a\nmotor vehicle subject to Chapter 501, Transportation Code) that the\nproperty has been previously stolen from another if the actor pays\nfor or loans against the property $25 or more (or consideration of\nequivalent value) and the actor knowingly or recklessly:\n(A) fails to record the name, address, and physical\ndescription or identification number of the seller or pledgor;\n(B) fails to record a complete description of the\nproperty, including the serial number, if reasonably available, or\nother identifying characteristics; or\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty. It is the express intent of this provision that the\npresumption arises unless the actor complies with each of the\nnumbered requirements;\n(4) for the purposes of Subdivision (3)(A), \"identification\nnumber\" means driver's license number, military identification\nnumber, identification certificate, or other official number capable\nof identifying an individual;\n(5) stolen property does not lose its character as stolen\nwhen recovered by any law enforcement agency;\n(6) an actor engaged in the business of obtaining abandoned\nor wrecked motor vehicles or parts of an abandoned or wrecked motor\nvehicle for resale, disposal, scrap, repair, rebuilding, demolition,\nor other form of salvage is presumed to know on receipt by the actor\n\nPENAL CODE\nof stolen property that the property has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to maintain an accurate and legible inventory\nof each motor vehicle component part purchased by or delivered to the\nactor, including the date of purchase or delivery, the name, age,\naddress, sex, and driver's license number of the seller or person\nmaking the delivery, the license plate number of the motor vehicle in\nwhich the part was delivered, a complete description of the part, and\nthe vehicle identification number of the motor vehicle from which the\npart was removed, or in lieu of maintaining an inventory, fails to\nrecord the name and certificate of inventory number of the person who\ndismantled the motor vehicle from which the part was obtained;\n(B) fails on receipt of a motor vehicle to obtain a\ncertificate of authority, sales receipt, or transfer document as\nrequired by Chapter 683, Transportation Code, or a certificate of\ntitle showing that the motor vehicle is not subject to a lien or that\nall recorded liens on the motor vehicle have been released; or\n(C) fails on receipt of a motor vehicle to immediately\nremove an unexpired license plate from the motor vehicle, to keep the\nplate in a secure and locked place, or to maintain an inventory, on\nforms provided by the Texas Department of Motor Vehicles, of license\nplates kept under this paragraph, including for each plate or set of\nplates the license plate number and the make, motor number, and\nvehicle identification number of the motor vehicle from which the\nplate was removed;\n(7) an actor who purchases or receives a used or secondhand\nmotor vehicle is presumed to know on receipt by the actor of the\nmotor vehicle that the motor vehicle has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to report to the Texas Department of Motor\nVehicles the failure of the person who sold or delivered the motor\nvehicle to the actor to deliver to the actor a properly executed\ncertificate of title to the motor vehicle at the time the motor\nvehicle was delivered; or\n(B) fails to file with the county tax assessor-\ncollector of the county in which the actor received the motor\nvehicle, not later than the 20th day after the date the actor\nreceived the motor vehicle, the registration license receipt and\ncertificate of title or evidence of title delivered to the actor in\naccordance with Subchapter D, Chapter 520, Transportation Code, at\n\nPENAL CODE\nthe time the motor vehicle was delivered;\n(8) an actor who purchases or receives from any source\nother than a licensed retailer or distributor of pesticides a\nrestricted-use pesticide or a state-limited-use pesticide or a\ncompound, mixture, or preparation containing a restricted-use or\nstate-limited-use pesticide is presumed to know on receipt by the\nactor of the pesticide or compound, mixture, or preparation that the\npesticide or compound, mixture, or preparation has been previously\nstolen from another if the actor:\n(A) fails to record the name, address, and physical\ndescription of the seller or pledgor;\n(B) fails to record a complete description of the\namount and type of pesticide or compound, mixture, or preparation\npurchased or received; and\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty;\n(9) an actor who is subject to Section 409, Packers and\nStockyards Act (7 U.S.C. Section 228b), that obtains livestock from a\ncommission merchant by representing that the actor will make prompt\npayment is presumed to have induced the commission merchant's consent\nby deception if the actor fails to make full payment in accordance\nwith Section 409, Packers and Stockyards Act (7 U.S.C. Section 228b);\nand\n(10) an actor in possession of property consisting of one\nor more catalytic converters that have been removed from a motor\nvehicle is presumed to have unlawfully appropriated the property\nunless the actor:\n(A) is the owner, as defined by Section 601.002,\nTransportation Code, of each vehicle from which the catalytic\nconverters were removed; or\n(B) possesses the catalytic converters in the ordinary\ncourse of the actor's business, including in the ordinary course of\nbusiness of an entity described by Section 1956.123(1), Occupations\nCode.\n(d) It is not a defense to prosecution under this section that:\n(1) the offense occurred as a result of a deception or\nstrategy on the part of a law enforcement agency, including the use\nof an undercover operative or peace officer;\n(2) the actor was provided by a law enforcement agency with\n\nPENAL CODE\na facility in which to commit the offense or an opportunity to engage\nin conduct constituting the offense; or\n(3) the actor was solicited to commit the offense by a\npeace officer, and the solicitation was of a type that would\nencourage a person predisposed to commit the offense to actually\ncommit the offense, but would not encourage a person not predisposed\nto commit the offense to actually commit the offense.\nText of subsection effective until December 4, 2025\n(e) Except as provided by Subsections\n(f) and (f-1), an offense\nunder this section is:"
+  },
+  {
+    "literal": "THEFT EMPLOYEE <$100",
+    "citation": "PC 31.03(C)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT EMPLOYEE <$100 ENH IAT",
+    "citation": "PC 31.03(f)(9)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT EMPLOYEE <$100 W/PREV CNV ENH IAT",
+    "citation": "PC 31.03(f)(10)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT EMPLOYEE <$100 W/PREV CONVIC",
+    "citation": "PC 31.03(e)(2)(B)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT EMPLOYEE <$2,500  2/MORE PREV CONV",
+    "citation": "PC 31.03(e)(4)(D)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT EMPLOYEE <$2500 2+ CONV ENH IAT",
+    "citation": "PC 31.03(f)(11)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT EMPLOYEE <$300K ATM",
+    "citation": "PC 31.03(e)(6)(B)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT EMPLOYEE <$300K ATM ENH IAT",
+    "citation": "PC 31.03(f)(12)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT EMPLOYEE >=$100<$750",
+    "citation": "PC 31.03(E)(2)(A)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT EMPLOYEE >=$100<$750 ENH IAT",
+    "citation": "PC 31.03(f)(13)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT EMPLOYEE >=$150K<$300K",
+    "citation": "PC 31.03(e)(6)(A)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT EMPLOYEE >=$150K<$300K ENH IAT",
+    "citation": "PC 31.03(f)(14)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT EMPLOYEE >=$2,500<$30K",
+    "citation": "PC 31.03(E)(4)(A)(2)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT EMPLOYEE >=$2500<$30K ENH IAT",
+    "citation": "PC 31.03(f)(15)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT EMPLOYEE >=$300K",
+    "citation": "PC 31.03(e)(7)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT EMPLOYEE >=$30K<$150K",
+    "citation": "PC 31.03(e)(5)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT EMPLOYEE >=$30K<$150K ENH IAT",
+    "citation": "PC 31.03(f)(16)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT EMPLOYEE >=$750<$2,500",
+    "citation": "PC 31.03(E)(3)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT EMPLOYEE >=$750<$2500 ENH IAT",
+    "citation": "PC 31.03(f)(17)E",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT FROM A PERSON",
+    "citation": "PC 31.03(E)(4)(B)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "THEFT FROM PERSON",
@@ -17961,6 +25611,30 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 31.03. THEFT. (a) A person commits an offense if he\nunlawfully appropriates property with intent to deprive the owner of\nproperty.\n(b) Appropriation of property is unlawful if:\n(1) it is without the owner's effective consent;\n(2) the property is stolen and the actor appropriates the\nproperty knowing it was stolen by another; or\n(3) property in the custody of any law enforcement agency\nwas explicitly represented by any law enforcement agent to the actor\n\nPENAL CODE\nas being stolen and the actor appropriates the property believing it\nwas stolen by another.\n(c) For purposes of Subsection (b):\n(1) evidence that the actor has previously participated in\nrecent transactions other than, but similar to, the transaction for\nwhich the prosecution is based is admissible for the purpose of\nshowing knowledge or intent and the issues of knowledge or intent are\nraised by the actor's plea of not guilty;\n(2) the testimony of an accomplice shall be corroborated by\nproof that tends to connect the actor to the crime, but the actor's\nknowledge or intent may be established by the uncorroborated\ntestimony of the accomplice;\n(3) an actor engaged in the business of buying and selling\nused or secondhand personal property, or lending money on the\nsecurity of personal property deposited with the actor, is presumed\nto know upon receipt by the actor of stolen property (other than a\nmotor vehicle subject to Chapter 501, Transportation Code) that the\nproperty has been previously stolen from another if the actor pays\nfor or loans against the property $25 or more (or consideration of\nequivalent value) and the actor knowingly or recklessly:\n(A) fails to record the name, address, and physical\ndescription or identification number of the seller or pledgor;\n(B) fails to record a complete description of the\nproperty, including the serial number, if reasonably available, or\nother identifying characteristics; or\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty. It is the express intent of this provision that the\npresumption arises unless the actor complies with each of the\nnumbered requirements;\n(4) for the purposes of Subdivision (3)(A), \"identification\nnumber\" means driver's license number, military identification\nnumber, identification certificate, or other official number capable\nof identifying an individual;\n(5) stolen property does not lose its character as stolen\nwhen recovered by any law enforcement agency;\n(6) an actor engaged in the business of obtaining abandoned\nor wrecked motor vehicles or parts of an abandoned or wrecked motor\nvehicle for resale, disposal, scrap, repair, rebuilding, demolition,\nor other form of salvage is presumed to know on receipt by the actor\n\nPENAL CODE\nof stolen property that the property has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to maintain an accurate and legible inventory\nof each motor vehicle component part purchased by or delivered to the\nactor, including the date of purchase or delivery, the name, age,\naddress, sex, and driver's license number of the seller or person\nmaking the delivery, the license plate number of the motor vehicle in\nwhich the part was delivered, a complete description of the part, and\nthe vehicle identification number of the motor vehicle from which the\npart was removed, or in lieu of maintaining an inventory, fails to\nrecord the name and certificate of inventory number of the person who\ndismantled the motor vehicle from which the part was obtained;\n(B) fails on receipt of a motor vehicle to obtain a\ncertificate of authority, sales receipt, or transfer document as\nrequired by Chapter 683, Transportation Code, or a certificate of\ntitle showing that the motor vehicle is not subject to a lien or that\nall recorded liens on the motor vehicle have been released; or\n(C) fails on receipt of a motor vehicle to immediately\nremove an unexpired license plate from the motor vehicle, to keep the\nplate in a secure and locked place, or to maintain an inventory, on\nforms provided by the Texas Department of Motor Vehicles, of license\nplates kept under this paragraph, including for each plate or set of\nplates the license plate number and the make, motor number, and\nvehicle identification number of the motor vehicle from which the\nplate was removed;\n(7) an actor who purchases or receives a used or secondhand\nmotor vehicle is presumed to know on receipt by the actor of the\nmotor vehicle that the motor vehicle has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to report to the Texas Department of Motor\nVehicles the failure of the person who sold or delivered the motor\nvehicle to the actor to deliver to the actor a properly executed\ncertificate of title to the motor vehicle at the time the motor\nvehicle was delivered; or\n(B) fails to file with the county tax assessor-\ncollector of the county in which the actor received the motor\nvehicle, not later than the 20th day after the date the actor\nreceived the motor vehicle, the registration license receipt and\ncertificate of title or evidence of title delivered to the actor in\naccordance with Subchapter D, Chapter 520, Transportation Code, at\n\nPENAL CODE\nthe time the motor vehicle was delivered;\n(8) an actor who purchases or receives from any source\nother than a licensed retailer or distributor of pesticides a\nrestricted-use pesticide or a state-limited-use pesticide or a\ncompound, mixture, or preparation containing a restricted-use or\nstate-limited-use pesticide is presumed to know on receipt by the\nactor of the pesticide or compound, mixture, or preparation that the\npesticide or compound, mixture, or preparation has been previously\nstolen from another if the actor:\n(A) fails to record the name, address, and physical\ndescription of the seller or pledgor;\n(B) fails to record a complete description of the\namount and type of pesticide or compound, mixture, or preparation\npurchased or received; and\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty;\n(9) an actor who is subject to Section 409, Packers and\nStockyards Act (7 U.S.C. Section 228b), that obtains livestock from a\ncommission merchant by representing that the actor will make prompt\npayment is presumed to have induced the commission merchant's consent\nby deception if the actor fails to make full payment in accordance\nwith Section 409, Packers and Stockyards Act (7 U.S.C. Section 228b);\nand\n(10) an actor in possession of property consisting of one\nor more catalytic converters that have been removed from a motor\nvehicle is presumed to have unlawfully appropriated the property\nunless the actor:\n(A) is the owner, as defined by Section 601.002,\nTransportation Code, of each vehicle from which the catalytic\nconverters were removed; or\n(B) possesses the catalytic converters in the ordinary\ncourse of the actor's business, including in the ordinary course of\nbusiness of an entity described by Section 1956.123(1), Occupations\nCode.\n(d) It is not a defense to prosecution under this section that:\n(1) the offense occurred as a result of a deception or\nstrategy on the part of a law enforcement agency, including the use\nof an undercover operative or peace officer;\n(2) the actor was provided by a law enforcement agency with\n\nPENAL CODE\na facility in which to commit the offense or an opportunity to engage\nin conduct constituting the offense; or\n(3) the actor was solicited to commit the offense by a\npeace officer, and the solicitation was of a type that would\nencourage a person predisposed to commit the offense to actually\ncommit the offense, but would not encourage a person not predisposed\nto commit the offense to actually commit the offense.\nText of subsection effective until December 4, 2025\n(e) Except as provided by Subsections\n(f) and (f-1), an offense\nunder this section is:"
+  },
+  {
+    "literal": "THEFT FROM PERSON PICK POCKET ENH IAT",
+    "citation": "PC 31.03(f)(4)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT FROM PERSON PURSE SNATCH ENH IAT",
+    "citation": "PC 31.03(f)(4)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT FROM PERSON-PICKPOCKET",
+    "citation": "PC 31.03(e)(4)(B)(1)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT FROM PERSON-PURSE SNATCHING",
+    "citation": "PC 31.03(E)(4)(B)(1)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "THEFT MAIL <=5 NEGOTIABLE INSTR DISAB/ELD IAT",
@@ -17989,6 +25663,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F2",
     "statuteText": "Sec. 31.20. MAIL THEFT. (a) In this section:\n(1) \"Disabled individual\" and \"elderly individual\" have the\nmeanings assigned by Section 22.04.\n(2) \"Identifying information\" has the meaning assigned by\nSection 32.51.\n(3) \"Mail\" means a letter, postal card, package, bag, or\nother sealed article that:\n(A) is delivered by a common carrier or delivery\nservice and:\n(i) is in transit; or\n(ii) has been delivered but not yet received by the\naddressee; or\n(B) has been left to be collected for delivery by a\ncommon carrier or delivery service.\n(4) \"Negotiable instrument\" has the meaning assigned by\nSection 3.104, Business & Commerce Code.\n(b) A person commits an offense if the person intentionally\nappropriates mail without the effective consent of the addressee and\nwith the intent to:\n(1) deprive that addressee of the mail; or\n(2) steal a negotiable instrument.\n(b-1) If an actor possesses mail from five or more addressees,\nthere is a rebuttable presumption that actor appropriated the mail\nwithout the effective consent of the applicable addressee and with\nthe intent to deprive the addressee of the mail.\n(b-2) If an actor possesses mail containing a combined total of\nfive or more negotiable instruments, there is a rebuttable\npresumption that the actor:\n(1) appropriated the mail without the effective consent of\nthe applicable addressee and with the intent to steal the negotiable\ninstruments; and\n(2) committed the offense under this section with the\nintent to facilitate an offense under Chapter 32.\n\nPENAL CODE\n(b-3) The presumptions established under Subsections (b-1) and\n(b-2) do not apply to a business or other commercial entity or\ngovernmental agency that is engaged in a business activity or\ngovernmental function that does not violate a penal law of this\nstate.\n(c) Except as provided by Subsections\n(d) and (e), an offense\nunder this section is:\n(1) a Class A misdemeanor if the mail is appropriated from\nfewer than 10 addressees;\n(2) a state jail felony if the mail is appropriated from at\nleast 10 but fewer than 30 addressees; or\n(3) a felony of the third degree if the mail is\nappropriated from 30 or more addressees."
+  },
+  {
+    "literal": "THEFT MATER ALU/BRNZ/CPPR/BRSS <$20K ENH",
+    "citation": "PC 31.03(f)(5)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "THEFT MATER ALUM/BRNZ/CPPR/BRSS <$20K ENH IAT",
@@ -18040,11 +25720,35 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 31.18. CARGO THEFT. (a) In this section:\n(1) \"Cargo\" means goods, as defined by Section 7.102,\nBusiness & Commerce Code, that constitute, wholly or partly, a\ncommercial shipment of freight moving in commerce. A shipment is\n\nPENAL CODE\nconsidered to be moving in commerce if the shipment is located at any\npoint between the point of origin and the final point of destination\nregardless of any temporary stop that is made for the purpose of\ntransshipment or otherwise.\n(2) \"Vehicle\" has the meaning assigned by Section 541.201,\nTransportation Code.\n(b) A person commits an offense if the person:\n(1) knowingly or intentionally conducts, promotes, or\nfacilitates an activity in which the person receives, possesses,\nconceals, stores, barters, sells, abandons, or disposes of:\n(A) stolen cargo; or\n(B) cargo explicitly represented to the person as being\nstolen cargo; or\n(2) is employed as a driver lawfully contracted to\ntransport a specific cargo by vehicle from a known point of origin to\na known point of destination and, with the intent to conduct,\npromote, or facilitate an activity described by Subdivision (1),\nknowingly or intentionally:\n(A) fails to deliver the entire cargo to the known\npoint of destination as contracted; or\n(B) causes the seal to be broken on the vehicle or on\nan intermodal container containing any part of the cargo.\n(c) An offense under this section is:\n(1) a state jail felony if the total value of the cargo\ninvolved in the activity is $1,500 or more but less than $10,000;\n(2) a felony of the third degree if the total value of the\ncargo involved in the activity is $10,000 or more but less than\n$100,000;\n(3) a felony of the second degree if the total value of the\ncargo involved in the activity is $100,000 or more but less than\n$200,000; or\n(4) a felony of the first degree if the total value of the\ncargo involved in the activity is $200,000 or more.\n(d) For purposes of Subsection (c), the total value of the\ncargo involved in the activity includes the value of any vehicle\nstolen or damaged in the course of the same criminal episode as the\nconduct that is the subject of the prosecution.\n(e) An offense described for purposes of punishment by\nSubsections"
   },
   {
+    "literal": "THEFT OF CARGO >=$150K<$299K",
+    "citation": "PC 31.18(c)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT OF CARGO >=$2,500<$29K",
+    "citation": "PC 31.18(c)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "THEFT OF CARGO >=$200K",
     "citation": "31.18(c)(4)",
     "statute": "PC",
     "level": "F1",
     "statuteText": "Sec. 31.18. CARGO THEFT. (a) In this section:\n(1) \"Cargo\" means goods, as defined by Section 7.102,\nBusiness & Commerce Code, that constitute, wholly or partly, a\ncommercial shipment of freight moving in commerce. A shipment is\n\nPENAL CODE\nconsidered to be moving in commerce if the shipment is located at any\npoint between the point of origin and the final point of destination\nregardless of any temporary stop that is made for the purpose of\ntransshipment or otherwise.\n(2) \"Vehicle\" has the meaning assigned by Section 541.201,\nTransportation Code.\n(b) A person commits an offense if the person:\n(1) knowingly or intentionally conducts, promotes, or\nfacilitates an activity in which the person receives, possesses,\nconceals, stores, barters, sells, abandons, or disposes of:\n(A) stolen cargo; or\n(B) cargo explicitly represented to the person as being\nstolen cargo; or\n(2) is employed as a driver lawfully contracted to\ntransport a specific cargo by vehicle from a known point of origin to\na known point of destination and, with the intent to conduct,\npromote, or facilitate an activity described by Subdivision (1),\nknowingly or intentionally:\n(A) fails to deliver the entire cargo to the known\npoint of destination as contracted; or\n(B) causes the seal to be broken on the vehicle or on\nan intermodal container containing any part of the cargo.\n(c) An offense under this section is:\n(1) a state jail felony if the total value of the cargo\ninvolved in the activity is $1,500 or more but less than $10,000;\n(2) a felony of the third degree if the total value of the\ncargo involved in the activity is $10,000 or more but less than\n$100,000;\n(3) a felony of the second degree if the total value of the\ncargo involved in the activity is $100,000 or more but less than\n$200,000; or\n(4) a felony of the first degree if the total value of the\ncargo involved in the activity is $200,000 or more."
+  },
+  {
+    "literal": "THEFT OF CARGO >=$300K",
+    "citation": "PC 31.18(c)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT OF CARGO >=$30K<$149K",
+    "citation": "PC 31.18(c)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "THEFT OF DL/COMM DL/ID CERTIFICATE",
@@ -18054,6 +25758,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 31.03. THEFT. (a) A person commits an offense if he\nunlawfully appropriates property with intent to deprive the owner of\nproperty.\n(b) Appropriation of property is unlawful if:\n(1) it is without the owner's effective consent;\n(2) the property is stolen and the actor appropriates the\nproperty knowing it was stolen by another; or\n(3) property in the custody of any law enforcement agency\nwas explicitly represented by any law enforcement agent to the actor\n\nPENAL CODE\nas being stolen and the actor appropriates the property believing it\nwas stolen by another.\n(c) For purposes of Subsection (b):\n(1) evidence that the actor has previously participated in\nrecent transactions other than, but similar to, the transaction for\nwhich the prosecution is based is admissible for the purpose of\nshowing knowledge or intent and the issues of knowledge or intent are\nraised by the actor's plea of not guilty;\n(2) the testimony of an accomplice shall be corroborated by\nproof that tends to connect the actor to the crime, but the actor's\nknowledge or intent may be established by the uncorroborated\ntestimony of the accomplice;\n(3) an actor engaged in the business of buying and selling\nused or secondhand personal property, or lending money on the\nsecurity of personal property deposited with the actor, is presumed\nto know upon receipt by the actor of stolen property (other than a\nmotor vehicle subject to Chapter 501, Transportation Code) that the\nproperty has been previously stolen from another if the actor pays\nfor or loans against the property $25 or more (or consideration of\nequivalent value) and the actor knowingly or recklessly:\n(A) fails to record the name, address, and physical\ndescription or identification number of the seller or pledgor;\n(B) fails to record a complete description of the\nproperty, including the serial number, if reasonably available, or\nother identifying characteristics; or\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty. It is the express intent of this provision that the\npresumption arises unless the actor complies with each of the\nnumbered requirements;\n(4) for the purposes of Subdivision (3)(A), \"identification\nnumber\" means driver's license number, military identification\nnumber, identification certificate, or other official number capable\nof identifying an individual;\n(5) stolen property does not lose its character as stolen\nwhen recovered by any law enforcement agency;\n(6) an actor engaged in the business of obtaining abandoned\nor wrecked motor vehicles or parts of an abandoned or wrecked motor\nvehicle for resale, disposal, scrap, repair, rebuilding, demolition,\nor other form of salvage is presumed to know on receipt by the actor\n\nPENAL CODE\nof stolen property that the property has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to maintain an accurate and legible inventory\nof each motor vehicle component part purchased by or delivered to the\nactor, including the date of purchase or delivery, the name, age,\naddress, sex, and driver's license number of the seller or person\nmaking the delivery, the license plate number of the motor vehicle in\nwhich the part was delivered, a complete description of the part, and\nthe vehicle identification number of the motor vehicle from which the\npart was removed, or in lieu of maintaining an inventory, fails to\nrecord the name and certificate of inventory number of the person who\ndismantled the motor vehicle from which the part was obtained;\n(B) fails on receipt of a motor vehicle to obtain a\ncertificate of authority, sales receipt, or transfer document as\nrequired by Chapter 683, Transportation Code, or a certificate of\ntitle showing that the motor vehicle is not subject to a lien or that\nall recorded liens on the motor vehicle have been released; or\n(C) fails on receipt of a motor vehicle to immediately\nremove an unexpired license plate from the motor vehicle, to keep the\nplate in a secure and locked place, or to maintain an inventory, on\nforms provided by the Texas Department of Motor Vehicles, of license\nplates kept under this paragraph, including for each plate or set of\nplates the license plate number and the make, motor number, and\nvehicle identification number of the motor vehicle from which the\nplate was removed;\n(7) an actor who purchases or receives a used or secondhand\nmotor vehicle is presumed to know on receipt by the actor of the\nmotor vehicle that the motor vehicle has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to report to the Texas Department of Motor\nVehicles the failure of the person who sold or delivered the motor\nvehicle to the actor to deliver to the actor a properly executed\ncertificate of title to the motor vehicle at the time the motor\nvehicle was delivered; or\n(B) fails to file with the county tax assessor-\ncollector of the county in which the actor received the motor\nvehicle, not later than the 20th day after the date the actor\nreceived the motor vehicle, the registration license receipt and\ncertificate of title or evidence of title delivered to the actor in\naccordance with Subchapter D, Chapter 520, Transportation Code, at\n\nPENAL CODE\nthe time the motor vehicle was delivered;\n(8) an actor who purchases or receives from any source\nother than a licensed retailer or distributor of pesticides a\nrestricted-use pesticide or a state-limited-use pesticide or a\ncompound, mixture, or preparation containing a restricted-use or\nstate-limited-use pesticide is presumed to know on receipt by the\nactor of the pesticide or compound, mixture, or preparation that the\npesticide or compound, mixture, or preparation has been previously\nstolen from another if the actor:\n(A) fails to record the name, address, and physical\ndescription of the seller or pledgor;\n(B) fails to record a complete description of the\namount and type of pesticide or compound, mixture, or preparation\npurchased or received; and\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty;\n(9) an actor who is subject to Section 409, Packers and\nStockyards Act (7 U.S.C. Section 228b), that obtains livestock from a\ncommission merchant by representing that the actor will make prompt\npayment is presumed to have induced the commission merchant's consent\nby deception if the actor fails to make full payment in accordance\nwith Section 409, Packers and Stockyards Act (7 U.S.C. Section 228b);\nand\n(10) an actor in possession of property consisting of one\nor more catalytic converters that have been removed from a motor\nvehicle is presumed to have unlawfully appropriated the property\nunless the actor:\n(A) is the owner, as defined by Section 601.002,\nTransportation Code, of each vehicle from which the catalytic\nconverters were removed; or\n(B) possesses the catalytic converters in the ordinary\ncourse of the actor's business, including in the ordinary course of\nbusiness of an entity described by Section 1956.123(1), Occupations\nCode.\n(d) It is not a defense to prosecution under this section that:\n(1) the offense occurred as a result of a deception or\nstrategy on the part of a law enforcement agency, including the use\nof an undercover operative or peace officer;\n(2) the actor was provided by a law enforcement agency with\n\nPENAL CODE\na facility in which to commit the offense or an opportunity to engage\nin conduct constituting the offense; or\n(3) the actor was solicited to commit the offense by a\npeace officer, and the solicitation was of a type that would\nencourage a person predisposed to commit the offense to actually\ncommit the offense, but would not encourage a person not predisposed\nto commit the offense to actually commit the offense.\nText of subsection effective until December 4, 2025\n(e) Except as provided by Subsections (f) and (f-1), an offense\nunder this section is:\n(1) a Class C misdemeanor if the value of the property\nstolen is less than $100;\n(2) a Class B misdemeanor if:\n(A) the value of the property stolen is $100 or more\nbut less than $750;\n(B) the value of the property stolen is less than $100\nand the defendant has previously been convicted of any grade of\ntheft; or\n(C) the property stolen is a driver's license,\ncommercial driver's license, or personal identification certificate\nissued by this state or another state;"
   },
   {
+    "literal": "THEFT OF DL/COMM DL/ID CERTIFICATE ENH",
+    "citation": "PC 31.03(f)(6)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "THEFT OF DL/COMM DL/ID CERTIFICATE ENH IAT",
     "citation": "31.03(f)",
     "statute": "PC",
@@ -18061,11 +25771,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 31.03. THEFT. (a) A person commits an offense if he\nunlawfully appropriates property with intent to deprive the owner of\nproperty.\n(b) Appropriation of property is unlawful if:\n(1) it is without the owner's effective consent;\n(2) the property is stolen and the actor appropriates the\nproperty knowing it was stolen by another; or\n(3) property in the custody of any law enforcement agency\nwas explicitly represented by any law enforcement agent to the actor\n\nPENAL CODE\nas being stolen and the actor appropriates the property believing it\nwas stolen by another.\n(c) For purposes of Subsection (b):\n(1) evidence that the actor has previously participated in\nrecent transactions other than, but similar to, the transaction for\nwhich the prosecution is based is admissible for the purpose of\nshowing knowledge or intent and the issues of knowledge or intent are\nraised by the actor's plea of not guilty;\n(2) the testimony of an accomplice shall be corroborated by\nproof that tends to connect the actor to the crime, but the actor's\nknowledge or intent may be established by the uncorroborated\ntestimony of the accomplice;\n(3) an actor engaged in the business of buying and selling\nused or secondhand personal property, or lending money on the\nsecurity of personal property deposited with the actor, is presumed\nto know upon receipt by the actor of stolen property (other than a\nmotor vehicle subject to Chapter 501, Transportation Code) that the\nproperty has been previously stolen from another if the actor pays\nfor or loans against the property $25 or more (or consideration of\nequivalent value) and the actor knowingly or recklessly:\n(A) fails to record the name, address, and physical\ndescription or identification number of the seller or pledgor;\n(B) fails to record a complete description of the\nproperty, including the serial number, if reasonably available, or\nother identifying characteristics; or\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty. It is the express intent of this provision that the\npresumption arises unless the actor complies with each of the\nnumbered requirements;\n(4) for the purposes of Subdivision (3)(A), \"identification\nnumber\" means driver's license number, military identification\nnumber, identification certificate, or other official number capable\nof identifying an individual;\n(5) stolen property does not lose its character as stolen\nwhen recovered by any law enforcement agency;\n(6) an actor engaged in the business of obtaining abandoned\nor wrecked motor vehicles or parts of an abandoned or wrecked motor\nvehicle for resale, disposal, scrap, repair, rebuilding, demolition,\nor other form of salvage is presumed to know on receipt by the actor\n\nPENAL CODE\nof stolen property that the property has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to maintain an accurate and legible inventory\nof each motor vehicle component part purchased by or delivered to the\nactor, including the date of purchase or delivery, the name, age,\naddress, sex, and driver's license number of the seller or person\nmaking the delivery, the license plate number of the motor vehicle in\nwhich the part was delivered, a complete description of the part, and\nthe vehicle identification number of the motor vehicle from which the\npart was removed, or in lieu of maintaining an inventory, fails to\nrecord the name and certificate of inventory number of the person who\ndismantled the motor vehicle from which the part was obtained;\n(B) fails on receipt of a motor vehicle to obtain a\ncertificate of authority, sales receipt, or transfer document as\nrequired by Chapter 683, Transportation Code, or a certificate of\ntitle showing that the motor vehicle is not subject to a lien or that\nall recorded liens on the motor vehicle have been released; or\n(C) fails on receipt of a motor vehicle to immediately\nremove an unexpired license plate from the motor vehicle, to keep the\nplate in a secure and locked place, or to maintain an inventory, on\nforms provided by the Texas Department of Motor Vehicles, of license\nplates kept under this paragraph, including for each plate or set of\nplates the license plate number and the make, motor number, and\nvehicle identification number of the motor vehicle from which the\nplate was removed;\n(7) an actor who purchases or receives a used or secondhand\nmotor vehicle is presumed to know on receipt by the actor of the\nmotor vehicle that the motor vehicle has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to report to the Texas Department of Motor\nVehicles the failure of the person who sold or delivered the motor\nvehicle to the actor to deliver to the actor a properly executed\ncertificate of title to the motor vehicle at the time the motor\nvehicle was delivered; or\n(B) fails to file with the county tax assessor-\ncollector of the county in which the actor received the motor\nvehicle, not later than the 20th day after the date the actor\nreceived the motor vehicle, the registration license receipt and\ncertificate of title or evidence of title delivered to the actor in\naccordance with Subchapter D, Chapter 520, Transportation Code, at\n\nPENAL CODE\nthe time the motor vehicle was delivered;\n(8) an actor who purchases or receives from any source\nother than a licensed retailer or distributor of pesticides a\nrestricted-use pesticide or a state-limited-use pesticide or a\ncompound, mixture, or preparation containing a restricted-use or\nstate-limited-use pesticide is presumed to know on receipt by the\nactor of the pesticide or compound, mixture, or preparation that the\npesticide or compound, mixture, or preparation has been previously\nstolen from another if the actor:\n(A) fails to record the name, address, and physical\ndescription of the seller or pledgor;\n(B) fails to record a complete description of the\namount and type of pesticide or compound, mixture, or preparation\npurchased or received; and\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty;\n(9) an actor who is subject to Section 409, Packers and\nStockyards Act (7 U.S.C. Section 228b), that obtains livestock from a\ncommission merchant by representing that the actor will make prompt\npayment is presumed to have induced the commission merchant's consent\nby deception if the actor fails to make full payment in accordance\nwith Section 409, Packers and Stockyards Act (7 U.S.C. Section 228b);\nand\n(10) an actor in possession of property consisting of one\nor more catalytic converters that have been removed from a motor\nvehicle is presumed to have unlawfully appropriated the property\nunless the actor:\n(A) is the owner, as defined by Section 601.002,\nTransportation Code, of each vehicle from which the catalytic\nconverters were removed; or\n(B) possesses the catalytic converters in the ordinary\ncourse of the actor's business, including in the ordinary course of\nbusiness of an entity described by Section 1956.123(1), Occupations\nCode.\n(d) It is not a defense to prosecution under this section that:\n(1) the offense occurred as a result of a deception or\nstrategy on the part of a law enforcement agency, including the use\nof an undercover operative or peace officer;\n(2) the actor was provided by a law enforcement agency with\n\nPENAL CODE\na facility in which to commit the offense or an opportunity to engage\nin conduct constituting the offense; or\n(3) the actor was solicited to commit the offense by a\npeace officer, and the solicitation was of a type that would\nencourage a person predisposed to commit the offense to actually\ncommit the offense, but would not encourage a person not predisposed\nto commit the offense to actually commit the offense.\nText of subsection effective until December 4, 2025\n(e) Except as provided by Subsections\n(f) and (f-1), an offense\nunder this section is:"
   },
   {
+    "literal": "THEFT OF ELECT BALLOT CARRIER ENVELP ENH",
+    "citation": "PC 31.03(f)(7)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "THEFT OF ELECT BALLOT OR CARRIER ENVE ENH IAT",
     "citation": "31.03(f)",
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 31.03. THEFT. (a) A person commits an offense if he\nunlawfully appropriates property with intent to deprive the owner of\nproperty.\n(b) Appropriation of property is unlawful if:\n(1) it is without the owner's effective consent;\n(2) the property is stolen and the actor appropriates the\nproperty knowing it was stolen by another; or\n(3) property in the custody of any law enforcement agency\nwas explicitly represented by any law enforcement agent to the actor\n\nPENAL CODE\nas being stolen and the actor appropriates the property believing it\nwas stolen by another.\n(c) For purposes of Subsection (b):\n(1) evidence that the actor has previously participated in\nrecent transactions other than, but similar to, the transaction for\nwhich the prosecution is based is admissible for the purpose of\nshowing knowledge or intent and the issues of knowledge or intent are\nraised by the actor's plea of not guilty;\n(2) the testimony of an accomplice shall be corroborated by\nproof that tends to connect the actor to the crime, but the actor's\nknowledge or intent may be established by the uncorroborated\ntestimony of the accomplice;\n(3) an actor engaged in the business of buying and selling\nused or secondhand personal property, or lending money on the\nsecurity of personal property deposited with the actor, is presumed\nto know upon receipt by the actor of stolen property (other than a\nmotor vehicle subject to Chapter 501, Transportation Code) that the\nproperty has been previously stolen from another if the actor pays\nfor or loans against the property $25 or more (or consideration of\nequivalent value) and the actor knowingly or recklessly:\n(A) fails to record the name, address, and physical\ndescription or identification number of the seller or pledgor;\n(B) fails to record a complete description of the\nproperty, including the serial number, if reasonably available, or\nother identifying characteristics; or\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty. It is the express intent of this provision that the\npresumption arises unless the actor complies with each of the\nnumbered requirements;\n(4) for the purposes of Subdivision (3)(A), \"identification\nnumber\" means driver's license number, military identification\nnumber, identification certificate, or other official number capable\nof identifying an individual;\n(5) stolen property does not lose its character as stolen\nwhen recovered by any law enforcement agency;\n(6) an actor engaged in the business of obtaining abandoned\nor wrecked motor vehicles or parts of an abandoned or wrecked motor\nvehicle for resale, disposal, scrap, repair, rebuilding, demolition,\nor other form of salvage is presumed to know on receipt by the actor\n\nPENAL CODE\nof stolen property that the property has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to maintain an accurate and legible inventory\nof each motor vehicle component part purchased by or delivered to the\nactor, including the date of purchase or delivery, the name, age,\naddress, sex, and driver's license number of the seller or person\nmaking the delivery, the license plate number of the motor vehicle in\nwhich the part was delivered, a complete description of the part, and\nthe vehicle identification number of the motor vehicle from which the\npart was removed, or in lieu of maintaining an inventory, fails to\nrecord the name and certificate of inventory number of the person who\ndismantled the motor vehicle from which the part was obtained;\n(B) fails on receipt of a motor vehicle to obtain a\ncertificate of authority, sales receipt, or transfer document as\nrequired by Chapter 683, Transportation Code, or a certificate of\ntitle showing that the motor vehicle is not subject to a lien or that\nall recorded liens on the motor vehicle have been released; or\n(C) fails on receipt of a motor vehicle to immediately\nremove an unexpired license plate from the motor vehicle, to keep the\nplate in a secure and locked place, or to maintain an inventory, on\nforms provided by the Texas Department of Motor Vehicles, of license\nplates kept under this paragraph, including for each plate or set of\nplates the license plate number and the make, motor number, and\nvehicle identification number of the motor vehicle from which the\nplate was removed;\n(7) an actor who purchases or receives a used or secondhand\nmotor vehicle is presumed to know on receipt by the actor of the\nmotor vehicle that the motor vehicle has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to report to the Texas Department of Motor\nVehicles the failure of the person who sold or delivered the motor\nvehicle to the actor to deliver to the actor a properly executed\ncertificate of title to the motor vehicle at the time the motor\nvehicle was delivered; or\n(B) fails to file with the county tax assessor-\ncollector of the county in which the actor received the motor\nvehicle, not later than the 20th day after the date the actor\nreceived the motor vehicle, the registration license receipt and\ncertificate of title or evidence of title delivered to the actor in\naccordance with Subchapter D, Chapter 520, Transportation Code, at\n\nPENAL CODE\nthe time the motor vehicle was delivered;\n(8) an actor who purchases or receives from any source\nother than a licensed retailer or distributor of pesticides a\nrestricted-use pesticide or a state-limited-use pesticide or a\ncompound, mixture, or preparation containing a restricted-use or\nstate-limited-use pesticide is presumed to know on receipt by the\nactor of the pesticide or compound, mixture, or preparation that the\npesticide or compound, mixture, or preparation has been previously\nstolen from another if the actor:\n(A) fails to record the name, address, and physical\ndescription of the seller or pledgor;\n(B) fails to record a complete description of the\namount and type of pesticide or compound, mixture, or preparation\npurchased or received; and\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty;\n(9) an actor who is subject to Section 409, Packers and\nStockyards Act (7 U.S.C. Section 228b), that obtains livestock from a\ncommission merchant by representing that the actor will make prompt\npayment is presumed to have induced the commission merchant's consent\nby deception if the actor fails to make full payment in accordance\nwith Section 409, Packers and Stockyards Act (7 U.S.C. Section 228b);\nand\n(10) an actor in possession of property consisting of one\nor more catalytic converters that have been removed from a motor\nvehicle is presumed to have unlawfully appropriated the property\nunless the actor:\n(A) is the owner, as defined by Section 601.002,\nTransportation Code, of each vehicle from which the catalytic\nconverters were removed; or\n(B) possesses the catalytic converters in the ordinary\ncourse of the actor's business, including in the ordinary course of\nbusiness of an entity described by Section 1956.123(1), Occupations\nCode.\n(d) It is not a defense to prosecution under this section that:\n(1) the offense occurred as a result of a deception or\nstrategy on the part of a law enforcement agency, including the use\nof an undercover operative or peace officer;\n(2) the actor was provided by a law enforcement agency with\n\nPENAL CODE\na facility in which to commit the offense or an opportunity to engage\nin conduct constituting the offense; or\n(3) the actor was solicited to commit the offense by a\npeace officer, and the solicitation was of a type that would\nencourage a person predisposed to commit the offense to actually\ncommit the offense, but would not encourage a person not predisposed\nto commit the offense to actually commit the offense.\nText of subsection effective until December 4, 2025\n(e) Except as provided by Subsections\n(f) and (f-1), an offense\nunder this section is:"
+  },
+  {
+    "literal": "THEFT OF ELECT BALLOT/CARRIER ENVELOPE",
+    "citation": "PC 31.03(e)(4)(E)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "THEFT OF ELECTION BALLOT OR CARRIER ENVELOPE",
@@ -18110,6 +25832,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 31.20. MAIL THEFT. (a) In this section:\n(1) \"Disabled individual\" and \"elderly individual\" have the\nmeanings assigned by Section 22.04.\n(2) \"Identifying information\" has the meaning assigned by\nSection 32.51.\n(3) \"Mail\" means a letter, postal card, package, bag, or\nother sealed article that:\n(A) is delivered by a common carrier or delivery\nservice and:\n(i) is in transit; or\n(ii) has been delivered but not yet received by the\naddressee; or\n(B) has been left to be collected for delivery by a\ncommon carrier or delivery service.\n(4) \"Negotiable instrument\" has the meaning assigned by\nSection 3.104, Business & Commerce Code.\n(b) A person commits an offense if the person intentionally\nappropriates mail without the effective consent of the addressee and\nwith the intent to:\n(1) deprive that addressee of the mail; or\n(2) steal a negotiable instrument.\n(b-1) If an actor possesses mail from five or more addressees,\nthere is a rebuttable presumption that actor appropriated the mail\nwithout the effective consent of the applicable addressee and with\nthe intent to deprive the addressee of the mail.\n(b-2) If an actor possesses mail containing a combined total of\nfive or more negotiable instruments, there is a rebuttable\npresumption that the actor:\n(1) appropriated the mail without the effective consent of\nthe applicable addressee and with the intent to steal the negotiable\ninstruments; and\n(2) committed the offense under this section with the\nintent to facilitate an offense under Chapter 32.\n\nPENAL CODE\n(b-3) The presumptions established under Subsections (b-1) and\n(b-2) do not apply to a business or other commercial entity or\ngovernmental agency that is engaged in a business activity or\ngovernmental function that does not violate a penal law of this\nstate.\n(c) Except as provided by Subsections\n(d) and (e), an offense\nunder this section is:\n(1) a Class A misdemeanor if the mail is appropriated from\nfewer than 10 addressees;\n(2) a state jail felony if the mail is appropriated from at\nleast 10 but fewer than 30 addressees; or\n(3) a felony of the third degree if the mail is\nappropriated from 30 or more addressees.\n(d) If it is shown on the trial of an offense under Subsection\n(b)(1) that the appropriated mail contained an item of identifying\ninformation and the actor committed the offense with the intent to\nfacilitate an offense under Section 32.51, the offense is:\n(1) a state jail felony if the mail is appropriated from\nfewer than 10 addressees;\n(2) a felony of the third degree if the mail is\nappropriated from at least 10 but fewer than 20 addressees;\n(3) a felony of the second degree if the mail is\nappropriated from at least 20 but fewer than 50 addressees; or\n(4) a felony of the first degree if the mail is\nappropriated from 50 or more addressees.\n(d-1) If it is shown on the trial of an offense under\nSubsection"
   },
   {
+    "literal": "THEFT OF MATER ALUM/BRNZ/COP/BRASS<$20K",
+    "citation": "PC 31.03(E)(4)(F)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "THEFT OF MATERIAL ALUM/BRNZ/COPPER/BRASS <$20K",
     "citation": "31.03(e)(4)(F)",
     "statute": "PC",
@@ -18136,6 +25864,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 31.19. THEFT OF PETROLEUM PRODUCT OR OIL AND GAS\nEQUIPMENT. (a) In this section:\n(1) \"Oil and gas equipment\" means machinery, drilling\nequipment, welding equipment, pipeline equipment, fittings, pumps,\nvehicles, or other equipment and materials that are part of or\nincident to the exploration, development, maintenance, and operation\nof oil and gas properties, including oil and gas wells, oil and gas\nleases, gasoline plants, and refineries.\n(2) \"Petroleum product\" means crude oil, natural gas, or\ncondensate.\n(b) A person commits an offense if the person:\n(1) unlawfully appropriates a petroleum product with intent\nto deprive the owner of the petroleum product by:\n(A) possessing, removing, delivering, receiving,\npurchasing, selling, moving, concealing, or transporting the\npetroleum product; or\n\nPENAL CODE\n(B) making or causing a connection to be made with, or\ndrilling or tapping or causing a hole to be drilled or tapped in, a\npipe, pipeline, or tank used to store or transport a petroleum\nproduct;\n(2) transports to a waste disposal location a petroleum\nproduct for which the person cannot identify the petroleum product's\ninitial owner;\n(3) purchases a petroleum product from a person that is not\nauthorized by the Railroad Commission of Texas to sell the petroleum\nproduct; or\n(4) stores, purchases, or trades a petroleum product for\nfinancial benefit by means of a method that is not authorized by the\nRailroad Commission of Texas.\n(b-1) A person commits an offense if the person unlawfully\nappropriates oil and gas equipment with intent to deprive the owner\nof the oil and gas equipment by possessing, removing, delivering,\nreceiving, purchasing, selling, moving, concealing, or transporting\nthe oil and gas equipment.\n(c) Appropriation of a petroleum product or oil and gas\nequipment is unlawful if it is without the owner's effective consent.\n(d) An offense under Subsection (b) is:\n(1) a felony of the third degree if the total value of the\npetroleum product appropriated is less than $10,000;"
+  },
+  {
+    "literal": "THEFT OF PETROLEUM PRODUCT OR OIL AND GAS EQUIPMENT",
+    "citation": "PC 31.19",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "THEFT OF SERV >=$100<$750",
@@ -18178,6 +25912,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 31.04. THEFT OF SERVICE. (a) A person commits theft of\nservice if, with intent to avoid payment for service that the actor\nknows is provided only for compensation:\n(1) the actor intentionally or knowingly secures\nperformance of the service by deception, threat, or false token;\n(2) having control over the disposition of services of\nanother to which the actor is not entitled, the actor intentionally\nor knowingly diverts the other's services to the actor's own benefit\nor to the benefit of another not entitled to the services;\n(3) having control of personal property under a written\nrental agreement, the actor holds the property beyond the expiration\nof the rental period without the effective consent of the owner of\n\nPENAL CODE\nthe property, thereby depriving the owner of the property of its use\nin further rentals; or\n(4) the actor intentionally or knowingly secures the\nperformance of the service by agreeing to provide compensation and,\nafter the service is rendered, fails to make full payment after\nreceiving notice demanding payment.\n(b) For purposes of this section, intent to avoid payment is\npresumed if any of the following occurs:\n(1) the actor absconded without paying for the service or\nexpressly refused to pay for the service in circumstances where\npayment is ordinarily made immediately upon rendering of the service,\nas in hotels, campgrounds, recreational vehicle parks, restaurants,\nand comparable establishments;\n(2) the actor failed to make payment under a service\nagreement within 10 days after receiving notice demanding payment;\n(3) the actor returns property held under a rental\nagreement after the expiration of the rental agreement and fails to\npay the applicable rental charge for the property within 10 days\nafter the date on which the actor received notice demanding payment;\n(4) the actor failed to return the property held under a\nrental agreement:\n(A) within five days after receiving notice demanding\nreturn, if the property is valued at less than $2,500;\n(B) within three days after receiving notice demanding\nreturn, if the property is valued at $2,500 or more but less than\n$10,000; or\n(C) within two days after receiving notice demanding\nreturn, if the property is valued at $10,000 or more; or\n(5) the actor:\n(A) failed to return the property held under an\nagreement described by Subsections (d-2)(1)-(3) within five business\ndays after receiving notice demanding return; and\n(B) has made fewer than three complete payments under\nthe agreement.\n(b-1) For purposes of Subsection (a)(4), notice must be:\n(1) in writing;\n(2) sent by:\n(A) registered or certified mail with return receipt\nrequested;\n(B) commercial delivery service;\n\nPENAL CODE\n(C) e-mail; or\n(D) text message; and\n(3) sent to the actor using the actor's mailing address, e-\nmail address, phone number, or other method of contact, as\nappropriate, shown on:\n(A) the rental agreement or service agreement;\n(B) records of the person whose service was secured; or\n(C) if the actor secured performance of service by\nissuing or passing a check or similar sight order for the payment of\nmoney, using the actor's address shown on:\n(i) the check or order; or\n(ii) the records of the bank or other drawee on\nwhich the check or order is drawn.\n(c) For purposes of Subsections (b)(2), (b)(4), and (b)(5),\nnotice must be:\n(1) in writing;\n(2) sent by:\n(A) registered or certified mail with return receipt\nrequested; or\n(B) commercial delivery service; and\n(3) sent to the actor using the actor's mailing address\nshown on:\n(A) the rental agreement or service agreement;\n(B) records of the person whose service was secured; or\n(C) if the actor secured performance of service by\nissuing or passing a check or similar sight order for the payment of\nmoney, using the actor's address shown on:\n(i) the check or order; or\n(ii) the records of the bank or other drawee on\nwhich the check or order is drawn.\n(d) Except as otherwise provided by this subsection, if written\nnotice is given in accordance with Subsection (b-1) or (c), it is\npresumed that the notice was received not later than two days after\nthe notice was sent. For purposes of Subsections (b)(4)(A) and (B)\nand (b)(5), if written notice is given in accordance with Subsection\n(c), it is presumed that the notice was received not later than five\ndays after the notice was sent.\n(d-1) For purposes of Subsection (a)(2), the diversion of\nservices to the benefit of a person who is not entitled to those\nservices includes the disposition of personal property by an actor\n\nPENAL CODE\nhaving control of the property under an agreement described by\nSubsections (d-2)(1)-(3), if the actor disposes of the property in\nviolation of the terms of the agreement and to the benefit of any\nperson who is not entitled to the property.\n(d-2) For purposes of Subsection (a)(3), the term \"written\nrental agreement\" does not include an agreement that:\n(1) permits an individual to use personal property for\npersonal, family, or household purposes for an initial rental period;\n(2) is automatically renewable with each payment after the\ninitial rental period; and\n(3) permits the individual to become the owner of the\nproperty.\n(d-3) For purposes of Subsection (a)(4):\n(1) if the compensation is or was to be paid on a periodic\nbasis, the intent to avoid payment for a service may be formed at any\ntime during or before a pay period;\n(2) the partial payment of wages alone is not sufficient\nevidence to negate the actor's intent to avoid payment for a service;\nand\n(3) the term \"service\" does not include leasing personal\nproperty under an agreement described by Subsections (d-2)(1)-(3).\n(d-4) A presumption established under Subsection (b) involving\na defendant's failure to return property held under an agreement\ndescribed by Subsections (d-2)(1)-(3) may be refuted if the defendant\nshows that the defendant:\n(1) intended to return the property; and\n(2) was unable to return the property.\n(d-5) For purposes of Subsection (b)(5), \"business day\" means a\nday other than Sunday or a state or federal holiday.\n(e) An offense under this section is:\n(1) a Class C misdemeanor if the value of the service\nstolen is less than $100;\n(2) a Class B misdemeanor if the value of the service\nstolen is $100 or more but less than $750;\n(3) a Class A misdemeanor if the value of the service\nstolen is $750 or more but less than $2,500;"
+  },
+  {
+    "literal": "THEFT OF SERVICE <$100",
+    "citation": "PC 31.04",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "THEFT OF TRADE SECRETS",
@@ -18252,6 +25992,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 31.03. THEFT. (a) A person commits an offense if he\nunlawfully appropriates property with intent to deprive the owner of\nproperty.\n(b) Appropriation of property is unlawful if:\n(1) it is without the owner's effective consent;\n(2) the property is stolen and the actor appropriates the\nproperty knowing it was stolen by another; or\n(3) property in the custody of any law enforcement agency\nwas explicitly represented by any law enforcement agent to the actor\n\nPENAL CODE\nas being stolen and the actor appropriates the property believing it\nwas stolen by another.\n(c) For purposes of Subsection (b):\n(1) evidence that the actor has previously participated in\nrecent transactions other than, but similar to, the transaction for\nwhich the prosecution is based is admissible for the purpose of\nshowing knowledge or intent and the issues of knowledge or intent are\nraised by the actor's plea of not guilty;\n(2) the testimony of an accomplice shall be corroborated by\nproof that tends to connect the actor to the crime, but the actor's\nknowledge or intent may be established by the uncorroborated\ntestimony of the accomplice;\n(3) an actor engaged in the business of buying and selling\nused or secondhand personal property, or lending money on the\nsecurity of personal property deposited with the actor, is presumed\nto know upon receipt by the actor of stolen property (other than a\nmotor vehicle subject to Chapter 501, Transportation Code) that the\nproperty has been previously stolen from another if the actor pays\nfor or loans against the property $25 or more (or consideration of\nequivalent value) and the actor knowingly or recklessly:\n(A) fails to record the name, address, and physical\ndescription or identification number of the seller or pledgor;\n(B) fails to record a complete description of the\nproperty, including the serial number, if reasonably available, or\nother identifying characteristics; or\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty. It is the express intent of this provision that the\npresumption arises unless the actor complies with each of the\nnumbered requirements;\n(4) for the purposes of Subdivision (3)(A), \"identification\nnumber\" means driver's license number, military identification\nnumber, identification certificate, or other official number capable\nof identifying an individual;\n(5) stolen property does not lose its character as stolen\nwhen recovered by any law enforcement agency;\n(6) an actor engaged in the business of obtaining abandoned\nor wrecked motor vehicles or parts of an abandoned or wrecked motor\nvehicle for resale, disposal, scrap, repair, rebuilding, demolition,\nor other form of salvage is presumed to know on receipt by the actor\n\nPENAL CODE\nof stolen property that the property has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to maintain an accurate and legible inventory\nof each motor vehicle component part purchased by or delivered to the\nactor, including the date of purchase or delivery, the name, age,\naddress, sex, and driver's license number of the seller or person\nmaking the delivery, the license plate number of the motor vehicle in\nwhich the part was delivered, a complete description of the part, and\nthe vehicle identification number of the motor vehicle from which the\npart was removed, or in lieu of maintaining an inventory, fails to\nrecord the name and certificate of inventory number of the person who\ndismantled the motor vehicle from which the part was obtained;\n(B) fails on receipt of a motor vehicle to obtain a\ncertificate of authority, sales receipt, or transfer document as\nrequired by Chapter 683, Transportation Code, or a certificate of\ntitle showing that the motor vehicle is not subject to a lien or that\nall recorded liens on the motor vehicle have been released; or\n(C) fails on receipt of a motor vehicle to immediately\nremove an unexpired license plate from the motor vehicle, to keep the\nplate in a secure and locked place, or to maintain an inventory, on\nforms provided by the Texas Department of Motor Vehicles, of license\nplates kept under this paragraph, including for each plate or set of\nplates the license plate number and the make, motor number, and\nvehicle identification number of the motor vehicle from which the\nplate was removed;\n(7) an actor who purchases or receives a used or secondhand\nmotor vehicle is presumed to know on receipt by the actor of the\nmotor vehicle that the motor vehicle has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to report to the Texas Department of Motor\nVehicles the failure of the person who sold or delivered the motor\nvehicle to the actor to deliver to the actor a properly executed\ncertificate of title to the motor vehicle at the time the motor\nvehicle was delivered; or\n(B) fails to file with the county tax assessor-\ncollector of the county in which the actor received the motor\nvehicle, not later than the 20th day after the date the actor\nreceived the motor vehicle, the registration license receipt and\ncertificate of title or evidence of title delivered to the actor in\naccordance with Subchapter D, Chapter 520, Transportation Code, at\n\nPENAL CODE\nthe time the motor vehicle was delivered;\n(8) an actor who purchases or receives from any source\nother than a licensed retailer or distributor of pesticides a\nrestricted-use pesticide or a state-limited-use pesticide or a\ncompound, mixture, or preparation containing a restricted-use or\nstate-limited-use pesticide is presumed to know on receipt by the\nactor of the pesticide or compound, mixture, or preparation that the\npesticide or compound, mixture, or preparation has been previously\nstolen from another if the actor:\n(A) fails to record the name, address, and physical\ndescription of the seller or pledgor;\n(B) fails to record a complete description of the\namount and type of pesticide or compound, mixture, or preparation\npurchased or received; and\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty;\n(9) an actor who is subject to Section 409, Packers and\nStockyards Act (7 U.S.C. Section 228b), that obtains livestock from a\ncommission merchant by representing that the actor will make prompt\npayment is presumed to have induced the commission merchant's consent\nby deception if the actor fails to make full payment in accordance\nwith Section 409, Packers and Stockyards Act (7 U.S.C. Section 228b);\nand\n(10) an actor in possession of property consisting of one\nor more catalytic converters that have been removed from a motor\nvehicle is presumed to have unlawfully appropriated the property\nunless the actor:\n(A) is the owner, as defined by Section 601.002,\nTransportation Code, of each vehicle from which the catalytic\nconverters were removed; or\n(B) possesses the catalytic converters in the ordinary\ncourse of the actor's business, including in the ordinary course of\nbusiness of an entity described by Section 1956.123(1), Occupations\nCode.\n(d) It is not a defense to prosecution under this section that:\n(1) the offense occurred as a result of a deception or\nstrategy on the part of a law enforcement agency, including the use\nof an undercover operative or peace officer;\n(2) the actor was provided by a law enforcement agency with\n\nPENAL CODE\na facility in which to commit the offense or an opportunity to engage\nin conduct constituting the offense; or\n(3) the actor was solicited to commit the offense by a\npeace officer, and the solicitation was of a type that would\nencourage a person predisposed to commit the offense to actually\ncommit the offense, but would not encourage a person not predisposed\nto commit the offense to actually commit the offense.\nText of subsection effective until December 4, 2025\n(e) Except as provided by Subsections\n(f) and (f-1), an offense\nunder this section is:"
+  },
+  {
+    "literal": "THEFT PROP <$2,500  2/MORE PREV CONV",
+    "citation": "PC 31.03(E)(4)(D)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "THEFT PROP <$2,500 2/MORE PREV CONV",
@@ -18366,11 +26112,149 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 31.03. THEFT. (a) A person commits an offense if he\nunlawfully appropriates property with intent to deprive the owner of\nproperty.\n(b) Appropriation of property is unlawful if:\n(1) it is without the owner's effective consent;\n(2) the property is stolen and the actor appropriates the\nproperty knowing it was stolen by another; or\n(3) property in the custody of any law enforcement agency\nwas explicitly represented by any law enforcement agent to the actor\n\nPENAL CODE\nas being stolen and the actor appropriates the property believing it\nwas stolen by another.\n(c) For purposes of Subsection (b):\n(1) evidence that the actor has previously participated in\nrecent transactions other than, but similar to, the transaction for\nwhich the prosecution is based is admissible for the purpose of\nshowing knowledge or intent and the issues of knowledge or intent are\nraised by the actor's plea of not guilty;\n(2) the testimony of an accomplice shall be corroborated by\nproof that tends to connect the actor to the crime, but the actor's\nknowledge or intent may be established by the uncorroborated\ntestimony of the accomplice;\n(3) an actor engaged in the business of buying and selling\nused or secondhand personal property, or lending money on the\nsecurity of personal property deposited with the actor, is presumed\nto know upon receipt by the actor of stolen property (other than a\nmotor vehicle subject to Chapter 501, Transportation Code) that the\nproperty has been previously stolen from another if the actor pays\nfor or loans against the property $25 or more (or consideration of\nequivalent value) and the actor knowingly or recklessly:\n(A) fails to record the name, address, and physical\ndescription or identification number of the seller or pledgor;\n(B) fails to record a complete description of the\nproperty, including the serial number, if reasonably available, or\nother identifying characteristics; or\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty. It is the express intent of this provision that the\npresumption arises unless the actor complies with each of the\nnumbered requirements;\n(4) for the purposes of Subdivision (3)(A), \"identification\nnumber\" means driver's license number, military identification\nnumber, identification certificate, or other official number capable\nof identifying an individual;\n(5) stolen property does not lose its character as stolen\nwhen recovered by any law enforcement agency;\n(6) an actor engaged in the business of obtaining abandoned\nor wrecked motor vehicles or parts of an abandoned or wrecked motor\nvehicle for resale, disposal, scrap, repair, rebuilding, demolition,\nor other form of salvage is presumed to know on receipt by the actor\n\nPENAL CODE\nof stolen property that the property has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to maintain an accurate and legible inventory\nof each motor vehicle component part purchased by or delivered to the\nactor, including the date of purchase or delivery, the name, age,\naddress, sex, and driver's license number of the seller or person\nmaking the delivery, the license plate number of the motor vehicle in\nwhich the part was delivered, a complete description of the part, and\nthe vehicle identification number of the motor vehicle from which the\npart was removed, or in lieu of maintaining an inventory, fails to\nrecord the name and certificate of inventory number of the person who\ndismantled the motor vehicle from which the part was obtained;\n(B) fails on receipt of a motor vehicle to obtain a\ncertificate of authority, sales receipt, or transfer document as\nrequired by Chapter 683, Transportation Code, or a certificate of\ntitle showing that the motor vehicle is not subject to a lien or that\nall recorded liens on the motor vehicle have been released; or\n(C) fails on receipt of a motor vehicle to immediately\nremove an unexpired license plate from the motor vehicle, to keep the\nplate in a secure and locked place, or to maintain an inventory, on\nforms provided by the Texas Department of Motor Vehicles, of license\nplates kept under this paragraph, including for each plate or set of\nplates the license plate number and the make, motor number, and\nvehicle identification number of the motor vehicle from which the\nplate was removed;\n(7) an actor who purchases or receives a used or secondhand\nmotor vehicle is presumed to know on receipt by the actor of the\nmotor vehicle that the motor vehicle has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to report to the Texas Department of Motor\nVehicles the failure of the person who sold or delivered the motor\nvehicle to the actor to deliver to the actor a properly executed\ncertificate of title to the motor vehicle at the time the motor\nvehicle was delivered; or\n(B) fails to file with the county tax assessor-\ncollector of the county in which the actor received the motor\nvehicle, not later than the 20th day after the date the actor\nreceived the motor vehicle, the registration license receipt and\ncertificate of title or evidence of title delivered to the actor in\naccordance with Subchapter D, Chapter 520, Transportation Code, at\n\nPENAL CODE\nthe time the motor vehicle was delivered;\n(8) an actor who purchases or receives from any source\nother than a licensed retailer or distributor of pesticides a\nrestricted-use pesticide or a state-limited-use pesticide or a\ncompound, mixture, or preparation containing a restricted-use or\nstate-limited-use pesticide is presumed to know on receipt by the\nactor of the pesticide or compound, mixture, or preparation that the\npesticide or compound, mixture, or preparation has been previously\nstolen from another if the actor:\n(A) fails to record the name, address, and physical\ndescription of the seller or pledgor;\n(B) fails to record a complete description of the\namount and type of pesticide or compound, mixture, or preparation\npurchased or received; and\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty;\n(9) an actor who is subject to Section 409, Packers and\nStockyards Act (7 U.S.C. Section 228b), that obtains livestock from a\ncommission merchant by representing that the actor will make prompt\npayment is presumed to have induced the commission merchant's consent\nby deception if the actor fails to make full payment in accordance\nwith Section 409, Packers and Stockyards Act (7 U.S.C. Section 228b);\nand\n(10) an actor in possession of property consisting of one\nor more catalytic converters that have been removed from a motor\nvehicle is presumed to have unlawfully appropriated the property\nunless the actor:\n(A) is the owner, as defined by Section 601.002,\nTransportation Code, of each vehicle from which the catalytic\nconverters were removed; or\n(B) possesses the catalytic converters in the ordinary\ncourse of the actor's business, including in the ordinary course of\nbusiness of an entity described by Section 1956.123(1), Occupations\nCode.\n(d) It is not a defense to prosecution under this section that:\n(1) the offense occurred as a result of a deception or\nstrategy on the part of a law enforcement agency, including the use\nof an undercover operative or peace officer;\n(2) the actor was provided by a law enforcement agency with\n\nPENAL CODE\na facility in which to commit the offense or an opportunity to engage\nin conduct constituting the offense; or\n(3) the actor was solicited to commit the offense by a\npeace officer, and the solicitation was of a type that would\nencourage a person predisposed to commit the offense to actually\ncommit the offense, but would not encourage a person not predisposed\nto commit the offense to actually commit the offense.\nText of subsection effective until December 4, 2025\n(e) Except as provided by Subsections\n(f) and (f-1), an offense\nunder this section is:"
   },
   {
+    "literal": "THEFT PROP GRAVE/CORPSE/MILITRY MKR ENH",
+    "citation": "PC 31.03(f)(18)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT PROP GRAVE/HUMAN CORPSE/MIL MARK",
+    "citation": "PC 31.03(e)(4)(B)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "THEFT PROP GRAVE/HUMAN CORPSE/MILITARY MARKER",
     "citation": "31.03(e)(4)(B)",
     "statute": "PC",
     "level": "FS",
     "statuteText": "Sec. 31.03. THEFT. (a) A person commits an offense if he\nunlawfully appropriates property with intent to deprive the owner of\nproperty.\n(b) Appropriation of property is unlawful if:\n(1) it is without the owner's effective consent;\n(2) the property is stolen and the actor appropriates the\nproperty knowing it was stolen by another; or\n(3) property in the custody of any law enforcement agency\nwas explicitly represented by any law enforcement agent to the actor\n\nPENAL CODE\nas being stolen and the actor appropriates the property believing it\nwas stolen by another.\n(c) For purposes of Subsection (b):\n(1) evidence that the actor has previously participated in\nrecent transactions other than, but similar to, the transaction for\nwhich the prosecution is based is admissible for the purpose of\nshowing knowledge or intent and the issues of knowledge or intent are\nraised by the actor's plea of not guilty;\n(2) the testimony of an accomplice shall be corroborated by\nproof that tends to connect the actor to the crime, but the actor's\nknowledge or intent may be established by the uncorroborated\ntestimony of the accomplice;\n(3) an actor engaged in the business of buying and selling\nused or secondhand personal property, or lending money on the\nsecurity of personal property deposited with the actor, is presumed\nto know upon receipt by the actor of stolen property (other than a\nmotor vehicle subject to Chapter 501, Transportation Code) that the\nproperty has been previously stolen from another if the actor pays\nfor or loans against the property $25 or more (or consideration of\nequivalent value) and the actor knowingly or recklessly:\n(A) fails to record the name, address, and physical\ndescription or identification number of the seller or pledgor;\n(B) fails to record a complete description of the\nproperty, including the serial number, if reasonably available, or\nother identifying characteristics; or\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty. It is the express intent of this provision that the\npresumption arises unless the actor complies with each of the\nnumbered requirements;\n(4) for the purposes of Subdivision (3)(A), \"identification\nnumber\" means driver's license number, military identification\nnumber, identification certificate, or other official number capable\nof identifying an individual;\n(5) stolen property does not lose its character as stolen\nwhen recovered by any law enforcement agency;\n(6) an actor engaged in the business of obtaining abandoned\nor wrecked motor vehicles or parts of an abandoned or wrecked motor\nvehicle for resale, disposal, scrap, repair, rebuilding, demolition,\nor other form of salvage is presumed to know on receipt by the actor\n\nPENAL CODE\nof stolen property that the property has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to maintain an accurate and legible inventory\nof each motor vehicle component part purchased by or delivered to the\nactor, including the date of purchase or delivery, the name, age,\naddress, sex, and driver's license number of the seller or person\nmaking the delivery, the license plate number of the motor vehicle in\nwhich the part was delivered, a complete description of the part, and\nthe vehicle identification number of the motor vehicle from which the\npart was removed, or in lieu of maintaining an inventory, fails to\nrecord the name and certificate of inventory number of the person who\ndismantled the motor vehicle from which the part was obtained;\n(B) fails on receipt of a motor vehicle to obtain a\ncertificate of authority, sales receipt, or transfer document as\nrequired by Chapter 683, Transportation Code, or a certificate of\ntitle showing that the motor vehicle is not subject to a lien or that\nall recorded liens on the motor vehicle have been released; or\n(C) fails on receipt of a motor vehicle to immediately\nremove an unexpired license plate from the motor vehicle, to keep the\nplate in a secure and locked place, or to maintain an inventory, on\nforms provided by the Texas Department of Motor Vehicles, of license\nplates kept under this paragraph, including for each plate or set of\nplates the license plate number and the make, motor number, and\nvehicle identification number of the motor vehicle from which the\nplate was removed;\n(7) an actor who purchases or receives a used or secondhand\nmotor vehicle is presumed to know on receipt by the actor of the\nmotor vehicle that the motor vehicle has been previously stolen from\nanother if the actor knowingly or recklessly:\n(A) fails to report to the Texas Department of Motor\nVehicles the failure of the person who sold or delivered the motor\nvehicle to the actor to deliver to the actor a properly executed\ncertificate of title to the motor vehicle at the time the motor\nvehicle was delivered; or\n(B) fails to file with the county tax assessor-\ncollector of the county in which the actor received the motor\nvehicle, not later than the 20th day after the date the actor\nreceived the motor vehicle, the registration license receipt and\ncertificate of title or evidence of title delivered to the actor in\naccordance with Subchapter D, Chapter 520, Transportation Code, at\n\nPENAL CODE\nthe time the motor vehicle was delivered;\n(8) an actor who purchases or receives from any source\nother than a licensed retailer or distributor of pesticides a\nrestricted-use pesticide or a state-limited-use pesticide or a\ncompound, mixture, or preparation containing a restricted-use or\nstate-limited-use pesticide is presumed to know on receipt by the\nactor of the pesticide or compound, mixture, or preparation that the\npesticide or compound, mixture, or preparation has been previously\nstolen from another if the actor:\n(A) fails to record the name, address, and physical\ndescription of the seller or pledgor;\n(B) fails to record a complete description of the\namount and type of pesticide or compound, mixture, or preparation\npurchased or received; and\n(C) fails to obtain a signed warranty from the seller\nor pledgor that the seller or pledgor has the right to possess the\nproperty;\n(9) an actor who is subject to Section 409, Packers and\nStockyards Act (7 U.S.C. Section 228b), that obtains livestock from a\ncommission merchant by representing that the actor will make prompt\npayment is presumed to have induced the commission merchant's consent\nby deception if the actor fails to make full payment in accordance\nwith Section 409, Packers and Stockyards Act (7 U.S.C. Section 228b);\nand\n(10) an actor in possession of property consisting of one\nor more catalytic converters that have been removed from a motor\nvehicle is presumed to have unlawfully appropriated the property\nunless the actor:\n(A) is the owner, as defined by Section 601.002,\nTransportation Code, of each vehicle from which the catalytic\nconverters were removed; or\n(B) possesses the catalytic converters in the ordinary\ncourse of the actor's business, including in the ordinary course of\nbusiness of an entity described by Section 1956.123(1), Occupations\nCode.\n(d) It is not a defense to prosecution under this section that:\n(1) the offense occurred as a result of a deception or\nstrategy on the part of a law enforcement agency, including the use\nof an undercover operative or peace officer;\n(2) the actor was provided by a law enforcement agency with\n\nPENAL CODE\na facility in which to commit the offense or an opportunity to engage\nin conduct constituting the offense; or\n(3) the actor was solicited to commit the offense by a\npeace officer, and the solicitation was of a type that would\nencourage a person predisposed to commit the offense to actually\ncommit the offense, but would not encourage a person not predisposed\nto commit the offense to actually commit the offense.\nText of subsection effective until December 4, 2025\n(e) Except as provided by Subsections (f) and (f-1), an offense\nunder this section is:\n(1) a Class C misdemeanor if the value of the property\nstolen is less than $100;\n(2) a Class B misdemeanor if:\n(A) the value of the property stolen is $100 or more\nbut less than $750;\n(B) the value of the property stolen is less than $100\nand the defendant has previously been convicted of any grade of\ntheft; or\n(C) the property stolen is a driver's license,\ncommercial driver's license, or personal identification certificate\nissued by this state or another state;\n(3) a Class A misdemeanor if the value of the property\nstolen is $750 or more but less than $2,500;\n(4) a state jail felony if:\n(A) the value of the property stolen is $2,500 or more\nbut less than $30,000, or the property is less than 10 head of sheep,\nswine, or goats or any part thereof under the value of $30,000;\n(B) regardless of value, the property is stolen from\nthe person of another or from a human corpse or grave, including\nproperty that is a military grave marker;\n(C) the property stolen is a firearm;\n(D) the value of the property stolen is less than\n$2,500 and the defendant has been previously convicted two or more\ntimes of any grade of theft;\n(E) the property stolen is an official ballot or\nofficial carrier envelope for an election;\n(F) the value of the property stolen is less than\n$20,000 and the property stolen is:"
+  },
+  {
+    "literal": "THEFT SHOPLIFT <$100 W/PREV CONVIC",
+    "citation": "PC 31.03(E)(2)(B)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT SHOPLIFT <$100 W/PREV CVIC ENH",
+    "citation": "PC 31.03(F)(10)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT SHOPLIFT <$2,500  2/MORE PREV CONV",
+    "citation": "PC 31.03(E)(4)(D)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT SHOPLIFT <$2500 2+ CONV ENH IAT",
+    "citation": "PC 31.03(F)(11)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT SHOPLIFT <$300K ATM",
+    "citation": "PC 31.03(e)(6)(B)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT SHOPLIFT <$300K ATM ENH IAT",
+    "citation": "PC 31.03(f)(12)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT SHOPLIFT >=$100<$750",
+    "citation": "PC 31.03(E)(2)(A)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT SHOPLIFT >=$100<$750 ENH IAT",
+    "citation": "PC 31.03(f)(13)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT SHOPLIFT >=$150K<$300K",
+    "citation": "PC 31.03(e)(6)(A)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT SHOPLIFT >=$150K<$300K ENH IAT",
+    "citation": "PC 31.03(f)(14)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT SHOPLIFT >=$2,500<$30K",
+    "citation": "PC 31.03(E)(4)(A)(2)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT SHOPLIFT >=$2500<$30K ENH IAT",
+    "citation": "PC 31.03(f)(15)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT SHOPLIFT >=$300K",
+    "citation": "PC 31.03(e)(7)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT SHOPLIFT >=$30K<$150K",
+    "citation": "PC 31.03(e)(5)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT SHOPLIFT >=$30K<$150K ENH IAT",
+    "citation": "PC 31.03(f)(16)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT SHOPLIFT >=$750<$2,500",
+    "citation": "PC 31.03(E)(3)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT SHOPLIFT >=$750<$2500 ENH IAT",
+    "citation": "PC 31.03(f)(17)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT SHOPLIFT<$100",
+    "citation": "PC 31.03(C)(1)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT SHOPLIFT<$100 ENH IAT",
+    "citation": "PC 31.03(f)(9)S",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT TAMPER W/MULTICHAN VIDEO REMUN",
+    "citation": "PC 31.12(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT TAMPER W/MULTICHAN VIDEO W/PREVC",
+    "citation": "PC 31.12(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "THEFT TAMPER W/MULTICHANNEL VIDEO REMUN",
@@ -18457,6 +26341,18 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 31.20. MAIL THEFT. (a) In this section:\n(1) \"Disabled individual\" and \"elderly individual\" have the\nmeanings assigned by Section 22.04.\n(2) \"Identifying information\" has the meaning assigned by\nSection 32.51.\n(3) \"Mail\" means a letter, postal card, package, bag, or\nother sealed article that:\n(A) is delivered by a common carrier or delivery\nservice and:\n(i) is in transit; or\n(ii) has been delivered but not yet received by the\naddressee; or\n(B) has been left to be collected for delivery by a\ncommon carrier or delivery service.\n(4) \"Negotiable instrument\" has the meaning assigned by\nSection 3.104, Business & Commerce Code.\n(b) A person commits an offense if the person intentionally\nappropriates mail without the effective consent of the addressee and\nwith the intent to:\n(1) deprive that addressee of the mail; or\n(2) steal a negotiable instrument.\n(b-1) If an actor possesses mail from five or more addressees,\nthere is a rebuttable presumption that actor appropriated the mail\nwithout the effective consent of the applicable addressee and with\nthe intent to deprive the addressee of the mail.\n(b-2) If an actor possesses mail containing a combined total of\nfive or more negotiable instruments, there is a rebuttable\npresumption that the actor:\n(1) appropriated the mail without the effective consent of\nthe applicable addressee and with the intent to steal the negotiable\ninstruments; and\n(2) committed the offense under this section with the\nintent to facilitate an offense under Chapter 32.\n\nPENAL CODE\n(b-3) The presumptions established under Subsections (b-1) and\n(b-2) do not apply to a business or other commercial entity or\ngovernmental agency that is engaged in a business activity or\ngovernmental function that does not violate a penal law of this\nstate.\n(c) Except as provided by Subsections\n(d) and (e), an offense\nunder this section is:\n(1) a Class A misdemeanor if the mail is appropriated from\nfewer than 10 addressees;\n(2) a state jail felony if the mail is appropriated from at\nleast 10 but fewer than 30 addressees; or\n(3) a felony of the third degree if the mail is\nappropriated from 30 or more addressees.\n(d) If it is shown on the trial of an offense under Subsection\n(b)(1) that the appropriated mail contained an item of identifying\ninformation and the actor committed the offense with the intent to\nfacilitate an offense under Section 32.51, the offense is:\n(1) a state jail felony if the mail is appropriated from\nfewer than 10 addressees;\n(2) a felony of the third degree if the mail is\nappropriated from at least 10 but fewer than 20 addressees;\n(3) a felony of the second degree if the mail is\nappropriated from at least 20 but fewer than 50 addressees; or\n(4) a felony of the first degree if the mail is\nappropriated from 50 or more addressees.\n(d-1) If it is shown on the trial of an offense under\nSubsection"
   },
   {
+    "literal": "THEFT/TAMPER MULTICHAN REMUN] W/2+CON",
+    "citation": "PC 31.12(d)(2)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "THEFT/TAMPER MULTICHAN VIDEO REMUN",
+    "citation": "PC 31.12(d)(2)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "THEFT/TAMPER MULTICHANNEL REMUNERATION W/2+CON",
     "citation": "31.12(d)(2)",
     "statute": "PC",
@@ -18471,11 +26367,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 31.12. THEFT OF OR TAMPERING WITH MULTICHANNEL VIDEO OR\nINFORMATION SERVICES. (a) A person commits an offense if, without\nthe authorization of the multichannel video or information services\nprovider, the person intentionally or knowingly:\n(1) makes or maintains a connection, whether physically,\nelectrically, electronically, or inductively, to:\n(A) a cable, wire, or other component of or media\nattached to a multichannel video or information services system; or\n(B) a television set, videotape recorder, or other\nreceiver attached to a multichannel video or information system;\n(2) attaches, causes to be attached, or maintains the\nattachment of a device to:\n(A) a cable, wire, or other component of or media\nattached to a multichannel video or information services system; or\n(B) a television set, videotape recorder, or other\nreceiver attached to a multichannel video or information services\nsystem;\n(3) tampers with, modifies, or maintains a modification to\na device installed by a multichannel video or information services\nprovider; or\n(4) tampers with, modifies, or maintains a modification to\nan access device or uses that access device or any unauthorized\naccess device to obtain services from a multichannel video or\ninformation services provider.\n(b) In this section:\n(1) \"Access device,\" \"connection,\" and \"device\" mean an\naccess device, connection, or device wholly or partly designed to\nmake intelligible an encrypted, encoded, scrambled, or other\nnonstandard signal carried by a multichannel video or information\nservices provider.\n(2) \"Encrypted, encoded, scrambled, or other nonstandard\nsignal\" means any type of signal or transmission not intended to\nproduce an intelligible program or service without the use of a\ndevice, signal, or information provided by a multichannel video or\ninformation services provider.\n(3) \"Multichannel video or information services provider\"\n\nPENAL CODE\nmeans a licensed cable television system, video dialtone system,\nmultichannel multipoint distribution services system, direct\nbroadcast satellite system, or other system providing video or\ninformation services that are distributed by cable, wire, radio\nfrequency, or other media.\n(c) This section does not prohibit the manufacture,\ndistribution, sale, or use of satellite receiving antennas that are\notherwise permitted by state or federal law.\n(d) An offense under this section is a Class C misdemeanor\nunless it is shown on the trial of the offense that the actor:\n(1) has been previously convicted one time of an offense\nunder this section, in which event the offense is a Class B\nmisdemeanor, or convicted two or more times of an offense under this\nsection, in which event the offense is a Class A misdemeanor; or\n(2) committed the offense for remuneration, in which event\nthe offense is a Class A misdemeanor, unless it is also shown on the\ntrial of the offense that the actor has been previously convicted two\nor more times of an offense under this section, in which event the\noffense is a Class A misdemeanor with a minimum fine of $2,000 and a\nminimum term of confinement of 180 days."
   },
   {
+    "literal": "THEFT: ACQUISITION OF FINANCIAL INFO",
+    "citation": "PC 31.17(c)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "THEFT: ACQUISITION OF FINANCIAL INFORMATION",
     "citation": "31.17(c)",
     "statute": "PC",
     "level": "MB",
     "statuteText": "Sec. 31.17. UNAUTHORIZED ACQUISITION OR TRANSFER OF CERTAIN\nFINANCIAL INFORMATION. (a) In this section:\n(1) \"Check\" has the meaning assigned by Section 3.104,\nBusiness & Commerce Code.\n(2) \"Credit card\" and \"debit card\" have the meanings\nassigned by Section 32.31.\n(3) \"Financial sight order or payment card information\"\nmeans financial information that is:\n(A) contained on either side of a check or similar\nsight order, check card, debit card, or credit card; or\n(B) encoded on the magnetic strip or stripe of a check\ncard, debit card, or credit card.\n(b) A person commits an offense if the person, knowing that the\nperson is not entitled to obtain or possess that financial\ninformation:\n(1) obtains the financial sight order or payment card\ninformation of another by use of an electronic, photographic, visual\nimaging, recording, or other device capable of accessing, reading,\nrecording, capturing, copying, imaging, scanning, reproducing, or\nstoring in any manner the financial sight order or payment card\ninformation; or\n(2) transfers to a third party information obtained as\ndescribed by Subdivision (1).\n(c) An offense under Subsection"
+  },
+  {
+    "literal": "THEFT: TRANSFER OF FINANCIAL INFO",
+    "citation": "PC 31.17(c)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "THEFT: TRANSFER OF FINANCIAL INFORMATION",
@@ -18490,12 +26398,6 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F2",
     "statuteText": "Sec. 31.05. THEFT OF TRADE SECRETS. (a) For purposes of this\nsection:\n(1) \"Article\" means any object, material, device, or\nsubstance or any copy thereof, including a writing, recording,\ndrawing, sample, specimen, prototype, model, photograph,\nmicroorganism, blueprint, or map.\n(2) \"Copy\" means a facsimile, replica, photograph, or other\nreproduction of an article or a note, drawing, or sketch made of or\nfrom an article.\n(2-a) \"Foreign agent\" means an officer, employee, proxy,\nservant, delegate, or representative of a foreign government.\n(2-b) \"Foreign government\" has the meaning assigned by\nSection 51B.001, Education Code.\n(2-c) \"Foreign instrumentality\" means an agency, bureau,\nministry, component, institution, association, or legal, commercial,\nor business organization, corporation, firm, or entity that is\nsubstantially owned, controlled, sponsored, commanded, managed, or\ndominated by a foreign government.\n(3) \"Representing\" means describing, depicting, containing,\nconstituting, reflecting, or recording.\n(4) \"Trade secret\" means the whole or any part of any\nscientific or technical information, design, process, procedure,\nformula, or improvement that has value and that the owner has taken\nmeasures to prevent from becoming available to persons other than\nthose selected by the owner to have access for limited purposes.\n(b) A person commits an offense if, without the owner's\neffective consent, he knowingly:\n(1) steals a trade secret;\n(2) makes a copy of an article representing a trade secret;\nor\n(3) communicates or transmits a trade secret.\n(c) An offense under this section is a felony of the third\ndegree, except that the offense is a felony of the second degree if\nit is shown on the trial of the offense that the person who committed\nthe offense intended to benefit a foreign agent, foreign government,\nor foreign instrumentality."
-  },
-  {
-    "literal": "THREAT CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
   },
   {
     "literal": "THREAT EXHBT/USE FIREARM SCHOOL/BUS W/POSS/ACC",
@@ -18594,6 +26496,42 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "TOBACCO ON SCHOOL GROUNDS",
+    "citation": "EDC 38.006",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TOO MANY AUXILIARY DRIVING LAMPS",
+    "citation": "TRC 547.330 3153",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TOO MANY AUXILIARY PASSING LAMPS",
+    "citation": "TRC 547.329 3151",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TOO MANY FOG LAMPS",
+    "citation": "TRC 547.328 3212",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TOO MANY RIDERS ON MOTORCYCLE",
+    "citation": "TRC 545.416 3119",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TOO MANY SPOT LAMPS",
+    "citation": "TRC 547.327 3210",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "TOUTING COMMISSION-RACING ACT",
     "citation": "2033.013(b)",
     "statute": "OC",
@@ -18604,6 +26542,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "2033.013(b)",
     "statute": "OC",
     "level": "MA"
+  },
+  {
+    "literal": "TRACTOR BRAKES NOT PRO CASE BREAKAWAY",
+    "citation": "TRC 547.405 3217",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "TRADEMARK COUNTERFEITING >=$100<$750",
@@ -18660,10 +26604,16 @@ export const CJIS_CODES: Offense[] = [
     "level": "F1"
   },
   {
-    "literal": "TRAFFIC OFFENSE CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "TRAFFIC OF PERSON <18 PROST/FORCED LABOR",
+    "citation": "PC 20A.02(b)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TRAFFICK A CHILD W/INT FRCED LABOR BENI",
+    "citation": "PC 20A.02(a)(6)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "TRAFFICK CHILD/DISABLED INDV ENGAGE CNDCT/SEXL",
@@ -18684,6 +26634,30 @@ export const CJIS_CODES: Offense[] = [
     "level": "F1"
   },
   {
+    "literal": "TRAFFICKING A PERSON CAUSING DEATH",
+    "citation": "PC 20A.02(b)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TRAFFICKING CHILD ENGAGE COND/SEX/BENI",
+    "citation": "PC 20A.02(a)(8)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TRAFFICKING CHILD ENGAGE CONDUCT/SEXUAL",
+    "citation": "PC 20A.02(a)(7)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TRAFFICKING CHILD INTENT FORCED LABOR",
+    "citation": "PC 20A.02(a)(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "TRAFFICKING OF PERSON",
     "citation": "20A.02(b)",
     "statute": "PC",
@@ -18694,6 +26668,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "20A.03(e)",
     "statute": "PC",
     "level": "F1"
+  },
+  {
+    "literal": "TRAFFICKING PERSON ENGAGE COND/SX/BENI",
+    "citation": "PC 20A.02(a)(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TRAFFICKING PERSON ENGAGE CONDUCT/SEX",
+    "citation": "PC 20A.02(a)(3)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "TRAFFICKING PERSON ENGAGE CONDUCT/SEX/BENEFIT",
@@ -18720,10 +26706,28 @@ export const CJIS_CODES: Offense[] = [
     "level": "F1"
   },
   {
+    "literal": "TRAILER,OR MOBILE HOME INSPECTION VIOL",
+    "citation": "TRC 548.604 3206",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TRAIN OBSTRUCTING CROSSING",
+    "citation": "TRC 545.302 3369",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "TRANS HORSEMEAT TO SELLER HUMAN CONSUMPT ENH",
     "citation": "149.003",
     "statute": "AGC",
     "level": "F*"
+  },
+  {
+    "literal": "TRANSFER CHEM LAB APPARAT FOR UNL MAN",
+    "citation": "HSC 481.139",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "TRANSFER CHEMICAL LAB APPARATUS FOR UNL MAN",
@@ -18738,6 +26742,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "TRANSFER PRECURSOR SUBSTANCE UNL MAN",
+    "citation": "HSC 481.137",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "TRANSFER PRECURSOR SUBSTANCE UNL MAN*",
     "citation": "481.137",
     "statute": "HSC",
@@ -18750,6 +26760,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "TRANSFER RECEIPT CHEM LAB APPARAT ENH",
+    "citation": "HSC 481.138 (2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "TRANSFER RECEIPT CHEMICAL LAB APPARATUS",
     "citation": "481.138",
     "statute": "HSC",
@@ -18760,6 +26776,30 @@ export const CJIS_CODES: Offense[] = [
     "citation": "481.138",
     "statute": "HSC",
     "level": "F3"
+  },
+  {
+    "literal": "TRANSFER RECEIPT CHEMICAL PRECURSOR",
+    "citation": "HSC 481.136(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TRANSFER RECEIPT CHEMICAL PRECURSOR ENH",
+    "citation": "HSC 481.136(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TRANSFER VEHICLE-PAPERS BLANK/PART BLANK",
+    "citation": "TRC 520.035 3676",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TRANSFR PROD CONTAINING EPHEDRINE ENH",
+    "citation": "HSC 431.022",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "TRANSNAT REPRESSION FOREIGN GOVT/TERRORIST AGT",
@@ -18810,6 +26850,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "TRANSPORT BEER W/O STATEMENT",
+    "citation": "ABC 107.02",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "TRANSPORT BEER WITHOUT STATEMENT",
     "citation": "107.02",
     "statute": "ABC",
@@ -18840,10 +26886,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "TRANSPORT LIQUOR W/O STATEMENT",
+    "citation": "ABC 107.01",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "TRANSPORT LIQUOR WITHOUT STATEMENT",
     "citation": "107.01",
     "statute": "ABC",
     "level": "M*"
+  },
+  {
+    "literal": "TRANSPORT LOOSE MATERIAL/UNSECURE LOAD",
+    "citation": "TRC 725.021 3629",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "TRANSPORT SPECIAL MOBIL EQUIPMENT ID INFO",
@@ -18888,6 +26946,24 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "TRESPASS AT NORTH CONCHO RIVER DAM",
+    "citation": "ORD 8.05.009",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TRESPASS ON SCHOOL GROUNDS",
+    "citation": "EDC 37.107",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TRESSPASS/HOLDER CONCEAL HANDGUN LICENSE",
+    "citation": "PC 30.06(d)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "TRNSFR/ATT TRNSFR PROPERTY/TITLE/INT =>$300K",
     "citation": "31.23(c)(2)",
     "statute": "PC",
@@ -18902,6 +26978,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 31.23. REAL PROPERTY THEFT. (a) In this section:\n(1) \"Disabled individual\" and \"elderly individual\" have the\nmeanings assigned by Section 22.04.\n(2) \"Nonpossessory interest\" includes an interest that may\nbe conveyed by a quitclaim deed or conditional transfer.\n(3) \"Owner\" includes an owner's estate and known successors\nin interest if the owner is deceased.\n(4) \"Transfer\" has the meaning assigned by Section 12.019,\nProperty Code.\n(b) A person commits an offense if the person:\n(1) brings about or attempts to bring about a transfer or\npurported transfer of real property or title to real property or a\nnonpossessory interest in real property, to any transferee or\nintended transferee:\n(A) without the effective consent of the owner of the\nreal property or the nonpossessory interest in real property; and\n(B) with the intent to deprive the owner of the real\nproperty or the nonpossessory interest in the real property; or\n(2) sells or otherwise transfers or encumbers, or attempts\nto sell or otherwise transfer or encumber, real property or title to\nreal property or a nonpossessory interest in real property to or with\nrespect to a person in exchange for a benefit from any person:\n(A) without the effective consent of the owner of the\nbenefit; and\n(B) with the intent to deprive the owner of the\nbenefit.\n(c) Except as provided by Subsection (e), an offense under\nSubsection (b)\n(1) is:\n\nPENAL CODE"
   },
   {
+    "literal": "TRUANCY",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "TRUE SOURCE OF ELECTION COMMUNICATION",
     "citation": "255.004",
     "statute": "EC",
@@ -18914,6 +26996,42 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "TURNED ACROSS DIVIDING SECTION",
+    "citation": "TRC 545.063 3076",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TURNED LEFT FROM WRONG LANE TO WRONG LANE UTURN",
+    "citation": "TRC 545.101 3011",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TURNED RIGHT FROM WRONG LANE",
+    "citation": "TRC 545.101 3012",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TURNED RIGHT TOO WIDE",
+    "citation": "TRC 545.101 3077",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "TURNED WHEN UNSAFE",
+    "citation": "TRC 545.103 3080",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNATTENDED MOTOR VEHICLE",
+    "citation": "TRC 545.404",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "UNAUT ENFORCE FOREIGN LAW FRGN GOVT/TERROR AGT",
     "citation": "76.046(c)",
     "statute": "PC",
@@ -18921,11 +27039,23 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 76.046. UNAUTHORIZED ENFORCEMENT OF FOREIGN LAW. (a) In\nthis section, \"agent of a foreign government or foreign terrorist\norganization\" has the meaning assigned by Section 76.045.\n(b) A person commits an offense if, as an agent of a foreign\ngovernment or foreign terrorist organization, the person, without the\napproval of this state or the United States:\n(1) prevents another person in this state from violating\nthe laws of a foreign government; or\n(2) detects, investigates, monitors, or surveilles another\nperson in this state for the purpose of preventing the other person\nfrom violating the laws of a foreign government.\n(c) An offense under this section is a felony of the second\ndegree.\nAdded by"
   },
   {
+    "literal": "UNAUTH ABSENCE COMMUNITY CORRECT FACIL",
+    "citation": "PC 38.113(a)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "UNAUTH ABSENCE COMMUNITY CORRECTION FACILITY",
     "citation": "38.113(A)",
     "statute": "PC",
     "level": "FS",
     "statuteText": "Sec. 38.113. UNAUTHORIZED ABSENCE FROM COMMUNITY CORRECTIONS\nFACILITY, COUNTY CORRECTIONAL CENTER, OR ASSIGNMENT SITE. (a) A\nperson commits an offense if the person:\n(1) is sentenced to or is required as a condition of\ncommunity supervision or correctional programming to submit to a\nperiod of detention or treatment in a community corrections facility\nor county correctional center;\n(2) fails to report to or leaves the facility, the center,\nor a community service assignment site as directed by the court,\ncommunity supervision and corrections department supervising the\nperson, or director of the facility or center in which the person is\ndetained or treated, as appropriate; and\n(3) in failing to report or leaving acts without the\napproval of the court, the community supervision and corrections\ndepartment supervising the person, or the director of the facility or\ncenter in which the person is detained or treated.\n(b) An offense under this section is a state jail felony.\nAdded by"
+  },
+  {
+    "literal": "UNAUTH COMMUNICATION OF PRESCRIPT ENH",
+    "citation": "HSC 483.048(b)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "UNAUTH COMMUNICATION OF PRESCRIPTION",
@@ -18994,6 +27124,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "UNAUTH MOTOR NUMBER ON MOTOR VEH",
+    "citation": "TRC 501.151 3670",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "UNAUTH OP RECORD DEVICE THEATER W/2+ PREV CONV",
     "citation": "641.053(c)(2)",
     "statute": "BCC",
@@ -19053,6 +27189,18 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 31.22. UNAUTHORIZED POSSESSION OF CERTAIN COPPER OR BRASS\nMATERIAL. (a) In this section:\n(1) \"Copper or brass material\" has the meaning assigned by\nSection 1956.001(4)(A) or (B), Occupations Code.\n(2) \"Firearm\" has the meaning assigned by Section 46.01.\n(b) A person commits an offense if the person:\n(1) intentionally or knowingly possesses copper or brass\nmaterial; and\n(2) is not a person who is authorized under Subsection (c)\nto possess the copper or brass material.\n(c) Subject to Subsection (d), a person is authorized to\npossess copper or brass material if the person is:\n(1) the owner of the material;\n(2) a public utility or common carrier;\n(3) a telecommunications provider as defined by Section\n51.002, Utilities Code;\n(4) a cable service provider as defined by Section 66.002,\nUtilities Code;\n\nPENAL CODE\n(5) a video service provider as defined by Section 66.002,\nUtilities Code;\n(6) a manufacturing, industrial, commercial, retail, or\nother business that sells the material in the ordinary course of the\nseller's business;\n(7) a carrier-for-hire acting in the course and scope of\nthe carrier's business with a bill of lading or a contract verifying\ntransport information;\n(8) a metal recycling entity registered under Chapter 1956,\nOccupations Code, and acting within the course and scope of the\nentity's business;\n(9) a person acting in the ordinary course of the person's\nbusiness who lawfully acquires possession of the materials during\nconstruction, remodeling, demolition, or salvage of a building or\nother structure in which the materials were installed or contained;\nor\n(10) an agent for a person described by Subdivisions (1)-\n(9) acting within the course and scope of the agent's authority to\nact on behalf of the person.\n(d) Subsection (c) does not apply to a person who knows that\nthe copper or brass material was unlawfully obtained.\n(e) Except as provided by Subsection\n(f), an offense under this\nsection is a state jail felony.\n(f) An offense under this section is a felony of the third\ndegree if it is shown on the trial of the offense that:\n(1) the copper or brass material was unlawfully obtained\nfrom a critical infrastructure facility; or"
   },
   {
+    "literal": "UNAUTH PRACTICE OF LAW",
+    "citation": "PC 38.123(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNAUTH PRACTICE OF LAW W/PREV CONVIC",
+    "citation": "PC 38.123(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "UNAUTH RECORDING <=100 LIVE/<=7 AV",
     "citation": "641.052(b)(3)",
     "statute": "BCC",
@@ -19087,6 +27235,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "4007.202(b)",
     "statute": "GC",
     "level": "F3"
+  },
+  {
+    "literal": "UNAUTH REPRODUCT, SALE, USE OF TEMPORARY TAGS",
+    "citation": "TRC 503.067",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "UNAUTH SALE ALCH RESALE,OPEN,CONSUME PREM",
@@ -19125,11 +27279,23 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "UNAUTH USE OF PERMIT",
+    "citation": "ABC 11.05",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "UNAUTH USE OF VEHICLE",
     "citation": "31.07",
     "statute": "PC",
     "level": "FS",
     "statuteText": "Sec. 31.07. UNAUTHORIZED USE OF A VEHICLE. (a) A person\ncommits an offense if he intentionally or knowingly operates\nanother's boat, airplane, or motor-propelled vehicle without the\neffective consent of the owner.\n(b) An offense under this section is a state jail felony."
+  },
+  {
+    "literal": "UNAUTH USE OF VEHICLE/RECOVERED",
+    "citation": "31.07A",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "UNAUTH USE/DISCLOSURE CCH INFO",
@@ -19174,6 +27340,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "UNAUTHORIZED EMPLOYMENT",
+    "citation": "OC 1702.386",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNAUTHORIZED GLASS COATING MATERIAL",
+    "citation": "TRC 547.101 3334",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "UNAUTHORIZED INSURANCE BUSINESS",
     "citation": "101.106(b)",
     "statute": "IC",
@@ -19184,6 +27362,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "7.108",
     "statute": "EDC",
     "level": "MB"
+  },
+  {
+    "literal": "UNAUTHORIZED POSSESSION OF CATALYTIC CONVERTER",
+    "citation": "PC 31.21 (D)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "UNAUTHORIZED PRACTICE OF LAW",
@@ -19206,6 +27390,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "UNAUTHORIZED SIREN OR BELL OR WHISTLE",
+    "citation": "TRC 547.501 3226",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNAUTHORIZED TRAF DEV-LOCAL AUTHORITY",
+    "citation": "TRC 544.002 3362",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "UNAUTHORIZED TRANS OR POSS OF DRIVER ED CERT",
     "citation": "1001.555(d)",
     "statute": "EDC",
@@ -19216,6 +27412,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "11.05",
     "statute": "ABC",
     "level": "M*"
+  },
+  {
+    "literal": "UNAUTHORIZED USE OF SIREN, BELL, WHISTLE",
+    "citation": "TRC 547.501 3158",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "UNCLEAN CAMP SITE",
@@ -19278,6 +27480,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "276.01",
     "statute": "EC",
     "level": "FS"
+  },
+  {
+    "literal": "UNL CARRY HANDGUN LIC HOLDER",
+    "citation": "PC 46.035(g)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNL CARRY HANDGUN LIC HOLDER ALCH PREM",
+    "citation": "PC 46.035(g)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "UNL CARRY HANDGUN LIC HOLDER IAT WFZ 46.035",
@@ -19350,6 +27564,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "F2"
   },
   {
+    "literal": "UNL CARRY WEAPON/WEAPONS FREE ZONE",
+    "citation": "PC 46.11(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "UNL CARRYING WEAPON",
     "citation": "46.02(b)",
     "statute": "PC",
@@ -19361,6 +27581,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "46.11(a)",
     "statute": "PC",
     "level": "FS"
+  },
+  {
+    "literal": "UNL CARRYING WEAPON ON ALCOHOL PREM",
+    "citation": "PC 46.02(c)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "UNL CARRYING WEAPON PROHIBITED PLACES",
@@ -19398,6 +27624,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "46.11(a)",
     "statute": "PC",
     "level": "F2"
+  },
+  {
+    "literal": "UNL DEL MAN W/INT SIMULATED CS",
+    "citation": "HSC 482.002(a)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "UNL DEL OF VOTER CERTIFICATE",
@@ -19447,6 +27679,18 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 16.06. UNLAWFUL INSTALLATION OF TRACKING DEVICE. (a) In\nthis section:\n(1) \"Electronic or mechanical tracking device\" means a\ndevice capable of emitting an electronic frequency or other signal\nthat may be used by a person to identify, monitor, or record the\nlocation of another person or object.\n(2) \"Motor vehicle\" has the meaning assigned by Section\n501.002, Transportation Code.\n(b) A person commits an offense if the person knowingly\ninstalls an electronic or mechanical tracking device on a motor\nvehicle owned or leased by another person.\n(c) An offense under this section is a Class A misdemeanor.\n(d) It is an affirmative defense to prosecution under this\nsection that the person:\n(1) obtained the effective consent of the owner or lessee\nof the motor vehicle before the electronic or mechanical tracking\ndevice was installed;\n(2) assisted another whom the person reasonably believed\nto be a peace officer authorized to install the device in the course\n\nPENAL CODE\nof a criminal investigation or pursuant to an order of a court to\ngather information for a law enforcement agency; or\n(3) was a private investigator licensed under Chapter 1702,\nOccupations Code, who installed the device:\n(A) with written consent:\n(i) to install the device given by the owner or\nlessee of the motor vehicle; and\n(ii) to enter private residential property, if that\nentry was necessary to install the device, given by the owner or\nlessee of the property; or\n(B) pursuant to an order of or other authorization from\na court to gather information.\n(e) This section does not apply to a peace officer who\ninstalled the device in the course of a criminal investigation or\npursuant to an order of a court to gather information for a law\nenforcement agency.\nAdded by"
+  },
+  {
+    "literal": "UNL INTER/USE/DISC WIRE/ORAL ELEC COMM  FEL 2",
+    "citation": "PC 16.02",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNL INTER/USE/DISC WIRE/ORAL ELEC COMM  SJF",
+    "citation": "PC 16.02(d,g)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "UNL INTER/USE/DISC WIRE/ORAL ELEC COMMUNICATE",
@@ -19512,11 +27756,23 @@ export const CJIS_CODES: Offense[] = [
     "level": "F2"
   },
   {
+    "literal": "UNL POSS FIREARM BY FELON WEAP FREE ZNE",
+    "citation": "PC 46.11(6)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "UNL POSS FIREARM FAM/HOUSE/COURT ORDER/GANG",
     "citation": "46.04(e)",
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 46.04. UNLAWFUL POSSESSION OF FIREARM. (a) A person who\nhas been convicted of a felony commits an offense if he possesses a\nfirearm:\n(1) after conviction and before the fifth anniversary of\nthe person's release from confinement following conviction of the\nfelony or the person's release from supervision under community\nsupervision, parole, or mandatory supervision, whichever date is\nlater; or\n\nPENAL CODE\n(2) after the period described by Subdivision (1), at any\nlocation other than the premises at which the person lives.\n(a-1) A person who is a member of a criminal street gang, as\ndefined by Section 71.01, commits an offense if the person\nintentionally, knowingly, or recklessly carries on or about his or\nher person a handgun in a motor vehicle or watercraft.\n(b) A person who has been convicted of an offense under Section\n22.01, punishable as a Class A misdemeanor and involving a member of\nthe person's family or household, commits an offense if the person\npossesses a firearm before the fifth anniversary of the later of:\n(1) the date of the person's release from confinement\nfollowing conviction of the misdemeanor; or\n(2) the date of the person's release from community\nsupervision following conviction of the misdemeanor.\n(c) A person, other than a peace officer, as defined by Section\n1.07, actively engaged in employment as a sworn, full-time paid\nemployee of a state agency or political subdivision, who is subject\nto an order issued under Section 6.504 or Chapter 85, Family Code,\nunder Article 17.292 or Subchapter A, Chapter 7B, Code of Criminal\nProcedure, or by another jurisdiction as provided by Chapter 88,\nFamily Code, commits an offense if the person possesses a firearm\nafter receiving notice of the order and before expiration of the\norder.\n(d) In this section, \"family,\" \"household,\" and \"member of a\nhousehold\" have the meanings assigned by Chapter 71, Family Code.\n(e) An offense under Subsection"
+  },
+  {
+    "literal": "UNL POSS FIREARM INVOLV FAMILY/HOUSEHLD",
+    "citation": "PC 46.04(b,c)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "UNL POSS FRARM FAM/HSHLD/CRT ORD IAT WFZ 46.04",
@@ -19556,6 +27812,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "UNL RESTRAINT OF PUBLIC SERVANT",
+    "citation": "PC 20.02(c)(2)(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNL RESTRAINT WHILE IN CUSTODY",
+    "citation": "PC 20.02(c)(2)(C)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "UNL RESTRAINT WHILE IN CUSTODY/COMMITTED FACIL",
     "citation": "20.02(c)(2)(C)",
     "statute": "PC",
@@ -19567,6 +27835,24 @@ export const CJIS_CODES: Offense[] = [
     "citation": "61.007(b)",
     "statute": "EC",
     "level": "FS"
+  },
+  {
+    "literal": "UNL TRANSF CERTAIN WEAP/WEAP FREE ZONE",
+    "citation": "PC 46.11(8)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNL TRANSF CERTAIN WEAP<18 WEAP FREE ZNE",
+    "citation": "PC 46.11(7)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNL TRANSF HANDGUN UNDER 18YOA",
+    "citation": "PC 46.06(d)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "UNL TRANSF HANDGUN UNDER 18YOA IAT WFZ 46.06",
@@ -19606,6 +27892,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "UNL USE OF  FUNDS FOR HUMAN SERVICES",
+    "citation": "HRC 12.002",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "UNL USE OF CRIMINAL INSTRUMENT",
     "citation": "16.01(a)(1)",
     "statute": "PC",
@@ -19641,6 +27933,36 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 16.01. UNLAWFUL USE OF CRIMINAL INSTRUMENT OR MECHANICAL\nSECURITY DEVICE.\n(a) A person commits an offense if:\n(1) the person possesses a criminal instrument or\nmechanical security device with the intent to use the instrument or\ndevice in the commission of an offense; or\n(2) with knowledge of its character and with the intent to\nuse a criminal instrument or mechanical security device or aid or\npermit another to use the instrument or device in the commission of\nan offense, the person manufactures, adapts, sells, installs, or sets\nup the instrument or device."
   },
   {
+    "literal": "UNL USE OF CRIMINAL INSTRUMENT  FEL 2",
+    "citation": "PC 16.01(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNL USE OF CRIMINAL INSTRUMENT  FEL 3",
+    "citation": "PC 16.01(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNL USE OF CRIMINAL INSTRUMENT CL A",
+    "citation": "PC 16.01(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNL USE OF CRIMINAL INSTRUMENT CL B",
+    "citation": "PC 16.01(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNL USE OF CRIMINAL INSTRUMENT SJF",
+    "citation": "PC 16.01(5)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "UNL USE OF FUNDS FOR HUMAN SERVICES",
     "citation": "12.002",
     "statute": "HRC",
@@ -19657,6 +27979,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "18.067",
     "statute": "EC",
     "level": "MA"
+  },
+  {
+    "literal": "UNL USE PEN REGISTER/TRAP AND TRACE DEV",
+    "citation": "PC 16.03(a)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "UNL USE PEN REGISTER/TRAP AND TRACE DEVICE",
@@ -19796,6 +28124,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "UNLAWFUL CARRY WEAPON / CONCEAL LIC HLDR",
+    "citation": "PC 46.055",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "UNLAWFUL CONDUCT MAIL RECEPTACLE KEY OR LOCK",
     "citation": "32.56(c)",
     "statute": "PC",
@@ -19871,10 +28205,40 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "UNLAWFUL DISCLOSURE OF RESIDENCE ADDRESS/PHONE NUMBER",
+    "citation": "PC 42.074",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNLAWFUL DISCLOSURE/PROMOTION OF INTIMATE VISUAL MAT",
+    "citation": "PC 21.16",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "UNLAWFUL DIVERSION OF FUNDS",
     "citation": "912.803",
     "statute": "IC",
     "level": "F*"
+  },
+  {
+    "literal": "UNLAWFUL ELEC TRANSMISSION OF SEXUALLY EXPLICIT VISUAL MAT",
+    "citation": "PC 21.19",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNLAWFUL OPER OF GOLF CART ON PUBLIC STR",
+    "citation": "ORD 10.10.004",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNLAWFUL POSSESSION FIREARM - GANG MEMBER",
+    "citation": "46.04 (A-1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "UNLAWFUL PREVENT CTY CHAIR SUPERVISE ELECTION",
@@ -19894,6 +28258,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "MA",
     "statuteText": "Sec. 20.02. UNLAWFUL RESTRAINT. (a) A person commits an\noffense if he intentionally or knowingly restrains another person.\n(b) It is an affirmative defense to prosecution under this\nsection that:\n(1) the person restrained was a child younger than 14 years\nof age;\n(2) the actor was a relative of the child; and\n(3) the actor's sole intent was to assume lawful control of\nthe child.\n(c) An offense under this section is a Class A misdemeanor,\nexcept that the offense is:"
+  },
+  {
+    "literal": "UNLAWFUL RESTRAINT <17 YRS OF AGE",
+    "citation": "PC 20.02(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "UNLAWFUL RESTRAINT LESS THAN 17 YRS OF AGE",
@@ -20114,6 +28484,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "UNMUTILATED TAX STAMP POSS/BUY LIQUOR",
+    "citation": "ABC 206.05",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNNECESSARY USE OF HORN",
+    "citation": "TRC 547.501 3225",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "UNREG CUSTODY TRNSFR ADOPTED CHILD SEX OFFENSE",
     "citation": "25.081(c)",
     "statute": "PC",
@@ -20128,6 +28510,30 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 25.081. UNREGULATED CUSTODY TRANSFER OF ADOPTED CHILD.\n(a) In this section:\n(1) \"Adopted child\" means a person younger than 18 years of\nage who was legally adopted through a governmental entity or through\nprivate means, including a person who is in foster care or from a\nforeign country at the time of the adoption.\n(2) \"Unregulated custody transfer\" means the transfer of\nthe permanent physical custody of an adopted child by the parent,\nmanaging conservator, or guardian of the child without receiving\napproval of the transfer by a court as required by Section 162.026,\nFamily Code.\n(b) Except as otherwise provided by this section, a person\ncommits an offense if the person knowingly:\n(1) conducts an unregulated custody transfer of an adopted\nchild; or\n(2) facilitates or participates in the unregulated custody\ntransfer of an adopted child, including by transferring, recruiting,\nharboring, transporting, providing, soliciting, or obtaining an\nadopted child for that purpose.\n\nPENAL CODE\n(c) An offense under this section is a felony of the third\ndegree, except that the offense is a felony of the second degree if\nthe actor commits the offense with intent to commit an offense under\nSection 20A.02, 43.021, 43.05, 43.25, 43.251, or 43.26."
   },
   {
+    "literal": "UNRES CHILD UNDER 4 YRS OF AGE OR 36 IN",
+    "citation": "TRC 545.412 3031",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNRESTRAINED CHILD UNDER 8 OR 48 INCHES",
+    "citation": "TRC 545.412 3031A",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNRESTRAINED CHILD YOUNGER THAN 2",
+    "citation": "TRC 545.412 3030",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNSAFE AIR CONDITION EQUIPMENT",
+    "citation": "TRC 547.610 3239",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "UNSAFE BACKING",
     "citation": "545.415",
     "statute": "TC",
@@ -20138,6 +28544,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "547.004(a)(1)",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "UNSAFE MOVEMENT",
+    "citation": "TRC 545.060",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "UNSAFE MOVEMENT (MOVING LANE TO LANE UNSAFELY)",
@@ -20162,6 +28574,24 @@ export const CJIS_CODES: Offense[] = [
     "citation": "545.103",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "UNSANITARY CONDITION ON PROP - GARBAGE",
+    "citation": "ORD 7.02.065(4)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNSANITARY CONDITION ON PROP - TRASH",
+    "citation": "ORD 7.02.065(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "UNSANITARY CONDITION ON PROP - WATER",
+    "citation": "ORD 7.02.065(1)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "UNSANITARY CONDITIONS ON PROPERTY - GARBAGE/RECEPTACLE",
@@ -20199,6 +28629,12 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "MB",
     "statuteText": "Sec. 38.18. USE OF COLLISION REPORT INFORMATION AND OTHER\nINFORMATION FOR PECUNIARY GAIN. (a) This section applies to:\n(1) information described by Section 550.065(a),\nTransportation Code;\n(2) information reported under Chapter 772, Health and\nSafety Code, other than information that is confidential under that\nchapter; and\n(3) information contained in a dispatch log, a towing\nrecord, or a record of a 9-1-1 service provider, other than\ninformation that is confidential under Chapter 772, Health and Safety\nCode.\n(b) A person commits an offense if:\n(1) the person obtains information described by Subsection\n(a) from the Department of Public Safety of the State of Texas or\nother governmental entity; and\n(2) the information is subsequently used for the direct\nsolicitation of business or employment for pecuniary gain by:\n(A) the person;\n(B) an agent or employee of the person; or\n(C) the person on whose behalf the information was\nrequested.\n(c) A person who employs or engages another to obtain\ninformation described by Subsection (a) from the Department of Public\nSafety or other governmental entity commits an offense if the person\nsubsequently uses the information for direct solicitation of business\nor employment for pecuniary gain.\n(d) An offense under this section is a Class B misdemeanor.\nAdded by"
+  },
+  {
+    "literal": "USE ACCIDENT REPORT INFO PECUNIARY GAIN",
+    "citation": "PC 38.18",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "USE ANOTHERS PASS FOR TRANSPORTATION",
@@ -20245,10 +28681,28 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "USE OF CERTAIN VIDEO EQUIPMENT AND TELEVISION[0]",
+    "citation": "547.611",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "USE OF CHILD FOR SALES/SOLICITATION",
     "citation": "51.0145",
     "statute": "LC",
     "level": "MA"
+  },
+  {
+    "literal": "USE OF FEDERAL STANDARD",
+    "citation": "TRC 547.3215",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "USE OF ILLEGALLY OBTAINED DL/ID",
+    "citation": "TRC 521.455 3037",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "USE OF INFORMATION/RECORDS CONFIDENTIAL",
@@ -20263,6 +28717,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "USE OF POSSESSION OF INGESTION DEVICE",
+    "citation": "ORD 8.09.004",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "USE OF PROTECTED TERM IN NAME OF INSTITUTION",
     "citation": "61.313(i)",
     "statute": "EDC",
@@ -20275,10 +28735,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "USE OF WIRELESS COMMUNICATION DEVICE",
+    "citation": "ORD 10.03.123",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "USE OF WIRELESS COMMUNICATION DEVICE (CAN ADD ACC. FEE)",
     "citation": "545.4251",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "USE OF WIRELESS COMMUNICATIONS DEVICE",
+    "citation": "545.425",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "USE RACKETEERING/UNLAW DEBT COLLECTION PROCEED",
@@ -20286,6 +28758,30 @@ export const CJIS_CODES: Offense[] = [
     "statute": "PC",
     "level": "F2",
     "statuteText": "Sec. 72.02. USE OF PROCEEDS DERIVED FROM RACKETEERING OR\nUNLAWFUL DEBT COLLECTION. (a) A person commits an offense if the\nperson intentionally uses or invests, whether directly or indirectly,\nany part of any proceeds knowingly derived, directly or indirectly,\nfrom a pattern of racketeering or through the collection of an\nunlawful debt, or the proceeds derived from the investment or use of\nthose proceeds, in acquiring title to, or any right, interest, or\nequity in, real property or in the establishment or operation of any\nenterprise.\n(b) An offense under this section is a felony of the second\ndegree."
+  },
+  {
+    "literal": "USE REVEAL DRUG TRADE SECRETS",
+    "citation": "HSC 483.051(a)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "USE REVEAL DRUG TRADE SECRETS ENH",
+    "citation": "HSC 483.051(a)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "USE SCHOOL BUS SIGNAL-WRONG PURPOSE",
+    "citation": "TRC 547.701 3595",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "USE WIRELESS COMM DEV IN SCHOOL ZONE",
+    "citation": "TRC 545.425(B) 3901",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "USE WIRELESS DEV MESSAGE DRIVING CAUSE SBI/DTH",
@@ -20313,6 +28809,18 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 43.24. SALE, DISTRIBUTION, OR DISPLAY OF HARMFUL MATERIAL\nTO MINOR. (a) For purposes of this section:\n(1) \"Minor\" means an individual younger than 18 years.\n(2) \"Harmful material\" means material whose dominant theme\ntaken as a whole:\n(A) appeals to the prurient interest of a minor, in\nsex, nudity, or excretion;\n(B) is patently offensive to prevailing standards in\nthe adult community as a whole with respect to what is suitable for\nminors; and\n(C) is utterly without redeeming social value for\nminors.\n(b) A person commits an offense if, knowing that the material\nis harmful:\n(1) and knowing the person is a minor, he sells,\ndistributes, exhibits, or possesses for sale, distribution, or\nexhibition to a minor harmful material;\n(2) he displays harmful material and is reckless about\nwhether a minor is present who will be offended or alarmed by the\ndisplay; or\n(3) he hires, employs, or uses a minor to do or accomplish\nor assist in doing or accomplishing any of the acts prohibited in\n\nPENAL CODE\nSubsection (b)(1) or (b)(2).\n(c) Repealed by"
   },
   {
+    "literal": "USES MINOR SELL/DISTR/DISPLY HARMF MATER",
+    "citation": "PC 43.24(d)F3",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "USING STREET/ALLEY SERVICE AUTO",
+    "citation": "ORD 8.05.010",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "VANDALIZE CAVE",
     "citation": "201.041(b)",
     "statute": "NRC",
@@ -20325,10 +28833,28 @@ export const CJIS_CODES: Offense[] = [
     "level": "F3"
   },
   {
+    "literal": "VEH HAU EXPLOS FAIL REDUCE SPD RR CROSS",
+    "citation": "TRC 545.254 3134",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "VEH HAU EXPLOS FAIL STOP RR CROSSING",
+    "citation": "TRC 545.254 3135",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "VEH INSPECTION RPT/INSURANCE DOC VIOLATION",
     "citation": "548.603(d)",
     "statute": "TRC",
     "level": "MB"
+  },
+  {
+    "literal": "VEH W/O REQUIRED EQUIP/UNSAFE CONDITION",
+    "citation": "TRC 547.004 3627",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "VEHICLE - ATTACHING/CLINGING TO",
@@ -20337,10 +28863,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "VEHICLE - PARKED IN RESID AREA W/ PROHIB",
+    "citation": "ORD 10.04.062",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "VEHICLE - PARKED ON UNIMPROVED SURFACE",
     "citation": "6.06.005",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "VEHICLE - TOO HIGH/LOW MIN CLEARANCE VIO",
+    "citation": "TRC 727.001",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "VEHICLE COMMERCIAL VEHICLE 3 1/2+ TONS W/PROHIBITED",
@@ -20425,6 +28963,36 @@ export const CJIS_CODES: Offense[] = [
     "citation": "10.04.003(a)(1)(D)",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "VIEW OBSTRUCTED - SHRUBS, PLANTS",
+    "citation": "ORD 8.06.002",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "VIOL  PROTECT ORD ISSUE BASED ON SEX OFF",
+    "citation": "PC 38.112",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "VIOL BOND/PROT ORDER 2+ TIMES W/I 12 MO",
+    "citation": "PC 25.072(E)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "VIOL BOND/PROT ORDER ASSAULT/STALK IAT",
+    "citation": "PC 25.07(G)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "VIOL BOND/PROTECT ORDER 2+ PREV CONV IAT",
+    "citation": "PC 25.07(g)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "VIOL BOND/PROTECTIVE ORDER",
@@ -20536,6 +29104,18 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "VIOL DRUG PROVISION NOT SPECIFIED",
+    "citation": "HSC 483.052(a)(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "VIOL DRUG PROVISION NOT SPECIFIED ENH",
+    "citation": "HSC 483.052(a)(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "VIOL HAZARDOUS SUBSTANCES REGULATION",
     "citation": "501.035(b)",
     "statute": "HSC",
@@ -20558,6 +29138,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "520.061(b)",
     "statute": "TRC",
     "level": "MA"
+  },
+  {
+    "literal": "VIOL OF CIVIL RIGHTS OF PERSON IN CUSTDY",
+    "citation": "PC 39.04(b)(2)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "VIOL OF CLEAN AIR ACT",
@@ -20644,6 +29230,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "VIOL PROT ORDER BIAS/PRE W/2+ PREV CONV",
+    "citation": "PC 25.071(1)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "VIOL PROTECT ORDER BIAS/PREJUD W/2+ PREV CONV",
     "citation": "25.071",
     "statute": "PC",
@@ -20668,6 +29260,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "171.003(b)",
     "statute": "LGC",
     "level": "MA"
+  },
+  {
+    "literal": "VIOL RABIES VACCIN REQUIR W/PREV CON",
+    "citation": "HSC 826.022(c)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "VIOL RABIES VACCINATION REQUIREMENT W/PREV CON",
@@ -20725,6 +29323,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 25.07. VIOLATION OF CERTAIN COURT ORDERS OR CONDITIONS OF\nBOND IN A FAMILY VIOLENCE, CHILD ABUSE OR NEGLECT, SEXUAL ASSAULT OR\nABUSE, INDECENT ASSAULT, STALKING, OR TRAFFICKING CASE. (a) A\nperson commits an offense if, in violation of a condition of bond set\nin a family violence, sexual assault or abuse, indecent assault,\nstalking, or trafficking case and related to the safety of a victim\nor the safety of the community, an order issued under Subchapter A,\nChapter 7B, Code of Criminal Procedure, an order issued under Article\n17.292, Code of Criminal Procedure, an order issued under Section\n6.504, Family Code, Chapter 83, Family Code, if the temporary ex\nparte order has been served on the person, Chapter 85, Family Code,\nor Subchapter F, Chapter 261, Family Code, or an order issued by\nanother jurisdiction as provided by Chapter 88, Family Code, the\nperson knowingly or intentionally:\n(1) commits family violence or an act in furtherance of an\noffense under Section 20A.02, 22.011, 22.012, 22.021, or 42.072;\n(2) communicates:\n(A) directly with a protected individual or a member of\nthe family or household in a threatening or harassing manner;\n(B) a threat through any person to a protected\nindividual or a member of the family or household; or\n(C) in any manner with the protected individual or a\nmember of the family or household except through the person's\nattorney or a person appointed by the court, if the violation is of\nan order described by this subsection and the order prohibits any\ncommunication with a protected individual or a member of the family\nor household;\n(3) goes to or near any of the following places as\nspecifically described in the order or condition of bond:\n(A) the residence or place of employment or business of\na protected individual or a member of the family or household; or\n(B) any child care facility, residence, or school where\na child protected by the order or condition of bond normally resides\n\nPENAL CODE\nor attends;\n(4) possesses a firearm;\n(5) harms, threatens, or interferes with the care, custody,\nor control of a pet, companion animal, or assistance animal that is\npossessed by a person protected by the order or condition of bond;\n(6) removes, attempts to remove, or otherwise tampers with\nthe normal functioning of a global positioning monitoring system; or\n(7) tracks or monitors personal property or a motor vehicle\nin the possession of a protected individual or of a member of the\nfamily or household of a protected individual, without the\nindividual's effective consent, including by:\n(A) using a tracking application on a personal\nelectronic device in the possession of the protected individual or\nthe family or household member or using a tracking device; or\n(B) physically following the protected individual or\nfamily or household member or causing another to physically follow\nthe individual or member.\n(a-1) For purposes of Subsection (a)(5), possession of a pet,\ncompanion animal, or assistance animal by a person means:\n(1) actual care, custody, control, or management of a pet,\ncompanion animal, or assistance animal by the person; or\n(2) constructive possession of a pet, companion animal, or\nassistance animal owned by the person or for which the person has\nbeen the primary caregiver.\n(b) For the purposes of this section:\n(1) \"Family violence,\" \" family,\" \"household,\" and \"member\nof a household\" have the meanings assigned by Chapter 71, Family\nCode.\n(2) \"Firearm\" has the meaning assigned by Chapter 46.\n(2-a) \"Global positioning monitoring system\" has the\nmeaning assigned by Article 17.49, Code of Criminal Procedure.\n(3) \"Assistance animal\" has the meaning assigned by Section\n121.002, Human Resources Code.\n(4) \"Sexual abuse\" means any act as described by Section\n21.02 or 21.11.\n(5) \"Sexual assault\" means any act as described by Section\n22.011 or 22.021.\n(6) \"Stalking\" means any conduct that constitutes an\noffense under Section 42.072.\n(7) \"Trafficking\" means any conduct that constitutes an\n\nPENAL CODE\noffense under Section 20A.02.\n(8) \"Indecent assault\" means any conduct that constitutes\nan offense under Section 22.012.\n(c) If conduct constituting an offense under this section also\nconstitutes an offense under another section of this code, the actor\nmay be prosecuted under either section or under both sections.\n(d) Reconciliatory actions or agreements made by persons\naffected by an order do not affect the validity of the order or the\nduty of a peace officer to enforce this section.\n(e) A peace officer investigating conduct that may constitute\nan offense under this section for a violation of an order may not\narrest a person protected by that order for a violation of that\norder.\n(f) It is not a defense to prosecution under this section that\ncertain information has been excluded, as provided by Section 85.007,\nFamily Code, or Article 17.292, Code of Criminal Procedure, from an\norder to which this section applies.\n(g) An offense under this section is a Class A misdemeanor,\nexcept the offense is:\n(1) subject to Subdivision (2), a state jail felony if:\n(A) it is shown at the trial of the offense that the\ndefendant violated an order issued under Subchapter A, Chapter 7B,\nCode of Criminal Procedure, following the defendant's conviction of\nor placement on deferred adjudication community supervision for an\noffense, if the order was issued with respect to a victim of that\noffense; or\n(B) the defendant violates an order or a condition of\nbond in the manner described by Subsection"
   },
   {
+    "literal": "VIOLATE 50' RULE",
+    "citation": "TPW 31.106",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "VIOLATE AN ESTABLISHED REQ FOR LAND USE REGUL",
     "citation": "232.005(b)",
     "statute": "LGC",
@@ -20735,6 +29339,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "246.116",
     "statute": "HSC",
     "level": "MA"
+  },
+  {
+    "literal": "VIOLATE DL RESTRICTION",
+    "citation": "TRC 521.253 3106",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "VIOLATE DL RESTRICTION ON OCC LICENSE",
+    "citation": "TRC 521.253 3285",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "VIOLATE EXEMPTION FOR CONCRETE PLANT CONSTRUCT",
@@ -20749,16 +29365,34 @@ export const CJIS_CODES: Offense[] = [
     "level": "MA"
   },
   {
+    "literal": "VIOLATE OPERATING HOURS - MINOR UNDER 18",
+    "citation": "TRC 545.424 3202",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "VIOLATE PROHIBITED DISCRIMINATION ACTS",
     "citation": "106.003(b)",
     "statute": "CPR",
     "level": "M*"
   },
   {
+    "literal": "VIOLATE PROMISE TO APPEAR",
+    "citation": "TRC 543.009 3333",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "VIOLATE RULES/REGULATIONS OF LITTER",
     "citation": "365.013",
     "statute": "HSC",
     "level": "MA"
+  },
+  {
+    "literal": "VIOLATED OUT-OF-SERVICE ORDER",
+    "citation": "TRC 522.101 3348",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "VIOLATION MINES/MINING PERMIT AND ORDERS",
@@ -20791,6 +29425,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "VIOLATION OF COURT ORDER ENJOINING ORG",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "VIOLATION OF FREE PASS LAW",
     "citation": "4005a",
     "statute": "VCS",
@@ -20815,10 +29455,22 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "VIOLATION OF LANYARD CUTOFF SWITCH",
+    "citation": "TPW 31.106(2A)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "VIOLATION OF MUTUAL ASSESSMENT PROVISIONS",
     "citation": "887.705(b)",
     "statute": "IC",
     "level": "M*"
+  },
+  {
+    "literal": "VIOLATION OF OCCUPATIONAL DRIVERS LICENSE",
+    "citation": "TRC 521.253 (B)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "VIOLATION OF PAROLE WARRANT",
@@ -20837,6 +29489,18 @@ export const CJIS_CODES: Offense[] = [
     "citation": "4102.206(b)",
     "statute": "IC",
     "level": "MB"
+  },
+  {
+    "literal": "VIOLATION OF RESTRAINING ORDER",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "VIOLATION OF RESTRAINING ORDER INFO ONLY",
+    "citation": "",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "VIOLATION TEXAS MENTAL HEALTH CODE",
@@ -20868,6 +29532,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "302.504",
     "statute": "OC",
     "level": "MB"
+  },
+  {
+    "literal": "VOLATILE CHEMICAL ACT OFFENSE",
+    "citation": "TRC 521.342(A)(4) 3244",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "VOLUNTARY ADOPTION REGISTRIES DISCLOSES RECORD",
@@ -20913,6 +29583,12 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 21.17. VOYEURISM. (a) A person commits an offense if the\nperson, with the intent to arouse or gratify the sexual desire of the\nactor, observes, including remotely through the use of electronic\nmeans, another person without the other person's consent while the\nother person is in a dwelling or structure in which the other person\nhas a reasonable expectation of privacy.\n(b) Except as provided by Subsection"
   },
   {
+    "literal": "VOYEURISM: 2 OR MORE CONVICTIONS",
+    "citation": "PC 21.17(C)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "VOYEURISM: 2+ CONV 18 YOA SCHOOL PREM IAT",
     "citation": "21.17(c)",
     "statute": "PC",
@@ -20920,11 +29596,29 @@ export const CJIS_CODES: Offense[] = [
     "statuteText": "Sec. 21.17. VOYEURISM. (a) A person commits an offense if the\nperson, with the intent to arouse or gratify the sexual desire of the\nactor, observes, including remotely through the use of electronic\nmeans, another person without the other person's consent while the\nother person is in a dwelling or structure in which the other person\nhas a reasonable expectation of privacy.\n(b) Except as provided by Subsection\n(c) or"
   },
   {
+    "literal": "VOYEURISM: VICTIM UNDER 14 YOA",
+    "citation": "PC 21.17(D)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "VOYEURISM: VICTIM UNDER 18 YOA W/PREV CONV IAT",
     "citation": "31.17(d)",
     "statute": "PC",
     "level": "F3",
     "statuteText": "Sec. 31.17. UNAUTHORIZED ACQUISITION OR TRANSFER OF CERTAIN\nFINANCIAL INFORMATION. (a) In this section:\n(1) \"Check\" has the meaning assigned by Section 3.104,\nBusiness & Commerce Code.\n(2) \"Credit card\" and \"debit card\" have the meanings\nassigned by Section 32.31.\n(3) \"Financial sight order or payment card information\"\nmeans financial information that is:\n(A) contained on either side of a check or similar\nsight order, check card, debit card, or credit card; or\n(B) encoded on the magnetic strip or stripe of a check\ncard, debit card, or credit card.\n(b) A person commits an offense if the person, knowing that the\nperson is not entitled to obtain or possess that financial\ninformation:\n(1) obtains the financial sight order or payment card\ninformation of another by use of an electronic, photographic, visual\nimaging, recording, or other device capable of accessing, reading,\nrecording, capturing, copying, imaging, scanning, reproducing, or\nstoring in any manner the financial sight order or payment card\ninformation; or\n(2) transfers to a third party information obtained as\ndescribed by Subdivision (1).\n(c) An offense under Subsection (b)(1) is a Class B\nmisdemeanor. An offense under Subsection (b)(2) is a Class A\nmisdemeanor.\n(d) If conduct that constitutes an offense under this section\nalso constitutes an offense under any other law, the actor may be\nprosecuted under this section or the other law.\nAdded by"
+  },
+  {
+    "literal": "WALK ON ROADWAY W/ SIDEWALK PROVIDED",
+    "citation": "TRC 552.006 3529",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WALKED ON HWY WITH TRAFFIC-NO SIDEWALK",
+    "citation": "TRC 552.006 3528",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "WAREHOUSEMAN DELIVERY OF GOODS W/O RECEIPT",
@@ -20961,6 +29655,30 @@ export const CJIS_CODES: Offense[] = [
     "citation": "N/A",
     "statute": "N/A",
     "level": "MC"
+  },
+  {
+    "literal": "WARNING DEV NOT INSTALLED/DEFECTIVE",
+    "citation": "TRC 547.502 3235",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WARNING DEVS NOT DISPLAYED",
+    "citation": "TRC 547.503 3159",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WARRANT ARREST OUTSIDE JURISDICTION",
+    "citation": "",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WASHING VEHICLES  BEN FICKLIN LOW WATER",
+    "citation": "ORD 8.01.021",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "WASTING WATER FROM ARTESIAN WELL",
@@ -21095,6 +29813,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "M*"
   },
   {
+    "literal": "WATER SKIS, AQUAPLANE VIOLATION",
+    "citation": "TPW 31.103",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "WATER VESSEL ACCDNT DEATH/SBI FAIL ASSIST/INFO",
     "citation": "31.127(d)",
     "statute": "PWC",
@@ -21113,6 +29837,90 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "WATER-ALLOW INTO STR WATER DEVICE",
+    "citation": "ORD 8.01.009",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WATER-ALLOW INTO STR WATER DEVICE  (2ND)",
+    "citation": "ORD 8.01.009(2ND)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WATER-ALLOW INTO STR WATER DEVICE (3RD+)",
+    "citation": "ORD 8.01.009(3RD)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WATER-ALLOW TO RUN INTO STR>150' (3RD+)",
+    "citation": "ORD 11.05.002(6)(A)(3RD)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WATER-ALLOWING TO RUN INTO STR>150 -2ND",
+    "citation": "ORD 11.05.002(6)(A)(2ND)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WATER-ALLOWING TO RUN INTO STR>150'",
+    "citation": "ORD 11.05.002(6)(A)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WATER-DROUGHT LEVEL 1 & 2 WINTER (2ND)",
+    "citation": "ORD 11.05.003(2ND)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WATER-DROUGHT LEVEL 1 & 2 WINTER (3RD+)",
+    "citation": "ORD 11.05.003(3RD)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WATER-DROUGHT LEVEL 1 & 2 WINTER RESTRIC",
+    "citation": "ORD 11.05.003",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WATER-FAIL TO REPAIR LEAK",
+    "citation": "ORD 11.05.002(6)(B)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WATER-FAIL TO REPAIR LEAK (2ND)",
+    "citation": "ORD 11.05.002(6)(B)(2ND)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WATER-FAIL TO REPAIR LEAK (3RD+)",
+    "citation": "ORD 11.05.002(6)(B)(3RD)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WATER-WASHING VEHICLE PROHIBITED (2ND)",
+    "citation": "ORD 11.09.003(F)(2)(C)2",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WATER-WASHING VEHICLE PROHIBITED (3RD +)",
+    "citation": "ORD 11.09.003(F)(2)(C)3",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "WATER-WASHING VEHICLE WHEN PROHIBITED",
     "citation": "N/A",
     "statute": "N/A",
@@ -21125,16 +29933,64 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
-    "literal": "WEAPON OFFENSE CLASS C",
-    "citation": "CLASS C",
-    "statute": "X",
-    "level": "MC"
+    "literal": "WATER-WATERING PROHIBITED HOURS",
+    "citation": "ORD 11.05.002",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WATER-WATERING PROHIBITED HOURS (2ND)",
+    "citation": "ORD 11.05.002(2ND)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WATER-WATERING PROHIBITED HOURS (3RD+)",
+    "citation": "ORD 11.05.002(3RD)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WATER-WITHDRAWING W/O PERMIT",
+    "citation": "ORD 11.02.041",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WATER-WITHDRAWING W/O PERMIT (2ND)",
+    "citation": "ORD 11.02.041(2ND)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WATER-WITHDRAWING W/O PERMIT (3RD+)",
+    "citation": "ORD 11.02.041(3RD)",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WEEDS OVER 12",
+    "citation": "ORD 7.02.063(A)(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "WEEDS OVER 12\"",
     "citation": "N/A",
     "statute": "N/A",
     "level": "MC"
+  },
+  {
+    "literal": "WEIGHT VIOLATION - 3RD OFFENSE",
+    "citation": "TRC 621.506 3719",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WEIGHT VIOLATION- 2ND OFFENSE",
+    "citation": "TRC 621.506 3718",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "WELFARE CONCERN",
@@ -21167,10 +30023,70 @@ export const CJIS_CODES: Offense[] = [
     "level": "MB"
   },
   {
+    "literal": "WRECKER DRIVER FAIL TO REMOVE GLASS-HWY",
+    "citation": "TRC 600.001 3370",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WRONG COLOR BACKUP LIGHT",
+    "citation": "TRC 547.303 3186",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WRONG COLOR CLEARANCE LIGHTS",
+    "citation": "TRC 547.353 3180",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WRONG COLOR ID LAMP",
+    "citation": "TRC 547.353 3182",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WRONG COLOR LICENSE PLATE LIGHT",
+    "citation": "TRC 547.303 3185",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WRONG COLOR REFLECTORS",
+    "citation": "TRC 547.353 3183",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WRONG COLOR SIDE MARKER",
+    "citation": "TRC 547.353 3181",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WRONG COLOR SIGNAL DEV",
+    "citation": "TRC 547.303 3187",
+    "statute": "",
+    "level": ""
+  },
+  {
+    "literal": "WRONG COLOR STOPLIGHT",
+    "citation": "TRC 547.303 3184",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "WRONG WAY ON ONE WAY",
     "citation": "545.059(d)",
     "statute": "TC",
     "level": "MC"
+  },
+  {
+    "literal": "WRONG, FICTITIOUS, ALTERED, OR OBSCURED INSIGNIA",
+    "citation": "502.475",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "WRONGFUL POSS SOFT/HARDWARE ONLINE NOTARY",
@@ -21209,6 +30125,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "ZONING - MOBILE HOME VIOLATION",
+    "citation": "ORD CH 12 A(2)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ZONING - MOBILE HOME VIOLATION (CG/CH)",
     "citation": "12 A 4 415 2a",
     "statute": "CO",
@@ -21227,6 +30149,12 @@ export const CJIS_CODES: Offense[] = [
     "level": "MC"
   },
   {
+    "literal": "ZONING - PROHIBITED STRUCTURE",
+    "citation": "ORD CH 12 A 402(A)(3)",
+    "statute": "",
+    "level": ""
+  },
+  {
     "literal": "ZONING - PROHIBITED STRUCTURE (SEA CONTAINER)",
     "citation": "12 A 504 E 1",
     "statute": "CO",
@@ -21237,6 +30165,12 @@ export const CJIS_CODES: Offense[] = [
     "citation": "12 A 402 A 3",
     "statute": "CO",
     "level": "MC"
+  },
+  {
+    "literal": "ZONING - RS1 VIOLATION",
+    "citation": "ORD CH 12 A(1)",
+    "statute": "",
+    "level": ""
   },
   {
     "literal": "ZONING - SELF-SERVICE STORAGE",

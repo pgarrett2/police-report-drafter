@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { TEMPLATES, INITIAL_STATE, CALL_TYPES, INITIATED_CALL_TYPES, REASON_FOR_STOP_TYPES, CONSENSUAL_STOP_TYPES, INTRO_BODY, INITIAL_SETTINGS, BWC_BOILERPLATE, OFFENSE_SUMMARY_BOILERPLATE, getFreshInitialState } from './constants';
+import { TEMPLATES, INITIAL_STATE, CALL_TYPES, INITIATED_CALL_TYPES, REASON_FOR_STOP_TYPES, CONSENSUAL_STOP_TYPES, INTRO_BODY, INITIAL_SETTINGS, BWC_BOILERPLATE, OFFENSE_SUMMARY_BOILERPLATE, getFreshInitialState, US_STATES } from './constants';
 import { CJIS_CODES } from './cjis_codes';
 import { ReportState, Template, PartyCategory, OptionalSection, PersistentSettings, Offense, NameEntry } from './types';
 import { AccordionItem } from './components/AccordionItem';
@@ -128,10 +128,24 @@ export default function App() {
     const search = offenseSearch.trim().toLowerCase();
     if (search.length < 2) return [];
 
-    return CJIS_CODES.filter(offense =>
+    const matches = CJIS_CODES.filter(offense =>
       offense.literal.toLowerCase().includes(search) ||
       offense.citation.toLowerCase().includes(search)
-    ).slice(0, 50);
+    );
+
+    // Sort: exact matches or prefix matches first
+    return matches.sort((a, b) => {
+      const aLiteral = a.literal.toLowerCase();
+      const bLiteral = b.literal.toLowerCase();
+      const aStartsWith = aLiteral.startsWith(search);
+      const bStartsWith = bLiteral.startsWith(search);
+
+      if (aStartsWith && !bStartsWith) return -1;
+      if (!aStartsWith && bStartsWith) return 1;
+
+      // If both start with it or both don't, maintain alphabetical order
+      return aLiteral.localeCompare(bLiteral);
+    }).slice(0, 50);
   }, [offenseSearch]);
 
   // Persistence Effects
@@ -176,24 +190,38 @@ export default function App() {
   };
 
   const getBlockAddress = (fullAddress: string) => {
-    if (!fullAddress) return { block: '___', street: '[STREET]' };
+    if (!fullAddress) return { block: '___', street: '[STREET]', isIntersection: false, displayTitle: '[ADDRESS]' };
+
+    if (fullAddress.includes('/')) {
+      const parts = fullAddress.split('/').map(s => s.trim());
+      const street1 = parts[0] || '[STREET 1]';
+      const street2 = parts[1] || '[STREET 2]';
+      return {
+        block: '',
+        street: `${street1} and ${street2}`,
+        isIntersection: true,
+        displayTitle: `the intersection of ${street1} and ${street2}`
+      };
+    }
+
     const match = fullAddress.trim().match(/^(\d+)\s+(.*)$/);
     if (match) {
       const houseNum = parseInt(match[1]);
       const streetName = match[2];
       const block = Math.floor(houseNum / 100) * 100;
-      return { block: block.toString(), street: streetName };
+      const displayTitle = `the ${block} block of ${streetName}`;
+      return { block: block.toString(), street: streetName, isIntersection: false, displayTitle };
     }
-    return { block: '___', street: fullAddress };
+    return { block: '___', street: fullAddress, isIntersection: false, displayTitle: fullAddress };
   };
 
   // Automated Narrative Generation Effect
   useEffect(() => {
-    const { date, time, reportingOfficer, address, callType, howReceived, reasonForStop, isConsensual } = reportData.incidentDetails;
+    const { date, time, reportingOfficer, address, isBusiness, businessName, callType, howReceived, reasonForStop, isConsensual } = reportData.incidentDetails;
     const formattedDate = formatDate(date);
-    const { block, street } = getBlockAddress(address);
+    const { block, street, displayTitle, isIntersection } = getBlockAddress(address);
     const officerName = reportingOfficer || '[OFFICER]';
-    const callText = callType || '[CALL TYPE]';
+    const callText = (callType || '[CALL TYPE]').toLowerCase();
     const reasonText = reasonForStop || '[Reason for Stop]';
 
     const offenseList = reportData.incidentDetails.offenses || [];
@@ -206,36 +234,39 @@ export default function App() {
     let publicNarrative = '';
     let introFirstSentence = '';
 
+    const businessSuffix = (isBusiness && businessName) ? ` (${businessName})` : '';
+    const addressWithBusiness = `${isIntersection ? displayTitle : (address || '[ADDRESS]')}${businessSuffix}`;
+
     if (howReceived === 'dispatched') {
-      publicNarrative = `${commonPrefix}was dispatched to the ${block} block of ${street}${suffix}`;
-      introFirstSentence = `On the listed date and time, I, Officer ${officerName}, responded to ${address || '[ADDRESS]'} regarding a ${callOrOffenseText}.`;
+      publicNarrative = `${commonPrefix}was dispatched to ${displayTitle}${suffix}`;
+      introFirstSentence = `On the listed date and time, I, Officer ${officerName}, responded to ${addressWithBusiness} regarding a ${callOrOffenseText}.`;
     }
     else if (howReceived === 'flagged down') {
-      publicNarrative = `${commonPrefix}was flagged down in the ${block} block of ${street}, San Angelo, Texas, located in Tom Green County, regarding a ${callOrOffenseText}. Report was made.`;
-      introFirstSentence = `On the listed date and time, I, Officer ${officerName}, was flagged down in the ${block} block of ${street} regarding a ${callOrOffenseText}.`;
+      publicNarrative = `${commonPrefix}was flagged down in ${displayTitle}, San Angelo, Texas, located in Tom Green County, regarding a ${callOrOffenseText}. Report was made.`;
+      introFirstSentence = `On the listed date and time, I, Officer ${officerName}, was flagged down in ${displayTitle} regarding a ${callOrOffenseText}.`;
     }
     else if (howReceived === 'initiated') {
-      const isStopType = ["traffic stop", "subject stop", "bicycle stop"].includes(callType);
-      const isCheckOutType = ["out with vehicle", "assist motorist"].includes(callType);
+      const isStopType = ["Traffic Stop", "Subject Stop"].includes(callType);
+      const isCheckOutType = ["Out W/veh", "Assist Motorist"].includes(callType);
 
-      if (callType === 'follow-up') {
-        publicNarrative = `${commonPrefix}conducted a follow-up in the ${block} block of ${street}${suffix}`;
-        introFirstSentence = `On the listed date and time, I, Officer ${officerName}, responded to ${address || '[ADDRESS]'} regarding a ${callOrOffenseText}.`;
+      if (callType === 'Follow Up On Previous Call') {
+        publicNarrative = `${commonPrefix}conducted a follow-up in ${displayTitle}${suffix}`;
+        introFirstSentence = `On the listed date and time, I, Officer ${officerName}, responded to ${addressWithBusiness} regarding a ${callOrOffenseText}.`;
       }
-      else if (isConsensual && callType === 'subject stop') {
-        publicNarrative = `${commonPrefix}initiated a consensual subject stop in the ${block} block of ${street}, San Angelo, Texas, located in Tom Green County. Report was made.`;
-        introFirstSentence = `On the listed date and time, I, Officer ${officerName}, initiated a consensual subject stop in the ${block} block of ${street}.`;
+      else if (isConsensual && callType === 'Subject Stop') {
+        publicNarrative = `${commonPrefix}initiated a consensual subject stop in ${displayTitle}, San Angelo, Texas, located in Tom Green County. Report was made.`;
+        introFirstSentence = `On the listed date and time, I, Officer ${officerName}, initiated a consensual subject stop in ${addressWithBusiness}.`;
       }
-      else if (isConsensual && callType === 'out with vehicle') {
-        publicNarrative = `${commonPrefix}checked out with a vehicle in the ${block} block of ${street}, San Angelo, Texas, located in Tom Green County. Report was made.`;
-        introFirstSentence = `On the listed date and time, I, Officer ${officerName}, checked out with a vehicle in the ${block} block of ${street}.`;
+      else if (isConsensual && callType === 'Out W/veh') {
+        publicNarrative = `${commonPrefix}checked out with a vehicle in ${displayTitle}, San Angelo, Texas, located in Tom Green County. Report was made.`;
+        introFirstSentence = `On the listed date and time, I, Officer ${officerName}, checked out with a vehicle in ${addressWithBusiness}.`;
       }
       else if (isStopType || isCheckOutType) {
-        publicNarrative = `${commonPrefix}initiated a ${callType} in the ${block} block of ${street}, San Angelo, Texas, located in Tom Green County, for ${reasonText}. Report was made.`;
-        introFirstSentence = `On the listed date and time, I, Officer ${officerName}, initiated a ${callType} in the ${block} block of ${street} for ${reasonText}.`;
+        publicNarrative = `${commonPrefix}initiated a ${callType} in ${displayTitle}, San Angelo, Texas, located in Tom Green County, for ${reasonText}. Report was made.`;
+        introFirstSentence = `On the listed date and time, I, Officer ${officerName}, initiated a ${callType} in ${addressWithBusiness} for ${reasonText}.`;
       } else {
-        publicNarrative = `${commonPrefix}initiated a ${callOrOffenseText} in the ${block} block of ${street}${suffix}`;
-        introFirstSentence = `On the listed date and time, I, Officer ${officerName}, initiated a ${callOrOffenseText} in the ${block} block of ${street}.`;
+        publicNarrative = `${commonPrefix}initiated a ${callOrOffenseText} in ${displayTitle}${suffix}`;
+        introFirstSentence = `On the listed date and time, I, Officer ${officerName}, initiated a ${callOrOffenseText} in ${addressWithBusiness}.`;
       }
     }
 
@@ -261,6 +292,8 @@ export default function App() {
     reportData.incidentDetails.time,
     reportData.incidentDetails.reportingOfficer,
     reportData.incidentDetails.address,
+    reportData.incidentDetails.isBusiness,
+    reportData.incidentDetails.businessName,
     reportData.incidentDetails.callType,
     reportData.incidentDetails.howReceived,
     reportData.incidentDetails.reasonForStop,
@@ -451,7 +484,7 @@ export default function App() {
   const processText = useCallback((text: string) => {
     if (!text) return '';
     let processed = text;
-    const { block, street } = getBlockAddress(reportData.incidentDetails.address);
+    const { block, street, displayTitle, isIntersection } = getBlockAddress(reportData.incidentDetails.address);
     const firstSuspect = reportData.names.Suspect.filter(n => n.name.trim() !== '')[0]?.name || '[SUSPECT]';
     const firstVictim = reportData.names.Victim.filter(n => n.name.trim() !== '')[0]?.name || '[VICTIM]';
     const firstWitness = reportData.names.Witness.filter(n => n.name.trim() !== '')[0]?.name || '[WITNESS]';
@@ -497,8 +530,9 @@ export default function App() {
       '\\[ADDRESS\\]': reportData.incidentDetails.address || '[ADDRESS]',
       '\\[BLOCK\\]': block,
       '\\[STREET\\]': street,
-      '\\[CALLTYPE\\]': reportData.incidentDetails.callType || '[CALL TYPE]',
-      '\\[CallType\\]': reportData.incidentDetails.callType || '[CALL TYPE]',
+      '\\[LOCATION\\]': isIntersection ? displayTitle : (reportData.incidentDetails.address || '[ADDRESS]'),
+      '\\[CALLTYPE\\]': (reportData.incidentDetails.callType || '[CALL TYPE]').toLowerCase(),
+      '\\[CallType\\]': (reportData.incidentDetails.callType || '[CALL TYPE]').toLowerCase(),
       '\\[OFFENSES\\]': reportData.incidentDetails.offenses?.map(o => o.literal).join(', ') || '[OFFENSES]',
       '\\[OFFENSE\\]': reportData.incidentDetails.offenses?.[0]?.literal || '[OFFENSE]',
       '\\[CITATION\\]': reportData.incidentDetails.offenses?.[0]?.citation || '[CITATION]',
@@ -539,7 +573,13 @@ export default function App() {
   };
 
   const handleCopyFullReport = () => {
-    let combinedInvestigative = `${processText(reportData.narratives.introduction)}`;
+    let combinedInvestigative = '';
+
+    if (reportData.narratives.isSapdNamesTemplateEnabled) {
+      combinedInvestigative += generateSapdNamesTemplate(reportData.names) + '\n\n';
+    }
+
+    combinedInvestigative += `NARRATIVE:\n**********\n${processText(reportData.narratives.introduction)}`;
     if (reportData.narratives.investigative) combinedInvestigative += `\n\n${processText(reportData.narratives.investigative)}`;
     reportData.narratives.optionalSections.forEach(section => {
       if (section.enabled) combinedInvestigative += `\n\n${processText(section.text)}`;
@@ -557,6 +597,271 @@ export default function App() {
   const saveBwc = () => { setReportData(prev => ({ ...prev, narratives: { ...prev.narratives, bwcStatement: tempBwc, isBwcEdited: true } })); setIsEditingBwc(false); };
   const startEditingOffenseSummary = () => { setTempOffenseSummary(reportData.narratives.offenseSummaryStatement); setIsEditingOffenseSummary(true); };
   const saveOffenseSummary = () => { setReportData(prev => ({ ...prev, narratives: { ...prev.narratives, offenseSummaryStatement: tempOffenseSummary, isOffenseSummaryEdited: true } })); setIsEditingOffenseSummary(false); };
+
+  const addVehicleEntry = () => {
+    setReportData(prev => ({
+      ...prev,
+      vehicles: [...prev.vehicles, {
+        id: crypto.randomUUID(),
+        vin: '',
+        showVin: true,
+        color: '',
+        year: '',
+        make: '',
+        model: '',
+        licensePlate: '',
+        licensePlateState: 'Texas',
+        style: '',
+        linkedName: '',
+        status: '',
+        statusDetails: ''
+      }]
+    }));
+  };
+
+  const removeVehicleEntry = (id: string) => {
+    setReportData(prev => ({
+      ...prev,
+      vehicles: prev.vehicles.filter(v => v.id !== id)
+    }));
+  };
+
+  const handleVehicleChange = (id: string, field: string, value: any) => {
+    setReportData(prev => ({
+      ...prev,
+      vehicles: prev.vehicles.map(v => v.id === id ? { ...v, [field]: value } : v)
+    }));
+  };
+
+  const decodeVin = async (id: string, vin: string) => {
+    if (vin.length < 11) return;
+    try {
+      const response = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValues/${vin}?format=json`);
+      const data = await response.json();
+      const result = data.Results?.[0];
+      if (result) {
+        setReportData(prev => ({
+          ...prev,
+          vehicles: prev.vehicles.map(v => v.id === id ? {
+            ...v,
+            year: result.ModelYear || v.year,
+            make: result.Make || v.make,
+            model: result.Model || v.model,
+          } : v)
+        }));
+      }
+    } catch (error) {
+      console.error("VIN decoding failed:", error);
+    }
+  };
+
+  const renderVehicleInputs = () => {
+    const allNames = [
+      ...reportData.names.Complainant,
+      ...reportData.names.Victim,
+      ...reportData.names.Suspect,
+      ...reportData.names.Witness,
+      ...reportData.names.Other
+    ].map(n => n.name).filter(name => name.trim() !== '');
+
+    return (
+      <div className="space-y-4">
+        <button
+          onClick={addVehicleEntry}
+          className="w-full flex items-center justify-between px-4 py-2 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-all group"
+        >
+          <span className="text-xs font-bold text-slate-500 group-hover:text-primary transition-colors uppercase tracking-widest">Vehicles</span>
+          <div className="flex items-center gap-1 text-[10px] font-bold text-primary">
+            <span className="material-symbols-outlined text-sm">add_circle</span> ADD VEHICLE
+          </div>
+        </button>
+
+        <div className="space-y-4">
+          {reportData.vehicles.map((vehicle, index) => (
+            <div key={vehicle.id} className="p-4 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl space-y-3 animate-in fade-in slide-in-from-top-1 duration-200">
+              <div className="flex justify-between items-center border-b border-slate-200 dark:border-slate-700 pb-2 mb-2">
+                <span className="text-[10px] font-black uppercase text-slate-400">Vehicle #{index + 1}</span>
+                <button onClick={() => removeVehicleEntry(vehicle.id)} className="text-slate-400 hover:text-red-500 transition-colors">
+                  <span className="material-symbols-outlined text-lg">delete</span>
+                </button>
+              </div>
+
+              <div className="grid grid-cols-1 gap-3">
+                <div className="space-y-1">
+                  <div className="flex justify-between items-center">
+                    <label className="block text-[10px] font-bold text-slate-500 uppercase">VIN</label>
+                    <div className="flex items-center gap-1">
+                      <input
+                        type="checkbox"
+                        id={`show-vin-${vehicle.id}`}
+                        title="Show in Report"
+                        checked={vehicle.showVin}
+                        onChange={(e) => handleVehicleChange(vehicle.id, 'showVin', e.target.checked)}
+                        className="w-3 h-3 rounded"
+                      />
+                      <label htmlFor={`show-vin-${vehicle.id}`} className="text-[10px] text-slate-500 font-bold uppercase cursor-pointer">Show in Report</label>
+                    </div>
+                  </div>
+                  <div className="flex gap-2">
+                    <input
+                      type="text"
+                      title="Vehicle VIN"
+                      placeholder="Enter VIN..."
+                      value={vehicle.vin}
+                      onChange={(e) => handleVehicleChange(vehicle.id, 'vin', e.target.value.toUpperCase())}
+                      className="flex-1 px-3 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-sm uppercase font-mono"
+                    />
+                    <button
+                      onClick={() => decodeVin(vehicle.id, vehicle.vin)}
+                      disabled={vehicle.vin.length < 11}
+                      className="px-3 py-1.5 bg-primary text-white rounded-md text-[10px] font-bold disabled:opacity-50"
+                    >
+                      DECODE
+                    </button>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="space-y-1">
+                    <label className="block text-[10px] font-bold text-slate-500 uppercase">Color</label>
+                    <input
+                      type="text"
+                      title="Vehicle Color"
+                      placeholder="Color"
+                      value={vehicle.color}
+                      onChange={(e) => handleVehicleChange(vehicle.id, 'color', e.target.value)}
+                      className="w-full px-3 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-sm"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="block text-[10px] font-bold text-slate-500 uppercase">Year</label>
+                    <input
+                      type="text"
+                      title="Vehicle Year"
+                      placeholder="Year"
+                      value={vehicle.year}
+                      onChange={(e) => handleVehicleChange(vehicle.id, 'year', e.target.value)}
+                      className="w-full px-3 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-sm"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="space-y-1">
+                    <label className="block text-[10px] font-bold text-slate-500 uppercase">Make</label>
+                    <input
+                      type="text"
+                      title="Vehicle Make"
+                      placeholder="Make"
+                      value={vehicle.make}
+                      onChange={(e) => handleVehicleChange(vehicle.id, 'make', e.target.value)}
+                      className="w-full px-3 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-sm"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="block text-[10px] font-bold text-slate-500 uppercase">Model</label>
+                    <input
+                      type="text"
+                      title="Vehicle Model"
+                      placeholder="Model"
+                      value={vehicle.model}
+                      onChange={(e) => handleVehicleChange(vehicle.id, 'model', e.target.value)}
+                      className="w-full px-3 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-sm"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="space-y-1">
+                    <label className="block text-[10px] font-bold text-slate-500 uppercase">License Plate</label>
+                    <input
+                      type="text"
+                      title="License Plate"
+                      placeholder="Plate"
+                      value={vehicle.licensePlate}
+                      onChange={(e) => handleVehicleChange(vehicle.id, 'licensePlate', e.target.value.toUpperCase())}
+                      className="w-full px-3 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-sm"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="block text-[10px] font-bold text-slate-500 uppercase">Plate State</label>
+                    <select
+                      title="Plate State"
+                      value={vehicle.licensePlateState}
+                      onChange={(e) => handleVehicleChange(vehicle.id, 'licensePlateState', e.target.value)}
+                      className="w-full px-2 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-sm"
+                    >
+                      {US_STATES.map(state => (
+                        <option key={state} value={state}>{state}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <label className="block text-[10px] font-bold text-slate-500 uppercase">Style</label>
+                  <input
+                    type="text"
+                    title="Vehicle Style"
+                    placeholder="e.g. 4D, SUV"
+                    value={vehicle.style}
+                    onChange={(e) => handleVehicleChange(vehicle.id, 'style', e.target.value)}
+                    className="w-full px-3 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-sm"
+                  />
+                </div>
+
+                <div className="space-y-1">
+                  <label className="block text-[10px] font-bold text-slate-500 uppercase">Link to Name</label>
+                  <select
+                    value={vehicle.linkedName}
+                    title="Link to Name"
+                    onChange={(e) => handleVehicleChange(vehicle.id, 'linkedName', e.target.value)}
+                    className="w-full px-3 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-sm"
+                  >
+                    <option value="">-- Not Linked --</option>
+                    {allNames.map((name, i) => (
+                      <option key={`${name}-${i}`} value={name}>{name}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="space-y-1">
+                  <label className="block text-[10px] font-bold text-slate-500 uppercase">Vehicle Status</label>
+                  <select
+                    value={vehicle.status}
+                    title="Vehicle Status"
+                    onChange={(e) => handleVehicleChange(vehicle.id, 'status', e.target.value)}
+                    className="w-full px-3 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-sm"
+                  >
+                    <option value="">-- Select Status --</option>
+                    <option value="Towed">Towed</option>
+                    <option value="Released">Released</option>
+                    <option value="Left on scene legally parked">Left on scene legally parked</option>
+                  </select>
+                </div>
+
+                {(vehicle.status === 'Towed' || vehicle.status === 'Released') && (
+                  <div className="space-y-1 animate-in fade-in slide-in-from-top-1 duration-200">
+                    <label className="block text-[10px] font-bold text-slate-500 uppercase">
+                      {vehicle.status === 'Towed' ? 'Towed to/where' : 'Released to who'}
+                    </label>
+                    <input
+                      type="text"
+                      title="Status Details"
+                      placeholder={vehicle.status === 'Towed' ? 'e.g. Towed to Impound' : 'e.g. Released to Owner'}
+                      value={vehicle.statusDetails}
+                      onChange={(e) => handleVehicleChange(vehicle.id, 'statusDetails', e.target.value)}
+                      className="w-full px-3 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-sm"
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
 
   const renderNameInputs = (category: PartyCategory) => {
     const names = reportData.names[category];
@@ -578,6 +883,7 @@ export default function App() {
               <div className="relative flex-1">
                 <input
                   type="text"
+                  title={`Name of ${category}`}
                   placeholder={`Name of ${category}...`}
                   value={entry.name}
                   onChange={(e) => handleNameChange(category, index, 'name', e.target.value)}
@@ -606,8 +912,8 @@ export default function App() {
                 <button
                   onClick={() => handleNameChange(category, index, 'isArrested', !entry.isArrested)}
                   className={`px-3 py-1.5 rounded-md text-[10px] font-black tracking-tighter transition-all border ${entry.isArrested
-                      ? 'bg-red-500/10 border-red-500 text-red-600 opacity-100'
-                      : 'bg-slate-100 dark:bg-slate-800 border-transparent text-slate-400 opacity-50'
+                    ? 'bg-red-500/10 border-red-500 text-red-600 opacity-100'
+                    : 'bg-slate-100 dark:bg-slate-800 border-transparent text-slate-400 opacity-50'
                     }`}
                 >
                   ARREST
@@ -628,17 +934,34 @@ export default function App() {
     );
   };
 
-  const investigativeNarrativeContent = `${processText(reportData.narratives.introduction)}${reportData.narratives.investigative ? `\n\n${processText(reportData.narratives.investigative)}` : ''}${reportData.narratives.optionalSections.filter(s => s.enabled).map(s => `\n\n${processText(s.text)}`).join('')}${reportData.narratives.isBwcEnabled ? `\n\n${processText(reportData.narratives.bwcStatement)}` : ''}${reportData.narratives.isOffenseSummaryEnabled ? `\n\n${processText(reportData.narratives.offenseSummaryStatement)}` : ''}`;
+  const generateSapdNamesTemplate = (names: Record<PartyCategory, NameEntry[]>) => {
+    const formatCategory = (category: PartyCategory, header: string, separator: string) => {
+      const list = names[category].map(n => n.name).filter(n => n.trim() !== '').join('\n');
+      return `${header}:\n${separator}${list ? '\n' + list : ''}`;
+    }
+
+    return `-------------------** OFFICER NARRATIVE **-----------------
+${formatCategory('Complainant', 'COMPLAINANT', '************')}
+
+${formatCategory('Victim', 'VICTIM', '*******')}
+
+${formatCategory('Suspect', 'SUSPECT', '********')}
+
+${formatCategory('Witness', 'WITNESS', '********')}
+
+${formatCategory('Other', 'OTHER', '******')}
+
+SUPPORT PERSONNEL / AGENCIES:
+****************************
+`;
+  };
+
+  const investigativeNarrativeContent = `${reportData.narratives.isSapdNamesTemplateEnabled ? generateSapdNamesTemplate(reportData.names) + '\n\n' : ''}NARRATIVE:\n**********\n${processText(reportData.narratives.introduction)}${reportData.narratives.investigative ? `\n\n${processText(reportData.narratives.investigative)}` : ''}${reportData.narratives.optionalSections.filter(s => s.enabled).map(s => `\n\n${processText(s.text)}`).join('')}${reportData.narratives.isBwcEnabled ? `\n\n${processText(reportData.narratives.bwcStatement)}` : ''}${reportData.narratives.isOffenseSummaryEnabled ? `\n\n${processText(reportData.narratives.offenseSummaryStatement)}` : ''}`;
 
   return (
     <>
       <header className="h-16 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-between px-4 md:px-6 sticky top-0 z-10 shrink-0">
         <div className="flex items-center gap-3">
-          <img
-            src="apple-touch-icon-full-size.png"
-            alt="Logo"
-            className="w-8 h-8 md:w-12 md:h-12 object-contain"
-          />
           <h1 className="text-xl md:text-3xl font-black tracking-tight text-slate-900 dark:text-white truncate leading-none">REPORT DRAFT</h1>
         </div>
         <div className="flex items-center gap-2 md:gap-4">
@@ -764,6 +1087,84 @@ export default function App() {
             <div className="space-y-4">
               <AccordionItem title="Incident Details" icon="info" isOpen={activeSection === 'incident'} onToggle={() => setActiveSection(activeSection === 'incident' ? '' : 'incident')}>
                 <div className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="incident-date" className="block text-xs font-medium text-slate-500 mb-1">Date</label>
+                      <input
+                        id="incident-date"
+                        type="date"
+                        value={reportData.incidentDetails.date}
+                        onChange={(e) => handleInputChange('incidentDetails', 'date', e.target.value)}
+                        className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-base md:text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="incident-time" className="block text-xs font-medium text-slate-500 mb-1">Time (24hr)</label>
+                      <input
+                        id="incident-time"
+                        type="text"
+                        placeholder="e.g. 1430"
+                        maxLength={4}
+                        value={reportData.incidentDetails.time}
+                        onChange={(e) => handleInputChange('incidentDetails', 'time', e.target.value.replace(/\D/g, ''))}
+                        className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-base md:text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="p-3 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 space-y-3">
+                    <div className="flex items-center gap-2">
+                      <span className="material-symbols-outlined text-sm text-slate-400">event_repeat</span>
+                      <span className="text-xs font-bold text-slate-500 uppercase tracking-widest">Timeframe (Optional)</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div>
+                        <label htmlFor="from-date" className="block text-[10px] font-medium text-slate-500 mb-1 uppercase tracking-tight">From Date</label>
+                        <input
+                          id="from-date"
+                          type="date"
+                          value={reportData.incidentDetails.fromDate}
+                          onChange={(e) => handleInputChange('incidentDetails', 'fromDate', e.target.value)}
+                          className="w-full px-2 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="from-time" className="block text-[10px] font-medium text-slate-500 mb-1 uppercase tracking-tight">From Time</label>
+                        <input
+                          id="from-time"
+                          type="text"
+                          placeholder="0000"
+                          maxLength={4}
+                          value={reportData.incidentDetails.fromTime}
+                          onChange={(e) => handleInputChange('incidentDetails', 'fromTime', e.target.value.replace(/\D/g, ''))}
+                          className="w-full px-2 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="to-date" className="block text-[10px] font-medium text-slate-500 mb-1 uppercase tracking-tight">To Date</label>
+                        <input
+                          id="to-date"
+                          type="date"
+                          value={reportData.incidentDetails.toDate}
+                          onChange={(e) => handleInputChange('incidentDetails', 'toDate', e.target.value)}
+                          className="w-full px-2 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="to-time" className="block text-[10px] font-medium text-slate-500 mb-1 uppercase tracking-tight">To Time</label>
+                        <input
+                          id="to-time"
+                          type="text"
+                          placeholder="0000"
+                          maxLength={4}
+                          value={reportData.incidentDetails.toTime}
+                          onChange={(e) => handleInputChange('incidentDetails', 'toTime', e.target.value.replace(/\D/g, ''))}
+                          className="w-full px-2 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
                   <div>
                     <label htmlFor="how-received" className="block text-xs font-medium text-slate-500 mb-1">How Received</label>
                     <select id="how-received" aria-label="How Received" title="Select how the incident was received" className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-base md:text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none" value={reportData.incidentDetails.howReceived} onChange={(e) => handleInputChange('incidentDetails', 'howReceived', e.target.value as any)}>
@@ -942,9 +1343,44 @@ export default function App() {
                     )}
                   </div>
 
-                  <div>
-                    <label htmlFor="address-input" className="block text-xs font-medium text-slate-500 mb-1">Address</label>
-                    <input id="address-input" type="text" title="Incident Address" placeholder="e.g. 123 Main St" value={reportData.incidentDetails.address} onChange={(e) => handleInputChange('incidentDetails', 'address', e.target.value)} className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-base md:text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none" />
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <label htmlFor="address-input" className="block text-xs font-medium text-slate-500">Address</label>
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="checkbox"
+                          id="business-check"
+                          checked={reportData.incidentDetails.isBusiness}
+                          onChange={(e) => handleInputChange('incidentDetails', 'isBusiness', e.target.checked)}
+                          className="rounded border-slate-300 text-primary focus:ring-primary w-3.5 h-3.5 cursor-pointer"
+                        />
+                        <label htmlFor="business-check" className="text-[10px] font-bold text-slate-500 uppercase tracking-widest cursor-pointer select-none">Business</label>
+                      </div>
+                    </div>
+                    <input
+                      id="address-input"
+                      type="text"
+                      title="Incident Address"
+                      placeholder="e.g. 123 Main St"
+                      value={reportData.incidentDetails.address}
+                      onChange={(e) => handleInputChange('incidentDetails', 'address', e.target.value)}
+                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-base md:text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none"
+                    />
+
+                    {reportData.incidentDetails.isBusiness && (
+                      <div className="animate-in fade-in slide-in-from-top-1 duration-200">
+                        <label htmlFor="business-name-input" className="block text-[10px] font-medium text-slate-500 mb-1 uppercase tracking-tight">Business Name</label>
+                        <input
+                          id="business-name-input"
+                          type="text"
+                          title="Business Name"
+                          placeholder="e.g. Walmart, McDonald's"
+                          value={reportData.incidentDetails.businessName}
+                          onChange={(e) => handleInputChange('incidentDetails', 'businessName', e.target.value)}
+                          className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-md text-base md:text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none font-medium"
+                        />
+                      </div>
+                    )}
                   </div>
                   <div>
                     <label htmlFor="officer-input" className="block text-xs font-medium text-slate-500 mb-1">Reporting Officer</label>
@@ -968,6 +1404,11 @@ export default function App() {
                   {renderNameInputs('Complainant')}{renderNameInputs('Victim')}{renderNameInputs('Suspect')}{renderNameInputs('Witness')}{renderNameInputs('Other')}
                 </div>
               </AccordionItem>
+              <AccordionItem title="Vehicles" icon="directions_car" isOpen={activeSection === 'vehicles'} onToggle={() => setActiveSection(activeSection === 'vehicles' ? '' : 'vehicles')}>
+                <div className="space-y-4">
+                  {renderVehicleInputs()}
+                </div>
+              </AccordionItem>
               <AccordionItem title="Public Narrative" icon="edit_note" isOpen={activeSection === 'public'} onToggle={() => setActiveSection(activeSection === 'public' ? '' : 'public')}>
                 <div className="space-y-4">
                   {isEditingPublic ? (
@@ -986,6 +1427,18 @@ export default function App() {
               </AccordionItem>
               <AccordionItem title="Investigative Narrative" icon="description" isOpen={activeSection === 'investigative'} onToggle={() => setActiveSection(activeSection === 'investigative' ? '' : 'investigative')}>
                 <div className="space-y-6">
+                  <div className="flex items-center gap-2 pb-4 border-b border-slate-100 dark:border-slate-800">
+                    <input
+                      type="checkbox"
+                      id="sapd-names-template-checkbox"
+                      checked={reportData.narratives.isSapdNamesTemplateEnabled}
+                      onChange={(e) => handleInputChange('narratives', 'isSapdNamesTemplateEnabled', e.target.checked)}
+                      className="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4 cursor-pointer"
+                    />
+                    <label htmlFor="sapd-names-template-checkbox" className="text-sm font-semibold text-slate-700 dark:text-slate-300 cursor-pointer select-none">
+                      SAPD Names Template
+                    </label>
+                  </div>
                   <div>
                     <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Introduction</label>
                     {isEditingIntro ? (
@@ -1161,7 +1614,6 @@ export default function App() {
           </div>
           <div className="fixed right-4 md:right-8 bottom-4 md:bottom-8 z-20 flex flex-col gap-4">
             <button className={`w-12 h-12 md:w-14 md:h-14 rounded-full shadow-xl flex items-center justify-center transition-all ${fullReportCopied ? 'bg-green-500' : 'bg-primary'} text-white`} onClick={handleCopyFullReport}><span className="material-symbols-outlined text-xl md:text-2xl">{fullReportCopied ? 'check' : 'content_copy'}</span></button>
-            <button className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white dark:bg-slate-800 border shadow-xl flex items-center justify-center hover:scale-110 transition-transform" onClick={() => setDarkMode(!darkMode)}><span className={`material-symbols-outlined text-slate-600 dark:text-slate-300 ${darkMode ? 'hidden' : 'block'}`}>dark_mode</span><span className={`material-symbols-outlined text-slate-600 dark:text-slate-300 ${darkMode ? 'block' : 'hidden'}`}>light_mode</span></button>
           </div>
         </section>
       </main >

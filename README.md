@@ -3,7 +3,7 @@
 > A professional tool for law enforcement officers to draft comprehensive and accurate police reports efficiently.
 
 ![License](https://img.shields.io/badge/license-Proprietary-blue.svg)
-![Version](https://img.shields.io/badge/version-1.1.0-green.svg)
+![Version](https://img.shields.io/badge/version-1.2.0-green.svg)
 
 ## 🚔 Overview
 
@@ -25,6 +25,7 @@ This application is designed with a **privacy-first architecture**:
 ### Key Features
 
 - **📚 Comprehensive Offense Search**: Integrated Texas CJIS codes and Municipal Court offenses with instant statute reference.
+- **🚗 Vehicle Tracking**: VIN decoder integration with NHTSA API for auto-populating vehicle details.
 - **📱 Mobile-First Design**: Optimized for use in the field on iPhones or tablets, with full desktop compatibility.
 - **📄 Professional Export**: One-click export to formatted Word documents, ready for submission.
 - **⚖️ Legal Compliance**: Built-in prompts for Reason for Stop, Consensual Stop, and Body-Worn Camera (BWC) statements.
@@ -32,44 +33,129 @@ This application is designed with a **privacy-first architecture**:
 
 ## 🚀 Getting Started
 
-### Prerequisites
+Choose one of the following installation methods based on your preference.
 
-- [Node.js](https://nodejs.org/) (Version 16 or higher)
-- [npm](https://www.npmjs.com/) (Version 7 or higher)
-- [Docker](https://www.docker.com/) (Optional, for containerized execution)
+---
 
-### Installation (Standard)
+### Option 1: NPM Installation (Recommended for Development)
 
-1. **Clone the repository:**
+#### Prerequisites
+
+- [Node.js](https://nodejs.org/) **v18 or higher** (LTS recommended)
+- [npm](https://www.npmjs.com/) **v9 or higher** (comes with Node.js)
+- [Git](https://git-scm.com/)
+
+#### Step-by-Step Instructions
+
+1. **Verify Node.js and npm are installed:**
+
+   ```bash
+   node --version   # Should show v18.x.x or higher
+   npm --version    # Should show 9.x.x or higher
+   ```
+
+   If not installed, download from [nodejs.org](https://nodejs.org/) and install the LTS version.
+
+2. **Clone the repository:**
 
    ```bash
    git clone https://github.com/pgarrett2/police-report-drafter.git
    cd police-report-drafter
    ```
 
-2. **Install dependencies:**
+3. **Install dependencies:**
 
    ```bash
    npm install
    ```
 
-3. **Run Development Server:**
+   This will install React, Vite, TypeScript, and all other required packages.
+
+4. **Start the development server:**
 
    ```bash
    npm run dev
    ```
 
-   Open [http://localhost:3002](http://localhost:3002) in your browser.
+5. **Access the application:**
 
-### Installation (Docker)
+   Open your browser and navigate to **[http://localhost:3002](http://localhost:3002)**
 
-To run the application locally using Docker on port 3002:
+6. **Build for production (optional):**
 
-```bash
-docker-compose up -d
-```
+   ```bash
+   npm run build
+   npm run preview   # Preview the production build
+   ```
 
-The application will be available at [http://localhost:3002](http://localhost:3002).
+---
+
+### Option 2: Docker Installation (Recommended for Production/Deployment)
+
+#### Prerequisites
+
+- [Docker](https://www.docker.com/products/docker-desktop/) (Docker Desktop recommended for Windows/Mac)
+- [Docker Compose](https://docs.docker.com/compose/) (included with Docker Desktop)
+
+#### Step-by-Step Instructions
+
+1. **Verify Docker is installed and running:**
+
+   ```bash
+   docker --version         # Should show Docker version
+   docker-compose --version # Should show Docker Compose version
+   ```
+
+   If not installed, download [Docker Desktop](https://www.docker.com/products/docker-desktop/) for your OS.
+
+2. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/pgarrett2/police-report-drafter.git
+   cd police-report-drafter
+   ```
+
+3. **Build and start the container:**
+
+   ```bash
+   docker-compose up -d --build
+   ```
+
+   This command will:
+   - Build the Docker image (first time may take 2-3 minutes)
+   - Start the container in detached mode (`-d`)
+   - Map port 3002 on your machine to the container
+
+4. **Access the application:**
+
+   Open your browser and navigate to **[http://localhost:3002](http://localhost:3002)**
+
+5. **Useful Docker commands:**
+
+   ```bash
+   # View running containers
+   docker ps
+
+   # View container logs
+   docker-compose logs -f
+
+   # Stop the container
+   docker-compose down
+
+   # Rebuild after code changes
+   docker-compose up -d --build
+   ```
+
+---
+
+### Troubleshooting
+
+| Issue | Solution |
+| ----- | -------- |
+| `npm install` fails | Try deleting `node_modules` folder and `package-lock.json`, then run `npm install` again |
+| Port 3002 already in use | Stop any other service using port 3002, or modify `vite.config.ts` (npm) or `docker-compose.yml` (Docker) to use a different port |
+| Docker build fails | Ensure Docker Desktop is running, then try `docker system prune` to clear cache |
+| Application not loading | Check browser console (F12) for errors; ensure you're using a modern browser (Chrome, Firefox, Edge, Safari) |
 
 ## 🛠️ Tech Stack
 

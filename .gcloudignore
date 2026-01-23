@@ -1,0 +1,11 @@
+.gcloudignore
+.git
+.gitignore
+node_modules
+.agent
+.venv
+.shared
+.vscode
+~$*
+*.tmp
+*.log
