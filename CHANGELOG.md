@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-01-27
+
+### Added
+
+- **Narrative Checkboxes**: New additional sections including Consensual Search, Probable Cause Search, K9 Alert, Fingerprints, Vehicle Tow, CPS Intake, APS Intake, Called CIU (Protective Order), Called Supervisor, Called CID, and Called Narcs.
+- **CPS Intake Boilerplate**: Two boilerplate template options with editable input placeholders for [NAME], [NUMBER], [CHILDREN], [INTAKE PERSON], and [INTAKE NUMBER].
+- **APS Intake Boilerplate**: Boilerplate template with editable input placeholders for [NAME] and [NUMBER].
+
+### Fixed
+
+- **Input/Textarea Errors**: Resolved form validation errors in App.tsx.
+- **Missing Juvenile Auto-Population**: Fixed guardian and missing person names only auto-populating after deselecting the "MISSING JUVENILE" selection.
+- **Body-Worn Camera Statements**: Fixed "Body-worn camera statement #2" section not appearing in the draft preview when selected.
+- **Offense Deletion Protection**: Prevented deletion of offenses that are linked to suspects or victims.
+
 ## [1.2.0] - 2026-01-22
 
 ### Added

@@ -158,9 +158,15 @@ export const CONSENSUAL_STOP_TYPES = [
   "Out W/veh"
 ];
 
-export const INTRO_BODY = "I responded in a marked patrol vehicle, wearing my issued police uniform. My department-issued body-worn camera was activated prior to arrival and recorded my actions, observations, and statements during this incident in accordance with department policy.";
+export const INTRO_BODY = "I responded in a marked patrol vehicle, wearing my issued police uniform.";
 
-export const BWC_BOILERPLATE = "All body-worn camera footage related to this incident was preserved in accordance with department policy. A transcription of all conversations captured by my body-worn camera was also automatically created once it was uploaded to Evidence.com.";
+export const BWC_VERSION_1 = "My department-issued body-worn camera was activated prior to arrival and recorded my actions, observations, and statements during this incident in accordance with department policy.";
+export const BWC_VERSION_2 = "My body-worn camera (BWC) was activated prior to arrival and remained activated throughout the encounter. All statements referenced in this report were captured on BWC audio and video unless otherwise noted.";
+export const BWC_VERSION_3 = "Before I arrived, I activated my body-worn camera, which captured all my interactions with the individuals on this call for service.";
+export const BWC_INITIATED_TEXT = "When I activated my emergency lights, my body-worn camera and in-car camera system activated. Both recording systems continued to record throughout the duration of this incident.";
+
+export const BWC_BOILERPLATE = BWC_VERSION_1;
+export const BWC2_BOILERPLATE = "All body-worn camera footage related to this incident was preserved in accordance with department policy. A transcription of all conversations captured by my body-worn camera was also automatically created once it was uploaded to Evidence.com.";
 export const OFFENSE_SUMMARY_BOILERPLATE = "OFFENSE SUMMARY\n***********************\n[OFFENSE] - [STATUTE_NAME] [CITATION] [LEVEL]";
 
 const NEW_OPTIONAL_SECTION_LABELS = [
@@ -168,26 +174,81 @@ const NEW_OPTIONAL_SECTION_LABELS = [
   "Photos taken",
   "Citizen Link Sent",
   "Evidence",
-  "Family Violence Paperwork",
+  "Family Violence MANDATORY",
   "Danger Assessment",
   "CCH check",
   "Property Continuum form (theft/burgs)",
+
   "Missing Juvenile",
   "Written Statements",
-  "County Attorney Packet"
+  "County Attorney Packet",
+  "Consensual Search",
+  "Probable Cause Search",
+  "K9 Alert",
+  "Fingerprints",
+  "Vehicle Tow",
+  "CPS Intake",
+  "APS Intake",
+  "Called CIU (Protective Order)",
+  "Called Supervisor",
+  "Called CID",
+  "Called Narcs",
+  "PURSUE"
 ];
+
+// Boilerplate texts for specific sections
+export const CPS_INTAKE_VERSION_1 = "I later contacted the Child Protective Services (CPS) Intake hotline and spoke to CPS Intake Specialist [NAME] (Agent #[AGENT NUMBER]). I provided [NAME] with all pertinent information regarding this incident and was provided CPS Report ID #[REPORT ID].";
+
+export const CPS_INTAKE_VERSION_2 = "I also spoke with the following children [CHILDREN] present at the location of this incident. All children on the scene were identified and checked for any signs of injury or abuse. I later contacted the CPS intake number, spoke with [INTAKE PERSON], and received the following [INTAKE NUMBER].";
+
+export const APS_INTAKE_BOILERPLATE = "I later contacted the Adult Protective Services (APS) Intake hotline and spoke to APS Intake Specialist [NAME] (Agent #[AGENT NUMBER]). I provided [NAME] with all pertinent information regarding this incident and was provided APS Report ID #[REPORT ID].";
+
+export const FAMILY_VIOLENCE_BOILERPLATE = "[NAME] was provided with a Family Violence victim resource card and the contact information for the Crisis Intervention Unit.";
+export const DANGER_ASSESSMENT_BOILERPLATE = "A danger assessment was completed and attached to this report.";
+export const CCH_CHECK_BOILERPLATE = "I conducted a Computerized Criminal History (CCH) check on [SUSPECT] and learned that [he/she] [has / has no] prior [Family Violence / Theft / Felony / DWI ] convictions.";
+export const MISSING_JUVENILE_BOILERPLATE_1 = "I had [GUARDIAN] complete a Runaway/Missing Person's Report form. [GUARDIAN] stated [MISSING PERSON] is a [RACE/ETHNICITY] [SEX], date of birth [DATE OF BIRTH], [HEIGHT], [WEIGHT] lbs., [HAIR COLOR] hair, [EYE COLOR] eyes, last seen wearing [LAST SEEN WEARING]. [POSSIBLE WHEREABOUTS]";
+export const MISSING_JUVENILE_BOILERPLATE_2 = "I then instructed Dispatch to enter [MISSING PERSON] into NCIC/TCIC as a Missing Person. I contacted the National Center for Missing and Exploited Children (NCMEC), spoke to a NCMEC representative ([REP NAME]), and relayed all pertinent information and received NCMEC Case #[NCMEC CASE #].";
+export const MISSING_JUVENILE_BOILERPLATE = MISSING_JUVENILE_BOILERPLATE_1;
+export const COUNTY_ATTORNEY_PACKET_BOILERPLATE = "[NAME] was given a County Attorney Packet and informed how to follow through with pursuing charges.";
+
+export const ARREST_VERSION_1 = "[NAME] was handcuffed (checked for fit and double locked), searched incident to arrest, and placed in the back of [my / [officer’s]] patrol vehicle [and then transported to Tom Green County Jail and booked in for the listed charges].";
+export const ARREST_VERSION_2 = "[The suspect / SUSPECT NAME] was placed under arrest for [OFFENSE], handcuffed, searched incident to arrest, and transported to [Tom Green County Jail / the Juvenile Justice Center] for booking.";
+
+export const PHOTOS_TAKEN_BOILERPLATE = "I took photographs of the scene and later uploaded them to the Axon Cloud Server, which is accessible on Evidence.com.";
+
+export const CITIZEN_LINK_SENT_VERSION_1 = "An Axon’s Citizen Link was sent to [NAME] to upload digital evidence to the Axon Cloud Server.";
+export const CITIZEN_LINK_SENT_VERSION_2 = "I sent [NAME] an Axon’s Citizen Link to upload [photographs / the surveillance footage of the incident / the video footage of the incident / photographs and videos / digital evidence] to the Axon Cloud Server.";
+
+// Map of section labels to their default boilerplate text
+export const SECTION_BOILERPLATES: Record<string, string> = {
+  "CPS Intake": CPS_INTAKE_VERSION_1,
+  "APS Intake": APS_INTAKE_BOILERPLATE,
+  "Family Violence MANDATORY": FAMILY_VIOLENCE_BOILERPLATE,
+  "Danger Assessment": DANGER_ASSESSMENT_BOILERPLATE,
+  "CCH check": CCH_CHECK_BOILERPLATE,
+  "Missing Juvenile": MISSING_JUVENILE_BOILERPLATE,
+  "County Attorney Packet": COUNTY_ATTORNEY_PACKET_BOILERPLATE,
+  "ARREST": ARREST_VERSION_1,
+  "Photos taken": PHOTOS_TAKEN_BOILERPLATE,
+  "Citizen Link Sent": CITIZEN_LINK_SENT_VERSION_1,
+};
 
 const getInitialOptionalSections = (): OptionalSection[] =>
   NEW_OPTIONAL_SECTION_LABELS.map(label => ({
     id: label.toLowerCase().replace(/[^a-z]/g, ''),
     label: label,
     enabled: false,
-    text: "Under development",
+    text: SECTION_BOILERPLATES[label] || "Under development",
+    text2: label === 'Missing Juvenile' ? MISSING_JUVENILE_BOILERPLATE_2 : undefined,
     isEdited: false
   }));
 
 export const INITIAL_SETTINGS: PersistentSettings = {
-  defaultOfficer: ''
+  defaultOfficer: '',
+  offenseSummaryCitation: false,
+  offenseSummaryStatute: false,
+  offenseSummaryLevel: false,
+  offenseSummaryElements: false
 };
 
 export const TEMPLATES: Template[] = [
@@ -274,6 +335,9 @@ export const getFreshInitialState = (): ReportState => ({
     bwcStatement: BWC_BOILERPLATE,
     isBwcEnabled: true,
     isBwcEdited: false,
+    bwc2Statement: BWC2_BOILERPLATE,
+    isBwc2Enabled: true,
+    isBwc2Edited: false,
     offenseSummaryStatement: OFFENSE_SUMMARY_BOILERPLATE,
     isOffenseSummaryEnabled: true,
     isOffenseSummaryEdited: false,

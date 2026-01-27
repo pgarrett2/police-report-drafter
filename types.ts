@@ -11,10 +11,12 @@ export interface Template {
 }
 
 export interface Offense {
+  id?: string; // Unique instance ID
   literal: string;
   citation: string;
   statute: string;
   level: string;
+  elements?: string;
   statuteText?: string;
 }
 
@@ -22,6 +24,19 @@ export interface NameEntry {
   name: string;
   sex: 'M' | 'F' | '';
   isArrested?: boolean;
+  linkedOffenses?: string[]; // Array of offense literals
+  offenseDispositions?: Record<string, 'ARREST' | 'CITATION' | 'WARNING' | ''>;
+  isPursuing?: boolean;
+  isVictimSame?: boolean;
+  citationStatus?: number; // 0: None, 1: Citation (Orange), 2: Warning (Yellow)
+}
+
+export interface Conviction {
+  id: string;
+  court: string;
+  offense: string;
+  causeNumber: string;
+  date: string;
 }
 
 export type PartyCategory = 'Complainant' | 'Victim' | 'Suspect' | 'Witness' | 'Other';
@@ -49,11 +64,21 @@ export interface OptionalSection {
   label: string;
   enabled: boolean;
   text: string;
+  text2?: string; // Second text block for sections with two editing boxes
   isEdited: boolean;
+  isEdited2?: boolean; // Whether second text was edited
+  values?: Record<string, string>;
+  convictions?: Conviction[];
+  convictionListFormat?: 'bullet' | 'dash' | 'number';
 }
 
 export interface PersistentSettings {
   defaultOfficer: string;
+  offenseSummaryCitation?: boolean;
+  offenseSummaryStatute?: boolean;
+  offenseSummaryLevel?: boolean;
+  offenseSummaryElements?: boolean;
+  customOffenses?: Record<string, Offense>; // Keyed by literal
 }
 
 export interface ReportState {
@@ -87,6 +112,9 @@ export interface ReportState {
     bwcStatement: string;
     isBwcEnabled: boolean;
     isBwcEdited: boolean;
+    bwc2Statement: string;
+    isBwc2Enabled: boolean;
+    isBwc2Edited: boolean;
     isOffenseSummaryEnabled: boolean;
     offenseSummaryStatement: string;
     isOffenseSummaryEdited: boolean;
