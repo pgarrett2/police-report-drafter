@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { TEMPLATES, INITIAL_STATE, CALL_TYPES, INITIATED_CALL_TYPES, REASON_FOR_STOP_TYPES, CONSENSUAL_STOP_TYPES, INTRO_BODY, INITIAL_SETTINGS, BWC_BOILERPLATE, OFFENSE_SUMMARY_BOILERPLATE, getFreshInitialState, US_STATES, CPS_INTAKE_VERSION_1, CPS_INTAKE_VERSION_2, APS_INTAKE_BOILERPLATE, SECTION_BOILERPLATES, ARREST_VERSION_1, ARREST_VERSION_2, PHOTOS_TAKEN_BOILERPLATE, CITIZEN_LINK_SENT_VERSION_1, CITIZEN_LINK_SENT_VERSION_2, BWC_VERSION_1, BWC_VERSION_2, BWC_VERSION_3, BWC_INITIATED_TEXT, BWC2_BOILERPLATE } from './constants';
+import { SUBTYPES } from './subtypes';
 import { CJIS_CODES } from './cjis_codes';
-import { ReportState, Template, PartyCategory, OptionalSection, PersistentSettings, Offense, NameEntry, Vehicle, Conviction } from './types';
+import { ReportState, Template, PartyCategory, OptionalSection, PersistentSettings, Offense, NameEntry, Vehicle, Conviction, CustomParagraph } from './types';
 import { AccordionItem } from './components/AccordionItem';
 import { PreviewSection } from './components/PreviewSection';
 
@@ -158,6 +159,41 @@ export default function App() {
   const [editingSectionId, setEditingSectionId] = useState<string | null>(null);
   const [tempSectionText, setTempSectionText] = useState('');
 
+  // Editable boilerplate states for core sections
+  const [isEditingCallnotes, setIsEditingCallnotes] = useState(false);
+  const [tempCallnotes, setTempCallnotes] = useState('');
+  const [isEditingArrival, setIsEditingArrival] = useState(false);
+  const [tempArrival, setTempArrival] = useState('');
+  const [isEditingStatements, setIsEditingStatements] = useState(false);
+  const [tempStatements, setTempStatements] = useState('');
+  const [isEditingProperty, setIsEditingProperty] = useState(false);
+  const [tempProperty, setTempProperty] = useState('');
+  const [isEditingConclusion, setIsEditingConclusion] = useState(false);
+  const [tempConclusion, setTempConclusion] = useState('');
+
+  // Custom paragraph state
+  const [addingParagraphPosition, setAddingParagraphPosition] = useState<'after-arrival' | 'after-statements' | 'after-property' | null>(null);
+  const [tempCustomParagraph, setTempCustomParagraph] = useState('');
+  const [editingCustomParagraphId, setEditingCustomParagraphId] = useState<string | null>(null);
+  const [tempEditCustomParagraph, setTempEditCustomParagraph] = useState('');
+
+  // Offense summary editing state (per-offense boilerplate pattern)
+  const [editingOffenseSummaryId, setEditingOffenseSummaryId] = useState<string | null>(null);
+  const [tempOffenseSummaryEdit, setTempOffenseSummaryEdit] = useState('');
+
+  // Boilerplate placeholder values - stores dropdown/input selections for all boilerplate sections
+  const [boilerplatePlaceholderValues, setBoilerplatePlaceholderValues] = useState<Record<string, Record<string, string>>>({});
+
+  // VIN Scanner State
+  const [showVinTutorial, setShowVinTutorial] = useState(false);
+  const [showVinScanner, setShowVinScanner] = useState(false);
+  const [scanningVehicleId, setScanningVehicleId] = useState<string | null>(null);
+  const [vinScanSuccess, setVinScanSuccess] = useState<string | null>(null);
+  const cameraStreamRef = useRef<MediaStream | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const scannerGuideRef = useRef<HTMLDivElement | null>(null);
+  const scanningRef = useRef(false);
+
   // Effect to update offenses in current report when custom definitions change
   useEffect(() => {
     if (!settings.customOffenses) return;
@@ -206,6 +242,9 @@ export default function App() {
   const [offenseSearchTerm, setOffenseSearchTerm] = useState('');
   const [editingOffense, setEditingOffense] = useState<Offense | null>(null);
   const [showOverridesList, setShowOverridesList] = useState(false);
+  const [offenseEditorMobilePanel, setOffenseEditorMobilePanel] = useState<'search' | 'editing'>('search');
+  const [showJsonReview, setShowJsonReview] = useState(false);
+  const [jsonCopied, setJsonCopied] = useState(false);
 
   // Merge static codes with custom overrides
   const mergedCjisCodes = React.useMemo(() => {
@@ -249,16 +288,33 @@ export default function App() {
   };
 
   const handleExportJson = () => {
-    const dataStr = JSON.stringify(mergedCjisCodes, null, 2);
+    const overrides = settings.customOffenses || {};
+    if (Object.keys(overrides).length === 0) {
+      alert('No local overrides to export.');
+      return;
+    }
+    const dataStr = JSON.stringify(overrides, null, 2);
     const blob = new Blob([dataStr], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = "cjis_codes.json";
+    link.download = "offense_overrides.json";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
+  };
+
+  const handleCopyJson = async () => {
+    const overrides = settings.customOffenses || {};
+    const dataStr = JSON.stringify(overrides, null, 2);
+    try {
+      await navigator.clipboard.writeText(dataStr);
+      setJsonCopied(true);
+      setTimeout(() => setJsonCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy JSON:', err);
+    }
   };
 
   const handleDeleteOverride = (literal: string) => {
@@ -429,11 +485,44 @@ export default function App() {
 
   // Automated Narrative Generation Effect
   useEffect(() => {
-    const { date, time, reportingOfficer, address, isBusiness, businessName, callType, howReceived, reasonForStop, isConsensual } = reportData.incidentDetails;
+    const { date, time, reportingOfficer, address, isBusiness, businessName, callType, subtype, howReceived, reasonForStop, isConsensual } = reportData.incidentDetails;
     const formattedDate = formatDate(date);
     const { block, street, displayTitle, isIntersection } = getBlockAddress(address);
     const officerName = reportingOfficer || '[OFFICER]';
-    const callText = (callType || '[CALL TYPE]').toLowerCase();
+
+    // Call Type + Subtype Logic
+    let combinedCallText = (callType || '[CALL TYPE]').toLowerCase();
+
+    if (subtype && callType) {
+      const callTypeLower = callType.toLowerCase();
+
+      // Extract the descriptive part after the hyphen (e.g., "ASSAULT-ATTEMPTED ASSAULT" → "attempted assault")
+      const subtypeDescriptive = subtype.includes('-')
+        ? subtype.split('-').slice(1).join('-').toLowerCase().trim()
+        : subtype.toLowerCase();
+
+      // Check if the callType word(s) appear at the END of the subtype descriptive part
+      // e.g., "assault" at the end of "attempted assault" → use "attempted assault" only
+      const callTypeWords = callTypeLower.split(/\s+/);
+      const subtypeWords = subtypeDescriptive.split(/\s+/);
+
+      // Check if subtype ends with callType word(s)
+      const endsWithCallType = callTypeWords.length > 0 &&
+        subtypeWords.slice(-callTypeWords.length).join(' ') === callTypeWords.join(' ');
+
+      if (endsWithCallType) {
+        // Use the subtype descriptive part only (already contains callType at end)
+        combinedCallText = subtypeDescriptive;
+      } else {
+        // Original logic: remove duplicate words and combine as callType + unique subtype words
+        const uniqueSubtypeWords = subtypeWords.filter(word => !callTypeWords.includes(word));
+        if (uniqueSubtypeWords.length > 0) {
+          combinedCallText = `${combinedCallText} ${uniqueSubtypeWords.join(' ')}`;
+        }
+      }
+    }
+
+    const callText = combinedCallText;
     const reasonText = reasonForStop || '[Reason for Stop]';
 
     const offenseList = reportData.incidentDetails.offenses || [];
@@ -482,42 +571,39 @@ export default function App() {
       }
     }
 
-    let dynamicOffenseSummary = OFFENSE_SUMMARY_BOILERPLATE;
-    if (offenseList.length > 0) {
-      const lines = ["OFFENSE SUMMARY", "***********************"];
-      offenseList.forEach(offense => {
-        let line = offense.literal;
+    let newOffenseSummaries = { ...reportData.narratives.offenseSummaries };
+    let hasSummaryChanges = false;
 
-        // Settings-based display (default is false for all, so users must opt-in)
-        // If nothing is checked, only Literal is shown (checked above).
-
-        if (settings.offenseSummaryStatute) {
-          const fullStatuteTitle = STATUTE_TITLES[offense.statute.toUpperCase()] || offense.statute;
-          line += ` - ${fullStatuteTitle}`;
-        }
-
-        if (settings.offenseSummaryCitation) {
-          line += ` ${offense.citation}`;
-        }
-
-        if (settings.offenseSummaryLevel) {
-          line += ` [${offense.level}]`;
-        }
-
-        lines.push(line);
-
+    // 1. Add summaries for new offenses
+    offenseList.forEach(offense => {
+      if (!newOffenseSummaries[offense.id!]) {
+        // Textbox content: only elements text (citation/statute/level shown in fixed title above)
+        let finalText = '';
         if (settings.offenseSummaryElements && offense.elements) {
-          lines.push(`\n${offense.elements}\n`);
+          finalText = offense.elements;
         }
-      });
-      dynamicOffenseSummary = lines.join('\n');
-    }
+        newOffenseSummaries[offense.id!] = finalText;
+        hasSummaryChanges = true;
+      }
+    });
+
+    // 2. Remove summaries for deleted offenses
+    const currentIds = new Set(offenseList.map(o => o.id));
+    Object.keys(newOffenseSummaries).forEach(id => {
+      if (!currentIds.has(id)) {
+        delete newOffenseSummaries[id];
+        hasSummaryChanges = true;
+      }
+    });
 
     setReportData(prev => {
       const narratives = { ...prev.narratives };
       if (!prev.narratives.isPublicEdited) narratives.public = publicNarrative;
       if (!prev.narratives.isIntroEdited) narratives.introduction = `${introFirstSentence} ${INTRO_BODY}`;
-      if (!prev.narratives.isOffenseSummaryEdited) narratives.offenseSummaryStatement = dynamicOffenseSummary;
+
+      if (hasSummaryChanges) {
+        narratives.offenseSummaries = newOffenseSummaries;
+      }
 
       // Auto-populate Body-Cam text for Initiated calls
       if (howReceived === 'initiated' && !prev.narratives.isBwcEdited) {
@@ -537,6 +623,7 @@ export default function App() {
     reportData.incidentDetails.isBusiness,
     reportData.incidentDetails.businessName,
     reportData.incidentDetails.callType,
+    reportData.incidentDetails.subtype,
     reportData.incidentDetails.howReceived,
     reportData.incidentDetails.reasonForStop,
     reportData.incidentDetails.isConsensual,
@@ -544,7 +631,7 @@ export default function App() {
     reportData.narratives.isPublicEdited,
     reportData.narratives.isIntroEdited,
     reportData.narratives.isIntroEdited,
-    reportData.narratives.isOffenseSummaryEdited,
+    // removed isOffenseSummaryEdited dependency as it's deprecated logic
     settings
   ]);
 
@@ -652,7 +739,7 @@ export default function App() {
   const getSectionVersion = (sectionId: string, text: string): 1 | 2 => {
     if (sectionId === 'cpsintake') return text.includes('spoke with the following children') ? 2 : 1;
     if (sectionId === 'arrest') return text.includes('placed under arrest for') ? 2 : 1;
-    if (sectionId === 'citizenlinksent') return text.includes("I sent [NAME] an Axon's Citizen Link") ? 2 : 1;
+    if (sectionId === 'citizenlinksent') return text.includes("I sent") ? 2 : 1;
     return 1;
   };
 
@@ -792,16 +879,25 @@ export default function App() {
     return result;
   };
 
-  // Render text with inline input fields for placeholders
-  const renderTextWithPlaceholders = (section: OptionalSection, textKey: 'text' | 'text2' = 'text') => {
-    const text = textKey === 'text2' ? (section.text2 || '') : section.text;
-    // Match placeholders like [NAME], [NUMBER], [CHILDREN], [Example: ...], etc.
-    const placeholderRegex = /\[([A-Z0-9\s#\:\.,a-z/]+)\]/g;
+  // Generic function to render text with smart dropdown placeholders
+  // Used by all boilerplate sections (not Incident Details)
+  const processTextWithDropdowns = (
+    text: string,
+    sectionKey: string,
+    values: Record<string, string>,
+    onValueChange: (placeholder: string, value: string) => void
+  ): (string | React.ReactNode)[] => {
+    // Match placeholders like [NAME], [he/she], [option1 / option2 / option3], etc.
+    const placeholderRegex = /\[([A-Z0-9\s#\:\.,a-z/']+)\]/g;
     const parts: (string | React.ReactNode)[] = [];
     let lastIndex = 0;
     let match;
 
-    const values = section.values || {};
+    // Collect all names from the report for NAME placeholder
+    const allNames = (Object.values(reportData.names) as NameEntry[][])
+      .flat()
+      .map(entry => entry.name)
+      .filter(name => name.trim() !== '');
 
     while ((match = placeholderRegex.exec(text)) !== null) {
       if (match.index > lastIndex) {
@@ -811,43 +907,176 @@ export default function App() {
       const placeholder = match[1];
       const currentValue = values[placeholder] || '';
 
-      parts.push(
-        <textarea
-          key={`${section.id}-${textKey}-${match.index}`}
-          placeholder={placeholder}
-          value={currentValue}
-          rows={1}
-          onChange={(e) => {
-            handlePlaceholderChange(section.id, placeholder, e.target.value);
-            // Auto-resize
-            e.target.style.height = 'auto';
-            e.target.style.height = e.target.scrollHeight + 'px';
-          }}
-          onFocus={(e) => {
-            e.target.style.height = 'auto';
-            e.target.style.height = e.target.scrollHeight + 'px';
-          }}
-          className="inline-block align-bottom mx-1 px-2 py-0.5 border-b-2 border-primary/30 bg-primary/5 dark:bg-blue-900/10 rounded-t text-primary dark:text-blue-400 font-bold text-sm focus:border-primary focus:bg-primary/10 outline-none transition-all placeholder:text-primary/40 resize-none overflow-hidden"
-          style={{ minWidth: '80px', maxWidth: '100%', width: Math.max(80, (currentValue.length || placeholder.length) * 8 + 20) + 'px' }}
-        />
-      );
+      // Check if placeholder is NAME - populate from report names
+      if (placeholder.toUpperCase() === 'NAME' && allNames.length > 0) {
+        parts.push(
+          <select
+            key={`${sectionKey}-${match.index}`}
+            value={currentValue}
+            onChange={(e) => onValueChange(placeholder, e.target.value)}
+            aria-label="Select name"
+            title="Select name from report"
+            className="inline-block mx-1 px-2 py-0.5 border-b-2 border-primary/30 bg-primary/5 dark:bg-blue-900/10 rounded-t text-primary dark:text-blue-400 font-bold text-sm focus:border-primary focus:bg-primary/10 outline-none transition-all cursor-pointer"
+          >
+            <option value="">Select name...</option>
+            {allNames.map((name, idx) => (
+              <option key={idx} value={name}>{name}</option>
+            ))}
+          </select>
+        );
+      }
+      // Check if placeholder contains '/' - render as dropdown with options
+      else if (placeholder.includes('/')) {
+        const options = placeholder.split('/').map(opt => opt.trim());
 
-      lastIndex = match.index + match[0].length;
+        parts.push(
+          <select
+            key={`${sectionKey}-${match.index}`}
+            value={currentValue}
+            onChange={(e) => onValueChange(placeholder, e.target.value)}
+            aria-label={placeholder}
+            title={placeholder}
+            className="inline-block mx-1 px-2 py-0.5 border-b-2 border-primary/30 bg-primary/5 dark:bg-blue-900/10 rounded-t text-primary dark:text-blue-400 font-bold text-sm focus:border-primary focus:bg-primary/10 outline-none transition-all cursor-pointer"
+          >
+            <option value="">Select...</option>
+            {options.map((option, idx) => (
+              <option key={idx} value={option}>{option}</option>
+            ))}
+          </select>
+        );
+      }
+      // Regular text input for other placeholders
+      else {
+        // Calculate width based on display text (value or placeholder), ensuring minimum width
+        const displayText = currentValue || placeholder;
+        const calculatedWidth = Math.max(80, displayText.length * 9 + 24);
+
+        parts.push(
+          <input
+            key={`${sectionKey}-${match.index}`}
+            type="text"
+            placeholder={placeholder}
+            value={currentValue}
+            onChange={(e) => onValueChange(placeholder, e.target.value)}
+            className="inline-block align-bottom mx-1 px-2 py-0.5 border-b-2 border-primary/30 bg-primary/5 dark:bg-blue-900/10 rounded-t text-primary dark:text-blue-400 font-bold text-sm focus:border-primary focus:bg-primary/10 outline-none transition-all placeholder:text-primary/40"
+            style={{
+              width: calculatedWidth + 'px',
+              minWidth: '80px',
+              whiteSpace: 'nowrap'
+            }}
+          />
+        );
+      }
+
+      lastIndex = placeholderRegex.lastIndex;
     }
 
     if (lastIndex < text.length) {
       parts.push(text.slice(lastIndex));
     }
 
-    return parts.length > 0 ? parts : text;
+    return parts.length > 0 ? parts : [text];
+  };
+
+  // Render text with inline input fields for placeholders
+  const renderTextWithPlaceholders = (section: OptionalSection, textKey: 'text' | 'text2' = 'text') => {
+    const text = textKey === 'text2' ? (section.text2 || '') : section.text;
+    // Match placeholders like [NAME], [NUMBER], [CHILDREN], [Example: ...], etc.
+    const placeholderRegex = /\[([A-Z0-9\s#\:\.,a-z/']+)\]/g;
+    const parts: (string | React.ReactNode)[] = [];
+    let lastIndex = 0;
+    let match;
+
+    const values = section.values || {};
+
+    // Collect all names from the report for NAME placeholder
+    const allNames = (Object.values(reportData.names) as NameEntry[][])
+      .flat()
+      .map(entry => entry.name)
+      .filter(name => name.trim() !== '');
+
+    while ((match = placeholderRegex.exec(text)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(text.slice(lastIndex, match.index));
+      }
+
+      const placeholder = match[1];
+      const currentValue = values[placeholder] || '';
+
+      // Check if placeholder is NAME - populate from report names
+      if (placeholder.toUpperCase() === 'NAME' && allNames.length > 0) {
+        parts.push(
+          <select
+            key={`${section.id}-${textKey}-${match.index}`}
+            value={currentValue}
+            onChange={(e) => handlePlaceholderChange(section.id, placeholder, e.target.value)}
+            aria-label="Select name"
+            title="Select name from report"
+            className="inline-block mx-1 px-2 py-0.5 border-b-2 border-primary/30 bg-primary/5 dark:bg-blue-900/10 rounded-t text-primary dark:text-blue-400 font-bold text-sm focus:border-primary focus:bg-primary/10 outline-none transition-all cursor-pointer"
+          >
+            <option value="">Select name...</option>
+            {allNames.map((name, idx) => (
+              <option key={idx} value={name}>{name}</option>
+            ))}
+          </select>
+        );
+      }
+      // Check if placeholder is a dropdown options list (contains '/')
+      else if (placeholder.includes('/')) {
+        const options = placeholder.split('/').map(opt => opt.trim());
+
+        parts.push(
+          <select
+            key={`${section.id}-${textKey}-${match.index}`}
+            value={currentValue}
+            onChange={(e) => handlePlaceholderChange(section.id, placeholder, e.target.value)}
+            aria-label={placeholder}
+            title={placeholder}
+            className="inline-block mx-1 px-2 py-0.5 border-b-2 border-primary/30 bg-primary/5 dark:bg-blue-900/10 rounded-t text-primary dark:text-blue-400 font-bold text-sm focus:border-primary focus:bg-primary/10 outline-none transition-all cursor-pointer"
+          >
+            <option value="">Select...</option>
+            {options.map((option, idx) => (
+              <option key={idx} value={option}>{option}</option>
+            ))}
+          </select>
+        );
+      } else {
+        // Calculate width based on display text (value or placeholder), ensuring minimum width
+        const displayText = currentValue || placeholder;
+        const calculatedWidth = Math.max(80, displayText.length * 9 + 24);
+
+        parts.push(
+          <input
+            key={`${section.id}-${textKey}-${match.index}`}
+            type="text"
+            placeholder={placeholder}
+            value={currentValue}
+            onChange={(e) => handlePlaceholderChange(section.id, placeholder, e.target.value)}
+            className="inline-block align-bottom mx-1 px-2 py-0.5 border-b-2 border-primary/30 bg-primary/5 dark:bg-blue-900/10 rounded-t text-primary dark:text-blue-400 font-bold text-sm focus:border-primary focus:bg-primary/10 outline-none transition-all placeholder:text-primary/40"
+            style={{
+              width: calculatedWidth + 'px',
+              minWidth: '80px',
+              whiteSpace: 'nowrap'
+            }}
+          />
+        );
+      }
+
+      lastIndex = placeholderRegex.lastIndex;
+    }
+
+    if (lastIndex < text.length) {
+      parts.push(text.slice(lastIndex));
+    }
+
+    return parts;
   };
 
   // Check if a section has placeholders that should be rendered as inputs
-  const sectionHasPlaceholders = (sectionId: string) => {
-    return sectionId === 'cpsintake' ||
-      sectionId === 'apsintake' ||
-      sectionId === 'cchcheck' ||
-      sectionId === 'missingjuvenile';
+  // Auto-detects any section with [placeholder] patterns in its text
+  const sectionHasPlaceholders = (section: OptionalSection) => {
+    const placeholderRegex = /\[([A-Z0-9\s#\:\.,a-z/']+)\]/;
+    return placeholderRegex.test(section.text) || (section.text2 && placeholderRegex.test(section.text2));
   };
 
   const startEditingSection = (section: OptionalSection) => {
@@ -869,6 +1098,126 @@ export default function App() {
   };
 
   const cancelSectionEdit = () => setEditingSectionId(null);
+
+  // === Editable Boilerplate Handlers (Callnotes, Arrival, Statements, Property, Conclusion) ===
+  const startEditingCallnotes = () => {
+    setTempCallnotes(reportData.narratives.callnotesStatement);
+    setIsEditingCallnotes(true);
+  };
+  const saveCallnotes = () => {
+    handleInputChange('narratives', 'callnotesStatement', tempCallnotes);
+    handleInputChange('narratives', 'isCallnotesEdited', true);
+    setIsEditingCallnotes(false);
+  };
+
+  const startEditingArrival = () => {
+    setTempArrival(reportData.narratives.arrivalStatement);
+    setIsEditingArrival(true);
+  };
+  const saveArrival = () => {
+    handleInputChange('narratives', 'arrivalStatement', tempArrival);
+    handleInputChange('narratives', 'isArrivalEdited', true);
+    setIsEditingArrival(false);
+  };
+
+  const startEditingStatements = () => {
+    setTempStatements(reportData.narratives.statementsStatement);
+    setIsEditingStatements(true);
+  };
+  const saveStatements = () => {
+    handleInputChange('narratives', 'statementsStatement', tempStatements);
+    handleInputChange('narratives', 'isStatementsEdited', true);
+    setIsEditingStatements(false);
+  };
+
+  const startEditingProperty = () => {
+    setTempProperty(reportData.narratives.propertyStatement);
+    setIsEditingProperty(true);
+  };
+  const saveProperty = () => {
+    handleInputChange('narratives', 'propertyStatement', tempProperty);
+    handleInputChange('narratives', 'isPropertyEdited', true);
+    setIsEditingProperty(false);
+  };
+
+  const startEditingConclusion = () => {
+    setTempConclusion(reportData.narratives.conclusionStatement);
+    setIsEditingConclusion(true);
+  };
+  const saveConclusion = () => {
+    handleInputChange('narratives', 'conclusionStatement', tempConclusion);
+    handleInputChange('narratives', 'isConclusionEdited', true);
+    setIsEditingConclusion(false);
+  };
+
+  // === Custom Paragraph Handlers ===
+  const startAddingCustomParagraph = (position: 'after-arrival' | 'after-statements' | 'after-property') => {
+    setAddingParagraphPosition(position);
+    setTempCustomParagraph('');
+  };
+
+  const saveCustomParagraph = () => {
+    if (!addingParagraphPosition || !tempCustomParagraph.trim()) return;
+    const newParagraph: CustomParagraph = {
+      id: generateId(),
+      position: addingParagraphPosition,
+      text: tempCustomParagraph.trim()
+    };
+    setReportData(prev => ({
+      ...prev,
+      narratives: {
+        ...prev.narratives,
+        customParagraphs: [...(prev.narratives.customParagraphs || []), newParagraph]
+      }
+    }));
+    setAddingParagraphPosition(null);
+    setTempCustomParagraph('');
+  };
+
+  const cancelAddingCustomParagraph = () => {
+    setAddingParagraphPosition(null);
+    setTempCustomParagraph('');
+  };
+
+  const startEditingCustomParagraph = (paragraph: CustomParagraph) => {
+    setEditingCustomParagraphId(paragraph.id);
+    setTempEditCustomParagraph(paragraph.text);
+  };
+
+  const saveEditCustomParagraph = () => {
+    if (!editingCustomParagraphId) return;
+    setReportData(prev => ({
+      ...prev,
+      narratives: {
+        ...prev.narratives,
+        customParagraphs: (prev.narratives.customParagraphs || []).map(p =>
+          p.id === editingCustomParagraphId ? { ...p, text: tempEditCustomParagraph } : p
+        )
+      }
+    }));
+    setEditingCustomParagraphId(null);
+    setTempEditCustomParagraph('');
+  };
+
+  const cancelEditCustomParagraph = () => {
+    setEditingCustomParagraphId(null);
+    setTempEditCustomParagraph('');
+  };
+
+  const deleteCustomParagraph = (id: string) => {
+    setReportData(prev => ({
+      ...prev,
+      narratives: {
+        ...prev.narratives,
+        customParagraphs: (prev.narratives.customParagraphs || []).filter(p => p.id !== id)
+      }
+    }));
+  };
+
+  // Helper to get custom paragraphs for a specific position
+  const getCustomParagraphsForPosition = (position: 'after-arrival' | 'after-statements' | 'after-property') => {
+    return (reportData.narratives.customParagraphs || []).filter(p => p.position === position);
+  };
 
   const moveSection = (id: string, direction: 'up' | 'down') => {
     setReportData(prev => {
@@ -973,7 +1322,65 @@ export default function App() {
       };
 
       names[category][index] = currentEntry;
-      return { ...prev, names };
+
+      // Get all offenses with ARREST disposition after this update
+      const allArrestOffenseIds: string[] = [];
+      (Object.values(names) as NameEntry[][]).forEach(nameEntries => {
+        nameEntries.forEach(entry => {
+          if (entry.offenseDispositions) {
+            Object.entries(entry.offenseDispositions).forEach(([offId, disp]) => {
+              if (disp === 'ARREST' && !allArrestOffenseIds.includes(offId)) {
+                allArrestOffenseIds.push(offId);
+              }
+            });
+          }
+        });
+      });
+
+      // Get offense literals for all ARREST dispositions
+      const offensesInIncident = prev.incidentDetails.offenses || [];
+      const arrestOffenseLiterals = allArrestOffenseIds
+        .map(id => offensesInIncident.find(o => o.id === id)?.literal)
+        .filter(Boolean)
+        .join(', ');
+
+      let narratives = { ...prev.narratives };
+
+      if (disposition === 'ARREST') {
+        // Build ARREST V2 text with actual offense(s)
+        const arrestTextWithOffense = ARREST_VERSION_2.replace('[OFFENSE]', arrestOffenseLiterals || '[OFFENSE]');
+
+        // Enable ARREST section in optionalSections with populated text
+        narratives.optionalSections = narratives.optionalSections.map(section =>
+          section.id === 'arrest'
+            ? { ...section, enabled: true, text: arrestTextWithOffense }
+            : section
+        );
+        // Copy to Booking Probable Cause
+        narratives.probableCause = arrestTextWithOffense;
+      } else {
+        // Check if there are still any ARREST dispositions remaining
+        if (allArrestOffenseIds.length === 0) {
+          // No more ARREST dispositions - disable ARREST section and clear probableCause
+          narratives.optionalSections = narratives.optionalSections.map(section =>
+            section.id === 'arrest'
+              ? { ...section, enabled: false, text: ARREST_VERSION_2 }
+              : section
+          );
+          narratives.probableCause = '';
+        } else {
+          // Still have ARREST dispositions - update with remaining offense(s)
+          const arrestTextWithOffense = ARREST_VERSION_2.replace('[OFFENSE]', arrestOffenseLiterals);
+          narratives.optionalSections = narratives.optionalSections.map(section =>
+            section.id === 'arrest'
+              ? { ...section, text: arrestTextWithOffense }
+              : section
+          );
+          narratives.probableCause = arrestTextWithOffense;
+        }
+      }
+
+      return { ...prev, names, narratives };
     });
   };
 
@@ -1174,11 +1581,16 @@ export default function App() {
     }
 
     combinedInvestigative += `NARRATIVE:\n**********\n${processText(reportData.narratives.introduction)}`;
+    if (reportData.narratives.isBwcEnabled) combinedInvestigative += `\n\n${processText(reportData.narratives.bwcStatement)}`;
+    if (reportData.narratives.isCallnotesEnabled) combinedInvestigative += `\n\n${reportData.narratives.callnotesStatement}`;
+    if (reportData.narratives.isArrivalEnabled) combinedInvestigative += `\n\n${reportData.narratives.arrivalStatement}`;
     if (reportData.narratives.investigative) combinedInvestigative += `\n\n${processText(reportData.narratives.investigative)}`;
+    if (reportData.narratives.isStatementsEnabled) combinedInvestigative += `\n\n${reportData.narratives.statementsStatement}`;
+    if (reportData.narratives.isPropertyEnabled) combinedInvestigative += `\n\n${reportData.narratives.propertyStatement}`;
+    if (reportData.narratives.isConclusionEnabled) combinedInvestigative += `\n\n${reportData.narratives.conclusionStatement}`;
     reportData.narratives.optionalSections.forEach(section => {
       if (section.enabled) combinedInvestigative += `\n\n${processText(interpolatePlaceholders(section))}`;
     });
-    if (reportData.narratives.isBwcEnabled) combinedInvestigative += `\n\n${processText(reportData.narratives.bwcStatement)}`;
     if (reportData.narratives.isBwc2Enabled) combinedInvestigative += `\n\n${processText(reportData.narratives.bwc2Statement)}`;
     const fullText = `PUBLIC NARRATIVE:\n${reportData.narratives.public}\n\nINVESTIGATIVE NARRATIVE:\n${combinedInvestigative}\n\nPROBABLE CAUSE:\n${processText(reportData.narratives.probableCause)}`;
     copyToClipboard(fullText);
@@ -1192,8 +1604,19 @@ export default function App() {
   const saveBwc = () => { setReportData(prev => ({ ...prev, narratives: { ...prev.narratives, bwcStatement: tempBwc, isBwcEdited: true } })); setIsEditingBwc(false); };
   const startEditingBwc2 = () => { setTempBwc2(reportData.narratives.bwc2Statement); setIsEditingBwc2(true); };
   const saveBwc2 = () => { setReportData(prev => ({ ...prev, narratives: { ...prev.narratives, bwc2Statement: tempBwc2, isBwc2Edited: true } })); setIsEditingBwc2(false); };
-  const startEditingOffenseSummary = () => { setTempOffenseSummary(reportData.narratives.offenseSummaryStatement); setIsEditingOffenseSummary(true); };
-  const saveOffenseSummary = () => { setReportData(prev => ({ ...prev, narratives: { ...prev.narratives, offenseSummaryStatement: tempOffenseSummary, isOffenseSummaryEdited: true } })); setIsEditingOffenseSummary(false); };
+
+  const handleOffenseSummaryChange = (offenseId: string, value: string) => {
+    setReportData(prev => ({
+      ...prev,
+      narratives: {
+        ...prev.narratives,
+        offenseSummaries: {
+          ...(prev.narratives.offenseSummaries || {}),
+          [offenseId]: value
+        }
+      }
+    }));
+  };
 
   const addVehicleEntry = () => {
     setReportData(prev => ({
@@ -1252,6 +1675,174 @@ export default function App() {
     }
   };
 
+  // VIN Scanner Functions
+  const STORAGE_KEY_VIN_TUTORIAL = 'report_drafter_vin_tutorial_seen';
+
+  const handleStartVinScan = (vehicleId: string) => {
+    setScanningVehicleId(vehicleId);
+    const hasSeenTutorial = localStorage.getItem(STORAGE_KEY_VIN_TUTORIAL);
+    if (!hasSeenTutorial) {
+      setShowVinTutorial(true);
+    } else {
+      openVinScanner();
+    }
+  };
+
+  const dismissVinTutorial = () => {
+    localStorage.setItem(STORAGE_KEY_VIN_TUTORIAL, 'true');
+    setShowVinTutorial(false);
+    openVinScanner();
+  };
+
+  const openVinScanner = async () => {
+    // Show scanner UI immediately to maintain user gesture context for iOS
+    setShowVinScanner(true);
+
+    try {
+      // Use simpler constraints for better iOS Safari compatibility
+      const constraints = {
+        video: {
+          facingMode: { ideal: 'environment' }
+        },
+        audio: false
+      };
+
+      const stream = await navigator.mediaDevices.getUserMedia(constraints);
+      cameraStreamRef.current = stream;
+      scanningRef.current = true;
+
+      // Start video playback after modal is rendered
+      setTimeout(() => {
+        if (videoRef.current && cameraStreamRef.current) {
+          videoRef.current.srcObject = cameraStreamRef.current;
+          videoRef.current.play().catch(console.error);
+          startScanningLoop();
+        }
+      }, 100);
+    } catch (err) {
+      console.error('Camera access denied:', err);
+      // Close scanner and show error as toast instead of blocking alert
+      setShowVinScanner(false);
+      setVinScanSuccess('⚠️ Camera access denied. Please enable camera permissions in Settings.');
+      setTimeout(() => setVinScanSuccess(null), 4000);
+      setScanningVehicleId(null);
+    }
+  };
+
+  const startScanningLoop = () => {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+
+    const scanFrame = async () => {
+      if (!scanningRef.current || !videoRef.current || !ctx) return;
+
+      const video = videoRef.current;
+      if (video.readyState !== 4) {
+        requestAnimationFrame(scanFrame);
+        return;
+      }
+
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      ctx.drawImage(video, 0, 0);
+
+      try {
+        // Try barcode detection first (faster)
+        const imageData = canvas.toDataURL('image/jpeg', 0.8);
+        const vin = await tryBarcodeDetection(imageData) || await tryOcrDetection(canvas);
+
+        if (vin) {
+          handleVinScanComplete(vin);
+          return;
+        }
+      } catch (err) {
+        // Silent fail, continue scanning
+      }
+
+      if (scanningRef.current) {
+        setTimeout(() => requestAnimationFrame(scanFrame), 200); // Scan every 200ms
+      }
+    };
+
+    requestAnimationFrame(scanFrame);
+  };
+
+  const tryBarcodeDetection = async (imageDataUrl: string): Promise<string | null> => {
+    try {
+      // Use native BarcodeDetector if available (modern browsers)
+      if ('BarcodeDetector' in window) {
+        const detector = new (window as any).BarcodeDetector({ formats: ['code_39', 'code_128', 'data_matrix'] });
+        const img = new Image();
+        img.src = imageDataUrl;
+        await new Promise(resolve => img.onload = resolve);
+        const barcodes = await detector.detect(img);
+        for (const barcode of barcodes) {
+          const vin = extractVinFromText(barcode.rawValue);
+          if (vin) return vin;
+        }
+      }
+    } catch (err) {
+      // BarcodeDetector not available or failed
+    }
+    return null;
+  };
+
+  const tryOcrDetection = async (canvas: HTMLCanvasElement): Promise<string | null> => {
+    try {
+      if (typeof (window as any).Tesseract !== 'undefined') {
+        const { data: { text } } = await (window as any).Tesseract.recognize(canvas, 'eng', {
+          tessedit_char_whitelist: 'ABCDEFGHJKLMNPRSTUVWXYZ0123456789'
+        });
+        return extractVinFromText(text);
+      }
+    } catch (err) {
+      console.error('OCR failed:', err);
+    }
+    return null;
+  };
+
+  const extractVinFromText = (text: string): string | null => {
+    // VIN is 17 characters: digits + uppercase letters (excluding I, O, Q)
+    const vinRegex = /[A-HJ-NPR-Z0-9]{17}/g;
+    const matches = text.toUpperCase().replace(/[^A-HJ-NPR-Z0-9]/g, '').match(vinRegex);
+    return matches ? matches[0] : null;
+  };
+
+  const handleVinScanComplete = (vin: string) => {
+    scanningRef.current = false;
+
+    // Flash success animation
+    if (scannerGuideRef.current) {
+      scannerGuideRef.current.classList.add('success-flash');
+    }
+
+    // Update the vehicle VIN
+    if (scanningVehicleId) {
+      handleVehicleChange(scanningVehicleId, 'vin', vin);
+      // Auto-decode the VIN
+      decodeVin(scanningVehicleId, vin);
+    }
+
+    // Show success toast
+    setVinScanSuccess(vin);
+
+    // Close scanner after brief delay
+    setTimeout(() => {
+      closeVinScanner();
+      setTimeout(() => setVinScanSuccess(null), 2000);
+    }, 600);
+  };
+
+  const closeVinScanner = () => {
+    scanningRef.current = false;
+    if (cameraStreamRef.current) {
+      cameraStreamRef.current.getTracks().forEach(track => track.stop());
+      cameraStreamRef.current = null;
+    }
+    setShowVinScanner(false);
+    setScanningVehicleId(null);
+  };
+
   const renderVehicleInputs = () => {
     const allNames = [
       ...reportData.names.Complainant,
@@ -1277,7 +1868,22 @@ export default function App() {
           {reportData.vehicles.map((vehicle, index) => (
             <div key={vehicle.id} className="p-4 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl space-y-3 animate-in fade-in slide-in-from-top-1 duration-200">
               <div className="flex justify-between items-center border-b border-slate-200 dark:border-slate-700 pb-2 mb-2">
-                <span className="text-[10px] font-black uppercase text-slate-400">Vehicle #{index + 1}</span>
+                <div className="flex items-center">
+                  <span className="text-[10px] font-black uppercase text-slate-400">Vehicle #{index + 1}</span>
+                  <button
+                    onClick={() => handleStartVinScan(vehicle.id)}
+                    className="vin-scanner-btn"
+                    title="Scan VIN Barcode"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="4" width="18" height="16" rx="2" ry="2" />
+                      <line x1="7" y1="8" x2="7" y2="16" />
+                      <line x1="10" y1="8" x2="10" y2="16" />
+                      <line x1="13" y1="8" x2="13" y2="12" />
+                      <line x1="16" y1="8" x2="16" y2="16" />
+                    </svg>
+                  </button>
+                </div>
                 <button onClick={() => removeVehicleEntry(vehicle.id)} className="text-slate-400 hover:text-red-500 transition-colors">
                   <span className="material-symbols-outlined text-lg">delete</span>
                 </button>
@@ -1539,35 +2145,14 @@ export default function App() {
                     </button>
                   </div>
 
-                  {/* ARREST/CITATION buttons for Suspects */}
+                  {/* INFO button for Suspects */}
                   {category === 'Suspect' && (
-                    <div className="flex gap-1 shrink-0">
-                      <button
-                        onClick={() => handleNameChange(category, index, 'isArrested', !entry.isArrested)}
-                        className={`px-2 py-1.5 rounded-md text-[10px] font-black transition-all border ${entry.isArrested
-                          ? 'bg-red-500/10 border-red-500 text-red-600'
-                          : 'bg-slate-100 dark:bg-slate-800 border-transparent text-slate-400 opacity-70'
-                          }`}
-                      >
-                        ARREST
-                      </button>
-                      {hasClassC && (
-                        <button
-                          onClick={() => {
-                            const next = ((entry.citationStatus || 0) + 1) % 4; // 0, 1, 2, 3 (3 is reset)
-                            handleNameChange(category, index, 'citationStatus', next === 3 ? 0 : next);
-                          }}
-                          className={`px-2 py-1.5 rounded-md text-[10px] font-black transition-all border ${entry.citationStatus === 1
-                            ? 'bg-orange-500/10 border-orange-500 text-orange-600'
-                            : entry.citationStatus === 2
-                              ? 'bg-yellow-500/10 border-yellow-500 text-yellow-600'
-                              : 'bg-slate-100 dark:bg-slate-800 border-transparent text-slate-400 opacity-70'
-                            }`}
-                        >
-                          {entry.citationStatus === 2 ? 'WARNING' : 'CITATION'}
-                        </button>
-                      )}
-                    </div>
+                    <button
+                      onClick={() => {/* INFO functionality - placeholder */ }}
+                      className="px-2 py-1.5 rounded-md text-[10px] font-black transition-all border bg-slate-100 dark:bg-slate-800 border-transparent text-slate-400 opacity-70 hover:opacity-100 hover:border-slate-300 active:bg-slate-200 dark:active:bg-slate-700"
+                    >
+                      INFO
+                    </button>
                   )}
 
                   <button
@@ -1596,19 +2181,19 @@ export default function App() {
                               <div className="flex gap-1">
                                 <button
                                   onClick={() => updateOffenseDisposition(category, index, offId, entry.offenseDispositions?.[offId] === 'ARREST' ? '' : 'ARREST')}
-                                  className={`flex-1 py-1 rounded text-[8px] font-bold border transition-all ${entry.offenseDispositions?.[offId] === 'ARREST' ? 'bg-red-500 text-white border-red-500' : 'bg-slate-50 dark:bg-slate-800 text-slate-400 border-slate-200 dark:border-slate-700'}`}
+                                  className={`flex-1 py-1 rounded text-[8px] font-bold border transition-all ${entry.offenseDispositions?.[offId] === 'ARREST' ? 'bg-red-500/10 border-red-500 text-red-600' : 'bg-transparent text-slate-400 border-slate-200 dark:border-slate-700 opacity-70 hover:opacity-100'}`}
                                 >
                                   ARREST
                                 </button>
                                 <button
                                   onClick={() => updateOffenseDisposition(category, index, offId, entry.offenseDispositions?.[offId] === 'CITATION' ? '' : 'CITATION')}
-                                  className={`flex-1 py-1 rounded text-[8px] font-bold border transition-all ${entry.offenseDispositions?.[offId] === 'CITATION' ? 'bg-orange-500 text-white border-orange-500' : 'bg-slate-50 dark:bg-slate-800 text-slate-400 border-slate-200 dark:border-slate-700'}`}
+                                  className={`flex-1 py-1 rounded text-[8px] font-bold border transition-all ${entry.offenseDispositions?.[offId] === 'CITATION' ? 'bg-orange-500/10 border-orange-500 text-orange-600' : 'bg-transparent text-slate-400 border-slate-200 dark:border-slate-700 opacity-70 hover:opacity-100'}`}
                                 >
                                   CITE
                                 </button>
                                 <button
                                   onClick={() => updateOffenseDisposition(category, index, offId, entry.offenseDispositions?.[offId] === 'WARNING' ? '' : 'WARNING')}
-                                  className={`flex-1 py-1 rounded text-[8px] font-bold border transition-all ${entry.offenseDispositions?.[offId] === 'WARNING' ? 'bg-yellow-500 text-white border-yellow-500' : 'bg-slate-50 dark:bg-slate-800 text-slate-400 border-slate-200 dark:border-slate-700'}`}
+                                  className={`flex-1 py-1 rounded text-[8px] font-bold border transition-all ${entry.offenseDispositions?.[offId] === 'WARNING' ? 'bg-yellow-500/10 border-yellow-500 text-yellow-600' : 'bg-transparent text-slate-400 border-slate-200 dark:border-slate-700 opacity-70 hover:opacity-100'}`}
                                 >
                                   WARN
                                 </button>
@@ -1709,7 +2294,35 @@ N/A
 `;
   };
 
-  const investigativeNarrativeContent = `${reportData.narratives.isSapdNamesTemplateEnabled ? generateSapdNamesTemplate(reportData.names) + '\n\n' : ''}NARRATIVE:\n**********\n${processText(reportData.narratives.introduction)}${reportData.narratives.investigative ? `\n\n${processText(reportData.narratives.investigative)}` : ''}${reportData.narratives.optionalSections.filter(s => s.enabled).map(s => `\n\n${processText(interpolatePlaceholders(s))}`).join('')}${reportData.narratives.isBwcEnabled ? `\n\n${processText(reportData.narratives.bwcStatement)}` : ''}${reportData.narratives.isBwc2Enabled ? `\n\n${processText(reportData.narratives.bwc2Statement)}` : ''}${reportData.narratives.isOffenseSummaryEnabled ? `\n\n${processText(reportData.narratives.offenseSummaryStatement)}` : ''}`;
+  // Helper to get custom paragraph text for a position
+  const getCustomParagraphsText = (position: 'after-arrival' | 'after-statements' | 'after-property') => {
+    return (reportData.narratives.customParagraphs || [])
+      .filter(p => p.position === position)
+      .map(p => `\n\n${p.text}`)
+      .join('');
+  };
+
+  // Helper to build offense summary title line based on settings
+  const getOffenseSummaryTitle = (offense: Offense) => {
+    let titleParts: string[] = [offense.literal];
+    if (settings.offenseSummaryStatute && offense.statute) {
+      const fullStatuteTitle = STATUTE_TITLES[offense.statute.toUpperCase()] || offense.statute;
+      titleParts.push(fullStatuteTitle);
+    }
+    if (settings.offenseSummaryCitation && offense.citation) {
+      titleParts.push(offense.citation);
+    }
+    if (settings.offenseSummaryLevel && offense.level) {
+      titleParts.push(offense.level);
+    }
+    return titleParts.join(' - ');
+  };
+
+  const investigativeNarrativeContent = `${reportData.narratives.isSapdNamesTemplateEnabled ? generateSapdNamesTemplate(reportData.names) + '\n\n' : ''}NARRATIVE:\n**********\n${processText(reportData.narratives.introduction)}${reportData.narratives.isBwcEnabled ? `\n\n${processText(reportData.narratives.bwcStatement)}` : ''}${reportData.narratives.isCallnotesEnabled ? `\n\n${reportData.narratives.callnotesStatement}` : ''}${reportData.narratives.isArrivalEnabled ? `\n\n${reportData.narratives.arrivalStatement}` : ''}${getCustomParagraphsText('after-arrival')}${reportData.narratives.isStatementsEnabled ? `\n\n${reportData.narratives.statementsStatement}` : ''}${getCustomParagraphsText('after-statements')}${reportData.narratives.isPropertyEnabled ? `\n\n${reportData.narratives.propertyStatement}` : ''}${getCustomParagraphsText('after-property')}${reportData.narratives.isConclusionEnabled ? `\n\n${reportData.narratives.conclusionStatement}` : ''}${reportData.narratives.optionalSections.filter(s => s.enabled).map(s => `\n\n${processText(interpolatePlaceholders(s))}`).join('')}${reportData.narratives.isBwc2Enabled ? `\n\n${processText(reportData.narratives.bwc2Statement)}` : ''}${reportData.narratives.isOffenseSummaryEnabled && reportData.incidentDetails.offenses.length > 0 ? `\n\nOFFENSE SUMMARY\n***********************\n${reportData.incidentDetails.offenses.map(o => {
+    const title = getOffenseSummaryTitle(o);
+    const summaryBody = processText(reportData.narratives.offenseSummaries?.[o.id!] || '');
+    return summaryBody ? `${title}\n${summaryBody}` : title;
+  }).join('\n\n')}` : ''}`;
 
   return (
     <>
@@ -1862,9 +2475,26 @@ N/A
             </div>
 
             {/* Content */}
-            <div className="flex-1 flex overflow-hidden">
+            <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
+              {/* Mobile Panel Toggle */}
+              <div className="md:hidden flex border-b border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50">
+                <button
+                  onClick={() => setOffenseEditorMobilePanel('search')}
+                  className={`flex-1 py-2 px-4 text-xs font-bold uppercase tracking-wide transition-all flex items-center justify-center gap-2 ${offenseEditorMobilePanel === 'search' ? 'bg-primary text-white' : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-700'}`}
+                >
+                  <span className="material-symbols-outlined text-sm">search</span>
+                  Search
+                </button>
+                <button
+                  onClick={() => setOffenseEditorMobilePanel('editing')}
+                  className={`flex-1 py-2 px-4 text-xs font-bold uppercase tracking-wide transition-all flex items-center justify-center gap-2 ${offenseEditorMobilePanel === 'editing' ? 'bg-primary text-white' : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-700'}`}
+                >
+                  <span className="material-symbols-outlined text-sm">edit</span>
+                  Editing
+                </button>
+              </div>
               {/* Sidebar List */}
-              <div className="w-1/3 border-r border-slate-100 dark:border-slate-800 flex flex-col bg-slate-50/30 dark:bg-slate-900/50">
+              <div className={`w-full md:w-1/3 border-b md:border-b-0 md:border-r border-slate-100 dark:border-slate-800 flex flex-col bg-slate-50/30 dark:bg-slate-900/50 transition-all duration-200 ${offenseEditorMobilePanel === 'search' ? 'flex-1 md:flex-none' : 'h-0 overflow-hidden md:h-auto md:overflow-visible'}`}>
                 <div className="p-4 border-b border-slate-100 dark:border-slate-800">
                   <div className="relative">
                     <span className="material-symbols-outlined absolute left-3 top-2.5 text-slate-400">search</span>
@@ -1874,6 +2504,7 @@ N/A
                       className="w-full pl-10 pr-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm focus:ring-primary focus:border-primary dark:text-white transition-all"
                       value={offenseSearchTerm}
                       onChange={(e) => setOffenseSearchTerm(e.target.value)}
+                      onFocus={() => setOffenseEditorMobilePanel('search')}
                     />
                   </div>
                 </div>
@@ -1890,6 +2521,7 @@ N/A
                             onClick={() => {
                               setEditingOffense({ ...(offense as Offense) });
                               setShowOverridesList(false);
+                              setOffenseEditorMobilePanel('editing');
                             }}
                             className="flex-1 text-left"
                           >
@@ -1917,7 +2549,10 @@ N/A
                     editorFilteredOffenses.map((offense) => (
                       <button
                         key={offense.literal}
-                        onClick={() => setEditingOffense({ ...offense })}
+                        onClick={() => {
+                          setEditingOffense({ ...offense });
+                          setOffenseEditorMobilePanel('editing');
+                        }}
                         className={`w-full text-left px-4 py-3 rounded-lg text-sm transition-all ${editingOffense?.literal === offense.literal
                           ? 'bg-primary text-white shadow-md shadow-primary/20'
                           : 'hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300'
@@ -1942,10 +2577,10 @@ N/A
               </div>
 
               {/* Editor Panel */}
-              <div className="flex-1 flex flex-col bg-white dark:bg-slate-900">
+              <div className={`flex flex-col bg-white dark:bg-slate-900 transition-all duration-200 min-h-0 ${offenseEditorMobilePanel === 'editing' ? 'flex-1 overflow-y-auto' : 'h-0 overflow-hidden md:flex-1 md:h-auto md:overflow-visible'}`}>
                 {editingOffense ? (
-                  <div className="flex flex-col h-full">
-                    <div className="flex-1 overflow-y-auto p-8 space-y-6">
+                  <div className="flex flex-col h-full min-h-0">
+                    <div className="flex-1 overflow-y-auto p-4 md:p-8 space-y-4 md:space-y-6">
                       <h3 className="text-lg font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-4 mb-6">
                         Editing: <span className="text-primary">{editingOffense.literal}</span>
                       </h3>
@@ -1988,9 +2623,21 @@ N/A
                         <label className="block text-xs font-bold text-slate-500 uppercase mb-2">Elements</label>
                         <textarea
                           title="Offense elements"
-                          className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm focus:ring-primary focus:border-primary dark:text-white min-h-[100px] leading-relaxed"
+                          className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm focus:ring-primary focus:border-primary dark:text-white leading-relaxed resize-none overflow-hidden"
                           value={editingOffense.elements || ''}
                           onChange={(e) => setEditingOffense({ ...editingOffense, elements: e.target.value })}
+                          onInput={(e) => {
+                            const target = e.target as HTMLTextAreaElement;
+                            target.style.height = 'auto';
+                            target.style.height = target.scrollHeight + 'px';
+                          }}
+                          ref={(el) => {
+                            if (el) {
+                              el.style.height = 'auto';
+                              el.style.height = el.scrollHeight + 'px';
+                            }
+                          }}
+                          style={{ minHeight: '60px' }}
                         />
                       </div>
 
@@ -1998,9 +2645,21 @@ N/A
                         <label className="block text-xs font-bold text-slate-500 uppercase mb-2">Statute Text (Full)</label>
                         <textarea
                           title="Full statute text"
-                          className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm focus:ring-primary focus:border-primary dark:text-white min-h-[150px] font-mono text-xs leading-relaxed"
+                          className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm focus:ring-primary focus:border-primary dark:text-white font-mono text-xs leading-relaxed resize-none overflow-hidden"
                           value={editingOffense.statuteText || ''}
                           onChange={(e) => setEditingOffense({ ...editingOffense, statuteText: e.target.value })}
+                          onInput={(e) => {
+                            const target = e.target as HTMLTextAreaElement;
+                            target.style.height = 'auto';
+                            target.style.height = target.scrollHeight + 'px';
+                          }}
+                          ref={(el) => {
+                            if (el) {
+                              el.style.height = 'auto';
+                              el.style.height = el.scrollHeight + 'px';
+                            }
+                          }}
+                          style={{ minHeight: '60px' }}
                         />
                       </div>
                     </div>
@@ -2041,7 +2700,7 @@ N/A
             </div>
 
             {/* Footer */}
-            <div className="p-4 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center bg-slate-50/50 dark:bg-slate-800/30 rounded-b-2xl">
+            <div className="p-4 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row gap-3 sm:justify-between sm:items-center bg-slate-50/50 dark:bg-slate-800/30 rounded-b-2xl">
               <button
                 onClick={() => {
                   setShowOverridesList(!showOverridesList);
@@ -2054,16 +2713,72 @@ N/A
               >
                 <span className="material-symbols-outlined text-sm">{showOverridesList ? 'list' : 'edit_note'}</span>
                 <span className="font-semibold text-slate-700 dark:text-slate-300">{Object.keys(settings.customOffenses || {}).length}</span>
-                {showOverridesList ? 'viewing overrides' : 'local overrides active'}
+                <span className="hidden sm:inline">{showOverridesList ? 'viewing overrides' : 'local overrides active'}</span>
               </button>
-              <button
-                onClick={handleExportJson}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-bold hover:bg-slate-700 dark:hover:bg-slate-100 transition-colors"
-              >
-                <span className="material-symbols-outlined text-base">download</span>
-                Export Full JSON
-              </button>
+              <div className="flex flex-col sm:flex-row gap-2">
+                <button
+                  onClick={() => setShowJsonReview(true)}
+                  className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                >
+                  <span className="material-symbols-outlined text-base">visibility</span>
+                  <span className="hidden sm:inline">Review Overrides JSON</span>
+                  <span className="sm:hidden">Review JSON</span>
+                </button>
+                <button
+                  onClick={handleExportJson}
+                  className="flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-bold hover:bg-slate-700 dark:hover:bg-slate-100 transition-colors"
+                >
+                  <span className="material-symbols-outlined text-base">download</span>
+                  <span className="hidden sm:inline">Export Overrides JSON</span>
+                  <span className="sm:hidden">Export JSON</span>
+                </button>
+              </div>
             </div>
+
+            {/* JSON Review Modal */}
+            {showJsonReview && (
+              <div className="absolute inset-0 z-10 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm animate-in fade-in duration-150" onClick={() => setShowJsonReview(false)}>
+                <div className="bg-white dark:bg-slate-900 w-full max-w-2xl max-h-[80vh] rounded-xl shadow-2xl border border-slate-200 dark:border-slate-800 flex flex-col animate-in zoom-in-95 duration-200" onClick={(e) => e.stopPropagation()}>
+                  <div className="p-4 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center">
+                    <h3 className="font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                      <span className="material-symbols-outlined text-primary">data_object</span>
+                      Overrides JSON
+                    </h3>
+                    <button onClick={() => setShowJsonReview(false)} className="p-1.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                      <span className="material-symbols-outlined">close</span>
+                    </button>
+                  </div>
+                  <div className="flex-1 overflow-y-auto p-4">
+                    {Object.keys(settings.customOffenses || {}).length > 0 ? (
+                      <pre className="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg text-xs font-mono text-slate-700 dark:text-slate-300 overflow-x-auto whitespace-pre-wrap break-words">
+                        {JSON.stringify(settings.customOffenses, null, 2)}
+                      </pre>
+                    ) : (
+                      <div className="flex flex-col items-center justify-center py-12 text-slate-400">
+                        <span className="material-symbols-outlined text-4xl mb-2 opacity-50">check_circle</span>
+                        <p className="text-sm">No overrides active</p>
+                      </div>
+                    )}
+                  </div>
+                  <div className="p-4 border-t border-slate-100 dark:border-slate-800 flex justify-end gap-2">
+                    <button
+                      onClick={() => setShowJsonReview(false)}
+                      className="px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                    >
+                      Close
+                    </button>
+                    <button
+                      onClick={handleCopyJson}
+                      disabled={Object.keys(settings.customOffenses || {}).length === 0}
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white text-sm font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-lg shadow-primary/20"
+                    >
+                      <span className="material-symbols-outlined text-base">{jsonCopied ? 'check' : 'content_copy'}</span>
+                      {jsonCopied ? 'Copied!' : 'Copy JSON'}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -2199,12 +2914,34 @@ N/A
                     <div className="flex gap-4">
                       <div className="flex-1">
                         <label htmlFor="call-type" className="block text-xs font-medium text-slate-500 mb-1">Call Type</label>
-                        <select id="call-type" aria-label="Call Type" title="Select the type of call" className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-base md:text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none" value={reportData.incidentDetails.callType} onChange={(e) => handleInputChange('incidentDetails', 'callType', e.target.value)}>
+                        <select id="call-type" aria-label="Call Type" title="Select the type of call" className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-base md:text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none" value={reportData.incidentDetails.callType} onChange={(e) => {
+                          handleInputChange('incidentDetails', 'callType', e.target.value);
+                          handleInputChange('incidentDetails', 'subtype', '');
+                        }}>
                           <option value="">-- Select Call Type --</option>
                           {(reportData.incidentDetails.howReceived === 'initiated' ? INITIATED_CALL_TYPES : CALL_TYPES).map(type => <option key={type} value={type}>{type}</option>)}
                         </select>
                       </div>
                     </div>
+
+                    {reportData.incidentDetails.callType && SUBTYPES[reportData.incidentDetails.callType.toUpperCase()] && (
+                      <div className="mt-4 animate-in fade-in slide-in-from-top-1 duration-200">
+                        <label htmlFor="sub-type" className="block text-xs font-medium text-slate-500 mb-1">Sub-type</label>
+                        <select
+                          id="sub-type"
+                          aria-label="Sub-type"
+                          title="Select a sub-type"
+                          className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-base md:text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none"
+                          value={reportData.incidentDetails.subtype}
+                          onChange={(e) => handleInputChange('incidentDetails', 'subtype', e.target.value)}
+                        >
+                          <option value="">-- Select Sub-type --</option>
+                          {SUBTYPES[reportData.incidentDetails.callType.toUpperCase()].map(subtype => (
+                            <option key={subtype} value={subtype}>{subtype}</option>
+                          ))}
+                        </select>
+                      </div>
+                    )}
 
                     {REASON_FOR_STOP_TYPES.includes(reportData.incidentDetails.callType) && (
                       <div className="flex gap-4 animate-in fade-in slide-in-from-top-1 duration-200">
@@ -2410,10 +3147,13 @@ N/A
                       <input id="officer-input" type="text" title="Reporting Officer" placeholder="Doe, J #1234" value={reportData.incidentDetails.reportingOfficer} onChange={(e) => handleInputChange('incidentDetails', 'reportingOfficer', e.target.value)} className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-base md:text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none" />
                     </div>
                     <hr className="border-slate-100 dark:border-slate-800" />
-                    <div>
-                      <label htmlFor="template-select" className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1.5">Template Narrative Injection</label>
+                    <div className="opacity-50 pointer-events-none">
+                      <label htmlFor="template-select" className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1.5 flex items-center gap-2">
+                        Template Narrative Injection
+                        <span className="text-[9px] font-bold bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 px-1.5 py-0.5 rounded">COMING SOON</span>
+                      </label>
                       <div className="relative">
-                        <select id="template-select" aria-label="Template Narrative Injection" title="Select a narrative template" className="w-full pl-10 pr-4 py-2 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-md text-base md:text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none" value={selectedTemplateId} onChange={handleTemplateSelect}>
+                        <select id="template-select" aria-label="Template Narrative Injection" title="Select a narrative template" disabled className="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-md text-base md:text-sm dark:text-white appearance-none cursor-not-allowed" value={selectedTemplateId} onChange={handleTemplateSelect}>
                           <option value="">-- No Template Selected --</option>
                           {TEMPLATES.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
                         </select>
@@ -2448,7 +3188,7 @@ N/A
                       </div>
                     ) : (
                       <div className="relative group/public bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
-                        <button onClick={startEditingPublic} className="absolute top-2 right-2 p-1.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/public:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary"><span className="material-symbols-outlined text-sm">edit</span>EDIT</button>
+                        <button onClick={startEditingPublic} className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/public:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary"><span className="material-symbols-outlined text-sm">edit</span>EDIT</button>
                         {reportData.narratives.public}
                       </div>
                     )}
@@ -2480,7 +3220,7 @@ N/A
                         </div>
                       ) : (
                         <div className="relative group/intro bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
-                          <button onClick={startEditingIntro} className="absolute top-2 right-2 p-1.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/intro:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary"><span className="material-symbols-outlined text-sm">edit</span>EDIT</button>
+                          <button onClick={startEditingIntro} className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/intro:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary"><span className="material-symbols-outlined text-sm">edit</span>EDIT</button>
                           {processText(reportData.narratives.introduction)}
                         </div>
                       )}
@@ -2545,7 +3285,7 @@ N/A
                             </div>
                           ) : (
                             <div className="relative group/bwc bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
-                              <button onClick={startEditingBwc} className="absolute top-2 right-2 p-1.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/bwc:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary">
+                              <button onClick={startEditingBwc} className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/bwc:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary">
                                 <span className="material-symbols-outlined text-sm">edit</span>EDIT
                               </button>
                               {processText(reportData.narratives.bwcStatement)}
@@ -2554,17 +3294,400 @@ N/A
                         </div>
                       )}
                     </div>
-                    <div>
-                      <label htmlFor="findings-area" className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Findings</label>
-                      <textarea id="findings-area" title="Investigative Findings" className="w-full h-64 min-h-[256px] p-3 text-base md:text-sm border-2 border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary resize-none leading-relaxed appearance-none ring-offset-0 outline-none" placeholder="Enter detailed investigative findings here..." value={reportData.narratives.investigative} onChange={(e) => handleInputChange('narratives', 'investigative', e.target.value)} />
+
+                    {/* CALLNOTES Section */}
+                    <div className="pt-4 border-t border-slate-100 dark:border-slate-700">
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="checkbox"
+                          id="callnotes-checkbox"
+                          checked={reportData.narratives.isCallnotesEnabled}
+                          onChange={(e) => handleInputChange('narratives', 'isCallnotesEnabled', e.target.checked)}
+                          className="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4 cursor-pointer"
+                        />
+                        <label htmlFor="callnotes-checkbox" className="text-sm font-semibold text-slate-700 dark:text-slate-300 cursor-pointer select-none">
+                          CALLNOTES
+                        </label>
+                      </div>
+                      {reportData.narratives.isCallnotesEnabled && (
+                        <div className="mt-3 animate-in fade-in slide-in-from-top-2 duration-300">
+                          {isEditingCallnotes ? (
+                            <div className="space-y-2">
+                              <textarea
+                                title="Edit CALLNOTES statement"
+                                placeholder="Enter callnotes statement..."
+                                className="w-full h-32 min-h-[128px] p-3 text-base md:text-sm border-2 border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary resize-none leading-relaxed appearance-none ring-offset-0 outline-none"
+                                value={tempCallnotes}
+                                onChange={(e) => setTempCallnotes(e.target.value)}
+                              />
+                              <div className="flex justify-end gap-2">
+                                <button onClick={() => setIsEditingCallnotes(false)} className="text-xs font-semibold px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cancel</button>
+                                <button onClick={saveCallnotes} className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white">Save</button>
+                              </div>
+                            </div>
+                          ) : (
+                            <div className="relative group/callnotes bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                              <button onClick={startEditingCallnotes} className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/callnotes:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary">
+                                <span className="material-symbols-outlined text-sm">edit</span>EDIT
+                              </button>
+                              {reportData.narratives.callnotesStatement}
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* ARRIVAL ON SCENE Section */}
+                    <div className="pt-4 border-t border-slate-100 dark:border-slate-700">
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="checkbox"
+                          id="arrival-checkbox"
+                          checked={reportData.narratives.isArrivalEnabled}
+                          onChange={(e) => handleInputChange('narratives', 'isArrivalEnabled', e.target.checked)}
+                          className="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4 cursor-pointer"
+                        />
+                        <label htmlFor="arrival-checkbox" className="text-sm font-semibold text-slate-700 dark:text-slate-300 cursor-pointer select-none">
+                          ARRIVAL ON SCENE
+                        </label>
+                      </div>
+                      {reportData.narratives.isArrivalEnabled && (
+                        <div className="mt-3 animate-in fade-in slide-in-from-top-2 duration-300">
+                          {isEditingArrival ? (
+                            <div className="space-y-2">
+                              <textarea
+                                title="Edit ARRIVAL ON SCENE statement"
+                                placeholder="Enter arrival on scene statement..."
+                                className="w-full h-32 min-h-[128px] p-3 text-base md:text-sm border-2 border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary resize-none leading-relaxed appearance-none ring-offset-0 outline-none"
+                                value={tempArrival}
+                                onChange={(e) => setTempArrival(e.target.value)}
+                              />
+                              <div className="flex justify-end gap-2">
+                                <button onClick={() => setIsEditingArrival(false)} className="text-xs font-semibold px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cancel</button>
+                                <button onClick={saveArrival} className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white">Save</button>
+                              </div>
+                            </div>
+                          ) : (
+                            <div className="relative group/arrival bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                              <button onClick={startEditingArrival} className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/arrival:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary">
+                                <span className="material-symbols-outlined text-sm">edit</span>EDIT
+                              </button>
+                              {reportData.narratives.arrivalStatement}
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Custom Paragraphs after ARRIVAL + Add Button */}
+                    {getCustomParagraphsForPosition('after-arrival').map(paragraph => (
+                      <div key={paragraph.id} className="pt-4 border-t border-slate-100 dark:border-slate-700">
+                        {editingCustomParagraphId === paragraph.id ? (
+                          <div className="space-y-2 animate-in fade-in duration-200">
+                            <textarea
+                              className="w-full h-32 min-h-[128px] p-3 text-base md:text-sm border-2 border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary resize-none leading-relaxed appearance-none ring-offset-0 outline-none"
+                              value={tempEditCustomParagraph}
+                              onChange={(e) => setTempEditCustomParagraph(e.target.value)}
+                              placeholder="Enter your custom paragraph..."
+                            />
+                            <div className="flex justify-end gap-2">
+                              <button onClick={cancelEditCustomParagraph} className="text-xs font-semibold px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cancel</button>
+                              <button onClick={saveEditCustomParagraph} className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white">Save</button>
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="relative group/custom bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                            <div className="absolute top-2 right-2 flex gap-1 opacity-100 md:opacity-0 md:group-hover/custom:opacity-100 transition-opacity">
+                              <button onClick={() => startEditingCustomParagraph(paragraph)} className="p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm flex items-center gap-1 text-[10px] font-bold text-primary">
+                                <span className="material-symbols-outlined text-sm">edit</span>EDIT
+                              </button>
+                              <button onClick={() => deleteCustomParagraph(paragraph.id)} className="p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-red-200 dark:border-red-600 rounded shadow-sm flex items-center gap-1 text-[10px] font-bold text-red-500">
+                                <span className="material-symbols-outlined text-sm">delete</span>
+                              </button>
+                            </div>
+                            {paragraph.text}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                    {addingParagraphPosition === 'after-arrival' ? (
+                      <div className="pt-4 border-t border-slate-100 dark:border-slate-700 space-y-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                        <label className="block text-xs font-semibold text-primary uppercase tracking-wider">New Custom Paragraph</label>
+                        <textarea
+                          className="w-full h-32 min-h-[128px] p-3 text-base md:text-sm border-2 border-primary/50 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary resize-none leading-relaxed appearance-none ring-offset-0 outline-none"
+                          value={tempCustomParagraph}
+                          onChange={(e) => setTempCustomParagraph(e.target.value)}
+                          placeholder="Enter your custom paragraph text..."
+                          autoFocus
+                        />
+                        <div className="flex justify-end gap-2">
+                          <button onClick={cancelAddingCustomParagraph} className="text-xs font-semibold px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cancel</button>
+                          <button onClick={saveCustomParagraph} disabled={!tempCustomParagraph.trim()} className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white disabled:opacity-50 disabled:cursor-not-allowed">Save Paragraph</button>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="relative flex justify-center -mb-4">
+                        <div className="absolute top-1/2 left-0 right-0 border-t border-slate-100 dark:border-slate-700"></div>
+                        <button
+                          onClick={() => startAddingCustomParagraph('after-arrival')}
+                          className="relative z-10 w-8 h-8 rounded-full border-2 border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-slate-400 hover:border-primary hover:text-primary hover:bg-primary/5 transition-colors flex items-center justify-center shadow-sm"
+                          title="Add custom paragraph"
+                        >
+                          <span className="material-symbols-outlined text-lg">add</span>
+                        </button>
+                      </div>
+                    )}
+
+                    {/* STATEMENTS Section */}
+                    <div className="pt-4 border-t border-slate-100 dark:border-slate-700">
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="checkbox"
+                          id="statements-checkbox"
+                          checked={reportData.narratives.isStatementsEnabled}
+                          onChange={(e) => handleInputChange('narratives', 'isStatementsEnabled', e.target.checked)}
+                          className="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4 cursor-pointer"
+                        />
+                        <label htmlFor="statements-checkbox" className="text-sm font-semibold text-slate-700 dark:text-slate-300 cursor-pointer select-none">
+                          STATEMENTS
+                        </label>
+                      </div>
+                      {reportData.narratives.isStatementsEnabled && (
+                        <div className="mt-3 animate-in fade-in slide-in-from-top-2 duration-300">
+                          {isEditingStatements ? (
+                            <div className="space-y-2">
+                              <textarea
+                                title="Edit STATEMENTS statement"
+                                placeholder="Enter statements section..."
+                                className="w-full h-32 min-h-[128px] p-3 text-base md:text-sm border-2 border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary resize-none leading-relaxed appearance-none ring-offset-0 outline-none"
+                                value={tempStatements}
+                                onChange={(e) => setTempStatements(e.target.value)}
+                              />
+                              <div className="flex justify-end gap-2">
+                                <button onClick={() => setIsEditingStatements(false)} className="text-xs font-semibold px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cancel</button>
+                                <button onClick={saveStatements} className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white">Save</button>
+                              </div>
+                            </div>
+                          ) : (
+                            <div className="relative group/statements bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                              <button onClick={startEditingStatements} className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/statements:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary">
+                                <span className="material-symbols-outlined text-sm">edit</span>EDIT
+                              </button>
+                              {reportData.narratives.statementsStatement}
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Custom Paragraphs after STATEMENTS + Add Button */}
+                    {getCustomParagraphsForPosition('after-statements').map(paragraph => (
+                      <div key={paragraph.id} className="pt-4 border-t border-slate-100 dark:border-slate-700">
+                        {editingCustomParagraphId === paragraph.id ? (
+                          <div className="space-y-2 animate-in fade-in duration-200">
+                            <textarea
+                              className="w-full h-32 min-h-[128px] p-3 text-base md:text-sm border-2 border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary resize-none leading-relaxed appearance-none ring-offset-0 outline-none"
+                              value={tempEditCustomParagraph}
+                              onChange={(e) => setTempEditCustomParagraph(e.target.value)}
+                              placeholder="Enter your custom paragraph..."
+                            />
+                            <div className="flex justify-end gap-2">
+                              <button onClick={cancelEditCustomParagraph} className="text-xs font-semibold px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cancel</button>
+                              <button onClick={saveEditCustomParagraph} className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white">Save</button>
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="relative group/custom bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                            <div className="absolute top-2 right-2 flex gap-1 opacity-100 md:opacity-0 md:group-hover/custom:opacity-100 transition-opacity">
+                              <button onClick={() => startEditingCustomParagraph(paragraph)} className="p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm flex items-center gap-1 text-[10px] font-bold text-primary">
+                                <span className="material-symbols-outlined text-sm">edit</span>EDIT
+                              </button>
+                              <button onClick={() => deleteCustomParagraph(paragraph.id)} className="p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-red-200 dark:border-red-600 rounded shadow-sm flex items-center gap-1 text-[10px] font-bold text-red-500">
+                                <span className="material-symbols-outlined text-sm">delete</span>
+                              </button>
+                            </div>
+                            {paragraph.text}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                    {addingParagraphPosition === 'after-statements' ? (
+                      <div className="pt-4 border-t border-slate-100 dark:border-slate-700 space-y-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                        <label className="block text-xs font-semibold text-primary uppercase tracking-wider">New Custom Paragraph</label>
+                        <textarea
+                          className="w-full h-32 min-h-[128px] p-3 text-base md:text-sm border-2 border-primary/50 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary resize-none leading-relaxed appearance-none ring-offset-0 outline-none"
+                          value={tempCustomParagraph}
+                          onChange={(e) => setTempCustomParagraph(e.target.value)}
+                          placeholder="Enter your custom paragraph text..."
+                          autoFocus
+                        />
+                        <div className="flex justify-end gap-2">
+                          <button onClick={cancelAddingCustomParagraph} className="text-xs font-semibold px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cancel</button>
+                          <button onClick={saveCustomParagraph} disabled={!tempCustomParagraph.trim()} className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white disabled:opacity-50 disabled:cursor-not-allowed">Save Paragraph</button>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="relative flex justify-center -mb-4">
+                        <div className="absolute top-1/2 left-0 right-0 border-t border-slate-100 dark:border-slate-700"></div>
+                        <button
+                          onClick={() => startAddingCustomParagraph('after-statements')}
+                          className="relative z-10 w-8 h-8 rounded-full border-2 border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-slate-400 hover:border-primary hover:text-primary hover:bg-primary/5 transition-colors flex items-center justify-center shadow-sm"
+                          title="Add custom paragraph"
+                        >
+                          <span className="material-symbols-outlined text-lg">add</span>
+                        </button>
+                      </div>
+                    )}
+
+                    {/* PROPERTY Section */}
+                    <div className="pt-4 border-t border-slate-100 dark:border-slate-700">
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="checkbox"
+                          id="property-checkbox"
+                          checked={reportData.narratives.isPropertyEnabled}
+                          onChange={(e) => handleInputChange('narratives', 'isPropertyEnabled', e.target.checked)}
+                          className="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4 cursor-pointer"
+                        />
+                        <label htmlFor="property-checkbox" className="text-sm font-semibold text-slate-700 dark:text-slate-300 cursor-pointer select-none">
+                          PROPERTY
+                        </label>
+                      </div>
+                      {reportData.narratives.isPropertyEnabled && (
+                        <div className="mt-3 animate-in fade-in slide-in-from-top-2 duration-300">
+                          {isEditingProperty ? (
+                            <div className="space-y-2">
+                              <textarea
+                                title="Edit PROPERTY statement"
+                                placeholder="Enter property section..."
+                                className="w-full h-32 min-h-[128px] p-3 text-base md:text-sm border-2 border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary resize-none leading-relaxed appearance-none ring-offset-0 outline-none"
+                                value={tempProperty}
+                                onChange={(e) => setTempProperty(e.target.value)}
+                              />
+                              <div className="flex justify-end gap-2">
+                                <button onClick={() => setIsEditingProperty(false)} className="text-xs font-semibold px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cancel</button>
+                                <button onClick={saveProperty} className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white">Save</button>
+                              </div>
+                            </div>
+                          ) : (
+                            <div className="relative group/property bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                              <button onClick={startEditingProperty} className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/property:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary">
+                                <span className="material-symbols-outlined text-sm">edit</span>EDIT
+                              </button>
+                              {reportData.narratives.propertyStatement}
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Custom Paragraphs after PROPERTY + Add Button */}
+                    {getCustomParagraphsForPosition('after-property').map(paragraph => (
+                      <div key={paragraph.id} className="pt-4 border-t border-slate-100 dark:border-slate-700">
+                        {editingCustomParagraphId === paragraph.id ? (
+                          <div className="space-y-2 animate-in fade-in duration-200">
+                            <textarea
+                              className="w-full h-32 min-h-[128px] p-3 text-base md:text-sm border-2 border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary resize-none leading-relaxed appearance-none ring-offset-0 outline-none"
+                              value={tempEditCustomParagraph}
+                              onChange={(e) => setTempEditCustomParagraph(e.target.value)}
+                              placeholder="Enter your custom paragraph..."
+                            />
+                            <div className="flex justify-end gap-2">
+                              <button onClick={cancelEditCustomParagraph} className="text-xs font-semibold px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cancel</button>
+                              <button onClick={saveEditCustomParagraph} className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white">Save</button>
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="relative group/custom bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                            <div className="absolute top-2 right-2 flex gap-1 opacity-100 md:opacity-0 md:group-hover/custom:opacity-100 transition-opacity">
+                              <button onClick={() => startEditingCustomParagraph(paragraph)} className="p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm flex items-center gap-1 text-[10px] font-bold text-primary">
+                                <span className="material-symbols-outlined text-sm">edit</span>EDIT
+                              </button>
+                              <button onClick={() => deleteCustomParagraph(paragraph.id)} className="p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-red-200 dark:border-red-600 rounded shadow-sm flex items-center gap-1 text-[10px] font-bold text-red-500">
+                                <span className="material-symbols-outlined text-sm">delete</span>
+                              </button>
+                            </div>
+                            {paragraph.text}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                    {addingParagraphPosition === 'after-property' ? (
+                      <div className="pt-4 border-t border-slate-100 dark:border-slate-700 space-y-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                        <label className="block text-xs font-semibold text-primary uppercase tracking-wider">New Custom Paragraph</label>
+                        <textarea
+                          className="w-full h-32 min-h-[128px] p-3 text-base md:text-sm border-2 border-primary/50 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary resize-none leading-relaxed appearance-none ring-offset-0 outline-none"
+                          value={tempCustomParagraph}
+                          onChange={(e) => setTempCustomParagraph(e.target.value)}
+                          placeholder="Enter your custom paragraph text..."
+                          autoFocus
+                        />
+                        <div className="flex justify-end gap-2">
+                          <button onClick={cancelAddingCustomParagraph} className="text-xs font-semibold px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cancel</button>
+                          <button onClick={saveCustomParagraph} disabled={!tempCustomParagraph.trim()} className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white disabled:opacity-50 disabled:cursor-not-allowed">Save Paragraph</button>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="relative flex justify-center -mb-4">
+                        <div className="absolute top-1/2 left-0 right-0 border-t border-slate-100 dark:border-slate-700"></div>
+                        <button
+                          onClick={() => startAddingCustomParagraph('after-property')}
+                          className="relative z-10 w-8 h-8 rounded-full border-2 border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-slate-400 hover:border-primary hover:text-primary hover:bg-primary/5 transition-colors flex items-center justify-center shadow-sm"
+                          title="Add custom paragraph"
+                        >
+                          <span className="material-symbols-outlined text-lg">add</span>
+                        </button>
+                      </div>
+                    )}
+
+                    {/* CONCLUSION Section */}
+                    <div className="pt-4 border-t border-slate-100 dark:border-slate-700">
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="checkbox"
+                          id="conclusion-checkbox"
+                          checked={reportData.narratives.isConclusionEnabled}
+                          onChange={(e) => handleInputChange('narratives', 'isConclusionEnabled', e.target.checked)}
+                          className="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4 cursor-pointer"
+                        />
+                        <label htmlFor="conclusion-checkbox" className="text-sm font-semibold text-slate-700 dark:text-slate-300 cursor-pointer select-none">
+                          CONCLUSION
+                        </label>
+                      </div>
+                      {reportData.narratives.isConclusionEnabled && (
+                        <div className="mt-3 animate-in fade-in slide-in-from-top-2 duration-300">
+                          {isEditingConclusion ? (
+                            <div className="space-y-2">
+                              <textarea
+                                title="Edit CONCLUSION statement"
+                                placeholder="Enter conclusion section..."
+                                className="w-full h-32 min-h-[128px] p-3 text-base md:text-sm border-2 border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary resize-none leading-relaxed appearance-none ring-offset-0 outline-none"
+                                value={tempConclusion}
+                                onChange={(e) => setTempConclusion(e.target.value)}
+                              />
+                              <div className="flex justify-end gap-2">
+                                <button onClick={() => setIsEditingConclusion(false)} className="text-xs font-semibold px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cancel</button>
+                                <button onClick={saveConclusion} className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white">Save</button>
+                              </div>
+                            </div>
+                          ) : (
+                            <div className="relative group/conclusion bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                              <button onClick={startEditingConclusion} className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/conclusion:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary">
+                                <span className="material-symbols-outlined text-sm">edit</span>EDIT
+                              </button>
+                              {reportData.narratives.conclusionStatement}
+                            </div>
+                          )}
+                        </div>
+                      )}
                     </div>
                     <div className="space-y-3 pt-2 border-t border-slate-100 dark:border-slate-700">
                       <button
                         onClick={() => setIsAdditionalSectionsOpen(!isAdditionalSectionsOpen)}
-                        className="w-full flex items-center justify-between p-2 bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors group"
+                        className="w-full flex items-center justify-between p-3 border-2 border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-primary rounded-lg transition-colors group"
                       >
-                        <label className="block text-xs font-semibold text-slate-500 uppercase tracking-wider cursor-pointer group-hover:text-primary transition-colors">Additional Sections</label>
-                        <span className={`material-symbols-outlined text-slate-400 group-hover:text-primary transition-transform duration-200 ${isAdditionalSectionsOpen ? 'rotate-180' : ''}`}>expand_more</span>
+                        <label className="block text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider cursor-pointer group-hover:text-primary transition-colors">ADDITIONAL STATEMENTS</label>
+                        <span className={`material-symbols-outlined text-slate-500 group-hover:text-primary transition-transform duration-200 ${isAdditionalSectionsOpen ? 'rotate-180' : ''}`}>expand_more</span>
                       </button>
 
                       {isAdditionalSectionsOpen && (
@@ -2615,7 +3738,7 @@ N/A
                                     <textarea id={`edit-section-${section.id}`} title={`Edit ${section.label}`} className="w-full h-32 min-h-[128px] p-3 text-base md:text-sm border-2 border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary resize-none appearance-none ring-offset-0 outline-none" value={tempSectionText} onChange={(e) => setTempSectionText(e.target.value)} />
                                     <div className="flex justify-end gap-2"><button onClick={cancelSectionEdit} className="text-xs font-semibold px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600">Cancel</button><button onClick={() => saveSection(section.id)} className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white">Save</button></div>
                                   </div>
-                                ) : sectionHasPlaceholders(section.id) ? (
+                                ) : sectionHasPlaceholders(section) ? (
                                   <div className="space-y-4">
                                     {/* First text box (Report Form for Missing Juvenile, or main text for others) */}
                                     <div className="relative bg-slate-50 dark:bg-slate-800/50 border border-slate-200 rounded p-4 text-sm leading-loose text-slate-700 dark:text-slate-300">
@@ -2768,7 +3891,7 @@ N/A
                               </div>
                             ) : (
                               <div className="relative group/bwc2 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
-                                <button onClick={startEditingBwc2} className="absolute top-2 right-2 p-1.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/bwc2:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary">
+                                <button onClick={startEditingBwc2} className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/bwc2:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary">
                                   <span className="material-symbols-outlined text-sm">edit</span>EDIT
                                 </button>
                                 {processText(reportData.narratives.bwc2Statement)}
@@ -2795,29 +3918,84 @@ N/A
 
                         {reportData.narratives.isOffenseSummaryEnabled && (
                           <div className="animate-in fade-in slide-in-from-top-2 duration-300">
-                            {isEditingOffenseSummary ? (
-                              <div className="space-y-2">
-                                <label htmlFor="offense-summary-edit-area" className="sr-only">Edit Offense Summary</label>
-                                <textarea
-                                  id="offense-summary-edit-area"
-                                  title="Edit Offense Summary"
-                                  className="w-full h-32 min-h-[128px] p-3 text-base md:text-sm border-2 border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary resize-none leading-relaxed appearance-none ring-offset-0 outline-none"
-                                  value={tempOffenseSummary}
-                                  onChange={(e) => setTempOffenseSummary(e.target.value)}
-                                />
-                                <div className="flex justify-end gap-2">
-                                  <button onClick={() => setIsEditingOffenseSummary(false)} className="text-xs font-semibold px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cancel</button>
-                                  <button onClick={saveOffenseSummary} className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white">Save</button>
+                            <div className="space-y-6">
+                              {reportData.incidentDetails.offenses && reportData.incidentDetails.offenses.length > 0 ? (
+                                reportData.incidentDetails.offenses.map((offense) => {
+                                  const summaryText = reportData.narratives.offenseSummaries?.[offense.id!] || '';
+
+                                  // Build the fixed title with metadata based on settings
+                                  let titleParts: string[] = [offense.literal];
+                                  if (settings.offenseSummaryStatute && offense.statute) {
+                                    const fullStatuteTitle = STATUTE_TITLES[offense.statute.toUpperCase()] || offense.statute;
+                                    titleParts.push(fullStatuteTitle);
+                                  }
+                                  if (settings.offenseSummaryCitation && offense.citation) {
+                                    titleParts.push(offense.citation);
+                                  }
+                                  if (settings.offenseSummaryLevel && offense.level) {
+                                    titleParts.push(offense.level);
+                                  }
+                                  const fixedTitle = titleParts.join(' - ');
+
+                                  return (
+                                    <div key={offense.id} className="relative group/offense-summary-item">
+                                      <div className="text-[10px] font-bold text-slate-500 mb-1 uppercase tracking-wider pl-1">
+                                        {fixedTitle}
+                                      </div>
+                                      {editingOffenseSummaryId === offense.id ? (
+                                        <div className="space-y-2 animate-in fade-in duration-200">
+                                          <textarea
+                                            title={`Edit summary for ${offense.literal}`}
+                                            className="w-full min-h-[80px] p-3 text-base md:text-sm border-2 border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary leading-relaxed appearance-none ring-offset-0 outline-none resize-none"
+                                            value={tempOffenseSummaryEdit}
+                                            onChange={(e) => setTempOffenseSummaryEdit(e.target.value)}
+                                            onInput={(e) => {
+                                              const target = e.target as HTMLTextAreaElement;
+                                              requestAnimationFrame(() => {
+                                                target.style.minHeight = 'auto';
+                                                target.style.minHeight = target.scrollHeight + 'px';
+                                              });
+                                            }}
+                                            ref={(el) => {
+                                              if (el) {
+                                                el.style.minHeight = el.scrollHeight + 'px';
+                                              }
+                                            }}
+                                            autoFocus
+                                          />
+                                          <div className="flex justify-end gap-2">
+                                            <button onClick={() => setEditingOffenseSummaryId(null)} className="text-xs font-semibold px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cancel</button>
+                                            <button onClick={() => {
+                                              handleOffenseSummaryChange(offense.id!, tempOffenseSummaryEdit);
+                                              setEditingOffenseSummaryId(null);
+                                            }} className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white">Save</button>
+                                          </div>
+                                        </div>
+                                      ) : (
+                                        <div className="relative group/offense-elements bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300 whitespace-pre-wrap">
+                                          <button
+                                            onClick={() => {
+                                              setTempOffenseSummaryEdit(summaryText);
+                                              setEditingOffenseSummaryId(offense.id!);
+                                            }}
+                                            className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/offense-elements:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary"
+                                          >
+                                            <span className="material-symbols-outlined text-sm">edit</span>EDIT
+                                          </button>
+                                          {summaryText || <span className="text-slate-400 italic">No elements text. Click EDIT to add.</span>}
+                                        </div>
+                                      )}
+                                    </div>
+                                  );
+                                })
+                              ) : (
+                                <div className="text-center py-8 border-2 border-dashed border-slate-100 dark:border-slate-800 rounded-lg">
+                                  <div className="text-slate-400 text-sm italic">
+                                    No offenses added. Add offenses in "Incident Details" to generate summaries.
+                                  </div>
                                 </div>
-                              </div>
-                            ) : (
-                              <div className="relative group/offense-summary bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
-                                <button onClick={startEditingOffenseSummary} className="absolute top-2 right-2 p-1.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/offense-summary:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary">
-                                  <span className="material-symbols-outlined text-sm">edit</span>EDIT
-                                </button>
-                                <div className="whitespace-pre-wrap">{processText(reportData.narratives.offenseSummaryStatement)}</div>
-                              </div>
-                            )}
+                              )}
+                            </div>
                           </div>
                         )}
                       </div>
@@ -2860,6 +4038,62 @@ N/A
           </div>
         </section>
       </main >
+
+      {/* VIN Scanner Tutorial Modal */}
+      {showVinTutorial && (
+        <div className="vin-info-modal" onClick={() => setShowVinTutorial(false)}>
+          <div className="vin-info-modal-content" onClick={e => e.stopPropagation()}>
+            <div className="vin-info-modal-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="4" width="18" height="16" rx="2" ry="2" />
+                <line x1="7" y1="8" x2="7" y2="16" />
+                <line x1="10" y1="8" x2="10" y2="16" />
+                <line x1="13" y1="8" x2="13" y2="12" />
+                <line x1="16" y1="8" x2="16" y2="16" />
+              </svg>
+            </div>
+            <h3>Scan VIN or Registration</h3>
+            <p>Point your camera at a VIN barcode sticker (usually found on the driver's door jamb or dashboard) or a registration card barcode. The VIN will be automatically detected and filled in.</p>
+            <button className="vin-info-modal-button" onClick={dismissVinTutorial}>Got it</button>
+          </div>
+        </div>
+      )}
+
+      {/* VIN Scanner Fullscreen UI */}
+      {showVinScanner && (
+        <div className="scanner-fullscreen">
+          <video
+            ref={videoRef}
+            className="scanner-video"
+            playsInline
+            autoPlay
+            muted
+          />
+          <div className="scanner-topbar">
+            <span className="scanner-title">Scan VIN Barcode</span>
+            <button className="scanner-control-btn" onClick={closeVinScanner}>
+              <span className="material-symbols-outlined">close</span>
+            </button>
+          </div>
+          <div className="scanner-overlay">
+            <div ref={scannerGuideRef} className="scanner-guide-box">
+              <div className="scanner-corner top-left"></div>
+              <div className="scanner-corner top-right"></div>
+              <div className="scanner-corner bottom-left"></div>
+              <div className="scanner-corner bottom-right"></div>
+            </div>
+            <p className="scanner-instruction">Position the barcode within the frame</p>
+          </div>
+        </div>
+      )}
+
+      {/* VIN Scan Success/Error Toast */}
+      <div
+        className={`success-toast ${vinScanSuccess ? 'show' : ''}`}
+        style={vinScanSuccess?.startsWith('⚠️') ? { background: '#F59E0B' } : {}}
+      >
+        {vinScanSuccess?.startsWith('⚠️') ? vinScanSuccess : `✓ VIN Scanned: ${vinScanSuccess}`}
+      </div>
     </>
   );
 }

@@ -167,10 +167,11 @@ export const BWC_INITIATED_TEXT = "When I activated my emergency lights, my body
 
 export const BWC_BOILERPLATE = BWC_VERSION_1;
 export const BWC2_BOILERPLATE = "All body-worn camera footage related to this incident was preserved in accordance with department policy. A transcription of all conversations captured by my body-worn camera was also automatically created once it was uploaded to Evidence.com.";
-export const OFFENSE_SUMMARY_BOILERPLATE = "OFFENSE SUMMARY\n***********************\n[OFFENSE] - [STATUTE_NAME] [CITATION] [LEVEL]";
+export const OFFENSE_SUMMARY_BOILERPLATE = "[OFFENSE] - [STATUTE_NAME] [CITATION] [LEVEL]";
 
 const NEW_OPTIONAL_SECTION_LABELS = [
   "ARREST",
+  "No Arrest",
   "Photos taken",
   "Citizen Link Sent",
   "Evidence",
@@ -214,6 +215,8 @@ export const COUNTY_ATTORNEY_PACKET_BOILERPLATE = "[NAME] was given a County Att
 export const ARREST_VERSION_1 = "[NAME] was handcuffed (checked for fit and double locked), searched incident to arrest, and placed in the back of [my / [officer’s]] patrol vehicle [and then transported to Tom Green County Jail and booked in for the listed charges].";
 export const ARREST_VERSION_2 = "[The suspect / SUSPECT NAME] was placed under arrest for [OFFENSE], handcuffed, searched incident to arrest, and transported to [Tom Green County Jail / the Juvenile Justice Center] for booking.";
 
+export const NO_ARREST_BOILERPLATE = "No arrest was made at the time of this report. The suspect [was not present on scene / fled prior to arrival / could not be located].";
+
 export const PHOTOS_TAKEN_BOILERPLATE = "I took photographs of the scene and later uploaded them to the Axon Cloud Server, which is accessible on Evidence.com.";
 
 export const CITIZEN_LINK_SENT_VERSION_1 = "An Axon’s Citizen Link was sent to [NAME] to upload digital evidence to the Axon Cloud Server.";
@@ -229,6 +232,7 @@ export const SECTION_BOILERPLATES: Record<string, string> = {
   "Missing Juvenile": MISSING_JUVENILE_BOILERPLATE,
   "County Attorney Packet": COUNTY_ATTORNEY_PACKET_BOILERPLATE,
   "ARREST": ARREST_VERSION_1,
+  "No Arrest": NO_ARREST_BOILERPLATE,
   "Photos taken": PHOTOS_TAKEN_BOILERPLATE,
   "Citizen Link Sent": CITIZEN_LINK_SENT_VERSION_1,
 };
@@ -313,6 +317,7 @@ export const getFreshInitialState = (): ReportState => ({
     reportingOfficer: '',
     incidentType: '',
     callType: '',
+    subtype: '',
     howReceived: 'dispatched',
     reasonForStop: '',
     isConsensual: false,
@@ -339,9 +344,27 @@ export const getFreshInitialState = (): ReportState => ({
     isBwc2Enabled: true,
     isBwc2Edited: false,
     offenseSummaryStatement: OFFENSE_SUMMARY_BOILERPLATE,
+    offenseSummaries: {},
     isOffenseSummaryEnabled: true,
     isOffenseSummaryEdited: false,
     isSapdNamesTemplateEnabled: false,
+    // New section flags
+    isCallnotesEnabled: false,
+    callnotesStatement: 'Under development',
+    isCallnotesEdited: false,
+    isArrivalEnabled: false,
+    arrivalStatement: 'Under development',
+    isArrivalEdited: false,
+    isStatementsEnabled: false,
+    statementsStatement: 'Under development',
+    isStatementsEdited: false,
+    isPropertyEnabled: false,
+    propertyStatement: 'Under development',
+    isPropertyEdited: false,
+    isConclusionEnabled: false,
+    conclusionStatement: 'Under development',
+    isConclusionEdited: false,
+    customParagraphs: [],
     optionalSections: getInitialOptionalSections()
   },
   vehicles: []

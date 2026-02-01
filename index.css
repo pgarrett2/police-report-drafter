@@ -103,3 +103,352 @@
 .debug-btn {
     @apply mt-4 bg-white text-black px-4 py-2 rounded font-bold;
 }
+
+/* VIN Scanner Button */
+.vin-scanner-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin-left: 8px;
+    margin-right: auto;
+    background: white;
+    border: 1.5px solid #5B6FD8;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.dark .vin-scanner-btn {
+    background: #1e293b;
+    border-color: #818cf8;
+}
+
+.vin-scanner-btn:hover {
+    background: #EBF4FF;
+    border-color: #4C5FD5;
+}
+
+.dark .vin-scanner-btn:hover {
+    background: #334155;
+    border-color: #a5b4fc;
+}
+
+.vin-scanner-btn:active {
+    background: #DBEAFE;
+    transform: scale(0.95);
+}
+
+.vin-scanner-btn svg {
+    width: 16px;
+    height: 16px;
+    color: #5B6FD8;
+}
+
+.dark .vin-scanner-btn svg {
+    color: #818cf8;
+}
+
+/* VIN Info Modal */
+.vin-info-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    animation: vinModalFadeIn 0.2s ease-out;
+}
+
+.vin-info-modal-content {
+    background: white;
+    border-radius: 16px;
+    padding: 32px 24px;
+    max-width: 340px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    animation: vinModalSlideUp 0.3s ease-out;
+}
+
+.dark .vin-info-modal-content {
+    background: #1e293b;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.vin-info-modal-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    padding: 12px;
+    background: #EBF4FF;
+    border-radius: 12px;
+}
+
+.dark .vin-info-modal-icon {
+    background: #334155;
+}
+
+.vin-info-modal-icon svg {
+    width: 100%;
+    height: 100%;
+    color: #5B6FD8;
+}
+
+.dark .vin-info-modal-icon svg {
+    color: #818cf8;
+}
+
+.vin-info-modal h3 {
+    color: #1A202C;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    line-height: 1.3;
+}
+
+.dark .vin-info-modal h3 {
+    color: #f1f5f9;
+}
+
+.vin-info-modal p {
+    color: #4A5568;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 24px;
+}
+
+.dark .vin-info-modal p {
+    color: #94a3b8;
+}
+
+.vin-info-modal-button {
+    width: 100%;
+    background: #5B6FD8;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.vin-info-modal-button:hover {
+    background: #4C5FD5;
+}
+
+.vin-info-modal-button:active {
+    background: #3D4FC7;
+    transform: scale(0.98);
+}
+
+/* Scanner Fullscreen UI */
+.scanner-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    z-index: 10001;
+    display: flex;
+    flex-direction: column;
+}
+
+.scanner-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.scanner-title {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.scanner-control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.scanner-control-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.scanner-control-btn:active {
+    transform: scale(0.95);
+}
+
+.scanner-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scanner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.scanner-guide-box {
+    position: relative;
+    width: 280px;
+    height: 100px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+
+.scanner-guide-box.success-flash {
+    border-color: #10B981 !important;
+    animation: scannerSuccessPulse 0.6s ease-out;
+}
+
+.scanner-corner {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-color: #FFD700;
+}
+
+.scanner-corner.top-left {
+    top: -2px;
+    left: -2px;
+    border-top: 3px solid;
+    border-left: 3px solid;
+    border-radius: 8px 0 0 0;
+}
+
+.scanner-corner.top-right {
+    top: -2px;
+    right: -2px;
+    border-top: 3px solid;
+    border-right: 3px solid;
+    border-radius: 0 8px 0 0;
+}
+
+.scanner-corner.bottom-left {
+    bottom: -2px;
+    left: -2px;
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    border-radius: 0 0 0 8px;
+}
+
+.scanner-corner.bottom-right {
+    bottom: -2px;
+    right: -2px;
+    border-bottom: 3px solid;
+    border-right: 3px solid;
+    border-radius: 0 0 8px 0;
+}
+
+.scanner-instruction {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Success/Error Toast */
+.success-toast {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #10B981;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 10002;
+    opacity: 0;
+    transition: all 0.3s ease;
+    max-width: 90%;
+    text-align: center;
+}
+
+.success-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Error toast styling (when message starts with ⚠️) */
+.success-toast:has(+ .error),
+.success-toast[data-error="true"] {
+    background: #F59E0B;
+}
+
+/* Animations */
+@keyframes vinModalFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes vinModalSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scannerSuccessPulse {
+
+    0%,
+    100% {
+        border-color: #10B981;
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+
+    50% {
+        border-color: #10B981;
+        box-shadow: 0 0 0 15px rgba(16, 185, 129, 0);
+    }
+}

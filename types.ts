@@ -59,6 +59,12 @@ export interface Vehicle {
   statusDetails: string;
 }
 
+export interface CustomParagraph {
+  id: string;
+  position: 'after-arrival' | 'after-statements' | 'after-property';
+  text: string;
+}
+
 export interface OptionalSection {
   id: string;
   label: string;
@@ -96,6 +102,7 @@ export interface ReportState {
     reportingOfficer: string;
     incidentType: string;
     callType: string;
+    subtype: string;
     howReceived: 'dispatched' | 'initiated' | 'flagged down';
     reasonForStop: string;
     isConsensual: boolean;
@@ -116,9 +123,28 @@ export interface ReportState {
     isBwc2Enabled: boolean;
     isBwc2Edited: boolean;
     isOffenseSummaryEnabled: boolean;
-    offenseSummaryStatement: string;
-    isOffenseSummaryEdited: boolean;
+    offenseSummaryStatement: string; // DEPRECATED: keeping for migration if needed, but new logic uses offenseSummaries
+    offenseSummaries: Record<string, string>; // Map of offense ID to summary text
+    isOffenseSummaryEdited: boolean; // DEPRECATED: granular edits are tracked by content difference now
     isSapdNamesTemplateEnabled: boolean;
+    // New section flags
+    isCallnotesEnabled: boolean;
+    callnotesStatement: string;
+    isCallnotesEdited: boolean;
+    isArrivalEnabled: boolean;
+    arrivalStatement: string;
+    isArrivalEdited: boolean;
+    isStatementsEnabled: boolean;
+    statementsStatement: string;
+    isStatementsEdited: boolean;
+    isPropertyEnabled: boolean;
+    propertyStatement: string;
+    isPropertyEdited: boolean;
+    isConclusionEnabled: boolean;
+    conclusionStatement: string;
+    isConclusionEdited: boolean;
+    // Custom paragraphs inserted between sections
+    customParagraphs: CustomParagraph[];
     // New dynamic sections
     optionalSections: OptionalSection[];
   };
