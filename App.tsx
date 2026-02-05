@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { TEMPLATES, INITIAL_STATE, CALL_TYPES, INITIATED_CALL_TYPES, REASON_FOR_STOP_TYPES, CONSENSUAL_STOP_TYPES, INTRO_BODY, INITIAL_SETTINGS, BWC_BOILERPLATE, OFFENSE_SUMMARY_BOILERPLATE, getFreshInitialState, US_STATES, CPS_INTAKE_VERSION_1, CPS_INTAKE_VERSION_2, APS_INTAKE_BOILERPLATE, SECTION_BOILERPLATES, ARREST_VERSION_1, ARREST_VERSION_2, PHOTOS_TAKEN_BOILERPLATE, CITIZEN_LINK_SENT_VERSION_1, CITIZEN_LINK_SENT_VERSION_2, BWC_VERSION_1, BWC_VERSION_2, BWC_VERSION_3, BWC_INITIATED_TEXT, BWC2_BOILERPLATE } from './constants';
+import { TEMPLATES, CALL_TYPES, INITIATED_CALL_TYPES, REASON_FOR_STOP_TYPES, CONSENSUAL_STOP_TYPES, INTRO_BODY, INITIAL_SETTINGS, getFreshInitialState, US_STATES, CPS_INTAKE_VERSION_1, CPS_INTAKE_VERSION_2, ARREST_VERSION_1, ARREST_VERSION_2, CITIZEN_LINK_SENT_VERSION_1, CITIZEN_LINK_SENT_VERSION_2, BWC_VERSION_1, BWC_VERSION_2, BWC_VERSION_3, BWC_INITIATED_TEXT, getInitialOptionalSections } from './constants';
 import { SUBTYPES } from './subtypes';
 import { CJIS_CODES } from './cjis_codes';
 import { ReportState, Template, PartyCategory, OptionalSection, PersistentSettings, Offense, NameEntry, Vehicle, Conviction, CustomParagraph } from './types';
 import { AccordionItem } from './components/AccordionItem';
 import { PreviewSection } from './components/PreviewSection';
+import { SlashCommandOverlay } from './components/SlashCommandOverlay';
+import { AdditionalStatementsSelector } from './components/AdditionalStatementsSelector';
+import { AdditionalStatementsEditor } from './components/AdditionalStatementsEditor';
 
 const STORAGE_KEY_REPORT = 'report_drafter_current_report';
 const STORAGE_KEY_SETTINGS = 'report_drafter_persistent_settings';
@@ -36,6 +39,71 @@ const generateId = () => {
     return crypto.randomUUID();
   }
   return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+};
+
+// Helper to generate combinatorial suspect options
+const getSuspectOptions = (suspectEntries: NameEntry[]) => {
+  const activeSuspects = suspectEntries.filter(entry => entry.name.trim() !== '');
+  const ordinals = ['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE'];
+  const options: { label: string, value: string }[] = [];
+
+  // 1. Single suspects
+  activeSuspects.forEach((entry, idx) => {
+    if (idx < 5) {
+      options.push({
+        label: entry.name,
+        value: `[SUSPECT_${ordinals[idx]}]`
+      });
+    }
+  });
+
+  // 2. Combinations (if > 1 suspect)
+  if (activeSuspects.length > 1) {
+    const indices = activeSuspects.map((_, i) => i).filter(i => i < 5);
+
+    // Generate all non-empty subsets of size >= 2
+    const getSubsets = (arr: number[]) => {
+      return arr.reduce(
+        (subsets, value) => subsets.concat(
+          subsets.map(set => [value, ...set])
+        ),
+        [[]] as number[][]
+      ).filter(s => s.length >= 2);
+    };
+
+    const subsets = getSubsets(indices);
+    // Sort subsets by length then index
+    subsets.sort((a, b) => {
+      if (a.length !== b.length) return a.length - b.length;
+      for (let i = 0; i < a.length; i++) {
+        if (a[i] !== b[i]) return a[i] - b[i];
+      }
+      return 0;
+    });
+
+    subsets.forEach(subsetIndices => {
+      subsetIndices.sort((a, b) => a - b);
+      const names = subsetIndices.map(i => activeSuspects[i].name);
+
+      let label = "";
+      if (names.length === 2) {
+        label = `${names[0]} and ${names[1]}`;
+      } else {
+        label = names.slice(0, -1).join(', ') + `, and ${names[names.length - 1]}`;
+      }
+
+      const placeholderValues = subsetIndices.map(i => `[SUSPECT_${ordinals[i]}]`);
+      const value = placeholderValues.join(' and ');
+
+      options.push({ label, value });
+    });
+  }
+
+  // 3. Unknown options
+  options.push({ label: 'Unknown suspect', value: 'Unknown suspect' });
+  options.push({ label: 'Unknown suspect(s)', value: 'Unknown suspect(s)' });
+
+  return options;
 };
 
 export default function App() {
@@ -108,9 +176,112 @@ export default function App() {
   const [activeSection, setActiveSection] = useState<string>('incident');
   const [selectedTemplateId, setSelectedTemplateId] = useState<string>('');
   const [isAdditionalSectionsOpen, setIsAdditionalSectionsOpen] = useState(false);
+  const [isTimeframeOpen, setIsTimeframeOpen] = useState(false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [isStatementEditorOpen, setIsStatementEditorOpen] = useState(false);
+
+  // Refactored Section States
+  const [isArrivalOpen, setIsArrivalOpen] = useState(false);
+  const [isStatementsOpen, setIsStatementsOpen] = useState(false);
+  const [isPropertyOpen, setIsPropertyOpen] = useState(false);
+  const [isConclusionOpen, setIsConclusionOpen] = useState(false);
 
   // Refs for auto-scrolling
   const sectionRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+  // Update optional sections when settings change (custom statements or overrides)
+  useEffect(() => {
+    setReportData(prev => {
+      const currentSections = prev.narratives.optionalSections;
+
+      // 1. Get base optional sections (from constants)
+      const defaultOptionalSections = getInitialOptionalSections();
+
+      // 2. Merge overrides for default optional sections
+      const updatedOptionalSections = defaultOptionalSections.map(section => {
+        // Find config by matching ID (lowercase, no spaces)
+        const id = section.label.toLowerCase().replace(/[^a-z]/g, '');
+        const config = settings.statementConfigs?.[id];
+
+        if (config) {
+          const activeVersion = config.versions.find(v => v.id === config.defaultVersionId);
+          if (activeVersion) {
+            return {
+              ...section,
+              label: config.label, // Allow label override
+              text: activeVersion.text
+            };
+          }
+        }
+        return section;
+      });
+
+      // 3. Add custom statements
+      const customSections: OptionalSection[] = (settings.customStatements || []).map((custom: any) => {
+        // Handle legacy data structure
+        const config = custom.config || {
+          label: custom.label || 'Legacy Statement',
+          versions: [{
+            id: 'default',
+            name: 'Default',
+            text: custom.text || ''
+          }],
+          defaultVersionId: 'default'
+        };
+
+        const activeVersion = config.versions.find((v: any) => v.id === config.defaultVersionId);
+        return {
+          id: custom.id,
+          label: config.label,
+          text: activeVersion?.text || '',
+          isOpen: false,
+          enabled: false,
+          isEdited: false,
+          // Assuming custom statements start unselected/closed unless persisted state says otherwise
+          // For now, we don't persist "isOpen" state for custom statements in settings, 
+          // but the reportState.narratives.optionalSections might have them.
+          // This logic re-initializes them. Ideally we'd preserve their state if they already exist.
+        };
+      });
+
+      // 4. Combine all base/overridden sections and custom sections
+      const allBaseSections = [...updatedOptionalSections, ...customSections];
+
+      // 5. Merge with current state (preserve enabled/edited/values/convictions)
+      const mergedSections = allBaseSections.map(newSec => {
+        const existing = currentSections.find(s => s.id === newSec.id);
+        if (existing) {
+          return {
+            ...newSec,
+            enabled: existing.enabled, // Keep enabled state
+            isEdited: existing.isEdited, // Keep edited state
+            // If already edited in this session, keep manual edits. Otherwise update to new default/override.
+            text: existing.isEdited ? existing.text : newSec.text,
+            values: existing.values,
+            convictions: existing.convictions
+          };
+        }
+        // New section (recently added custom statement)
+        return newSec;
+      });
+
+      // 4. Note: We are implicitly removing custom statements that were deleted from settings
+      // because they won't be in newBaseSections. If an "orphan" was enabled, it will disappear.
+      // This is expected behavior for "delete".
+
+      // Only update if actually changed to avoid loop (though React state setter usually handles equality check)
+      // JSON.stringify compare is expensive but safe here given low frequency of settings change.
+      // Actually, relying on prev state is safer.
+
+      return {
+        ...prev,
+        narratives: {
+          ...prev.narratives,
+          optionalSections: mergedSections
+        }
+      };
+    });
+  }, [settings.defaultOfficer, settings.statementConfigs, settings.customStatements]);
+
   const scrollToSection = (sectionId: string) => {
     setTimeout(() => {
       const element = sectionRefs.current[sectionId];
@@ -146,6 +317,7 @@ export default function App() {
   const [tempLinkedOffenses, setTempLinkedOffenses] = useState<string[]>([]);
 
   // UI Edit States
+  const [activeHelp, setActiveHelp] = useState<'names' | 'vehicles' | 'additionalStatements' | null>(null);
   const [isEditingPublic, setIsEditingPublic] = useState(false);
   const [tempPublic, setTempPublic] = useState('');
   const [isEditingIntro, setIsEditingIntro] = useState(false);
@@ -925,6 +1097,52 @@ export default function App() {
           </select>
         );
       }
+      // Check if placeholder is SUSPECTS - create suspect selection dropdown
+      // Check if placeholder is SUSPECTS or specific numbered suspect placeholder
+      else if (placeholder.toUpperCase() === 'SUSPECTS' || (placeholder.startsWith('SUSPECT_') && ['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE'].includes(placeholder.split('_')[1]))) {
+        const suspectEntries = (reportData.names.Suspect as NameEntry[])
+          .filter(entry => entry.name.trim() !== '');
+
+        // Build options mapping placeholders to actual names
+        const ordinals = ['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE'];
+        const suspectOptions: { label: string, value: string }[] = [];
+
+        // Add existing suspects
+        suspectEntries.forEach((entry, idx) => {
+          if (idx < 5) {
+            suspectOptions.push({
+              label: entry.name,
+              value: `[SUSPECT_${ordinals[idx]}]`
+            });
+          }
+        });
+
+        // Add Unknown options
+        suspectOptions.push({ label: 'Unknown suspect', value: 'Unknown suspect' });
+        suspectOptions.push({ label: 'Unknown suspect(s)', value: 'Unknown suspect(s)' });
+
+        // Determine current selected value to show in dropdown
+        // If the placeholder in text is [SUSPECTS], show empty/select
+        // If it's [SUSPECT_ONE], it should match the corresponding option
+        const isGenericPlaceholder = placeholder.toUpperCase() === 'SUSPECTS';
+        const dropdownValue = isGenericPlaceholder ? '' : `[${placeholder}]`;
+
+        parts.push(
+          <select
+            key={`${sectionKey}-${match.index}`}
+            value={dropdownValue}
+            onChange={(e) => onValueChange(placeholder, e.target.value)}
+            aria-label="Select suspect"
+            title="Select suspect from report"
+            className="inline-block mx-1 px-2 py-0.5 border-b-2 border-primary/30 bg-primary/5 dark:bg-blue-900/10 rounded-t text-primary dark:text-blue-400 font-bold text-sm focus:border-primary focus:bg-primary/10 outline-none transition-all cursor-pointer"
+          >
+            <option value="">{isGenericPlaceholder ? "Select suspect..." : "Change selection..."}</option>
+            {suspectOptions.map((opt, idx) => (
+              <option key={idx} value={opt.value}>{opt.label}</option>
+            ))}
+          </select>
+        );
+      }
       // Check if placeholder contains '/' - render as dropdown with options
       else if (placeholder.includes('/')) {
         const options = placeholder.split('/').map(opt => opt.trim());
@@ -1017,6 +1235,50 @@ export default function App() {
             <option value="">Select name...</option>
             {allNames.map((name, idx) => (
               <option key={idx} value={name}>{name}</option>
+            ))}
+          </select>
+        );
+      }
+      // Check if placeholder is SUSPECTS - create suspect selection dropdown
+      // Check if placeholder is SUSPECTS or specific numbered suspect placeholder
+      else if (placeholder.toUpperCase() === 'SUSPECTS' || (placeholder.startsWith('SUSPECT_') && ['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE'].includes(placeholder.split('_')[1]))) {
+        const suspectEntries = (reportData.names.Suspect as NameEntry[])
+          .filter(entry => entry.name.trim() !== '');
+
+        // Build options mapping placeholders to actual names
+        const ordinals = ['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE'];
+        const suspectOptions: { label: string, value: string }[] = [];
+
+        // Add existing suspects
+        suspectEntries.forEach((entry, idx) => {
+          if (idx < 5) {
+            suspectOptions.push({
+              label: entry.name,
+              value: `[SUSPECT_${ordinals[idx]}]`
+            });
+          }
+        });
+
+        // Add Unknown options
+        suspectOptions.push({ label: 'Unknown suspect', value: 'Unknown suspect' });
+        suspectOptions.push({ label: 'Unknown suspect(s)', value: 'Unknown suspect(s)' });
+
+        // Determine current selected value
+        const isGenericPlaceholder = placeholder.toUpperCase() === 'SUSPECTS';
+        const dropdownValue = isGenericPlaceholder ? '' : `[${placeholder}]`;
+
+        parts.push(
+          <select
+            key={`${section.id}-${textKey}-${match.index}`}
+            value={dropdownValue}
+            onChange={(e) => handlePlaceholderChange(section.id, placeholder, e.target.value)}
+            aria-label="Select suspect"
+            title="Select suspect from report"
+            className="inline-block mx-1 px-2 py-0.5 border-b-2 border-primary/30 bg-primary/5 dark:bg-blue-900/10 rounded-t text-primary dark:text-blue-400 font-bold text-sm focus:border-primary focus:bg-primary/10 outline-none transition-all cursor-pointer"
+          >
+            <option value="">{isGenericPlaceholder ? "Select suspect..." : "Change selection..."}</option>
+            {suspectOptions.map((opt, idx) => (
+              <option key={idx} value={opt.value}>{opt.label}</option>
             ))}
           </select>
         );
@@ -1468,21 +1730,67 @@ export default function App() {
     });
   };
 
-  const processText = useCallback((text: string) => {
+  // Helper to format vehicle string
+  const formatVehicleString = (v: Vehicle, usePlaceholders = false) => {
+    let parts = [];
+    if (v.color) parts.push(v.color);
+    if (v.year) parts.push(v.year);
+    if (v.make) parts.push(v.make);
+    if (v.model) parts.push(v.model);
+
+    let str = parts.join(' ');
+    if (v.licensePlate) {
+      str += `, (${v.licensePlateState || 'Unknown'} license plate #${v.licensePlate})`;
+    }
+    if (v.showVin && v.vin) {
+      str += ` VIN: ${v.vin}`;
+    }
+    return str.trim() || (usePlaceholders ? '[Unknown Vehicle]' : '');
+  };
+
+  const processText = useCallback((text: string, report: ReportState) => {
     if (!text) return '';
     let processed = text;
-    const { block, street, displayTitle, isIntersection } = getBlockAddress(reportData.incidentDetails.address);
 
-    const victims = reportData.names.Victim.filter(n => n.name.trim() !== '');
+    // 1. Vehicles
+    const validVehicles = report.vehicles.filter(v => v.make || v.model);
+    const ordinals = ['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE'];
+
+    validVehicles.forEach((v, idx) => {
+      if (idx < 5) {
+        const placeholder = `[VEHICLE_${ordinals[idx]}]`;
+        if (processed.includes(placeholder)) {
+          processed = processed.replaceAll(placeholder, formatVehicleString(v));
+        }
+      }
+    });
+
+    // 1.5 Names (existing logic)
+    const nameCategories: PartyCategory[] = ['Complainant', 'Victim', 'Suspect', 'Witness', 'Other'];
+    nameCategories.forEach(category => {
+      const names = report.names[category].filter(n => n.name.trim() !== '');
+      names.forEach((nameEntry, idx) => {
+        if (idx < 5) {
+          const placeholder = `[${category.toUpperCase()}_${ordinals[idx]}]`;
+          if (processed.includes(placeholder)) {
+            processed = processed.replaceAll(placeholder, nameEntry.name);
+          }
+        }
+      });
+    });
+
+    const { block, street, displayTitle, isIntersection } = getBlockAddress(report.incidentDetails.address);
+
+    const victims = report.names.Victim.filter(n => n.name.trim() !== '');
     const firstVictim = victims[0]?.name || 'N/A';
 
-    const suspects = reportData.names.Suspect.filter(n => n.name.trim() !== '');
+    const suspects = report.names.Suspect.filter(n => n.name.trim() !== '');
     const firstSuspect = suspects[0]?.name || 'N/A';
 
-    const witnesses = reportData.names.Witness.filter(n => n.name.trim() !== '');
+    const witnesses = report.names.Witness.filter(n => n.name.trim() !== '');
     const firstWitness = witnesses[0]?.name || 'N/A';
 
-    const complainants = reportData.names.Complainant;
+    const complainants = report.names.Complainant;
     let firstComplainant = 'N/A';
     if (complainants.length > 0) {
       const c = complainants[0];
@@ -1490,13 +1798,13 @@ export default function App() {
     }
 
     // Handle stacked offenses logic
-    if (processed.includes('[OFFENSE]') && reportData.incidentDetails.offenses.length > 0) {
+    if (processed.includes('[OFFENSE]') && report.incidentDetails.offenses.length > 0) {
       const lines = processed.split('\n');
       const newLines: string[] = [];
 
       lines.forEach(line => {
         if (line.includes('[OFFENSE]')) {
-          reportData.incidentDetails.offenses.forEach(offense => {
+          report.incidentDetails.offenses.forEach(offense => {
             let offenseLine = line;
             const fullStatuteTitle = STATUTE_TITLES[offense.statute.toUpperCase()] || offense.statute;
 
@@ -1520,25 +1828,51 @@ export default function App() {
       processed = newLines.join('\n');
     }
 
+    const others = report.names.Other.filter(n => n.name.trim() !== '');
+
     const replacements: Record<string, string> = {
-      '\\[DATE\\]': formatDate(reportData.incidentDetails.date),
-      '\\[TIME\\]': reportData.incidentDetails.time,
-      '\\[OFFICER\\]': reportData.incidentDetails.reportingOfficer || '[OFFICER]',
+      '\\[DATE\\]': formatDate(report.incidentDetails.date),
+      '\\[TIME\\]': report.incidentDetails.time,
+      '\\[OFFICER\\]': report.incidentDetails.reportingOfficer || '[OFFICER]',
       '\\[SUSPECT\\]': firstSuspect,
       '\\[VICTIM\\]': firstVictim,
       '\\[COMPLAINANT\\]': firstComplainant,
       '\\[WITNESS\\]': firstWitness,
-      '\\[ADDRESS\\]': reportData.incidentDetails.address || '[ADDRESS]',
+      '\\[ADDRESS\\]': report.incidentDetails.address || '[ADDRESS]',
       '\\[BLOCK\\]': block,
       '\\[STREET\\]': street,
-      '\\[LOCATION\\]': isIntersection ? displayTitle : (reportData.incidentDetails.address || '[ADDRESS]'),
-      '\\[CALLTYPE\\]': (reportData.incidentDetails.callType || '[CALL TYPE]').toLowerCase(),
-      '\\[CallType\\]': (reportData.incidentDetails.callType || '[CALL TYPE]').toLowerCase(),
-      '\\[OFFENSES\\]': reportData.incidentDetails.offenses?.map(o => o.literal).join(', ') || 'N/A',
-      '\\[OFFENSE\\]': reportData.incidentDetails.offenses?.[0]?.literal || '[OFFENSE]',
-      '\\[CITATION\\]': reportData.incidentDetails.offenses?.[0]?.citation || '[CITATION]',
-      '\\[STATUTE\\]': reportData.incidentDetails.offenses?.[0]?.statute || '[STATUTE]',
-      '\\[LEVEL\\]': reportData.incidentDetails.offenses?.[0]?.level || '[LEVEL]',
+      '\\[LOCATION\\]': isIntersection ? displayTitle : (report.incidentDetails.address || '[ADDRESS]'),
+      '\\[CALLTYPE\\]': (report.incidentDetails.callType || '[CALL TYPE]').toLowerCase(),
+      '\\[CallType\\]': (report.incidentDetails.callType || '[CALL TYPE]').toLowerCase(),
+      '\\[OFFENSES\\]': report.incidentDetails.offenses?.map(o => o.literal).join(', ') || 'N/A',
+      '\\[OFFENSE\\]': report.incidentDetails.offenses?.[0]?.literal || '[OFFENSE]',
+      '\\[CITATION\\]': report.incidentDetails.offenses?.[0]?.citation || '[CITATION]',
+      '\\[STATUTE\\]': report.incidentDetails.offenses?.[0]?.statute || '[STATUTE]',
+      '\\[LEVEL\\]': report.incidentDetails.offenses?.[0]?.level || '[LEVEL]',
+      // Numbered suspect placeholders
+      '\\[SUSPECT_ONE\\]': suspects[0]?.name || '[SUSPECT_ONE]',
+      '\\[SUSPECT_TWO\\]': suspects[1]?.name || '[SUSPECT_TWO]',
+      '\\[SUSPECT_THREE\\]': suspects[2]?.name || '[SUSPECT_THREE]',
+      '\\[SUSPECT_FOUR\\]': suspects[3]?.name || '[SUSPECT_FOUR]',
+      '\\[SUSPECT_FIVE\\]': suspects[4]?.name || '[SUSPECT_FIVE]',
+      // Numbered victim placeholders
+      '\\[VICTIM_ONE\\]': victims[0]?.name || '[VICTIM_ONE]',
+      '\\[VICTIM_TWO\\]': victims[1]?.name || '[VICTIM_TWO]',
+      '\\[VICTIM_THREE\\]': victims[2]?.name || '[VICTIM_THREE]',
+      '\\[VICTIM_FOUR\\]': victims[3]?.name || '[VICTIM_FOUR]',
+      '\\[VICTIM_FIVE\\]': victims[4]?.name || '[VICTIM_FIVE]',
+      // Numbered witness placeholders
+      '\\[WITNESS_ONE\\]': witnesses[0]?.name || '[WITNESS_ONE]',
+      '\\[WITNESS_TWO\\]': witnesses[1]?.name || '[WITNESS_TWO]',
+      '\\[WITNESS_THREE\\]': witnesses[2]?.name || '[WITNESS_THREE]',
+      '\\[WITNESS_FOUR\\]': witnesses[3]?.name || '[WITNESS_FOUR]',
+      '\\[WITNESS_FIVE\\]': witnesses[4]?.name || '[WITNESS_FIVE]',
+      // Numbered other placeholders
+      '\\[OTHER_ONE\\]': others[0]?.name || '[OTHER_ONE]',
+      '\\[OTHER_TWO\\]': others[1]?.name || '[OTHER_TWO]',
+      '\\[OTHER_THREE\\]': others[2]?.name || '[OTHER_THREE]',
+      '\\[OTHER_FOUR\\]': others[3]?.name || '[OTHER_FOUR]',
+      '\\[OTHER_FIVE\\]': others[4]?.name || '[OTHER_FIVE]',
     };
 
     Object.entries(replacements).forEach(([key, value]) => {
@@ -1580,19 +1914,19 @@ export default function App() {
       combinedInvestigative += generateSapdNamesTemplate(reportData.names) + '\n\n';
     }
 
-    combinedInvestigative += `NARRATIVE:\n**********\n${processText(reportData.narratives.introduction)}`;
-    if (reportData.narratives.isBwcEnabled) combinedInvestigative += `\n\n${processText(reportData.narratives.bwcStatement)}`;
+    combinedInvestigative += `NARRATIVE:\n**********\n${processText(reportData.narratives.introduction, reportData)}`;
+    if (reportData.narratives.isBwcEnabled) combinedInvestigative += `\n\n${processText(reportData.narratives.bwcStatement, reportData)}`;
     if (reportData.narratives.isCallnotesEnabled) combinedInvestigative += `\n\n${reportData.narratives.callnotesStatement}`;
     if (reportData.narratives.isArrivalEnabled) combinedInvestigative += `\n\n${reportData.narratives.arrivalStatement}`;
-    if (reportData.narratives.investigative) combinedInvestigative += `\n\n${processText(reportData.narratives.investigative)}`;
+    if (reportData.narratives.investigative) combinedInvestigative += `\n\n${processText(reportData.narratives.investigative, reportData)}`;
     if (reportData.narratives.isStatementsEnabled) combinedInvestigative += `\n\n${reportData.narratives.statementsStatement}`;
     if (reportData.narratives.isPropertyEnabled) combinedInvestigative += `\n\n${reportData.narratives.propertyStatement}`;
     if (reportData.narratives.isConclusionEnabled) combinedInvestigative += `\n\n${reportData.narratives.conclusionStatement}`;
     reportData.narratives.optionalSections.forEach(section => {
-      if (section.enabled) combinedInvestigative += `\n\n${processText(interpolatePlaceholders(section))}`;
+      if (section.enabled) combinedInvestigative += `\n\n${processText(interpolatePlaceholders(section), reportData)}`;
     });
-    if (reportData.narratives.isBwc2Enabled) combinedInvestigative += `\n\n${processText(reportData.narratives.bwc2Statement)}`;
-    const fullText = `PUBLIC NARRATIVE:\n${reportData.narratives.public}\n\nINVESTIGATIVE NARRATIVE:\n${combinedInvestigative}\n\nPROBABLE CAUSE:\n${processText(reportData.narratives.probableCause)}`;
+    if (reportData.narratives.isBwc2Enabled) combinedInvestigative += `\n\n${processText(reportData.narratives.bwc2Statement, reportData)}`;
+    const fullText = `PUBLIC NARRATIVE:\n${reportData.narratives.public}\n\nINVESTIGATIVE NARRATIVE:\n${combinedInvestigative}\n\nPROBABLE CAUSE:\n${processText(reportData.narratives.probableCause, reportData)}`;
     copyToClipboard(fullText);
   };
 
@@ -2318,9 +2652,9 @@ N/A
     return titleParts.join(' - ');
   };
 
-  const investigativeNarrativeContent = `${reportData.narratives.isSapdNamesTemplateEnabled ? generateSapdNamesTemplate(reportData.names) + '\n\n' : ''}NARRATIVE:\n**********\n${processText(reportData.narratives.introduction)}${reportData.narratives.isBwcEnabled ? `\n\n${processText(reportData.narratives.bwcStatement)}` : ''}${reportData.narratives.isCallnotesEnabled ? `\n\n${reportData.narratives.callnotesStatement}` : ''}${reportData.narratives.isArrivalEnabled ? `\n\n${reportData.narratives.arrivalStatement}` : ''}${getCustomParagraphsText('after-arrival')}${reportData.narratives.isStatementsEnabled ? `\n\n${reportData.narratives.statementsStatement}` : ''}${getCustomParagraphsText('after-statements')}${reportData.narratives.isPropertyEnabled ? `\n\n${reportData.narratives.propertyStatement}` : ''}${getCustomParagraphsText('after-property')}${reportData.narratives.isConclusionEnabled ? `\n\n${reportData.narratives.conclusionStatement}` : ''}${reportData.narratives.optionalSections.filter(s => s.enabled).map(s => `\n\n${processText(interpolatePlaceholders(s))}`).join('')}${reportData.narratives.isBwc2Enabled ? `\n\n${processText(reportData.narratives.bwc2Statement)}` : ''}${reportData.narratives.isOffenseSummaryEnabled && reportData.incidentDetails.offenses.length > 0 ? `\n\nOFFENSE SUMMARY\n***********************\n${reportData.incidentDetails.offenses.map(o => {
+  const investigativeNarrativeContent = `${reportData.narratives.isSapdNamesTemplateEnabled ? generateSapdNamesTemplate(reportData.names) + '\n\n' : ''}NARRATIVE:\n**********\n${processText(reportData.narratives.introduction, reportData)}${reportData.narratives.isBwcEnabled ? `\n\n${processText(reportData.narratives.bwcStatement, reportData)}` : ''}${reportData.narratives.isCallnotesEnabled ? `\n\n${processText(reportData.narratives.callnotesStatement, reportData)}` : ''}${reportData.narratives.isArrivalEnabled ? `\n\n${processText(reportData.narratives.arrivalStatement, reportData)}` : ''}${getCustomParagraphsText('after-arrival')}${reportData.narratives.isStatementsEnabled ? `\n\n${processText(reportData.narratives.statementsStatement, reportData)}` : ''}${getCustomParagraphsText('after-statements')}${reportData.narratives.isPropertyEnabled ? `\n\n${processText(reportData.narratives.propertyStatement, reportData)}` : ''}${getCustomParagraphsText('after-property')}${reportData.narratives.isConclusionEnabled ? `\n\n${processText(reportData.narratives.conclusionStatement, reportData)}` : ''}${reportData.narratives.optionalSections.filter(s => s.enabled).map(s => `\n\n${processText(interpolatePlaceholders(s), reportData)}`).join('')}${reportData.narratives.isBwc2Enabled ? `\n\n${processText(reportData.narratives.bwc2Statement, reportData)}` : ''}${reportData.narratives.isOffenseSummaryEnabled && reportData.incidentDetails.offenses.length > 0 ? `\n\nOFFENSE SUMMARY\n***********************\n${reportData.incidentDetails.offenses.map(o => {
     const title = getOffenseSummaryTitle(o);
-    const summaryBody = processText(reportData.narratives.offenseSummaries?.[o.id!] || '');
+    const summaryBody = processText(reportData.narratives.offenseSummaries?.[o.id!] || '', reportData);
     return summaryBody ? `${title}\n${summaryBody}` : title;
   }).join('\n\n')}` : ''}`;
 
@@ -2352,7 +2686,7 @@ N/A
 
       {/* RESET CONFIRMATION MODAL */}
       {showResetModal && (
-        <div className="fixed inset-0 z-[120] flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md animate-in fade-in duration-300">
+        <div className="fixed inset-0 z-120 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md animate-in fade-in duration-300">
           <div className="bg-white dark:bg-slate-900 w-full max-sm rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-8 flex flex-col items-center text-center animate-in zoom-in-95 duration-200">
             <div className="w-16 h-16 bg-red-50 dark:bg-red-900/20 rounded-full flex items-center justify-center mb-6">
               <span className="material-symbols-outlined text-4xl text-red-600 dark:text-red-400">warning</span>
@@ -2380,7 +2714,7 @@ N/A
       )}
 
       {showSettings && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200" onClick={() => setShowSettings(false)}>
+        <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200" onClick={() => setShowSettings(false)}>
           <div className="bg-white dark:bg-slate-900 w-full max-w-md rounded-xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6 relative animate-in zoom-in-95 duration-200" onClick={(e) => e.stopPropagation()}>
             <button onClick={() => setShowSettings(false)} className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"><span className="material-symbols-outlined">close</span></button>
             <div className="flex flex-col items-center py-6">
@@ -2406,22 +2740,50 @@ N/A
               <div className="w-full pt-4 border-t border-slate-100 dark:border-slate-800">
                 <button
                   onClick={() => {
+                    setShowSettings(false);
+                    setShowOffenseEditor(true);
+                  }}
+                  className="w-full text-left px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary transition-colors flex items-center justify-between font-bold text-slate-700 dark:text-slate-300 mb-3"
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-lg">edit_note</span>
+                    <span>Offense List Editor</span>
+                  </div>
+                  <span className="material-symbols-outlined text-sm">chevron_right</span>
+                </button>
+
+                <button
+                  onClick={() => {
+                    setShowSettings(false);
+                    setIsStatementEditorOpen(true);
+                  }}
+                  className="w-full text-left px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary transition-colors flex items-center justify-between font-bold text-slate-700 dark:text-slate-300 mb-3"
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-lg">post_add</span>
+                    <span>Additional Statements</span>
+                  </div>
+                  <span className="material-symbols-outlined text-sm">chevron_right</span>
+                </button>
+
+                <button
+                  onClick={() => {
                     const el = document.getElementById('offense-summary-settings');
                     if (el) el.classList.toggle('hidden');
                     const icon = document.getElementById('offense-summary-chevron');
                     if (icon) icon.textContent = icon.textContent === 'expand_more' ? 'expand_less' : 'expand_more';
                   }}
-                  className="flex items-center justify-between w-full text-left font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-colors mb-2"
+                  className="w-full text-left px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary transition-colors flex items-center justify-between font-bold text-slate-700 dark:text-slate-300"
                 >
-                  <span className="flex items-center gap-2">
-                    <span className="material-symbols-outlined text-sm">list_alt</span>
-                    Offense Summary
-                  </span>
-                  <span id="offense-summary-chevron" className="material-symbols-outlined text-slate-400">expand_more</span>
+                  <div className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-lg">list_alt</span>
+                    <span>Offense Summary</span>
+                  </div>
+                  <span id="offense-summary-chevron" className="material-symbols-outlined text-sm">expand_more</span>
                 </button>
 
-                <div id="offense-summary-settings" className="hidden pl-2 space-y-3 animate-in slide-in-from-top-2 duration-200">
-                  <p className="text-xs text-slate-500 mb-2">Select fields to include in the Offense Summary header:</p>
+                <div id="offense-summary-settings" className="hidden pl-2 space-y-3 animate-in slide-in-from-top-2 duration-200 mt-3 border-l-2 border-slate-200 dark:border-slate-700 ml-4 py-2">
+                  <p className="text-xs text-slate-500 mb-2 pl-2">Select fields to include in the Offense Summary header:</p>
 
                   {[
                     { key: 'offenseSummaryCitation', label: 'Citation' },
@@ -2429,7 +2791,7 @@ N/A
                     { key: 'offenseSummaryLevel', label: 'Level' },
                     { key: 'offenseSummaryElements', label: 'Elements Text' }
                   ].map(({ key, label }) => (
-                    <label key={key} className="flex items-center gap-2 cursor-pointer group">
+                    <label key={key} className="flex items-center gap-2 cursor-pointer group pl-2">
                       <input
                         type="checkbox"
                         checked={!!settings[key as keyof PersistentSettings]}
@@ -2441,16 +2803,6 @@ N/A
                   ))}
                 </div>
               </div>
-
-              <div className="w-full pt-4 border-t border-slate-100 dark:border-slate-800 mt-4">
-                <button
-                  onClick={() => setShowOffenseEditor(true)}
-                  className="w-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 py-3 rounded-xl font-bold transition-colors flex items-center justify-center gap-2"
-                >
-                  <span className="material-symbols-outlined">data_object</span>
-                  OFFENSE LIST JSON
-                </button>
-              </div>
             </div>
             <div className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 flex justify-end">
               <button onClick={() => setShowSettings(false)} className="bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-slate-100 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">Done</button>
@@ -2460,8 +2812,8 @@ N/A
       )}
 
       {showOffenseEditor && (
-        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm animate-in fade-in duration-200" onClick={() => setShowOffenseEditor(false)}>
-          <div className="bg-white dark:bg-slate-900 w-full max-w-4xl h-[85vh] rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 flex flex-col animate-in zoom-in-95 duration-200" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-200 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm animate-in fade-in duration-200" onClick={() => setShowOffenseEditor(false)}>
+          <div className="bg-white dark:bg-slate-900 w-[95vw] h-[95vh] rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 flex flex-col animate-in zoom-in-95 duration-200" onClick={(e) => e.stopPropagation()}>
             {/* Header */}
             <div className="p-6 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center bg-slate-50/50 dark:bg-slate-800/30 rounded-t-2xl">
               <div>
@@ -2623,7 +2975,7 @@ N/A
                         <label className="block text-xs font-bold text-slate-500 uppercase mb-2">Elements</label>
                         <textarea
                           title="Offense elements"
-                          className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm focus:ring-primary focus:border-primary dark:text-white leading-relaxed resize-none overflow-hidden"
+                          className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm focus:ring-primary focus:border-primary dark:text-white leading-relaxed resize-none overflow-hidden offense-text-input"
                           value={editingOffense.elements || ''}
                           onChange={(e) => setEditingOffense({ ...editingOffense, elements: e.target.value })}
                           onInput={(e) => {
@@ -2637,7 +2989,6 @@ N/A
                               el.style.height = el.scrollHeight + 'px';
                             }
                           }}
-                          style={{ minHeight: '60px' }}
                         />
                       </div>
 
@@ -2645,7 +2996,7 @@ N/A
                         <label className="block text-xs font-bold text-slate-500 uppercase mb-2">Statute Text (Full)</label>
                         <textarea
                           title="Full statute text"
-                          className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm focus:ring-primary focus:border-primary dark:text-white font-mono text-xs leading-relaxed resize-none overflow-hidden"
+                          className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:ring-primary focus:border-primary dark:text-white font-mono text-xs leading-relaxed resize-none overflow-hidden offense-text-input"
                           value={editingOffense.statuteText || ''}
                           onChange={(e) => setEditingOffense({ ...editingOffense, statuteText: e.target.value })}
                           onInput={(e) => {
@@ -2659,7 +3010,6 @@ N/A
                               el.style.height = el.scrollHeight + 'px';
                             }
                           }}
-                          style={{ minHeight: '60px' }}
                         />
                       </div>
                     </div>
@@ -2750,7 +3100,7 @@ N/A
                   </div>
                   <div className="flex-1 overflow-y-auto p-4">
                     {Object.keys(settings.customOffenses || {}).length > 0 ? (
-                      <pre className="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg text-xs font-mono text-slate-700 dark:text-slate-300 overflow-x-auto whitespace-pre-wrap break-words">
+                      <pre className="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg text-xs font-mono text-slate-700 dark:text-slate-300 overflow-x-auto whitespace-pre-wrap wrap-break-word">
                         {JSON.stringify(settings.customOffenses, null, 2)}
                       </pre>
                     ) : (
@@ -2796,7 +3146,7 @@ N/A
               </button>
             </div>
             <div className="p-8 overflow-y-auto">
-              <div className="bg-slate-50 dark:bg-slate-800/50 p-6 rounded-xl border border-slate-100 dark:border-slate-700 font-serif text-base leading-relaxed text-slate-700 dark:text-slate-300 whitespace-pre-wrap italic">
+              <div className="bg-slate-50 dark:bg-slate-800/50 p-6 rounded-xl border border-slate-100 dark:border-slate-700 text-base leading-relaxed text-slate-700 dark:text-slate-300 whitespace-pre-wrap italic" style={{ fontFamily: 'Calibri, sans-serif' }}>
                 {selectedStatute.statuteText.split(/(\*\*.*?\*\*)/g).map((part, i) =>
                   part.startsWith('**') && part.endsWith('**')
                     ? <strong key={i} className="text-slate-900 dark:text-white not-italic">{part.slice(2, -2)}</strong>
@@ -2816,6 +3166,18 @@ N/A
         </div>
       )}
 
+      {/* Additional Statements Editor Modal */}
+      <AdditionalStatementsEditor
+        isOpen={isStatementEditorOpen}
+        onClose={() => setIsStatementEditorOpen(false)}
+        settings={settings}
+        onUpdateSettings={(newSettings) => {
+          setSettings(newSettings);
+          localStorage.setItem(STORAGE_KEY_SETTINGS, JSON.stringify(newSettings));
+        }}
+        isDarkMode={darkMode}
+      />
+
       <main className="flex-1 flex overflow-hidden flex-col md:flex-row relative">
         <aside className={`${mobileView === 'editor' ? 'flex' : 'hidden'} md:flex md:w-[40%] border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex-col overflow-y-auto w-full h-full`}>
           <div className="p-4 md:p-8 space-y-6 pb-24 md:pb-8">
@@ -2824,7 +3186,7 @@ N/A
               <span className="text-xs text-blue-600 dark:text-blue-400 font-semibold bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded">Active Report</span>
             </div>
             <div className="space-y-4">
-              <div ref={el => sectionRefs.current['incident'] = el}>
+              <div ref={el => { sectionRefs.current['incident'] = el }}>
                 <AccordionItem title="Incident Details" icon="info" isOpen={activeSection === 'incident'} onToggle={() => handleSectionToggle('incident')}>
                   <div className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
@@ -2852,62 +3214,73 @@ N/A
                       </div>
                     </div>
 
-                    <div className="p-3 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 space-y-3">
-                      <div className="flex items-center gap-2">
-                        <span className="material-symbols-outlined text-sm text-slate-400">event_repeat</span>
-                        <span className="text-xs font-bold text-slate-500 uppercase tracking-widest">Timeframe (Optional)</span>
-                      </div>
-                      <div className="grid grid-cols-2 gap-3">
-                        <div>
-                          <label htmlFor="from-date" className="block text-[10px] font-medium text-slate-500 mb-1 uppercase tracking-tight">From Date</label>
-                          <input
-                            id="from-date"
-                            type="date"
-                            value={reportData.incidentDetails.fromDate}
-                            onChange={(e) => handleInputChange('incidentDetails', 'fromDate', e.target.value)}
-                            className="w-full px-2 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none"
-                          />
+                    <div className="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
+                      <button
+                        onClick={() => setIsTimeframeOpen(!isTimeframeOpen)}
+                        className="w-full p-3 bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-between transition-colors"
+                      >
+                        <div className="flex items-center gap-2">
+                          <span className="material-symbols-outlined text-sm text-slate-400">event_repeat</span>
+                          <span className="text-xs font-bold text-slate-500 uppercase tracking-widest">Timeframe (Optional)</span>
                         </div>
-                        <div>
-                          <label htmlFor="from-time" className="block text-[10px] font-medium text-slate-500 mb-1 uppercase tracking-tight">From Time</label>
-                          <input
-                            id="from-time"
-                            type="text"
-                            placeholder="0000"
-                            maxLength={4}
-                            value={reportData.incidentDetails.fromTime}
-                            onChange={(e) => handleInputChange('incidentDetails', 'fromTime', e.target.value.replace(/\D/g, ''))}
-                            className="w-full px-2 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none"
-                          />
+                        <span className={`material-symbols-outlined text-slate-400 transition-transform duration-200 ${isTimeframeOpen ? 'rotate-180' : ''}`}>expand_more</span>
+                      </button>
+                      {isTimeframeOpen && (
+                        <div className="p-3 space-y-3 animate-in fade-in slide-in-from-top-1 duration-200">
+                          <div className="grid grid-cols-2 gap-3">
+                            <div>
+                              <label htmlFor="from-date" className="block text-[10px] font-medium text-slate-500 mb-1 uppercase tracking-tight">From Date</label>
+                              <input
+                                id="from-date"
+                                type="date"
+                                value={reportData.incidentDetails.fromDate}
+                                onChange={(e) => handleInputChange('incidentDetails', 'fromDate', e.target.value)}
+                                className="w-full px-2 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none"
+                              />
+                            </div>
+                            <div>
+                              <label htmlFor="from-time" className="block text-[10px] font-medium text-slate-500 mb-1 uppercase tracking-tight">From Time</label>
+                              <input
+                                id="from-time"
+                                type="text"
+                                placeholder="0000"
+                                maxLength={4}
+                                value={reportData.incidentDetails.fromTime}
+                                onChange={(e) => handleInputChange('incidentDetails', 'fromTime', e.target.value.replace(/\D/g, ''))}
+                                className="w-full px-2 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none"
+                              />
+                            </div>
+                            <div>
+                              <label htmlFor="to-date" className="block text-[10px] font-medium text-slate-500 mb-1 uppercase tracking-tight">To Date</label>
+                              <input
+                                id="to-date"
+                                type="date"
+                                value={reportData.incidentDetails.toDate}
+                                onChange={(e) => handleInputChange('incidentDetails', 'toDate', e.target.value)}
+                                className="w-full px-2 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none"
+                              />
+                            </div>
+                            <div>
+                              <label htmlFor="to-time" className="block text-[10px] font-medium text-slate-500 mb-1 uppercase tracking-tight">To Time</label>
+                              <input
+                                id="to-time"
+                                type="text"
+                                placeholder="0000"
+                                maxLength={4}
+                                value={reportData.incidentDetails.toTime}
+                                onChange={(e) => handleInputChange('incidentDetails', 'toTime', e.target.value.replace(/\D/g, ''))}
+                                className="w-full px-2 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none"
+                              />
+                            </div>
+                          </div>
                         </div>
-                        <div>
-                          <label htmlFor="to-date" className="block text-[10px] font-medium text-slate-500 mb-1 uppercase tracking-tight">To Date</label>
-                          <input
-                            id="to-date"
-                            type="date"
-                            value={reportData.incidentDetails.toDate}
-                            onChange={(e) => handleInputChange('incidentDetails', 'toDate', e.target.value)}
-                            className="w-full px-2 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none"
-                          />
-                        </div>
-                        <div>
-                          <label htmlFor="to-time" className="block text-[10px] font-medium text-slate-500 mb-1 uppercase tracking-tight">To Time</label>
-                          <input
-                            id="to-time"
-                            type="text"
-                            placeholder="0000"
-                            maxLength={4}
-                            value={reportData.incidentDetails.toTime}
-                            onChange={(e) => handleInputChange('incidentDetails', 'toTime', e.target.value.replace(/\D/g, ''))}
-                            className="w-full px-2 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none"
-                          />
-                        </div>
-                      </div>
+                      )}
                     </div>
 
                     <div>
                       <label htmlFor="how-received" className="block text-xs font-medium text-slate-500 mb-1">How Received</label>
                       <select id="how-received" aria-label="How Received" title="Select how the incident was received" className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-base md:text-sm focus:ring-primary focus:border-primary dark:text-white appearance-none" value={reportData.incidentDetails.howReceived} onChange={(e) => handleInputChange('incidentDetails', 'howReceived', e.target.value as any)}>
+                        <option value="">-- Select How Received --</option>
                         <option value="dispatched">dispatched</option><option value="initiated">initiated</option><option value="flagged down">flagged down</option>
                       </select>
                     </div>
@@ -3163,21 +3536,59 @@ N/A
                   </div>
                 </AccordionItem>
               </div>
-              <div ref={el => sectionRefs.current['names'] = el}>
-                <AccordionItem title="Names" icon="person" isOpen={activeSection === 'names'} onToggle={() => handleSectionToggle('names')}>
+              <div ref={el => { sectionRefs.current['names'] = el }}>
+                <AccordionItem
+                  title={
+                    <div className="flex items-center gap-2">
+                      Names
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setActiveHelp('names');
+                        }}
+                        className="text-slate-400 hover:text-primary transition-colors focus:outline-none"
+                        title="View commands & placeholders"
+                      >
+                        <span className="material-symbols-outlined text-lg">help</span>
+                      </button>
+                    </div>
+                  }
+                  icon="person"
+                  isOpen={activeSection === 'names'}
+                  onToggle={() => handleSectionToggle('names')}
+                >
                   <div className="space-y-2">
                     {renderNameInputs('Complainant')}{renderNameInputs('Victim')}{renderNameInputs('Suspect')}{renderNameInputs('Witness')}{renderNameInputs('Other')}
                   </div>
                 </AccordionItem>
               </div>
-              <div ref={el => sectionRefs.current['vehicles'] = el}>
-                <AccordionItem title="Vehicles" icon="directions_car" isOpen={activeSection === 'vehicles'} onToggle={() => handleSectionToggle('vehicles')}>
+              <div ref={el => { sectionRefs.current['vehicles'] = el }}>
+                <AccordionItem
+                  title={
+                    <div className="flex items-center gap-2">
+                      Vehicles
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setActiveHelp('vehicles');
+                        }}
+                        className="text-slate-400 hover:text-primary transition-colors focus:outline-none"
+                        title="View vehicle commands & placeholders"
+                      >
+                        <span className="material-symbols-outlined text-lg">help</span>
+                      </button>
+                    </div>
+                  }
+                  icon="directions_car"
+                  isOpen={activeSection === 'vehicles'}
+                  onToggle={() => handleSectionToggle('vehicles')}
+                >
                   <div className="space-y-4">
                     {renderVehicleInputs()}
                   </div>
                 </AccordionItem>
               </div>
-              <div ref={el => sectionRefs.current['public'] = el}>
+              <div ref={el => { sectionRefs.current['public'] = el }}>
                 <AccordionItem title="Public Narrative" icon="edit_note" isOpen={activeSection === 'public'} onToggle={() => handleSectionToggle('public')}>
                   <div className="space-y-4">
                     {isEditingPublic ? (
@@ -3189,13 +3600,13 @@ N/A
                     ) : (
                       <div className="relative group/public bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
                         <button onClick={startEditingPublic} className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/public:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary"><span className="material-symbols-outlined text-sm">edit</span>EDIT</button>
-                        {reportData.narratives.public}
+                        {processText(reportData.narratives.public, reportData)}
                       </div>
                     )}
                   </div>
                 </AccordionItem>
               </div>
-              <div ref={el => sectionRefs.current['investigative'] = el}>
+              <div ref={el => { sectionRefs.current['investigative'] = el }}>
                 <AccordionItem title="Investigative Narrative" icon="description" isOpen={activeSection === 'investigative'} onToggle={() => handleSectionToggle('investigative')}>
                   <div className="space-y-6">
                     <div className="flex items-center gap-2 pb-4 border-b border-slate-100 dark:border-slate-800">
@@ -3221,7 +3632,7 @@ N/A
                       ) : (
                         <div className="relative group/intro bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
                           <button onClick={startEditingIntro} className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/intro:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary"><span className="material-symbols-outlined text-sm">edit</span>EDIT</button>
-                          {processText(reportData.narratives.introduction)}
+                          {processText(reportData.narratives.introduction, reportData)}
                         </div>
                       )}
                     </div>
@@ -3288,7 +3699,7 @@ N/A
                               <button onClick={startEditingBwc} className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/bwc:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary">
                                 <span className="material-symbols-outlined text-sm">edit</span>EDIT
                               </button>
-                              {processText(reportData.narratives.bwcStatement)}
+                              {processText(reportData.narratives.bwcStatement, reportData)}
                             </div>
                           )}
                         </div>
@@ -3330,7 +3741,15 @@ N/A
                               <button onClick={startEditingCallnotes} className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/callnotes:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary">
                                 <span className="material-symbols-outlined text-sm">edit</span>EDIT
                               </button>
-                              {reportData.narratives.callnotesStatement}
+                              {processTextWithDropdowns(
+                                reportData.narratives.callnotesStatement,
+                                'callnotes-boilerplate',
+                                {},
+                                (placeholder, value) => {
+                                  const updatedText = reportData.narratives.callnotesStatement.replace(`[${placeholder}]`, value);
+                                  handleInputChange('narratives', 'callnotesStatement', updatedText);
+                                }
+                              )}
                             </div>
                           )}
                         </div>
@@ -3339,42 +3758,21 @@ N/A
 
                     {/* ARRIVAL ON SCENE Section */}
                     <div className="pt-4 border-t border-slate-100 dark:border-slate-700">
-                      <div className="flex items-center gap-2">
-                        <input
-                          type="checkbox"
-                          id="arrival-checkbox"
-                          checked={reportData.narratives.isArrivalEnabled}
-                          onChange={(e) => handleInputChange('narratives', 'isArrivalEnabled', e.target.checked)}
-                          className="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4 cursor-pointer"
-                        />
-                        <label htmlFor="arrival-checkbox" className="text-sm font-semibold text-slate-700 dark:text-slate-300 cursor-pointer select-none">
-                          ARRIVAL ON SCENE
-                        </label>
-                      </div>
-                      {reportData.narratives.isArrivalEnabled && (
+                      <button
+                        onClick={() => setIsArrivalOpen(!isArrivalOpen)}
+                        className="w-full flex items-center justify-between p-3 border-2 border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-primary rounded-lg transition-colors group"
+                      >
+                        <span className="block text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider cursor-pointer group-hover:text-primary transition-colors">ARRIVAL ON SCENE</span>
+                        <span className={`material-symbols-outlined text-slate-500 group-hover:text-primary transition-transform duration-200 ${isArrivalOpen ? 'rotate-180' : ''}`}>expand_more</span>
+                      </button>
+
+                      {isArrivalOpen && (
                         <div className="mt-3 animate-in fade-in slide-in-from-top-2 duration-300">
-                          {isEditingArrival ? (
-                            <div className="space-y-2">
-                              <textarea
-                                title="Edit ARRIVAL ON SCENE statement"
-                                placeholder="Enter arrival on scene statement..."
-                                className="w-full h-32 min-h-[128px] p-3 text-base md:text-sm border-2 border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary resize-none leading-relaxed appearance-none ring-offset-0 outline-none"
-                                value={tempArrival}
-                                onChange={(e) => setTempArrival(e.target.value)}
-                              />
-                              <div className="flex justify-end gap-2">
-                                <button onClick={() => setIsEditingArrival(false)} className="text-xs font-semibold px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cancel</button>
-                                <button onClick={saveArrival} className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white">Save</button>
-                              </div>
-                            </div>
-                          ) : (
-                            <div className="relative group/arrival bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
-                              <button onClick={startEditingArrival} className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/arrival:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary">
-                                <span className="material-symbols-outlined text-sm">edit</span>EDIT
-                              </button>
-                              {reportData.narratives.arrivalStatement}
-                            </div>
-                          )}
+                          <div className="p-8 text-center border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-lg bg-slate-50/50 dark:bg-slate-800/20">
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+                              Coming soon
+                            </span>
+                          </div>
                         </div>
                       )}
                     </div>
@@ -3440,42 +3838,21 @@ N/A
 
                     {/* STATEMENTS Section */}
                     <div className="pt-4 border-t border-slate-100 dark:border-slate-700">
-                      <div className="flex items-center gap-2">
-                        <input
-                          type="checkbox"
-                          id="statements-checkbox"
-                          checked={reportData.narratives.isStatementsEnabled}
-                          onChange={(e) => handleInputChange('narratives', 'isStatementsEnabled', e.target.checked)}
-                          className="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4 cursor-pointer"
-                        />
-                        <label htmlFor="statements-checkbox" className="text-sm font-semibold text-slate-700 dark:text-slate-300 cursor-pointer select-none">
-                          STATEMENTS
-                        </label>
-                      </div>
-                      {reportData.narratives.isStatementsEnabled && (
+                      <button
+                        onClick={() => setIsStatementsOpen(!isStatementsOpen)}
+                        className="w-full flex items-center justify-between p-3 border-2 border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-primary rounded-lg transition-colors group"
+                      >
+                        <span className="block text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider cursor-pointer group-hover:text-primary transition-colors">STATEMENTS</span>
+                        <span className={`material-symbols-outlined text-slate-500 group-hover:text-primary transition-transform duration-200 ${isStatementsOpen ? 'rotate-180' : ''}`}>expand_more</span>
+                      </button>
+
+                      {isStatementsOpen && (
                         <div className="mt-3 animate-in fade-in slide-in-from-top-2 duration-300">
-                          {isEditingStatements ? (
-                            <div className="space-y-2">
-                              <textarea
-                                title="Edit STATEMENTS statement"
-                                placeholder="Enter statements section..."
-                                className="w-full h-32 min-h-[128px] p-3 text-base md:text-sm border-2 border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary resize-none leading-relaxed appearance-none ring-offset-0 outline-none"
-                                value={tempStatements}
-                                onChange={(e) => setTempStatements(e.target.value)}
-                              />
-                              <div className="flex justify-end gap-2">
-                                <button onClick={() => setIsEditingStatements(false)} className="text-xs font-semibold px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cancel</button>
-                                <button onClick={saveStatements} className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white">Save</button>
-                              </div>
-                            </div>
-                          ) : (
-                            <div className="relative group/statements bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
-                              <button onClick={startEditingStatements} className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/statements:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary">
-                                <span className="material-symbols-outlined text-sm">edit</span>EDIT
-                              </button>
-                              {reportData.narratives.statementsStatement}
-                            </div>
-                          )}
+                          <div className="p-8 text-center border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-lg bg-slate-50/50 dark:bg-slate-800/20">
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+                              Coming soon
+                            </span>
+                          </div>
                         </div>
                       )}
                     </div>
@@ -3541,42 +3918,21 @@ N/A
 
                     {/* PROPERTY Section */}
                     <div className="pt-4 border-t border-slate-100 dark:border-slate-700">
-                      <div className="flex items-center gap-2">
-                        <input
-                          type="checkbox"
-                          id="property-checkbox"
-                          checked={reportData.narratives.isPropertyEnabled}
-                          onChange={(e) => handleInputChange('narratives', 'isPropertyEnabled', e.target.checked)}
-                          className="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4 cursor-pointer"
-                        />
-                        <label htmlFor="property-checkbox" className="text-sm font-semibold text-slate-700 dark:text-slate-300 cursor-pointer select-none">
-                          PROPERTY
-                        </label>
-                      </div>
-                      {reportData.narratives.isPropertyEnabled && (
+                      <button
+                        onClick={() => setIsPropertyOpen(!isPropertyOpen)}
+                        className="w-full flex items-center justify-between p-3 border-2 border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-primary rounded-lg transition-colors group"
+                      >
+                        <span className="block text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider cursor-pointer group-hover:text-primary transition-colors">PROPERTY</span>
+                        <span className={`material-symbols-outlined text-slate-500 group-hover:text-primary transition-transform duration-200 ${isPropertyOpen ? 'rotate-180' : ''}`}>expand_more</span>
+                      </button>
+
+                      {isPropertyOpen && (
                         <div className="mt-3 animate-in fade-in slide-in-from-top-2 duration-300">
-                          {isEditingProperty ? (
-                            <div className="space-y-2">
-                              <textarea
-                                title="Edit PROPERTY statement"
-                                placeholder="Enter property section..."
-                                className="w-full h-32 min-h-[128px] p-3 text-base md:text-sm border-2 border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary resize-none leading-relaxed appearance-none ring-offset-0 outline-none"
-                                value={tempProperty}
-                                onChange={(e) => setTempProperty(e.target.value)}
-                              />
-                              <div className="flex justify-end gap-2">
-                                <button onClick={() => setIsEditingProperty(false)} className="text-xs font-semibold px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cancel</button>
-                                <button onClick={saveProperty} className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white">Save</button>
-                              </div>
-                            </div>
-                          ) : (
-                            <div className="relative group/property bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
-                              <button onClick={startEditingProperty} className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/property:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary">
-                                <span className="material-symbols-outlined text-sm">edit</span>EDIT
-                              </button>
-                              {reportData.narratives.propertyStatement}
-                            </div>
-                          )}
+                          <div className="p-8 text-center border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-lg bg-slate-50/50 dark:bg-slate-800/20">
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+                              Coming soon
+                            </span>
+                          </div>
                         </div>
                       )}
                     </div>
@@ -3642,42 +3998,21 @@ N/A
 
                     {/* CONCLUSION Section */}
                     <div className="pt-4 border-t border-slate-100 dark:border-slate-700">
-                      <div className="flex items-center gap-2">
-                        <input
-                          type="checkbox"
-                          id="conclusion-checkbox"
-                          checked={reportData.narratives.isConclusionEnabled}
-                          onChange={(e) => handleInputChange('narratives', 'isConclusionEnabled', e.target.checked)}
-                          className="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4 cursor-pointer"
-                        />
-                        <label htmlFor="conclusion-checkbox" className="text-sm font-semibold text-slate-700 dark:text-slate-300 cursor-pointer select-none">
-                          CONCLUSION
-                        </label>
-                      </div>
-                      {reportData.narratives.isConclusionEnabled && (
+                      <button
+                        onClick={() => setIsConclusionOpen(!isConclusionOpen)}
+                        className="w-full flex items-center justify-between p-3 border-2 border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-primary rounded-lg transition-colors group"
+                      >
+                        <span className="block text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider cursor-pointer group-hover:text-primary transition-colors">CONCLUSION</span>
+                        <span className={`material-symbols-outlined text-slate-500 group-hover:text-primary transition-transform duration-200 ${isConclusionOpen ? 'rotate-180' : ''}`}>expand_more</span>
+                      </button>
+
+                      {isConclusionOpen && (
                         <div className="mt-3 animate-in fade-in slide-in-from-top-2 duration-300">
-                          {isEditingConclusion ? (
-                            <div className="space-y-2">
-                              <textarea
-                                title="Edit CONCLUSION statement"
-                                placeholder="Enter conclusion section..."
-                                className="w-full h-32 min-h-[128px] p-3 text-base md:text-sm border-2 border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary resize-none leading-relaxed appearance-none ring-offset-0 outline-none"
-                                value={tempConclusion}
-                                onChange={(e) => setTempConclusion(e.target.value)}
-                              />
-                              <div className="flex justify-end gap-2">
-                                <button onClick={() => setIsEditingConclusion(false)} className="text-xs font-semibold px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cancel</button>
-                                <button onClick={saveConclusion} className="text-xs font-semibold px-3 py-1.5 rounded bg-primary text-white">Save</button>
-                              </div>
-                            </div>
-                          ) : (
-                            <div className="relative group/conclusion bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-md p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
-                              <button onClick={startEditingConclusion} className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/conclusion:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary">
-                                <span className="material-symbols-outlined text-sm">edit</span>EDIT
-                              </button>
-                              {reportData.narratives.conclusionStatement}
-                            </div>
-                          )}
+                          <div className="p-8 text-center border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-lg bg-slate-50/50 dark:bg-slate-800/20">
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+                              Coming soon
+                            </span>
+                          </div>
                         </div>
                       )}
                     </div>
@@ -3686,28 +4021,29 @@ N/A
                         onClick={() => setIsAdditionalSectionsOpen(!isAdditionalSectionsOpen)}
                         className="w-full flex items-center justify-between p-3 border-2 border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-primary rounded-lg transition-colors group"
                       >
-                        <label className="block text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider cursor-pointer group-hover:text-primary transition-colors">ADDITIONAL STATEMENTS</label>
+                        <span className="block text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider cursor-pointer group-hover:text-primary transition-colors">ADDITIONAL STATEMENTS</span>
                         <span className={`material-symbols-outlined text-slate-500 group-hover:text-primary transition-transform duration-200 ${isAdditionalSectionsOpen ? 'rotate-180' : ''}`}>expand_more</span>
                       </button>
 
                       {isAdditionalSectionsOpen && (
-                        <div className="animate-in fade-in slide-in-from-top-1 duration-200">
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                            {reportData.narratives.optionalSections.map((section) => (
-                              <div key={section.id} className="flex items-center gap-2">
-                                <input type="checkbox" id={`check-${section.id}`} checked={section.enabled} onChange={(e) => handleOptionalSectionToggle(section.id, e.target.checked)} className="rounded border-slate-300 text-primary focus:ring-primary w-4 h-4 cursor-pointer" />
-                                <label htmlFor={`check-${section.id}`} className="text-sm text-slate-700 dark:text-slate-300 cursor-pointer select-none">{section.label}</label>
-                              </div>
-                            ))}
+                        <div className="animate-in fade-in slide-in-from-top-1 duration-200 relative isolate z-10">
+                          {/* New Dropdown Selector */}
+                          <div className="mb-6 relative z-50" style={{ zIndex: 50 }}>
+                            <AdditionalStatementsSelector
+                              sections={reportData.narratives.optionalSections}
+                              onToggle={handleOptionalSectionToggle}
+                            />
                           </div>
-                          <div className="space-y-4">
+                          <div className="space-y-4 relative z-0" style={{ zIndex: 0 }}>
                             {reportData.narratives.optionalSections.filter(s => s.enabled).map((section, idx, arr) => (
                               <div key={`edit-${section.id}`} draggable onDragStart={() => handleDragStart(section.id)} onDragOver={(e) => handleDragOver(e, section.id)} onDrop={(e) => handleDrop(e, section.id)} className={`animate-in fade-in slide-in-from-top-2 duration-300 transition-all border rounded-md p-3 ${draggedItemId === section.id ? 'opacity-30 scale-95' : 'opacity-100'} ${dragOverId === section.id ? 'border-primary border-2 border-dashed bg-primary/5' : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900'}`}>
                                 <div className="flex items-center justify-between mb-2">
                                   <div className="flex items-center gap-2"><span className="material-symbols-outlined text-slate-400 cursor-grab active:cursor-grabbing select-none">drag_indicator</span><label className="text-xs font-semibold text-slate-400 uppercase tracking-widest">{section.label}</label></div>
                                   <div className="flex items-center gap-1">
-                                    <button onClick={() => moveSection(section.id, 'up')} disabled={idx === 0} className={`p-1 rounded ${idx === 0 ? 'text-slate-200' : 'text-slate-500'}`}><span className="material-symbols-outlined text-lg">arrow_upward</span></button>
-                                    <button onClick={() => moveSection(section.id, 'down')} disabled={idx === arr.length - 1} className={`p-1 rounded ${idx === arr.length - 1 ? 'text-slate-200' : 'text-slate-500'}`}><span className="material-symbols-outlined text-lg">arrow_downward</span></button>
+                                    <button onClick={() => moveSection(section.id, 'up')} disabled={idx === 0} className={`p-1 rounded ${idx === 0 ? 'text-slate-200' : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800'}`}><span className="material-symbols-outlined text-lg">arrow_upward</span></button>
+                                    <button onClick={() => moveSection(section.id, 'down')} disabled={idx === arr.length - 1} className={`p-1 rounded ${idx === arr.length - 1 ? 'text-slate-200' : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800'}`}><span className="material-symbols-outlined text-lg">arrow_downward</span></button>
+                                    <div className="w-px h-4 bg-slate-200 dark:bg-slate-700 mx-1"></div>
+                                    <button onClick={() => handleOptionalSectionToggle(section.id, false)} className="p-1 rounded text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors" title="Remove section"><span className="material-symbols-outlined text-lg">close</span></button>
                                   </div>
                                 </div>
 
@@ -3848,7 +4184,7 @@ N/A
                                 ) : (
                                   <div className="relative group/opt bg-slate-50 dark:bg-slate-800/50 border border-slate-200 rounded p-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
                                     <button onClick={() => startEditingSection(section)} className="absolute top-2 right-2 p-1.5 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/opt:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary"><span className="material-symbols-outlined text-sm">edit</span>EDIT</button>
-                                    {processText(section.text)}
+                                    {processText(section.text, reportData)}
                                   </div>
                                 )}
                               </div>
@@ -3894,7 +4230,7 @@ N/A
                                 <button onClick={startEditingBwc2} className="absolute top-2 right-2 p-1.5 bg-white/70 dark:bg-slate-700/70 backdrop-blur-sm border border-slate-200 dark:border-slate-600 rounded shadow-sm opacity-100 md:opacity-0 md:group-hover/bwc2:opacity-100 transition-opacity flex items-center gap-1 text-[10px] font-bold text-primary">
                                   <span className="material-symbols-outlined text-sm">edit</span>EDIT
                                 </button>
-                                {processText(reportData.narratives.bwc2Statement)}
+                                {processText(reportData.narratives.bwc2Statement, reportData)}
                               </div>
                             )}
                           </div>
@@ -4003,7 +4339,7 @@ N/A
                   </div>
                 </AccordionItem>
               </div>
-              <div ref={el => sectionRefs.current['pc'] = el}>
+              <div ref={el => { sectionRefs.current['pc'] = el }}>
                 <AccordionItem title="Booking Probable Cause" icon="gavel" isOpen={activeSection === 'pc'} onToggle={() => handleSectionToggle('pc')}>
                   <div className="space-y-2">
                     <label htmlFor="pc-area" className="sr-only">Booking Probable Cause</label>
@@ -4016,7 +4352,7 @@ N/A
         </aside >
 
         {mobileView === 'editor' && (
-          <div className="md:hidden fixed bottom-6 left-6 z-[60]"><button onClick={() => setMobileView('preview')} className="bg-primary text-white font-bold py-3 px-6 rounded-full shadow-2xl flex items-center gap-2 transition-all"><span className="material-symbols-outlined">visibility</span>Draft Preview</button></div>
+          <div className="md:hidden fixed bottom-6 left-6 z-60"><button onClick={() => setMobileView('preview')} className="bg-primary text-white font-bold py-3 px-6 rounded-full shadow-2xl flex items-center gap-2 transition-all"><span className="material-symbols-outlined">visibility</span>Draft Preview</button></div>
         )
         }
 
@@ -4027,9 +4363,9 @@ N/A
           </div>
           <div className="w-full max-w-4xl transition-all duration-300 origin-top pb-24" style={{ transform: isDesktop ? `scale(${zoomLevel / 100})` : 'none' }}>
             <div className="document-paper w-full bg-white dark:bg-slate-900 rounded-sm">
-              <PreviewSection title="Public Narrative" content={processText(reportData.narratives.public)} />
+              <PreviewSection title="Public Narrative" content={processText(reportData.narratives.public, reportData)} />
               <PreviewSection title="Investigative Narrative" content={investigativeNarrativeContent} />
-              <PreviewSection title="Probable Cause Statement" content={processText(reportData.narratives.probableCause)} />
+              <PreviewSection title="Probable Cause Statement" content={processText(reportData.narratives.probableCause, reportData)} />
             </div>
             <div className="mt-8 text-slate-400 text-center uppercase tracking-widest text-[10px]">Confidential - Law Enforcement Use Only</div>
           </div>
@@ -4094,6 +4430,130 @@ N/A
       >
         {vinScanSuccess?.startsWith('⚠️') ? vinScanSuccess : `✓ VIN Scanned: ${vinScanSuccess}`}
       </div>
+
+      {/* Slash Command Overlay */}
+      <SlashCommandOverlay
+        names={reportData.names}
+        vehicles={reportData.vehicles}
+        optionalSections={reportData.narratives.optionalSections}
+      />
+
+      {/* Help Modal */}
+      {activeHelp && (
+        <div className="fixed inset-0 z-10000 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-200">
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-2xl max-w-lg w-full max-h-[85vh] overflow-hidden flex flex-col border border-slate-200 dark:border-slate-700">
+            <div className="p-4 border-b border-slate-100 dark:border-slate-700 flex items-center justify-between bg-slate-50 dark:bg-slate-900/50">
+              <div className="flex items-center gap-2 text-primary font-bold">
+                <span className="material-symbols-outlined">help</span>
+                <h3>
+                  {activeHelp === 'names' ? 'Names & Slash Commands' :
+                    activeHelp === 'vehicles' ? 'Vehicles & Slash Commands' :
+                      'Additional Statements & Slash Commands'}
+                </h3>
+              </div>
+              <button onClick={() => setActiveHelp(null)} className="text-slate-400 hover:text-red-500 transition-colors">
+                <span className="material-symbols-outlined">close</span>
+              </button>
+            </div>
+            <div className="p-6 overflow-y-auto space-y-6">
+
+              {activeHelp === 'names' && (
+                <>
+                  <div>
+                    <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-3 border-b border-slate-100 dark:border-slate-700 pb-1">Slash Commands</h4>
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="p-2 bg-slate-50 dark:bg-slate-700/30 rounded border border-slate-100 dark:border-slate-700">
+                        <code className="text-primary font-bold">/n</code>
+                        <span className="text-xs ml-2 text-slate-600 dark:text-slate-400">All Names</span>
+                      </div>
+                      <div className="p-2 bg-slate-50 dark:bg-slate-700/30 rounded border border-slate-100 dark:border-slate-700">
+                        <code className="text-primary font-bold">/s</code>
+                        <span className="text-xs ml-2 text-slate-600 dark:text-slate-400">Suspects</span>
+                      </div>
+                      <div className="p-2 bg-slate-50 dark:bg-slate-700/30 rounded border border-slate-100 dark:border-slate-700">
+                        <code className="text-primary font-bold">/v</code>
+                        <span className="text-xs ml-2 text-slate-600 dark:text-slate-400">Victims</span>
+                      </div>
+                      <div className="p-2 bg-slate-50 dark:bg-slate-700/30 rounded border border-slate-100 dark:border-slate-700">
+                        <code className="text-primary font-bold">/w</code>
+                        <span className="text-xs ml-2 text-slate-600 dark:text-slate-400">Witnesses</span>
+                      </div>
+                      <div className="p-2 bg-slate-50 dark:bg-slate-700/30 rounded border border-slate-100 dark:border-slate-700">
+                        <code className="text-primary font-bold">/o</code>
+                        <span className="text-xs ml-2 text-slate-600 dark:text-slate-400">Others</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-3 border-b border-slate-100 dark:border-slate-700 pb-1">Narrative Placeholders</h4>
+                    <div className="space-y-4">
+                      {['Suspect', 'Victim', 'Witness', 'Other'].map(cat => (
+                        <div key={cat}>
+                          <div className="text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">{cat}s</div>
+                          <div className="flex flex-wrap gap-2">
+                            {['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE'].map(ord => (
+                              <code key={ord} className="text-[10px] px-1.5 py-0.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded border border-blue-100 dark:border-blue-800">
+                                [{cat.toUpperCase()}_{ord}]
+                              </code>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
+
+              {activeHelp === 'vehicles' && (
+                <>
+                  <div>
+                    <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-3 border-b border-slate-100 dark:border-slate-700 pb-1">Slash Commands</h4>
+                    <div className="p-2 bg-slate-50 dark:bg-slate-700/30 rounded border border-slate-100 dark:border-slate-700 mb-2">
+                      <code className="text-primary font-bold">/ve</code>
+                      <span className="text-xs ml-2 text-slate-600 dark:text-slate-400">All Vehicles</span>
+                    </div>
+                    <p className="text-xs text-slate-500 italic">
+                      Inserts fully formatted vehicle string (Color Year Make Model, License, VIN).
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-3 border-b border-slate-100 dark:border-slate-700 pb-1">Vehicle Placeholders</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE'].map(ord => (
+                        <code key={ord} className="text-[10px] px-1.5 py-0.5 bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 rounded border border-orange-100 dark:border-orange-800">
+                          [VEHICLE_{ord}]
+                        </code>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
+
+              {activeHelp === 'additionalStatements' && (
+                <>
+                  <div>
+                    <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-3 border-b border-slate-100 dark:border-slate-700 pb-1">Slash Commands</h4>
+                    <div className="p-2 bg-slate-50 dark:bg-slate-700/30 rounded border border-slate-100 dark:border-slate-700 mb-2">
+                      <code className="text-primary font-bold">/as</code>
+                      <span className="text-xs ml-2 text-slate-600 dark:text-slate-400">Additional Statements</span>
+                    </div>
+                    <p className="text-xs text-slate-500 italic">
+                      Inserts the boilerplate text for any available Additional Statement section.
+                    </p>
+                  </div>
+                </>
+              )}
+
+            </div>
+            <div className="p-4 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-700 flex justify-end">
+              <button onClick={() => setActiveHelp(null)} className="px-4 py-2 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 rounded font-semibold text-sm transition-colors">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

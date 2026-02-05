@@ -1,4 +1,4 @@
-import { Template, ReportState, OptionalSection, PersistentSettings } from './types';
+import { Template, ReportState, OptionalSection, PersistentSettings, StatementVersion } from './types';
 
 export const CALL_TYPES = [
   "Aircraft Crash",
@@ -194,7 +194,11 @@ const NEW_OPTIONAL_SECTION_LABELS = [
   "Called Supervisor",
   "Called CID",
   "Called Narcs",
-  "PURSUE"
+  "PURSUE",
+  "MIRANDA WARNING",
+  "WARRANT CHECK",
+  "PR-BOND",
+  "NCIC/TCIC"
 ];
 
 // Boilerplate texts for specific sections
@@ -206,7 +210,7 @@ export const APS_INTAKE_BOILERPLATE = "I later contacted the Adult Protective Se
 
 export const FAMILY_VIOLENCE_BOILERPLATE = "[NAME] was provided with a Family Violence victim resource card and the contact information for the Crisis Intervention Unit.";
 export const DANGER_ASSESSMENT_BOILERPLATE = "A danger assessment was completed and attached to this report.";
-export const CCH_CHECK_BOILERPLATE = "I conducted a Computerized Criminal History (CCH) check on [SUSPECT] and learned that [he/she] [has / has no] prior [Family Violence / Theft / Felony / DWI ] convictions.";
+export const CCH_CHECK_BOILERPLATE = "I conducted a Computerized Criminal History (CCH) check on [SUSPECTS] and learned that [he/she] [has / has no] prior [Family Violence / Theft / Felony / DWI ] convictions.";
 export const MISSING_JUVENILE_BOILERPLATE_1 = "I had [GUARDIAN] complete a Runaway/Missing Person's Report form. [GUARDIAN] stated [MISSING PERSON] is a [RACE/ETHNICITY] [SEX], date of birth [DATE OF BIRTH], [HEIGHT], [WEIGHT] lbs., [HAIR COLOR] hair, [EYE COLOR] eyes, last seen wearing [LAST SEEN WEARING]. [POSSIBLE WHEREABOUTS]";
 export const MISSING_JUVENILE_BOILERPLATE_2 = "I then instructed Dispatch to enter [MISSING PERSON] into NCIC/TCIC as a Missing Person. I contacted the National Center for Missing and Exploited Children (NCMEC), spoke to a NCMEC representative ([REP NAME]), and relayed all pertinent information and received NCMEC Case #[NCMEC CASE #].";
 export const MISSING_JUVENILE_BOILERPLATE = MISSING_JUVENILE_BOILERPLATE_1;
@@ -237,7 +241,22 @@ export const SECTION_BOILERPLATES: Record<string, string> = {
   "Citizen Link Sent": CITIZEN_LINK_SENT_VERSION_1,
 };
 
-const getInitialOptionalSections = (): OptionalSection[] =>
+export const DEFAULT_STATEMENT_VERSIONS: Record<string, StatementVersion[]> = {
+  "ARREST": [
+    { id: 'v1', name: 'Standard Arrest', text: ARREST_VERSION_1 },
+    { id: 'v2', name: 'Juvenile / Other', text: ARREST_VERSION_2 }
+  ],
+  "CPS Intake": [
+    { id: 'v1', name: 'Intake Hotline', text: CPS_INTAKE_VERSION_1 },
+    { id: 'v2', name: 'With Children Present', text: CPS_INTAKE_VERSION_2 }
+  ],
+  "Citizen Link Sent": [
+    { id: 'v1', name: 'Generic Link', text: CITIZEN_LINK_SENT_VERSION_1 },
+    { id: 'v2', name: 'Specific Evidence', text: CITIZEN_LINK_SENT_VERSION_2 }
+  ]
+};
+
+export const getInitialOptionalSections = (): OptionalSection[] =>
   NEW_OPTIONAL_SECTION_LABELS.map(label => ({
     id: label.toLowerCase().replace(/[^a-z]/g, ''),
     label: label,
@@ -252,7 +271,9 @@ export const INITIAL_SETTINGS: PersistentSettings = {
   offenseSummaryCitation: false,
   offenseSummaryStatute: false,
   offenseSummaryLevel: false,
-  offenseSummaryElements: false
+  offenseSummaryElements: false,
+  statementConfigs: {},
+  customStatements: []
 };
 
 export const TEMPLATES: Template[] = [

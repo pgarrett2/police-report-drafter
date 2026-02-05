@@ -78,6 +78,18 @@ export interface OptionalSection {
   convictionListFormat?: 'bullet' | 'dash' | 'number';
 }
 
+export interface StatementVersion {
+  id: string;
+  name: string; // e.g., "Standard", "V2"
+  text: string;
+}
+
+export interface StatementConfig {
+  label: string;
+  versions: StatementVersion[];
+  defaultVersionId: string;
+}
+
 export interface PersistentSettings {
   defaultOfficer: string;
   offenseSummaryCitation?: boolean;
@@ -85,6 +97,8 @@ export interface PersistentSettings {
   offenseSummaryLevel?: boolean;
   offenseSummaryElements?: boolean;
   customOffenses?: Record<string, Offense>; // Keyed by literal
+  statementConfigs?: Record<string, StatementConfig>; // Keyed by section ID
+  customStatements?: Array<{ id: string; config: StatementConfig }>;
 }
 
 export interface ReportState {

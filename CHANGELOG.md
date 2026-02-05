@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.0] - 2026-02-04
+
+### Added
+
+- **Slash Commands**: Introduced `/as` (Additional Statements) and enhanced `/ve` (Vehicle) slash commands for quicker data entry.
+- **Slash Command Overlay**: Visual menu for selecting slash command options.
+- **Additional Statements Selector**: New UI component for easier selection of statement types.
+
+### Changed
+
+- **UI Refactor**: Converted Investigative Narrative checkboxes to buttons for better visual hierarchy and UX.
+- **Settings Menu**: Streamlined the settings menu by removing the "OFFENSE LIST JSON" button and repositioning the "Offense Summary" button.
+- **Accessibility**: Fixed missing labels on form elements in Additional Statements Editor.
+
+### Fixed
+
+- **CSS Issues**: Resolved Tailwind CSS conflicts (text-sm vs text-xs) and redundant class warnings.
+- **Lint Warnings**: Fixed various linting issues in `App.tsx` and `types.ts`.
+
 ## [1.4.0] - 2026-02-01
 
 ### Added
@@ -14,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Smart Dropdowns**: Universal bracketed placeholder (`[...]`) dropdown system for all narrative sections.
 - **Dynamic Name Dropdowns**: Names from the "Names" section now automatically populate relevant placeholders in narratives.
 - **Auto-Expanding Textareas**: Improved UX with automatically resizing input fields.
+- **New Narrative Sections**: Added MIRANDA WARNING, WARRANT CHECK, PR-BOND, and NCIC/TCIC to Additional Statements.
 
 ### Changed
 

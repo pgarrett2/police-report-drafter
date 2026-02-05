@@ -17,7 +17,9 @@ police-report-drafter/
 ├── index.css            # Global styles
 ├── components/
 │   ├── PreviewSection.tsx
-│   └── OffenseListEditor.tsx
+│   ├── SlashCommandOverlay.tsx
+│   ├── AdditionalStatementsSelector.tsx
+│   └── AdditionalStatementsEditor.tsx
 └── .agent/workflows/    # Automation workflows
 ```
 
@@ -34,6 +36,7 @@ police-report-drafter/
 | `activeSection` | 108 | Current expanded section |
 | `isAdditionalSectionsOpen` | 110 | Additional statements dropdown state |
 | `isSettingsOpen` | 111 | Settings modal open state |
+| `isStatementEditorOpen` | 112 | Additional statements editor modal state |
 | `selectedTemplateId` | 109 | Selected narrative template |
 | `offenseSearchPatterns` | ~135 | Offense search states per offense slot |
 | `offenseSearchPositions` | ~140 | Dropdown position states |
@@ -164,6 +167,7 @@ police-report-drafter/
 - Default Officer setting
 - Offense Summary options (Citation, Statute, Level, Elements)
 - Offense List Editor trigger
+- Additional Statements Editor trigger
 - Dark Mode toggle
 
 ### Main Layout (Lines 2120+)
@@ -212,7 +216,7 @@ police-report-drafter/
 | `VehicleEntry` | Vehicle data with linked names |
 | `OptionalSection` | Additional statement with placeholders |
 | `CustomParagraph` | User-added paragraph with position |
-| `PersistentSettings` | Saved settings (officer, offense options) |
+| `PersistentSettings` | Saved settings (officer, offense options, statement overrides) |
 | `Conviction` | Prior conviction entry |
 
 ---
@@ -263,6 +267,7 @@ police-report-drafter/
 | 2026-01-30 | ADDITIONAL STATEMENTS rename | 3290-3297 |
 | 2026-01-30 | Auto-expanding textareas | 3551-3570 |
 | 2026-01-30 | Suspect: ARREST/CITATION → INFO button, linked offense buttons transparent | 1733-1742, 1765-1785 |
+| 2026-02-04 | Additional Statements Customization (Editor, Overrides, Persistence) | 110-180, 2085-2120, components/ |
 | 2026-01-30 | ARREST auto-enables ARREST section (V2) + copies to Booking Probable Cause | 1141-1167 |
 
 ---
@@ -274,4 +279,30 @@ police-report-drafter/
 3. **Find state variable**: Check lines 41-220
 4. **Find a section**: Use line ranges above
 5. **Find types**: Check `types.ts`
-6. **Find templates/options**: Check `constants.ts`
+
+---
+
+## Solutions to Common UI Issues
+
+### Z-Index / Dropdown Overlap Issues
+
+If dropdowns (absolute positioned) interact poorly with subsequent list items (drag-and-drop cards, etc.):
+
+**The Fix: Robust Stacking Context Isolation**
+
+1. **Isolate the Parent**: Add `isolation: isolate` and `position: relative` (and `z-index` if needed) to the container wrapping both the dropdown and the list.
+
+    ```tsx
+    <div className="relative isolate z-10">
+    ```
+
+2. **Explicit Layers**: Assign explicit `z-index` to the children containers.
+    - **Dropdown Container**: `z-index: 50` (or higher)
+    - **Sibling/List Container**: `z-index: 0`
+
+    ```tsx
+    <div className="relative z-50">...dropdown...</div>
+    <div className="relative z-0">...list items...</div>
+    ```
+
+**Why this works**: `isolation: isolate` creates a new stacking context. Inside it, `z-50` will *always* beat `z-0`, regardless of what z-indexes (like `z-1` or `z-100`) exist inside the children of the `z-0` container. This protects the dropdown from being obscured by "active", "dragged", or "focused" items in the list below.

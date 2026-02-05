@@ -3,7 +3,7 @@
 > A professional tool for law enforcement officers to draft comprehensive and accurate police reports efficiently.
 
 ![License](https://img.shields.io/badge/license-Proprietary-blue.svg)
-![Version](https://img.shields.io/badge/version-1.4.0-green.svg)
+![Version](https://img.shields.io/badge/version-1.5.0-green.svg)
 
 ## 🚔 Overview
 

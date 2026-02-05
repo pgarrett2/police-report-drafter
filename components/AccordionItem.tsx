@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface AccordionItemProps {
-  title: string;
+  title: React.ReactNode;
   icon: string;
   isOpen: boolean;
   onToggle: () => void;

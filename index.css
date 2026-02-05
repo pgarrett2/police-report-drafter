@@ -12,6 +12,15 @@
 
 @layer base {
 
+    /* Custom Z-Index for overlays */
+    .z-dropdown {
+        z-index: 100 !important;
+    }
+
+    .z-dropdown-menu {
+        z-index: 101 !important;
+    }
+
     html,
     body {
         height: 100%;
@@ -50,6 +59,10 @@
         height: auto !important;
         display: block;
         overflow: visible;
+    }
+
+    .offense-text-input {
+        min-height: 60px;
     }
 
     /* Accessible hide */
@@ -97,7 +110,7 @@
 }
 
 .debug-overlay {
-    @apply fixed top-0 left-0 w-full h-full bg-black/80 text-red-500 p-5 z-[10000] font-mono overflow-auto;
+    @apply fixed top-0 left-0 w-full h-full bg-black/80 text-red-500 p-5 z-10000 font-mono overflow-auto;
 }
 
 .debug-btn {
